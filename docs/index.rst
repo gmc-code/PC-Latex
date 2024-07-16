@@ -128,7 +128,7 @@ PC-latex
 
 .. toctree::
     :maxdepth: 2
-    :caption: ☰ physics
+    :caption: ⚙️ physics
     :numbered:
 
     latex_science/physics/circuits.rst
@@ -138,7 +138,7 @@ PC-latex
 
 .. toctree::
     :maxdepth: 2
-    :caption: ☰ chemistry
+    :caption: 🧪 chemistry
     :numbered:
 
     latex_science/chemistry/chemistry_acid_base_reactions.rst    
@@ -152,7 +152,7 @@ PC-latex
 
 .. toctree::
     :maxdepth: 2
-    :caption: ☰ biology
+    :caption: 🧬 biology
     :numbered:
 
     latex_science/biology/classification_keys.rst
