@@ -2,7 +2,7 @@
 .. Use https://emojipedia.org/repeat-button/ for icons/emojis
 
 ====================================================
-PC-latex
+PC-latex 2024
 ====================================================
 
 .. toctree::
@@ -114,16 +114,6 @@ PC-latex
     :numbered:
 
     latex_maths/lined_paper/lined_paper.rst
-
-
-.. toctree::
-    :maxdepth: 2
-    :caption: ☰ physics
-    :numbered:
-
-    latex_science/physics/circuits.rst
-    latex_science/physics/levers.rst
-    latex_science/physics/optics.rst
 
 
 .. toctree::
