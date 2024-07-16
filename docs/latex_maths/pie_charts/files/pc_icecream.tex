@@ -1,0 +1,18 @@
+\documentclass{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepackage{pgf-pie}
+\begin{document}
+\begin{tikzpicture}
+    \pie[text=pin, sum=auto]{
+        24/Vanilla,
+13/Chocolate,
+12/Caramel,
+10/Mint,
+8/Choc chip,
+5/Berry,
+5/Neapolitan
+    }
+    \node [above=3mm, font=\large] at (current bounding box.north) {Favourite icecream flavours};
+\end{tikzpicture}
+\end{document}

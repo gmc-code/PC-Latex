@@ -1,0 +1,43 @@
+\documentclass[border=10pt,multi,tikz]{standalone}
+\usepackage[edges]{forest}
+\usetikzlibrary{arrows.meta,shadows.blur}
+\begin{document}
+\begin{forest}
+    forked edges,
+    for tree={s sep=0.5cm,
+        l sep=0.8cm,
+        draw=blue!80!darkgray,
+        fill=blue!10!white,
+        rounded corners,
+        text width=(\textwidth)/5,
+        edge={-Latex},
+        font=\sffamily,
+        text centered,
+        blur shadow,
+    }
+    [Vertebrates
+        [1A \\Feathers present
+            [birds]
+        ]
+        [1B \\Feathers absent
+            [2A \\Scales present
+                [3A \\Breathe with gills
+                        [fish]
+                ]
+                [3B \\Breathe with lungs
+                        [reptiles]
+                ]
+            ]
+            [2B \\No scales present
+                [4A \\Hair or fur present
+                        [mammals]
+                ]
+                [4B \\Hair or fur absent
+                        [amphibians]
+                ]
+            ]
+        ]
+    ]
+
+\end{forest}
+\end{document}

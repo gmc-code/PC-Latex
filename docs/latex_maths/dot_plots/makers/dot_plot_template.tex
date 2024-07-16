@@ -1,0 +1,19 @@
+\documentclass[border = 3mmm]{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{width=10cm,height=<<height>>cm,compat=newest}
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[
+xmin=<<min_val>>,
+xmax=<<max_val>>,
+% hide y axis,
+axis y line=none,
+axis x line=bottom,
+axis x line shift={4pt},
+every outer x axis line/.append style={stealth-stealth},
+title={},
+xlabel={<<xlabel>>}]
+\addplot [only marks, black, mark=*, mark size=2pt] coordinates{<<coords>>};
+\end{axis}
+\end{tikzpicture}
+\end{document}

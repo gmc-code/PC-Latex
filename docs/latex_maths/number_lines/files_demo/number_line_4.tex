@@ -1,0 +1,82 @@
+% numberline right and left +(+5) or +(-5)
+\documentclass[preview]{standalone}
+\usepackage[a4paper, portrait, margin=1cm]{geometry}
+\usepackage[nomessages]{fp}   % http://ctan.org/pkg/fp
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+\usepackage{ifthen}
+\begin{document}
+% set jump height of arrow
+\def\jumpheight{10}
+%startval + changeval= endval for number line
+% enter values between -10 and 10 
+% for addition
+\def\startval{-1}
+\def\endval{2}
+% for addition to right
+\FPeval{\changeval}{round(\endval - \startval,0)}
+\ifthenelse{\changeval > 0}{\def\signchangeval{+\changeval}}{\def\signchangeval{\changeval}}
+
+\begin{tikzpicture}[scale=0.87]
+    \draw[to-to, line width=1pt] (-10.5,0) -- (10.5,0) ; % the number line with arrow style to-to
+    \foreach \x in {-10,-9,...,10} % tick marks
+        \draw[shift={(\x,0)},color=black, line width=1pt] (0pt,-18pt) -- (0pt,0pt);
+    \foreach \x in {-10,0,\startval,\endval,10} % numbers
+        \draw[shift={(\x,-1.2)},color=black] node[font=\Large] {$\x$};
+    \filldraw[ForestGreen] (\startval,0) circle (4pt) node[above] (a) {};
+    \filldraw[red] (\endval,0) circle (4pt) node[above] (b) {}; 
+    \draw[->, line width=1pt, color=black] (a.north)  .. controls  +(north:\jumpheight mm) and +(north:\jumpheight mm) .. node[above=2pt,sloped,font=\Large] {+(\signchangeval)} (b.north); % for addition
+\end{tikzpicture}
+
+% same values for subtraction to right
+% for subtraction
+\FPeval{\changeval}{round(\startval - \endval,0)} 
+\ifthenelse{\changeval > 0}{\def\signchangeval{+\changeval}}{\def\signchangeval{\changeval}}
+
+\begin{tikzpicture}[scale=0.87]
+    \draw[to-to, line width=1pt] (-10.5,0) -- (10.5,0) ; % the number line with arrow style to-to
+    \foreach \x in {-10,-9,...,10} % tick marks
+        \draw[shift={(\x,0)},color=black, line width=1pt] (0pt,-18pt) -- (0pt,0pt);
+    \foreach \x in {-10,0,\startval,\endval,10} % numbers
+        \draw[shift={(\x,-1.2)},color=black] node[font=\Large] {$\x$};
+    \filldraw[ForestGreen] (\startval,0) circle (4pt) node[above] (a) {};
+    \filldraw[red] (\endval,0) circle (4pt) node[above] (b) {};
+    \draw[->, line width=1pt, color=black] (a.north)  .. controls  +(north:\jumpheight mm) and +(north:\jumpheight mm) .. node[above=2pt,sloped,font=\Large] {-(\signchangeval)} (b.north); % for subtraction
+\end{tikzpicture}
+
+% to left
+\FPeval{\changeval}{round(\startval - \endval,0)} 
+\FPeval{\endval}{round(\startval + \changeval,0)}
+% for addition
+\FPeval{\changeval}{round(\endval - \startval,0)}
+\ifthenelse{\changeval > 0}{\def\signchangeval{+\changeval}}{\def\signchangeval{\changeval}}
+
+\begin{tikzpicture}[scale=0.87]
+    \draw[to-to, line width=1pt] (-10.5,0) -- (10.5,0) ; % the number line with arrow style to-to
+    \foreach \x in {-10,-9,...,10} % tick marks
+        \draw[shift={(\x,0)},color=black, line width=1pt] (0pt,-18pt) -- (0pt,0pt);
+    \foreach \x in {-10,0,\startval,\endval,10} % numbers
+        \draw[shift={(\x,-1.2)},color=black] node[font=\Large] {$\x$};
+    \filldraw[ForestGreen] (\startval,0) circle (4pt) node[above] (a) {};
+    \filldraw[red] (\endval,0) circle (4pt) node[above] (b) {}; 
+    \draw[->, line width=1pt, color=black] (a.north)  .. controls  +(north:\jumpheight mm) and +(north:\jumpheight mm) .. node[above=2pt,sloped,font=\Large] {+(\signchangeval)} (b.north); % for addition
+\end{tikzpicture}
+
+% same values for subtraction
+% for subtraction
+\FPeval{\changeval}{round(\startval - \endval,0)} 
+\ifthenelse{\changeval > 0}{\def\signchangeval{+\changeval}}{\def\signchangeval{\changeval}}
+
+\begin{tikzpicture}[scale=0.87]
+    \draw[to-to, line width=1pt] (-10.5,0) -- (10.5,0) ; % the number line with arrow style to-to
+    \foreach \x in {-10,-9,...,10} % tick marks
+        \draw[shift={(\x,0)},color=black, line width=1pt] (0pt,-18pt) -- (0pt,0pt);
+    \foreach \x in {-10,0,\startval,\endval,10} % numbers
+        \draw[shift={(\x,-1.2)},color=black] node[font=\Large] {$\x$};
+    \filldraw[ForestGreen] (\startval,0) circle (4pt) node[above] (a) {};
+    \filldraw[red] (\endval,0) circle (4pt) node[above] (b) {};
+    \draw[->, line width=1pt, color=black] (a.north)  .. controls  +(north:\jumpheight mm) and +(north:\jumpheight mm) .. node[above=2pt,sloped,font=\Large] {-(\signchangeval)} (b.north); % for subtraction
+\end{tikzpicture}
+
+\end{document}
+

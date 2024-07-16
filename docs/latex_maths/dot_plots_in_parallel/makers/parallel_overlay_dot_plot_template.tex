@@ -1,0 +1,28 @@
+\documentclass[border = 3mmm]{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{width=10cm,height=<<height>>cm,compat=newest}
+\begin{document}
+\begin{tikzpicture}
+    \begin{axis}[
+        % align left:
+        legend style={
+            cells={anchor=west},
+            legend pos=outer north east,
+            },
+        xmin=<<min_val>>,
+        xmax=<<max_val>>,
+        % hide y axis,
+        axis y line=none,
+        axis x line=bottom,
+        % set the precision of the x tick labels to be 0, which means no decimals
+        % xticklabel style={/pgf/number format/precision=0},
+        xtick={<<min_tval>>,...,<<max_tval>>},   %,<<min_tplus1>>
+        axis x line shift={4pt},
+        every outer x axis line/.append style={stealth-stealth},
+        xlabel={<<xlabel>>}]
+        \addplot [only marks, gray!40!, mark=*, mark size=3.5pt] coordinates{<<coords>>};
+        \addplot [only marks, black, mark=*, mark size=1.2pt] coordinates{<<coords2>>};
+        \legend{<<title>>, <<title2>>};
+    \end{axis}
+\end{tikzpicture}
+\end{document}

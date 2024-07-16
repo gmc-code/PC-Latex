@@ -1,0 +1,21 @@
+\documentclass[varwidth,border=5mm]{standalone}
+\usepackage{bohr}
+\usepackage{array}
+\begin{document}
+\renewcommand{\arraystretch}{1.5} % Set the row height to 1.5 times the default value
+\setlength{\extrarowheight}{24pt} % Set the row padding to 24 points
+\setbohr{
+  distribution-method=quantum,
+  insert-missing,
+  nucleus-options-set={black},
+  shell-options-set={black},
+  electron-options-set={black},
+  nucleus-radius=1.5em
+}
+\begin{tabular}{cc|cc}
+\textbf{Li} \elconf{3} & \bohr{3}{Li} & \textbf{Li$^+$} \elconf{2} & \bohr{2}{Li$^+$} \\[36pt] % Adjust the spacing here
+\hline
+\textbf{F} \elconf{9} & \bohr{9}{F} & \textbf{F$^-$} \elconf{10} & \bohr{10}{F$^-$} \\
+\end{tabular}
+\end{document}
+

@@ -1,0 +1,19 @@
+\documentclass[border = 3mmm]{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{width=10cm,height=1.9cm,compat=newest}
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[
+xmin=4.5,
+xmax=6.5,
+% hide y axis,
+axis y line=none,
+axis x line=bottom,
+axis x line shift={4pt},
+every outer x axis line/.append style={stealth-stealth},
+title={},
+xlabel={data set 3}]
+\addplot [only marks, black, mark=*, mark size=2pt] coordinates{(5.0, 1)(5.2, 1)(5.2, 2)(5.3, 1)(5.3, 2)(5.5, 1)(5.5, 2)(5.6, 1)(5.6, 2)(5.8, 1)(6.0, 1)};
+\end{axis}
+\end{tikzpicture}
+\end{document}

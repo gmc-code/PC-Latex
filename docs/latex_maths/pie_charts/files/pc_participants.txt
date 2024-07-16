@@ -1,0 +1,3 @@
+Group participants
+15,13,12,12,11,9,8,8,7,5
+a,b,c,d,e,f,g,h,i,j

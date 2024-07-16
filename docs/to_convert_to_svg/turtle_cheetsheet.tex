@@ -1,0 +1,195 @@
+\documentclass[10pt,a4paper]{article}
+
+% Packages
+\usepackage{fancyhdr}           % For header and footer
+\usepackage{multicol}           % Allows multicols in tables
+\usepackage{tabularx}           % Intelligent column widths
+\usepackage{tabulary}           % Used in header and footer
+\usepackage{hhline}             % Border under tables
+\usepackage{graphicx}           % For images
+\usepackage{xcolor}             % For hex colours
+%\usepackage[utf8x]{inputenc}    % For unicode character support
+\usepackage[T1]{fontenc}        % Without this we get weird character replacements
+\usepackage{colortbl}           % For coloured tables
+\usepackage{setspace}           % For line height
+\usepackage{lastpage}           % Needed for total page number
+\usepackage{seqsplit}           % Splits long words.
+%\usepackage{opensans}          % Can't make this work so far. Shame. Would be lovely.
+\usepackage[normalem]{ulem}     % For underlining links
+% Most of the following are not required for the majority
+% of cheat sheets but are needed for some symbol support.
+\usepackage{amsmath}            % Symbols
+\usepackage{MnSymbol}           % Symbols
+\usepackage{wasysym}            % Symbols
+%\usepackage[english,german,french,spanish,italian]{babel}              % Languages
+
+% Document Info
+\author{}
+\pdfinfo{
+  /Title (python-turtle-module-cheatsheet.pdf)
+  /Subject (Python turtle module cheatsheet Cheat Sheet)
+}
+
+% Lengths and widths
+\addtolength{\textwidth}{6cm}
+\addtolength{\textheight}{-1cm}
+\addtolength{\hoffset}{-3cm}
+\addtolength{\voffset}{-2cm}
+\setlength{\tabcolsep}{0.2cm} % Space between columns
+\setlength{\headsep}{-12pt} % Reduce space between header and content
+\setlength{\headheight}{85pt} % If less, LaTeX automatically increases it
+\renewcommand{\footrulewidth}{0pt} % Remove footer line
+\renewcommand{\headrulewidth}{0pt} % Remove header line
+\renewcommand{\seqinsert}{\ifmmode\allowbreak\else\-\fi} % Hyphens in seqsplit
+% This two commands together give roughly
+% the right line height in the tables
+\renewcommand{\arraystretch}{1.3}
+\onehalfspacing
+
+% Commands
+\newcommand{\SetRowColor}[1]{\noalign{\gdef\RowColorName{#1}}\rowcolor{\RowColorName}} % Shortcut for row colour
+\newcommand{\mymulticolumn}[3]{\multicolumn{#1}{>{\columncolor{\RowColorName}}#2}{#3}} % For coloured multi-cols
+\newcolumntype{x}[1]{>{\raggedright}p{#1}} % New column types for ragged-right paragraph columns
+\newcommand{\tn}{\tabularnewline} % Required as custom column type in use
+
+% Font and Colours
+\definecolor{HeadBackground}{HTML}{333333}
+\definecolor{FootBackground}{HTML}{666666}
+\definecolor{TextColor}{HTML}{333333}
+\definecolor{DarkBackground}{HTML}{47A325}
+\definecolor{LightBackground}{HTML}{F3F9F1}
+\renewcommand{\familydefault}{\sfdefault}
+\color{TextColor}
+
+% Header and Footer
+\pagestyle{fancy}
+
+
+\begin{document}
+\raggedright
+\raggedcolumns
+
+% Set font size to small. Switch to any value
+% from this page to resize cheat sheet text:
+% www.emerson.emory.edu/services/latex/latex_169.html
+\footnotesize % Small font.
+
+\begin{multicols*}{2}
+
+\begin{tabularx}{8.4cm}{x{2.56 cm} x{5.44 cm} }
+\SetRowColor{DarkBackground}
+\mymulticolumn{2}{x{8.4cm}}{\bf\textcolor{white}{Turtle Pen}}  \tn
+% Row 0
+\SetRowColor{LightBackground}
+up() & Sets the pen state to be up (not drawing). \tn 
+% Row Count 2 (+ 2)
+% Row 1
+\SetRowColor{white}
+\seqsplit{down()} & Sets the pen state to be down (drawing). \tn 
+% Row Count 4 (+ 2)
+% Row 2
+\SetRowColor{LightBackground}
+\seqsplit{color(r},g,b) & See below \tn 
+% Row Count 6 (+ 2)
+% Row 3
+\SetRowColor{white}
+\seqsplit{color(s)} & Sets the color that the pen will draw until the color is changed. It takes either \tn 
+% Row Count 9 (+ 3)
+% Row 4
+\SetRowColor{LightBackground}
+ & 1. three arguments, each a floating point number between 0.0 — 1.0, where the first the amount of red, the second is the amount of green, and the third is the amount of blue \tn 
+% Row Count 16 (+ 7)
+% Row 5
+\SetRowColor{white}
+ & 2. a "color string" the name of a TK color (e.g.,  "black", "red", "blue", ...) \tn 
+% Row Count 20 (+ 4)
+% Row 6
+\SetRowColor{LightBackground}
+\seqsplit{begin\_fill()} & See below \tn 
+% Row Count 22 (+ 2)
+% Row 7
+\SetRowColor{white}
+\seqsplit{end\_fill()} & To fill a figure, use begin\_fill() before you start drawing the figure. Draw the figure.  Then execute end\_fill().  The figure drawn between the two fill commands will be filled with the present color setting. \tn 
+% Row Count 31 (+ 9)
+\SetRowColor{LightBackground}
+\seqsplit{hideturtle()} & See below \tn 
+% Row Count 2 (+ 2)
+% Row 9
+\SetRowColor{white}
+\seqsplit{showturtle()} & Sets the state to hide / show the   When shown, you see it as a small arrowhead pointed in the direction of the heading. \tn 
+% Row Count 7 (+ 5)
+\hhline{>{\arrayrulecolor{DarkBackground}}--}
+\SetRowColor{LightBackground}
+\mymulticolumn{2}{x{8.4cm}}{The default pen color is "black".}  \tn 
+\hhline{>{\arrayrulecolor{DarkBackground}}--}
+\end{tabularx}
+\par\addvspace{1.3em}
+
+\begin{tabularx}{8.4cm}{x{3.28 cm} x{4.72 cm} }
+\SetRowColor{DarkBackground}
+\mymulticolumn{2}{x{8.4cm}}{\bf\textcolor{white}{Turtle other}}  \tn
+% Row 0
+\SetRowColor{LightBackground}
+xcor(), ycor() & Returns the x - coordinate / y - coordinate of the current pen position. \tn 
+% Row Count 4 (+ 4)
+% Row 1
+\SetRowColor{white}
+bye() & Close the turtle drawing window \tn 
+% Row Count 6 (+ 2)
+\hhline{>{\arrayrulecolor{DarkBackground}}--}
+\end{tabularx}
+\par\addvspace{1.3em}
+
+\begin{tabularx}{8.4cm}{x{3.04 cm} x{4.96 cm} }
+\SetRowColor{DarkBackground}
+\mymulticolumn{2}{x{8.4cm}}{\bf\textcolor{white}{Turtle Draw}}  \tn
+% Row 0
+\SetRowColor{LightBackground}
+\seqsplit{right(degrees)} & Turns the direction that the turtle is facing right (clockwise) by the amount indicated (in degrees). \tn 
+% Row Count 5 (+ 5)
+% Row 1
+\SetRowColor{white}
+\seqsplit{left(degrees)} & Turns the direction that the turtle is facing left (counter clockwise) by the amount indicated (in degrees). \tn 
+% Row Count 10 (+ 5)
+% Row 2
+\SetRowColor{LightBackground}
+\seqsplit{forward(distance)} & Moves the turtle forward (in the direction the turtle is facing) the distance indicated (in pixels). Draws a line if the pen is down, not if the pen is up. \tn 
+% Row Count 17 (+ 7)
+% Row 3
+\SetRowColor{white}
+\seqsplit{backward(distance)} & Moves the turtle  backward (in the direction opposite to how the turtle is facing) the distance indicated (in pixels).  Draws a line if the pen is down, not if the pen is up. \tn 
+% Row Count 25 (+ 8)
+% Row 4
+\SetRowColor{LightBackground}
+\seqsplit{setheading(angle)} & Sets the orientation of the turtle to angle. Here are some common directions in degrees: \tn 
+% Row Count 29 (+ 4)
+% Row 5
+\SetRowColor{white}
+ & 0 (east) \tn 
+% Row Count 30 (+ 1)
+\SetRowColor{LightBackground}
+ & 90 (north) \tn 
+% Row Count 1 (+ 1)
+% Row 7
+\SetRowColor{white}
+ & 180 (west) \tn 
+% Row Count 2 (+ 1)
+% Row 8
+\SetRowColor{LightBackground}
+ & 270 (south) \tn 
+% Row Count 3 (+ 1)
+% Row 9
+\SetRowColor{white}
+goto(x,y) & Moves the turtle to the specified coordinates, drawing a straight line to the destination (x,y) if the pen is down, and not drawing if the pen is up. \tn 
+% Row Count 10 (+ 7)
+% Row 10
+\SetRowColor{LightBackground}
+\seqsplit{circle(radius)} & Draws a circle of the indicated radius. The turtle draws the circle tangent to the direction the turtle is facing. \tn 
+% Row Count 15 (+ 5)
+\hhline{>{\arrayrulecolor{DarkBackground}}--}
+\end{tabularx}
+\par\addvspace{1.3em}
+
+\end{multicols*}
+
+\end{document}

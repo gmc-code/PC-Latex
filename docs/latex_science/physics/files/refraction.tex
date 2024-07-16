@@ -1,0 +1,39 @@
+\documentclass[11pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes,positioning}
+\usetikzlibrary{decorations.markings}
+\tikzstyle arrowstyle=[scale=1]
+\tikzstyle directed=[postaction={decorate,decoration={markings,
+    mark=at position .65 with {\arrow[arrowstyle]{stealth}}}}]
+\tikzstyle reverse directed=[postaction={decorate,decoration={markings,
+    mark=at position .65 with {\arrowreversed[arrowstyle]{stealth};}}}]
+\begin{document}
+\begin{tikzpicture}
+
+    % define coordinates
+    \coordinate (O) at (0,0) ;
+    \coordinate (normal_top) at (0,4) ;
+    \coordinate (normal_bottom) at (0,-4) ;
+    \coordinate (boundary_left) at (-4,0) ;
+    \coordinate (boundary_right) at (4,0) ;
+    
+    % boundary
+    \draw[black] (boundary_left) -- (boundary_right);
+    \node[above left] at (boundary_right) {Air};
+    \node[below left] at (boundary_right) {Water};
+        
+    % normal
+    \draw[dash pattern=on5pt off3pt] (normal_top) -- (normal_bottom) ;
+    \node[left] at (normal_top) {Normal};
+
+    % rays
+    \draw[red,ultra thick,reverse directed] (O) -- (130:5.2);
+    \draw[blue,directed,ultra thick] (O) -- (-70:4.24);
+
+    % angles
+    \draw (0,1) arc (90:130:1);
+    \draw (0,-1.4) arc (270:290:1.4) ;
+    \node[] at (280:1.8)  {$\theta_{2}$};
+    \node[] at (110:1.4)  {$\theta_{1}$};
+\end{tikzpicture}
+\end{document}

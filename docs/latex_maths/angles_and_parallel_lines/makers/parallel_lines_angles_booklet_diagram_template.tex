@@ -1,0 +1,46 @@
+\begin{minipage}{0.75\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=<<rotationAngle>>]
+      % Draw the first line
+      \draw[<->>, >={Stealth[scale=1.3]}, name path=P1] (<<parIstartx>>, <<parIstarty>>) -- (<<parIendx>>, <<parIendy>>);
+      % Draw the second line with the calculated offsets
+      \draw[<->>, >={Stealth[scale=1.3]}, name path=P2] (<<parIIstartx>>, <<parIIstarty>>) -- (<<parIIendx>>, <<parIIendy>>);
+      % Draw the transversal through the middle of the parallel lines
+      \draw[<->, >=Stealth, name path=P3] (<<transstartx>>, <<transstarty>>) -- (<<transendx>>, <<transendy>>);
+      
+      \path [name intersections={of=P1 and P3,by=A}];
+      \path [name intersections={of=P2 and P3,by=B}];
+
+      % Draw the angle
+      \coordinate (p1s) at (<<parIstartx>>, <<parIstarty>>);
+      \coordinate (p1e) at (<<parIendx>>, <<parIendy>>);
+      \coordinate (p2s) at (<<parIIstartx>>, <<parIIstarty>>);
+      \coordinate (p2e) at (<<parIIendx>>, <<parIIendy>>);
+      \coordinate (ts) at (<<transstartx>>, <<transstarty>>);
+      \coordinate (te) at (<<transendx>>, <<transendy>>);
+
+      % order for vertices go in anticlockwise order te--A--p1e
+      <<anglestext>>
+      % %% Point A
+      % \draw pic["$<<alabel>>$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=te--A--p1e};
+      % \draw pic["$<<blabel>>$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p1e--A--ts};
+      % \draw pic["$<<clabel>>$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=ts--A--p1s};
+      % \draw pic["$<<dlabel>>$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p1s--A--te};
+      
+      % %%  Point B
+      % \draw pic["$<<elabel>>$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=te--B--p2e};
+      % \draw pic["$<<flabel>>$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p2e--B--ts};
+      % \draw pic["$<<glabel>>$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=ts--B--p2s};
+      % \draw pic["$<<hlabel>>$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p2s--B--te};
+
+    \end{scope}
+  \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.2\textwidth}
+  \begin{align*}
+    \angle \text{<<angle_to_find>>} &= \text{<<angle_to_find_value>>}^\circ
+  \end{align*}
+\end{minipage}

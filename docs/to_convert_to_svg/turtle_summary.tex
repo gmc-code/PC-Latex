@@ -1,0 +1,110 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{tabularx}
+
+\begin{document}
+
+Turtles are like cursors used to indicate the position for drawing to the screen. Turtles are used for drawing on the screen. Most of the methods for controlling turtles are below.
+
+\section*{Turtle methods}
+
+\textbf{t = turtle.Turtle()} create a new Turtle object and open its window
+
+\subsection*{Position}
+
+\begin{tabular}{p{0.38\textwidth}p{0.62\textwidth}}
+\textbf{t.home()} & move the turtle to (0, 0), pointing east (depending on mode) \\
+\textbf{t.position()} & return the current position (x,y) \\
+\textbf{t.pos()} & \\
+\textbf{t.setposition(x,y)}& move to coordinates (x,y) \\
+\textbf{t.teleport(x,y=None,fill\_gap=False)} & move to coordinates (x,y) without drawing a line. If fill\_gap is True, it fills the gap from the old position to the new one. \\
+\textbf{t.setpos(x,y)} & \\ 
+\textbf{t.goto(x,y)}  & \\
+\textbf{t.xcor()} & Return the turtle's x coordinate. \\
+\textbf{t.ycor()} & Return the turtle's y coordinate. \\
+\textbf{t.setx(x)} & set the turtle's x coordinate, leave y unchanged \\
+\textbf{t.sety(y)} & set the turtle's y coordinate, leave x unchanged \\
+\textbf{t.distance(x, y)} & Return the distance from the turtle to coordinates (x, y) \\
+\end{tabular}
+
+\subsection*{Direction}
+
+\begin{tabularx}{\textwidth}{p{0.33\textwidth}X}
+\textbf{t.left(angle)} & turn left, anticlockwise, angle degrees \\
+\textbf{t.lt(angle)} &  \\
+\textbf{t.right(angle)} & turn right, clockwise, angle degrees \\
+\textbf{t.rt(angle)} & \\
+\textbf{t.setheading(to\_angle)} & change heading to direction angle degrees \\
+\textbf{t.seth(to\_angle)} & \\
+\textbf{t.heading()} & return the current direction angle \\
+\textbf{t.towards(x, y)} & return the angle between the line from turtle position to position specified by (x,y), the vector or the other turtle. \\
+\end{tabularx}
+
+\subsection*{Movement}
+
+\begin{tabularx}{\textwidth}{p{0.33\textwidth}X}
+\textbf{t.speed(n)} & how fast the turtle moves (n = 0 to 10); speed=0 means no animation \\
+\textbf{t.forward(distance)} & move in the current direction distance pixels \\
+\textbf{t.fd(distance)} & \\
+\textbf{t.backward(distance)} & move in the reverse direction distance pixels \\
+\textbf{t.back(distance)} & \\
+\textbf{t.bk(distance)} 
+\end{tabularx}
+
+\subsection*{Drawing}
+
+\begin{tabularx}{\textwidth}{p{0.33\textwidth}X}
+\textbf{t.penup()} & raise the pen, stoping drawing \\
+\textbf{t.up()} & \\
+\textbf{t.pu()} & \\
+\textbf{t.pendown()} & lower the pen for drawing \\
+\textbf{t.down()} & \\
+\textbf{t.pd()} & \\
+\textbf{t.isdown()} & return True if the pen is down, False if up. \\
+\textbf{t.pensize(width)} & return or set linewidth to width pixels \\
+\textbf{t.width(width)} & \\
+\textbf{t.pen()} & return or set turtle characteristics \\
+\textbf{t.circle(radius, extent, steps)} & draw a circle with given radius, of arc angle extent. in a number of steps (for a poylgon). \\
+\textbf{t.dot(size, color)} & draw a dot at the current position. \\
+\textbf{t.stamp()} & draw the turtle shape at the current position and return a stamp\_id for that stamp. \\
+\textbf{t.clearstamp(stampid)} & delete stamp given by stamp\_id. \\
+\textbf{t.clearstamps(n)} & delete n stamps. \\
+\textbf{t.shape(name)} & Return or set turtle shape; "arrow", "turtle", "circle", "square", "triangle", "classic". \\
+\textbf{t.write(str, move, align, font)} & write a message to the screen \\
+\end{tabularx}
+
+\subsection*{Drawing colour}
+
+\begin{tabularx}{\textwidth}{p{0.33\textwidth}X}
+\textbf{t.color(pencolor, fillcolor)} & change the pencolor and fillcolor \\
+\textbf{t.pencolor(color)} & change the pen colour \\
+\textbf{t.fillcolor(color)} & change the fill colorur \\
+\end{tabularx}
+
+\subsection*{Filling}
+
+\begin{tabularx}{\textwidth}{p{0.33\textwidth}X}
+\textbf{t.begin\_fill()} & The starting point is remembered for a filled polygon. \\
+\textbf{t.end\_fill()} & Current fill color is filled after closing the polygon. \\
+\textbf{t.filling()} & Return True if begin\_fill has been called or False if not, or if end\_fill has been called. \\
+\end{tabularx}
+
+\subsection*{Clear drawing}
+
+\begin{tabularx}{\textwidth}{p{0.33\textwidth}X}
+\textbf{t.clear()} & Clear the turtle's drawing. \\
+\textbf{t.reset()} & Clear the turtle's drawing, place it at home and return it to it's default settings. \\
+\textbf{t.undo()} & Undo repeatedly the last turtle actions \\
+\end{tabularx}
+
+\subsection*{Turtle Visibility}
+
+\begin{tabularx}{\textwidth}{p{0.33\textwidth}X}
+\textbf{t.hideturtle()} & Make the turtle invisible to speed up the drawing. \\
+\textbf{t.ht()} &  \\
+\textbf{t.showturtle()} & Make the turtle visible. \\
+\textbf{t.st()} &  \\
+\textbf{t.isvisible()} & Return True if the Turtle is shown, False if it's hidden. \\
+\end{tabularx}
+
+\end{document}

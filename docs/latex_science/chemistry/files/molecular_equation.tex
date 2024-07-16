@@ -1,0 +1,16 @@
+\documentclass[border=5mm]{standalone}
+\usepackage{chemfig}
+\renewcommand*\printatom[1]{\ensuremath{\mathsf{#1}}}
+\begin{document}
+\chemnameinit{\chemfig{R-C(-[:-30]OH)=[:30]O}}
+\schemestart
+\chemname{\chemfig{R’OH}}{Alcohol}
+\+
+\chemname{\chemfig{R-C(-[:-30]OH)=[:30]O}}{Carboxylic acid}
+\arrow(.mid east--.mid west)
+\chemname{\chemfig{R-C(-[:-30]OR’)=[:30]O}}{Ester}
+\+
+\chemname{\chemfig{H_2O}}{Water}
+\schemestop
+\chemnameinit{}
+\end{document}

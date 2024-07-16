@@ -1,0 +1,14 @@
+\documentclass[border = 5mm]{standalone}
+\usepackage{chemfig}
+\renewcommand*\printatom[1]{\ensuremath{\mathsf{#1}}} % This line changes the font of the atoms to sans serif
+\begin{document}
+
+\chemleft[\chemfig{
+\charge{[overlay=true]35:3pt=\color{red}{$\scriptstyle\delta^+$}}{H}
+-\charge{[overlay=true]35:3pt=\color{red}{$\scriptstyle\delta^-$},90=\:}{O}
+(-[6]\charge{[overlay=true]35:3pt=\color{red}{$\scriptstyle\delta^+$}}{H})
+-\charge{[overlay=true]35:3pt=\color{red}{$\scriptstyle\delta^+$}}{H}}
+\quad\chemright]
+\chemmove{\node[] at (0pt,10pt) {\footnotesize $+$};}
+
+\end{document}

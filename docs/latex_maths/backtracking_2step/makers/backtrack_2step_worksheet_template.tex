@@ -1,0 +1,28 @@
+% backtracking worksheet template
+\documentclass[leqno, 12pt]{article}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary {arrows.meta}
+\usepackage[a4paper, portrait, margin=1cm]{geometry}
+\usepackage{multicol}
+\pagestyle{empty}  
+
+\tikzset{backtrack/.style={rectangle,draw=black,fill=white,
+inner sep=2pt,minimum height=32pt, minimum width=20mm}}
+\tikzset{backtrackeq/.style={rectangle,draw=black,fill=white,
+inner sep=2pt,minimum height=12pt, minimum width=20mm}}
+\tikzset{backtrackstep/.style={rectangle,draw=none,fill=white,
+inner sep=2pt,minimum height=12pt, minimum width=20mm}}
+
+\def \HeadingQuestions {\section*{\Large Name: \underline{\hspace{8cm}} \hfill Date: \underline{\hspace{3cm}}} \vspace{-3mm}
+{2-step backtracking: Questions} \vspace{1pt}\hrule}
+
+\begin{document}
+    \HeadingQuestions
+    \vspace{-8mm}
+    \begin{multicols}{2}
+        <<col1>>
+    \columnbreak
+        <<col2>>
+    \end{multicols}
+\end{document}

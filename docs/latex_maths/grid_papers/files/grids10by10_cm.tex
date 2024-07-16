@@ -1,0 +1,18 @@
+% Graph paper A4 21 x 29.7 cm
+\documentclass[preview]{standalone}
+\usepackage[a4paper, portrait]{geometry}
+\geometry{hmargin=5.5cm,vmargin=0cm}
+\usepackage{tikz}
+\def\width{10}
+\def\height{10}
+
+\begin{document}
+
+\begin{tikzpicture}[x=1cm, y=1cm, semitransparent]
+\draw[step=1mm, line width=0.1mm, black!30!white] (0,0) grid (\width,\height);
+\draw[step=5mm, line width=0.2mm, black!40!white] (0,0) grid (\width,\height);
+\draw[step=5cm, line width=0.5mm, black!50!white] (0,0) grid (\width,\height);
+\draw[step=1cm, line width=0.3mm, black!90!white] (0,0) grid (\width,\height);
+\end{tikzpicture}
+
+\end{document}

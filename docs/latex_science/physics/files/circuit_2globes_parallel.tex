@@ -1,0 +1,25 @@
+\documentclass[12pt, varwidth, border=5mm]{standalone}
+\usepackage{circuitikz}
+\usepackage{tikz}
+
+\begin{document}
+\begin{circuitikz}
+% define coordinates for points in circuit from bot left
+\coordinate (A) at (0,0);
+\coordinate (B) at ($(A)+(0,2)$);
+\coordinate (C) at ($(B)+(2,0)$);
+\coordinate (D) at ($(C)+(2,0)$);
+\coordinate (E) at ($(D)+(0,-2)$);
+\coordinate (F) at ($(E)+(-2,0)$);
+
+\draw
+(A) to[battery, l={$12V$}] (B) % The voltage source
+to[short] (C)
+to[bulb, l=$3\Omega$] (F) % The first bulb
+to[short] (A)
+(C) to[short] (D)
+(D) to[bulb, l=$3\Omega$] (E) % The second bulb
+(E) to[short] (F);
+\end{circuitikz}\\
+Circuit with two globes in parallel.
+\end{document}

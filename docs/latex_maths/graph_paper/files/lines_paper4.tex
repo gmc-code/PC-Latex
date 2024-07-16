@@ -1,0 +1,14 @@
+% Graph paper A4 21 x 29.7 cm
+% This code will draw lines 1.5 cm apart and going from 2 cm on the left to 2 cm on the right from the edge of a page with a height of 7 cm and without any page numbers.
+
+\documentclass{article}
+\usepackage[paperheight=7cm]{geometry}
+\usepackage{tikz}
+\pagestyle{empty}
+ 
+\begin{document}
+\begin{tikzpicture}[remember picture,overlay]
+    \foreach \y in {1.5,3,...,6.85}
+        \draw[black,line width=0.5mm] (current page.north west) ++(2cm,-\y cm) -- ++(\paperwidth-4cm,0);
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,5 @@
+Heart rate up hill at same speed
+Untrained cyclists
+161, 163, 159, 162, 164, 160, 165, 158, 166, 157
+Trained cyclists
+76, 78, 74, 77, 79, 75, 80, 73, 81, 72

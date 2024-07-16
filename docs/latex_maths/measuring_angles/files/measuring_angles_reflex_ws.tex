@@ -1,0 +1,125 @@
+\documentclass{article}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+% Underlining package
+\usepackage{ulem}
+\usepackage[a4paper, portrait, margin=1cm]{geometry}
+
+\def \HeadingAnswers {\section*{\Large Name: \underline{\hspace{8cm}} \hfill Date: \underline{\hspace{3cm}}} \vspace{-3mm}
+{Reflex angles: Answers} \vspace{1pt}\hrule}
+\def \HeadingQuestions {\section*{\Large Name: \underline{\hspace{8cm}} \hfill Date: \underline{\hspace{3cm}}} \vspace{-3mm}
+{Reflex angles: Questions} \vspace{1pt}\hrule}
+
+% raise footer with page number; no header
+\fancypagestyle{myfancypagestyle}{
+  \fancyhf{}% clear all header and footer fields
+  \renewcommand{\headrulewidth}{0pt} % no rule under header
+  \fancyfoot[C] {\thepage} \setlength{\footskip}{12pt} % raise page number 6pt
+}
+\pagestyle{myfancypagestyle}  % apply myfancypagestyle
+
+\pgfmathsetmacro{\arm}{6}
+\pgfmathsetmacro{\minAngle}{270}
+\pgfmathsetmacro{\maxAngle}{350}
+\pgfmathsetmacro{\minAngleAB}{0}
+\pgfmathsetmacro{\maxAngleAB}{180}
+
+\pgfmathsetmacro{\maxdiag}{3}
+
+\begin{document}
+\HeadingAnswers
+\vspace{1mm}
+\def\AngleList{}
+\def\AngleABList{}
+\foreach \x in {1,...,\maxdiag} {
+    \pgfmathsetmacro{\Angle}{random(\minAngle,\maxAngle)}
+    \pgfmathsetmacro{\AngleAB}{random(\minAngleAB,\maxAngleAB)}
+    % the first item in the array is blank, then items 1 to 10 are stored
+    \xdef\AngleList{\AngleList,\Angle}
+    \xdef\AngleABList{\AngleABList,\AngleAB}
+    
+    \pgfmathsetmacro{\xB}{\arm *cos(\AngleAB)}
+    \pgfmathsetmacro{\yB}{\arm *sin(\AngleAB)}
+    \pgfmathsetmacro{\xC}{\arm *cos(\Angle + \AngleAB)}
+    \pgfmathsetmacro{\yC}{\arm *sin(\Angle + \AngleAB)}
+    \pgfmathsetmacro{\BAClabelX}{-.5*cos(\AngleAB)-3}
+    \pgfmathsetmacro{\BAClabelY}{-.5*sin(\AngleAB)-0.1}
+    \pgfmathsetmacro{\xarcB}{1*cos(\AngleAB)}
+    \pgfmathsetmacro{\yarcB}{1*sin(\AngleAB)}
+    \pgfmathsetmacro{\BlabelX}{\xB + 0.2*cos(\AngleAB)}
+    \pgfmathsetmacro{\BlabelY}{\yB + 0.2*sin(\AngleAB)}
+    \pgfmathsetmacro{\ClabelX}{\xC + 0.2*cos(\Angle + \AngleAB)}
+    \pgfmathsetmacro{\ClabelY}{\yC + 0.2*sin(\Angle + \AngleAB)}
+    \pgfmathsetmacro{\AlabelX}{0.2*cos(\Angle/2 + \AngleAB)}
+    \pgfmathsetmacro{\AlabelY}{0.2*sin(\Angle/2  + \AngleAB)}
+    
+    \begin{minipage}[t]{0.1\linewidth}
+    Q \x)
+    \end{minipage}
+    \hspace{0.2cm}
+    \begin{minipage}[]{0.8\linewidth}
+    \begin{tikzpicture}
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (\xB,\yB);
+    \coordinate (C) at (\xC,\yC);
+    \draw (A) -- (B) -- cycle;
+    \draw (A) -- (C) -- cycle;
+    \draw[-] (\xarcB,\yarcB) arc [start angle=\AngleAB, end angle=\Angle + \AngleAB, radius=1cm];
+    \node[right] at (\BAClabelX,\BAClabelY) {\raggedright $\theta = \Angle^\circ$};
+    \node[] at (\AlabelX,\AlabelY) {A};
+    \node[] at (\BlabelX,\BlabelY) {B};
+    \node[] at (\ClabelX,\ClabelY) {C};
+    \end{tikzpicture}
+    \end{minipage}
+    \vspace{1cm}
+}
+
+\cleardoublepage
+\setcounter{page}{1}
+
+\newpage
+\HeadingQuestions
+\vspace{1mm}
+% Iterate over the values in the angleList array
+\foreach \x in {1,...,\maxdiag} {
+    \pgfmathsetmacro{\Angle}{{\AngleList}[\x]}
+    \pgfmathsetmacro{\AngleAB}{{\AngleABList}[\x]}
+    \pgfmathsetmacro{\xB}{\arm *cos(\AngleAB)}
+    \pgfmathsetmacro{\yB}{\arm *sin(\AngleAB)}
+    \pgfmathsetmacro{\xC}{\arm *cos(\Angle + \AngleAB)}
+    \pgfmathsetmacro{\yC}{\arm *sin(\Angle + \AngleAB)}
+    \pgfmathsetmacro{\BAClabelX}{-.5*cos(\AngleAB)-3}
+    \pgfmathsetmacro{\BAClabelY}{-.5*sin(\AngleAB)-0.1}
+    \pgfmathsetmacro{\xarcB}{1*cos(\AngleAB)}
+    \pgfmathsetmacro{\yarcB}{1*sin(\AngleAB)}
+    \pgfmathsetmacro{\BlabelX}{\xB + 0.2*cos(\AngleAB)}
+    \pgfmathsetmacro{\BlabelY}{\yB + 0.2*sin(\AngleAB)}
+    \pgfmathsetmacro{\ClabelX}{\xC + 0.2*cos(\Angle + \AngleAB)}
+    \pgfmathsetmacro{\ClabelY}{\yC + 0.2*sin(\Angle + \AngleAB)}
+    \pgfmathsetmacro{\AlabelX}{0.2*cos(\Angle/2 + \AngleAB)}
+    \pgfmathsetmacro{\AlabelY}{0.2*sin(\Angle/2  + \AngleAB)}
+
+    \begin{minipage}[t]{0.1\linewidth}
+    Q \x)
+    \end{minipage}
+    \hspace{0.2cm}
+    \begin{minipage}[]{0.8\linewidth}
+    \begin{tikzpicture}
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (\xB,\yB);
+    \coordinate (C) at (\xC,\yC);
+    \draw (A) -- (B) -- cycle;
+    \draw (A) -- (C) -- cycle;
+    \draw[-] (\xarcB,\yarcB) arc [start angle=\AngleAB, end angle=\Angle + \AngleAB, radius=1cm];
+    \node[right] at (\BAClabelX,\BAClabelY) {\raggedright $\theta = \dotuline{~~~~~~~}$}; 
+    \node[] at (\AlabelX,\AlabelY) {A};
+    \node[] at (\BlabelX,\BlabelY) {B};
+    \node[] at (\ClabelX,\ClabelY) {C};
+    \end{tikzpicture}
+    \end{minipage}
+    \vspace{1cm}
+}
+
+
+\end{document}

@@ -1,0 +1,21 @@
+\documentclass[border = 3mm]{standalone}
+\usepackage{tikz}
+
+\begin{document}
+\begin{tikzpicture}
+  % grid black help lines default colour is black!40
+  \draw[help lines, step = 0.5cm] (-5, -5) grid (5, 5);
+
+  % axis with end labels
+  \draw[thick, <->] (0, -5.15) -- (0, 5.15) node[above] {$y$};
+  \draw[thick, <->] (-5.15, 0) -- (5.15, 0) node[right] {$x$};
+
+  % numbers along each axis .
+  \foreach \x in {-10,-8,...,-2,2,4,...,10}
+    \draw [thick] (\x cm/2,3pt) -- (\x cm/2,-3pt) node[anchor=north] {\fontsize{8}{11}\selectfont$\x$};
+  \foreach \y in {-10,-8,...,-2,2,4,...,10}
+    \draw [thick] (3pt,\y cm/2) -- (-3pt,\y cm/2) node[anchor=east] {\fontsize{8}{11}
+    \selectfont$\y$};
+
+\end{tikzpicture}
+\end{document}

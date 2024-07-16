@@ -1,0 +1,100 @@
+\documentclass[12pt]{article}
+\usepackage{tikz}
+\usepackage{multicol}  % multiple columns package
+\usepackage{fancyhdr}  %header footer package
+\usepackage{ulem}  % Underlining package
+\usepackage{amsmath}
+\usepackage{ifthen}
+\usepackage[a4paper, portrait, margin=1cm]{geometry}
+\usetikzlibrary{angles,quotes}
+\usetikzlibrary{calc}
+
+% Acute angle
+\newcommand{\acuteangle}[1]{
+  \draw (1,0) coordinate (B) -- (0,0) coordinate (A) -- (1,1) coordinate (C);
+  \pic [draw, "$\theta$", angle eccentricity=1.5] {angle = B--A--C};
+  \ifthenelse{\equal{#1}{true}}
+  {\node at (0.5,-0.25) {Acute angle};}
+  {\node at (0.5,-0.25) {\dotuline{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}};}
+}
+
+% Right angle
+\newcommand{\rightangle}[1]{
+  \draw (0,1) coordinate (B) -- (0,0) coordinate (A) -- (1,0) coordinate (C);
+  \pic [draw, "$\theta$", angle eccentricity=-1.5] {right angle = B--A--C};
+  \ifthenelse{\equal{#1}{true}}
+  {\node at (0.5,-0.25) {Right angle};}
+  {\node at (0.5,-0.25) {\dotuline{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}};}
+}
+
+% Obtuse angle
+\newcommand{\obtuseangle}[1]{
+  \draw (1,0) coordinate (B) -- (0,0) coordinate (A) -- (-0.4,1) coordinate (C);
+  \pic [draw, "$\theta$", angle eccentricity=1.5] {angle = B--A--C};
+  \ifthenelse{\equal{#1}{true}}
+  {\node at (0.5,-0.25) {Obtuse angle};}
+  {\node at (0.5,-0.25) {\dotuline{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}};}
+}
+
+% Straight angle
+\newcommand{\straightangle}[1]{
+  \draw (0.8,0) coordinate (B) -- (0,0) coordinate (A) -- (-0.8,0) coordinate (C);
+  \pic [draw, "$\theta$", angle eccentricity=1.5] {angle = B--A--C};
+  \ifthenelse{\equal{#1}{true}}
+  {\node at (0,-0.25) {Straight angle};}
+  {\node at (0,-0.25) {\dotuline{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}};}
+}
+
+
+% Reflex angle
+\newcommand{\reflexangle}[1]{
+  \draw (-0.4,1) coordinate (B) -- (0,0) coordinate (A) -- (1,0) coordinate (C);
+  \pic [draw, "$\theta$", angle eccentricity=1.5] {angle = B--A--C};
+  \ifthenelse{\equal{#1}{true}}
+  {\node at (0.3,-0.35) {Reflex angle};}
+  {\node at (0.3,-0.35) {\dotuline{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}};}
+}
+
+% Revolution
+\newcommand{\revolution}[1]{
+  \draw (0,0) coordinate (A) -- (1,0) coordinate (B);
+  \draw (A) +(0:0.10) arc [start angle=0, end angle=360, radius=0.10];
+  \node at (0.15,0.15) {$\theta$};
+  \ifthenelse{\equal{#1}{true}}
+  {\node at (0.5,-0.25) {Revolution};}
+  {\node at (0.5,-0.25) {\dotuline{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}};}
+}
+
+\def \HeadingAnswers {\section*{\Large Name: \underline{\hspace{8cm}} \hfill Date: \underline{\hspace{3cm}}} \vspace{-3mm}
+{Types of angles: Answers} \vspace{1pt}\hrule}
+\def \HeadingQuestions {\section*{\Large Name: \underline{\hspace{8cm}} \hfill Date: \underline{\hspace{3cm}}} \vspace{-3mm}
+{Types of angles: Questions} \vspace{1pt}\hrule}
+
+% raise footer with page number; no header
+\fancypagestyle{myfancypagestyle}{
+  \fancyhf{}% clear all header and footer fields
+  \renewcommand{\headrulewidth}{0pt} % no rule under header
+  \fancyfoot[C] {\thepage} \setlength{\footskip}{12pt} % raise page number 6pt
+}
+\pagestyle{myfancypagestyle}  % apply myfancypagestyle
+
+\newcounter{minipagecount}
+
+\begin{document}
+\HeadingAnswers
+\vspace{1mm}
+
+\begin{multicols}{2}
+  \foreach \angle in <<macro_order>> {
+    \begin{minipage}[]{1.0\linewidth}
+      \refstepcounter{minipagecount}
+      \noindent{(\theminipagecount)}\quad
+      \begin{tikzpicture}[scale=4, baseline={([yshift=0.5cm]current bounding box.north)}]
+        \csname\angle\endcsname{true}
+      \end{tikzpicture}
+    \end{minipage}
+    \vspace{2cm}
+  }
+\end{multicols}
+
+\end{document}

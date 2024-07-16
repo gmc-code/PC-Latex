@@ -1,0 +1,30 @@
+% for flow charts see: https://LaTeXdraw.com/draw-flowcharts-LaTeX-tutorial/#t-1611788765624
+\documentclass[preview,10pt]{standalone}
+\usepackage{tikz}
+% \usetikzlibrary{positioning}
+\usetikzlibrary{shapes,arrows}
+\usepackage[a4paper, portrait, margin=1cm]{geometry}
+
+\tikzstyle{block} = [rectangle, draw, fill=blue!20, text width=6em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{line} = [draw, -LaTeX']
+
+\begin{document}
+\begin{tikzpicture}[node distance = 3cm, auto, scale=0.80]
+    % Place nodes
+    \node [block, fill=red!20] (python1) {Python: random numbers and values for LaTeX};
+    \node [block, above left of=python1] (template1) {Document template};
+    \node [block, below left of=python1] (template2) {Diagram template};
+    \node [block, fill=red!20, right of=python1] (python2) {Python: replace placeholders in LaTeX};
+    \node [block, fill=green!20, right of=python2] (tex) {LaTeX file};
+    \node [block, fill=yellow!20, right of=tex] (pdf) {PDF file};
+    \node [block, fill=orange!40, right of=pdf] (png) {PNG file};
+    % Draw edges
+    \path [line] (template1) -- (python1);
+    \path [line] (template2) -- (python1);
+    \path [line] (python1) -- (python2);
+    \path [line] (python2) -- (tex);
+    \path [line] (tex) -- (pdf);
+    \path [line] (pdf) -- (png);
+\end{tikzpicture}
+\end{document}
+

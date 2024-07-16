@@ -1,0 +1,15 @@
+% 16 by 25 dots 1cm apart
+\documentclass{article}
+\usepackage[a4paper, portrait, hmargin=2cm, vmargin=2cm]{geometry}
+\usepackage{tikz}
+\thispagestyle{empty}
+
+\begin{document}
+\begin{tikzpicture}
+  \foreach \x in {0,...,16} {
+    \foreach \y in {0,...,25} {
+      \filldraw[black] (\x,\y) circle (.5pt);
+    }
+  }
+\end{tikzpicture}
+\end{document}

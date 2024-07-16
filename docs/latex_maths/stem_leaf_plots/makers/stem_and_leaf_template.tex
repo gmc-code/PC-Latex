@@ -1,0 +1,14 @@
+\documentclass[12pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\begin{document}
+\begin{tikzpicture}
+\node[align=left] (top_node) at (0,0){<<title>> \\ Key: <<keystem>> $\vert$ <<keyleaf>> = <<keyvalue>>};
+\node[below=of top_node,yshift=10mm] {
+\begin{tabular}{r|l@{\hspace{4 pt}}}
+Stem & Leaf\\
+\hline
+<<data>>
+\end{tabular}};
+\end{tikzpicture}
+\end{document}

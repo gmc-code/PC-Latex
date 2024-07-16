@@ -1,0 +1,16 @@
+\documentclass{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepackage{pgf-pie}
+\begin{document}
+\begin{tikzpicture}
+    \pie[text=pin, sum=auto]{
+        47/O,
+28/Si,
+8/Al,
+5/Fe,
+12/rest
+    }
+    \node [above=3mm, font=\large] at (current bounding box.north) {Percentage Abundance in crust};
+\end{tikzpicture}
+\end{document}

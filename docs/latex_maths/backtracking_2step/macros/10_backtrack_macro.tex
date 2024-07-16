@@ -1,0 +1,91 @@
+% backtracking diagrams with X + pattern randomly generated
+\documentclass[12pt]{article}
+\pagestyle{empty}   
+\parindent 8mm
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary {arrows.meta}
+\usepackage[a4paper, portrait, margin=1cm]{geometry}
+\usepackage{pgfmath}
+\usepackage{pgf}
+\usepackage{multicol}
+
+\def \Heading {2 step Backtracking 1: Answers  \hrule{}}
+
+\newcommand{\mybacktrack}[0]{%
+    % modify values for backtracking
+    %ax + b
+    \pgfmathsetmacro{\a}{random(2,8)}
+    \pgfmathsetmacro{\b}{random(1,10)}
+    \pgfmathsetmacro{\x}{random(1,10)}
+    \def\stepAB{\times\a}
+    \def\stepBC{+\b}
+    \def\stepABrev{\div\a}
+    \def\stepBCrev{-\b}
+    
+    \def\boxA{x}
+    \def\boxB{\a x}
+    \def\boxC{\a x+\b}
+    \def\boxCrev{\pgfmathparse{\a*\x + \b}\pgfmathprintnumber{\pgfmathresult}}
+    \def\boxBrev{\pgfmathparse{\a*\x}\pgfmathprintnumber{\pgfmathresult}}
+    \def\boxArev{\x}
+    % end modify values for backtracking
+    
+    \tikzstyle{backtrack}=[rectangle,draw=black,fill=white,thick,
+    inner sep=12pt,minimum height=24pt, minimum width=24mm,font=\large]
+    \tikzstyle{backtrackeq}=[rectangle,draw=black,fill=white,thick,
+    inner sep=2pt,minimum height=12pt, minimum width=24mm,font=\large]
+    
+    
+    %\begin{center}
+    \begin{tikzpicture}[node distance=3cm, thick, scale=0.8, every node/.style={scale=0.8}]]
+        \node(boxA) [backtrack] at (0, 0) {$\boxA$};
+        \node(boxB) [backtrack] [right=1cm of boxA] {$\boxB$};
+        \node(boxC) [backtrack] [right=1cm of boxB] {$\boxC$};
+        
+        \node[backtrackeq, node distance=34pt] (boxAeq) [below=-1pt of boxA] {$=$};
+        \node[backtrackeq, node distance=34pt] (boxBeq) [below=-1pt of boxB] {$=$};
+        \node[backtrackeq, node distance=34pt] (boxCeq) [below=-1pt of boxC] {$=$};
+        
+        \node[backtrack, node distance=34pt] (boxArev) [below=-1pt of boxAeq] {$\boxArev$};
+        \node[backtrack, node distance=34pt] (boxBrev) [below=-1pt of boxBeq] {$\boxBrev$};
+        \node[backtrack, node distance=34pt] (boxCrev) [below=-1pt of boxCeq] {$\boxCrev$};
+            
+         % \draw[->, line width=1pt, color=black] (boxA.north)  .. controls  +(north:5mm) and +(north:5mm) .. node[above=1pt,font=\large] {$\times 2$} (boxB.north); % for addition
+         
+        \node (boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
+        \node (boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
+        \draw [->] (boxAr)  --node[above=1pt,font=\large] {$\stepAB$} (boxBl);
+        
+        \node (boxBr) at ([yshift=24pt,xshift=5mm]boxB) { };
+        \node (boxCl) at ([yshift=24pt,xshift=-5mm]boxC) { };
+        \draw [->] (boxBr)  --node[above=1pt,font=\large] {$\stepBC$} (boxCl);
+    
+        \node (boxCrevl) at ([yshift=-24pt,xshift=-5mm]boxCrev) { };
+        \node (boxBrevr) at ([yshift=-24pt,xshift=5mm]boxBrev) { };
+        \draw [->] (boxCrevl)  --node[below=1pt,font=\large] {$\stepBCrev$} (boxBrevr);
+        
+        \node (boxBrevl) at ([yshift=-24pt,xshift=-5mm]boxBrev) { };
+        \node (boxArevr) at ([yshift=-24pt,xshift=5mm]boxArev) { };
+        \draw [->] (boxBrevl)  --node[below=1pt,font=\large] {$\stepABrev$} (boxArevr);
+        
+    \end{tikzpicture}
+    %\end{center}
+    }
+
+\begin{document}
+    \section*{\Large Name: \underline{\hspace{8cm}} \hfill Date: \underline{\hspace{3cm}}\\
+    \Heading
+    \vspace{5mm}}
+    \begin{multicols}{2}
+        \foreach \i in {1,...,5}{
+            \noindent {\i)} \mybacktrack \vspace{10pt} \\
+        }
+        \columnbreak
+        
+        \foreach \i in {6,...,10}{
+            \noindent {\i)} \mybacktrack \vspace{10pt} \\
+        }
+         
+    \end{multicols}
+\end{document}

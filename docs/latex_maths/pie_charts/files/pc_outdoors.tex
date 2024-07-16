@@ -1,0 +1,16 @@
+\documentclass{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepackage{pgf-pie}
+\begin{document}
+\begin{tikzpicture}
+    \pie[text=pin, sum=auto]{
+        31/jogging,
+23/hiking,
+18/biking,
+17/camping,
+15/fishing
+    }
+    \node [above=3mm, font=\large] at (current bounding box.north) {Outdoor activites by percentage};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,14 @@
+% Graph paper A4 21 x 29.7 cm
+% This code will draw lines 28pt apart from edge to edge, with 2cm trimmed from both sides of A4 paper
+
+\documentclass{article}
+\usepackage[paperheight=124pt, paperwidth=17cm]{geometry}
+\usepackage{tikz}
+\pagestyle{empty}
+ 
+\begin{document}
+\begin{tikzpicture}[remember picture,overlay]
+    \foreach \y in {28, 56, 84, 112}
+        \draw[black,line width=0.5pt] (current page.north west) ++(0cm,-\y pt) -- ++(\paperwidth-0cm,0);
+\end{tikzpicture}
+\end{document}

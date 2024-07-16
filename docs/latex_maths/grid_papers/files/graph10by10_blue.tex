@@ -1,0 +1,14 @@
+\documentclass[tikz, border = 3mm]{standalone}
+
+\begin{document}
+\begin{tikzpicture}
+
+  % grid blue lines blue!40
+  \draw[help lines, loosely dashed, blue!40, step = 0.5cm] (-5, -5) grid (5, 5);
+
+  % axis
+  \draw[thick, <->] (0, -5.15) -- (0, 5.15);
+  \draw[thick, <->] (-5.15, 0) -- (5.15, 0);
+
+\end{tikzpicture}
+\end{document}

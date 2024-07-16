@@ -1,0 +1,46 @@
+\documentclass[12pt, varwidth, border=5mm]{standalone}
+\usepackage{circuitikz}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+% define a custom ammeter component with overlaid text label
+\newcommand{\myammeter}[2]{
+    \draw (#1) to[rmeter] (#2);
+    \node[align=center] at ($(#1)!0.5!(#2)$){A};
+}
+
+% define a custom voltmeter component with overlaid text label
+\newcommand{\myvoltmeter}[2]{
+    \draw (#1) to[rmeter] (#2);
+    \node[align=center] at ($(#1)!0.5!(#2)$){V};
+}
+
+\begin{document}
+\begin{circuitikz}
+% define coordinates for points in circuit form bot left of main loop
+\coordinate (A) at (0,0);
+\coordinate (B) at (0,2);
+\coordinate (C) at (3,2);
+\coordinate (D) at (3,0);
+\coordinate (E) at (0.5,0);
+\coordinate (F) at (0.5,-2);
+\coordinate (G) at (2.5,-2);
+\coordinate (H) at (2.5,0);
+
+% use the custom ammeter and voltmeter components
+\draw
+(A) to[battery] (B);
+\myammeter{B}{C};
+\draw
+(C) -- (D)
+(D) to[bulb] (A)
+(E) -- (F);
+\myvoltmeter{F}{G};
+\draw
+(G) -- (H)
+;
+ \end{circuitikz}\\
+Series circuit with one globe \\
+and an ammeter in series \\
+and a voltmeter in parallel.
+\end{document}

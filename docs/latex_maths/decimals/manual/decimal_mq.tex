@@ -1,0 +1,51 @@
+% backtracking diagrams
+\documentclass[border = 1mm,12pt]{standalone}
+\usepackage{dcolumn}
+\newcolumntype{d}[1]{D{.}{.}{#1}}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary {arrows.meta}
+
+\tikzset{backtrack/.style={rectangle,draw=black,fill=white,
+inner sep=2pt,minimum height=32pt, minimum width=20mm}}
+\tikzset{backtrackeq/.style={rectangle,draw=black,fill=white,
+inner sep=2pt,minimum height=12pt, minimum width=20mm}}
+\tikzset{backtrackstep/.style={rectangle,draw=none,fill=white,
+inner sep=2pt,minimum height=12pt, minimum width=20mm}}
+
+
+% modify values for backtracking
+% comment out values for question diagram
+\def\stepAB{\times2} 
+\def\stepABrev{} % {\div2}
+
+% end modify values for backtracking
+
+
+
+\begin{document}
+
+
+\begin{tabular}{d{4}}
+    2.5 \\
+    +   3.6 \\
+    \hline
+    6.1 \\
+\end{tabular}
+    \\
+    \begin{tabular}{d{4}}
+        2.5 \\
+        +   3.6 \\
+        \hline
+        6.1 \\
+    \end{tabular}
+\\
+    \begin{tabular}{d{4}}
+        2.5 \\
+        +   3.6 \\
+        \hline
+        6.1 \\
+    \end{tabular}
+
+\end{document}

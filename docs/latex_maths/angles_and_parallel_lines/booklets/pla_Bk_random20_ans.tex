@@ -1,0 +1,992 @@
+\documentclass[12pt]{article}
+\usepackage{tikz}
+\usepackage{amsmath}
+% Underlining package
+\usepackage{ulem}
+\usetikzlibrary{angles,quotes}
+\usetikzlibrary{intersections}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{calc}
+\usepackage[a4paper, portrait, margin=1cm]{geometry}
+\usepackage{fancyhdr}
+
+\def \HeadingAnswers {\section*{\Large Name: \underline{\hspace{8cm}} \hfill Date: \underline{\hspace{3cm}}} \vspace{-3mm}
+{Parallel lines : Answers} \vspace{1pt}\hrule}
+
+% raise footer with page number; no header
+\fancypagestyle{myfancypagestyle}{
+  \fancyhf{}% clear all header and footer fields
+  \renewcommand{\headrulewidth}{0pt} % no rule under header
+  \fancyfoot[C] {\thepage} \setlength{\footskip}{6pt} % raise page number 6pt
+}
+\pagestyle{myfancypagestyle}  % apply myfancypagestyle
+
+\newcounter{minipagecount}
+
+\begin{document}
+\HeadingAnswers
+\vspace{8mm}
+
+\begin{minipage}{0.75\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=214]
+      % Draw the first line
+      \draw[<->>, >={Stealth[scale=1.3]}, name path=P1] (0, 0) -- (-0.7632359815061792, 3.926508733790656);
+      % Draw the second line with the calculated offsets
+      \draw[<->>, >={Stealth[scale=1.3]}, name path=P2] (1.5280750424328213, 0) -- (0.7648390609266421, 3.926508733790656);
+      % Draw the transversal through the middle of the parallel lines
+      \draw[<->, >=Stealth, name path=P3] (-1.8816179907530894, 1.963254366895328) -- (2.6464570516797314, 1.963254366895328);
+      
+      \path [name intersections={of=P1 and P3,by=A}];
+      \path [name intersections={of=P2 and P3,by=B}];
+
+      % Draw the angle
+      \coordinate (p1s) at (0, 0);
+      \coordinate (p1e) at (-0.7632359815061792, 3.926508733790656);
+      \coordinate (p2s) at (1.5280750424328213, 0);
+      \coordinate (p2e) at (0.7648390609266421, 3.926508733790656);
+      \coordinate (ts) at (-1.8816179907530894, 1.963254366895328);
+      \coordinate (te) at (2.6464570516797314, 1.963254366895328);
+
+      % order for vertices go in anticlockwise order te--A--p1e
+      \draw pic["$d$", draw=black, -, angle eccentricity=1.8, angle radius=0.4cm] {angle=p1s--A--te};
+\draw pic["$79^\circ$", draw=black, -, angle eccentricity=1.8, angle radius=0.4cm] {angle=p2s--B--te};
+
+      % %% Point A
+      % \draw pic["$a$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=te--A--p1e};
+      % \draw pic["$b$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p1e--A--ts};
+      % \draw pic["$c$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=ts--A--p1s};
+      % \draw pic["$d$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p1s--A--te};
+      
+      % %%  Point B
+      % \draw pic["$e$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=te--B--p2e};
+      % \draw pic["$f$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p2e--B--ts};
+      % \draw pic["$g$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=ts--B--p2s};
+      % \draw pic["$h$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p2s--B--te};
+
+    \end{scope}
+  \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.2\textwidth}
+  \begin{align*}
+    \angle \text{d} &= \text{79}^\circ
+  \end{align*}
+\end{minipage}
+\vspace{1cm}\begin{minipage}{0.75\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=18]
+      % Draw the first line
+      \draw[<->>, >={Stealth[scale=1.3]}, name path=P1] (0, 0) -- (-1.75348458715631, 3.5951761851966677);
+      % Draw the second line with the calculated offsets
+      \draw[<->>, >={Stealth[scale=1.3]}, name path=P2] (1.6689029107127835, 0) -- (-0.08458167644352654, 3.5951761851966677);
+      % Draw the transversal through the middle of the parallel lines
+      \draw[<->, >=Stealth, name path=P3] (-2.376742293578155, 1.7975880925983339) -- (2.2921606171346287, 1.7975880925983339);
+      
+      \path [name intersections={of=P1 and P3,by=A}];
+      \path [name intersections={of=P2 and P3,by=B}];
+
+      % Draw the angle
+      \coordinate (p1s) at (0, 0);
+      \coordinate (p1e) at (-1.75348458715631, 3.5951761851966677);
+      \coordinate (p2s) at (1.6689029107127835, 0);
+      \coordinate (p2e) at (-0.08458167644352654, 3.5951761851966677);
+      \coordinate (ts) at (-2.376742293578155, 1.7975880925983339);
+      \coordinate (te) at (2.2921606171346287, 1.7975880925983339);
+
+      % order for vertices go in anticlockwise order te--A--p1e
+      \draw pic["$f$", draw=black, -, angle eccentricity=1.8, angle radius=0.4cm] {angle=p2e--B--ts};
+\draw pic["$116^\circ$", draw=black, -, angle eccentricity=1.8, angle radius=0.4cm] {angle=te--A--p1e};
+
+      % %% Point A
+      % \draw pic["$a$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=te--A--p1e};
+      % \draw pic["$b$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p1e--A--ts};
+      % \draw pic["$c$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=ts--A--p1s};
+      % \draw pic["$d$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p1s--A--te};
+      
+      % %%  Point B
+      % \draw pic["$e$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=te--B--p2e};
+      % \draw pic["$f$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p2e--B--ts};
+      % \draw pic["$g$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=ts--B--p2s};
+      % \draw pic["$h$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p2s--B--te};
+
+    \end{scope}
+  \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.2\textwidth}
+  \begin{align*}
+    \angle \text{f} &= \text{64}^\circ
+  \end{align*}
+\end{minipage}
+\vspace{1cm}\begin{minipage}{0.75\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=287]
+      % Draw the first line
+      \draw[<->>, >={Stealth[scale=1.3]}, name path=P1] (0, 0) -- (3.464101615137755, 1.9999999999999998);
+      % Draw the second line with the calculated offsets
+      \draw[<->>, >={Stealth[scale=1.3]}, name path=P2] (3.0000000000000004, 0) -- (6.464101615137755, 1.9999999999999998);
+      % Draw the transversal through the middle of the parallel lines
+      \draw[<->, >=Stealth, name path=P3] (0.23205080756887764, 0.9999999999999999) -- (6.232050807568878, 0.9999999999999999);
+      
+      \path [name intersections={of=P1 and P3,by=A}];
+      \path [name intersections={of=P2 and P3,by=B}];
+
+      % Draw the angle
+      \coordinate (p1s) at (0, 0);
+      \coordinate (p1e) at (3.464101615137755, 1.9999999999999998);
+      \coordinate (p2s) at (3.0000000000000004, 0);
+      \coordinate (p2e) at (6.464101615137755, 1.9999999999999998);
+      \coordinate (ts) at (0.23205080756887764, 0.9999999999999999);
+      \coordinate (te) at (6.232050807568878, 0.9999999999999999);
+
+      % order for vertices go in anticlockwise order te--A--p1e
+      \draw pic["$g$", draw=black, -, angle eccentricity=1.8, angle radius=0.4cm] {angle=ts--B--p2s};
+\draw pic["$30^\circ$", draw=black, -, angle eccentricity=1.8, angle radius=0.4cm] {angle=ts--A--p1s};
+
+      % %% Point A
+      % \draw pic["$a$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=te--A--p1e};
+      % \draw pic["$b$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p1e--A--ts};
+      % \draw pic["$c$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=ts--A--p1s};
+      % \draw pic["$d$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p1s--A--te};
+      
+      % %%  Point B
+      % \draw pic["$e$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=te--B--p2e};
+      % \draw pic["$f$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p2e--B--ts};
+      % \draw pic["$g$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=ts--B--p2s};
+      % \draw pic["$h$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p2s--B--te};
+
+    \end{scope}
+  \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.2\textwidth}
+  \begin{align*}
+    \angle \text{g} &= \text{30}^\circ
+  \end{align*}
+\end{minipage}
+\vspace{1cm}\begin{minipage}{0.75\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=225]
+      % Draw the first line
+      \draw[<->>, >={Stealth[scale=1.3]}, name path=P1] (0, 0) -- (2.8773592013546048, 2.778633481835989);
+      % Draw the second line with the calculated offsets
+      \draw[<->>, >={Stealth[scale=1.3]}, name path=P2] (2.15933480943859, 0) -- (5.036694010793195, 2.778633481835989);
+      % Draw the transversal through the middle of the parallel lines
+      \draw[<->, >=Stealth, name path=P3] (-0.06132039932269784, 1.3893167409179945) -- (5.098014410115892, 1.3893167409179945);
+      
+      \path [name intersections={of=P1 and P3,by=A}];
+      \path [name intersections={of=P2 and P3,by=B}];
+
+      % Draw the angle
+      \coordinate (p1s) at (0, 0);
+      \coordinate (p1e) at (2.8773592013546048, 2.778633481835989);
+      \coordinate (p2s) at (2.15933480943859, 0);
+      \coordinate (p2e) at (5.036694010793195, 2.778633481835989);
+      \coordinate (ts) at (-0.06132039932269784, 1.3893167409179945);
+      \coordinate (te) at (5.098014410115892, 1.3893167409179945);
+
+      % order for vertices go in anticlockwise order te--A--p1e
+      \draw pic["$b$", draw=black, -, angle eccentricity=1.8, angle radius=0.4cm] {angle=p1e--A--ts};
+\draw pic["$136^\circ$", draw=black, -, angle eccentricity=1.8, angle radius=0.4cm] {angle=p2e--B--ts};
+
+      % %% Point A
+      % \draw pic["$a$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=te--A--p1e};
+      % \draw pic["$b$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p1e--A--ts};
+      % \draw pic["$c$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=ts--A--p1s};
+      % \draw pic["$d$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p1s--A--te};
+      
+      % %%  Point B
+      % \draw pic["$e$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=te--B--p2e};
+      % \draw pic["$f$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p2e--B--ts};
+      % \draw pic["$g$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=ts--B--p2s};
+      % \draw pic["$h$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p2s--B--te};
+
+    \end{scope}
+  \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.2\textwidth}
+  \begin{align*}
+    \angle \text{b} &= \text{136}^\circ
+  \end{align*}
+\end{minipage}
+\vspace{1cm}\begin{minipage}{0.75\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=359]
+      % Draw the first line
+      \draw[<->>, >={Stealth[scale=1.3]}, name path=P1] (0, 0) -- (2.8773592013546048, 2.778633481835989);
+      % Draw the second line with the calculated offsets
+      \draw[<->>, >={Stealth[scale=1.3]}, name path=P2] (2.15933480943859, 0) -- (5.036694010793195, 2.778633481835989);
+      % Draw the transversal through the middle of the parallel lines
+      \draw[<->, >=Stealth, name path=P3] (-0.06132039932269784, 1.3893167409179945) -- (5.098014410115892, 1.3893167409179945);
+      
+      \path [name intersections={of=P1 and P3,by=A}];
+      \path [name intersections={of=P2 and P3,by=B}];
+
+      % Draw the angle
+      \coordinate (p1s) at (0, 0);
+      \coordinate (p1e) at (2.8773592013546048, 2.778633481835989);
+      \coordinate (p2s) at (2.15933480943859, 0);
+      \coordinate (p2e) at (5.036694010793195, 2.778633481835989);
+      \coordinate (ts) at (-0.06132039932269784, 1.3893167409179945);
+      \coordinate (te) at (5.098014410115892, 1.3893167409179945);
+
+      % order for vertices go in anticlockwise order te--A--p1e
+      \draw pic["$c$", draw=black, -, angle eccentricity=1.8, angle radius=0.4cm] {angle=ts--A--p1s};
+\draw pic["$44^\circ$", draw=black, -, angle eccentricity=1.8, angle radius=0.4cm] {angle=te--B--p2e};
+
+      % %% Point A
+      % \draw pic["$a$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=te--A--p1e};
+      % \draw pic["$b$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p1e--A--ts};
+      % \draw pic["$c$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=ts--A--p1s};
+      % \draw pic["$d$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p1s--A--te};
+      
+      % %%  Point B
+      % \draw pic["$e$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=te--B--p2e};
+      % \draw pic["$f$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p2e--B--ts};
+      % \draw pic["$g$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=ts--B--p2s};
+      % \draw pic["$h$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p2s--B--te};
+
+    \end{scope}
+  \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.2\textwidth}
+  \begin{align*}
+    \angle \text{c} &= \text{44}^\circ
+  \end{align*}
+\end{minipage}
+\vspace{1cm}\begin{minipage}{0.75\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=39]
+      % Draw the first line
+      \draw[<->>, >={Stealth[scale=1.3]}, name path=P1] (0, 0) -- (0.9676875823986707, 3.881182905103986);
+      % Draw the second line with the calculated offsets
+      \draw[<->>, >={Stealth[scale=1.3]}, name path=P2] (1.545920444024847, 0) -- (2.5136080264235177, 3.881182905103986);
+      % Draw the transversal through the middle of the parallel lines
+      \draw[<->, >=Stealth, name path=P3] (-1.0161562088006646, 1.940591452551993) -- (3.5297642352241825, 1.940591452551993);
+      
+      \path [name intersections={of=P1 and P3,by=A}];
+      \path [name intersections={of=P2 and P3,by=B}];
+
+      % Draw the angle
+      \coordinate (p1s) at (0, 0);
+      \coordinate (p1e) at (0.9676875823986707, 3.881182905103986);
+      \coordinate (p2s) at (1.545920444024847, 0);
+      \coordinate (p2e) at (2.5136080264235177, 3.881182905103986);
+      \coordinate (ts) at (-1.0161562088006646, 1.940591452551993);
+      \coordinate (te) at (3.5297642352241825, 1.940591452551993);
+
+      % order for vertices go in anticlockwise order te--A--p1e
+      \draw pic["$b$", draw=black, -, angle eccentricity=1.8, angle radius=0.4cm] {angle=p1e--A--ts};
+\draw pic["$104^\circ$", draw=black, -, angle eccentricity=1.8, angle radius=0.4cm] {angle=p2e--B--ts};
+
+      % %% Point A
+      % \draw pic["$a$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=te--A--p1e};
+      % \draw pic["$b$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p1e--A--ts};
+      % \draw pic["$c$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=ts--A--p1s};
+      % \draw pic["$d$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p1s--A--te};
+      
+      % %%  Point B
+      % \draw pic["$e$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=te--B--p2e};
+      % \draw pic["$f$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p2e--B--ts};
+      % \draw pic["$g$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=ts--B--p2s};
+      % \draw pic["$h$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p2s--B--te};
+
+    \end{scope}
+  \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.2\textwidth}
+  \begin{align*}
+    \angle \text{b} &= \text{104}^\circ
+  \end{align*}
+\end{minipage}
+\vspace{1cm}\begin{minipage}{0.75\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=190]
+      % Draw the first line
+      \draw[<->>, >={Stealth[scale=1.3]}, name path=P1] (0, 0) -- (0.27902589497650093, 3.990256201039297);
+      % Draw the second line with the calculated offsets
+      \draw[<->>, >={Stealth[scale=1.3]}, name path=P2] (1.5036628471217584, 0) -- (1.7826887420982593, 3.990256201039297);
+      % Draw the transversal through the middle of the parallel lines
+      \draw[<->, >=Stealth, name path=P3] (-1.3604870525117492, 1.9951281005196484) -- (3.1431757946100087, 1.9951281005196484);
+      
+      \path [name intersections={of=P1 and P3,by=A}];
+      \path [name intersections={of=P2 and P3,by=B}];
+
+      % Draw the angle
+      \coordinate (p1s) at (0, 0);
+      \coordinate (p1e) at (0.27902589497650093, 3.990256201039297);
+      \coordinate (p2s) at (1.5036628471217584, 0);
+      \coordinate (p2e) at (1.7826887420982593, 3.990256201039297);
+      \coordinate (ts) at (-1.3604870525117492, 1.9951281005196484);
+      \coordinate (te) at (3.1431757946100087, 1.9951281005196484);
+
+      % order for vertices go in anticlockwise order te--A--p1e
+      \draw pic["$b$", draw=black, -, angle eccentricity=1.8, angle radius=0.4cm] {angle=p1e--A--ts};
+\draw pic["$86^\circ$", draw=black, -, angle eccentricity=1.8, angle radius=0.4cm] {angle=te--B--p2e};
+
+      % %% Point A
+      % \draw pic["$a$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=te--A--p1e};
+      % \draw pic["$b$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p1e--A--ts};
+      % \draw pic["$c$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=ts--A--p1s};
+      % \draw pic["$d$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p1s--A--te};
+      
+      % %%  Point B
+      % \draw pic["$e$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=te--B--p2e};
+      % \draw pic["$f$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p2e--B--ts};
+      % \draw pic["$g$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=ts--B--p2s};
+      % \draw pic["$h$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p2s--B--te};
+
+    \end{scope}
+  \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.2\textwidth}
+  \begin{align*}
+    \angle \text{b} &= \text{94}^\circ
+  \end{align*}
+\end{minipage}
+\vspace{1cm}\begin{minipage}{0.75\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=272]
+      % Draw the first line
+      \draw[<->>, >={Stealth[scale=1.3]}, name path=P1] (0, 0) -- (2.727993440249994, 2.925414806476682);
+      % Draw the second line with the calculated offsets
+      \draw[<->>, >={Stealth[scale=1.3]}, name path=P2] (2.050991191647893, 0) -- (4.778984631897886, 2.925414806476682);
+      % Draw the transversal through the middle of the parallel lines
+      \draw[<->, >=Stealth, name path=P3] (-0.13600327987500327, 1.462707403238341) -- (4.91498791177289, 1.462707403238341);
+      
+      \path [name intersections={of=P1 and P3,by=A}];
+      \path [name intersections={of=P2 and P3,by=B}];
+
+      % Draw the angle
+      \coordinate (p1s) at (0, 0);
+      \coordinate (p1e) at (2.727993440249994, 2.925414806476682);
+      \coordinate (p2s) at (2.050991191647893, 0);
+      \coordinate (p2e) at (4.778984631897886, 2.925414806476682);
+      \coordinate (ts) at (-0.13600327987500327, 1.462707403238341);
+      \coordinate (te) at (4.91498791177289, 1.462707403238341);
+
+      % order for vertices go in anticlockwise order te--A--p1e
+      \draw pic["$f$", draw=black, -, angle eccentricity=1.8, angle radius=0.4cm] {angle=p2e--B--ts};
+\draw pic["$133^\circ$", draw=black, -, angle eccentricity=1.8, angle radius=0.4cm] {angle=p1s--A--te};
+
+      % %% Point A
+      % \draw pic["$a$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=te--A--p1e};
+      % \draw pic["$b$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p1e--A--ts};
+      % \draw pic["$c$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=ts--A--p1s};
+      % \draw pic["$d$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p1s--A--te};
+      
+      % %%  Point B
+      % \draw pic["$e$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=te--B--p2e};
+      % \draw pic["$f$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p2e--B--ts};
+      % \draw pic["$g$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=ts--B--p2s};
+      % \draw pic["$h$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p2s--B--te};
+
+    \end{scope}
+  \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.2\textwidth}
+  \begin{align*}
+    \angle \text{f} &= \text{133}^\circ
+  \end{align*}
+\end{minipage}
+\vspace{1cm}\begin{minipage}{0.75\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=124]
+      % Draw the first line
+      \draw[<->>, >={Stealth[scale=1.3]}, name path=P1] (0, 0) -- (2.0601522996402166, 3.4286692028084493);
+      % Draw the second line with the calculated offsets
+      \draw[<->>, >={Stealth[scale=1.3]}, name path=P2] (1.7499500958229957, 0) -- (3.810102395463212, 3.4286692028084493);
+      % Draw the transversal through the middle of the parallel lines
+      \draw[<->, >=Stealth, name path=P3] (-0.4699238501798919, 1.7143346014042247) -- (4.2800262456431035, 1.7143346014042247);
+      
+      \path [name intersections={of=P1 and P3,by=A}];
+      \path [name intersections={of=P2 and P3,by=B}];
+
+      % Draw the angle
+      \coordinate (p1s) at (0, 0);
+      \coordinate (p1e) at (2.0601522996402166, 3.4286692028084493);
+      \coordinate (p2s) at (1.7499500958229957, 0);
+      \coordinate (p2e) at (3.810102395463212, 3.4286692028084493);
+      \coordinate (ts) at (-0.4699238501798919, 1.7143346014042247);
+      \coordinate (te) at (4.2800262456431035, 1.7143346014042247);
+
+      % order for vertices go in anticlockwise order te--A--p1e
+      \draw pic["$c$", draw=black, -, angle eccentricity=1.8, angle radius=0.4cm] {angle=ts--A--p1s};
+\draw pic["$121^\circ$", draw=black, -, angle eccentricity=1.8, angle radius=0.4cm] {angle=p2s--B--te};
+
+      % %% Point A
+      % \draw pic["$a$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=te--A--p1e};
+      % \draw pic["$b$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p1e--A--ts};
+      % \draw pic["$c$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=ts--A--p1s};
+      % \draw pic["$d$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p1s--A--te};
+      
+      % %%  Point B
+      % \draw pic["$e$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=te--B--p2e};
+      % \draw pic["$f$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p2e--B--ts};
+      % \draw pic["$g$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=ts--B--p2s};
+      % \draw pic["$h$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p2s--B--te};
+
+    \end{scope}
+  \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.2\textwidth}
+  \begin{align*}
+    \angle \text{c} &= \text{59}^\circ
+  \end{align*}
+\end{minipage}
+\vspace{1cm}\begin{minipage}{0.75\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=303]
+      % Draw the first line
+      \draw[<->>, >={Stealth[scale=1.3]}, name path=P1] (0, 0) -- (-1.1694868188909466, 3.825219023852142);
+      % Draw the second line with the calculated offsets
+      \draw[<->>, >={Stealth[scale=1.3]}, name path=P2] (1.5685376347307218, 0) -- (0.3990508158397752, 3.825219023852142);
+      % Draw the transversal through the middle of the parallel lines
+      \draw[<->, >=Stealth, name path=P3] (-2.0847434094454735, 1.912609511926071) -- (2.4837942252852487, 1.912609511926071);
+      
+      \path [name intersections={of=P1 and P3,by=A}];
+      \path [name intersections={of=P2 and P3,by=B}];
+
+      % Draw the angle
+      \coordinate (p1s) at (0, 0);
+      \coordinate (p1e) at (-1.1694868188909466, 3.825219023852142);
+      \coordinate (p2s) at (1.5685376347307218, 0);
+      \coordinate (p2e) at (0.3990508158397752, 3.825219023852142);
+      \coordinate (ts) at (-2.0847434094454735, 1.912609511926071);
+      \coordinate (te) at (2.4837942252852487, 1.912609511926071);
+
+      % order for vertices go in anticlockwise order te--A--p1e
+      \draw pic["$f$", draw=black, -, angle eccentricity=1.8, angle radius=0.4cm] {angle=p2e--B--ts};
+\draw pic["$73^\circ$", draw=black, -, angle eccentricity=1.8, angle radius=0.4cm] {angle=p1e--A--ts};
+
+      % %% Point A
+      % \draw pic["$a$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=te--A--p1e};
+      % \draw pic["$b$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p1e--A--ts};
+      % \draw pic["$c$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=ts--A--p1s};
+      % \draw pic["$d$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p1s--A--te};
+      
+      % %%  Point B
+      % \draw pic["$e$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=te--B--p2e};
+      % \draw pic["$f$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p2e--B--ts};
+      % \draw pic["$g$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=ts--B--p2s};
+      % \draw pic["$h$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p2s--B--te};
+
+    \end{scope}
+  \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.2\textwidth}
+  \begin{align*}
+    \angle \text{f} &= \text{73}^\circ
+  \end{align*}
+\end{minipage}
+\vspace{1cm}\begin{minipage}{0.75\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=152]
+      % Draw the first line
+      \draw[<->>, >={Stealth[scale=1.3]}, name path=P1] (0, 0) -- (1.035276180410083, 3.8637033051562732);
+      % Draw the second line with the calculated offsets
+      \draw[<->>, >={Stealth[scale=1.3]}, name path=P2] (1.5529142706151244, 0) -- (2.5881904510252074, 3.8637033051562732);
+      % Draw the transversal through the middle of the parallel lines
+      \draw[<->, >=Stealth, name path=P3] (-0.9823619097949585, 1.9318516525781366) -- (3.570552360820166, 1.9318516525781366);
+      
+      \path [name intersections={of=P1 and P3,by=A}];
+      \path [name intersections={of=P2 and P3,by=B}];
+
+      % Draw the angle
+      \coordinate (p1s) at (0, 0);
+      \coordinate (p1e) at (1.035276180410083, 3.8637033051562732);
+      \coordinate (p2s) at (1.5529142706151244, 0);
+      \coordinate (p2e) at (2.5881904510252074, 3.8637033051562732);
+      \coordinate (ts) at (-0.9823619097949585, 1.9318516525781366);
+      \coordinate (te) at (3.570552360820166, 1.9318516525781366);
+
+      % order for vertices go in anticlockwise order te--A--p1e
+      \draw pic["$b$", draw=black, -, angle eccentricity=1.8, angle radius=0.4cm] {angle=p1e--A--ts};
+\draw pic["$75^\circ$", draw=black, -, angle eccentricity=1.8, angle radius=0.4cm] {angle=te--B--p2e};
+
+      % %% Point A
+      % \draw pic["$a$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=te--A--p1e};
+      % \draw pic["$b$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p1e--A--ts};
+      % \draw pic["$c$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=ts--A--p1s};
+      % \draw pic["$d$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p1s--A--te};
+      
+      % %%  Point B
+      % \draw pic["$e$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=te--B--p2e};
+      % \draw pic["$f$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p2e--B--ts};
+      % \draw pic["$g$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=ts--B--p2s};
+      % \draw pic["$h$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p2s--B--te};
+
+    \end{scope}
+  \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.2\textwidth}
+  \begin{align*}
+    \angle \text{b} &= \text{105}^\circ
+  \end{align*}
+\end{minipage}
+\vspace{1cm}\begin{minipage}{0.75\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=357]
+      % Draw the first line
+      \draw[<->>, >={Stealth[scale=1.3]}, name path=P1] (0, 0) -- (-0.13959798681000382, 3.997563308076383);
+      % Draw the second line with the calculated offsets
+      \draw[<->>, >={Stealth[scale=1.3]}, name path=P2] (1.5009143164482326, 0) -- (1.3613163296382287, 3.997563308076383);
+      % Draw the transversal through the middle of the parallel lines
+      \draw[<->, >=Stealth, name path=P3] (-1.569798993405002, 1.9987816540381915) -- (2.9311153230432305, 1.9987816540381915);
+      
+      \path [name intersections={of=P1 and P3,by=A}];
+      \path [name intersections={of=P2 and P3,by=B}];
+
+      % Draw the angle
+      \coordinate (p1s) at (0, 0);
+      \coordinate (p1e) at (-0.13959798681000382, 3.997563308076383);
+      \coordinate (p2s) at (1.5009143164482326, 0);
+      \coordinate (p2e) at (1.3613163296382287, 3.997563308076383);
+      \coordinate (ts) at (-1.569798993405002, 1.9987816540381915);
+      \coordinate (te) at (2.9311153230432305, 1.9987816540381915);
+
+      % order for vertices go in anticlockwise order te--A--p1e
+      \draw pic["$b$", draw=black, -, angle eccentricity=1.8, angle radius=0.4cm] {angle=p1e--A--ts};
+\draw pic["$92^\circ$", draw=black, -, angle eccentricity=1.8, angle radius=0.4cm] {angle=te--B--p2e};
+
+      % %% Point A
+      % \draw pic["$a$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=te--A--p1e};
+      % \draw pic["$b$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p1e--A--ts};
+      % \draw pic["$c$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=ts--A--p1s};
+      % \draw pic["$d$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p1s--A--te};
+      
+      % %%  Point B
+      % \draw pic["$e$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=te--B--p2e};
+      % \draw pic["$f$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p2e--B--ts};
+      % \draw pic["$g$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=ts--B--p2s};
+      % \draw pic["$h$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p2s--B--te};
+
+    \end{scope}
+  \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.2\textwidth}
+  \begin{align*}
+    \angle \text{b} &= \text{88}^\circ
+  \end{align*}
+\end{minipage}
+\vspace{1cm}\begin{minipage}{0.75\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=275]
+      % Draw the first line
+      \draw[<->>, >={Stealth[scale=1.3]}, name path=P1] (0, 0) -- (-2.7786334818359895, 2.8773592013546043);
+      % Draw the second line with the calculated offsets
+      \draw[<->>, >={Stealth[scale=1.3]}, name path=P2] (2.0852453865250182, 0) -- (-0.6933880953109712, 2.8773592013546043);
+      % Draw the transversal through the middle of the parallel lines
+      \draw[<->, >=Stealth, name path=P3] (-2.889316740917995, 1.4386796006773022) -- (2.1959286456070237, 1.4386796006773022);
+      
+      \path [name intersections={of=P1 and P3,by=A}];
+      \path [name intersections={of=P2 and P3,by=B}];
+
+      % Draw the angle
+      \coordinate (p1s) at (0, 0);
+      \coordinate (p1e) at (-2.7786334818359895, 2.8773592013546043);
+      \coordinate (p2s) at (2.0852453865250182, 0);
+      \coordinate (p2e) at (-0.6933880953109712, 2.8773592013546043);
+      \coordinate (ts) at (-2.889316740917995, 1.4386796006773022);
+      \coordinate (te) at (2.1959286456070237, 1.4386796006773022);
+
+      % order for vertices go in anticlockwise order te--A--p1e
+      \draw pic["$d$", draw=black, -, angle eccentricity=1.8, angle radius=0.4cm] {angle=p1s--A--te};
+\draw pic["$46^\circ$", draw=black, -, angle eccentricity=1.8, angle radius=0.4cm] {angle=p2s--B--te};
+
+      % %% Point A
+      % \draw pic["$a$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=te--A--p1e};
+      % \draw pic["$b$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p1e--A--ts};
+      % \draw pic["$c$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=ts--A--p1s};
+      % \draw pic["$d$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p1s--A--te};
+      
+      % %%  Point B
+      % \draw pic["$e$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=te--B--p2e};
+      % \draw pic["$f$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p2e--B--ts};
+      % \draw pic["$g$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=ts--B--p2s};
+      % \draw pic["$h$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p2s--B--te};
+
+    \end{scope}
+  \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.2\textwidth}
+  \begin{align*}
+    \angle \text{d} &= \text{46}^\circ
+  \end{align*}
+\end{minipage}
+\vspace{1cm}\begin{minipage}{0.75\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=78]
+      % Draw the first line
+      \draw[<->>, >={Stealth[scale=1.3]}, name path=P1] (0, 0) -- (-1.9999999999999991, 3.464101615137755);
+      % Draw the second line with the calculated offsets
+      \draw[<->>, >={Stealth[scale=1.3]}, name path=P2] (1.7320508075688772, 0) -- (-0.2679491924311219, 3.464101615137755);
+      % Draw the transversal through the middle of the parallel lines
+      \draw[<->, >=Stealth, name path=P3] (-2.499999999999999, 1.7320508075688774) -- (2.2320508075688776, 1.7320508075688774);
+      
+      \path [name intersections={of=P1 and P3,by=A}];
+      \path [name intersections={of=P2 and P3,by=B}];
+
+      % Draw the angle
+      \coordinate (p1s) at (0, 0);
+      \coordinate (p1e) at (-1.9999999999999991, 3.464101615137755);
+      \coordinate (p2s) at (1.7320508075688772, 0);
+      \coordinate (p2e) at (-0.2679491924311219, 3.464101615137755);
+      \coordinate (ts) at (-2.499999999999999, 1.7320508075688774);
+      \coordinate (te) at (2.2320508075688776, 1.7320508075688774);
+
+      % order for vertices go in anticlockwise order te--A--p1e
+      \draw pic["$a$", draw=black, -, angle eccentricity=1.8, angle radius=0.4cm] {angle=te--A--p1e};
+\draw pic["$120^\circ$", draw=black, -, angle eccentricity=1.8, angle radius=0.4cm] {angle=te--B--p2e};
+
+      % %% Point A
+      % \draw pic["$a$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=te--A--p1e};
+      % \draw pic["$b$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p1e--A--ts};
+      % \draw pic["$c$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=ts--A--p1s};
+      % \draw pic["$d$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p1s--A--te};
+      
+      % %%  Point B
+      % \draw pic["$e$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=te--B--p2e};
+      % \draw pic["$f$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p2e--B--ts};
+      % \draw pic["$g$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=ts--B--p2s};
+      % \draw pic["$h$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p2s--B--te};
+
+    \end{scope}
+  \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.2\textwidth}
+  \begin{align*}
+    \angle \text{a} &= \text{120}^\circ
+  \end{align*}
+\end{minipage}
+\vspace{1cm}\begin{minipage}{0.75\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=157]
+      % Draw the first line
+      \draw[<->>, >={Stealth[scale=1.3]}, name path=P1] (0, 0) -- (3.1945420401891713, 2.407260092608193);
+      % Draw the second line with the calculated offsets
+      \draw[<->>, >={Stealth[scale=1.3]}, name path=P2] (2.4924602116837247, 0) -- (5.6870022518728955, 2.407260092608193);
+      % Draw the transversal through the middle of the parallel lines
+      \draw[<->, >=Stealth, name path=P3] (0.09727102009458566, 1.2036300463040965) -- (5.58973123177831, 1.2036300463040965);
+      
+      \path [name intersections={of=P1 and P3,by=A}];
+      \path [name intersections={of=P2 and P3,by=B}];
+
+      % Draw the angle
+      \coordinate (p1s) at (0, 0);
+      \coordinate (p1e) at (3.1945420401891713, 2.407260092608193);
+      \coordinate (p2s) at (2.4924602116837247, 0);
+      \coordinate (p2e) at (5.6870022518728955, 2.407260092608193);
+      \coordinate (ts) at (0.09727102009458566, 1.2036300463040965);
+      \coordinate (te) at (5.58973123177831, 1.2036300463040965);
+
+      % order for vertices go in anticlockwise order te--A--p1e
+      \draw pic["$e$", draw=black, -, angle eccentricity=1.8, angle radius=0.4cm] {angle=te--B--p2e};
+\draw pic["$37^\circ$", draw=black, -, angle eccentricity=1.8, angle radius=0.4cm] {angle=ts--A--p1s};
+
+      % %% Point A
+      % \draw pic["$a$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=te--A--p1e};
+      % \draw pic["$b$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p1e--A--ts};
+      % \draw pic["$c$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=ts--A--p1s};
+      % \draw pic["$d$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p1s--A--te};
+      
+      % %%  Point B
+      % \draw pic["$e$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=te--B--p2e};
+      % \draw pic["$f$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p2e--B--ts};
+      % \draw pic["$g$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=ts--B--p2s};
+      % \draw pic["$h$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p2s--B--te};
+
+    \end{scope}
+  \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.2\textwidth}
+  \begin{align*}
+    \angle \text{e} &= \text{37}^\circ
+  \end{align*}
+\end{minipage}
+\vspace{1cm}\begin{minipage}{0.75\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=151]
+      % Draw the first line
+      \draw[<->>, >={Stealth[scale=1.3]}, name path=P1] (0, 0) -- (1.5629245139570949, 3.6820194138097615);
+      % Draw the second line with the calculated offsets
+      \draw[<->>, >={Stealth[scale=1.3]}, name path=P2] (1.6295405661079443, 0) -- (3.1924650800650394, 3.6820194138097615);
+      % Draw the transversal through the middle of the parallel lines
+      \draw[<->, >=Stealth, name path=P3] (-0.7185377430214523, 1.8410097069048807) -- (3.9110028230864917, 1.8410097069048807);
+      
+      \path [name intersections={of=P1 and P3,by=A}];
+      \path [name intersections={of=P2 and P3,by=B}];
+
+      % Draw the angle
+      \coordinate (p1s) at (0, 0);
+      \coordinate (p1e) at (1.5629245139570949, 3.6820194138097615);
+      \coordinate (p2s) at (1.6295405661079443, 0);
+      \coordinate (p2e) at (3.1924650800650394, 3.6820194138097615);
+      \coordinate (ts) at (-0.7185377430214523, 1.8410097069048807);
+      \coordinate (te) at (3.9110028230864917, 1.8410097069048807);
+
+      % order for vertices go in anticlockwise order te--A--p1e
+      \draw pic["$h$", draw=black, -, angle eccentricity=1.8, angle radius=0.4cm] {angle=p2s--B--te};
+\draw pic["$67^\circ$", draw=black, -, angle eccentricity=1.8, angle radius=0.4cm] {angle=ts--A--p1s};
+
+      % %% Point A
+      % \draw pic["$a$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=te--A--p1e};
+      % \draw pic["$b$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p1e--A--ts};
+      % \draw pic["$c$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=ts--A--p1s};
+      % \draw pic["$d$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p1s--A--te};
+      
+      % %%  Point B
+      % \draw pic["$e$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=te--B--p2e};
+      % \draw pic["$f$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p2e--B--ts};
+      % \draw pic["$g$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=ts--B--p2s};
+      % \draw pic["$h$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p2s--B--te};
+
+    \end{scope}
+  \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.2\textwidth}
+  \begin{align*}
+    \angle \text{h} &= \text{113}^\circ
+  \end{align*}
+\end{minipage}
+\vspace{1cm}\begin{minipage}{0.75\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=270]
+      % Draw the first line
+      \draw[<->>, >={Stealth[scale=1.3]}, name path=P1] (0, 0) -- (-2.462645901302633, 3.152043014426888);
+      % Draw the second line with the calculated offsets
+      \draw[<->>, >={Stealth[scale=1.3]}, name path=P2] (1.903527322608868, 0) -- (-0.5591185786937651, 3.152043014426888);
+      % Draw the transversal through the middle of the parallel lines
+      \draw[<->, >=Stealth, name path=P3] (-2.7313229506513164, 1.576021507213444) -- (2.1722043719575517, 1.576021507213444);
+      
+      \path [name intersections={of=P1 and P3,by=A}];
+      \path [name intersections={of=P2 and P3,by=B}];
+
+      % Draw the angle
+      \coordinate (p1s) at (0, 0);
+      \coordinate (p1e) at (-2.462645901302633, 3.152043014426888);
+      \coordinate (p2s) at (1.903527322608868, 0);
+      \coordinate (p2e) at (-0.5591185786937651, 3.152043014426888);
+      \coordinate (ts) at (-2.7313229506513164, 1.576021507213444);
+      \coordinate (te) at (2.1722043719575517, 1.576021507213444);
+
+      % order for vertices go in anticlockwise order te--A--p1e
+      \draw pic["$a$", draw=black, -, angle eccentricity=1.8, angle radius=0.4cm] {angle=te--A--p1e};
+\draw pic["$128^\circ$", draw=black, -, angle eccentricity=1.8, angle radius=0.4cm] {angle=ts--B--p2s};
+
+      % %% Point A
+      % \draw pic["$a$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=te--A--p1e};
+      % \draw pic["$b$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p1e--A--ts};
+      % \draw pic["$c$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=ts--A--p1s};
+      % \draw pic["$d$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p1s--A--te};
+      
+      % %%  Point B
+      % \draw pic["$e$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=te--B--p2e};
+      % \draw pic["$f$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p2e--B--ts};
+      % \draw pic["$g$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=ts--B--p2s};
+      % \draw pic["$h$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p2s--B--te};
+
+    \end{scope}
+  \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.2\textwidth}
+  \begin{align*}
+    \angle \text{a} &= \text{128}^\circ
+  \end{align*}
+\end{minipage}
+\vspace{1cm}\begin{minipage}{0.75\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=180]
+      % Draw the first line
+      \draw[<->>, >={Stealth[scale=1.3]}, name path=P1] (0, 0) -- (-1.433471798181201, 3.734321705988807);
+      % Draw the second line with the calculated offsets
+      \draw[<->>, >={Stealth[scale=1.3]}, name path=P2] (1.6067174904555435, 0) -- (0.1732456922743424, 3.734321705988807);
+      % Draw the transversal through the middle of the parallel lines
+      \draw[<->, >=Stealth, name path=P3] (-2.2167358990906005, 1.8671608529944035) -- (2.389981591364943, 1.8671608529944035);
+      
+      \path [name intersections={of=P1 and P3,by=A}];
+      \path [name intersections={of=P2 and P3,by=B}];
+
+      % Draw the angle
+      \coordinate (p1s) at (0, 0);
+      \coordinate (p1e) at (-1.433471798181201, 3.734321705988807);
+      \coordinate (p2s) at (1.6067174904555435, 0);
+      \coordinate (p2e) at (0.1732456922743424, 3.734321705988807);
+      \coordinate (ts) at (-2.2167358990906005, 1.8671608529944035);
+      \coordinate (te) at (2.389981591364943, 1.8671608529944035);
+
+      % order for vertices go in anticlockwise order te--A--p1e
+      \draw pic["$c$", draw=black, -, angle eccentricity=1.8, angle radius=0.4cm] {angle=ts--A--p1s};
+\draw pic["$69^\circ$", draw=black, -, angle eccentricity=1.8, angle radius=0.4cm] {angle=p2s--B--te};
+
+      % %% Point A
+      % \draw pic["$a$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=te--A--p1e};
+      % \draw pic["$b$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p1e--A--ts};
+      % \draw pic["$c$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=ts--A--p1s};
+      % \draw pic["$d$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p1s--A--te};
+      
+      % %%  Point B
+      % \draw pic["$e$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=te--B--p2e};
+      % \draw pic["$f$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p2e--B--ts};
+      % \draw pic["$g$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=ts--B--p2s};
+      % \draw pic["$h$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p2s--B--te};
+
+    \end{scope}
+  \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.2\textwidth}
+  \begin{align*}
+    \angle \text{c} &= \text{111}^\circ
+  \end{align*}
+\end{minipage}
+\vspace{1cm}\begin{minipage}{0.75\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=208]
+      % Draw the first line
+      \draw[<->>, >={Stealth[scale=1.3]}, name path=P1] (0, 0) -- (-1.433471798181201, 3.734321705988807);
+      % Draw the second line with the calculated offsets
+      \draw[<->>, >={Stealth[scale=1.3]}, name path=P2] (1.6067174904555435, 0) -- (0.1732456922743424, 3.734321705988807);
+      % Draw the transversal through the middle of the parallel lines
+      \draw[<->, >=Stealth, name path=P3] (-2.2167358990906005, 1.8671608529944035) -- (2.389981591364943, 1.8671608529944035);
+      
+      \path [name intersections={of=P1 and P3,by=A}];
+      \path [name intersections={of=P2 and P3,by=B}];
+
+      % Draw the angle
+      \coordinate (p1s) at (0, 0);
+      \coordinate (p1e) at (-1.433471798181201, 3.734321705988807);
+      \coordinate (p2s) at (1.6067174904555435, 0);
+      \coordinate (p2e) at (0.1732456922743424, 3.734321705988807);
+      \coordinate (ts) at (-2.2167358990906005, 1.8671608529944035);
+      \coordinate (te) at (2.389981591364943, 1.8671608529944035);
+
+      % order for vertices go in anticlockwise order te--A--p1e
+      \draw pic["$a$", draw=black, -, angle eccentricity=1.8, angle radius=0.4cm] {angle=te--A--p1e};
+\draw pic["$69^\circ$", draw=black, -, angle eccentricity=1.8, angle radius=0.4cm] {angle=p2e--B--ts};
+
+      % %% Point A
+      % \draw pic["$a$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=te--A--p1e};
+      % \draw pic["$b$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p1e--A--ts};
+      % \draw pic["$c$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=ts--A--p1s};
+      % \draw pic["$d$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p1s--A--te};
+      
+      % %%  Point B
+      % \draw pic["$e$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=te--B--p2e};
+      % \draw pic["$f$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p2e--B--ts};
+      % \draw pic["$g$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=ts--B--p2s};
+      % \draw pic["$h$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p2s--B--te};
+
+    \end{scope}
+  \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.2\textwidth}
+  \begin{align*}
+    \angle \text{a} &= \text{111}^\circ
+  \end{align*}
+\end{minipage}
+\vspace{1cm}\begin{minipage}{0.75\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=88]
+      % Draw the first line
+      \draw[<->>, >={Stealth[scale=1.3]}, name path=P1] (0, 0) -- (-1.939238480985348, 3.4984788285575834);
+      % Draw the second line with the calculated offsets
+      \draw[<->>, >={Stealth[scale=1.3]}, name path=P2] (1.71503110180998, 0) -- (-0.22420737917536804, 3.4984788285575834);
+      % Draw the transversal through the middle of the parallel lines
+      \draw[<->, >=Stealth, name path=P3] (-2.4696192404926745, 1.7492394142787917) -- (2.245411861317306, 1.7492394142787917);
+      
+      \path [name intersections={of=P1 and P3,by=A}];
+      \path [name intersections={of=P2 and P3,by=B}];
+
+      % Draw the angle
+      \coordinate (p1s) at (0, 0);
+      \coordinate (p1e) at (-1.939238480985348, 3.4984788285575834);
+      \coordinate (p2s) at (1.71503110180998, 0);
+      \coordinate (p2e) at (-0.22420737917536804, 3.4984788285575834);
+      \coordinate (ts) at (-2.4696192404926745, 1.7492394142787917);
+      \coordinate (te) at (2.245411861317306, 1.7492394142787917);
+
+      % order for vertices go in anticlockwise order te--A--p1e
+      \draw pic["$b$", draw=black, -, angle eccentricity=1.8, angle radius=0.4cm] {angle=p1e--A--ts};
+\draw pic["$61^\circ$", draw=black, -, angle eccentricity=1.8, angle radius=0.4cm] {angle=p2e--B--ts};
+
+      % %% Point A
+      % \draw pic["$a$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=te--A--p1e};
+      % \draw pic["$b$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p1e--A--ts};
+      % \draw pic["$c$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=ts--A--p1s};
+      % \draw pic["$d$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p1s--A--te};
+      
+      % %%  Point B
+      % \draw pic["$e$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=te--B--p2e};
+      % \draw pic["$f$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p2e--B--ts};
+      % \draw pic["$g$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=ts--B--p2s};
+      % \draw pic["$h$", draw=black, -, angle eccentricity=1.5, angle radius=0.4cm] {angle=p2s--B--te};
+
+    \end{scope}
+  \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.2\textwidth}
+  \begin{align*}
+    \angle \text{b} &= \text{61}^\circ
+  \end{align*}
+\end{minipage}
+\vspace{1cm}
+
+\end{document}

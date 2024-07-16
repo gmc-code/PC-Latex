@@ -1,0 +1,14 @@
+\documentclass[12pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\begin{document}
+\begin{tikzpicture}
+\node[align=left] (top_node) at (0,0){3 pt shooting ratios \\ Key: 0 $\vert$ 2 = 0.02};
+\node[below=of top_node,yshift=10mm] {
+\begin{tabular}{r|l@{\hspace{4 pt}}}
+Stem & Leaf\\
+\hline
+0 & 2 7 \\1 & 5 8 \\3 & 7 \\4 & 4 \\5 & 1 \\6 & 7 \\
+\end{tabular}};
+\end{tikzpicture}
+\end{document}

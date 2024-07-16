@@ -1,0 +1,50 @@
+\documentclass[border = 3mmm]{standalone}
+\usepackage{pgfplots}
+\usepgfplotslibrary{groupplots}
+\pgfplotsset{width=10cm,compat=newest}  % <<height>>
+
+\begin{document}
+
+\begin{tabular}{c}
+\begin{tikzpicture}
+    \begin{axis}[
+        height=<<height1>>cm,
+        xmin=<<min_val>>,
+        xmax=<<max_val>>,
+        % hide y axis,
+        axis y line=none,
+        axis x line=bottom,
+        % set the precision of the x tick labels to be 0, which means no decimals
+        % xticklabel style={/pgf/number format/precision=0},
+        xtick={<<min_tval>>,<<min_tplus1>>,...,<<max_tval>>},
+        axis x line shift={4pt},
+        every outer x axis line/.append style={stealth-stealth},
+        title={<<title>>},
+        xlabel={<<xlabel>>}]
+        \addplot [only marks, black, mark=*, mark size=2pt] coordinates{<<coords>>};
+    \end{axis}
+\end{tikzpicture}
+\\
+\begin{tikzpicture}
+    \begin{axis}[
+    height=<<height2>>cm,
+    xmin=<<min_val2>>,
+    xmax=<<max_val2>>,
+    % hide y axis,
+    axis y line=none,
+    axis x line=bottom,
+    xtick={<<min_tval>>,<<min_tplus1>>,...,<<max_tval>>},
+    axis x line shift={4pt},
+    every outer x axis line/.append style={stealth-stealth},
+    mark=*,
+    title={<<title2>>},
+    xlabel={<<xlabel>>}]
+    \addplot [only marks] coordinates{<<coords2>>};
+    \end{axis}
+\end{tikzpicture}
+\\
+\end{tabular}
+
+\end{document}
+
+

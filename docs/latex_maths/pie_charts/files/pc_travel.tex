@@ -1,0 +1,14 @@
+\documentclass{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepackage{pgf-pie}
+\begin{document}
+\begin{tikzpicture}
+    \pie[text=pin, sum=auto]{
+        54/Australia,
+41/Overseas,
+25/Home
+    }
+    \node [above=3mm, font=\large] at (current bounding box.north) {Holiday destinations};
+\end{tikzpicture}
+\end{document}

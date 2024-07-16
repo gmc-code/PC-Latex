@@ -1,0 +1,40 @@
+\documentclass[border=10pt,multi,tikz]{standalone}
+\usepackage[edges]{forest}
+\usetikzlibrary{arrows.meta,shadows.blur}
+\begin{document}
+\begin{forest}
+    forked edges,
+    for tree={s sep=0.5cm,
+        l sep=0.8cm,
+        draw=blue!80!darkgray,
+        fill=blue!10!white,
+        rounded corners,
+        text width=(\textwidth)/5,
+        edge={-Latex},
+        font=\sffamily,
+        text centered,
+        blur shadow,
+    }
+    [Arthropods
+        [1a. \\Legs on every segment except head and last segment
+            [2a. \\One pair of legs on each segment; flattened body
+                [Chilopoda]
+            ]
+            [2b. \\Two pairs of legs on each segment; tubular body
+                [Diplopoda]
+            ]
+        ]
+        [1b. \\Legs on thorax only
+            [3a. \\Three pairs of legs
+                [Insecta]
+            ]
+            [3b. \\Four pairs of legs
+                [Arachnida]
+            ]
+            [3c. \\Five or more pairs of legs
+                [Crustacea]
+            ]
+        ]
+    ] 
+\end{forest}
+\end{document}

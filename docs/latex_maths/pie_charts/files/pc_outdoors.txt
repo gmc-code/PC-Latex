@@ -1,0 +1,3 @@
+Outdoor activites by percentage
+31,23,18,17,15
+jogging,hiking,biking,camping,fishing

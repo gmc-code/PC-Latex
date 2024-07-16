@@ -1,0 +1,22 @@
+\documentclass[12pt, varwidth, border=5mm]{standalone}
+\usepackage{circuitikz}
+\usepackage{tikz}
+
+\begin{document}
+\begin{circuitikz}
+% define coordinates for points in circuit form top left
+\coordinate (A) at (0,-2);
+\coordinate (B) at (0,2);
+\coordinate (C) at (2,2);
+\coordinate (D) at (2,0);
+\coordinate (E) at (2,-2);
+
+\draw
+(A) to[battery, l={$12V$}] (B) % The voltage source
+to[short] (C)
+to[bulb, l=$3\Omega$] (D) % The first bulb
+to[bulb, l=$3\Omega$] (E) % The second bulb
+to[short] (A);
+\end{circuitikz}\\
+Circuit with two globes in series.
+\end{document}

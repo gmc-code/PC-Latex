@@ -1,0 +1,19 @@
+\documentclass[border = 3mmm]{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{width=10cm,height=2.65cm,compat=newest}
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[
+xmin=7.5,
+xmax=18.5,
+% hide y axis,
+axis y line=none,
+axis x line=bottom,
+axis x line shift={4pt},
+every outer x axis line/.append style={stealth-stealth},
+title={},
+xlabel={daily vending machine sales}]
+\addplot [only marks, black, mark=*, mark size=2pt] coordinates{(8, 1)(10, 1)(11, 1)(11, 2)(11, 3)(12, 1)(12, 2)(12, 3)(12, 4)(12, 5)(13, 1)(13, 2)(14, 1)(18, 1)};
+\end{axis}
+\end{tikzpicture}
+\end{document}

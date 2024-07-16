@@ -1,0 +1,21 @@
+\documentclass{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepackage{pgf-pie}
+\begin{document}
+\begin{tikzpicture}
+    \pie[text=pin, sum=auto]{
+        53/monkeys,
+50/dolphins,
+46/penguins,
+40/lions,
+38/giraffes,
+35/elephants,
+29/otters,
+25/bears,
+22/zebras,
+14/hippos
+    }
+    \node [above=3mm, font=\large] at (current bounding box.north) {Favourite zoo animals};
+\end{tikzpicture}
+\end{document}

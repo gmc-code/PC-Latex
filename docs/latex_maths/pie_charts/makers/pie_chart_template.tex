@@ -1,0 +1,12 @@
+\documentclass{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepackage{pgf-pie}
+\begin{document}
+\begin{tikzpicture}
+    \pie[text=pin, sum=auto]{
+        <<data>>
+    }
+    \node [above=3mm, font=\large] at (current bounding box.north) {<<title>>};
+\end{tikzpicture}
+\end{document}

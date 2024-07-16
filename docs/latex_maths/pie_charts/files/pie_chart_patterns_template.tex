@@ -1,0 +1,26 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+
+\begin{document}
+\begin{tikzpicture}
+    \def\radius{2cm}
+    \def\values{53,50,46,40,38,35,29,25,22,14}
+    \def\labels{{"monkeys","dolphins","penguins","lions","giraffes","elephants","otters","bears","zebras","hippos"}}
+    \def\patterns{north east lines, dots, north west lines, grid, crosshatch, bricks, horizontal lines, vertical lines, crosshatch dots, fivepointed stars}
+    \def\total{0}
+    \foreach \value in \values {
+        \pgfmathparse{\total+\value}
+        \global\let\total=\pgfmathresult
+    }
+    \pgfmathsetmacro{\startangle}{90}
+    \foreach [count=\i, evaluate=\i as \angle using 360*\value/\total] \value in \values {
+        \pgfmathsetmacro{\endangle}{\startangle-\angle}
+        \pgfmathsetmacro{\midangle}{(\startangle+\endangle)/2}
+        \filldraw[pattern=\patterns[\i-1]] (\startangle:\radius) arc (\startangle:\endangle:\radius) -- (0,0) -- cycle;
+        \node at (\midangle:\radius/2) {\pgfmathprintnumber{\value}};
+        \global\let\startangle=\endangle
+    }
+    \node [above] at (current bounding box.north) {Favourite Zoo Animals};
+\end{tikzpicture}
+\end{document}

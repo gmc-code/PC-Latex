@@ -1,0 +1,15 @@
+\documentclass[varwidth]{standalone}
+\usepackage{amsmath}
+\usepackage[normalem]{ulem} % [normalem] prevents the package from changing the default behavior of `\emph` to underline.
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{align*}
+
+\begin{document}
+    \begin{varwidth}{0.2\paperwidth} % This sets the maximum width to 1/3 of the paper width
+    \begin{align*}
+    4x &= 20\\
+    \frac{4x}{\dotuline{\hspace{4mm}}} &= \frac{20}{\dotuline{\hspace{4mm}}}\\
+    x &= \dotuline{\hspace{4mm}}\\
+    \end{align*}
+    \end{varwidth}
+\end{document}

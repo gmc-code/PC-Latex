@@ -1,0 +1,13 @@
+\documentclass[border=5mm]{standalone} \usepackage{chemfig} 
+\renewcommand*\printatom[1]{\ensuremath{\mathsf{#1}}} 
+\begin{document}
+\setchemfig{atom sep=1.5em, fixed length=true}
+\setcharge{extra sep=3pt}
+\schemestart
+\chemfig{-\charge{90=\:}{N}=C=\charge{90=\:,270=\:}{O}}
+\arrow{<->}
+\chemfig{-\charge{90=\:}{N}=\charge{90=$ ^+ $}{C}-\charge{0=\:,90=\:,270=\:,45=$ \;^- $}{O}}
+\arrow{<->}
+\chemfig{-\charge{90=\:,270=\:,135=$ ^-\; $}{N}-\charge{90=$ ^+ $}{C}=\charge{0=\:,90=\:}{O}}
+\schemestop
+\end{document}

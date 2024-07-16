@@ -1,0 +1,41 @@
+
+cd D:\
+python -m venv venv_rtd
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope Process
+.\venv_rtd\Scripts\activate
+
+To activate the virtual environment in Visual Studio Code (VSCode), you can follow these steps:
+
+Open the terminal in VSCode (View > Terminal).
+Navigate to the directory where your venv_rtd is located using the cd command.
+Once you’re in the correct directory, you can activate the virtual environment:
+On Windows, use: .\venv_rtd\Scripts\activate
+
+python.exe -m pip install --upgrade pip
+pip install Wand
+
+for imagemagic
+install ghostscrip
+https://ghostscript.com/releases/index.html
+https://ghostscript.com/releases/gsdnld.html
+
+LaTeX Workshop extension for Visual Studio Code, recommends using TExLive as the laTex installation.
+https://www.tug.org/texlive/
+
+See Clean up of generated files at build:
+https://github.com/James-Yu/LaTeX-Workshop/wiki/Compile#cleaning-generated-files
+
+See: set files types to clean up so .synctex.gz are included
+https://github.com/James-Yu/LaTeX-Workshop/wiki/Compile#latex-workshoplatexcleanfiletypes
+
+See: set clean up method to glob
+https://github.com/James-Yu/LaTeX-Workshop/wiki/Compile#latex-workshoplatexcleanmethod
+
+see: tools recipe for pdflatex
+https://github.com/James-Yu/LaTeX-Workshop/wiki/Compile#latex-recipes
+
+repos:
+Create a .gitattributes file in the root directory of your repository.
+add liens like:
+*.py linguist-language=Python
+

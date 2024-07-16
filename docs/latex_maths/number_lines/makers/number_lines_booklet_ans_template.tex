@@ -1,0 +1,29 @@
+\documentclass[leqno, 12pt]{article}
+\usepackage{tikz}  
+\usetikzlibrary{positioning}
+\usetikzlibrary {arrows.meta}
+\usetikzlibrary{bending}
+\usepackage[a4paper, portrait, margin=1cm]{geometry}
+\usepackage{fancyhdr}
+
+\def\jumpheight{10}
+\def\qgap{\rule[-1pt]{1.0em}{.25pt}}
+
+\def \HeadingAnswers {\section*{\Large Name: \underline{\hspace{8cm}} \hfill Date: \underline{\hspace{3cm}}} \vspace{-3mm}
+{Number lines: Answers} \vspace{1pt}\hrule}
+
+% raise footer with page number; no header
+\fancypagestyle{myfancypagestyle}{
+  \fancyhf{} % clear all header and footer fields
+  \renewcommand{\headrulewidth}{0pt} % no rule under header
+  \fancyfoot[C] {\thepage} \setlength{\footskip}{6pt} % raise page number 6pt
+}
+\pagestyle{myfancypagestyle}  % apply myfancypagestyle
+
+\begin{document}
+  \HeadingAnswers
+  \vspace{-1mm}
+  <<diagrams>>
+\end{document}
+
+
