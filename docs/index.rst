@@ -17,6 +17,20 @@ PC-latex
 
 .. toctree::
     :maxdepth: 2
+    :caption: 📐 geometry
+    :numbered:
+
+    latex_maths/angle_types/angle_types.rst
+    latex_maths/measuring_angles/measuring_angles.rst
+    latex_maths/right_triangles/right_triangles.rst
+    latex_maths/isosceles_triangles/isosceles_triangles.rst
+    latex_maths/triangles/angles_in_triangles.rst
+    latex_maths/exterior_angle_to_triangle/exterior_angle_to_triangle.rst
+    latex_maths/adjacent_angles/adjacent_angles.rst
+
+
+.. toctree::
+    :maxdepth: 2
     :caption: ⚈ decimals
     :numbered:
 
@@ -101,4 +115,44 @@ PC-latex
 
     latex_maths/lined_paper/lined_paper.rst
 
-    
+
+.. toctree::
+    :maxdepth: 2
+    :caption: ☰ physics
+    :numbered:
+
+    latex_science/physics/circuits.rst
+    latex_science/physics/levers.rst
+    latex_science/physics/optics.rst
+
+
+.. toctree::
+    :maxdepth: 2
+    :caption: ☰ physics
+    :numbered:
+
+    latex_science/physics/circuits.rst
+    latex_science/physics/levers.rst
+    latex_science/physics/optics.rst
+
+
+.. toctree::
+    :maxdepth: 2
+    :caption: ☰ chemistry
+    :numbered:
+
+    latex_science/chemistry/chemistry_acid_base_reactions.rst    
+    latex_science/chemistry/chemistry_balancing_equations.rst
+    latex_science/chemistry/chemistry_bohr_atoms.rst
+    latex_science/chemistry/chemistry_chemfig.rst
+    latex_science/chemistry/chemistry_isotope_equations.rst
+    latex_science/chemistry/chemistry_periodic_table.rst
+    latex_science/chemistry/chemistry_types_of_reactions.rst
+
+
+.. toctree::
+    :maxdepth: 2
+    :caption: ☰ biology
+    :numbered:
+
+    latex_science/biology/classification_keys.rst
