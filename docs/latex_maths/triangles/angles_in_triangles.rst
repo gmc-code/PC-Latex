@@ -49,12 +49,12 @@ Booklets using python
 
 Required files:
 
-| :download:`angles_in_triangle_booklet_ans_template<makers/angles_in_triangle_booklet_ans_template.tex>`
-| :download:`angles_in_triangle_booklet_template<makers/angles_in_triangle_booklet_template.tex>`
-| :download:`angles_in_triangle_booklet_diagram_template<makers/angles_in_triangle_booklet_diagram_template.tex>`
+| :download:`angles_in_triangle_booklet_ans_template.tex<makers/angles_in_triangle_booklet_ans_template.tex>`
+| :download:`angles_in_triangle_booklet_template.tex<makers/angles_in_triangle_booklet_template.tex>`
+| :download:`angles_in_triangle_booklet_diagram_template.tex<makers/angles_in_triangle_booklet_diagram_template.tex>`
 
-| :download:`angles_in_triangle_functions<makers/angles_in_triangle_functions.py>`
-| :download:`angles_in_triangle_booklet_diagram_maker<makers/angles_in_triangle_booklet_diagram_maker.py>`
+| :download:`angles_in_triangle_functions.py<makers/angles_in_triangle_functions.py>`
+| :download:`angles_in_triangle_booklet_diagram_maker.py<makers/angles_in_triangle_booklet_diagram_maker.py>`
 
 
 ----
@@ -114,12 +114,12 @@ Booklets using python
 
 Required files:
 
-| :download:`angles_in_triangle_booklet_ans_template<makers_vertices/angles_in_triangle_booklet_ans_template.tex>`
-| :download:`angles_in_triangle_booklet_template<makers_vertices/angles_in_triangle_booklet_template.tex>`
-| :download:`angles_in_triangle_booklet_diagram_template<makers_vertices/angles_in_triangle_booklet_diagram_template.tex>`
+| :download:`angles_in_triangle_booklet_ans_template.tex<makers_vertices/angles_in_triangle_booklet_ans_template.tex>`
+| :download:`angles_in_triangle_booklet_template.tex<makers_vertices/angles_in_triangle_booklet_template.tex>`
+| :download:`angles_in_triangle_booklet_diagram_template.tex<makers_vertices/angles_in_triangle_booklet_diagram_template.tex>`
 
-| :download:`angles_in_triangle_functions<makers_vertices/angles_in_triangle_functions.py>`
-| :download:`angles_in_triangle_booklet_diagram_maker<makers_vertices/angles_in_triangle_booklet_diagram_maker.py>`
+| :download:`angles_in_triangle_functions.py<makers_vertices/angles_in_triangle_functions.py>`
+| :download:`angles_in_triangle_booklet_diagram_maker.py<makers_vertices/angles_in_triangle_booklet_diagram_maker.py>`
 
 
 ----

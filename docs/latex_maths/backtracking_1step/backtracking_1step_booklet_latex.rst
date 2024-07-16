@@ -112,13 +112,13 @@ Worksheet template
 ~~~~~~~~~~~~~~~~~~~~
 
 | The multi page LaTeX 1-step worksheet **question** template is below.
-| :download:`worksheet_question_template<makers/backtrack_1step_booklet_template.tex>`
+| :download:`worksheet_question_template.tex<makers/backtrack_1step_booklet_template.tex>`
 
 .. literalinclude:: makers/backtrack_1step_booklet_template.tex
    :linenos:
    
 | The multi page LaTeX 1-step worksheet **answer** template is below.
-| :download:`worksheet_answer_template<makers/backtrack_1step_worksheet_ans_template.tex>`
+| :download:`worksheet_answer_template.tex<makers/backtrack_1step_worksheet_ans_template.tex>`
 
 .. literalinclude:: makers/backtrack_1step_worksheet_ans_template.tex
    :linenos:

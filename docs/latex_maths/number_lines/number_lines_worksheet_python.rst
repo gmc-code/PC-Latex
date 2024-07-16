@@ -8,9 +8,9 @@ The python below requires 3 .tex files:
 #. number_lines_worksheet_ans_template.tex
 #. number_lines_worksheet_diagram_template.tex
 
-| :download:`number_lines_worksheet_template<makers/number_lines_worksheet_template.tex>`
-| :download:`number_lines_worksheet_ans_template<makers/number_lines_worksheet_ans_template.tex>`
-| :download:`number_lines_worksheet_diagram_template<makers/number_lines_worksheet_diagram_template.tex>`
+| :download:`number_lines_worksheet_template.tex<makers/number_lines_worksheet_template.tex>`
+| :download:`number_lines_worksheet_ans_template.tex<makers/number_lines_worksheet_ans_template.tex>`
+| :download:`number_lines_worksheet_diagram_template.tex<makers/number_lines_worksheet_diagram_template.tex>`
 
 
 Python to create a number lines worksheet

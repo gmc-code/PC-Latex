@@ -8,9 +8,9 @@ The python below requires 3 .tex files:
 #. number_lines_booklet_ans_template.tex
 #. number_lines_worksheet_diagram_template.tex
 
-| :download:`number_lines_booklet_template<makers/number_lines_booklet_template.tex>`
-| :download:`number_lines_booklet_ans_template<makers/number_lines_booklet_ans_template.tex>`
-| :download:`number_lines_worksheet_diagram_template<makers/number_lines_worksheet_diagram_template.tex>`
+| :download:`number_lines_booklet_template.tex<makers/number_lines_booklet_template.tex>`
+| :download:`number_lines_booklet_ans_template.tex<makers/number_lines_booklet_ans_template.tex>`
+| :download:`number_lines_worksheet_diagram_template.tex<makers/number_lines_worksheet_diagram_template.tex>`
 
 
 Python to create a 2 page booklet of number lines worksheets
@@ -23,7 +23,7 @@ Python to create a 2 page booklet of number lines worksheets
 | The filename will have "_q" added for the question booklet and "_ans" for the answer booklet.
 
 
-:download:`number_lines_booklet_maker<makers/number_lines_booklet_maker.py>`
+:download:`number_lines_booklet_maker.py<makers/number_lines_booklet_maker.py>`
 
 .. literalinclude:: makers/number_lines_booklet_maker.py
    :linenos:

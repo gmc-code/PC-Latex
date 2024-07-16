@@ -186,7 +186,7 @@ Worksheet template
 ~~~~~~~~~~~~~~~~~~~~
 
 | The LaTeX number lines worksheet template is below.
-| :download:`worksheet_template<makers/number_lines_worksheet_template.tex>`
+| :download:`worksheet_template.tex<makers/number_lines_worksheet_template.tex>`
 
 .. literalinclude:: makers/number_lines_worksheet_template.tex
    :linenos:
@@ -223,7 +223,7 @@ Diagram template
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 | The LaTeX number line diagram template for each diagram is below.
-| :download:`diagram_template<makers/number_lines_worksheet_diagram_template.tex>`
+| :download:`diagram_template.tex<makers/number_lines_worksheet_diagram_template.tex>`
 
 .. literalinclude:: makers/number_lines_worksheet_diagram_template.tex
    :linenos:

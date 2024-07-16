@@ -56,25 +56,25 @@ Latex templates
 --------------------
 
 | The LaTeX recurring decimals **question** template is below.
-| :download:`recurring_decimals_worksheet_template<makers/recurring_decimals_worksheet_template.tex>`
+| :download:`recurring_decimals_worksheet_template.tex<makers/recurring_decimals_worksheet_template.tex>`
 
 .. literalinclude:: makers/recurring_decimals_worksheet_template.tex
    :linenos:
    
 | The LaTeX recurring decimals **answer** template is below.
-| :download:`recurring_decimals_worksheet_ans_template<makers/recurring_decimals_worksheet_ans_template.tex>`
+| :download:`recurring_decimals_worksheet_ans_template.tex<makers/recurring_decimals_worksheet_ans_template.tex>`
 
 .. literalinclude:: makers/recurring_decimals_worksheet_ans_template.tex
    :linenos:
 
 | The diagram template is below.
-| :download:`recurring_decimals_worksheet_diagram_template<makers/recurring_decimals_worksheet_diagram_template.tex>`
+| :download:`recurring_decimals_worksheet_diagram_template.tex<makers/recurring_decimals_worksheet_diagram_template.tex>`
 
 .. literalinclude:: makers/recurring_decimals_worksheet_diagram_template.tex
    :linenos:
 
 | The diagram answer template is below.
-| :download:`recurring_decimals_worksheet_diagram_ans_template<makers/recurring_decimals_worksheet_diagram_ans_template.tex>`
+| :download:`recurring_decimals_worksheet_diagram_ans_template.tex<makers/recurring_decimals_worksheet_diagram_ans_template.tex>`
 
 .. literalinclude:: makers/recurring_decimals_worksheet_diagram_ans_template.tex
    :linenos:

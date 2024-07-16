@@ -71,9 +71,9 @@ Maker files
 
 The python below requires the following .tex files:
 
-| :download:`lever_booklet_template<levers_makers/lever_booklet_template.tex>`
-| :download:`lever_booklet_ans_template<levers_makers/lever_booklet_ans_template.tex>`
-| :download:`lever_booklet_diagram_template<levers_makers/lever_booklet_diagram_template.tex>`
+| :download:`lever_booklet_template.tex<levers_makers/lever_booklet_template.tex>`
+| :download:`lever_booklet_ans_template.tex<levers_makers/lever_booklet_ans_template.tex>`
+| :download:`lever_booklet_diagram_template.tex<levers_makers/lever_booklet_diagram_template.tex>`
 
 | The 2 custom python modules required are:
 | :download:`lever_functions.py<levers_makers/lever_functions.py>`

@@ -192,7 +192,7 @@ document template
 ~~~~~~~~~~~~~~~~~~~~
 
 | The LaTeX number lines worksheet template is below.
-| :download:`document_template<makers/number_lines_template.tex>`
+| :download:`document_template.tex<makers/number_lines_template.tex>`
 
 .. literalinclude:: makers/number_lines_template.tex
    :linenos:
@@ -203,7 +203,7 @@ diagram template
 ~~~~~~~~~~~~~~~~~~~~
 
 | The LaTeX number line diagram template is below.
-| :download:`diagram_template<makers/number_lines_diagram_template.tex>`
+| :download:`diagram_template.tex<makers/number_lines_diagram_template.tex>`
 
 .. literalinclude:: makers/number_lines_diagram_template.tex
    :linenos:
@@ -236,7 +236,7 @@ Python to create a number line diagram
 - The code defines the function called ``trimkey`` that takes a key and removes the ``_q`` suffix if it has one.
 
 
-:download:`number_lines_diagram_maker<makers/number_lines_diagram_maker.py>`
+:download:`number_lines_diagram_maker.py<makers/number_lines_diagram_maker.py>`
 
 .. literalinclude:: makers/number_lines_diagram_maker.py
    :linenos:

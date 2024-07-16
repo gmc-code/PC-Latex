@@ -43,12 +43,12 @@ Booklets using python
 
 Required files:
 
-| :download:`ext_angle_to_triangle_booklet_ans_template<makers/ext_angle_to_triangle_booklet_ans_template.tex>`
-| :download:`ext_angle_to_triangle_booklet_template<makers/ext_angle_to_triangle_booklet_template.tex>`
-| :download:`ext_angle_to_triangle_booklet_diagram_template<makers/ext_angle_to_triangle_booklet_diagram_template.tex>`
+| :download:`ext_angle_to_triangle_booklet_ans_template.tex<makers/ext_angle_to_triangle_booklet_ans_template.tex>`
+| :download:`ext_angle_to_triangle_booklet_template.tex<makers/ext_angle_to_triangle_booklet_template.tex>`
+| :download:`ext_angle_to_triangle_booklet_diagram_template.tex<makers/ext_angle_to_triangle_booklet_diagram_template.tex>`
 
-| :download:`ext_angle_to_triangle_functions<makers/ext_angle_to_triangle_functions.py>`
-| :download:`ext_angle_to_triangle_booklet_diagram_maker<makers/ext_angle_to_triangle_booklet_diagram_maker.py>`
+| :download:`ext_angle_to_triangle_functions.py<makers/ext_angle_to_triangle_functions.py>`
+| :download:`ext_angle_to_triangle_booklet_diagram_maker.py<makers/ext_angle_to_triangle_booklet_diagram_maker.py>`
 
 
 ----

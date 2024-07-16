@@ -166,12 +166,12 @@ Booklets using python
 
 Required files:
 
-| :download:`parallel_lines_angles_booklet_ans_template<makers/parallel_lines_angles_booklet_ans_template.tex>`
-| :download:`parallel_lines_angles_booklet_template<makers/parallel_lines_angles_booklet_template.tex>`
-| :download:`parallel_lines_angles_booklet_diagram_template<makers/parallel_lines_angles_booklet_diagram_template.tex>`
+| :download:`parallel_lines_angles_booklet_ans_template.tex<makers/parallel_lines_angles_booklet_ans_template.tex>`
+| :download:`parallel_lines_angles_booklet_template.tex<makers/parallel_lines_angles_booklet_template.tex>`
+| :download:`parallel_lines_angles_booklet_diagram_template.tex<makers/parallel_lines_angles_booklet_diagram_template.tex>`
 
-| :download:`parallel_lines_angles_functions<makers/parallel_lines_angles_functions.py>`
-| :download:`parallel_lines_angles_booklet_diagram_maker<makers/parallel_lines_angles_booklet_diagram_maker.py>`
+| :download:`parallel_lines_angles_functions.py<makers/parallel_lines_angles_functions.py>`
+| :download:`parallel_lines_angles_booklet_diagram_maker.py<makers/parallel_lines_angles_booklet_diagram_maker.py>`
 
 
 ----

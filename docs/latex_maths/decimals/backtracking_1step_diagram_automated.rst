@@ -151,7 +151,7 @@ Document template
 ~~~~~~~~~~~~~~~~~~~~
 
 | The LaTeX 1-step worksheet template is below.
-| :download:`document_template<makers/backtrack_1step_template.tex>`
+| :download:`document_template.tex<makers/backtrack_1step_template.tex>`
 
 .. literalinclude:: makers/backtrack_1step_template.tex
    :linenos:
@@ -162,7 +162,7 @@ Diagram template
 ~~~~~~~~~~~~~~~~~~~~
 
 | The LaTeX 1-step diagram template is below.
-| :download:`diagram_template<makers/backtrack_1step_diagram_template.tex>`
+| :download:`diagram_template.tex<makers/backtrack_1step_diagram_template.tex>`
 
 .. literalinclude:: makers/backtrack_1step_diagram_template.tex
    :linenos:
@@ -187,7 +187,7 @@ Python to create a 1 step diagram
 - After waiting for another second, the code calls the `magick_pdf_to_png.convert_pdf_to_png` function to convert the PDFs to PNGs. The PNGs are saved to the paths specified by the `png_path` and `png_path_ans` variables.
 - The script prints "starting" and "finished" messages to indicate when it begins and ends its execution.
 
-:download:`python 1step diagram maker<makers/backtracking_1step_diagram_maker.py>`
+:download:`python 1step diagram maker.py<makers/backtracking_1step_diagram_maker.py>`
 
 .. literalinclude:: makers/backtracking_1step_diagram_maker.py
    :linenos:

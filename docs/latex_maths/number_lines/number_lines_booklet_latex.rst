@@ -107,13 +107,13 @@ Worksheet template
 ~~~~~~~~~~~~~~~~~~~~
 
 | The multi page LaTeX number lines worksheet template is below.
-| :download:`worksheet_template<makers/number_lines_worksheet_template.tex>`
+| :download:`worksheet_template.tex<makers/number_lines_worksheet_template.tex>`
 
 .. literalinclude:: makers/number_lines_worksheet_template.tex
    :linenos:
    
 | The multi page LaTeX number lines worksheet answer template is below.
-| :download:`worksheet_template<makers/number_lines_worksheet_ans_template.tex>`
+| :download:`worksheet_template.tex<makers/number_lines_worksheet_ans_template.tex>`
 
 .. literalinclude:: makers/number_lines_worksheet_ans_template.tex
    :linenos:
