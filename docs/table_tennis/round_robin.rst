@@ -23,6 +23,11 @@ Place players A-D, B-C; move clockwise with player A staying in the same positio
 | :download:`round_robin4.tex<files/round_robin4.tex>`
 | :download:`round_robin4.pdf<files/round_robin4.pdf>`
 
+.. raw:: pdf
+
+   :file: files/round_robin4.pdf
+
+
 -----------
 
 6 players
