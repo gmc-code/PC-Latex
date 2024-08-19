@@ -1,0 +1,57 @@
+\documentclass[border=16pt,tikz]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,bending}
+\usepackage[margin=2cm]{geometry}
+\pagestyle{empty} % Remove page numbers
+\begin{document}
+
+% Define player names
+\def\PlayerA{A}
+\def\PlayerB{B}
+\def\PlayerC{C}
+\def\PlayerD{D}
+\def\PlayerE{E}
+\def\PlayerF{F}
+\def\PlayerG{G}
+\def\PlayerH{H}
+
+\begin{tikzpicture}
+  % Define a custom arrow tip
+  \tikzset{custom arrow/.style={
+    -{Stealth[length=16pt,width=20pt, inset=14pt]}
+  }}
+  
+% Round 1
+\node[anchor=east] at (1.14375,4.5) {Round 1};
+% Table 1
+\draw (0,0) rectangle (2.2875,4.11);
+\draw (0,2.055) -- (2.2875,2.055); % Horizontal net line
+\node[anchor=north west] at (0.15,1.875) (H1) {\PlayerH}; 
+\node[anchor=north west] at (0.15,3.93) (A1) {\PlayerA}; 
+% Table 2
+\draw (4,0) rectangle (6.2875,4.11);
+\draw (4,2.055) -- (6.2875,2.055); % Horizontal net line
+\node[anchor=north west] at (4.15,1.875) (G1) {\PlayerG}; 
+\node[anchor=north west] at (4.15,3.93) (B1) {\PlayerB}; 
+% Table 3
+\draw (8,0) rectangle (10.2875,4.11);
+\draw (8,2.055) -- (10.2875,2.055); % Horizontal net line
+\node[anchor=north west] at (8.15,1.875) (F1) {\PlayerF}; 
+\node[anchor=north west] at (8.15,3.93) (C1) {\PlayerC}; 
+% Table 4
+\draw (12,0) rectangle (14.2875,4.11);
+\draw (12,2.055) -- (14.2875,2.055); % Horizontal net line
+\node[anchor=north west] at (12.15,1.875) (E1) {\PlayerE}; 
+\node[anchor=north west] at (12.15,3.93) (D1) {\PlayerD}; 
+
+% Add curved arrows
+\draw[custom arrow, bend left, line width=1.0pt] (B1) to (C1);
+\draw[custom arrow, bend left, line width=1.0pt] (C1) to (D1);
+\draw[custom arrow, bend left, line width=1.0pt] (D1) to (E1);
+\draw[custom arrow, bend left, line width=1.0pt] (E1) to (F1);
+\draw[custom arrow, bend left, line width=1.0pt] (F1) to (G1);
+\draw[custom arrow, bend left, line width=1.0pt] (G1) to (H1);
+\draw[custom arrow, bend left, line width=1.0pt] (H1) to (B1);
+
+\end{tikzpicture}
+\end{document}
