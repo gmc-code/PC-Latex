@@ -14,13 +14,14 @@ Rapid Fire Round Robin
 
 Place players A-D, B-C; move clockwise with player A staying in the same position.
 
-.. figure:: round_robin4_explained.png
+.. figure:: files/round_robin4_explained.png
    :width: 300
    :alt: round_robin4_explained.png
    :figclass: align-center
 
-.. literalinclude:: round_robin4.tex
-   :linenos:
+| Files:
+| :download:`round_robin4.tex<files/round_robin4.tex>`
+| :download:`round_robin4.pdf<files/round_robin4.pdf>`
 
 -----------
 
@@ -29,13 +30,17 @@ Place players A-D, B-C; move clockwise with player A staying in the same positio
 
 Place players A-F, B-E, C-D; move clockwise with player A staying in the same position.
 
-.. figure:: round_robin6_explained.png
+.. figure:: files/round_robin6_explained.png
    :width: 300
    :alt: round_robin6_explained.png
    :figclass: align-center
 
-.. literalinclude:: round_robin6.tex
+.. literalinclude:: files/round_robin6.tex
    :linenos:
+
+| Files:
+| :download:`round_robin6.tex<files/round_robin6.tex>`
+| :download:`round_robin6.pdf<files/round_robin6.pdf>`
 
 ----
 
@@ -44,10 +49,12 @@ Place players A-F, B-E, C-D; move clockwise with player A staying in the same po
 
 Place players A-H, B-G, C-F, D-E; move clockwise with player A staying in the same position.
 
-.. figure:: round_robin8_explained.png
+.. figure:: files/round_robin8_explained.png
    :width: 300
    :alt: round_robin8_explained.png
    :figclass: align-center
 
-.. literalinclude:: round_robin8.tex
-   :linenos:
+| Files:
+| :download:`round_robin8.tex<files/round_robin8.tex>`
+| :download:`round_robin8.pdf<files/round_robin8.pdf>`
+
