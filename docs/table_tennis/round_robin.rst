@@ -35,9 +35,6 @@ Place players A-F, B-E, C-D; move clockwise with player A staying in the same po
    :alt: round_robin6_explained.png
    :figclass: align-center
 
-.. literalinclude:: files/round_robin6.tex
-   :linenos:
-
 | Files:
 | :download:`round_robin6.tex<files/round_robin6.tex>`
 | :download:`round_robin6.pdf<files/round_robin6.pdf>`
