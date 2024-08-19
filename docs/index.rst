@@ -146,3 +146,12 @@ PC-latex 2024
     :numbered:
 
     latex_science/biology/classification_keys.rst
+
+
+.. toctree::
+    :maxdepth: 2
+    :caption: 🏓 table_tennis
+    :numbered:
+
+    table_tennis/round_robin.rst
+

@@ -43,7 +43,7 @@ wand module
 | The python module, wand, can be used to convert pdfs to jpgs or pngs from within python.
 | Wand requires that ImageMagick is installed.
 | See: https://pypi.org/project/Wand/
-| See: https://docs.wand-py.org/en/0.6.11/wand/image.html#wand.image.Image
+| See: https://docs.wand-py.org/en/0.6.13/wand/image.html#wand.image.Image
 
 ----
 
@@ -53,7 +53,7 @@ Sample python to convert a pdf to a png
 | An example of code to ``convert a pdf to a png`` is below.
 | The full path of a pdf file needs to be pasted into the code.
 | The full path to a pdf file can be obtained by right clicking on a file in the VSCode file explorer or by using the `Copy path` command in the ribbon in windows File Explorer.
-| The choice of using magick or wand can be made using commenting and uncommenting in th epython file.
+| The choice of using magick or wand can be made using commenting and uncommenting in the python file.
 | ``convert a pdf to a png.py`` uses two custom modules that have been designed to use similar syntax. 
 | The python files need to be in the same folder.
 
@@ -99,6 +99,7 @@ VSCode LaTeX Workshop
 -------------------------
 
 | In VSCode, make sure that the LaTeX Workshop is installed.
+
 
 LaTeX-workshop.LaTeX.tools json
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -149,15 +150,18 @@ LaTeX-workshop.LaTeX.recipes json
    {
       "name": "PDF ➞ PNG",
       "tools": [
-            "pdfLaTeX",
+            "pdflatex",
             "Python Script to Generate PNG"
       ]
    }
 
-| The json code block above is a custom tool called "PDF ➞ PNG" and it has two tools: "pdfLaTeX" and "Python Script to Generate PNG". 
+| The json code block above is a custom tool called "PDF ➞ PNG" and it has two tools: "pdflatex" and "Python Script to Generate PNG". 
 | The tool is used to convert PDF files to PNG files. 
-| The pdfLaTeX tool is used to generate the PDF file from the LaTeX source code. 
+| The pdflatex tool is used to generate the PDF file from the LaTeX source code. 
 | The Python script is then used to convert the PDF file to a PNG file.
+
+| In View: Command Palette, enter "LaTeX workshop: Build with recipe" and choose "PDF ➞ PNG" to convert a tex file to pdf then to png.
+
 
 Python LaTeX_pdf_to_png.py
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

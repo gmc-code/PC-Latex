@@ -1,0 +1,70 @@
+\documentclass[a4paper, landscape]{article}
+\usepackage{tikz}
+\usepackage[margin=2cm]{geometry}
+\pagestyle{empty} % Remove page numbers
+\begin{document}
+
+% Define player names
+% \def\PlayerA{A Ethan}
+% \def\PlayerB{B Louis}
+% \def\PlayerC{C Ollie}
+% \def\PlayerD{D Adam}
+\def\PlayerA{A}
+\def\PlayerB{B}
+\def\PlayerC{C}
+\def\PlayerD{D}
+
+\begin{tikzpicture}
+
+\foreach \x [count=\i from 0] in {0, 8, 16} { % Adjust the spacing as needed
+
+    % Draw vertical dividing line, except for the first iteration
+    \ifnum\i>0
+        \draw[dashed] (\x - 1, -12) -- (\x - 1, 4.5);
+    \fi
+
+    % Round 1
+    \node[anchor=east] at (\x + 1.14375,4.5) {Round 1};
+    % First table tennis table 
+    \draw (\x + 0,0) rectangle (\x + 2.2875,4.11);
+    \draw (\x + 0,2.055) -- (\x + 2.2875,2.055); % Horizontal net line
+    \node[anchor=north west] at (\x + 0.15,1.875) (D1) {\PlayerD}; 
+    \node[anchor=north west] at (\x + 0.15,3.93) (A1) {\PlayerA}; 
+
+    % Second table tennis table 
+    \draw (\x + 4,0) rectangle (\x + 6.2875,4.11);
+    \draw (\x + 4,2.055) -- (\x + 6.2875,2.055); % Horizontal net line
+    \node[anchor=north west] at (\x + 4.15,1.875) (C1) {\PlayerC}; 
+    \node[anchor=north west] at (\x + 4.15,3.93) (B1) {\PlayerB}; 
+
+    % Round 2
+    \node[anchor=east] at (\x + 1.14375,-1.5) {Round 2};
+    % Third table tennis table 
+    \draw (\x + 0,-6) rectangle (\x + 2.2875,-1.89);
+    \draw (\x + 0,-3.945) -- (\x + 2.2875,-3.945); % Horizontal net line
+    \node[anchor=north west] at (\x + 0.15,-4.125) {\PlayerC}; 
+    \node[anchor=north west] at (\x + 0.15,-2.07) {\PlayerA}; 
+
+    % Fourth table tennis table 
+    \draw (\x + 4,-6) rectangle (\x + 6.2875,-1.89);
+    \draw (\x + 4,-3.945) -- (\x + 6.2875,-3.945); % Horizontal net line
+    \node[anchor=north west] at (\x + 4.15,-4.125) {\PlayerB}; 
+    \node[anchor=north west] at (\x + 4.15,-2.07) {\PlayerD}; 
+
+    % Round 3
+    \node[anchor=east] at (\x + 1.14375,-7.5) {Round 3};
+    % Fifth table tennis table 
+    \draw (\x + 0,-12) rectangle (\x + 2.2875,-7.83);
+    \draw (\x + 0,-9.885) -- (\x + 2.2875,-9.885); % Horizontal net line
+    \node[anchor=north west] at (\x + 0.15,-10.065) {\PlayerB}; 
+    \node[anchor=north west] at (\x + 0.15,-8.01) {\PlayerA}; 
+
+    % Sixth table tennis table 
+    \draw (\x + 4,-12) rectangle (\x + 6.2875,-7.83);
+    \draw (\x + 4,-9.885) -- (\x + 6.2875,-9.885); % Horizontal net line
+    \node[anchor=north west] at (\x + 4.15,-10.065) {\PlayerD}; 
+    \node[anchor=north west] at (\x + 4.15,-8.01) {\PlayerC}; 
+}
+
+\end{tikzpicture}
+\end{document}

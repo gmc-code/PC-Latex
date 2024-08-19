@@ -1,0 +1,182 @@
+\documentclass[a4paper]{article}
+\usepackage{tikz}
+\usepackage[margin=1cm]{geometry}
+\pagestyle{empty} % Remove page numbers
+\begin{document}
+
+% Define player names
+\def\PlayerA{A Ethan}
+\def\PlayerB{B Louis}
+\def\PlayerC{C Ollie}
+\def\PlayerD{D Adam}
+\def\PlayerE{E James}
+\def\PlayerF{F Dylan}
+\def\PlayerG{G Sarah}
+\def\PlayerH{H Ryan}
+
+\begin{tikzpicture}[scale=0.65, transform shape]
+
+% Round 1
+\node[anchor=east] at (1.14375,4.5) {Round 1};
+% Table 1
+\draw (0,0) rectangle (2.2875,4.11);
+\draw (0,2.055) -- (2.2875,2.055); % Horizontal net line
+\node[anchor=north west] at (0.15,1.875) (H1) {\PlayerH}; 
+\node[anchor=north west] at (0.15,3.93) (A1) {\PlayerA}; 
+% Table 2
+\draw (4,0) rectangle (6.2875,4.11);
+\draw (4,2.055) -- (6.2875,2.055); % Horizontal net line
+\node[anchor=north west] at (4.15,1.875) (G1) {\PlayerG}; 
+\node[anchor=north west] at (4.15,3.93) (B1) {\PlayerB}; 
+% Table 3
+\draw (8,0) rectangle (10.2875,4.11);
+\draw (8,2.055) -- (10.2875,2.055); % Horizontal net line
+\node[anchor=north west] at (8.15,1.875) (F1) {\PlayerF}; 
+\node[anchor=north west] at (8.15,3.93) (C1) {\PlayerC}; 
+% Table 4
+\draw (12,0) rectangle (14.2875,4.11);
+\draw (12,2.055) -- (14.2875,2.055); % Horizontal net line
+\node[anchor=north west] at (12.15,1.875) (E1) {\PlayerE}; 
+\node[anchor=north west] at (12.15,3.93) (D1) {\PlayerD}; 
+
+% Round 2
+\node[anchor=east] at (1.14375,-1.5) {Round 2};
+% Table 1
+\draw (0,-6) rectangle (2.2875,-1.89);
+\draw (0,-3.945) -- (2.2875,-3.945); % Horizontal net line
+\node[anchor=north west] at (0.15,-4.125) (H2) {\PlayerG}; 
+\node[anchor=north west] at (0.15,-2.07) (A2) {\PlayerA}; 
+% Table 2
+\draw (4,-6) rectangle (6.2875,-1.89);
+\draw (4,-3.945) -- (6.2875,-3.945); % Horizontal net line
+\node[anchor=north west] at (4.15,-4.125) (G2) {\PlayerF}; 
+\node[anchor=north west] at (4.15,-2.07) (B2) {\PlayerH}; 
+% Table 3
+\draw (8,-6) rectangle (10.2875,-1.89);
+\draw (8,-3.945) -- (10.2875,-3.945); % Horizontal net line
+\node[anchor=north west] at (8.15,-4.125) (F2) {\PlayerE}; 
+\node[anchor=north west] at (8.15,-2.07) (C2) {\PlayerB}; 
+% Table 4
+\draw (12,-6) rectangle (14.2875,-1.89);
+\draw (12,-3.945) -- (14.2875,-3.945); % Horizontal net line
+\node[anchor=north west] at (12.15,-4.125) (E2) {\PlayerD}; 
+\node[anchor=north west] at (12.15,-2.07) (D2) {\PlayerC}; 
+
+% Round 3
+\node[anchor=east] at (1.14375,-7.5) {Round 3};
+% Table 1
+\draw (0,-12) rectangle (2.2875,-7.83);
+\draw (0,-9.885) -- (2.2875,-9.885); % Horizontal net line
+\node[anchor=north west] at (0.15,-10.065) (H3) {\PlayerF}; 
+\node[anchor=north west] at (0.15,-8.01) (A3) {\PlayerA}; 
+% Table 2
+\draw (4,-12) rectangle (6.2875,-7.83);
+\draw (4,-9.885) -- (6.2875,-9.885); % Horizontal net line
+\node[anchor=north west] at (4.15,-10.065) (G3) {\PlayerE}; 
+\node[anchor=north west] at (4.15,-8.01) (B3) {\PlayerG}; 
+% Table 3
+\draw (8,-12) rectangle (10.2875,-7.83);
+\draw (8,-9.885) -- (10.2875,-9.885); % Horizontal net line
+\node[anchor=north west] at (8.15,-10.065) (F3) {\PlayerD}; 
+\node[anchor=north west] at (8.15,-8.01) (C3) {\PlayerH}; 
+% Table 4
+\draw (12,-12) rectangle (14.2875,-7.83);
+\draw (12,-9.885) -- (14.2875,-9.885); % Horizontal net line
+\node[anchor=north west] at (12.15,-10.065) (E3) {\PlayerC}; 
+\node[anchor=north west] at (12.15,-8.01) (D3) {\PlayerB}; 
+
+% Round 4
+\node[anchor=east] at (1.14375,-13.5) {Round 4};
+% Table 1
+\draw (0,-18) rectangle (2.2875,-13.83);
+\draw (0,-15.885) -- (2.2875,-15.885); % Horizontal net line
+\node[anchor=north west] at (0.15,-16.065) (H4) {\PlayerE}; 
+\node[anchor=north west] at (0.15,-14.01) (A4) {\PlayerA}; 
+% Table 2
+\draw (4,-18) rectangle (6.2875,-13.83);
+\draw (4,-15.885) -- (6.2875,-15.885); % Horizontal net line
+\node[anchor=north west] at (4.15,-16.065) (G4) {\PlayerD}; 
+\node[anchor=north west] at (4.15,-14.01) (B4) {\PlayerF}; 
+% Table 3
+\draw (8,-18) rectangle (10.2875,-13.83);
+\draw (8,-15.885) -- (10.2875,-15.885); % Horizontal net line
+\node[anchor=north west] at (8.15,-16.065) (F4) {\PlayerC}; 
+\node[anchor=north west] at (8.15,-14.01) (C4) {\PlayerG}; 
+% Table 4
+\draw (12,-18) rectangle (14.2875,-13.83);
+\draw (12,-15.885) -- (14.2875,-15.885); % Horizontal net line
+\node[anchor=north west] at (12.15,-16.065) (E4) {\PlayerB}; 
+\node[anchor=north west] at (12.15,-14.01) (D4) {\PlayerH}; 
+
+% Round 5
+\node[anchor=east] at (1.14375,-19.5) {Round 5};
+% Table 1
+\draw (0,-24) rectangle (2.2875,-19.83);
+\draw (0,-21.885) -- (2.2875,-21.885); % Horizontal net line
+\node[anchor=north west] at (0.15,-22.065) (H5) {\PlayerD}; 
+\node[anchor=north west] at (0.15,-20.01) (A5) {\PlayerA}; 
+% Table 2
+\draw (4,-24) rectangle (6.2875,-19.83);
+\draw (4,-21.885) -- (6.2875,-21.885); % Horizontal net line
+\node[anchor=north west] at (4.15,-22.065) (G5) {\PlayerC}; 
+\node[anchor=north west] at (4.15,-20.01) (B5) {\PlayerE}; 
+% Table 3
+\draw (8,-24) rectangle (10.2875,-19.83);
+\draw (8,-21.885) -- (10.2875,-21.885); % Horizontal net line
+\node[anchor=north west] at (8.15,-22.065) (F5) {\PlayerB}; 
+\node[anchor=north west] at (8.15,-20.01) (C5) {\PlayerF}; 
+% Table 4
+\draw (12,-24) rectangle (14.2875,-19.83);
+\draw (12,-21.885) -- (14.2875,-21.885); % Horizontal net line
+\node[anchor=north west] at (12.15,-22.065) (E5) {\PlayerH}; 
+\node[anchor=north west] at (12.15,-20.01) (D5) {\PlayerG}; 
+
+% Round 6
+\node[anchor=east] at (1.14375,-25.5) {Round 6};
+% Table 1
+\draw (0,-30) rectangle (2.2875,-25.83);
+\draw (0,-27.885) -- (2.2875,-27.885); % Horizontal net line
+\node[anchor=north west] at (0.15,-28.065) (H6) {\PlayerC}; 
+\node[anchor=north west] at (0.15,-26.01) (A6) {\PlayerA}; 
+% Table 2
+\draw (4,-30) rectangle (6.2875,-25.83);
+\draw (4,-27.885) -- (6.2875,-27.885); % Horizontal net line
+\node[anchor=north west] at (4.15,-28.065) (G6) {\PlayerB}; 
+\node[anchor=north west] at (4.15,-26.01) (B6) {\PlayerD}; 
+% Table 3
+\draw (8,-30) rectangle (10.2875,-25.83);
+\draw (8,-27.885) -- (10.2875,-27.885); % Horizontal net line
+\node[anchor=north west] at (8.15,-28.065) (F6) {\PlayerH}; 
+\node[anchor=north west] at (8.15,-26.01) (C6) {\PlayerE}; 
+% Table 4
+\draw (12,-30) rectangle (14.2875,-25.83);
+\draw (12,-27.885) -- (14.2875,-27.885); % Horizontal net line
+\node[anchor=north west] at (12.15,-28.065) (E6) {\PlayerG}; 
+\node[anchor=north west] at (12.15,-26.01) (D6) {\PlayerF}; 
+
+% Round 7
+\node[anchor=east] at (1.14375,-31.5) {Round 7};
+% Table 1
+\draw (0,-36) rectangle (2.2875,-31.83);
+\draw (0,-33.885) -- (2.2875,-33.885); % Horizontal net line
+\node[anchor=north west] at (0.15,-34.065) (H7) {\PlayerB}; 
+\node[anchor=north west] at (0.15,-32.01) (A7) {\PlayerA}; 
+% Table 2
+\draw (4,-36) rectangle (6.2875,-31.83);
+\draw (4,-33.885) -- (6.2875,-33.885); % Horizontal net line
+\node[anchor=north west] at (4.15,-34.065) (G7) {\PlayerH}; 
+\node[anchor=north west] at (4.15,-32.01) (B7) {\PlayerC}; 
+% Table 3
+\draw (8,-36) rectangle (10.2875,-31.83);
+\draw (8,-33.885) -- (10.2875,-33.885); % Horizontal net line
+\node[anchor=north west] at (8.15,-34.065) (F7) {\PlayerG}; 
+\node[anchor=north west] at (8.15,-32.01) (C7) {\PlayerD}; 
+% Table 4
+\draw (12,-36) rectangle (14.2875,-31.83);
+\draw (12,-33.885) -- (14.2875,-33.885); % Horizontal net line
+\node[anchor=north west] at (12.15,-34.065) (E7) {\PlayerF}; 
+\node[anchor=north west] at (12.15,-32.01) (D7) {\PlayerE}; 
+
+\end{tikzpicture}
+
+\end{document}

@@ -12,5 +12,5 @@ png_path = f'{tex_filename}.png'
 # this also works:
 # subprocess.run(f'magick convert -quiet -background white -alpha off -quality 100 -density 600 {tex_filename}.pdf {tex_filename}.png')
 
-subprocess.run(['magick', 'convert','-quiet', '-background', 'white', '-alpha', 'off', '-quality', '100', '-density', '2400', pdf_path, png_path])
+subprocess.run(['magick', 'convert','-quiet', '-background', 'white', '-alpha', 'off', '-quality', '100', '-density', '600', pdf_path, png_path])
 
