@@ -6,6 +6,8 @@ Rapid Fire Round Robin
 -----------------------
 
 | Rapid fire fixtures are designed for matches of 5 to 10 min, completing multiple rounds in one session.
+| The diagrams below are for 4 to 8 players on 2 to 4 tables.
+| The scores for each match can be written over the player tables.
 
 ----
 
