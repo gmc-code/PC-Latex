@@ -53,5 +53,3 @@ Approach
 #. Python will be used to generate a worksheet with 10 backtracking diagrams that are all randomly generated.
 #. Both a question sheet and an answer sheet will be built in LaTeX and then converted to a pdf and png of each.
 #. Then a booklet will be made with answers as well.
-
-
