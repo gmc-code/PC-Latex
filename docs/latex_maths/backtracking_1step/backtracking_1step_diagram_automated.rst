@@ -16,20 +16,20 @@ Backtracking 1 step diagram - automated
 | The python file, **backtracking_1step_diagram_maker**, when run, will ask for 2 inputs:
 | Choose the arithmetic process: ``"Enter 1, 2, 3, 4 or 5 for +, -, X, /, random"``
 | Choose the file name base: ``"Enter the base filename to be added to the prefix bt1_:"``.
-| The filename will have "_q" added for the question diagram and "_ans" for the answer diagram. 
-| e.g If the user inputs "add1a" the file name will be "bt1_add1a_q".
+| The filename will have "_q" added for the question diagram and "_ans" for the answer diagram.
+| e.g. If the user inputs "add1a" the file name will be "bt1_add1a_q".
 
 ----
 
 A 1-step backtracking diagram with answers
 --------------------------------------------
 
-.. grid:: 4
+.. grid:: 2
    :gutter: 0
    :margin: 0
    :padding: 0
 
-   .. grid-item-card::  
+   .. grid-item-card::
 
       addition_q
       ^^^
@@ -42,8 +42,8 @@ A 1-step backtracking diagram with answers
          :alt: bt1_+_q
          :figclass: align-center
 
-   .. grid-item-card::  
-      
+   .. grid-item-card::
+
       addition_ans
       ^^^
       :download:`png<diagrams/bt1_+_ans.png>`
@@ -55,7 +55,7 @@ A 1-step backtracking diagram with answers
          :alt: bt1_+_ans
          :figclass: align-center
 
-   .. grid-item-card::  
+   .. grid-item-card::
 
       subtraction_q
       ^^^
@@ -68,8 +68,8 @@ A 1-step backtracking diagram with answers
          :alt: bt1_-_q
          :figclass: align-center
 
-   .. grid-item-card::  
-      
+   .. grid-item-card::
+
       subtraction_ans
       ^^^
       :download:`png<diagrams/bt1_-_ans.png>`
@@ -86,7 +86,7 @@ A 1-step backtracking diagram with answers
    :margin: 0
    :padding: 0
 
-   .. grid-item-card::  
+   .. grid-item-card::
 
       multiplication_q
       ^^^
@@ -99,8 +99,8 @@ A 1-step backtracking diagram with answers
          :alt: bt1_x_q
          :figclass: align-center
 
-   .. grid-item-card::  
-      
+   .. grid-item-card::
+
       multiplication_ans
       ^^^
       :download:`png<diagrams/bt1_x_ans.png>`
@@ -112,7 +112,7 @@ A 1-step backtracking diagram with answers
          :alt: bt1_x_ans
          :figclass: align-center
 
-   .. grid-item-card::  
+   .. grid-item-card::
 
       division_q
       ^^^
@@ -125,8 +125,8 @@ A 1-step backtracking diagram with answers
          :alt: bt1_div_q
          :figclass: align-center
 
-   .. grid-item-card::  
-      
+   .. grid-item-card::
+
       division_ans
       ^^^
       :download:`png<diagrams/bt1_div_ans.png>`
@@ -143,7 +143,7 @@ A 1-step backtracking diagram with answers
 Splitting the LaTeX and modifying it for python
 ---------------------------------------------------
 
-| The LaTeX from a single 1-step equation is used as a starting point, split into 2 and modified.
+| The LaTeX from a single 1-step equation is used as a starting point, split into two parts and modified to form 2 templates.
 | The Document template contains the preamble and the scaffold for the document.
 | The Diagram template contains the backtacking diagram LaTeX.
 
@@ -182,7 +182,7 @@ Python to create a 1 step diagram
 - This Python code requires two user inputs: a1 to 4 to choose the arithmetic operation, and the filename to be used.
 - The code reads in three template files: `tex_template_path`, `texans_template_path`, and `tex_diagram_template_path`. The contents of these files are stored in the variables `tex_template_txt`, `tex_template_txt_ans`, and `tex_diagram_template_txt`, respectively.
 - The code then calls the `make1_diagram` function, passing in `tex_diagram_template_txt` as an argument. `kv = btf.get_1step_process_dict()` gets the dictionary containing the values to be placed in the diagram template. The `make1_diagram` function generates a diagram and returns two values: `diagram_text` and `diagram_text_ans`. These values are then used to replace the `<<diagram>>` placeholder in the `tex_template_txt` and `tex_template_txt_ans` variables.
-- The resulting text is then written to two output files: `tex_output_path` and `tex_output_path_ans`. 
+- The resulting text is then written to two output files: `tex_output_path` and `tex_output_path_ans`.
 - The code then waits for 1 second to ensure that the files have been created before calling the `convert_to_pdf` function to convert these TeX files to PDFs. The PDFs are saved to the paths specified by the `pdf_path` and `pdf_path_ans` variables.
 - After waiting for another second, the code calls the `magick_pdf_to_png.convert_pdf_to_png` function to convert the PDFs to PNGs. The PNGs are saved to the paths specified by the `png_path` and `png_path_ans` variables.
 - The script prints "starting" and "finished" messages to indicate when it begins and ends its execution.

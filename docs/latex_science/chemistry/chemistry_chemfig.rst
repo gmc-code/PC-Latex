@@ -7,7 +7,7 @@ See: https://mirror.aarnet.edu.au/pub/CTAN/macros/generic/chemfig/chemfig-en.pdf
 
 | BingAi can be used to quickly get structural diagrams of chemicals by inlcuding "chemfig latex" in the prompt.
 | Output latex can be copied and pasted into overleaf so that a pdf can be produced.
-| e.g prompt: write latex with chemfig for 20 organic compounds
+| e.g. prompt: write latex with chemfig for 20 organic compounds
 
 ----
 
@@ -32,7 +32,7 @@ chemfig
    :width: 150
    :alt: ethanol
    :figclass: align-center
-   
+
    ethanol
 
 .. literalinclude:: files/ethanol.tex
@@ -43,7 +43,7 @@ chemfig
    :width: 150
    :alt: acetaldehyde
    :figclass: align-center
-   
+
    acetaldehyde
 
 .. literalinclude:: files/acetaldehyde.tex
@@ -54,7 +54,7 @@ chemfig
    :width: 150
    :alt: ethyne
    :figclass: align-center
-   
+
    ethyne
 
 .. literalinclude:: files/ethyne.tex
@@ -66,7 +66,7 @@ chemfig
    :width: 150
    :alt: benzene
    :figclass: align-center
-   
+
    benzene
 
 .. literalinclude:: files/benzene.tex
@@ -80,7 +80,7 @@ chemfig
    :width: 150
    :alt: alanine
    :figclass: align-center
-   
+
    alanine
 
 .. literalinclude:: files/alanine.tex
@@ -96,7 +96,7 @@ Pentane latex explained
    :width: 200
    :alt: pentane
    :figclass: align-center
-   
+
    pentane
 
 .. literalinclude:: files/pentane.tex
@@ -107,7 +107,7 @@ Pentane latex explained
 
 - `\documentclass[border = 1mm]{standalone}`: This sets the document class to `standalone`, which means that the output will be a single image file with a border of 1mm. This is useful for creating diagrams or figures that can be inserted into other documents.
 - `\usepackage{chemfig}`: This loads the `chemfig` package, which provides commands and tools for drawing chemical structures and reactions.
-- `\renewcommand*\printatom[1]{\ensuremath{\mathsf{#1}}}`: This line changes the font of the atoms to sans serif 
+- `\renewcommand*\printatom[1]{\ensuremath{\mathsf{#1}}}`: This line changes the font of the atoms to sans serif
 - `\begin{document}`: This marks the beginning of the document content.
 - `\definesubmol{C}{-C(-[2]H)(-[6]H)}`: This defines a sub-molecule named `C`, which consists of a carbon atom with two hydrogen atoms attached at angles of 2 and 6 (relative to the horizontal axis). This sub-molecule can be reused later in the code to simplify the drawing of larger molecules.
 - `\chemfig{H!C!C!C!C!C-H}`: This draws a chemical structure using the `chemfig` syntax. The `!` symbol indicates that a sub-molecule is inserted at that position. So this code draws a hexane molecule, which is composed of six carbon atoms (using the sub-molecule `C`) and two hydrogen atoms at the ends.
@@ -138,13 +138,13 @@ Ethylene syntax explained
    :width: 300
    :alt: ethene
    :figclass: align-center
-   
+
    ethene
 
 .. literalinclude:: files/ethene.tex
    :linenos:
 
-| `\chemfig{C(-[:120]H)(-[:240]H)=C(-[:300]H)-[:60]H}` represents a molecule of **ethene**. 
+| `\chemfig{C(-[:120]H)(-[:240]H)=C(-[:300]H)-[:60]H}` represents a molecule of **ethene**.
 | The syntax of the expression is as follows:
 
   - The **\chemfig** command starts drawing a molecular structure.
@@ -165,7 +165,7 @@ Lewis dot diagram
    :width: 300
    :alt: water_lewis
    :figclass: align-center
-   
+
    water_lewis
 
 .. literalinclude:: files/water_lewis.tex
@@ -176,7 +176,7 @@ Lewis dot diagram
    :width: 300
    :alt: hydronium_lewis
    :figclass: align-center
-   
+
    hydronium_lewis
 
 .. literalinclude:: files/hydronium_lewis.tex
@@ -193,7 +193,7 @@ Lewis equation
    :width: 600
    :alt: lewis_equation
    :figclass: align-center
-   
+
    lewis_equation
 
 .. literalinclude:: files/lewis_equation.tex
@@ -208,7 +208,7 @@ Molecular equation
    :width: 600
    :alt: molecular_equation
    :figclass: align-center
-   
+
    molecular_equation
 
 .. literalinclude:: files/molecular_equation.tex
