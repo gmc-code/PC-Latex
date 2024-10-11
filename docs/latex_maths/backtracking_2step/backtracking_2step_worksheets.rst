@@ -38,7 +38,6 @@ Sample 2-step backtracking worksheet
       :download:`pdf<worksheets/bt2WS_X+_q.pdf>`
       :download:`tex<worksheets/bt2WS_X+_q.tex>`
 
-
       .. figure:: worksheets/bt2WS_X+_q.png
          :width: 300
          :alt: bt2WS_X+_q
