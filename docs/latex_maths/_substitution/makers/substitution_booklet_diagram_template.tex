@@ -1,0 +1,45 @@
+\refstepcounter{minipagecount} % increments the counter minipagecount by one.
+\noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
+% and inserts the current value of the minipagecount counter, enclosed in parentheses
+\begin{minipage}[t]{0.99\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
+    To check that the left-hand side (LHS) equals the right-hand side (RHS) for the equation \( <<equation>> \) when \( <<values>> \):
+
+    \begin{multicols}{2}
+    \noindent
+    \begin{align*}
+    \text{LHS} &= <<LHS>> \\
+               &= <<LHSsub>> \\
+               &= <<LHSval>> \\
+    \end{align*}
+
+    \columnbreak
+
+    \noindent
+    \begin{align*}
+    \text{RHS} &= <<RHS>> \\
+    \end{align*}
+    \end{multicols}
+
+    Since \(\text{LHS} = \text{RHS}\), the equation holds true when \( <<values>> \).
+
+\end{minipage}
+
+To check that the left-hand side (LHS) equals the right-hand side (RHS) for the equation \( <<equation>> \) when \( <<values>> \):
+
+\begin{multicols}{2}
+\noindent
+\begin{align*}
+\text{LHS} &= <<LHS>> \\
+           &= <<LHSsub>> \\
+           &= <<LHSval>> \\
+\end{align*}
+
+\columnbreak
+
+\noindent
+\begin{align*}
+\text{RHS} &= <<RHS>> \\
+\end{align*}
+\end{multicols}
+
+Since \(\text{LHS} = \text{RHS}\), the equation holds true when \( <<values>> \).

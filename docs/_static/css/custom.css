@@ -1,3 +1,10 @@
+/* remove read the docs fly out menu */
+
+.your-floating-element-class {
+    display: none;
+}
+/* ========================================== */
+
 /* inline literals; change colour from built in red to blue */
 
 .rst-content tt.literal, .rst-content tt.literal, .rst-content code.literal {
@@ -102,7 +109,7 @@ div.admonition-projects p.admonition-title {
 /* ========================================== */
 /* Custom dropdown light primary D4D4F7 F7F7FF */
 .sd-dropdown-container {
-    background-color: #F7F7FF; 
+    background-color: #F7F7FF;
 }
 
 /* Custom dropdown reduce padding of dropdown */
@@ -260,17 +267,17 @@ div.highlight-default div.highlight {
     padding: 4px 8px;
 }
 
-/* override table width restrictions */ 
-.wy-table-responsive table td, .wy-table-responsive table th { 
-    white-space: normal; 
-} 
- 
-.wy-table-responsive { 
-    margin-bottom: 24px; 
-    max-width: 100%; 
-    overflow: visible; 
-} 
- 
-.wy-table-responsive th p { 
-    margin-bottom: unset; 
-} 
+/* override table width restrictions */
+.wy-table-responsive table td, .wy-table-responsive table th {
+    white-space: normal;
+}
+
+.wy-table-responsive {
+    margin-bottom: 24px;
+    max-width: 100%;
+    overflow: visible;
+}
+
+.wy-table-responsive th p {
+    margin-bottom: unset;
+}
