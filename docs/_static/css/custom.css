@@ -1,12 +1,13 @@
 /* remove read the docs fly out menu */
 
 .your-floating-element-class {
-    display: none;
+    display: none !important;
 }
 
 .switch-menus {
-    display: none;
+    display: none !important;
 }
+
 
 
 /* ========================================== */
