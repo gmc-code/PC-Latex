@@ -3,6 +3,11 @@
 .your-floating-element-class {
     display: none;
 }
+
+.rst-other-versions {
+    display: none;
+}
+
 /* ========================================== */
 
 /* inline literals; change colour from built in red to blue */
