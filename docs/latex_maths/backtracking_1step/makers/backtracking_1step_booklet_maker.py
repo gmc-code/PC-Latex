@@ -9,7 +9,7 @@ currfile_dir = Path(__file__).parent
 tex_template_path = currfile_dir / "backtrack_1step_booklet_template.tex"
 texans_template_path = currfile_dir / "backtrack_1step_booklet_ans_template.tex"
 tex_diagram_template_path = (
-    currfile_dir / "backtrack_1step_worksheet_diagram_template.tex"
+    currfile_dir / "backtrack_1step_booklet_diagram_template.tex"
 )
 
 

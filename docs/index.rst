@@ -47,20 +47,17 @@ PC-latex 2024
     latex_maths/backtracking_1step/backtracking_1step_intro.rst
     latex_maths/backtracking_1step/backtracking_1step_diagram_manual.rst
     latex_maths/backtracking_1step/backtracking_1step_diagram_automated.rst
-    latex_maths/backtracking_1step/backtracking_1step_worksheet_latex.rst
-    latex_maths/backtracking_1step/backtracking_1step_worksheet_python.rst
     latex_maths/backtracking_1step/backtracking_1step_booklet_latex.rst
     latex_maths/backtracking_1step/backtracking_1step_booklet_python.rst
-        
+
 
 .. toctree::
     :maxdepth: 2
     :caption: 🔁 backtracking - 2step
     :numbered:
-    
+
     latex_maths/backtracking_2step/backtracking_2step_intro.rst
     latex_maths/backtracking_2step/backtracking_2step_diagrams.rst
-    latex_maths/backtracking_2step/backtracking_2step_worksheets.rst
     latex_maths/backtracking_2step/backtracking_2step_booklets.rst
 
 
@@ -77,7 +74,7 @@ PC-latex 2024
     latex_maths/number_lines/number_lines_booklet_latex.rst
     latex_maths/number_lines/number_lines_booklet_python.rst
 
-    
+
 .. toctree::
     :maxdepth: 2
     :caption: 📊 charts
@@ -131,7 +128,7 @@ PC-latex 2024
     :caption: 🧪 chemistry
     :numbered:
 
-    latex_science/chemistry/chemistry_acid_base_reactions.rst    
+    latex_science/chemistry/chemistry_acid_base_reactions.rst
     latex_science/chemistry/chemistry_balancing_equations.rst
     latex_science/chemistry/chemistry_bohr_atoms.rst
     latex_science/chemistry/chemistry_chemfig.rst
