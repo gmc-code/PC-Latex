@@ -55,6 +55,11 @@ A 1-step backtracking diagram with answers
          :alt: bt1_+_ans
          :figclass: align-center
 
+.. grid:: 2
+   :gutter: 0
+   :margin: 0
+   :padding: 0
+
    .. grid-item-card::
 
       subtraction_q
@@ -81,7 +86,7 @@ A 1-step backtracking diagram with answers
          :alt: bt1_-_ans
          :figclass: align-center
 
-.. grid:: 4
+.. grid:: 2
    :gutter: 0
    :margin: 0
    :padding: 0
@@ -111,6 +116,11 @@ A 1-step backtracking diagram with answers
          :width: 300
          :alt: bt1_x_ans
          :figclass: align-center
+
+.. grid:: 2
+   :gutter: 0
+   :margin: 0
+   :padding: 0
 
    .. grid-item-card::
 
