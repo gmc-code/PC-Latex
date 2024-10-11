@@ -20,6 +20,9 @@ LaTeX built by python
 .. image:: files/process.png
     :width: 600
 
+| For use of python to build LaTeX files by others, see:
+| https://tug.org/tug2019/slides/slides-ziegenhagen-python.pdf
+
 ----
 
 LaTeX Documentation

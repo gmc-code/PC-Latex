@@ -3,7 +3,7 @@ Backtracking 1 step introduction
 ====================================================
 
 | Backtracking diagrams can be used in algebra to solve equations.
-| The output pdfs from LaTeX can be converted to pngs. 
+| The output pdfs from LaTeX can be converted to pngs.
 
 ----
 
@@ -15,7 +15,7 @@ Example 1-step backtracking diagram
    :margin: 0
    :padding: 0
 
-   .. grid-item-card::  
+   .. grid-item-card::
 
       question
       ^^^
@@ -29,8 +29,8 @@ Example 1-step backtracking diagram
          :alt: backtrack_1step_q
          :figclass: align-center
 
-   .. grid-item-card::  
-      
+   .. grid-item-card::
+
       answer
       ^^^
       :download:`png<manual/backtrack_1step_mans.png>`
@@ -41,19 +41,17 @@ Example 1-step backtracking diagram
          :width: 300
          :alt: backtrack_1step_ans
          :figclass: align-center
-    
+
 ----
 
 Approach
 ----------
 
 #. Backtracking diagrams for 1-step equations will be designed in LaTeX.
-#. The LaTeX file will be broken into parts and placeholder text wil be inserted.
+#. The LaTeX file will be broken into parts and placeholder text will be inserted.
 #. Python will replace the placeholder text in the backtracking LaTeX, allowing random numbers to be used.
 #. Python will be used to generate a worksheet with 10 backtracking diagrams that are all randomly generated.
 #. Both a question sheet and an answer sheet will be built in LaTeX and then converted to a pdf and png of each.
 #. Then a booklet will be made with answers as well.
 
-| For use of python to build LaTeX files see:
-| https://tug.org/tug2019/slides/slides-ziegenhagen-python.pdf
 
