@@ -50,6 +50,7 @@ Approach
 #. Backtracking diagrams for 1-step equations will be designed in LaTeX.
 #. The LaTeX file will be broken into parts and placeholder text will be inserted.
 #. Python will replace the placeholder text in the backtracking LaTeX, allowing random numbers to be used.
-#. Python will be used to generate a worksheet with 10 backtracking diagrams that are all randomly generated.
+#. Python will be used to generate a booklet with 10 backtracking diagrams per page that are all randomly generated.
 #. Both a question sheet and an answer sheet will be built in LaTeX and then converted to a pdf and png of each.
-#. Then a booklet will be made with answers as well.
+
+

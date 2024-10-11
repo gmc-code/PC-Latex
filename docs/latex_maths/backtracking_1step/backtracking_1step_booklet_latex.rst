@@ -5,16 +5,16 @@ Backtracking 1-step booklet LaTeX
 2 page booklets
 -------------------
 
-| The worksheet code can be modified to produce multipage booklets.
-| The same diagram template can be used, without further modification.
+| The booklet code to produce multipage booklets with 10 diagrams per page is below..
 
 Sample 1-step backtracking booklets by process
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. grid:: 4
+.. grid:: 2
    :gutter: 0
    :margin: 0
    :padding: 0
+
 
    .. grid-item-card::
 
@@ -31,6 +31,10 @@ Sample 1-step backtracking booklets by process
       :download:`pdf<booklets/bt1Bk_+_ans.pdf>`
       :download:`tex<booklets/bt1Bk_+_ans.tex>`
 
+.. grid:: 2
+   :gutter: 0
+   :margin: 0
+   :padding: 0
 
    .. grid-item-card::
 
@@ -48,10 +52,11 @@ Sample 1-step backtracking booklets by process
       :download:`tex<booklets/bt1Bk_-_ans.tex>`
 
 
-.. grid:: 4
+.. grid:: 2
    :gutter: 0
    :margin: 0
    :padding: 0
+
 
    .. grid-item-card::
 
@@ -68,6 +73,10 @@ Sample 1-step backtracking booklets by process
       :download:`pdf<booklets/bt1Bk_x_ans.pdf>`
       :download:`tex<booklets/bt1Bk_x_ans.tex>`
 
+.. grid:: 2
+   :gutter: 0
+   :margin: 0
+   :padding: 0
 
    .. grid-item-card::
 
@@ -108,199 +117,10 @@ Sample 1-step backtracking booklets by process
 
 ----
 
-Worksheet template
-~~~~~~~~~~~~~~~~~~~~
-
-| The multi page LaTeX 1-step worksheet **question** template is below.
-| :download:`worksheet_question_template.tex<makers/backtrack_1step_booklet_template.tex>`
-
-.. literalinclude:: makers/backtrack_1step_booklet_template.tex
-   :linenos:
-
-| The multi page LaTeX 1-step worksheet **answer** template is below.
-| :download:`worksheet_answer_template.tex<makers/backtrack_1step_worksheet_ans_template.tex>`
-
-.. literalinclude:: makers/backtrack_1step_worksheet_ans_template.tex
-   :linenos:
-
-====================================================
-Backtracking 1-step worksheet LaTeX
-====================================================
-
-Sample 1-step backtracking worksheets by process
--------------------------------------------------------
-
-.. grid:: 2
-   :gutter: 0
-   :margin: 0
-   :padding: 0
-
-   .. grid-item-card::
-
-      addition_q
-      ^^^
-      :download:`png<worksheets/bt1WS_+_q.png>`
-      :download:`pdf<worksheets/bt1WS_+_q.pdf>`
-      :download:`tex<worksheets/bt1WS_+_q.tex>`
-
-
-      .. figure:: worksheets/bt1WS_+_q.png
-         :width: 300
-         :alt: bt1WS_+_q
-         :figclass: align-center
-
-   .. grid-item-card::
-
-      addition_ans
-      ^^^
-      :download:`png<worksheets/bt1WS_+_ans.png>`
-      :download:`pdf<worksheets/bt1WS_+_ans.pdf>`
-      :download:`tex<worksheets/bt1WS_+_ans.tex>`
-
-      .. figure:: worksheets/bt1WS_+_ans.png
-         :width: 300
-         :alt: bt1WS_+_ans
-         :figclass: align-center
-
-.. grid:: 2
-   :gutter: 0
-   :margin: 0
-   :padding: 0
-
-   .. grid-item-card::
-
-      subtraction_q
-      ^^^
-      :download:`png<worksheets/bt1WS_-_q.png>`
-      :download:`pdf<worksheets/bt1WS_-_q.pdf>`
-      :download:`tex<worksheets/bt1WS_-_q.tex>`
-
-
-      .. figure:: worksheets/bt1WS_-_q.png
-         :width: 300
-         :alt: bt1WS_-_q
-         :figclass: align-center
-
-   .. grid-item-card::
-
-      subtraction_ans
-      ^^^
-      :download:`png<worksheets/bt1WS_-_ans.png>`
-      :download:`pdf<worksheets/bt1WS_-_ans.pdf>`
-      :download:`tex<worksheets/bt1WS_-_ans.tex>`
-
-      .. figure:: worksheets/bt1WS_-_ans.png
-         :width: 300
-         :alt: bt1WS_-_ans
-         :figclass: align-center
-
-.. grid:: 2
-   :gutter: 0
-   :margin: 0
-   :padding: 0
-
-   .. grid-item-card::
-
-      multiplication_q
-      ^^^
-      :download:`png<worksheets/bt1WS_x_q.png>`
-      :download:`pdf<worksheets/bt1WS_x_q.pdf>`
-      :download:`tex<worksheets/bt1WS_x_q.tex>`
-
-
-      .. figure:: worksheets/bt1WS_x_q.png
-         :width: 300
-         :alt: bt1WS_x_q
-         :figclass: align-center
-
-   .. grid-item-card::
-
-      multiplication_ans
-      ^^^
-      :download:`png<worksheets/bt1WS_x_ans.png>`
-      :download:`pdf<worksheets/bt1WS_x_ans.pdf>`
-      :download:`tex<worksheets/bt1WS_x_ans.tex>`
-
-      .. figure:: worksheets/bt1WS_x_ans.png
-         :width: 300
-         :alt: bt1WS_x_ans
-         :figclass: align-center
-
-
-.. grid:: 2
-   :gutter: 0
-   :margin: 0
-   :padding: 0
-
-   .. grid-item-card::
-
-      division_q
-      ^^^
-      :download:`png<worksheets/bt1WS_div_q.png>`
-      :download:`pdf<worksheets/bt1WS_div_q.pdf>`
-      :download:`tex<worksheets/bt1WS_div_q.tex>`
-
-
-      .. figure:: worksheets/bt1WS_div_q.png
-         :width: 300
-         :alt: bt1WS_div_q
-         :figclass: align-center
-
-   .. grid-item-card::
-
-      division_ans
-      ^^^
-      :download:`png<worksheets/bt1WS_div_ans.png>`
-      :download:`pdf<worksheets/bt1WS_div_ans.pdf>`
-      :download:`tex<worksheets/bt1WS_div_ans.tex>`
-
-      .. figure:: worksheets/bt1WS_div_ans.png
-         :width: 300
-         :alt: bt1WS_div_ans
-         :figclass: align-center
-
-
-----
-
-.. grid:: 2
-   :gutter: 0
-   :margin: 0
-   :padding: 0
-
-   .. grid-item-card::
-
-      random_q
-      ^^^
-      :download:`png<worksheets/bt1WS_ran_q.png>`
-      :download:`pdf<worksheets/bt1WS_ran_q.pdf>`
-      :download:`tex<worksheets/bt1WS_ran_q.tex>`
-
-
-      .. figure:: worksheets/bt1WS_ran_q.png
-         :width: 300
-         :alt: bt1WS_ran_q
-         :figclass: align-center
-
-   .. grid-item-card::
-
-      random_ans
-      ^^^
-      :download:`png<worksheets/bt1WS_ran_ans.png>`
-      :download:`pdf<worksheets/bt1WS_ran_ans.pdf>`
-      :download:`tex<worksheets/bt1WS_ran_ans.tex>`
-
-      .. figure:: worksheets/bt1WS_x_ans.png
-         :width: 300
-         :alt: bt1WS_x_ans
-         :figclass: align-center
-
-
-----
-
 Splitting the LaTeX and modifying it to be built by python
 ----------------------------------------------------------------
 
-| The LaTeX from a single 1-step equation is used as a starting point, split into 2 and modified.
+| The LaTeX from a single 1-step equation is used as a starting point, split into 2 parts and modified.
 | The Booklet template contains the preamble and the scaffold for the document.
 | The Diagram template contains the backtacking diagram LaTeX.
 
@@ -308,7 +128,7 @@ Booklet template
 ~~~~~~~~~~~~~~~~~~~~
 
 | The LaTeX 1-step booklet template is below.
-| :download:`booklet_template.tex<makers/backtrack_1step_worksheet_template.tex>`
+| :download:`booklet_template.tex<makers/backtrack_1step_booklet_template.tex>`
 
 .. literalinclude:: makers/backtrack_1step_booklet_template.tex
    :linenos:
@@ -350,9 +170,9 @@ Diagram template
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 | The LaTeX 1-step diagram template for each diagram is below.
-| :download:`diagram_template.tex<makers/backtrack_1step_worksheet_diagram_template.tex>`
+| :download:`diagram_template.tex<makers/backtrack_1step_booklet_diagram_template.tex>`
 
-.. literalinclude:: makers/backtrack_1step_worksheet_diagram_template.tex
+.. literalinclude:: makers/backtrack_1step_booklet_diagram_template.tex
    :linenos:
 
 Question numbering
