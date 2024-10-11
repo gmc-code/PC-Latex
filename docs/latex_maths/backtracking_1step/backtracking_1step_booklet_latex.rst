@@ -16,7 +16,7 @@ Sample 1-step backtracking booklets by process
    :margin: 0
    :padding: 0
 
-   .. grid-item-card::  
+   .. grid-item-card::
 
       addition_q
       ^^^
@@ -24,15 +24,15 @@ Sample 1-step backtracking booklets by process
       :download:`tex<booklets/bt1Bk_+_q.tex>`
 
 
-   .. grid-item-card::  
-      
+   .. grid-item-card::
+
       addition_ans
       ^^^
       :download:`pdf<booklets/bt1Bk_+_ans.pdf>`
       :download:`tex<booklets/bt1Bk_+_ans.tex>`
 
 
-   .. grid-item-card::  
+   .. grid-item-card::
 
       subtraction_q
       ^^^
@@ -40,8 +40,8 @@ Sample 1-step backtracking booklets by process
       :download:`tex<booklets/bt1Bk_-_q.tex>`
 
 
-   .. grid-item-card::  
-      
+   .. grid-item-card::
+
       subtraction_ans
       ^^^
       :download:`pdf<booklets/bt1Bk_-_ans.pdf>`
@@ -53,7 +53,7 @@ Sample 1-step backtracking booklets by process
    :margin: 0
    :padding: 0
 
-   .. grid-item-card::  
+   .. grid-item-card::
 
       multiplication_q
       ^^^
@@ -61,15 +61,15 @@ Sample 1-step backtracking booklets by process
       :download:`tex<booklets/bt1Bk_x_q.tex>`
 
 
-   .. grid-item-card::  
-      
+   .. grid-item-card::
+
       multiplication_ans
       ^^^
       :download:`pdf<booklets/bt1Bk_x_ans.pdf>`
       :download:`tex<booklets/bt1Bk_x_ans.tex>`
 
 
-   .. grid-item-card::  
+   .. grid-item-card::
 
       division_q
       ^^^
@@ -77,8 +77,8 @@ Sample 1-step backtracking booklets by process
       :download:`tex<booklets/bt1Bk_div_q.tex>`
 
 
-   .. grid-item-card::  
-      
+   .. grid-item-card::
+
       division_ans
       ^^^
       :download:`pdf<booklets/bt1Bk_div_ans.pdf>`
@@ -90,7 +90,7 @@ Sample 1-step backtracking booklets by process
    :margin: 0
    :padding: 0
 
-   .. grid-item-card::  
+   .. grid-item-card::
 
       random_q
       ^^^
@@ -98,8 +98,8 @@ Sample 1-step backtracking booklets by process
       :download:`tex<booklets/bt1Bk_ran_q.tex>`
 
 
-   .. grid-item-card::  
-      
+   .. grid-item-card::
+
       random_ans
       ^^^
       :download:`pdf<booklets/bt1Bk_ran_ans.pdf>`
@@ -116,7 +116,7 @@ Worksheet template
 
 .. literalinclude:: makers/backtrack_1step_booklet_template.tex
    :linenos:
-   
+
 | The multi page LaTeX 1-step worksheet **answer** template is below.
 | :download:`worksheet_answer_template.tex<makers/backtrack_1step_worksheet_ans_template.tex>`
 
@@ -127,7 +127,7 @@ Modifications
 ~~~~~~~~~~~~~~~~
 
 | ``\usepackage{fancyhdr}`` brings in the fancyhdr package to control the position of the page number.
-| The code below has been added to the preamble in LaTeX to move the page number up6pt.
+| The code below has been added to the preamble in LaTeX to move the page number up 6pt.
 
 .. code-block:: LaTeX
 

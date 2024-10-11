@@ -16,85 +16,85 @@ Number Lines booklet LaTeX
    :margin: 0
    :padding: 0
 
-   .. grid-item-card::  
+   .. grid-item-card::
 
       nlBk_plus_q
       ^^^
       :download:`pdf<booklets/nlBk_plus_q.pdf>`
       :download:`tex<booklets/nlBk_plus_q.tex>`
 
-   .. grid-item-card::  
-      
+   .. grid-item-card::
+
       nlBk_plus_ans
       ^^^
       :download:`pdf<booklets/nlBk_plus_ans.pdf>`
       :download:`tex<booklets/nlBk_plus_ans.tex>`
 
-   .. grid-item-card::  
+   .. grid-item-card::
 
       nlBk_minus_neg_q
       ^^^
       :download:`pdf<booklets/nlBk_minus_neg_q.pdf>`
       :download:`tex<booklets/nlBk_minus_neg_q.tex>`
 
-   .. grid-item-card::  
-      
+   .. grid-item-card::
+
       nlBk_minus_neg_ans
       ^^^
       :download:`pdf<booklets/nlBk_minus_neg_ans.pdf>`
       :download:`tex<booklets/nlBk_minus_neg_ans.tex>`
 
-   .. grid-item-card::  
+   .. grid-item-card::
 
       nlBk_minus_q
       ^^^
       :download:`pdf<booklets/nlBk_minus_q.pdf>`
       :download:`tex<booklets/nlBk_minus_q.tex>`
 
-   .. grid-item-card::  
-      
+   .. grid-item-card::
+
       nlBk_minus_ans
       ^^^
       :download:`pdf<booklets/nlBk_minus_ans.pdf>`
       :download:`tex<booklets/nlBk_minus_ans.tex>`
 
-   .. grid-item-card::  
+   .. grid-item-card::
 
       nlBk_minus_pos_q
       ^^^
       :download:`pdf<booklets/nlBk_minus_pos_q.pdf>`
       :download:`tex<booklets/nlBk_minus_pos_q.tex>`
 
-   .. grid-item-card::  
-      
+   .. grid-item-card::
+
       nlBk_minus_pos_ans
       ^^^
       :download:`pdf<booklets/nlBk_minus_pos_ans.pdf>`
       :download:`tex<booklets/nlBk_minus_pos_ans.tex>`
 
-   .. grid-item-card::  
+   .. grid-item-card::
 
       nlBk_plus_neg_q
       ^^^
       :download:`pdf<booklets/nlBk_plus_neg_q.pdf>`
       :download:`tex<booklets/nlBk_plus_neg_q.tex>`
 
-   .. grid-item-card::  
-      
+   .. grid-item-card::
+
       nlBk_plus_neg_ans
       ^^^
       :download:`pdf<booklets/nlBk_plus_neg_ans.pdf>`
       :download:`tex<booklets/nlBk_plus_neg_ans.tex>`
 
-   .. grid-item-card::  
+   .. grid-item-card::
 
       nlBk_random_q
       ^^^
       :download:`pdf<booklets/nlBk_random_q.pdf>`
       :download:`tex<booklets/nlBk_random_q.tex>`
 
-   .. grid-item-card::  
-      
+   .. grid-item-card::
+
       nlBk_random_ans
       ^^^
       :download:`pdf<booklets/nlBk_random_ans.pdf>`
@@ -111,7 +111,7 @@ Worksheet template
 
 .. literalinclude:: makers/number_lines_worksheet_template.tex
    :linenos:
-   
+
 | The multi page LaTeX number lines worksheet answer template is below.
 | :download:`worksheet_template.tex<makers/number_lines_worksheet_ans_template.tex>`
 
@@ -122,7 +122,7 @@ Modifications
 ~~~~~~~~~~~~~~~~
 
 | ``\usepackage{fancyhdr}`` brings in the fancyhdr package  to control the position of the page number.
-| The code below has been added to the preamble in LaTeX to move the page number up6pt.
+| The code below has been added to the preamble in LaTeX to move the page number up 6pt.
 
 .. code-block:: LaTeX
 
