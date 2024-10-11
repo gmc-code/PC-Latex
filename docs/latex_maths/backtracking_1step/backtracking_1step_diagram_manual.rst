@@ -242,7 +242,7 @@ Font size
 ~~~~~~~~~~~~~
 
 | The default font size for most of the standard document classes in LaTeX is 10pt.
-| The font size options for most documentclasses are 10pt, 11pt, and 12pt.
+| The font size options for most document classes are 10pt, 11pt, and 12pt.
 | This size becomes the setting for ``\normalsize`` option, and all the other size commands are adjusted accordingly.
 | If you want to change the font size locally, you can use predefined commands such as ``\Large``, ``\Large``, ``\LARGE``, ``\Large``, ``\large``, ``\normalsize``, ``\small``, ``\footnotesize``, ``\scriptsize``, and ``\tiny``.
 
