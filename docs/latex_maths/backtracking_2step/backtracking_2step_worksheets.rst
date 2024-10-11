@@ -30,7 +30,7 @@ Sample 2-step backtracking worksheet
    :margin: 0
    :padding: 0
 
-   .. grid-item-card::  
+   .. grid-item-card::
 
       multiplication_addition_q
       ^^^
@@ -44,8 +44,8 @@ Sample 2-step backtracking worksheet
          :alt: bt2WS_X+_q
          :figclass: align-center
 
-   .. grid-item-card::  
-      
+   .. grid-item-card::
+
       multiplication_addition_ans
       ^^^
       :download:`png<worksheets/bt2WS_X+_ans.png>`
@@ -62,7 +62,7 @@ Sample 2-step backtracking worksheet
    :margin: 0
    :padding: 0
 
-   .. grid-item-card::  
+   .. grid-item-card::
 
       random_q
       ^^^
@@ -76,8 +76,8 @@ Sample 2-step backtracking worksheet
          :alt: bt2WS_ran_q
          :figclass: align-center
 
-   .. grid-item-card::  
-      
+   .. grid-item-card::
+
       random_ans
       ^^^
       :download:`png<worksheets/bt2WS_ran_ans.png>`

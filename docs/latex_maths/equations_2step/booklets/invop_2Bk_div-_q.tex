@@ -1,0 +1,294 @@
+\documentclass[12pt]{article}
+\usepackage{tikz}
+\usepackage{amsmath}
+% Underlining package
+\usepackage[normalem]{ulem} % [normalem] prevents the package from changing the default behavior of \emph to underline.
+\usepackage[a4paper, portrait, margin=1cm]{geometry}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+
+\def \HeadingQuestions {\section*{\Large Name: \underline{\hspace{8cm}} \hfill Date: \underline{\hspace{3cm}}} \vspace{-3mm}
+{Inverse operations: Questions} \vspace{1pt}\hrule}
+
+% only in Q due to increased line height with dotted underline
+\linespread{0.9} % Adjust line spacing factor to 0.9 if needed to fit 5 in column for 2 div steps
+
+% raise footer with page number; no header
+\fancypagestyle{myfancypagestyle}{
+  \fancyhf{}% clear all header and footer fields
+  \renewcommand{\headrulewidth}{0pt} % no rule under header
+  \fancyfoot[C] {\thepage} \setlength{\footskip}{6pt} % raise page number 6pt
+}
+\pagestyle{myfancypagestyle}  % apply myfancypagestyle
+\newcounter{minipagecount}
+\begin{document}
+\HeadingQuestions
+\vspace{1mm}
+\begin{multicols}{2}
+\refstepcounter{minipagecount} % increments the counter minipagecount by one.
+\noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
+% and inserts the current value of the minipagecount counter, enclosed in parentheses
+\begin{minipage}[t]{0.45\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
+    \vspace{-26pt}  % moves the content of the minipage up, reducing the space between the minipage content and the preceding text.
+    \raggedright %  the text lines up on the left side, but the right side will be ragged.
+    \begin{align*} % The * align environment does not number the equations- Each line is aligned at the & symbol
+        \frac{x}{10} - 10 &= -2\\
+        \frac{x}{10} - 10 + \dotuline{\hspace{5mm}} &= -2 + \dotuline{\hspace{5mm}}\\
+        \frac{x}{10} &= \dotuline{\hspace{5mm}}\\
+        \frac{x}{10} \times\dotuline{\hspace{5mm}} &= \dotuline{\hspace{5mm}} \times\dotuline{\hspace{5mm}}\\
+        x &= \dotuline{\hspace{5mm}}\\
+    \end{align*}
+\end{minipage}\refstepcounter{minipagecount} % increments the counter minipagecount by one.
+\noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
+% and inserts the current value of the minipagecount counter, enclosed in parentheses
+\begin{minipage}[t]{0.45\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
+    \vspace{-26pt}  % moves the content of the minipage up, reducing the space between the minipage content and the preceding text.
+    \raggedright %  the text lines up on the left side, but the right side will be ragged.
+    \begin{align*} % The * align environment does not number the equations- Each line is aligned at the & symbol
+        \frac{x}{8} - 5 &= -2\\
+        \frac{x}{8} - 5 + \dotuline{\hspace{5mm}} &= -2 + \dotuline{\hspace{5mm}}\\
+        \frac{x}{8} &= \dotuline{\hspace{5mm}}\\
+        \frac{x}{8} \times\dotuline{\hspace{5mm}} &= \dotuline{\hspace{5mm}} \times\dotuline{\hspace{5mm}}\\
+        x &= \dotuline{\hspace{5mm}}\\
+    \end{align*}
+\end{minipage}\refstepcounter{minipagecount} % increments the counter minipagecount by one.
+\noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
+% and inserts the current value of the minipagecount counter, enclosed in parentheses
+\begin{minipage}[t]{0.45\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
+    \vspace{-26pt}  % moves the content of the minipage up, reducing the space between the minipage content and the preceding text.
+    \raggedright %  the text lines up on the left side, but the right side will be ragged.
+    \begin{align*} % The * align environment does not number the equations- Each line is aligned at the & symbol
+        \frac{x}{7} - 2 &= 2\\
+        \frac{x}{7} - 2 + \dotuline{\hspace{5mm}} &= 2 + \dotuline{\hspace{5mm}}\\
+        \frac{x}{7} &= \dotuline{\hspace{5mm}}\\
+        \frac{x}{7} \times\dotuline{\hspace{5mm}} &= \dotuline{\hspace{5mm}} \times\dotuline{\hspace{5mm}}\\
+        x &= \dotuline{\hspace{5mm}}\\
+    \end{align*}
+\end{minipage}\refstepcounter{minipagecount} % increments the counter minipagecount by one.
+\noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
+% and inserts the current value of the minipagecount counter, enclosed in parentheses
+\begin{minipage}[t]{0.45\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
+    \vspace{-26pt}  % moves the content of the minipage up, reducing the space between the minipage content and the preceding text.
+    \raggedright %  the text lines up on the left side, but the right side will be ragged.
+    \begin{align*} % The * align environment does not number the equations- Each line is aligned at the & symbol
+        \frac{x}{8} - 4 &= 0\\
+        \frac{x}{8} - 4 + \dotuline{\hspace{5mm}} &= 0 + \dotuline{\hspace{5mm}}\\
+        \frac{x}{8} &= \dotuline{\hspace{5mm}}\\
+        \frac{x}{8} \times\dotuline{\hspace{5mm}} &= \dotuline{\hspace{5mm}} \times\dotuline{\hspace{5mm}}\\
+        x &= \dotuline{\hspace{5mm}}\\
+    \end{align*}
+\end{minipage}\refstepcounter{minipagecount} % increments the counter minipagecount by one.
+\noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
+% and inserts the current value of the minipagecount counter, enclosed in parentheses
+\begin{minipage}[t]{0.45\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
+    \vspace{-26pt}  % moves the content of the minipage up, reducing the space between the minipage content and the preceding text.
+    \raggedright %  the text lines up on the left side, but the right side will be ragged.
+    \begin{align*} % The * align environment does not number the equations- Each line is aligned at the & symbol
+        \frac{x}{3} - 10 &= -4\\
+        \frac{x}{3} - 10 + \dotuline{\hspace{5mm}} &= -4 + \dotuline{\hspace{5mm}}\\
+        \frac{x}{3} &= \dotuline{\hspace{5mm}}\\
+        \frac{x}{3} \times\dotuline{\hspace{5mm}} &= \dotuline{\hspace{5mm}} \times\dotuline{\hspace{5mm}}\\
+        x &= \dotuline{\hspace{5mm}}\\
+    \end{align*}
+\end{minipage}\columnbreak
+    \refstepcounter{minipagecount} % increments the counter minipagecount by one.
+\noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
+% and inserts the current value of the minipagecount counter, enclosed in parentheses
+\begin{minipage}[t]{0.45\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
+    \vspace{-26pt}  % moves the content of the minipage up, reducing the space between the minipage content and the preceding text.
+    \raggedright %  the text lines up on the left side, but the right side will be ragged.
+    \begin{align*} % The * align environment does not number the equations- Each line is aligned at the & symbol
+        \frac{x}{5} - 3 &= 2\\
+        \frac{x}{5} - 3 + \dotuline{\hspace{5mm}} &= 2 + \dotuline{\hspace{5mm}}\\
+        \frac{x}{5} &= \dotuline{\hspace{5mm}}\\
+        \frac{x}{5} \times\dotuline{\hspace{5mm}} &= \dotuline{\hspace{5mm}} \times\dotuline{\hspace{5mm}}\\
+        x &= \dotuline{\hspace{5mm}}\\
+    \end{align*}
+\end{minipage}\refstepcounter{minipagecount} % increments the counter minipagecount by one.
+\noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
+% and inserts the current value of the minipagecount counter, enclosed in parentheses
+\begin{minipage}[t]{0.45\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
+    \vspace{-26pt}  % moves the content of the minipage up, reducing the space between the minipage content and the preceding text.
+    \raggedright %  the text lines up on the left side, but the right side will be ragged.
+    \begin{align*} % The * align environment does not number the equations- Each line is aligned at the & symbol
+        \frac{x}{7} - 4 &= 2\\
+        \frac{x}{7} - 4 + \dotuline{\hspace{5mm}} &= 2 + \dotuline{\hspace{5mm}}\\
+        \frac{x}{7} &= \dotuline{\hspace{5mm}}\\
+        \frac{x}{7} \times\dotuline{\hspace{5mm}} &= \dotuline{\hspace{5mm}} \times\dotuline{\hspace{5mm}}\\
+        x &= \dotuline{\hspace{5mm}}\\
+    \end{align*}
+\end{minipage}\refstepcounter{minipagecount} % increments the counter minipagecount by one.
+\noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
+% and inserts the current value of the minipagecount counter, enclosed in parentheses
+\begin{minipage}[t]{0.45\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
+    \vspace{-26pt}  % moves the content of the minipage up, reducing the space between the minipage content and the preceding text.
+    \raggedright %  the text lines up on the left side, but the right side will be ragged.
+    \begin{align*} % The * align environment does not number the equations- Each line is aligned at the & symbol
+        \frac{x}{8} - 7 &= 3\\
+        \frac{x}{8} - 7 + \dotuline{\hspace{5mm}} &= 3 + \dotuline{\hspace{5mm}}\\
+        \frac{x}{8} &= \dotuline{\hspace{5mm}}\\
+        \frac{x}{8} \times\dotuline{\hspace{5mm}} &= \dotuline{\hspace{5mm}} \times\dotuline{\hspace{5mm}}\\
+        x &= \dotuline{\hspace{5mm}}\\
+    \end{align*}
+\end{minipage}\refstepcounter{minipagecount} % increments the counter minipagecount by one.
+\noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
+% and inserts the current value of the minipagecount counter, enclosed in parentheses
+\begin{minipage}[t]{0.45\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
+    \vspace{-26pt}  % moves the content of the minipage up, reducing the space between the minipage content and the preceding text.
+    \raggedright %  the text lines up on the left side, but the right side will be ragged.
+    \begin{align*} % The * align environment does not number the equations- Each line is aligned at the & symbol
+        \frac{x}{4} - 1 &= 8\\
+        \frac{x}{4} - 1 + \dotuline{\hspace{5mm}} &= 8 + \dotuline{\hspace{5mm}}\\
+        \frac{x}{4} &= \dotuline{\hspace{5mm}}\\
+        \frac{x}{4} \times\dotuline{\hspace{5mm}} &= \dotuline{\hspace{5mm}} \times\dotuline{\hspace{5mm}}\\
+        x &= \dotuline{\hspace{5mm}}\\
+    \end{align*}
+\end{minipage}\refstepcounter{minipagecount} % increments the counter minipagecount by one.
+\noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
+% and inserts the current value of the minipagecount counter, enclosed in parentheses
+\begin{minipage}[t]{0.45\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
+    \vspace{-26pt}  % moves the content of the minipage up, reducing the space between the minipage content and the preceding text.
+    \raggedright %  the text lines up on the left side, but the right side will be ragged.
+    \begin{align*} % The * align environment does not number the equations- Each line is aligned at the & symbol
+        \frac{x}{5} - 5 &= -2\\
+        \frac{x}{5} - 5 + \dotuline{\hspace{5mm}} &= -2 + \dotuline{\hspace{5mm}}\\
+        \frac{x}{5} &= \dotuline{\hspace{5mm}}\\
+        \frac{x}{5} \times\dotuline{\hspace{5mm}} &= \dotuline{\hspace{5mm}} \times\dotuline{\hspace{5mm}}\\
+        x &= \dotuline{\hspace{5mm}}\\
+    \end{align*}
+\end{minipage}\newpage
+    \refstepcounter{minipagecount} % increments the counter minipagecount by one.
+\noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
+% and inserts the current value of the minipagecount counter, enclosed in parentheses
+\begin{minipage}[t]{0.45\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
+    \vspace{-26pt}  % moves the content of the minipage up, reducing the space between the minipage content and the preceding text.
+    \raggedright %  the text lines up on the left side, but the right side will be ragged.
+    \begin{align*} % The * align environment does not number the equations- Each line is aligned at the & symbol
+        \frac{x}{6} - 10 &= -3\\
+        \frac{x}{6} - 10 + \dotuline{\hspace{5mm}} &= -3 + \dotuline{\hspace{5mm}}\\
+        \frac{x}{6} &= \dotuline{\hspace{5mm}}\\
+        \frac{x}{6} \times\dotuline{\hspace{5mm}} &= \dotuline{\hspace{5mm}} \times\dotuline{\hspace{5mm}}\\
+        x &= \dotuline{\hspace{5mm}}\\
+    \end{align*}
+\end{minipage}\refstepcounter{minipagecount} % increments the counter minipagecount by one.
+\noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
+% and inserts the current value of the minipagecount counter, enclosed in parentheses
+\begin{minipage}[t]{0.45\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
+    \vspace{-26pt}  % moves the content of the minipage up, reducing the space between the minipage content and the preceding text.
+    \raggedright %  the text lines up on the left side, but the right side will be ragged.
+    \begin{align*} % The * align environment does not number the equations- Each line is aligned at the & symbol
+        \frac{x}{2} - 10 &= -4\\
+        \frac{x}{2} - 10 + \dotuline{\hspace{5mm}} &= -4 + \dotuline{\hspace{5mm}}\\
+        \frac{x}{2} &= \dotuline{\hspace{5mm}}\\
+        \frac{x}{2} \times\dotuline{\hspace{5mm}} &= \dotuline{\hspace{5mm}} \times\dotuline{\hspace{5mm}}\\
+        x &= \dotuline{\hspace{5mm}}\\
+    \end{align*}
+\end{minipage}\refstepcounter{minipagecount} % increments the counter minipagecount by one.
+\noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
+% and inserts the current value of the minipagecount counter, enclosed in parentheses
+\begin{minipage}[t]{0.45\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
+    \vspace{-26pt}  % moves the content of the minipage up, reducing the space between the minipage content and the preceding text.
+    \raggedright %  the text lines up on the left side, but the right side will be ragged.
+    \begin{align*} % The * align environment does not number the equations- Each line is aligned at the & symbol
+        \frac{x}{2} - 9 &= 1\\
+        \frac{x}{2} - 9 + \dotuline{\hspace{5mm}} &= 1 + \dotuline{\hspace{5mm}}\\
+        \frac{x}{2} &= \dotuline{\hspace{5mm}}\\
+        \frac{x}{2} \times\dotuline{\hspace{5mm}} &= \dotuline{\hspace{5mm}} \times\dotuline{\hspace{5mm}}\\
+        x &= \dotuline{\hspace{5mm}}\\
+    \end{align*}
+\end{minipage}\refstepcounter{minipagecount} % increments the counter minipagecount by one.
+\noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
+% and inserts the current value of the minipagecount counter, enclosed in parentheses
+\begin{minipage}[t]{0.45\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
+    \vspace{-26pt}  % moves the content of the minipage up, reducing the space between the minipage content and the preceding text.
+    \raggedright %  the text lines up on the left side, but the right side will be ragged.
+    \begin{align*} % The * align environment does not number the equations- Each line is aligned at the & symbol
+        \frac{x}{10} - 9 &= -4\\
+        \frac{x}{10} - 9 + \dotuline{\hspace{5mm}} &= -4 + \dotuline{\hspace{5mm}}\\
+        \frac{x}{10} &= \dotuline{\hspace{5mm}}\\
+        \frac{x}{10} \times\dotuline{\hspace{5mm}} &= \dotuline{\hspace{5mm}} \times\dotuline{\hspace{5mm}}\\
+        x &= \dotuline{\hspace{5mm}}\\
+    \end{align*}
+\end{minipage}\refstepcounter{minipagecount} % increments the counter minipagecount by one.
+\noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
+% and inserts the current value of the minipagecount counter, enclosed in parentheses
+\begin{minipage}[t]{0.45\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
+    \vspace{-26pt}  % moves the content of the minipage up, reducing the space between the minipage content and the preceding text.
+    \raggedright %  the text lines up on the left side, but the right side will be ragged.
+    \begin{align*} % The * align environment does not number the equations- Each line is aligned at the & symbol
+        \frac{x}{7} - 6 &= -3\\
+        \frac{x}{7} - 6 + \dotuline{\hspace{5mm}} &= -3 + \dotuline{\hspace{5mm}}\\
+        \frac{x}{7} &= \dotuline{\hspace{5mm}}\\
+        \frac{x}{7} \times\dotuline{\hspace{5mm}} &= \dotuline{\hspace{5mm}} \times\dotuline{\hspace{5mm}}\\
+        x &= \dotuline{\hspace{5mm}}\\
+    \end{align*}
+\end{minipage}\columnbreak
+    \refstepcounter{minipagecount} % increments the counter minipagecount by one.
+\noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
+% and inserts the current value of the minipagecount counter, enclosed in parentheses
+\begin{minipage}[t]{0.45\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
+    \vspace{-26pt}  % moves the content of the minipage up, reducing the space between the minipage content and the preceding text.
+    \raggedright %  the text lines up on the left side, but the right side will be ragged.
+    \begin{align*} % The * align environment does not number the equations- Each line is aligned at the & symbol
+        \frac{x}{8} - 4 &= 5\\
+        \frac{x}{8} - 4 + \dotuline{\hspace{5mm}} &= 5 + \dotuline{\hspace{5mm}}\\
+        \frac{x}{8} &= \dotuline{\hspace{5mm}}\\
+        \frac{x}{8} \times\dotuline{\hspace{5mm}} &= \dotuline{\hspace{5mm}} \times\dotuline{\hspace{5mm}}\\
+        x &= \dotuline{\hspace{5mm}}\\
+    \end{align*}
+\end{minipage}\refstepcounter{minipagecount} % increments the counter minipagecount by one.
+\noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
+% and inserts the current value of the minipagecount counter, enclosed in parentheses
+\begin{minipage}[t]{0.45\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
+    \vspace{-26pt}  % moves the content of the minipage up, reducing the space between the minipage content and the preceding text.
+    \raggedright %  the text lines up on the left side, but the right side will be ragged.
+    \begin{align*} % The * align environment does not number the equations- Each line is aligned at the & symbol
+        \frac{x}{2} - 9 &= -6\\
+        \frac{x}{2} - 9 + \dotuline{\hspace{5mm}} &= -6 + \dotuline{\hspace{5mm}}\\
+        \frac{x}{2} &= \dotuline{\hspace{5mm}}\\
+        \frac{x}{2} \times\dotuline{\hspace{5mm}} &= \dotuline{\hspace{5mm}} \times\dotuline{\hspace{5mm}}\\
+        x &= \dotuline{\hspace{5mm}}\\
+    \end{align*}
+\end{minipage}\refstepcounter{minipagecount} % increments the counter minipagecount by one.
+\noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
+% and inserts the current value of the minipagecount counter, enclosed in parentheses
+\begin{minipage}[t]{0.45\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
+    \vspace{-26pt}  % moves the content of the minipage up, reducing the space between the minipage content and the preceding text.
+    \raggedright %  the text lines up on the left side, but the right side will be ragged.
+    \begin{align*} % The * align environment does not number the equations- Each line is aligned at the & symbol
+        \frac{x}{7} - 3 &= 2\\
+        \frac{x}{7} - 3 + \dotuline{\hspace{5mm}} &= 2 + \dotuline{\hspace{5mm}}\\
+        \frac{x}{7} &= \dotuline{\hspace{5mm}}\\
+        \frac{x}{7} \times\dotuline{\hspace{5mm}} &= \dotuline{\hspace{5mm}} \times\dotuline{\hspace{5mm}}\\
+        x &= \dotuline{\hspace{5mm}}\\
+    \end{align*}
+\end{minipage}\refstepcounter{minipagecount} % increments the counter minipagecount by one.
+\noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
+% and inserts the current value of the minipagecount counter, enclosed in parentheses
+\begin{minipage}[t]{0.45\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
+    \vspace{-26pt}  % moves the content of the minipage up, reducing the space between the minipage content and the preceding text.
+    \raggedright %  the text lines up on the left side, but the right side will be ragged.
+    \begin{align*} % The * align environment does not number the equations- Each line is aligned at the & symbol
+        \frac{x}{9} - 8 &= -3\\
+        \frac{x}{9} - 8 + \dotuline{\hspace{5mm}} &= -3 + \dotuline{\hspace{5mm}}\\
+        \frac{x}{9} &= \dotuline{\hspace{5mm}}\\
+        \frac{x}{9} \times\dotuline{\hspace{5mm}} &= \dotuline{\hspace{5mm}} \times\dotuline{\hspace{5mm}}\\
+        x &= \dotuline{\hspace{5mm}}\\
+    \end{align*}
+\end{minipage}\refstepcounter{minipagecount} % increments the counter minipagecount by one.
+\noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
+% and inserts the current value of the minipagecount counter, enclosed in parentheses
+\begin{minipage}[t]{0.45\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
+    \vspace{-26pt}  % moves the content of the minipage up, reducing the space between the minipage content and the preceding text.
+    \raggedright %  the text lines up on the left side, but the right side will be ragged.
+    \begin{align*} % The * align environment does not number the equations- Each line is aligned at the & symbol
+        \frac{x}{5} - 1 &= 2\\
+        \frac{x}{5} - 1 + \dotuline{\hspace{5mm}} &= 2 + \dotuline{\hspace{5mm}}\\
+        \frac{x}{5} &= \dotuline{\hspace{5mm}}\\
+        \frac{x}{5} \times\dotuline{\hspace{5mm}} &= \dotuline{\hspace{5mm}} \times\dotuline{\hspace{5mm}}\\
+        x &= \dotuline{\hspace{5mm}}\\
+    \end{align*}
+\end{minipage}\newpage
+    
+\end{multicols}
+\end{document}

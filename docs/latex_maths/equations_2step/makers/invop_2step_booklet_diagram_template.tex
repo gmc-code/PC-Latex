@@ -1,0 +1,14 @@
+\refstepcounter{minipagecount} % increments the counter minipagecount by one.
+\noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
+% and inserts the current value of the minipagecount counter, enclosed in parentheses
+\begin{minipage}[t]{0.45\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
+    \vspace{-26pt}  % moves the content of the minipage up, reducing the space between the minipage content and the preceding text.
+    \raggedright %  the text lines up on the left side, but the right side will be ragged.
+    \begin{align*} % The * align environment does not number the equations- Each line is aligned at the & symbol
+        <<line1_LHS>> &= <<line1_RHS>>\\
+        <<line2_LHS>> &= <<line2_RHS>>\\
+        <<line3_LHS>> &= <<line3_RHS>>\\
+        <<line4_LHS>> &= <<line4_RHS>>\\
+        <<line5_LHS>> &= <<line5_RHS>>\\
+    \end{align*}
+\end{minipage}
