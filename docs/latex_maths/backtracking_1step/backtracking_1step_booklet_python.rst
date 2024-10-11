@@ -27,6 +27,7 @@ Backtracking 1-step booklet python
    :linenos:
 
 | The custom Python module that is required to work out the various texts for the diagrams, is below.
+| It includes the module functions for 2 step backtracking as well.
 
 .. literalinclude:: makers/backtracking_functions.py
    :linenos:
