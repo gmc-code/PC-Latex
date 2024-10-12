@@ -161,7 +161,7 @@ def main():
     else:
         num = 6  # random by default
     #
-    numq = input("Enter the number of questions from 1 to 80 \n")
+    numq = input("Enter the number of questions from 1 to 80, with 8 per page \n")
     if numq.strip().isdigit():
         numq = int(numq)
         if not numq in range(1,81):

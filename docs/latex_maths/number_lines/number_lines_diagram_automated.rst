@@ -7,7 +7,7 @@ Number Lines - automated
 
 ----
 
-A number line diagram with answers
+Number line diagrams with answers
 --------------------------------------------
 
 .. grid:: 2
@@ -15,7 +15,7 @@ A number line diagram with answers
    :margin: 0
    :padding: 0
 
-   .. grid-item-card::  
+   .. grid-item-card::
 
       nl_plus_q
       ^^^
@@ -29,8 +29,8 @@ A number line diagram with answers
          :alt: nl_plus_q
          :figclass: align-center
 
-   .. grid-item-card::  
-      
+   .. grid-item-card::
+
       nl_plus_ans
       ^^^
       :download:`png<diagrams/nl_plus_ans.png>`
@@ -43,7 +43,7 @@ A number line diagram with answers
          :figclass: align-center
 
 
-   .. grid-item-card::  
+   .. grid-item-card::
 
       nl_minus_neg_q
       ^^^
@@ -57,8 +57,8 @@ A number line diagram with answers
          :alt: nl_minus_neg_q
          :figclass: align-center
 
-   .. grid-item-card::  
-      
+   .. grid-item-card::
+
       nl_minus_neg_ans
       ^^^
       :download:`png<diagrams/nl_minus_neg_ans.png>`
@@ -70,7 +70,7 @@ A number line diagram with answers
          :alt: nl_minus_neg_ans
          :figclass: align-center
 
-   .. grid-item-card::  
+   .. grid-item-card::
 
       nl_minus_q
       ^^^
@@ -84,8 +84,8 @@ A number line diagram with answers
          :alt: nl_minus_q
          :figclass: align-center
 
-   .. grid-item-card::  
-      
+   .. grid-item-card::
+
       nl_minus_ans
       ^^^
       :download:`png<diagrams/nl_minus_ans.png>`
@@ -97,7 +97,7 @@ A number line diagram with answers
          :alt: nl_minus_ans
          :figclass: align-center
 
-   .. grid-item-card::  
+   .. grid-item-card::
 
       nl_minus_pos_q
       ^^^
@@ -111,8 +111,8 @@ A number line diagram with answers
          :alt: nl_minus_pos_q
          :figclass: align-center
 
-   .. grid-item-card::  
-      
+   .. grid-item-card::
+
       nl_minus_pos_ans
       ^^^
       :download:`png<diagrams/nl_minus_pos_ans.png>`
@@ -124,7 +124,7 @@ A number line diagram with answers
          :alt: nl_minus_pos_ans
          :figclass: align-center
 
-   .. grid-item-card::  
+   .. grid-item-card::
 
       nl_plus_neg_q
       ^^^
@@ -138,8 +138,8 @@ A number line diagram with answers
          :alt: nl_plus_neg_q
          :figclass: align-center
 
-   .. grid-item-card::  
-      
+   .. grid-item-card::
+
       nl_plus_neg_ans
       ^^^
       :download:`png<diagrams/nl_plus_neg_ans.png>`
@@ -151,7 +151,7 @@ A number line diagram with answers
          :alt: nl_plus_neg_ans
          :figclass: align-center
 
-   .. grid-item-card::  
+   .. grid-item-card::
 
       nl_random_q
       ^^^
@@ -165,8 +165,8 @@ A number line diagram with answers
          :alt: nl_random_q
          :figclass: align-center
 
-   .. grid-item-card::  
-      
+   .. grid-item-card::
+
       nl_random_ans
       ^^^
       :download:`png<diagrams/nl_random_ans.png>`

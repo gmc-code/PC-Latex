@@ -47,9 +47,9 @@ Approach
 #. Number line diagrams will be designed in LaTeX.
 #. The LaTeX file will be broken into parts and placeholder text will be inserted.
 #. Python will replace the placeholder text in the diagram LaTeX, allowing random numbers to be used.
-#. Python will be used to generate a worksheet with 8 diagrams that are all randomly generated.
-#. Both a question sheet and an answer sheet will be built in LaTeX and then converted to a pdf and png of each.
-#. Then a 2 page worksheet will be made with answers as well.
+#. Python will be used to generate booklets with 8 diagrams per page that are all randomly generated.
+#. Both a question sheet and an answer sheet will be built in LaTeX and then converted to a pdf of each.
+
 
 
 

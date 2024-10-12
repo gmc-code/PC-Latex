@@ -74,8 +74,6 @@ PC-latex 2024
     latex_maths/number_lines/number_lines_intro.rst
     latex_maths/number_lines/number_lines_diagram_manual.rst
     latex_maths/number_lines/number_lines_diagram_automated.rst
-    latex_maths/number_lines/number_lines_worksheet_latex.rst
-    latex_maths/number_lines/number_lines_worksheet_python.rst
     latex_maths/number_lines/number_lines_booklet_latex.rst
     latex_maths/number_lines/number_lines_booklet_python.rst
 
