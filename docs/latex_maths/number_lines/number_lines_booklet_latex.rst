@@ -2,13 +2,12 @@
 Number Lines booklet LaTeX
 ====================================================
 
-2 page booklets
--------------------
+Multi page booklets
+----------------------
 
-| The worksheet code can be modified to produce multipage booklets.
-| The same diagram template can be used, without further modification.
+| The Booklet code allows 8 diagrams per page, for up to 10 pages.
 
-2 page number lines examples
+Examples: 2 pages of number lines
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. grid:: 2
@@ -103,10 +102,30 @@ Number Lines booklet LaTeX
 
 ----
 
+Splitting the LaTeX and modifying it to be built by python
+----------------------------------------------------------------
+
+| The LaTeX from a single number lines equation is used as a starting point, split into 2 and modified.
+| The Booklet template contains the preamble and the scaffold for the document.
+| The Diagram template contains the number line diagram LaTeX.
+
+----
+
+Booklet diagram template
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+| The booklet diagram template is below.
+| :download:`number_lines_booklet_diagram_template.tex<makers/number_lines_booklet_diagram_template.tex>`
+
+.. literalinclude:: makers/number_lines_booklet_diagram_template.tex
+   :linenos:
+
+----
+
 Booklet template
 ~~~~~~~~~~~~~~~~~~~~
 
-| The multi page LaTeX number lines worksheet template is below.
+| The multi page LaTeX number lines booklet template is below.
 | :download:`number_lines_booklet_template.tex<makers/number_lines_booklet_template.tex>`
 
 .. literalinclude:: makers/number_lines_booklet_template.tex
@@ -118,13 +137,7 @@ Booklet template
 .. literalinclude:: makers/number_lines_booklet_ans_template.tex
    :linenos:
 
-Splitting the LaTeX and modifying it to be built by python
-----------------------------------------------------------------
-
-| The LaTeX from a single number lines equation is used as a starting point, split into 2 and modified.
-| The Worksheet template contains the preamble and the scaffold for the document.
-| The Diagram template contains the backtacking diagram LaTeX.
-
+----
 
 Footer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
