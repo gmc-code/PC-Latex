@@ -27,27 +27,17 @@ Build the expression diagram booklet
 
       bt2Bk_bldexp_ran_q
       ^^^
-      :download:`png<diagram_variations/bt2Bk_bldexp_ran_q.png>`
-      :download:`pdf<diagram_variations/bt2Bk_bldexp_ran_q.pdf>`
-      :download:`tex<diagram_variations/bt2Bk_bldexp_ran_q.tex>`
-
-      .. figure:: diagram_variations/bt2Bk_bldexp_ran_q.png
-         :width: 600
-         :alt: bt2Bk_blank
-         :figclass: align-center
+      :download:`png<booklet_variations/bt2Bk_bldexp_ran_q.png>`
+      :download:`pdf<booklet_variations/bt2Bk_bldexp_ran_q.pdf>`
+      :download:`tex<booklet_variations/bt2Bk_bldexp_ran_q.tex>`
 
    .. grid-item-card::
 
       bt2Bk_bldexp_ran_ans
       ^^^
-      :download:`png<diagram_variations/bt2Bk_bldexp_ran_ans.png>`
-      :download:`pdf<diagram_variations/bt2Bk_bldexp_ran_ans.pdf>`
-      :download:`tex<diagram_variations/bt2Bk_bldexp_ran_ans.tex>`
-
-      .. figure:: diagram_variations/bt2Bk_bldexp_ran_ans.png
-         :width: 600
-         :alt: bt2Bk_blank
-         :figclass: align-center
+      :download:`png<booklet_variations/bt2Bk_bldexp_ran_ans.png>`
+      :download:`pdf<booklet_variations/bt2Bk_bldexp_ran_ans.pdf>`
+      :download:`tex<booklet_variations/bt2Bk_bldexp_ran_ans.tex>`
 
 ----
 
@@ -76,27 +66,17 @@ Build the expression diagram with inverse operations booklet
 
       bt2Bk_bldexpInv_ran_q
       ^^^
-      :download:`png<diagram_variations/bt2Bk_bldexpInv_ran_q.png>`
-      :download:`pdf<diagram_variations/bt2Bk_bldexpInv_ran_q.pdf>`
-      :download:`tex<diagram_variations/bt2Bk_bldexpInv_ran_q.tex>`
-
-      .. figure:: diagram_variations/bt2Bk_bldexpInv_ran_q.png
-         :width: 600
-         :alt: bt2Bk_blank
-         :figclass: align-center
+      :download:`png<booklet_variations/bt2Bk_bldexpInv_ran_q.png>`
+      :download:`pdf<booklet_variations/bt2Bk_bldexpInv_ran_q.pdf>`
+      :download:`tex<booklet_variations/bt2Bk_bldexpInv_ran_q.tex>`
 
    .. grid-item-card::
 
       bt2Bk_bldexpInv_ran_ans
       ^^^
-      :download:`png<diagram_variations/bt2Bk_bldexpInv_ran_ans.png>`
-      :download:`pdf<diagram_variations/bt2Bk_bldexpInv_ran_ans.pdf>`
-      :download:`tex<diagram_variations/bt2Bk_bldexpInv_ran_ans.tex>`
-
-      .. figure:: diagram_variations/bt2Bk_bldexpInv_ran_ans.png
-         :width: 600
-         :alt: bt2Bk_blank
-         :figclass: align-center
+      :download:`png<booklet_variations/bt2Bk_bldexpInv_ran_ans.png>`
+      :download:`pdf<booklet_variations/bt2Bk_bldexpInv_ran_ans.pdf>`
+      :download:`tex<booklet_variations/bt2Bk_bldexpInv_ran_ans.tex>`
 
 ----
 
@@ -126,27 +106,17 @@ Build the diagram from the expression booklet
 
       bt2Bk_fromexp_ran_q
       ^^^
-      :download:`png<diagram_variations/bt2Bk_fromexp_ran_q.png>`
-      :download:`pdf<diagram_variations/bt2Bk_fromexp_ran_q.pdf>`
-      :download:`tex<diagram_variations/bt2Bk_fromexp_ran_q.tex>`
-
-      .. figure:: diagram_variations/bt2Bk_fromexp_ran_q.png
-         :width: 600
-         :alt: bt2Bk_blank
-         :figclass: align-center
+      :download:`png<booklet_variations/bt2Bk_fromexp_ran_q.png>`
+      :download:`pdf<booklet_variations/bt2Bk_fromexp_ran_q.pdf>`
+      :download:`tex<booklet_variations/bt2Bk_fromexp_ran_q.tex>`
 
    .. grid-item-card::
 
       bt2Bk_fromexp_ran_ans
       ^^^
-      :download:`png<diagram_variations/bt2Bk_fromexp_ran_ans.png>`
-      :download:`pdf<diagram_variations/bt2Bk_fromexp_ran_ans.pdf>`
-      :download:`tex<diagram_variations/bt2Bk_fromexp_ran_ans.tex>`
-
-      .. figure:: diagram_variations/bt2Bk_fromexp_ran_ans.png
-         :width: 600
-         :alt: bt2Bk_blank
-         :figclass: align-center
+      :download:`png<booklet_variations/bt2Bk_fromexp_ran_ans.png>`
+      :download:`pdf<booklet_variations/bt2Bk_fromexp_ran_ans.pdf>`
+      :download:`tex<booklet_variations/bt2Bk_fromexp_ran_ans.tex>`
 
 ----
 
@@ -176,27 +146,17 @@ Build the diagram from the equation booklet
 
       bt2Bk_fromeq_ran_q
       ^^^
-      :download:`png<diagram_variations/bt2Bk_fromeq_ran_q.png>`
-      :download:`pdf<diagram_variations/bt2Bk_fromeq_ran_q.pdf>`
-      :download:`tex<diagram_variations/bt2Bk_fromeq_ran_q.tex>`
-
-      .. figure:: diagram_variations/bt2Bk_fromeq_ran_q.png
-         :width: 600
-         :alt: bt2Bk_blank
-         :figclass: align-center
+      :download:`png<booklet_variations/bt2Bk_fromeq_ran_q.png>`
+      :download:`pdf<booklet_variations/bt2Bk_fromeq_ran_q.pdf>`
+      :download:`tex<booklet_variations/bt2Bk_fromeq_ran_q.tex>`
 
    .. grid-item-card::
 
       bt2Bk_fromeq_ran_ans
       ^^^
-      :download:`png<diagram_variations/bt2Bk_fromeq_ran_ans.png>`
-      :download:`pdf<diagram_variations/bt2Bk_fromeq_ran_ans.pdf>`
-      :download:`tex<diagram_variations/bt2Bk_fromeq_ran_ans.tex>`
-
-      .. figure:: diagram_variations/bt2Bk_fromeq_ran_ans.png
-         :width: 600
-         :alt: bt2Bk_blank
-         :figclass: align-center
+      :download:`png<booklet_variations/bt2Bk_fromeq_ran_ans.png>`
+      :download:`pdf<booklet_variations/bt2Bk_fromeq_ran_ans.pdf>`
+      :download:`tex<booklet_variations/bt2Bk_fromeq_ran_ans.tex>`
 
 ----
 
@@ -224,12 +184,8 @@ Blank diagram booklet
 
       blank
       ^^^
-      :download:`png<diagram_variations/bt2Bk_blank.png>`
-      :download:`pdf<diagram_variations/bt2Bk_blank.pdf>`
-      :download:`tex<diagram_variations/bt2Bk_blank.tex>`
+      :download:`png<booklet_variations/bt2Bk_blank.png>`
+      :download:`pdf<booklet_variations/bt2Bk_blank.pdf>`
+      :download:`tex<booklet_variations/bt2Bk_blank.tex>`
 
-      .. figure:: diagram_variations/bt2Bk_blank.png
-         :width: 600
-         :alt: bt2Bk_blank
-         :figclass: align-center
 
