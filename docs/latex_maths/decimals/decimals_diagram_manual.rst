@@ -11,8 +11,8 @@ Decimals diagram - manual
 
 .. code-block:: LaTeX
 
-   % modify values 
-   \def\addsub{-} 
+   % modify values
+   \def\addsub{-}
    \def\deca{70.256}
    \def\decb{16.362}
    \def\answer{53.894}
@@ -32,31 +32,31 @@ A decimals diagram with answers
    :margin: 0
    :padding: 0
 
-   .. grid-item-card::  
+   .. grid-item-card::
 
       question
       ^^^
-      :download:`png<manual/decimal_mq.png>`
-      :download:`pdf<manual/decimal_mq.pdf>`
-      :download:`tex<manual/decimal_mq.tex>`
+      :download:`png<manual/decimal_man_q.png>`
+      :download:`pdf<manual/decimal_man_q.pdf>`
+      :download:`tex<manual/decimal_man_q.tex>`
 
 
       .. figure:: manual/decimal_mq.png
          :width: 300
-         :alt: decimal_mq
+         :alt: decimal_man_q
          :figclass: align-center
 
-   .. grid-item-card::  
-      
+   .. grid-item-card::
+
       answer
       ^^^
-      :download:`png<manual/decimal_mans.png>`
-      :download:`pdf<manual/decimal_mans.pdf>`
-      :download:`tex<manual/decimal_mans.tex>`
+      :download:`png<manual/decimal_man_ans.png>`
+      :download:`pdf<manual/decimal_man_ans.pdf>`
+      :download:`tex<manual/decimal_man_ans.tex>`
 
       .. figure:: manual/decimal_mans.png
          :width: 300
-         :alt: decimal_mans
+         :alt: decimal_man_ans
          :figclass: align-center
 
 ----
