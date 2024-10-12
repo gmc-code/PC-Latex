@@ -62,6 +62,8 @@ PC-latex 2024
     latex_maths/backtracking_2step/backtracking_2step_intro.rst
     latex_maths/backtracking_2step/backtracking_2step_diagrams.rst
     latex_maths/backtracking_2step/backtracking_2step_booklets.rst
+    latex_maths/backtracking_2step/backtracking_2step_diagram_variations.rst
+    latex_maths/backtracking_2step/backtracking_2step_booklet_variations.rst
 
 
 .. toctree::
