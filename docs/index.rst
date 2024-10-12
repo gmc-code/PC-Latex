@@ -26,7 +26,8 @@ PC-latex 2024
     latex_maths/isosceles_triangles/isosceles_triangles.rst
     latex_maths/triangles/angles_in_triangles.rst
     latex_maths/exterior_angle_to_triangle/exterior_angle_to_triangle.rst
-    latex_maths/adjacent_angles/adjacent_angles.rst
+
+    .. latex_maths/adjacent_angles/adjacent_angles.rst
 
 
 .. toctree::

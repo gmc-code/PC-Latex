@@ -78,7 +78,7 @@ def main():
             num = 5  # random by default
     else:
         num = 5  # random by default
-    filename = input("Enter the base filename to be added to the prefix bt1WS_: \n")
+    filename = input("Enter the base filename to be added to the prefix dBK_: \n")
     if not filename:
         filename = "1"  # "bt1Bk_1_q and bt1Bk_1_ans as default file"
     # set names of files that are made

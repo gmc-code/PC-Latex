@@ -30,7 +30,7 @@ def convert_to_pdf(tex_path, currfile_dir, aux_path):
 
 # % end modify values for backtracking
 # tex_keys = ['stepAB','stepABrev','stepBC', 'stepBCrev', boxA','boxB', 'boxC', 'boxCrev, 'boxBrev', 'boxArev' ]
-tex_keys_q = ["stepAB", "stepBC", "boxA", "boxCrev"]
+tex_keys_q = ["boxC", "boxCrev"]
 
 
 def make1_diagram(tex_diagram_template_txt, num1, num2):
@@ -82,15 +82,15 @@ def main():
     else:
         numq = 20  # random by default
     #
-    filename = input("Enter the base filename to be added to the prefix bt2Bk_: \n")
+    filename = input("Enter the base filename to be added to the prefix bt2Bk_fromeq_: \n")
     if not filename:
-        filename = "bt2Bk_1st"  # "bt2Bk_1st_q and bt2Bk_1st_ans as default file"
+        filename = "bt2Bk_fromeq_1st"  # "bt2Bk_fromeq_1st_q and bt2Bk_fromeq_1st_ans as default file"
     # set names of files that are made
     # questions
-    tex_output_path = currfile_dir / f"bt2Bk_{filename}_q.tex"
+    tex_output_path = currfile_dir / f"bt2Bk_fromeq_{filename}_q.tex"
     aux_path = currfile_dir / "temp"
     # answers
-    tex_output_path_ans = currfile_dir / f"bt2Bk_{filename}_ans.tex"
+    tex_output_path_ans = currfile_dir / f"bt2Bk_fromeq_{filename}_ans.tex"
 
 
     # Read in the LaTeX template file

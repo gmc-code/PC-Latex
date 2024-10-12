@@ -72,7 +72,7 @@ def main():
     else:
         numq = 20  # random by default
     #
-    filename = input("Enter the base filename to be added to the prefix bt1WS_: \n")
+    filename = input("Enter the base filename to be added to the prefix bt1Bk_: \n")
     if not filename:
         filename = "bt1Bk_1st"  # "bt1Bk_1st_q and bt1Bk_1st_ans as default file"
     # set names of files that are made

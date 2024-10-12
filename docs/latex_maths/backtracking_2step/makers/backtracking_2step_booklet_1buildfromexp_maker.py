@@ -9,9 +9,9 @@ currfile_dir = Path(__file__).parent
 tex_template_path = currfile_dir / "backtrack_2step_booklet_template.tex"
 texans_template_path = currfile_dir / "backtrack_2step_booklet_ans_template.tex"
 tex_diagram_template_path = (
-    currfile_dir / "backtrack_2step_booklet_diagram_template.tex"
+    currfile_dir / "backtrack_2step_booklet_diagram_1buildexpInv_template.tex"
 )
-
+# same as for 1buildexpInv
 
 def convert_to_pdf(tex_path, currfile_dir, aux_path):
     result = subprocess.run(
@@ -30,7 +30,7 @@ def convert_to_pdf(tex_path, currfile_dir, aux_path):
 
 # % end modify values for backtracking
 # tex_keys = ['stepAB','stepABrev','stepBC', 'stepBCrev', boxA','boxB', 'boxC', 'boxCrev, 'boxBrev', 'boxArev' ]
-tex_keys_q = ["stepAB", "stepBC", "boxA", "boxCrev"]
+tex_keys_q = ["boxC"]
 
 
 def make1_diagram(tex_diagram_template_txt, num1, num2):
@@ -74,7 +74,7 @@ def main():
     else:
         num2 = 5  # random by default
     #
-    numq = input("Enter the number of questions from 1 to 100, with 10 per page \n")
+    numq = input("Enter the number of questions from 1 to 100, with 14 per page \n")
     if numq.strip().isdigit():
         numq = int(numq)
         if not numq in range(1,101):
@@ -82,15 +82,15 @@ def main():
     else:
         numq = 20  # random by default
     #
-    filename = input("Enter the base filename to be added to the prefix bt2Bk_: \n")
+    filename = input("Enter the base filename to be added to the prefix bt2Bk_fromexp_: \n")
     if not filename:
-        filename = "bt2Bk_1st"  # "bt2Bk_1st_q and bt2Bk_1st_ans as default file"
+        filename = "bt2Bk_fromexp_1st"  # "bt2Bk_fromexp_1st_q and bt2Bk_fromexp_1st_ans as default file"
     # set names of files that are made
     # questions
-    tex_output_path = currfile_dir / f"bt2Bk_{filename}_q.tex"
+    tex_output_path = currfile_dir / f"bt2Bk_fromexp_{filename}_q.tex"
     aux_path = currfile_dir / "temp"
     # answers
-    tex_output_path_ans = currfile_dir / f"bt2Bk_{filename}_ans.tex"
+    tex_output_path_ans = currfile_dir / f"bt2Bk_fromexp_{filename}_ans.tex"
 
 
     # Read in the LaTeX template file
