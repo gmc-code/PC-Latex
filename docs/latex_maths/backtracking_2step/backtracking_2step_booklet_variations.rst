@@ -27,7 +27,6 @@ Build the expression diagram booklet
 
       bt2Bk_bldexp_ran_q
       ^^^
-      :download:`png<booklet_variations/bt2Bk_bldexp_ran_q.png>`
       :download:`pdf<booklet_variations/bt2Bk_bldexp_ran_q.pdf>`
       :download:`tex<booklet_variations/bt2Bk_bldexp_ran_q.tex>`
 
@@ -35,7 +34,6 @@ Build the expression diagram booklet
 
       bt2Bk_bldexp_ran_ans
       ^^^
-      :download:`png<booklet_variations/bt2Bk_bldexp_ran_ans.png>`
       :download:`pdf<booklet_variations/bt2Bk_bldexp_ran_ans.pdf>`
       :download:`tex<booklet_variations/bt2Bk_bldexp_ran_ans.tex>`
 
@@ -66,7 +64,6 @@ Build the expression diagram with inverse operations booklet
 
       bt2Bk_bldexpInv_ran_q
       ^^^
-      :download:`png<booklet_variations/bt2Bk_bldexpInv_ran_q.png>`
       :download:`pdf<booklet_variations/bt2Bk_bldexpInv_ran_q.pdf>`
       :download:`tex<booklet_variations/bt2Bk_bldexpInv_ran_q.tex>`
 
@@ -74,7 +71,6 @@ Build the expression diagram with inverse operations booklet
 
       bt2Bk_bldexpInv_ran_ans
       ^^^
-      :download:`png<booklet_variations/bt2Bk_bldexpInv_ran_ans.png>`
       :download:`pdf<booklet_variations/bt2Bk_bldexpInv_ran_ans.pdf>`
       :download:`tex<booklet_variations/bt2Bk_bldexpInv_ran_ans.tex>`
 
@@ -106,7 +102,6 @@ Build the diagram from the expression booklet
 
       bt2Bk_fromexp_ran_q
       ^^^
-      :download:`png<booklet_variations/bt2Bk_fromexp_ran_q.png>`
       :download:`pdf<booklet_variations/bt2Bk_fromexp_ran_q.pdf>`
       :download:`tex<booklet_variations/bt2Bk_fromexp_ran_q.tex>`
 
@@ -114,7 +109,6 @@ Build the diagram from the expression booklet
 
       bt2Bk_fromexp_ran_ans
       ^^^
-      :download:`png<booklet_variations/bt2Bk_fromexp_ran_ans.png>`
       :download:`pdf<booklet_variations/bt2Bk_fromexp_ran_ans.pdf>`
       :download:`tex<booklet_variations/bt2Bk_fromexp_ran_ans.tex>`
 
@@ -146,7 +140,6 @@ Build the diagram from the equation booklet
 
       bt2Bk_fromeq_ran_q
       ^^^
-      :download:`png<booklet_variations/bt2Bk_fromeq_ran_q.png>`
       :download:`pdf<booklet_variations/bt2Bk_fromeq_ran_q.pdf>`
       :download:`tex<booklet_variations/bt2Bk_fromeq_ran_q.tex>`
 
@@ -154,7 +147,6 @@ Build the diagram from the equation booklet
 
       bt2Bk_fromeq_ran_ans
       ^^^
-      :download:`png<booklet_variations/bt2Bk_fromeq_ran_ans.png>`
       :download:`pdf<booklet_variations/bt2Bk_fromeq_ran_ans.pdf>`
       :download:`tex<booklet_variations/bt2Bk_fromeq_ran_ans.tex>`
 
@@ -184,7 +176,6 @@ Blank diagram booklet
 
       blank
       ^^^
-      :download:`png<booklet_variations/bt2Bk_blank.png>`
       :download:`pdf<booklet_variations/bt2Bk_blank.pdf>`
       :download:`tex<booklet_variations/bt2Bk_blank.tex>`
 
