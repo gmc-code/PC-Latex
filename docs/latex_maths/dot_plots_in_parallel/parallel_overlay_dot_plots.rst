@@ -2,7 +2,7 @@
 Parallel Overlay Dot plots
 ====================================================
 
-| To build parallel overlay dot plots diagrams, with one daigram below the other, python uses a .txt file and a .tex template.
+| To build parallel overlay dot plots diagrams, with one diagram below the other, python uses a .txt file and a .tex template.
 
 | The python file to make parallel overlay dot plots is below.
 | :download:`parallel_overlay_dot_plot_maker.py<files/parallel_overlay_dot_plot_maker.py>`

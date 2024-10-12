@@ -13,14 +13,14 @@ Sample decimals booklets by process
    :margin: 0
    :padding: 0
 
-   .. grid-item-card::  
+   .. grid-item-card::
 
       add 1dp q
       ^^^
       :download:`pdf<booklets/asdBk_add1dp_q.pdf>`
       :download:`tex<booklets/asdBk_add1dp_q.tex>`
 
-   .. grid-item-card::  
+   .. grid-item-card::
 
       add 1dp ans
       ^^^
@@ -32,15 +32,15 @@ Sample decimals booklets by process
    :margin: 0
    :padding: 0
 
-   .. grid-item-card::  
-      
+   .. grid-item-card::
+
       sub 2dp q
       ^^^
       :download:`pdf<booklets/asdBk_sub2dp_q.pdf>`
       :download:`tex<booklets/asdBk_sub2dp_q.tex>`
 
-   .. grid-item-card::  
-      
+   .. grid-item-card::
+
       sub 2dp ans
       ^^^
       :download:`pdf<booklets/asdBk_sub2dp_ans.pdf>`
@@ -52,14 +52,14 @@ Sample decimals booklets by process
    :margin: 0
    :padding: 0
 
-   .. grid-item-card::  
+   .. grid-item-card::
 
       random 5dp q
       ^^^
       :download:`pdf<booklets/asdBk_addsub5dp_q.pdf>`
       :download:`tex<booklets/asdBk_addsub5dp_q.tex>`
 
-   .. grid-item-card::  
+   .. grid-item-card::
 
       random 5dp ans
       ^^^
@@ -77,7 +77,7 @@ Latex  templates
 
 .. literalinclude:: makers/add_sub_decimals_booklet_template.tex
    :linenos:
-   
+
 | The multi page LaTeX decimals **answer** template is below.
 | :download:`add_sub_decimals_booklet_ans_template.tex<makers/add_sub_decimals_booklet_ans_template.tex>`
 

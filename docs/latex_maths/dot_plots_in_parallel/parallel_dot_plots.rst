@@ -2,7 +2,7 @@
 Parallel Dot plots
 ====================================================
 
-| To build parallel dot plots diagrams, with one daigram below the other, python uses a .txt file and a .tex template.
+| To build parallel dot plots diagrams, with one diagram below the other, python uses a .txt file and a .tex template.
 
 | The python file to make parallel dot plots is below.
 | :download:`parallel_dot_plot_maker.py<files/parallel_dot_plot_maker.py>`
@@ -36,7 +36,7 @@ Example parallel dot plots
    :margin: 0
    :padding: 0
 
-   .. grid-item-card::  
+   .. grid-item-card::
 
       pdp_cafes
       ^^^
@@ -72,7 +72,7 @@ Example parallel dot plots
    :margin: 0
    :padding: 0
 
-   .. grid-item-card::  
+   .. grid-item-card::
 
       pdp_plants
       ^^^
@@ -86,8 +86,8 @@ Example parallel dot plots
          :alt: pdp_plants
          :figclass: align-center
 
-   .. grid-item-card::  
-      
+   .. grid-item-card::
+
       pdp_scores
       ^^^
       :download:`png<files/pdp_scores.png>`

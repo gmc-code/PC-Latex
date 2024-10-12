@@ -26,7 +26,7 @@ Example stem and leaf plots
    :margin: 0
    :padding: 0
 
-   .. grid-item-card::  
+   .. grid-item-card::
 
       fruit
       ^^^
@@ -62,9 +62,9 @@ Example stem and leaf plots
    :margin: 0
    :padding: 0
 
-   .. grid-item-card::  
+   .. grid-item-card::
 
-     three_points
+      three_points
       ^^^
       :download:`png<files/sl_three_points.png>`
       :download:`pdf<files/sl_three_points.pdf>`
