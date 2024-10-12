@@ -2,11 +2,11 @@
 Backtracking 2 step diagram variations
 ====================================================
 
-Build expresssion diagram
+Build the expression diagram
 --------------------------------
 
-| The python file to make a 2-step backtracking diagram is below.
-| :download:`backtracking_2step_booklet_1buildexp_maker.py<makers/backtracking_2step_booklet_1buildexp_maker.py>`
+| The python file, to make a 2-step backtracking diagram of 1 row that builds the expression, is below.
+| :download:`backtracking_2step_diagram_1buildexp_maker.py<makers/backtracking_2step_diagram_1buildexp_maker.py>`
 
 | The required LaTeX files are below.
 | :download:`backtrack_2step_template.tex<makers/backtrack_2step_template.tex>`
@@ -50,11 +50,11 @@ Build expresssion diagram
 
 ----
 
-Build expresssion diagram with inverse operations
----------------------------------------------------
+Build the expression diagram with inverse operations
+-------------------------------------------------------
 
-| The python file to make a 2-step backtracking diagram is below.
-| :download:`backtracking_2step_booklet_1buildexpInv_maker.py<makers/backtracking_2step_booklet_1buildexpInv_maker.py>`
+| The python file, to make a 2-step backtracking diagram of 1 row that builds the expression along with the inverse operations, is below.
+| :download:`backtracking_2step_diagram_1buildexpInv_maker.py<makers/backtracking_2step_diagram_1buildexpInv_maker.py>`
 
 | The required LaTeX files are below.
 | :download:`backtrack_2step_template.tex<makers/backtrack_2step_template.tex>`
@@ -98,10 +98,10 @@ Build expresssion diagram with inverse operations
 
 ----
 
-Build diagram from expresssion
-----------------------------------
+Build the diagram from the expression
+----------------------------------------
 
-| The python file to make a 2-step backtracking diagram is below.
+| The python file, to make a 2-step backtracking diagram of 1 row from the expression, is below.
 | :download:`backtracking_2step_diagram_1buildfromexp_maker.py<makers/backtracking_2step_diagram_1buildfromexp_maker.py>`
 
 | The required LaTeX files are below. The diagram template is the same as used above.
@@ -146,10 +146,10 @@ Build diagram from expresssion
 
 ----
 
-Build diagram from equation
---------------------------------
+Build the diagram from the equation
+---------------------------------------------
 
-| The python file to make a 2-step backtracking diagram is below.
+| The python file, to make a 2-step backtracking diagram from the equation, is below.
 | :download:`backtracking_2step_diagram_fromeq_maker.py<makers/backtracking_2step_diagram_fromeq_maker.py>`
 
 | The required LaTeX files are below.
