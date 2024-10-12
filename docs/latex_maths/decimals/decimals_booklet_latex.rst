@@ -8,63 +8,63 @@ Booklets
 Sample decimals booklets by process
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. grid:: 2
-   :gutter: 0
-   :margin: 0
-   :padding: 0
+    .. grid:: 2
+    :gutter: 0
+    :margin: 0
+    :padding: 0
 
-   .. grid-item-card::
+    .. grid-item-card::
 
-      add 1dp q
-      ^^^
-      :download:`pdf<booklets/asdBk_add1dp_q.pdf>`
-      :download:`tex<booklets/asdBk_add1dp_q.tex>`
+        add 1dp q
+        ^^^
+        :download:`pdf<booklets/asdBk_add1dp_q.pdf>`
+        :download:`tex<booklets/asdBk_add1dp_q.tex>`
 
-   .. grid-item-card::
+    .. grid-item-card::
 
-      add 1dp ans
-      ^^^
-      :download:`pdf<booklets/asdBk_add1dp_ans.pdf>`
-      :download:`tex<booklets/asdBk_add1dp_ans.tex>`
-
-.. grid:: 2
-   :gutter: 0
-   :margin: 0
-   :padding: 0
-
-   .. grid-item-card::
-
-      sub 2dp q
-      ^^^
-      :download:`pdf<booklets/asdBk_sub2dp_q.pdf>`
-      :download:`tex<booklets/asdBk_sub2dp_q.tex>`
-
-   .. grid-item-card::
-
-      sub 2dp ans
-      ^^^
-      :download:`pdf<booklets/asdBk_sub2dp_ans.pdf>`
-      :download:`tex<booklets/asdBk_sub2dp_ans.tex>`
-
+        add 1dp ans
+        ^^^
+        :download:`pdf<booklets/asdBk_add1dp_ans.pdf>`
+        :download:`tex<booklets/asdBk_add1dp_ans.tex>`
 
 .. grid:: 2
-   :gutter: 0
-   :margin: 0
-   :padding: 0
+    :gutter: 0
+    :margin: 0
+    :padding: 0
 
-   .. grid-item-card::
+    .. grid-item-card::
 
-      random 5dp q
-      ^^^
-      :download:`pdf<booklets/asdBk_addsub5dp_q.pdf>`
-      :download:`tex<booklets/asdBk_addsub5dp_q.tex>`
+        sub 2dp q
+        ^^^
+        :download:`pdf<booklets/asdBk_sub2dp_q.pdf>`
+        :download:`tex<booklets/asdBk_sub2dp_q.tex>`
 
-   .. grid-item-card::
+    .. grid-item-card::
 
-      random 5dp ans
-      ^^^
-      :download:`pdf<booklets/asdBk_addsub5dp_ans.pdf>`
-      :download:`tex<booklets/asdBk_addsub5dp_ans.tex>`
+        sub 2dp ans
+        ^^^
+        :download:`pdf<booklets/asdBk_sub2dp_ans.pdf>`
+        :download:`tex<booklets/asdBk_sub2dp_ans.tex>`
+
+
+.. grid:: 2
+    :gutter: 0
+    :margin: 0
+    :padding: 0
+
+    .. grid-item-card::
+
+        random 5dp q
+        ^^^
+        :download:`pdf<booklets/asdBk_addsub5dp_q.pdf>`
+        :download:`tex<booklets/asdBk_addsub5dp_q.tex>`
+
+    .. grid-item-card::
+
+        random 5dp ans
+        ^^^
+        :download:`pdf<booklets/asdBk_addsub5dp_ans.pdf>`
+        :download:`tex<booklets/asdBk_addsub5dp_ans.tex>`
 
 
 ----
