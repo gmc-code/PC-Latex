@@ -1,16 +1,17 @@
-% asd template
+% decimals template
 \documentclass[border = 1mm]{standalone}
 \usepackage{dcolumn}
 
-\newcolumntype{d}[1]{cD{.}{.}{#1}}
+% Define a decimal-aligned column type
+\newcolumntype{d}[1]{D{.}{.}{#1}}
 
 \begin{document}
-
-\begin{tabular}{d{1.2}}
-     &0.52 \tabularnewline
-    $-$&0.12 \tabularnewline
+    % decimals diagram template
+\begin{tabular}{c d{1.2}}
+     &2.07 \tabularnewline
+    $-$&1.47 \tabularnewline
     \hline
-     &0.40 \tabularnewline
+     &0.60 \tabularnewline
     \hline
 \end{tabular}
 

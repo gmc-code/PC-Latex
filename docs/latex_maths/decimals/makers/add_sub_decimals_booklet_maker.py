@@ -12,6 +12,7 @@ texans_template_path = currfile_dir / "add_sub_decimals_booklet_ans_template.tex
 tex_diagram_template_path = (
     currfile_dir / "add_sub_decimals_booklet_diagram_template.tex"
 )
+colbreak = "\columnbreak  % Break column after 30 questions \n"
 
 
 def convert_to_pdf(tex_path, currfile_dir, aux_path):
@@ -49,7 +50,7 @@ tex_keys_q = ["answer"]
 def make1_diagram(tex_diagram_template_txt, nump, numip, numdp):
     tex_diagram_template_txt_ans = tex_diagram_template_txt
     kv = decf.get_add_sub_dec_dict(nump, numip, numdp)
-    posttext = r"\vspace{-2pt}"
+    posttext = r"\vspace{-1pt}"
 
     for key, value in kv.items():
         tex_diagram_template_txt_ans = tex_diagram_template_txt_ans.replace(
@@ -94,7 +95,7 @@ def main():
     # get title for part of heading indicating which process/es
     title = get_title(nump)
     #
-    numip = input("Enter 1, 2, 3, or 4 for the number of places before the decimal point \n")
+    numip = input("Enter 1, 2, 3, or 4 for the number of places before the decimal point: \n")
     if numip.strip().isdigit():
         numip = int(numip)
         if not numip in [1, 2, 3, 4, 5]:
@@ -102,7 +103,7 @@ def main():
     else:
         numip = 1  # 1 by default
     #
-    numdp = input("Enter 1, 2, 3, 4, or 5 for the number of decimal places \n")
+    numdp = input("Enter 1, 2, 3, 4, or 5 for the number of decimal places: \n")
     if numdp.strip().isdigit():
         numdp = int(numdp)
         if not numdp in [1, 2, 3, 4, 5]:
@@ -111,7 +112,7 @@ def main():
         numdp = 1  # 1 by default
     #
     #
-    numq = input("Enter the number of questions from 1 to 100 \n")
+    numq = input("Enter the number of questions from 1 to 100, with 25 per page: \n")
     if numq.strip().isdigit():
         numq = int(numq)
         if not numq in range(1, 101):
@@ -144,10 +145,14 @@ def main():
     col1_text = ""
     col1_text_ans = ""
     rmax = numq + 1
-    for _ in range(1, rmax):
+    for i in range(1, rmax):
         img_tex, img_tex_ans = make1_diagram(tex_diagram_template_txt, nump, numip, numdp)
         col1_text += img_tex
         col1_text_ans += img_tex_ans
+        if i % 25 == 0 and i > 0 and i != numq:
+            col1_text += colbreak
+            col1_text_ans += colbreak
+
 
     # Replace the <<title>> placeholder in the LaTeX template
     tex_template_txt = tex_template_txt.replace("<<title>>", title)

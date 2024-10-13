@@ -18,7 +18,7 @@ Decimals diagram - automated
 | Choose the number of integer places: ``"Enter 1, 2, 3, or 4 for the number of places before the decimal point"``.
 | Choose the number of decimal places: ``"Enter 1, 2, 3, 4, or 5 for the number of decimal places "``.
 | Choose the file name base: ``"Enter the base filename to be added to the prefix asd_:"``.
-| The filename will have "_q" added for the question diagram and "_ans" for the answer diagram. 
+| The filename will have "_q" added for the question diagram and "_ans" for the answer diagram.
 
 ----
 
@@ -30,7 +30,7 @@ A decimals diagram with answers
    :margin: 0
    :padding: 0
 
-   .. grid-item-card::  
+   .. grid-item-card::
 
       addition_q
       ^^^
@@ -43,8 +43,8 @@ A decimals diagram with answers
          :alt: asd_add2dp_q
          :figclass: align-center
 
-   .. grid-item-card::  
-      
+   .. grid-item-card::
+
       addition_ans
       ^^^
       :download:`png<diagrams/asd_add2dp_ans.png>`
@@ -56,7 +56,7 @@ A decimals diagram with answers
          :alt: asd_add2dp_ans
          :figclass: align-center
 
-   .. grid-item-card::  
+   .. grid-item-card::
 
       subtraction_q
       ^^^
@@ -69,8 +69,8 @@ A decimals diagram with answers
          :alt: asd_sub2dp_q
          :figclass: align-center
 
-   .. grid-item-card::  
-      
+   .. grid-item-card::
+
       subtraction_ans
       ^^^
       :download:`png<diagrams/asd_sub2dp_ans.png>`
@@ -81,7 +81,7 @@ A decimals diagram with answers
          :width: 300
          :alt: asd_sub2dp_ans
          :figclass: align-center
-  
+
 ----
 
 Splitting the LaTeX and modifying it for python

@@ -10,15 +10,16 @@
 \def \HeadingAnswers {\section*{\Large Name: \underline{\hspace{8cm}} \hfill Date: \underline{\hspace{3cm}}} \vspace{-3mm}
 {<<title>> of decimals: Answers} \vspace{1pt}\hrule}
 
-% raise footer with page number
 \fancypagestyle{myfancypagestyle}{
   \fancyhf{} % clear all header and footer fields
   \renewcommand{\headrulewidth}{0pt} % no rule under header
-  \fancyfoot[C] {\thepage} \setlength{\footskip}{16pt} % raise page number 6pt
+  \fancyfoot[R] {\thepage} % place page number at the bottom right
+  \setlength{\footskip}{10pt} % raise page number
 }
 \pagestyle{myfancypagestyle}  % apply myfancypagestyle
 
-% 
+
+%
 \begin{document}
 \HeadingAnswers
 \vspace{-5mm}

@@ -47,26 +47,6 @@ Sample decimals booklets by process
         :download:`tex<booklets/asdBk_sub2dp_ans.tex>`
 
 
-.. grid:: 2
-    :gutter: 0
-    :margin: 0
-    :padding: 0
-
-    .. grid-item-card::
-
-        random 5dp q
-        ^^^
-        :download:`pdf<booklets/asdBk_addsub5dp_q.pdf>`
-        :download:`tex<booklets/asdBk_addsub5dp_q.tex>`
-
-    .. grid-item-card::
-
-        random 5dp ans
-        ^^^
-        :download:`pdf<booklets/asdBk_addsub5dp_ans.pdf>`
-        :download:`tex<booklets/asdBk_addsub5dp_ans.tex>`
-
-
 ----
 
 Latex  templates
@@ -93,13 +73,31 @@ Latex  templates
 
 | Here's what some parts of the diagram LaTeX do:
 
-1. `\begin{equation}`: starts an equation environment.
-2. `\raisebox{-0.85cm}{`: raises the following content by -0.85cm to move up the tabular diagram relative to the equation number.
-3. `\begin{tabular}{d{4.5}}`: starts a tabular environment with decimal points aligned with room for 4 digits in front of it and 5 after it.
-4. `<<num1>> \\`: adds the content of `<<num1>>` to the first row of the table and ends the row.
-5. `<<process>>\enspace<<num2>> \\`: adds the content of `<<process>>` and `<<num2>>` separated by an en space to the second row of the table and ends the row.
-6. `\hline`: adds a horizontal line to the table.
-7. `<<answer>> \\`: adds the content of `<<answer>>` to the third row of the table and ends the row.
-8. `\hline\\`: adds another horizontal line to the table and ends the row.
-9. `\end{tabular}}`: ends the tabular environment.
-10. `\end{equation}`: ends the equation environment.
+
+.. list-table:: Explanation of LaTeX code
+   :widths: 50 50
+   :header-rows: 1
+
+   * - Line
+     - Explanation
+   * - ``\begin{equation}``
+     - Begins the equation environment, which is used for displaying mathematical equations.
+   * - ``\raisebox{-1.0cm}{``
+     - Lowers the content inside the braces by 1.0 cm.
+   * - ``\begin{tabular}{c d{<<numip>>.<<numdp>>}}``
+     - Begins a tabular environment with two columns: the first column is centered (``c``), and the second column is aligned on the decimal point with specified integer and decimal places.
+   * - ``&<<num1>> \tabularnewline``
+     - Inserts the value of ``<<num1>>`` in the second column and moves to the next row.
+   * - ``$<<process>>$&<<num2>> \tabularnewline``
+     - Inserts the value of ``<<process>>`` in the first column (enclosed in math mode) and ``<<num2>>`` in the second column, then moves to the next row.
+   * - ``\hline``
+     - Adds a horizontal line across the table.
+   * - ``&<<answer>> \tabularnewline``
+     - Inserts the value of ``<<answer>>`` in the second column and moves to the next row.
+   * - ``\hline``
+     - Adds another horizontal line across the table.
+   * - ``\end{tabular}}``
+     - Ends the tabular environment and the ``\raisebox`` command.
+   * - ``\end{equation}``
+     - Ends the equation environment.
+
