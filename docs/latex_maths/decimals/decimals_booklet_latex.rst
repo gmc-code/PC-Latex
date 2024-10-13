@@ -8,7 +8,7 @@ Booklets
 Sample decimals booklets by process
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    .. grid:: 2
+.. grid:: 2
     :gutter: 0
     :margin: 0
     :padding: 0

@@ -40,7 +40,6 @@ A decimals diagram with answers
       :download:`pdf<manual/decimal_man_q.pdf>`
       :download:`tex<manual/decimal_man_q.tex>`
 
-
       .. figure:: manual/decimal_mq.png
          :width: 300
          :alt: decimal_man_q

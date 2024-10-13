@@ -36,6 +36,6 @@ https://github.com/James-Yu/LaTeX-Workshop/wiki/Compile#latex-recipes
 
 repos:
 Create a .gitattributes file in the root directory of your repository.
-add liens like:
+add lines like:
 *.py linguist-language=Python
 
