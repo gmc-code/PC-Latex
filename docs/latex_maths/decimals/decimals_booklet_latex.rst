@@ -24,8 +24,8 @@ Sample decimals booklets by process
 
         add 1dp ans
         ^^^
-        :download:`pdf<booklets/asdBk_add1dp_ans.pdf>`
-        :download:`tex<booklets/asdBk_add1dp_ans.tex>`
+        :download:`pdf<booklets/asdBK_add1dp_ans.pdf>`
+        :download:`tex<booklets/asdBK_add1dp_ans.tex>`
 
 .. grid:: 2
     :gutter: 0

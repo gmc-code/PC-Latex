@@ -125,10 +125,10 @@ def main():
         filename = "1"  # "asd_1_q and asd_1_ans as default file"
     # set names of files that are made
     # questions
-    tex_output_path = currfile_dir / f"asdBK_{filename}_q.tex"
+    tex_output_path = currfile_dir / f"asdBk_{filename}_q.tex"
     aux_path = currfile_dir / "temp"
     # answers
-    tex_output_path_ans = currfile_dir / f"asdBK_{filename}_ans.tex"
+    tex_output_path_ans = currfile_dir / f"asdBk_{filename}_ans.tex"
 
     # Read in the LaTeX template file
     with open(tex_template_path, "r") as infile:
