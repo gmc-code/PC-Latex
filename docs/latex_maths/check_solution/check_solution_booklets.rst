@@ -135,12 +135,11 @@ Check solution: python
 Check solution: LaTeX
 ----------------------------------------------------------------------------
 
-.. literalinclude:: makers/check_solution_booklet_template.py
+.. literalinclude:: makers/check_solution_booklet_diagram_template.tex
    :linenos:
 
-.. literalinclude:: makers/check_solution_booklet_ans_template.py
+.. literalinclude:: makers/check_solution_booklet_template.tex
    :linenos:
 
-.. literalinclude:: makers/check_solution_booklet_diagram_template.py
+.. literalinclude:: makers/check_solution_booklet_ans_template.tex
    :linenos:
-
