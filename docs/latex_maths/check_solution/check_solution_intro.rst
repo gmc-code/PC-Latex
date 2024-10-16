@@ -10,7 +10,7 @@ Check solution to equations: 1 step introduction
 Example 1-step check solution diagrams
 ----------------------------------------
 
-.. grid:: 2
+.. grid:: 1
    :gutter: 0
    :margin: 0
    :padding: 0

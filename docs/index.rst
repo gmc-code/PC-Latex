@@ -17,7 +17,7 @@ PC-latex 2024
 
 .. toctree::
     :maxdepth: 2
-    :caption: 🔁 check solution
+    :caption: ☑️ check solution
     :numbered:
 
     latex_maths/check_solution/check_solution_intro.rst
@@ -27,7 +27,7 @@ PC-latex 2024
 
 .. toctree::
     :maxdepth: 2
-    :caption: 🔁 backtracking - 1step
+    :caption: 🔂 backtracking - 1step
     :numbered:
 
     latex_maths/backtracking_1step/backtracking_1step_intro.rst
@@ -51,7 +51,7 @@ PC-latex 2024
 
 .. toctree::
     :maxdepth: 2
-    :caption: ↔️ number_lines
+    :caption: #️⃣↔️ number_lines
     :numbered:
 
     latex_maths/number_lines/number_lines_intro.rst
@@ -63,7 +63,7 @@ PC-latex 2024
 
 .. toctree::
     :maxdepth: 2
-    :caption: ⚈ decimals
+    :caption: ⏺️ decimals
     :numbered:
 
     latex_maths/decimals/decimals_intro.rst
@@ -104,7 +104,7 @@ PC-latex 2024
 
 .. toctree::
     :maxdepth: 2
-    :caption: 📊 graphs
+    :caption: 📉 graphs
     :numbered:
 
     latex_maths/graph_paper/graph_paper.rst

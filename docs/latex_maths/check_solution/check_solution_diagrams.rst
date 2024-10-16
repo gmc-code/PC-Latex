@@ -3,7 +3,7 @@ Check solutions to equations: 1 step diagrams
 ====================================================
 
 | The python file to make a check_solution 1-step diagram is below.
-| :download:`check_solution_maker.py<makers/check_solution_maker.py>`
+| :download:`check_solution_diagram_maker.py<makers/check_solution_diagram_maker.py>`
 
 | The required LaTeX files are below.
 | :download:`check_solution_diagram_template.tex<makers/check_solution_diagram_template.tex>`
@@ -13,7 +13,7 @@ Check solutions to equations: 1 step diagrams
 | :download:`check_solution_functions.py<makers/check_solution_functions.py>`
 | :download:`magick_pdf_to_png.py<makers/magick_pdf_to_png.py>`
 
-| The python file, **check_solution_maker.py**, when run, will ask for these inputs:
+| The python file, **check_solution_diagram_maker.py**, when run, will ask for these inputs:
 | Choose the arithmetic process:
 | ``"Enter 1, 2, 3, 4 or 5 for +, -, X, /, random \n"``
 | Choose the file name base:
@@ -25,7 +25,7 @@ Check solutions to equations: 1 step diagrams
 Example check solution 1-step diagrams
 -----------------------------------------
 
-.. grid:: 2
+.. grid:: 1
    :gutter: 0
    :margin: 0
    :padding: 0
@@ -56,7 +56,8 @@ Example check solution 1-step diagrams
          :alt: check_solution1_+_ans
          :figclass: align-center
 
-.. grid:: 2
+
+.. grid:: 1
    :gutter: 0
    :margin: 0
    :padding: 0
@@ -88,7 +89,8 @@ Example check solution 1-step diagrams
          :alt: check_solution1_-_ans
          :figclass: align-center
 
-.. grid:: 2
+
+.. grid:: 1
    :gutter: 0
    :margin: 0
    :padding: 0
@@ -120,7 +122,8 @@ Example check solution 1-step diagrams
          :alt: check_solution1_x_ans
          :figclass: align-center
 
-.. grid:: 2
+
+.. grid:: 1
    :gutter: 0
    :margin: 0
    :padding: 0
@@ -164,9 +167,9 @@ Check solution diagram: python
 Check solution diagram: LaTeX
 ----------------------------------------------------------------------------
 
-.. literalinclude:: makers/check_solution_template.py
+.. literalinclude:: makers/check_solution_template.tex
    :linenos:
 
-.. literalinclude:: makers/check_solution_diagram_template.py
+.. literalinclude:: makers/check_solution_diagram_template.tex
    :linenos:
 
