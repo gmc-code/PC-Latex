@@ -53,21 +53,21 @@ Latex  templates
 ~~~~~~~~~~~~~~~~~~~~
 
 | The multi page LaTeX decimals **question** template is below.
-| :download:`add_sub_decimals_booklet_template.tex<makers/add_sub_decimals_booklet_template.tex>`
+| :download:`decimals_booklet_template.tex<makers/decimals_booklet_template.tex>`
 
-.. literalinclude:: makers/add_sub_decimals_booklet_template.tex
+.. literalinclude:: makers/decimals_booklet_template.tex
    :linenos:
 
 | The multi page LaTeX decimals **answer** template is below.
-| :download:`add_sub_decimals_booklet_ans_template.tex<makers/add_sub_decimals_booklet_ans_template.tex>`
+| :download:`decimals_booklet_ans_template.tex<makers/decimals_booklet_ans_template.tex>`
 
-.. literalinclude:: makers/add_sub_decimals_booklet_ans_template.tex
+.. literalinclude:: makers/decimals_booklet_ans_template.tex
    :linenos:
 
 | The diagram template is below.
-| :download:`add_sub_decimals_booklet_diagram_template.tex<makers/add_sub_decimals_booklet_diagram_template.tex>`
+| :download:`decimals_booklet_diagram_template.tex<makers/decimals_booklet_diagram_template.tex>`
 
-.. literalinclude:: makers/add_sub_decimals_booklet_diagram_template.tex
+.. literalinclude:: makers/decimals_booklet_diagram_template.tex
    :linenos:
 
 

@@ -17,28 +17,12 @@ PC-latex 2024
 
 .. toctree::
     :maxdepth: 2
-    :caption: 📐 geometry
+    :caption: 🔁 check solution
     :numbered:
 
-    latex_maths/angle_types/angle_types.rst
-    latex_maths/measuring_angles/measuring_angles.rst
-    latex_maths/right_triangles/right_triangles.rst
-    latex_maths/isosceles_triangles/isosceles_triangles.rst
-    latex_maths/triangles/angles_in_triangles.rst
-    latex_maths/exterior_angle_to_triangle/exterior_angle_to_triangle.rst
-
-    .. latex_maths/adjacent_angles/adjacent_angles.rst
-
-
-.. toctree::
-    :maxdepth: 2
-    :caption: ⚈ decimals
-    :numbered:
-
-    latex_maths/decimals/decimals_intro.rst
-    latex_maths/decimals/decimals_diagram_automated.rst
-    latex_maths/decimals/decimals_booklet_latex.rst
-    latex_maths/decimals/decimals_booklet_python.rst
+    latex_maths/check_solution/check_solution_intro.rst
+    latex_maths/check_solution/check_solution_diagrams.rst
+    latex_maths/check_solution/check_solution_booklets.rst
 
 
 .. toctree::
@@ -75,6 +59,33 @@ PC-latex 2024
     latex_maths/number_lines/number_lines_diagram_automated.rst
     latex_maths/number_lines/number_lines_booklet_latex.rst
     latex_maths/number_lines/number_lines_booklet_python.rst
+
+
+.. toctree::
+    :maxdepth: 2
+    :caption: ⚈ decimals
+    :numbered:
+
+    latex_maths/decimals/decimals_intro.rst
+    latex_maths/decimals/decimals_diagram_automated.rst
+    latex_maths/decimals/decimals_booklet_latex.rst
+    latex_maths/decimals/decimals_booklet_python.rst
+
+
+
+.. toctree::
+    :maxdepth: 2
+    :caption: 📐 geometry
+    :numbered:
+
+    latex_maths/angle_types/angle_types.rst
+    latex_maths/measuring_angles/measuring_angles.rst
+    latex_maths/right_triangles/right_triangles.rst
+    latex_maths/isosceles_triangles/isosceles_triangles.rst
+    latex_maths/triangles/angles_in_triangles.rst
+    latex_maths/exterior_angle_to_triangle/exterior_angle_to_triangle.rst
+
+    .. latex_maths/adjacent_angles/adjacent_angles.rst
 
 
 .. toctree::

@@ -123,7 +123,7 @@ def get_2step_process_dict(num1, num2):
         case (1, 1):
             return add_add_dict()
         case (1, 2):
-            return add_sub_dict()
+            return dict()
         case (1, 3):
             return add_times_dict()
         case (1, 4):
@@ -179,7 +179,7 @@ def add_add_dict():
     return kv
 
 
-def add_sub_dict():
+def dict():
     # bc = nx + na - nb
     nx = random.randint(1, 10)
     na = random.randint(1, 10)

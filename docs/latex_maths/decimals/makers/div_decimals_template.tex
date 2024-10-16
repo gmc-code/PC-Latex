@@ -1,0 +1,22 @@
+% decimals template
+\documentclass[border = 1mm]{standalone}
+\usepackage{dcolumn}
+
+% Define a decimal-aligned column type
+\newcolumntype{d}[1]{D{.}{.}{#1}}
+
+\begin{document}
+    <<diagram>>
+\end{document}
+
+
+
+\begin{document}
+
+\begin{equation}
+    \begin{tikzpicture}[baseline=(current bounding box.center)]
+        \Mydiv{5}{34.8}
+    \end{tikzpicture}
+\end{equation}
+
+\end{document}

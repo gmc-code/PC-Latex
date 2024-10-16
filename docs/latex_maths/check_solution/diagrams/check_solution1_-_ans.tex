@@ -1,0 +1,29 @@
+% inv op template
+\documentclass[12pt, varwidth, border={5mm 5mm 5mm 5mm}]{standalone}
+\usepackage{amsmath}
+\usepackage{amssymb}  % For \therefore symbol
+\usepackage[normalem]{ulem}  % Prevents \emph from underlining text
+
+\begin{document}
+    \noindent \textbf{Determine whether \(x = 8\) is a solution to the equation \(x - 1 = 4\):}
+\vspace{2pt}  % Ensure spacing between problem statement and solution
+
+\noindent
+\renewcommand{\arraystretch}{1.3} % Adjust line spacing in the aligned environment
+\begin{tabular}{@{}p{0.45\linewidth}@{}p{0.45\linewidth}@{}}
+    \(\begin{aligned}
+        \text{LHS} &= x - 1 \\
+                   &= 8 - 1 \\
+                   &= 7 
+    \end{aligned}\) &
+    \(\begin{aligned}
+        \text{RHS} &= 4\\
+                   & \\
+                   &
+    \end{aligned}\)
+\end{tabular}
+\renewcommand{\arraystretch}{1.0} % Adjust line spacing in the aligned environment
+\vspace{2pt}  % Optional spacing
+
+\noindent \(\therefore\) Since \(\text{LHS} \neq \text{RHS}\), \(x = 8\) is not  a solution to the equation.
+\end{document}
