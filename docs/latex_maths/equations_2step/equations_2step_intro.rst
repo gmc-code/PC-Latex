@@ -24,7 +24,7 @@ Example 2-step equations
       :download:`tex<diagrams/invop2_+x_q.tex>`
 
 
-      .. figure:: diagrams/invop2_+_q.png
+      .. figure:: diagrams/invop2_+x_q.png
          :width: 300
          :alt: invop2_+_q
          :figclass: align-center
@@ -37,8 +37,8 @@ Example 2-step equations
       :download:`pdf<diagrams/invop2_+x_ans.pdf>`
       :download:`tex<diagrams/invop2_+x_ans.tex>`
 
-      .. figure:: diagrams/invop2_+_ans.png
+      .. figure:: diagrams/invop2_+x_ans.png
          :width: 300
-         :alt: invop2_+_ans
+         :alt: invop2_+x_ans
          :figclass: align-center
 
