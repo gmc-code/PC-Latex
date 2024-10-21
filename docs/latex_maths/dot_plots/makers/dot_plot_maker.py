@@ -27,7 +27,7 @@ def convert_to_pdf(tex_path, currfile_dir, aux_path):
     """
     result = subprocess.run(
         [
-            "pdfLaTeX",
+            "pdflatex",
             tex_path,
             "-output-directory",
             currfile_dir,
@@ -51,7 +51,7 @@ def get_np_array(filename):
             numbers = numbers_string.split(",")
         else:
             numbers = numbers_string.split(" ")
-        
+
     # convert the numbers strings to integers
     if "." in numbers_string:
         numbers = [float(n) for n in numbers]

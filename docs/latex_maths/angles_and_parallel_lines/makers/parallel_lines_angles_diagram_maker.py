@@ -28,7 +28,7 @@ def convert_to_pdf(tex_path, currfile_dir, aux_path):
     """
     result = subprocess.run(
         [
-            "pdfLaTeX",
+            "pdflatex",
             tex_path,
             "-output-directory",
             currfile_dir,
@@ -76,7 +76,7 @@ def main():
             num = 5  # random by default
     else:
         num = 5  # random by default
-        
+
     filename = input("Enter the base filename to be added to the prefix pla_: \n")
     if not filename:
         filename = "1"  # "pla_1_q and pla_1_ans as default file"

@@ -28,7 +28,7 @@ def convert_to_pdf(tex_path, currfile_dir, aux_path):
     """
     result = subprocess.run(
         [
-            "pdfLaTeX",
+            "pdflatex",
             tex_path,
             "-output-directory",
             currfile_dir,
@@ -39,10 +39,10 @@ def convert_to_pdf(tex_path, currfile_dir, aux_path):
     )
 
 
-# % end modify values for angles in triangle 
+# % end modify values for angles in triangle
 # replaced in q = ['angleCalcAValue', 'angleCalcBValue', 'angleCalcCValue', 'angleCalcExtBValue']
-tex_keys_q = ['angleAValue', 'angleBValue', 'angleCValue', 'angleExtBValue', 
-              'sideCValue', 'sideDValue', 'rotationAngleValue', 
+tex_keys_q = ['angleAValue', 'angleBValue', 'angleCValue', 'angleExtBValue',
+              'sideCValue', 'sideDValue', 'rotationAngleValue',
               'angleALabel','angleBLabel', 'angleCLabel', 'angleDLabel', 'angleExtLabel']
 
 def make1_diagram(tex_diagram_template_txt):
@@ -74,7 +74,7 @@ def main():
     else:
         numq = 4  # random by default
     #
-    
+
     filename = input("Enter the base filename to be added to the prefix ext_angle_to_triangle_Bk_: \n")
     if not filename:
         filename = "1"  # "ext_angle_to_triangle_Bk_1_q and ext_angle_to_triangle_Bk_1_ans as default file"
@@ -86,7 +86,7 @@ def main():
     # answers
     tex_output_path_ans = currfile_dir / f"ext_angle_to_triangle_Bk_{filename}_ans.tex"
     pdf_path_ans = currfile_dir / f"ext_angle_to_triangle_Bk_{filename}_ans.pdf"
-  
+
     # Read in the LaTeX template file
     with open(tex_template_path, "r") as infile:
         tex_template_txt = infile.read()

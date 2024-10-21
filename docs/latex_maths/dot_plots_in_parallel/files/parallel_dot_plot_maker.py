@@ -13,7 +13,7 @@ tex_template_path = currfile_dir / "parallel_dot_plot_template.tex"
 def convert_to_pdf(tex_path, currfile_dir, aux_path):
     result = subprocess.run(
         [
-            "pdfLaTeX",
+            "pdflatex",
             tex_path,
             "-output-directory",
             currfile_dir,
@@ -96,7 +96,7 @@ def main():
     min_tval = str(min_tval)
     min_tplus1 = str(min_tplus1)
     max_tval = str(max(np.max(num_array),np.max(num_array2)))
-    
+
     # Get the maximum value and the minimum value for axis
     max_val = str(max(np.max(num_array),np.max(num_array2)) + 0.5)
     min_val = str(min(np.min(num_array),np.min(num_array2)) - 0.5)
@@ -129,7 +129,7 @@ def main():
     tex_template_txt = tex_template_txt.replace("<<title>>", plot_title)
     tex_template_txt = tex_template_txt.replace("<<max_val>>", max_val)
     tex_template_txt = tex_template_txt.replace("<<min_val>>", min_val)
-    
+
     tex_template_txt = tex_template_txt.replace("<<height2>>", height2)
     tex_template_txt = tex_template_txt.replace("<<coords2>>", latex_coords2)
     tex_template_txt = tex_template_txt.replace("<<title2>>", plot_title2)

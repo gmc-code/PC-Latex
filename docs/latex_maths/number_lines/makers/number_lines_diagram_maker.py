@@ -13,7 +13,7 @@ tex_diagram_template_path = currfile_dir / "number_lines_diagram_template.tex"
 def convert_to_pdf(tex_path, currfile_dir, aux_path):
     result = subprocess.run(
         [
-            "pdfLaTeX",
+            "pdflatex",
             tex_path,
             "-output-directory",
             currfile_dir,

@@ -14,7 +14,7 @@ Maindata = namedtuple("Maindata", ["title", "keystem", "keyleaf", "keyvalue"])
 def convert_to_pdf(tex_path, currfile_dir, aux_path):
     result = subprocess.run(
         [
-            "pdfLaTeX",
+            "pdflatex",
             tex_path,
             "-output-directory",
             currfile_dir,

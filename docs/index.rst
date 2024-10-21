@@ -27,12 +27,22 @@ PC-latex 2024
 
 .. toctree::
     :maxdepth: 2
-    :caption: 🔄 equations_inverse_operations
+    :caption: 🔄 equations_1step_inverse_operations
     :numbered:
 
     latex_maths/equations_1step/equations_1step_intro.rst
     latex_maths/equations_1step/equations_1step_diagrams.rst
     latex_maths/equations_1step/equations_1step_booklets.rst
+
+
+.. toctree::
+    :maxdepth: 2
+    :caption: 🔄 equations_2step_inverse_operations
+    :numbered:
+
+    latex_maths/equations_2step/equations_2step_intro.rst
+    latex_maths/equations_2step/equations_2step_diagrams.rst
+    latex_maths/equations_2step/equations_2step_booklets.rst
 
 
 .. toctree::

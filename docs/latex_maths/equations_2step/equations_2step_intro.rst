@@ -1,13 +1,13 @@
 ====================================================
-Equations 1 step introduction
+Equations 2 step introduction
 ====================================================
 
-| Solve 1 step equations using inverse operations.
-| The output pdfs from LaTeX can be converted to pngs. 
+| Solve 2 step equations using inverse operations.
+| The output pdfs from LaTeX can be converted to pngs.
 
 ----
 
-Example 1-step equations
+Example 2-step equations
 -------------------------------------
 
 .. grid:: 2
@@ -15,30 +15,30 @@ Example 1-step equations
    :margin: 0
    :padding: 0
 
-   .. grid-item-card::  
+   .. grid-item-card::
 
       question
       ^^^
-      :download:`png<diagrams/invop1_+_q.png>`
-      :download:`pdf<diagrams/invop1_+_q.pdf>`
-      :download:`tex<diagrams/invop1_+_q.tex>`
+      :download:`png<diagrams/invop2_+x_q.png>`
+      :download:`pdf<diagrams/invop2_+x_q.pdf>`
+      :download:`tex<diagrams/invop2_+x_q.tex>`
 
 
-      .. figure:: diagrams/invop1_+_q.png
+      .. figure:: diagrams/invop2_+_q.png
          :width: 300
-         :alt: invop1_+_q
+         :alt: invop2_+_q
          :figclass: align-center
 
-   .. grid-item-card::  
-      
+   .. grid-item-card::
+
       answer
       ^^^
-      :download:`png<diagrams/invop1_+_ans.png>`
-      :download:`pdf<diagrams/invop1_+_ans.pdf>`
-      :download:`tex<diagrams/invop1_+_ans.tex>`
+      :download:`png<diagrams/invop2_+x_ans.png>`
+      :download:`pdf<diagrams/invop2_+x_ans.pdf>`
+      :download:`tex<diagrams/invop2_+x_ans.tex>`
 
-      .. figure:: diagrams/invop1_+_ans.png
+      .. figure:: diagrams/invop2_+_ans.png
          :width: 300
-         :alt: invop1_+_ans
+         :alt: invop2_+_ans
          :figclass: align-center
 

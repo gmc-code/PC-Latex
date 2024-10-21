@@ -28,7 +28,7 @@ def convert_to_pdf(tex_path, currfile_dir, aux_path):
     """
     result = subprocess.run(
         [
-            "pdfLaTeX",
+            "pdflatex",
             tex_path,
             "-output-directory",
             currfile_dir,
@@ -96,7 +96,7 @@ def main():
     # answers
     tex_output_path_ans = currfile_dir / f"pla_Bk_{filename}_ans.tex"
     pdf_path_ans = currfile_dir / f"pla_Bk_{filename}_ans.pdf"
-  
+
     # Read in the LaTeX template file
     with open(tex_template_path, "r") as infile:
         tex_template_txt = infile.read()

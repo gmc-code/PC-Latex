@@ -28,7 +28,7 @@ def convert_to_pdf(tex_path, currfile_dir, aux_path):
     """
     result = subprocess.run(
         [
-            "pdfLaTeX",
+            "pdflatex",
             tex_path,
             "-output-directory",
             currfile_dir,
@@ -39,10 +39,10 @@ def convert_to_pdf(tex_path, currfile_dir, aux_path):
     )
 
 
-# % end modify values for angles in triangle 
+# % end modify values for angles in triangle
 # replaced in q = ['angleCalcAValue', 'angleCalcBValue', 'angleCalcCValue', 'angleCalcExtBValue']
-tex_keys_q = ['angleAValue', 'angleBValue', 'angleCValue', 'angleExtBValue', 
-              'sideCValue', 'sideDValue', 'rotationAngleValue', 
+tex_keys_q = ['angleAValue', 'angleBValue', 'angleCValue', 'angleExtBValue',
+              'sideCValue', 'sideDValue', 'rotationAngleValue',
               'angleALabel','angleBLabel', 'angleCLabel', 'angleDLabel', 'angleExtLabel']
 
 

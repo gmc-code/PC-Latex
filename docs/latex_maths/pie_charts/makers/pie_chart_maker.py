@@ -26,7 +26,7 @@ def convert_to_pdf(tex_path, currfile_dir, aux_path):
     """
     result = subprocess.run(
         [
-            "pdfLaTeX",
+            "pdflatex",
             tex_path,
             "-output-directory",
             currfile_dir,
@@ -82,7 +82,7 @@ def get_file_data(filename):
         numbers_string = f.readline().strip()
         # read the third line and store it in a variable
         labels_string = f.readline().strip()
-    #  
+    #
     numbers_list = get_list_from_str(numbers_string)
     labels_list = get_list_from_str(labels_string)
     # process numbers_list and labels_list to build 53/monkeys, string

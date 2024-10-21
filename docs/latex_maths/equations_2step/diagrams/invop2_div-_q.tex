@@ -1,0 +1,19 @@
+% inv op template
+\documentclass[varwidth]{standalone}
+\usepackage{amsmath}
+\usepackage[normalem]{ulem} % [normalem] prevents the package from changing the default behavior of `\\emph` to underline.
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{align*}
+
+\begin{document}
+    \begin{varwidth}{0.25\paperwidth}
+    \begin{align*}
+    \frac{x}{10} - 6 &= -3\\
+    \frac{x}{10} - 6 + \dotuline{\hspace{5mm}} &= -3 + \dotuline{\hspace{5mm}}\\
+    \frac{x}{10} &= \dotuline{\hspace{5mm}}\\
+    \frac{x}{10} \times\dotuline{\hspace{5mm}} &= \dotuline{\hspace{5mm}} \times\dotuline{\hspace{5mm}}\\
+    x &= \dotuline{\hspace{5mm}}\\
+\end{align*}
+\end{varwidth}
+
+\end{document}

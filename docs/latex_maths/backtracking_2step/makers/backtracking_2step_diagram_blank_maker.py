@@ -13,7 +13,7 @@ tex_diagram_template_path = currfile_dir / "backtrack_2step_diagram_blank_templa
 def convert_to_pdf(tex_path, currfile_dir, aux_path):
     result = subprocess.run(
         [
-            "pdfLaTeX",
+            "pdflatex",
             tex_path,
             "-output-directory",
             currfile_dir,

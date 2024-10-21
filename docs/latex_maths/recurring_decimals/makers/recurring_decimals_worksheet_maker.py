@@ -33,7 +33,7 @@ def convert_to_pdf(tex_path, currfile_dir, aux_path):
     """
     result = subprocess.run(
         [
-            "pdfLaTeX",
+            "pdflatex",
             tex_path,
             "-output-directory",
             currfile_dir,
@@ -111,7 +111,7 @@ def main():
         tex_diagram_template_txt_ans = infile.read()
 
     num_denom_pairs_list = recdecf.get_num_denom_pairs_list(shuffle_bool)
-    
+
     # <<cols>>
     # generate column text and column text for answers
     col1_text = ""

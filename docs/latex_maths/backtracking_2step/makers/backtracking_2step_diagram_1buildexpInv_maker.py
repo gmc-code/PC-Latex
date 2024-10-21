@@ -13,7 +13,7 @@ tex_diagram_template_path = currfile_dir / "backtrack_2step_diagram_1buildexpInv
 def convert_to_pdf(tex_path, currfile_dir, aux_path):
     result = subprocess.run(
         [
-            "pdfLaTeX",
+            "pdflatex",
             tex_path,
             "-output-directory",
             currfile_dir,
@@ -25,7 +25,7 @@ def convert_to_pdf(tex_path, currfile_dir, aux_path):
 
 
 # % end modify values for backtracking
-# tex_keys = ['stepAB','stepABrev','stepBC', 'stepBCrev', boxA','boxB', 'boxC', 'boxCrev, 'boxBrev', 'boxArev' ]
+# tex_keys = ['stepAB','stepABrev','stepBC', 'stepBCrev', 'boxA','boxB', 'boxC', 'boxCrev, 'boxBrev', 'boxArev' ]
 tex_keys_q = ["stepAB", "stepBC", "boxA"]
 
 

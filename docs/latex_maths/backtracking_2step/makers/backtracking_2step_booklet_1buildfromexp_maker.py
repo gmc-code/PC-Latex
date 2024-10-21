@@ -16,7 +16,7 @@ tex_diagram_template_path = (
 def convert_to_pdf(tex_path, currfile_dir, aux_path):
     result = subprocess.run(
         [
-            "pdfLaTeX",
+            "pdflatex",
             tex_path,
             "-output-directory",
             currfile_dir,
@@ -29,7 +29,7 @@ def convert_to_pdf(tex_path, currfile_dir, aux_path):
 
 
 # % end modify values for backtracking
-# tex_keys = ['stepAB','stepABrev','stepBC', 'stepBCrev', boxA','boxB', 'boxC', 'boxCrev, 'boxBrev', 'boxArev' ]
+# tex_keys = ['stepAB','stepABrev','stepBC', 'stepBCrev', 'boxA','boxB', 'boxC', 'boxCrev, 'boxBrev', 'boxArev' ]
 tex_keys_q = ["boxC"]
 
 

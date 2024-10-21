@@ -28,7 +28,7 @@ def convert_to_pdf(tex_path, currfile_dir, aux_path):
     """
     result = subprocess.run(
         [
-            "pdfLaTeX",
+            "pdflatex",
             tex_path,
             "-output-directory",
             currfile_dir,
@@ -39,7 +39,7 @@ def convert_to_pdf(tex_path, currfile_dir, aux_path):
     )
 
 
-# % end modify values for lever 
+# % end modify values for lever
 # tex_keys = ['ans_force_l','ans_force_e','ans_dist_l', 'ans_dist_e', 'effort_vector','fulc_c', 'fulc_l', 'fulc_r' ]
 tex_keys_q = ["force_l", "force_e", "dist_l", "dist_e", 'effort_vector','fulc_c', 'fulc_l', 'fulc_r']
 
@@ -91,7 +91,7 @@ def main():
     # answers
     tex_output_path_ans = currfile_dir / f"lever_Bk_{filename}_ans.tex"
     pdf_path_ans = currfile_dir / f"lever_Bk_{filename}_ans.pdf"
-  
+
     # Read in the LaTeX template file
     with open(tex_template_path, "r") as infile:
         tex_template_txt = infile.read()

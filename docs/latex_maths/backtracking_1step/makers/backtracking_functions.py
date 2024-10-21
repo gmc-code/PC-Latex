@@ -23,15 +23,15 @@ def add_dict():
     nx = random.randint(1, 10)
     na = random.randint(1, 10)
     bb = nx + na
-    kv = dict()
-    kv["stepAB"] = f"+{na}"
-    kv["stepABrev"] = f"-{na}"
+    mod_dict = dict()
+    mod_dict["stepAB"] = f"+{na}"
+    mod_dict["stepABrev"] = f"-{na}"
 
-    kv["boxA"] = f"x"
-    kv["boxB"] = f"x+{na}"
-    kv["boxBrev"] = f"{bb}"
-    kv["boxArev"] = f"{nx}"
-    return kv
+    mod_dict["boxA"] = f"x"
+    mod_dict["boxB"] = f"x+{na}"
+    mod_dict["boxBrev"] = f"{bb}"
+    mod_dict["boxArev"] = f"{nx}"
+    return mod_dict
 
 
 def sub_dict():
@@ -39,15 +39,15 @@ def sub_dict():
     na = random.randint(1, 10)
     nx = na + random.randint(1, 10)
     bb = nx - na
-    kv = dict()
-    kv["stepAB"] = f"-{na}"
-    kv["stepABrev"] = f"+{na}"
+    mod_dict = dict()
+    mod_dict["stepAB"] = f"-{na}"
+    mod_dict["stepABrev"] = f"+{na}"
 
-    kv["boxA"] = f"x"
-    kv["boxB"] = f"x-{na}"
-    kv["boxBrev"] = f"{bb}"
-    kv["boxArev"] = f"{nx}"
-    return kv
+    mod_dict["boxA"] = f"x"
+    mod_dict["boxB"] = f"x-{na}"
+    mod_dict["boxBrev"] = f"{bb}"
+    mod_dict["boxArev"] = f"{nx}"
+    return mod_dict
 
 
 def times_dict():
@@ -55,15 +55,15 @@ def times_dict():
     nx = random.randint(2, 10)
     na = random.randint(2, 10)
     bb = nx * na
-    kv = dict()
-    kv["stepAB"] = f"\\times{na}"
-    kv["stepABrev"] = f"\\div{na}"
+    mod_dict = dict()
+    mod_dict["stepAB"] = f"\\times{na}"
+    mod_dict["stepABrev"] = f"\\div{na}"
 
-    kv["boxA"] = f"x"
-    kv["boxB"] = f"{na}x"
-    kv["boxBrev"] = f"{bb}"
-    kv["boxArev"] = f"{nx}"
-    return kv
+    mod_dict["boxA"] = f"x"
+    mod_dict["boxB"] = f"{na}x"
+    mod_dict["boxBrev"] = f"{bb}"
+    mod_dict["boxArev"] = f"{nx}"
+    return mod_dict
 
 
 def div_dict():
@@ -72,15 +72,15 @@ def div_dict():
     na = random.randint(2, 10)
     nx = na * random.randint(2, 10)
     bb = int(nx / na)
-    kv = dict()
-    kv["stepAB"] = f"\\div{na}"
-    kv["stepABrev"] = f"\\times{na}"
+    mod_dict = dict()
+    mod_dict["stepAB"] = f"\\div{na}"
+    mod_dict["stepABrev"] = f"\\times{na}"
 
-    kv["boxA"] = f"x"
-    kv["boxB"] = f"\\frac{{x}}{{{na}}}"
-    kv["boxBrev"] = f"{bb}"
-    kv["boxArev"] = f"{nx}"
-    return kv
+    mod_dict["boxA"] = f"x"
+    mod_dict["boxB"] = f"\\frac{{x}}{{{na}}}"
+    mod_dict["boxBrev"] = f"{bb}"
+    mod_dict["boxArev"] = f"{nx}"
+    return mod_dict
 
 
 
@@ -110,7 +110,7 @@ def get_2step_process_dict(num1, num2):
         case (1, 1):
             return add_add_dict()
         case (1, 2):
-            return dict()
+            return add_sub_dict()
         case (1, 3):
             return add_times_dict()
         case (1, 4):
@@ -151,22 +151,22 @@ def add_add_dict():
     bb = nx + na
     bc = bb + nb
 
-    kv = dict()
-    kv["stepAB"] = f"+{na}"
-    kv["stepABrev"] = f"-{na}"
-    kv["stepBC"] = f"+{nb}"
-    kv["stepBCrev"] = f"-{nb}"
+    mod_dict = dict()
+    mod_dict["stepAB"] = f"+{na}"
+    mod_dict["stepABrev"] = f"-{na}"
+    mod_dict["stepBC"] = f"+{nb}"
+    mod_dict["stepBCrev"] = f"-{nb}"
 
-    kv["boxA"] = f"x"
-    kv["boxB"] = f"x+{na}"
-    kv["boxC"] = f"x+{na + nb}"
-    kv["boxCrev"] = f"{bc}"
-    kv["boxBrev"] = f"{bb}"
-    kv["boxArev"] = f"{nx}"
-    return kv
+    mod_dict["boxA"] = f"x"
+    mod_dict["boxB"] = f"x+{na}"
+    mod_dict["boxC"] = f"x+{na + nb}"
+    mod_dict["boxCrev"] = f"{bc}"
+    mod_dict["boxBrev"] = f"{bb}"
+    mod_dict["boxArev"] = f"{nx}"
+    return mod_dict
 
 
-def dict():
+def add_sub_dict():
     # bc = nx + na - nb
     nx = random.randint(1, 10)
     na = random.randint(1, 10)
@@ -177,22 +177,22 @@ def dict():
         nb = random.randint(1, bb)
     bc = bb - nb
 
-    kv = dict()
-    kv["stepAB"] = f"+{na}"
-    kv["stepABrev"] = f"-{na}"
-    kv["stepBC"] = f"-{nb}"
-    kv["stepBCrev"] = f"+{nb}"
+    mod_dict = dict()
+    mod_dict["stepAB"] = f"+{na}"
+    mod_dict["stepABrev"] = f"-{na}"
+    mod_dict["stepBC"] = f"-{nb}"
+    mod_dict["stepBCrev"] = f"+{nb}"
 
-    kv["boxA"] = f"x"
-    kv["boxB"] = f"x+{na}"
+    mod_dict["boxA"] = f"x"
+    mod_dict["boxB"] = f"x+{na}"
     if na - nb > 0:
-        kv["boxC"] = f"x+{na - nb}"
+        mod_dict["boxC"] = f"x+{na - nb}"
     else:
-        kv["boxC"] = f"x-{nb - na}"
-    kv["boxCrev"] = f"{bc}"
-    kv["boxBrev"] = f"{bb}"
-    kv["boxArev"] = f"{nx}"
-    return kv
+        mod_dict["boxC"] = f"x-{nb - na}"
+    mod_dict["boxCrev"] = f"{bc}"
+    mod_dict["boxBrev"] = f"{bb}"
+    mod_dict["boxArev"] = f"{nx}"
+    return mod_dict
 
 
 def add_times_dict():
@@ -203,19 +203,19 @@ def add_times_dict():
     bb = nx + na
     bc = bb * nb
 
-    kv = dict()
-    kv["stepAB"] = f"+{na}"
-    kv["stepABrev"] = f"-{na}"
-    kv["stepBC"] = f"\\times{nb}"
-    kv["stepBCrev"] = f"\\div{nb}"
+    mod_dict = dict()
+    mod_dict["stepAB"] = f"+{na}"
+    mod_dict["stepABrev"] = f"-{na}"
+    mod_dict["stepBC"] = f"\\times{nb}"
+    mod_dict["stepBCrev"] = f"\\div{nb}"
 
-    kv["boxA"] = f"x"
-    kv["boxB"] = f"x+{na}"
-    kv["boxC"] = f"{nb}(x + {na})"
-    kv["boxCrev"] = f"{bc}"
-    kv["boxBrev"] = f"{bb}"
-    kv["boxArev"] = f"{nx}"
-    return kv
+    mod_dict["boxA"] = f"x"
+    mod_dict["boxB"] = f"x+{na}"
+    mod_dict["boxC"] = f"{nb}(x + {na})"
+    mod_dict["boxCrev"] = f"{bc}"
+    mod_dict["boxBrev"] = f"{bb}"
+    mod_dict["boxArev"] = f"{nx}"
+    return mod_dict
 
 
 def add_div_dict():
@@ -230,19 +230,19 @@ def add_div_dict():
         na = random.randint(1, bb)
     nx = bb - na
 
-    kv = dict()
-    kv["stepAB"] = f"+{na}"
-    kv["stepABrev"] = f"-{na}"
-    kv["stepBC"] = f"\\div{nb}"
-    kv["stepBCrev"] = f"\\times{nb}"
+    mod_dict = dict()
+    mod_dict["stepAB"] = f"+{na}"
+    mod_dict["stepABrev"] = f"-{na}"
+    mod_dict["stepBC"] = f"\\div{nb}"
+    mod_dict["stepBCrev"] = f"\\times{nb}"
 
-    kv["boxA"] = f"x"
-    kv["boxB"] = f"x+{na}"
-    kv["boxC"] = f"\\frac{{(x+{na})}}{{{nb}}}"
-    kv["boxCrev"] = f"{bc}"
-    kv["boxBrev"] = f"{bb}"
-    kv["boxArev"] = f"{nx}"
-    return kv
+    mod_dict["boxA"] = f"x"
+    mod_dict["boxB"] = f"x+{na}"
+    mod_dict["boxC"] = f"\\frac{{(x+{na})}}{{{nb}}}"
+    mod_dict["boxCrev"] = f"{bc}"
+    mod_dict["boxBrev"] = f"{bb}"
+    mod_dict["boxArev"] = f"{nx}"
+    return mod_dict
 
 
 def sub_add_dict():
@@ -253,19 +253,19 @@ def sub_add_dict():
     bb = nx - na
     bc = bb + nb
 
-    kv = dict()
-    kv["stepAB"] = f"-{na}"
-    kv["stepABrev"] = f"+{na}"
-    kv["stepBC"] = f"-{nb}"
-    kv["stepBCrev"] = f"+{nb}"
+    mod_dict = dict()
+    mod_dict["stepAB"] = f"-{na}"
+    mod_dict["stepABrev"] = f"+{na}"
+    mod_dict["stepBC"] = f"-{nb}"
+    mod_dict["stepBCrev"] = f"+{nb}"
 
-    kv["boxA"] = f"x"
-    kv["boxB"] = f"x-{na}"
-    kv["boxC"] = f"x-{na + nb}"
-    kv["boxCrev"] = f"{bc}"
-    kv["boxBrev"] = f"{bb}"
-    kv["boxArev"] = f"{nx}"
-    return kv
+    mod_dict["boxA"] = f"x"
+    mod_dict["boxB"] = f"x-{na}"
+    mod_dict["boxC"] = f"x-{na + nb}"
+    mod_dict["boxCrev"] = f"{bc}"
+    mod_dict["boxBrev"] = f"{bb}"
+    mod_dict["boxArev"] = f"{nx}"
+    return mod_dict
 
 
 def sub_sub_dict():
@@ -277,19 +277,19 @@ def sub_sub_dict():
     bb = bc + nb
     nx = bb + na
 
-    kv = dict()
-    kv["stepAB"] = f"-{na}"
-    kv["stepABrev"] = f"+{na}"
-    kv["stepBC"] = f"-{nb}"
-    kv["stepBCrev"] = f"+{nb}"
+    mod_dict = dict()
+    mod_dict["stepAB"] = f"-{na}"
+    mod_dict["stepABrev"] = f"+{na}"
+    mod_dict["stepBC"] = f"-{nb}"
+    mod_dict["stepBCrev"] = f"+{nb}"
 
-    kv["boxA"] = f"x"
-    kv["boxB"] = f"x-{na}"
-    kv["boxC"] = f"x-{na + nb}"
-    kv["boxCrev"] = f"{bc}"
-    kv["boxBrev"] = f"{bb}"
-    kv["boxArev"] = f"{nx}"
-    return kv
+    mod_dict["boxA"] = f"x"
+    mod_dict["boxB"] = f"x-{na}"
+    mod_dict["boxC"] = f"x-{na + nb}"
+    mod_dict["boxCrev"] = f"{bc}"
+    mod_dict["boxBrev"] = f"{bb}"
+    mod_dict["boxArev"] = f"{nx}"
+    return mod_dict
 
 
 def sub_times_dict():
@@ -301,19 +301,19 @@ def sub_times_dict():
     bb = nx - na
     bc = bb * nb
 
-    kv = dict()
-    kv["stepAB"] = f"-{na}"
-    kv["stepABrev"] = f"+{na}"
-    kv["stepBC"] = f"\\times{nb}"
-    kv["stepBCrev"] = f"\\div{nb}"
+    mod_dict = dict()
+    mod_dict["stepAB"] = f"-{na}"
+    mod_dict["stepABrev"] = f"+{na}"
+    mod_dict["stepBC"] = f"\\times{nb}"
+    mod_dict["stepBCrev"] = f"\\div{nb}"
 
-    kv["boxA"] = f"x"
-    kv["boxB"] = f"x-{na}"
-    kv["boxC"] = f"{nb}(x-{na})"
-    kv["boxCrev"] = f"{bc}"
-    kv["boxBrev"] = f"{bb}"
-    kv["boxArev"] = f"{nx}"
-    return kv
+    mod_dict["boxA"] = f"x"
+    mod_dict["boxB"] = f"x-{na}"
+    mod_dict["boxC"] = f"{nb}(x-{na})"
+    mod_dict["boxCrev"] = f"{bc}"
+    mod_dict["boxBrev"] = f"{bb}"
+    mod_dict["boxArev"] = f"{nx}"
+    return mod_dict
 
 
 def sub_div_dict():
@@ -325,19 +325,19 @@ def sub_div_dict():
     bb = bc * nb
     nx = bb + na
 
-    kv = dict()
-    kv["stepAB"] = f"-{na}"
-    kv["stepABrev"] = f"+{na}"
-    kv["stepBC"] = f"\\div{nb}"
-    kv["stepBCrev"] = f"\\times{nb}"
+    mod_dict = dict()
+    mod_dict["stepAB"] = f"-{na}"
+    mod_dict["stepABrev"] = f"+{na}"
+    mod_dict["stepBC"] = f"\\div{nb}"
+    mod_dict["stepBCrev"] = f"\\times{nb}"
 
-    kv["boxA"] = f"x"
-    kv["boxB"] = f"x-{na}"
-    kv["boxC"] = f"\\frac{{(x-{na})}}{{{nb}}}"
-    kv["boxCrev"] = f"{bc}"
-    kv["boxBrev"] = f"{bb}"
-    kv["boxArev"] = f"{nx}"
-    return kv
+    mod_dict["boxA"] = f"x"
+    mod_dict["boxB"] = f"x-{na}"
+    mod_dict["boxC"] = f"\\frac{{(x-{na})}}{{{nb}}}"
+    mod_dict["boxCrev"] = f"{bc}"
+    mod_dict["boxBrev"] = f"{bb}"
+    mod_dict["boxArev"] = f"{nx}"
+    return mod_dict
 
 
 def times_add_dict():
@@ -348,19 +348,19 @@ def times_add_dict():
     bb = nx * na
     bc = nx * na + nb
 
-    kv = dict()
-    kv["stepAB"] = f"\\times{na}"
-    kv["stepABrev"] = f"\\div{na}"
-    kv["stepBC"] = f"+{nb}"
-    kv["stepBCrev"] = f"-{nb}"
+    mod_dict = dict()
+    mod_dict["stepAB"] = f"\\times{na}"
+    mod_dict["stepABrev"] = f"\\div{na}"
+    mod_dict["stepBC"] = f"+{nb}"
+    mod_dict["stepBCrev"] = f"-{nb}"
 
-    kv["boxA"] = f"x"
-    kv["boxB"] = f"{na}x"
-    kv["boxC"] = f"{na}x + {nb}"
-    kv["boxCrev"] = f"{bc}"
-    kv["boxBrev"] = f"{bb}"
-    kv["boxArev"] = f"{nx}"
-    return kv
+    mod_dict["boxA"] = f"x"
+    mod_dict["boxB"] = f"{na}x"
+    mod_dict["boxC"] = f"{na}x + {nb}"
+    mod_dict["boxCrev"] = f"{bc}"
+    mod_dict["boxBrev"] = f"{bb}"
+    mod_dict["boxArev"] = f"{nx}"
+    return mod_dict
 
 
 def times_sub_dict():
@@ -374,19 +374,19 @@ def times_sub_dict():
         nb = random.randint(2, bb)
     bc = bb - nb
 
-    kv = dict()
-    kv["stepAB"] = f"\\times{na}"
-    kv["stepABrev"] = f"\\div{na}"
-    kv["stepBC"] = f"-{nb}"
-    kv["stepBCrev"] = f"+{nb}"
+    mod_dict = dict()
+    mod_dict["stepAB"] = f"\\times{na}"
+    mod_dict["stepABrev"] = f"\\div{na}"
+    mod_dict["stepBC"] = f"-{nb}"
+    mod_dict["stepBCrev"] = f"+{nb}"
 
-    kv["boxA"] = f"x"
-    kv["boxB"] = f"{na}x"
-    kv["boxC"] = f"{na}x - {nb}"
-    kv["boxCrev"] = f"{bc}"
-    kv["boxBrev"] = f"{bb}"
-    kv["boxArev"] = f"{nx}"
-    return kv
+    mod_dict["boxA"] = f"x"
+    mod_dict["boxB"] = f"{na}x"
+    mod_dict["boxC"] = f"{na}x - {nb}"
+    mod_dict["boxCrev"] = f"{bc}"
+    mod_dict["boxBrev"] = f"{bb}"
+    mod_dict["boxArev"] = f"{nx}"
+    return mod_dict
 
 
 def times_times_dict():
@@ -397,19 +397,19 @@ def times_times_dict():
     bb = nx * na
     bc = nx * na * nb
 
-    kv = dict()
-    kv["stepAB"] = f"\\times{na}"
-    kv["stepABrev"] = f"\\div{na}"
-    kv["stepBC"] = f"\\times{nb}"
-    kv["stepBCrev"] = f"\\div{nb}"
+    mod_dict = dict()
+    mod_dict["stepAB"] = f"\\times{na}"
+    mod_dict["stepABrev"] = f"\\div{na}"
+    mod_dict["stepBC"] = f"\\times{nb}"
+    mod_dict["stepBCrev"] = f"\\div{nb}"
 
-    kv["boxA"] = f"x"
-    kv["boxB"] = f"{na}x"
-    kv["boxC"] = f"{na * nb}x"
-    kv["boxCrev"] = f"{bc}"
-    kv["boxBrev"] = f"{bb}"
-    kv["boxArev"] = f"{nx}"
-    return kv
+    mod_dict["boxA"] = f"x"
+    mod_dict["boxB"] = f"{na}x"
+    mod_dict["boxC"] = f"{na * nb}x"
+    mod_dict["boxCrev"] = f"{bc}"
+    mod_dict["boxBrev"] = f"{bb}"
+    mod_dict["boxArev"] = f"{nx}"
+    return mod_dict
 
 
 def times_div_dict():
@@ -420,19 +420,19 @@ def times_div_dict():
     bb = nx * na
     bc = int(bb / nb)
 
-    kv = dict()
-    kv["stepAB"] = f"\\times{na}"
-    kv["stepABrev"] = f"\\div{na}"
-    kv["stepBC"] = f"\\div{nb}"
-    kv["stepBCrev"] = f"\\times{nb}"
+    mod_dict = dict()
+    mod_dict["stepAB"] = f"\\times{na}"
+    mod_dict["stepABrev"] = f"\\div{na}"
+    mod_dict["stepBC"] = f"\\div{nb}"
+    mod_dict["stepBCrev"] = f"\\times{nb}"
 
-    kv["boxA"] = f"x"
-    kv["boxB"] = f"{na}x"
-    kv["boxC"] = f"{int(na / nb)}x"
-    kv["boxCrev"] = f"{bc}"
-    kv["boxBrev"] = f"{bb}"
-    kv["boxArev"] = f"{nx}"
-    return kv
+    mod_dict["boxA"] = f"x"
+    mod_dict["boxB"] = f"{na}x"
+    mod_dict["boxC"] = f"{int(na / nb)}x"
+    mod_dict["boxCrev"] = f"{bc}"
+    mod_dict["boxBrev"] = f"{bb}"
+    mod_dict["boxArev"] = f"{nx}"
+    return mod_dict
 
 
 def div_add_dict():
@@ -444,18 +444,18 @@ def div_add_dict():
     bb = int(nx / na)
     bc = bb + nb
 
-    kv = dict()
-    kv["stepAB"] = f"\\div{na}"
-    kv["stepABrev"] = f"\\times{na}"
-    kv["stepBC"] = f"+{nb}"
-    kv["stepBCrev"] = f"-{nb}"
-    kv["boxA"] = f"x"
-    kv["boxB"] = f"\\frac{{x}}{{{na}}}"
-    kv["boxC"] = f"\\frac{{x}}{{{na}}} + {nb}"
-    kv["boxCrev"] = f"{bc}"
-    kv["boxBrev"] = f"{bb}"
-    kv["boxArev"] = f"{nx}"
-    return kv
+    mod_dict = dict()
+    mod_dict["stepAB"] = f"\\div{na}"
+    mod_dict["stepABrev"] = f"\\times{na}"
+    mod_dict["stepBC"] = f"+{nb}"
+    mod_dict["stepBCrev"] = f"-{nb}"
+    mod_dict["boxA"] = f"x"
+    mod_dict["boxB"] = f"\\frac{{x}}{{{na}}}"
+    mod_dict["boxC"] = f"\\frac{{x}}{{{na}}} + {nb}"
+    mod_dict["boxCrev"] = f"{bc}"
+    mod_dict["boxBrev"] = f"{bb}"
+    mod_dict["boxArev"] = f"{nx}"
+    return mod_dict
 
 
 def div_sub_dict():
@@ -467,18 +467,18 @@ def div_sub_dict():
     bb = bc + nb
     nx = bb * na
 
-    kv = dict()
-    kv["stepAB"] = f"\\div{na}"
-    kv["stepABrev"] = f"\\times{na}"
-    kv["stepBC"] = f"-{nb}"
-    kv["stepBCrev"] = f"+{nb}"
-    kv["boxA"] = f"x"
-    kv["boxB"] = f"\\frac{{x}}{{{na}}}"
-    kv["boxC"] = f"\\frac{{x}}{{{na}}} - {nb}"
-    kv["boxCrev"] = f"{bc}"
-    kv["boxBrev"] = f"{bb}"
-    kv["boxArev"] = f"{nx}"
-    return kv
+    mod_dict = dict()
+    mod_dict["stepAB"] = f"\\div{na}"
+    mod_dict["stepABrev"] = f"\\times{na}"
+    mod_dict["stepBC"] = f"-{nb}"
+    mod_dict["stepBCrev"] = f"+{nb}"
+    mod_dict["boxA"] = f"x"
+    mod_dict["boxB"] = f"\\frac{{x}}{{{na}}}"
+    mod_dict["boxC"] = f"\\frac{{x}}{{{na}}} - {nb}"
+    mod_dict["boxCrev"] = f"{bc}"
+    mod_dict["boxBrev"] = f"{bb}"
+    mod_dict["boxArev"] = f"{nx}"
+    return mod_dict
 
 
 def div_times_dict():
@@ -489,18 +489,18 @@ def div_times_dict():
     bb = int(nx / na)
     bc = bb * nb
 
-    kv = dict()
-    kv["stepAB"] = f"\\div{na}"
-    kv["stepABrev"] = f"\\times{na}"
-    kv["stepBC"] = f"\\div{nb}"
-    kv["stepBCrev"] = f"\\times{nb}"
-    kv["boxA"] = f"x"
-    kv["boxB"] = f"\\frac{{x}}{{{na}}}"
-    kv["boxC"] = f"\\frac{{x}}{{{na * nb}}}"
-    kv["boxCrev"] = f"{bc}"
-    kv["boxBrev"] = f"{bb}"
-    kv["boxArev"] = f"{nx}"
-    return kv
+    mod_dict = dict()
+    mod_dict["stepAB"] = f"\\div{na}"
+    mod_dict["stepABrev"] = f"\\times{na}"
+    mod_dict["stepBC"] = f"\\div{nb}"
+    mod_dict["stepBCrev"] = f"\\times{nb}"
+    mod_dict["boxA"] = f"x"
+    mod_dict["boxB"] = f"\\frac{{x}}{{{na}}}"
+    mod_dict["boxC"] = f"\\frac{{x}}{{{na * nb}}}"
+    mod_dict["boxCrev"] = f"{bc}"
+    mod_dict["boxBrev"] = f"{bb}"
+    mod_dict["boxArev"] = f"{nx}"
+    return mod_dict
 
 
 def div_div_dict():
@@ -512,15 +512,15 @@ def div_div_dict():
     bb = bc * nb
     nx = bb * na
 
-    kv = dict()
-    kv["stepAB"] = f"\\div{na}"
-    kv["stepABrev"] = f"\\times{na}"
-    kv["stepBC"] = f"\\div{nb}"
-    kv["stepBCrev"] = f"\\times{nb}"
-    kv["boxA"] = f"x"
-    kv["boxB"] = f"\\frac{{x}}{{{na}}}"
-    kv["boxC"] = f"\\frac{{x}}{{{na * nb}}}"
-    kv["boxCrev"] = f"{bc}"
-    kv["boxBrev"] = f"{bb}"
-    kv["boxArev"] = f"{nx}"
-    return kv
+    mod_dict = dict()
+    mod_dict["stepAB"] = f"\\div{na}"
+    mod_dict["stepABrev"] = f"\\times{na}"
+    mod_dict["stepBC"] = f"\\div{nb}"
+    mod_dict["stepBCrev"] = f"\\times{nb}"
+    mod_dict["boxA"] = f"x"
+    mod_dict["boxB"] = f"\\frac{{x}}{{{na}}}"
+    mod_dict["boxC"] = f"\\frac{{x}}{{{na * nb}}}"
+    mod_dict["boxCrev"] = f"{bc}"
+    mod_dict["boxBrev"] = f"{bb}"
+    mod_dict["boxArev"] = f"{nx}"
+    return mod_dict

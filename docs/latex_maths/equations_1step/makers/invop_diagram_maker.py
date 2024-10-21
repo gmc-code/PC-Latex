@@ -29,7 +29,7 @@ def convert_to_pdf(tex_path, currfile_dir, aux_path):
     """
     result = subprocess.run(
         [
-            "pdfLaTeX",
+            "pdflatex",
             tex_path,
             "-output-directory",
             currfile_dir,
@@ -40,7 +40,7 @@ def convert_to_pdf(tex_path, currfile_dir, aux_path):
     )
 
 
-# % end modify values for invop 
+# % end modify values for invop
 # tex_keys = []
 tex_keys_q = ['line1_LHS', 'line1_RHS', 'line2_LHSq', 'line2_RHSq', 'line3_LHS', 'line3_RHSq']
 
