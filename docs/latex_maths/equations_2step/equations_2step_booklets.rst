@@ -19,7 +19,7 @@ Equations 2-step booklet python
 | Choose the first arithmetic process: ``"Enter 1, 2, 3, 4 or 5 for +, -, X, /, random``.
 | Choose the second arithmetic process: ``"Enter 1, 2, 3, 4 or 5 for +, -, X, /, random``.
 | Choose the number of questions from 1 to 80: ``"Enter the number of questions from 1 to 80"``
-| Choose the file name base: ``"Enter the base filename to be added to the prefix invop_2step_Bk_:"``. The filename will have "_q" added for the question booklet and "_ans" for the answer booklet.
+| Choose the file name base: ``"Enter the base filename to be added to the prefix invop_2Bk_:"``. The filename will have "_q" added for the question booklet and "_ans" for the answer booklet.
 
 ----
 
@@ -35,15 +35,15 @@ Sample 2-step invop booklet
 
       random_q
       ^^^
-      :download:`pdf<booklets/invop_2step_Bk_ran80_q.pdf>`
-      :download:`tex<booklets/invop_2step_Bk_ran80_q.tex>`
+      :download:`pdf<booklets/invop_2Bk_ran80_q.pdf>`
+      :download:`tex<booklets/invop_2Bk_ran80_q.tex>`
 
    .. grid-item-card::
 
       random_ans
       ^^^
-      :download:`pdf<booklets/invop_2step_Bk_ran80_ans.pdf>`
-      :download:`tex<booklets/invop_2step_Bk_ran80_ans.tex>`
+      :download:`pdf<booklets/invop_2Bk_ran80_ans.pdf>`
+      :download:`tex<booklets/invop_2Bk_ran80_ans.tex>`
 
 ----
 
