@@ -39,7 +39,7 @@ Example check solution 1-step diagrams
       :download:`tex<diagrams/check_solution1_+_q.tex>`
 
       .. figure:: diagrams/check_solution1_+_q.png
-         :width: 300
+         :width: 600
          :alt: check_solution1_+_q
          :figclass: align-center
 
@@ -52,7 +52,7 @@ Example check solution 1-step diagrams
       :download:`tex<diagrams/check_solution1_+_ans.tex>`
 
       .. figure:: diagrams/check_solution1_+_ans.png
-         :width: 300
+         :width: 600
          :alt: check_solution1_+_ans
          :figclass: align-center
 
@@ -72,7 +72,7 @@ Example check solution 1-step diagrams
 
 
       .. figure:: diagrams/check_solution1_-_q.png
-         :width: 300
+         :width: 600
          :alt: check_solution1_-_q
          :figclass: align-center
 
@@ -85,7 +85,7 @@ Example check solution 1-step diagrams
       :download:`tex<diagrams/check_solution1_-_ans.tex>`
 
       .. figure:: diagrams/check_solution1_-_ans.png
-         :width: 300
+         :width: 600
          :alt: check_solution1_-_ans
          :figclass: align-center
 
@@ -105,7 +105,7 @@ Example check solution 1-step diagrams
 
 
       .. figure:: diagrams/check_solution1_x_q.png
-         :width: 300
+         :width: 600
          :alt: check_solution1_x_q
          :figclass: align-center
 
@@ -118,7 +118,7 @@ Example check solution 1-step diagrams
       :download:`tex<diagrams/check_solution1_x_ans.tex>`
 
       .. figure:: diagrams/check_solution1_x_ans.png
-         :width: 300
+         :width: 600
          :alt: check_solution1_x_ans
          :figclass: align-center
 
@@ -138,7 +138,7 @@ Example check solution 1-step diagrams
 
 
       .. figure:: diagrams/check_solution1_div_q.png
-         :width: 300
+         :width: 600
          :alt: check_solution1_div_q
          :figclass: align-center
 
@@ -151,7 +151,7 @@ Example check solution 1-step diagrams
       :download:`tex<diagrams/check_solution1_div_ans.tex>`
 
       .. figure:: diagrams/check_solution1_div_ans.png
-         :width: 300
+         :width: 600
          :alt: check_solution1_div_ans
          :figclass: align-center
 
