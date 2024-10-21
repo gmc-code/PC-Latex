@@ -44,11 +44,29 @@ Sample 1-step invop booklet
       :download:`pdf<booklets/invop_Bk_ran96_ans.pdf>`
       :download:`tex<booklets/invop_Bk_ran96_ans.tex>`
 
-
 ----
 
 1-step invop: python
 ----------------------------------------------------------------------------
 
 .. literalinclude:: makers/invop_booklet_maker.py
+   :linenos:
+
+| The custom python module:
+
+.. literalinclude:: makers/invop_functions.py
+   :linenos:
+
+----
+
+1-step invop: LaTeX
+----------------------------------------------------------------------------
+
+.. literalinclude:: makers/invop_booklet_diagram_template.tex
+   :linenos:
+
+.. literalinclude:: makers/invop_booklet_template.tex
+   :linenos:
+
+.. literalinclude:: makers/invop_booklet_ans_template.tex
    :linenos:

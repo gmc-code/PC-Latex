@@ -160,3 +160,19 @@ Example 1-step invop diagram
 
 .. literalinclude:: makers/invop_diagram_maker.py
    :linenos:
+
+| The custom python module:
+
+.. literalinclude:: makers/invop_functions.py
+   :linenos:
+
+----
+
+1-step invop diagram: LaTeX
+----------------------------------------------------------------------------
+
+.. literalinclude:: makers/invop_template.tex
+   :linenos:
+
+.. literalinclude:: makers/invop_diagram_template.tex
+   :linenos:

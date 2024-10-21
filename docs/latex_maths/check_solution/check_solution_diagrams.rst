@@ -163,6 +163,12 @@ Check solution diagram: python
 .. literalinclude:: makers/check_solution_diagram_maker.py
    :linenos:
 
+| The custom python module:
+
+.. literalinclude:: makers/check_solution_functions.py
+   :linenos:
+
+----
 
 Check solution diagram: LaTeX
 ----------------------------------------------------------------------------

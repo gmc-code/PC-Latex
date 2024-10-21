@@ -131,6 +131,12 @@ Check solution: python
 .. literalinclude:: makers/check_solution_booklet_maker.py
    :linenos:
 
+| The custom python module:
+
+.. literalinclude:: makers/check_solution_functions.py
+   :linenos:
+
+----
 
 Check solution: LaTeX
 ----------------------------------------------------------------------------
