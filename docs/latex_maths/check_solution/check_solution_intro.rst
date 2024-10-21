@@ -25,7 +25,7 @@ Example 1-step check solution diagrams
 
 
       .. figure:: diagrams/check_solution1_+_q.png
-         :width: 300
+         :width: 600
          :alt: check_solution1_+_q
          :figclass: align-center
 
@@ -38,7 +38,7 @@ Example 1-step check solution diagrams
       :download:`tex<diagrams/check_solution1_+_ans.tex>`
 
       .. figure:: diagrams/check_solution1_+_ans.png
-         :width: 300
+         :width: 600
          :alt: check_solution1_+_ans
          :figclass: align-center
 
