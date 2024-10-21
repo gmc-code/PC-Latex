@@ -27,6 +27,16 @@ PC-latex 2024
 
 .. toctree::
     :maxdepth: 2
+    :caption: 🔄 equations_inverse_operations
+    :numbered:
+
+    latex_maths/equations_1step/equations_1step_intro.rst
+    latex_maths/equations_1step/equations_1step_diagrams.rst
+d   latex_maths/equations_1step/equations_1step_booklets.rst
+
+
+.. toctree::
+    :maxdepth: 2
     :caption: 🔂 backtracking - 1step
     :numbered:
 
