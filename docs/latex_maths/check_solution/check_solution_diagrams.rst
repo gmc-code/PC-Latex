@@ -15,9 +15,9 @@ Check solutions to equations: 1 step diagrams
 
 | The python file, **check_solution_diagram_maker.py**, when run, will ask for these inputs:
 | Choose the arithmetic process:
-| ``"Enter 1, 2, 3, 4 or 5 for +, -, X, /, random \n"``
+| ``"Enter 1, 2, 3, 4 or 5 for +, -, X, /, random"``
 | Choose the file name base:
-| ``""Enter the base filename to be added to the prefix check_solution1_: \n"``
+| ``""Enter the base filename to be added to the prefix check_solution1_:"``
 | The filename will have "_q" added for the question diagram and "_ans" for the answer diagram.
 
 ----

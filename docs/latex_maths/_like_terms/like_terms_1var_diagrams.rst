@@ -15,7 +15,7 @@ Equations 1 step diagrams
 
 | The python file, **invop_diagram_maker.py**, when run, will ask for these inputs:
 | Choose the arithmetic process:
-| ``"Enter 1, 2, 3, 4 or 5 for +, -, X, /, random for 1st process"``
+| ``"Enter 1, 2, 3, 4 or 5 for +, -, X, /, random "``
 | Choose the file name base:
 | ``"Enter the base filename to be added to the prefix :"``
 | The prefix will be "involp1" for standard operations.

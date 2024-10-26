@@ -58,7 +58,7 @@ def main():
         num = 5  # random by default
     filename = input("Enter the base filename to be added to the prefix bt1_: \n")
     if not filename:
-        filename = "bt1_1st"  # "bt1_1st_q and bt1_1st_ans as default file"
+        filename = "1"  # "bt1_1st_q and bt1_1st_ans as default file"
     # set names of files that are made
     # questions
     tex_output_path = currfile_dir / f"bt1_{filename}_q.tex"

@@ -74,7 +74,7 @@ def main():
     #
     filename = input("Enter the base filename to be added to the prefix bt1Bk_: \n")
     if not filename:
-        filename = "bt1Bk_1st"  # "bt1Bk_1st_q and bt1Bk_1st_ans as default file"
+        filename = "1"  # "bt1Bk_1st_q and bt1Bk_1st_ans as default file"
     # set names of files that are made
     # questions
     tex_output_path = currfile_dir / f"bt1Bk_{filename}_q.tex"

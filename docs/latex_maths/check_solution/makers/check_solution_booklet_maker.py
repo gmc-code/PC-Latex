@@ -134,6 +134,11 @@ def main():
     # Replace the <<diagrams>> placeholder in the LaTeX template
     tex_template_txt = tex_template_txt.replace("<<diagrams>>", diagrams_text)
     tex_template_txt_ans = tex_template_txt_ans.replace("<<diagrams>>", diagrams_text_ans)
+    # Replace the <<chsol_filename>> placeholder in the LaTeX template
+    tex_template_txt = tex_template_txt.replace("<<chsol_filename>>", filename)
+    tex_template_txt_ans = tex_template_txt_ans.replace("<<chsol_filename>>", filename)
+
+
     # Write the question diagrams tex to an output file
     with open(tex_output_path, "w") as outfile:
         outfile.write(tex_template_txt)

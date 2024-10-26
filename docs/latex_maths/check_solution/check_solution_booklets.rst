@@ -16,9 +16,9 @@ Check solutions to equations: 1 step booklet python
 | :download:`magick_pdf_to_png.py<makers/magick_pdf_to_png.py>`
 
 | The python file, **check_solution_booklet_maker.py**, when run, will ask for these inputs:
-| Choose the first arithmetic process: ``"Enter 1, 2, 3, 4 or 5 for +, -, X, /, random \n"``
-| Choose the number of questions from 1 to 100: ``"Enter the number of questions from 1 to 100; with 10 per page \n"``
-| Choose the file name base: ``"Enter the base filename to be added to the prefix check_solution_Bk_: \n"``.
+| Choose the first arithmetic process: ``"Enter 1, 2, 3, 4 or 5 for +, -, X, /, random"``
+| Choose the number of questions from 1 to 100: ``"Enter the number of questions from 1 to 100; with 10 per page"``
+| Choose the file name base: ``"Enter the base filename to be added to the prefix check_solution_Bk_:"``.
 | The filename will have "_q" added for the question diagram and "_ans" for the answer diagram.
 
 

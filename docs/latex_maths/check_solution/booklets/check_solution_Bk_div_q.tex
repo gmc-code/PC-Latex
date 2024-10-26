@@ -7,9 +7,10 @@
 \usepackage[a4paper, portrait, margin=1cm]{geometry}
 \usepackage{multicol}
 \usepackage{fancyhdr}
+\usepackage[none]{hyphenat}
 
 \def \HeadingQuestions {\section*{\Large Name: \underline{\hspace{8cm}} \hfill Date: \underline{\hspace{3cm}}} \vspace{-3mm}
-{Check Solution: Questions} \vspace{1pt}\hrule}
+{div Check Solution: Questions} \vspace{1pt}\hrule}
 
 % \linespread{1.5} % Adjust line spacing factor
 \raggedbottom
@@ -24,7 +25,7 @@
 \newcounter{minipagecount}
 \begin{document}
 \HeadingQuestions
-\vspace{4mm}
+\vspace{1pt}
 \begin{multicols}{2}
 %  \begin{enumerate}
 \refstepcounter{minipagecount} % increments the counter minipagecount by one.
@@ -32,8 +33,8 @@
 % and inserts the current value of the minipagecount counter, enclosed in parentheses
 \begin{minipage}[t]{0.40\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
 
-    \noindent Determine whether \(x = 32\) is a solution to the equation \(\frac{x}{4} = 8\):
-    \vspace{2pt}  % Ensure spacing between problem statement and solution
+    \noindent Determine whether \(x = 21\) is a solution to the equation \(\frac{x}{7} = 3\):
+    \vspace{4pt}  % Ensure spacing between problem statement and solution
 
     \noindent
     \renewcommand{\arraystretch}{1.3} % Adjust line spacing in the aligned environment
@@ -52,20 +53,50 @@
     \renewcommand{\arraystretch}{1.0} % Adjust line spacing in the aligned environment
     \vspace{2pt}  % Optional spacing
 
-    \noindent \(\therefore\) Since \(\text{LHS} \dotuline{\hspace{5mm}} \text{RHS}\), \(x = 32\) \dotuline{\hspace{12mm}} a solution to the equation.
+    \noindent \(\therefore\) Since \(\text{LHS} \dotuline{\hspace{5mm}} \text{RHS}\), \(x = 21\) \dotuline{\hspace{12mm}} a solution to the equation.
 
 \end{minipage}
 
-\vspace*{0.5ex}
-\vfill{}
+ \vspace*{16pt}
 %  \begin{enumerate}
 \refstepcounter{minipagecount} % increments the counter minipagecount by one.
 \noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
 % and inserts the current value of the minipagecount counter, enclosed in parentheses
 \begin{minipage}[t]{0.40\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
 
-    \noindent Determine whether \(x = 20\) is a solution to the equation \(\frac{x}{10} = 2\):
-    \vspace{2pt}  % Ensure spacing between problem statement and solution
+    \noindent Determine whether \(x = 44\) is a solution to the equation \(\frac{x}{4} = 10\):
+    \vspace{4pt}  % Ensure spacing between problem statement and solution
+
+    \noindent
+    \renewcommand{\arraystretch}{1.3} % Adjust line spacing in the aligned environment
+    \begin{tabular}{@{}p{0.60\linewidth}@{}p{0.40\linewidth}@{}}
+        \(\begin{aligned}
+            \text{LHS} &=  \\
+                    &=  \\
+                    &= 
+        \end{aligned}\) &
+        \(\begin{aligned}
+            \text{RHS} &= \\
+                    & \\
+                    &
+        \end{aligned}\)
+    \end{tabular}
+    \renewcommand{\arraystretch}{1.0} % Adjust line spacing in the aligned environment
+    \vspace{2pt}  % Optional spacing
+
+    \noindent \(\therefore\) Since \(\text{LHS} \dotuline{\hspace{5mm}} \text{RHS}\), \(x = 44\) \dotuline{\hspace{12mm}} a solution to the equation.
+
+\end{minipage}
+
+ \vspace*{16pt}
+%  \begin{enumerate}
+\refstepcounter{minipagecount} % increments the counter minipagecount by one.
+\noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
+% and inserts the current value of the minipagecount counter, enclosed in parentheses
+\begin{minipage}[t]{0.40\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
+
+    \noindent Determine whether \(x = 20\) is a solution to the equation \(\frac{x}{2} = 10\):
+    \vspace{4pt}  % Ensure spacing between problem statement and solution
 
     \noindent
     \renewcommand{\arraystretch}{1.3} % Adjust line spacing in the aligned environment
@@ -88,16 +119,15 @@
 
 \end{minipage}
 
-\vspace*{0.5ex}
-\vfill{}
+ \vspace*{16pt}
 %  \begin{enumerate}
 \refstepcounter{minipagecount} % increments the counter minipagecount by one.
 \noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
 % and inserts the current value of the minipagecount counter, enclosed in parentheses
 \begin{minipage}[t]{0.40\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
 
-    \noindent Determine whether \(x = 73\) is a solution to the equation \(\frac{x}{8} = 9\):
-    \vspace{2pt}  % Ensure spacing between problem statement and solution
+    \noindent Determine whether \(x = 14\) is a solution to the equation \(\frac{x}{2} = 6\):
+    \vspace{4pt}  % Ensure spacing between problem statement and solution
 
     \noindent
     \renewcommand{\arraystretch}{1.3} % Adjust line spacing in the aligned environment
@@ -116,52 +146,19 @@
     \renewcommand{\arraystretch}{1.0} % Adjust line spacing in the aligned environment
     \vspace{2pt}  % Optional spacing
 
-    \noindent \(\therefore\) Since \(\text{LHS} \dotuline{\hspace{5mm}} \text{RHS}\), \(x = 73\) \dotuline{\hspace{12mm}} a solution to the equation.
+    \noindent \(\therefore\) Since \(\text{LHS} \dotuline{\hspace{5mm}} \text{RHS}\), \(x = 14\) \dotuline{\hspace{12mm}} a solution to the equation.
 
 \end{minipage}
 
-\vspace*{0.5ex}
-\vfill{}
+ \vspace*{16pt}
 %  \begin{enumerate}
 \refstepcounter{minipagecount} % increments the counter minipagecount by one.
 \noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
 % and inserts the current value of the minipagecount counter, enclosed in parentheses
 \begin{minipage}[t]{0.40\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
 
-    \noindent Determine whether \(x = 21\) is a solution to the equation \(\frac{x}{4} = 5\):
-    \vspace{2pt}  % Ensure spacing between problem statement and solution
-
-    \noindent
-    \renewcommand{\arraystretch}{1.3} % Adjust line spacing in the aligned environment
-    \begin{tabular}{@{}p{0.60\linewidth}@{}p{0.40\linewidth}@{}}
-        \(\begin{aligned}
-            \text{LHS} &=  \\
-                    &=  \\
-                    &= 
-        \end{aligned}\) &
-        \(\begin{aligned}
-            \text{RHS} &= \\
-                    & \\
-                    &
-        \end{aligned}\)
-    \end{tabular}
-    \renewcommand{\arraystretch}{1.0} % Adjust line spacing in the aligned environment
-    \vspace{2pt}  % Optional spacing
-
-    \noindent \(\therefore\) Since \(\text{LHS} \dotuline{\hspace{5mm}} \text{RHS}\), \(x = 21\) \dotuline{\hspace{12mm}} a solution to the equation.
-
-\end{minipage}
-
-\vspace*{0.5ex}
-\vfill{}
-%  \begin{enumerate}
-\refstepcounter{minipagecount} % increments the counter minipagecount by one.
-\noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
-% and inserts the current value of the minipagecount counter, enclosed in parentheses
-\begin{minipage}[t]{0.40\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
-
-    \noindent Determine whether \(x = 40\) is a solution to the equation \(\frac{x}{4} = 10\):
-    \vspace{2pt}  % Ensure spacing between problem statement and solution
+    \noindent Determine whether \(x = 40\) is a solution to the equation \(\frac{x}{5} = 9\):
+    \vspace{4pt}  % Ensure spacing between problem statement and solution
 
     \noindent
     \renewcommand{\arraystretch}{1.3} % Adjust line spacing in the aligned environment
@@ -184,8 +181,7 @@
 
 \end{minipage}
 
-\vspace*{0.5ex}
-\vfill{}
+ \vspace*{16pt}
 \columnbreak
     %  \begin{enumerate}
 \refstepcounter{minipagecount} % increments the counter minipagecount by one.
@@ -193,8 +189,101 @@
 % and inserts the current value of the minipagecount counter, enclosed in parentheses
 \begin{minipage}[t]{0.40\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
 
-    \noindent Determine whether \(x = 21\) is a solution to the equation \(\frac{x}{4} = 6\):
-    \vspace{2pt}  % Ensure spacing between problem statement and solution
+    \noindent Determine whether \(x = 6\) is a solution to the equation \(\frac{x}{2} = 5\):
+    \vspace{4pt}  % Ensure spacing between problem statement and solution
+
+    \noindent
+    \renewcommand{\arraystretch}{1.3} % Adjust line spacing in the aligned environment
+    \begin{tabular}{@{}p{0.60\linewidth}@{}p{0.40\linewidth}@{}}
+        \(\begin{aligned}
+            \text{LHS} &=  \\
+                    &=  \\
+                    &= 
+        \end{aligned}\) &
+        \(\begin{aligned}
+            \text{RHS} &= \\
+                    & \\
+                    &
+        \end{aligned}\)
+    \end{tabular}
+    \renewcommand{\arraystretch}{1.0} % Adjust line spacing in the aligned environment
+    \vspace{2pt}  % Optional spacing
+
+    \noindent \(\therefore\) Since \(\text{LHS} \dotuline{\hspace{5mm}} \text{RHS}\), \(x = 6\) \dotuline{\hspace{12mm}} a solution to the equation.
+
+\end{minipage}
+
+ \vspace*{16pt}
+%  \begin{enumerate}
+\refstepcounter{minipagecount} % increments the counter minipagecount by one.
+\noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
+% and inserts the current value of the minipagecount counter, enclosed in parentheses
+\begin{minipage}[t]{0.40\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
+
+    \noindent Determine whether \(x = 40\) is a solution to the equation \(\frac{x}{4} = 10\):
+    \vspace{4pt}  % Ensure spacing between problem statement and solution
+
+    \noindent
+    \renewcommand{\arraystretch}{1.3} % Adjust line spacing in the aligned environment
+    \begin{tabular}{@{}p{0.60\linewidth}@{}p{0.40\linewidth}@{}}
+        \(\begin{aligned}
+            \text{LHS} &=  \\
+                    &=  \\
+                    &= 
+        \end{aligned}\) &
+        \(\begin{aligned}
+            \text{RHS} &= \\
+                    & \\
+                    &
+        \end{aligned}\)
+    \end{tabular}
+    \renewcommand{\arraystretch}{1.0} % Adjust line spacing in the aligned environment
+    \vspace{2pt}  % Optional spacing
+
+    \noindent \(\therefore\) Since \(\text{LHS} \dotuline{\hspace{5mm}} \text{RHS}\), \(x = 40\) \dotuline{\hspace{12mm}} a solution to the equation.
+
+\end{minipage}
+
+ \vspace*{16pt}
+%  \begin{enumerate}
+\refstepcounter{minipagecount} % increments the counter minipagecount by one.
+\noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
+% and inserts the current value of the minipagecount counter, enclosed in parentheses
+\begin{minipage}[t]{0.40\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
+
+    \noindent Determine whether \(x = 0\) is a solution to the equation \(\frac{x}{9} = 2\):
+    \vspace{4pt}  % Ensure spacing between problem statement and solution
+
+    \noindent
+    \renewcommand{\arraystretch}{1.3} % Adjust line spacing in the aligned environment
+    \begin{tabular}{@{}p{0.60\linewidth}@{}p{0.40\linewidth}@{}}
+        \(\begin{aligned}
+            \text{LHS} &=  \\
+                    &=  \\
+                    &= 
+        \end{aligned}\) &
+        \(\begin{aligned}
+            \text{RHS} &= \\
+                    & \\
+                    &
+        \end{aligned}\)
+    \end{tabular}
+    \renewcommand{\arraystretch}{1.0} % Adjust line spacing in the aligned environment
+    \vspace{2pt}  % Optional spacing
+
+    \noindent \(\therefore\) Since \(\text{LHS} \dotuline{\hspace{5mm}} \text{RHS}\), \(x = 0\) \dotuline{\hspace{12mm}} a solution to the equation.
+
+\end{minipage}
+
+ \vspace*{16pt}
+%  \begin{enumerate}
+\refstepcounter{minipagecount} % increments the counter minipagecount by one.
+\noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
+% and inserts the current value of the minipagecount counter, enclosed in parentheses
+\begin{minipage}[t]{0.40\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
+
+    \noindent Determine whether \(x = 21\) is a solution to the equation \(\frac{x}{3} = 10\):
+    \vspace{4pt}  % Ensure spacing between problem statement and solution
 
     \noindent
     \renewcommand{\arraystretch}{1.3} % Adjust line spacing in the aligned environment
@@ -217,273 +306,15 @@
 
 \end{minipage}
 
-\vspace*{0.5ex}
-\vfill{}
+ \vspace*{16pt}
 %  \begin{enumerate}
 \refstepcounter{minipagecount} % increments the counter minipagecount by one.
 \noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
 % and inserts the current value of the minipagecount counter, enclosed in parentheses
 \begin{minipage}[t]{0.40\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
 
-    \noindent Determine whether \(x = 16\) is a solution to the equation \(\frac{x}{8} = 2\):
-    \vspace{2pt}  % Ensure spacing between problem statement and solution
-
-    \noindent
-    \renewcommand{\arraystretch}{1.3} % Adjust line spacing in the aligned environment
-    \begin{tabular}{@{}p{0.60\linewidth}@{}p{0.40\linewidth}@{}}
-        \(\begin{aligned}
-            \text{LHS} &=  \\
-                    &=  \\
-                    &= 
-        \end{aligned}\) &
-        \(\begin{aligned}
-            \text{RHS} &= \\
-                    & \\
-                    &
-        \end{aligned}\)
-    \end{tabular}
-    \renewcommand{\arraystretch}{1.0} % Adjust line spacing in the aligned environment
-    \vspace{2pt}  % Optional spacing
-
-    \noindent \(\therefore\) Since \(\text{LHS} \dotuline{\hspace{5mm}} \text{RHS}\), \(x = 16\) \dotuline{\hspace{12mm}} a solution to the equation.
-
-\end{minipage}
-
-\vspace*{0.5ex}
-\vfill{}
-%  \begin{enumerate}
-\refstepcounter{minipagecount} % increments the counter minipagecount by one.
-\noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
-% and inserts the current value of the minipagecount counter, enclosed in parentheses
-\begin{minipage}[t]{0.40\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
-
-    \noindent Determine whether \(x = 9\) is a solution to the equation \(\frac{x}{3} = 3\):
-    \vspace{2pt}  % Ensure spacing between problem statement and solution
-
-    \noindent
-    \renewcommand{\arraystretch}{1.3} % Adjust line spacing in the aligned environment
-    \begin{tabular}{@{}p{0.60\linewidth}@{}p{0.40\linewidth}@{}}
-        \(\begin{aligned}
-            \text{LHS} &=  \\
-                    &=  \\
-                    &= 
-        \end{aligned}\) &
-        \(\begin{aligned}
-            \text{RHS} &= \\
-                    & \\
-                    &
-        \end{aligned}\)
-    \end{tabular}
-    \renewcommand{\arraystretch}{1.0} % Adjust line spacing in the aligned environment
-    \vspace{2pt}  % Optional spacing
-
-    \noindent \(\therefore\) Since \(\text{LHS} \dotuline{\hspace{5mm}} \text{RHS}\), \(x = 9\) \dotuline{\hspace{12mm}} a solution to the equation.
-
-\end{minipage}
-
-\vspace*{0.5ex}
-\vfill{}
-%  \begin{enumerate}
-\refstepcounter{minipagecount} % increments the counter minipagecount by one.
-\noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
-% and inserts the current value of the minipagecount counter, enclosed in parentheses
-\begin{minipage}[t]{0.40\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
-
-    \noindent Determine whether \(x = 30\) is a solution to the equation \(\frac{x}{10} = 3\):
-    \vspace{2pt}  % Ensure spacing between problem statement and solution
-
-    \noindent
-    \renewcommand{\arraystretch}{1.3} % Adjust line spacing in the aligned environment
-    \begin{tabular}{@{}p{0.60\linewidth}@{}p{0.40\linewidth}@{}}
-        \(\begin{aligned}
-            \text{LHS} &=  \\
-                    &=  \\
-                    &= 
-        \end{aligned}\) &
-        \(\begin{aligned}
-            \text{RHS} &= \\
-                    & \\
-                    &
-        \end{aligned}\)
-    \end{tabular}
-    \renewcommand{\arraystretch}{1.0} % Adjust line spacing in the aligned environment
-    \vspace{2pt}  % Optional spacing
-
-    \noindent \(\therefore\) Since \(\text{LHS} \dotuline{\hspace{5mm}} \text{RHS}\), \(x = 30\) \dotuline{\hspace{12mm}} a solution to the equation.
-
-\end{minipage}
-
-\vspace*{0.5ex}
-\vfill{}
-%  \begin{enumerate}
-\refstepcounter{minipagecount} % increments the counter minipagecount by one.
-\noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
-% and inserts the current value of the minipagecount counter, enclosed in parentheses
-\begin{minipage}[t]{0.40\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
-
-    \noindent Determine whether \(x = 21\) is a solution to the equation \(\frac{x}{3} = 7\):
-    \vspace{2pt}  % Ensure spacing between problem statement and solution
-
-    \noindent
-    \renewcommand{\arraystretch}{1.3} % Adjust line spacing in the aligned environment
-    \begin{tabular}{@{}p{0.60\linewidth}@{}p{0.40\linewidth}@{}}
-        \(\begin{aligned}
-            \text{LHS} &=  \\
-                    &=  \\
-                    &= 
-        \end{aligned}\) &
-        \(\begin{aligned}
-            \text{RHS} &= \\
-                    & \\
-                    &
-        \end{aligned}\)
-    \end{tabular}
-    \renewcommand{\arraystretch}{1.0} % Adjust line spacing in the aligned environment
-    \vspace{2pt}  % Optional spacing
-
-    \noindent \(\therefore\) Since \(\text{LHS} \dotuline{\hspace{5mm}} \text{RHS}\), \(x = 21\) \dotuline{\hspace{12mm}} a solution to the equation.
-
-\end{minipage}
-
-\vspace*{0.5ex}
-\vfill{}
-\newpage
-    %  \begin{enumerate}
-\refstepcounter{minipagecount} % increments the counter minipagecount by one.
-\noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
-% and inserts the current value of the minipagecount counter, enclosed in parentheses
-\begin{minipage}[t]{0.40\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
-
-    \noindent Determine whether \(x = 25\) is a solution to the equation \(\frac{x}{9} = 3\):
-    \vspace{2pt}  % Ensure spacing between problem statement and solution
-
-    \noindent
-    \renewcommand{\arraystretch}{1.3} % Adjust line spacing in the aligned environment
-    \begin{tabular}{@{}p{0.60\linewidth}@{}p{0.40\linewidth}@{}}
-        \(\begin{aligned}
-            \text{LHS} &=  \\
-                    &=  \\
-                    &= 
-        \end{aligned}\) &
-        \(\begin{aligned}
-            \text{RHS} &= \\
-                    & \\
-                    &
-        \end{aligned}\)
-    \end{tabular}
-    \renewcommand{\arraystretch}{1.0} % Adjust line spacing in the aligned environment
-    \vspace{2pt}  % Optional spacing
-
-    \noindent \(\therefore\) Since \(\text{LHS} \dotuline{\hspace{5mm}} \text{RHS}\), \(x = 25\) \dotuline{\hspace{12mm}} a solution to the equation.
-
-\end{minipage}
-
-\vspace*{0.5ex}
-\vfill{}
-%  \begin{enumerate}
-\refstepcounter{minipagecount} % increments the counter minipagecount by one.
-\noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
-% and inserts the current value of the minipagecount counter, enclosed in parentheses
-\begin{minipage}[t]{0.40\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
-
-    \noindent Determine whether \(x = 30\) is a solution to the equation \(\frac{x}{3} = 10\):
-    \vspace{2pt}  % Ensure spacing between problem statement and solution
-
-    \noindent
-    \renewcommand{\arraystretch}{1.3} % Adjust line spacing in the aligned environment
-    \begin{tabular}{@{}p{0.60\linewidth}@{}p{0.40\linewidth}@{}}
-        \(\begin{aligned}
-            \text{LHS} &=  \\
-                    &=  \\
-                    &= 
-        \end{aligned}\) &
-        \(\begin{aligned}
-            \text{RHS} &= \\
-                    & \\
-                    &
-        \end{aligned}\)
-    \end{tabular}
-    \renewcommand{\arraystretch}{1.0} % Adjust line spacing in the aligned environment
-    \vspace{2pt}  % Optional spacing
-
-    \noindent \(\therefore\) Since \(\text{LHS} \dotuline{\hspace{5mm}} \text{RHS}\), \(x = 30\) \dotuline{\hspace{12mm}} a solution to the equation.
-
-\end{minipage}
-
-\vspace*{0.5ex}
-\vfill{}
-%  \begin{enumerate}
-\refstepcounter{minipagecount} % increments the counter minipagecount by one.
-\noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
-% and inserts the current value of the minipagecount counter, enclosed in parentheses
-\begin{minipage}[t]{0.40\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
-
-    \noindent Determine whether \(x = 5\) is a solution to the equation \(\frac{x}{4} = 2\):
-    \vspace{2pt}  % Ensure spacing between problem statement and solution
-
-    \noindent
-    \renewcommand{\arraystretch}{1.3} % Adjust line spacing in the aligned environment
-    \begin{tabular}{@{}p{0.60\linewidth}@{}p{0.40\linewidth}@{}}
-        \(\begin{aligned}
-            \text{LHS} &=  \\
-                    &=  \\
-                    &= 
-        \end{aligned}\) &
-        \(\begin{aligned}
-            \text{RHS} &= \\
-                    & \\
-                    &
-        \end{aligned}\)
-    \end{tabular}
-    \renewcommand{\arraystretch}{1.0} % Adjust line spacing in the aligned environment
-    \vspace{2pt}  % Optional spacing
-
-    \noindent \(\therefore\) Since \(\text{LHS} \dotuline{\hspace{5mm}} \text{RHS}\), \(x = 5\) \dotuline{\hspace{12mm}} a solution to the equation.
-
-\end{minipage}
-
-\vspace*{0.5ex}
-\vfill{}
-%  \begin{enumerate}
-\refstepcounter{minipagecount} % increments the counter minipagecount by one.
-\noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
-% and inserts the current value of the minipagecount counter, enclosed in parentheses
-\begin{minipage}[t]{0.40\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
-
-    \noindent Determine whether \(x = 54\) is a solution to the equation \(\frac{x}{9} = 6\):
-    \vspace{2pt}  % Ensure spacing between problem statement and solution
-
-    \noindent
-    \renewcommand{\arraystretch}{1.3} % Adjust line spacing in the aligned environment
-    \begin{tabular}{@{}p{0.60\linewidth}@{}p{0.40\linewidth}@{}}
-        \(\begin{aligned}
-            \text{LHS} &=  \\
-                    &=  \\
-                    &= 
-        \end{aligned}\) &
-        \(\begin{aligned}
-            \text{RHS} &= \\
-                    & \\
-                    &
-        \end{aligned}\)
-    \end{tabular}
-    \renewcommand{\arraystretch}{1.0} % Adjust line spacing in the aligned environment
-    \vspace{2pt}  % Optional spacing
-
-    \noindent \(\therefore\) Since \(\text{LHS} \dotuline{\hspace{5mm}} \text{RHS}\), \(x = 54\) \dotuline{\hspace{12mm}} a solution to the equation.
-
-\end{minipage}
-
-\vspace*{0.5ex}
-\vfill{}
-%  \begin{enumerate}
-\refstepcounter{minipagecount} % increments the counter minipagecount by one.
-\noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
-% and inserts the current value of the minipagecount counter, enclosed in parentheses
-\begin{minipage}[t]{0.40\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
-
-    \noindent Determine whether \(x = 18\) is a solution to the equation \(\frac{x}{2} = 9\):
-    \vspace{2pt}  % Ensure spacing between problem statement and solution
+    \noindent Determine whether \(x = 18\) is a solution to the equation \(\frac{x}{3} = 9\):
+    \vspace{4pt}  % Ensure spacing between problem statement and solution
 
     \noindent
     \renewcommand{\arraystretch}{1.3} % Adjust line spacing in the aligned environment
@@ -506,8 +337,163 @@
 
 \end{minipage}
 
-\vspace*{0.5ex}
-\vfill{}
+ \vspace*{16pt}
+\newpage
+    %  \begin{enumerate}
+\refstepcounter{minipagecount} % increments the counter minipagecount by one.
+\noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
+% and inserts the current value of the minipagecount counter, enclosed in parentheses
+\begin{minipage}[t]{0.40\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
+
+    \noindent Determine whether \(x = 35\) is a solution to the equation \(\frac{x}{5} = 7\):
+    \vspace{4pt}  % Ensure spacing between problem statement and solution
+
+    \noindent
+    \renewcommand{\arraystretch}{1.3} % Adjust line spacing in the aligned environment
+    \begin{tabular}{@{}p{0.60\linewidth}@{}p{0.40\linewidth}@{}}
+        \(\begin{aligned}
+            \text{LHS} &=  \\
+                    &=  \\
+                    &= 
+        \end{aligned}\) &
+        \(\begin{aligned}
+            \text{RHS} &= \\
+                    & \\
+                    &
+        \end{aligned}\)
+    \end{tabular}
+    \renewcommand{\arraystretch}{1.0} % Adjust line spacing in the aligned environment
+    \vspace{2pt}  % Optional spacing
+
+    \noindent \(\therefore\) Since \(\text{LHS} \dotuline{\hspace{5mm}} \text{RHS}\), \(x = 35\) \dotuline{\hspace{12mm}} a solution to the equation.
+
+\end{minipage}
+
+ \vspace*{16pt}
+%  \begin{enumerate}
+\refstepcounter{minipagecount} % increments the counter minipagecount by one.
+\noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
+% and inserts the current value of the minipagecount counter, enclosed in parentheses
+\begin{minipage}[t]{0.40\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
+
+    \noindent Determine whether \(x = 45\) is a solution to the equation \(\frac{x}{5} = 9\):
+    \vspace{4pt}  % Ensure spacing between problem statement and solution
+
+    \noindent
+    \renewcommand{\arraystretch}{1.3} % Adjust line spacing in the aligned environment
+    \begin{tabular}{@{}p{0.60\linewidth}@{}p{0.40\linewidth}@{}}
+        \(\begin{aligned}
+            \text{LHS} &=  \\
+                    &=  \\
+                    &= 
+        \end{aligned}\) &
+        \(\begin{aligned}
+            \text{RHS} &= \\
+                    & \\
+                    &
+        \end{aligned}\)
+    \end{tabular}
+    \renewcommand{\arraystretch}{1.0} % Adjust line spacing in the aligned environment
+    \vspace{2pt}  % Optional spacing
+
+    \noindent \(\therefore\) Since \(\text{LHS} \dotuline{\hspace{5mm}} \text{RHS}\), \(x = 45\) \dotuline{\hspace{12mm}} a solution to the equation.
+
+\end{minipage}
+
+ \vspace*{16pt}
+%  \begin{enumerate}
+\refstepcounter{minipagecount} % increments the counter minipagecount by one.
+\noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
+% and inserts the current value of the minipagecount counter, enclosed in parentheses
+\begin{minipage}[t]{0.40\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
+
+    \noindent Determine whether \(x = 16\) is a solution to the equation \(\frac{x}{8} = 2\):
+    \vspace{4pt}  % Ensure spacing between problem statement and solution
+
+    \noindent
+    \renewcommand{\arraystretch}{1.3} % Adjust line spacing in the aligned environment
+    \begin{tabular}{@{}p{0.60\linewidth}@{}p{0.40\linewidth}@{}}
+        \(\begin{aligned}
+            \text{LHS} &=  \\
+                    &=  \\
+                    &= 
+        \end{aligned}\) &
+        \(\begin{aligned}
+            \text{RHS} &= \\
+                    & \\
+                    &
+        \end{aligned}\)
+    \end{tabular}
+    \renewcommand{\arraystretch}{1.0} % Adjust line spacing in the aligned environment
+    \vspace{2pt}  % Optional spacing
+
+    \noindent \(\therefore\) Since \(\text{LHS} \dotuline{\hspace{5mm}} \text{RHS}\), \(x = 16\) \dotuline{\hspace{12mm}} a solution to the equation.
+
+\end{minipage}
+
+ \vspace*{16pt}
+%  \begin{enumerate}
+\refstepcounter{minipagecount} % increments the counter minipagecount by one.
+\noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
+% and inserts the current value of the minipagecount counter, enclosed in parentheses
+\begin{minipage}[t]{0.40\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
+
+    \noindent Determine whether \(x = 63\) is a solution to the equation \(\frac{x}{7} = 8\):
+    \vspace{4pt}  % Ensure spacing between problem statement and solution
+
+    \noindent
+    \renewcommand{\arraystretch}{1.3} % Adjust line spacing in the aligned environment
+    \begin{tabular}{@{}p{0.60\linewidth}@{}p{0.40\linewidth}@{}}
+        \(\begin{aligned}
+            \text{LHS} &=  \\
+                    &=  \\
+                    &= 
+        \end{aligned}\) &
+        \(\begin{aligned}
+            \text{RHS} &= \\
+                    & \\
+                    &
+        \end{aligned}\)
+    \end{tabular}
+    \renewcommand{\arraystretch}{1.0} % Adjust line spacing in the aligned environment
+    \vspace{2pt}  % Optional spacing
+
+    \noindent \(\therefore\) Since \(\text{LHS} \dotuline{\hspace{5mm}} \text{RHS}\), \(x = 63\) \dotuline{\hspace{12mm}} a solution to the equation.
+
+\end{minipage}
+
+ \vspace*{16pt}
+%  \begin{enumerate}
+\refstepcounter{minipagecount} % increments the counter minipagecount by one.
+\noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
+% and inserts the current value of the minipagecount counter, enclosed in parentheses
+\begin{minipage}[t]{0.40\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
+
+    \noindent Determine whether \(x = 60\) is a solution to the equation \(\frac{x}{10} = 6\):
+    \vspace{4pt}  % Ensure spacing between problem statement and solution
+
+    \noindent
+    \renewcommand{\arraystretch}{1.3} % Adjust line spacing in the aligned environment
+    \begin{tabular}{@{}p{0.60\linewidth}@{}p{0.40\linewidth}@{}}
+        \(\begin{aligned}
+            \text{LHS} &=  \\
+                    &=  \\
+                    &= 
+        \end{aligned}\) &
+        \(\begin{aligned}
+            \text{RHS} &= \\
+                    & \\
+                    &
+        \end{aligned}\)
+    \end{tabular}
+    \renewcommand{\arraystretch}{1.0} % Adjust line spacing in the aligned environment
+    \vspace{2pt}  % Optional spacing
+
+    \noindent \(\therefore\) Since \(\text{LHS} \dotuline{\hspace{5mm}} \text{RHS}\), \(x = 60\) \dotuline{\hspace{12mm}} a solution to the equation.
+
+\end{minipage}
+
+ \vspace*{16pt}
 \columnbreak
     %  \begin{enumerate}
 \refstepcounter{minipagecount} % increments the counter minipagecount by one.
@@ -515,8 +501,8 @@
 % and inserts the current value of the minipagecount counter, enclosed in parentheses
 \begin{minipage}[t]{0.40\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
 
-    \noindent Determine whether \(x = 40\) is a solution to the equation \(\frac{x}{5} = 8\):
-    \vspace{2pt}  % Ensure spacing between problem statement and solution
+    \noindent Determine whether \(x = 60\) is a solution to the equation \(\frac{x}{10} = 8\):
+    \vspace{4pt}  % Ensure spacing between problem statement and solution
 
     \noindent
     \renewcommand{\arraystretch}{1.3} % Adjust line spacing in the aligned environment
@@ -535,20 +521,19 @@
     \renewcommand{\arraystretch}{1.0} % Adjust line spacing in the aligned environment
     \vspace{2pt}  % Optional spacing
 
-    \noindent \(\therefore\) Since \(\text{LHS} \dotuline{\hspace{5mm}} \text{RHS}\), \(x = 40\) \dotuline{\hspace{12mm}} a solution to the equation.
+    \noindent \(\therefore\) Since \(\text{LHS} \dotuline{\hspace{5mm}} \text{RHS}\), \(x = 60\) \dotuline{\hspace{12mm}} a solution to the equation.
 
 \end{minipage}
 
-\vspace*{0.5ex}
-\vfill{}
+ \vspace*{16pt}
 %  \begin{enumerate}
 \refstepcounter{minipagecount} % increments the counter minipagecount by one.
 \noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
 % and inserts the current value of the minipagecount counter, enclosed in parentheses
 \begin{minipage}[t]{0.40\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
 
-    \noindent Determine whether \(x = 41\) is a solution to the equation \(\frac{x}{10} = 4\):
-    \vspace{2pt}  % Ensure spacing between problem statement and solution
+    \noindent Determine whether \(x = 50\) is a solution to the equation \(\frac{x}{10} = 5\):
+    \vspace{4pt}  % Ensure spacing between problem statement and solution
 
     \noindent
     \renewcommand{\arraystretch}{1.3} % Adjust line spacing in the aligned environment
@@ -567,20 +552,19 @@
     \renewcommand{\arraystretch}{1.0} % Adjust line spacing in the aligned environment
     \vspace{2pt}  % Optional spacing
 
-    \noindent \(\therefore\) Since \(\text{LHS} \dotuline{\hspace{5mm}} \text{RHS}\), \(x = 41\) \dotuline{\hspace{12mm}} a solution to the equation.
+    \noindent \(\therefore\) Since \(\text{LHS} \dotuline{\hspace{5mm}} \text{RHS}\), \(x = 50\) \dotuline{\hspace{12mm}} a solution to the equation.
 
 \end{minipage}
 
-\vspace*{0.5ex}
-\vfill{}
+ \vspace*{16pt}
 %  \begin{enumerate}
 \refstepcounter{minipagecount} % increments the counter minipagecount by one.
 \noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
 % and inserts the current value of the minipagecount counter, enclosed in parentheses
 \begin{minipage}[t]{0.40\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
 
-    \noindent Determine whether \(x = 36\) is a solution to the equation \(\frac{x}{9} = 4\):
-    \vspace{2pt}  % Ensure spacing between problem statement and solution
+    \noindent Determine whether \(x = 9\) is a solution to the equation \(\frac{x}{3} = 3\):
+    \vspace{4pt}  % Ensure spacing between problem statement and solution
 
     \noindent
     \renewcommand{\arraystretch}{1.3} % Adjust line spacing in the aligned environment
@@ -599,20 +583,19 @@
     \renewcommand{\arraystretch}{1.0} % Adjust line spacing in the aligned environment
     \vspace{2pt}  % Optional spacing
 
-    \noindent \(\therefore\) Since \(\text{LHS} \dotuline{\hspace{5mm}} \text{RHS}\), \(x = 36\) \dotuline{\hspace{12mm}} a solution to the equation.
+    \noindent \(\therefore\) Since \(\text{LHS} \dotuline{\hspace{5mm}} \text{RHS}\), \(x = 9\) \dotuline{\hspace{12mm}} a solution to the equation.
 
 \end{minipage}
 
-\vspace*{0.5ex}
-\vfill{}
+ \vspace*{16pt}
 %  \begin{enumerate}
 \refstepcounter{minipagecount} % increments the counter minipagecount by one.
 \noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
 % and inserts the current value of the minipagecount counter, enclosed in parentheses
 \begin{minipage}[t]{0.40\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
 
-    \noindent Determine whether \(x = 20\) is a solution to the equation \(\frac{x}{5} = 4\):
-    \vspace{2pt}  % Ensure spacing between problem statement and solution
+    \noindent Determine whether \(x = 30\) is a solution to the equation \(\frac{x}{10} = 4\):
+    \vspace{4pt}  % Ensure spacing between problem statement and solution
 
     \noindent
     \renewcommand{\arraystretch}{1.3} % Adjust line spacing in the aligned environment
@@ -631,20 +614,19 @@
     \renewcommand{\arraystretch}{1.0} % Adjust line spacing in the aligned environment
     \vspace{2pt}  % Optional spacing
 
-    \noindent \(\therefore\) Since \(\text{LHS} \dotuline{\hspace{5mm}} \text{RHS}\), \(x = 20\) \dotuline{\hspace{12mm}} a solution to the equation.
+    \noindent \(\therefore\) Since \(\text{LHS} \dotuline{\hspace{5mm}} \text{RHS}\), \(x = 30\) \dotuline{\hspace{12mm}} a solution to the equation.
 
 \end{minipage}
 
-\vspace*{0.5ex}
-\vfill{}
+ \vspace*{16pt}
 %  \begin{enumerate}
 \refstepcounter{minipagecount} % increments the counter minipagecount by one.
 \noindent{(\theminipagecount)}\hspace{0.1mm} % By default, LaTeX indents the first line of a new paragraph, but \noindent overrides this
 % and inserts the current value of the minipagecount counter, enclosed in parentheses
 \begin{minipage}[t]{0.40\textwidth} % The [t] option aligns the top of the minipage with the baseline of the surrounding text.
 
-    \noindent Determine whether \(x = 20\) is a solution to the equation \(\frac{x}{5} = 4\):
-    \vspace{2pt}  % Ensure spacing between problem statement and solution
+    \noindent Determine whether \(x = 0\) is a solution to the equation \(\frac{x}{3} = 3\):
+    \vspace{4pt}  % Ensure spacing between problem statement and solution
 
     \noindent
     \renewcommand{\arraystretch}{1.3} % Adjust line spacing in the aligned environment
@@ -663,12 +645,11 @@
     \renewcommand{\arraystretch}{1.0} % Adjust line spacing in the aligned environment
     \vspace{2pt}  % Optional spacing
 
-    \noindent \(\therefore\) Since \(\text{LHS} \dotuline{\hspace{5mm}} \text{RHS}\), \(x = 20\) \dotuline{\hspace{12mm}} a solution to the equation.
+    \noindent \(\therefore\) Since \(\text{LHS} \dotuline{\hspace{5mm}} \text{RHS}\), \(x = 0\) \dotuline{\hspace{12mm}} a solution to the equation.
 
 \end{minipage}
 
-\vspace*{0.5ex}
-\vfill{}
+ \vspace*{16pt}
 \newpage
     
 \end{multicols}

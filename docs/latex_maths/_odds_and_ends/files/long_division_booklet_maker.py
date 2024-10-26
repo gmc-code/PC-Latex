@@ -95,7 +95,7 @@ def main():
     #
     filename = input("Enter the base filename to be added to the prefix asd_: \n")
     if not filename:
-        filename = "asd_1"  # "asd_1_q and asd_1_ans as default file"
+        filename = "1"  # "asd_1_q and asd_1_ans as default file"
     # set names of files that are made
     # questions
     tex_output_path = currfile_dir / f"asd_{filename}_q.tex"

@@ -159,7 +159,7 @@ def main():
         num = 6  # random by default
     filename = input("Enter the base filename to be added to the prefix nl_: \n")
     if not filename:
-        filename = "nl_1st"  # "nl_1st_q and nl_1st_ans as default file"
+        filename = "1"  # "nl_1st_q and nl_1st_ans as default file"
     # set names of files that are made
     # questions
       # questions

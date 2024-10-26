@@ -7,9 +7,10 @@
 \usepackage[a4paper, portrait, margin=1cm]{geometry}
 \usepackage{multicol}
 \usepackage{fancyhdr}
+\usepackage[none]{hyphenat}
 
 \def \HeadingQuestions {\section*{\Large Name: \underline{\hspace{8cm}} \hfill Date: \underline{\hspace{3cm}}} \vspace{-3mm}
-{Check Solution: Questions} \vspace{1pt}\hrule}
+{<<chsol_filename>> Check Solution: Questions} \vspace{1pt}\hrule}
 
 % \linespread{1.5} % Adjust line spacing factor
 \raggedbottom
@@ -24,7 +25,7 @@
 \newcounter{minipagecount}
 \begin{document}
 \HeadingQuestions
-\vspace{4mm}
+\vspace{1pt}
 \begin{multicols}{2}
 <<diagrams>>
 \end{multicols}

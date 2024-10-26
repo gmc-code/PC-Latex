@@ -85,7 +85,7 @@ def main():
     filename = path_obj.stem
     # filename = input("Enter the base filename to be added to the prefix dp_: \n")
     # if not filename:
-    #     filename = "dp_1st"
+    #     filename = "dp_1"
     # set names of files that are made
     tex_output_path = currfile_dir / f"{filename}.tex"
     pdf_path = currfile_dir / f"{filename}.pdf"

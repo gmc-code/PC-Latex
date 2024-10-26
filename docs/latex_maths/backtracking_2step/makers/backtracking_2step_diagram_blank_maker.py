@@ -27,7 +27,7 @@ def convert_to_pdf(tex_path, currfile_dir, aux_path):
 def main():
     filename = input("Enter the base filename to be added to the prefix bt2_: \n")
     if not filename:
-        filename = "bt2_blnk"  # "bt2_1st_q and bt2_1st_ans as default file"
+        filename = "blnk"  # "bt2_1st_q and bt2_1st_ans as default file"
     # set names of files that are made
     # questions
     tex_output_path = currfile_dir / f"bt2_{filename}.tex"

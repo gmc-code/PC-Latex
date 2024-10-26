@@ -171,7 +171,7 @@ def main():
     #
     filename = input("Enter the base filename to be added to the prefix nlBk_: \n")
     if not filename:
-        filename = "nlBk_1st"  # "nlBk_1st_q and nlBk_1st_ans as default file"
+        filename = "1"  # "nlBk_1st_q and nlBk_1st_ans as default file"
     # set names of files that are made
     tex_output_path = currfile_dir / f"nlBk_{filename}_q.tex"
     pdf_path = currfile_dir / f"nlBk_{filename}_q.pdf"

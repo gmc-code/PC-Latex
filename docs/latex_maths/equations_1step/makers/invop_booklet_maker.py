@@ -76,7 +76,7 @@ def main():
     else:
         num1 = 5  # random by default
     #
-    numq = input("Enter the number of questions from 1 to 96 \n")
+    numq = input("Enter the number of questions from 1 to 96, with 16 per page \n")
     if numq.strip().isdigit():
         numq = int(numq)
         if not numq in range(1, max_q + 1):

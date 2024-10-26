@@ -58,7 +58,7 @@ def make1_diagram(tex_diagram_template_txt, num1, num2):
 
 
 def main():
-    num1 = input("Enter 1, 2, 3, 4 or 5 for +, -, X, /, random for 1st process \n")
+    num1 = input("Enter 1, 2, 3, 4 or 5 for +, -, X, /, random for the 1st process \n")
     if num1.strip().isdigit():
         num1 = int(num1)
         if not num1 in [1, 2, 3, 4, 5]:
@@ -66,7 +66,7 @@ def main():
     else:
         num1 = 5  # random by default
     #
-    num2 = input("Enter 1, 2, 3, 4 or 5 for +, -, X, /, random for 2nd process \n")
+    num2 = input("Enter 1, 2, 3, 4 or 5 for +, -, X, /, random for the 2nd process \n")
     if num2.strip().isdigit():
         num2 = int(num2)
         if not num2 in [1, 2, 3, 4, 5]:
@@ -84,7 +84,7 @@ def main():
     #
     filename = input("Enter the base filename to be added to the prefix bt2Bk_bldexp_: \n")
     if not filename:
-        filename = "bt2Bk_bldexp_1st"  # "bt2Bk_bldexp_1st_q and bt2Bk_bldexp_1st_ans as default file"
+        filename = "1"  # "bt2Bk_bldexp_1st_q and bt2Bk_bldexp_1st_ans as default file"
     # set names of files that are made
     # questions
     tex_output_path = currfile_dir / f"bt2Bk_bldexp_{filename}_q.tex"

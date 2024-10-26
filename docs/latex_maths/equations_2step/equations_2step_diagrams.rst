@@ -15,9 +15,9 @@ Equations 2 step diagrams
 
 | The python file, **invop_2step_diagram_maker.py**, when run, will ask for these inputs:
 | Choose the arithmetic process:
-| ``"Enter 1, 2, 3, 4 or 5 for +, -, X, /, random for 1st process"``
+| ``"Enter 1, 2, 3, 4 or 5 for +, -, X, /, random for the 1st process"``
 | Choose the arithmetic process:
-| ``"Enter 1, 2, 3, 4 or 5 for +, -, X, /, random for 2nd process"``
+| ``"Enter 1, 2, 3, 4 or 5 for +, -, X, /, random for the 2nd process"``
 | Choose the file name base:
 | ``"Enter the base filename to be added to the prefix :"``
 | The prefix will be "invop2" for standard operations.
