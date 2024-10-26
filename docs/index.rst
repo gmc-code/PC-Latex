@@ -23,9 +23,16 @@ PC-latex 2024
     latex_maths/check_solution/check_solution_intro.rst
     latex_maths/check_solution/check_solution_diagrams.rst
     latex_maths/check_solution/check_solution_booklets.rst
-    latex_maths/check_solution/check_solution_2step_intro.rst
-    latex_maths/check_solution/check_solution_2step_diagrams.rst
-    latex_maths/check_solution/check_solution_2step_booklets.rst
+
+
+.. toctree::
+    :maxdepth: 2
+    :caption: ☑️ check solution 2 step
+    :numbered:
+
+    latex_maths/check_solution_2step/check_solution_2step_intro.rst
+    latex_maths/check_solution_2step/check_solution_2step_diagrams.rst
+    latex_maths/check_solution_2step/check_solution_2step_booklets.rst
 
 
 .. toctree::
