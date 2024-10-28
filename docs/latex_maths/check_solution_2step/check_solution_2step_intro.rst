@@ -2,7 +2,7 @@
 Check solution to equations: 2 step introduction
 ====================================================
 
-| Check the solution to a 2 step equations using substitution.
+| Check the solution to 2 step equations using substitution.
 | The output pdfs from LaTeX can be converted to pngs.
 
 ----
