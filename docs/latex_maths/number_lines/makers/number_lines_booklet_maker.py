@@ -196,8 +196,7 @@ def main():
     diagrams_text_ans = ""
     # add the headtext
     headtext = r"\pagebreak ~ \newline ~ \newline"
-    rmax = numq + 1
-    for i in range(1, rmax):
+    for i in range(1, numq + 1):
         img_tex, img_tex_ans = make1_diagram(tex_diagram_template_txt, num)
         if i > 8 and i % 8 == 1:
             diagrams_text += headtext

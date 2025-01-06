@@ -125,11 +125,9 @@ def main():
     """
     headtext_page = r"""\newpage
     """
-    # headtext_page = r'''\newpage ~ \newline ~ \newline
-    # '''
-    rmax = numq + 1
+    # headtext_page = r'''\newpage ~ \newline ~ \newline'''
 
-    for i in range(1, rmax):
+    for i in range(1, numq + 1):
         img_tex, img_tex_ans = make1_diagram(tex_diagram_template_txt, num1, num2)
         diagrams_text += img_tex
         diagrams_text_ans += img_tex_ans

@@ -116,8 +116,7 @@ def main():
     # generate column text and column text for answers
     col1_text = ""
     col1_text_ans = ""
-    rmax = numq + 1
-    for i in range(1, rmax):
+    for i in range(1, numq + 1):
         num, denom = num_denom_pairs_list[i-1]
         img_tex, img_tex_ans = make1_diagram(tex_diagram_template_txt, tex_diagram_template_txt_ans, num, denom)
         col1_text += img_tex

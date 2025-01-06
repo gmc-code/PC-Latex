@@ -53,8 +53,7 @@ def main():
     # <<cols>>
     # generate column text and column text for answers
     col1_text = ""
-    rmax = numq + 1
-    for _ in range(1, rmax):
+    for _ in range(1, numq + 1):
         col1_text += tex_diagram_template_txt
 
     # Replace the <<cols>> placeholder in the LaTeX template with the generated diagrams

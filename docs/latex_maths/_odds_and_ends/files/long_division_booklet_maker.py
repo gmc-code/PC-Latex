@@ -117,8 +117,7 @@ def main():
     # generate column text and column text for answers
     col1_text = ""
     col1_text_ans = ""
-    rmax = numq + 1
-    for _ in range(1, rmax):
+    for _ in range(1, numq + 1):
         img_tex, img_tex_ans = make1_diagram(tex_diagram_template_txt, num, numdp)
         col1_text += img_tex
         col1_text_ans += img_tex_ans
