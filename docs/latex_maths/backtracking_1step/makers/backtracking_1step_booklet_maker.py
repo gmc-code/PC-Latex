@@ -1,30 +1,36 @@
 from pathlib import Path
 import subprocess
 import time
-import random
-import magick_pdf_to_png
+import os
 import backtracking_functions as btf
 
 currfile_dir = Path(__file__).parent
 tex_template_path = currfile_dir / "backtrack_1step_booklet_template.tex"
 texans_template_path = currfile_dir / "backtrack_1step_booklet_ans_template.tex"
-tex_diagram_template_path = (
-    currfile_dir / "backtrack_1step_booklet_diagram_template.tex"
-)
+tex_diagram_template_path = currfile_dir / "backtrack_1step_booklet_diagram_template.tex"
 
 
-def convert_to_pdf(tex_path, currfile_dir, aux_path):
-    result = subprocess.run(
-        [
-            "pdflatex",
-            tex_path,
-            "-output-directory",
-            currfile_dir,
-            "-aux-directory",
-            aux_path,
-        ],
-        stdout=subprocess.PIPE,
-    )
+def merge_files(file1, file2, outputname):
+    result = subprocess.run(["pdfunite", file1, file2, outputname])
+
+
+def convert_to_pdf(tex_path, outputdir):
+    tex_path = Path(tex_path).resolve()
+    outputdir = Path(outputdir).resolve()
+    # for testing
+    # print(f"tex_path: {tex_path}")
+    # print(f"outputdir: {outputdir}")
+    try:
+        # Generate the PDF
+        subprocess.run(["latexmk", "-pdf", "-outdir=" + str(outputdir), str(tex_path)], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        # # Clean auxiliary files after successful PDF generation
+        subprocess.run(["latexmk", "-c", "-outdir=" + str(outputdir), str(tex_path)], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        # for hosted remove stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL for debugging any errors
+        # Remove the .tex file manually
+        if tex_path.exists():
+            os.remove(tex_path)
+    except subprocess.CalledProcessError as e:
+        print(f"Error: {e}")
 
 
 # tex_keys = ['stepAB','stepABrev','boxA','boxB','boxBrev', 'boxArev' ]
@@ -37,19 +43,13 @@ def make1_diagram(tex_diagram_template_txt, num):
     kv = btf.get_1step_process_dict(num)
 
     for key, value in kv.items():
-        tex_diagram_template_txt_ans = tex_diagram_template_txt_ans.replace(
-            "<<" + key + ">>", value
-        )
+        tex_diagram_template_txt_ans = tex_diagram_template_txt_ans.replace("<<" + key + ">>", value)
 
     for key, value in kv.items():
         if key in tex_keys_q:
-            tex_diagram_template_txt = tex_diagram_template_txt.replace(
-                "<<" + key + ">>", value
-            )
+            tex_diagram_template_txt = tex_diagram_template_txt.replace("<<" + key + ">>", value)
         else:
-            tex_diagram_template_txt = tex_diagram_template_txt.replace(
-                "<<" + key + ">>", ""
-            )
+            tex_diagram_template_txt = tex_diagram_template_txt.replace("<<" + key + ">>", "")
 
     # return tex_diagram_template_txt
     return tex_diagram_template_txt + posttext, tex_diagram_template_txt_ans + posttext
@@ -67,7 +67,7 @@ def main():
     numq = input("Enter the number of questions from 1 to 100 \n")
     if numq.strip().isdigit():
         numq = int(numq)
-        if not numq in range(1,101):
+        if not numq in range(1, 101):
             numq = 20  # random by default
     else:
         numq = 20  # random by default
@@ -78,7 +78,7 @@ def main():
     # set names of files that are made
     # questions
     tex_output_path = currfile_dir / f"bt1Bk_{filename}_q.tex"
-    aux_path = currfile_dir / "temp"
+
     # answers
     tex_output_path_ans = currfile_dir / f"bt1Bk_{filename}_ans.tex"
 
@@ -116,8 +116,8 @@ def main():
     # Wait for the file to be created
     time.sleep(1)
     # Convert the LaTeX files to PDFs
-    convert_to_pdf(tex_output_path, currfile_dir, aux_path)
-    convert_to_pdf(tex_output_path_ans, currfile_dir, aux_path)
+    convert_to_pdf(tex_output_path, currfile_dir)
+    convert_to_pdf(tex_output_path_ans, currfile_dir)
 
 
 if __name__ == "__main__":

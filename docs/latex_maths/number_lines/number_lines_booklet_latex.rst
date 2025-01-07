@@ -151,7 +151,7 @@ Footer
    \fancypagestyle{myfancypagestyle}{
       \fancyhf{}% clear all header and footer fields
       \renewcommand{\headrulewidth}{0pt} % no rule under header
-      \fancyfoot[C] {\thepage} \setlength{\footskip}{6pt} % raise page number 6pt
+      \fancyfoot[C] {\thepage} \setlength{\footskip}{14.5pt} % raise page number 6pt
    }
    \pagestyle{myfancypagestyle}
 

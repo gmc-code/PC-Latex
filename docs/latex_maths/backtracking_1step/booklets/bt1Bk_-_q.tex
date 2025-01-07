@@ -1,6 +1,6 @@
 % backtracking worksheet template
 \documentclass[leqno, 12pt]{article}
-\usepackage{tikz}  
+\usepackage{tikz}
 \usetikzlibrary{positioning}
 \usetikzlibrary {arrows.meta}
 \usepackage[a4paper, portrait, margin=1cm]{geometry}
@@ -22,7 +22,7 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
 \fancypagestyle{myfancypagestyle}{
   \fancyhf{} % clear all header and footer fields
   \renewcommand{\headrulewidth}{0pt} % no rule under header
-  \fancyfoot[C] {\thepage} \setlength{\footskip}{6pt} % raise page number 6pt
+  \fancyfoot[C] {\thepage} \setlength{\footskip}{14.5pt} % raise page number 6pt
 }
 \pagestyle{myfancypagestyle}  % apply myfancypagestyle
 
@@ -36,7 +36,7 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
 
     \node[backtrack] (boxA) at (0, 0) {$x$};
     \node[backtrack] (boxB) [right=1cm of boxA] {$$};
- 
+
     \node[backtrackeq] (boxAeq) [below=-1pt of boxA] {$=$};
     \node[backtrackeq] (boxBeq) [below=-1pt of boxB] {$=$};
 
@@ -46,7 +46,7 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
     \node(boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
     \node(boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
     \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$-2$} (boxBl);
-    
+
     \node(boxBrevl) at ([yshift=-24pt,xshift=-5mm]boxBrev) { };
     \node(boxArevr) at ([yshift=-24pt,xshift=5mm]boxArev) { };
     \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBrevl)  --node[backtrackstep, below=3.0pt] {$$} (boxArevr);
@@ -60,7 +60,7 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
 
     \node[backtrack] (boxA) at (0, 0) {$x$};
     \node[backtrack] (boxB) [right=1cm of boxA] {$$};
- 
+
     \node[backtrackeq] (boxAeq) [below=-1pt of boxA] {$=$};
     \node[backtrackeq] (boxBeq) [below=-1pt of boxB] {$=$};
 
@@ -70,7 +70,7 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
     \node(boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
     \node(boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
     \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$-4$} (boxBl);
-    
+
     \node(boxBrevl) at ([yshift=-24pt,xshift=-5mm]boxBrev) { };
     \node(boxArevr) at ([yshift=-24pt,xshift=5mm]boxArev) { };
     \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBrevl)  --node[backtrackstep, below=3.0pt] {$$} (boxArevr);
@@ -84,7 +84,7 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
 
     \node[backtrack] (boxA) at (0, 0) {$x$};
     \node[backtrack] (boxB) [right=1cm of boxA] {$$};
- 
+
     \node[backtrackeq] (boxAeq) [below=-1pt of boxA] {$=$};
     \node[backtrackeq] (boxBeq) [below=-1pt of boxB] {$=$};
 
@@ -94,7 +94,7 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
     \node(boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
     \node(boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
     \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$-4$} (boxBl);
-    
+
     \node(boxBrevl) at ([yshift=-24pt,xshift=-5mm]boxBrev) { };
     \node(boxArevr) at ([yshift=-24pt,xshift=5mm]boxArev) { };
     \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBrevl)  --node[backtrackstep, below=3.0pt] {$$} (boxArevr);
@@ -108,7 +108,7 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
 
     \node[backtrack] (boxA) at (0, 0) {$x$};
     \node[backtrack] (boxB) [right=1cm of boxA] {$$};
- 
+
     \node[backtrackeq] (boxAeq) [below=-1pt of boxA] {$=$};
     \node[backtrackeq] (boxBeq) [below=-1pt of boxB] {$=$};
 
@@ -118,7 +118,7 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
     \node(boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
     \node(boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
     \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$-7$} (boxBl);
-    
+
     \node(boxBrevl) at ([yshift=-24pt,xshift=-5mm]boxBrev) { };
     \node(boxArevr) at ([yshift=-24pt,xshift=5mm]boxArev) { };
     \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBrevl)  --node[backtrackstep, below=3.0pt] {$$} (boxArevr);
@@ -132,7 +132,7 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
 
     \node[backtrack] (boxA) at (0, 0) {$x$};
     \node[backtrack] (boxB) [right=1cm of boxA] {$$};
- 
+
     \node[backtrackeq] (boxAeq) [below=-1pt of boxA] {$=$};
     \node[backtrackeq] (boxBeq) [below=-1pt of boxB] {$=$};
 
@@ -142,7 +142,7 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
     \node(boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
     \node(boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
     \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$-10$} (boxBl);
-    
+
     \node(boxBrevl) at ([yshift=-24pt,xshift=-5mm]boxBrev) { };
     \node(boxArevr) at ([yshift=-24pt,xshift=5mm]boxArev) { };
     \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBrevl)  --node[backtrackstep, below=3.0pt] {$$} (boxArevr);
@@ -156,7 +156,7 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
 
     \node[backtrack] (boxA) at (0, 0) {$x$};
     \node[backtrack] (boxB) [right=1cm of boxA] {$$};
- 
+
     \node[backtrackeq] (boxAeq) [below=-1pt of boxA] {$=$};
     \node[backtrackeq] (boxBeq) [below=-1pt of boxB] {$=$};
 
@@ -166,7 +166,7 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
     \node(boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
     \node(boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
     \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$-3$} (boxBl);
-    
+
     \node(boxBrevl) at ([yshift=-24pt,xshift=-5mm]boxBrev) { };
     \node(boxArevr) at ([yshift=-24pt,xshift=5mm]boxArev) { };
     \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBrevl)  --node[backtrackstep, below=3.0pt] {$$} (boxArevr);
@@ -180,7 +180,7 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
 
     \node[backtrack] (boxA) at (0, 0) {$x$};
     \node[backtrack] (boxB) [right=1cm of boxA] {$$};
- 
+
     \node[backtrackeq] (boxAeq) [below=-1pt of boxA] {$=$};
     \node[backtrackeq] (boxBeq) [below=-1pt of boxB] {$=$};
 
@@ -190,7 +190,7 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
     \node(boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
     \node(boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
     \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$-3$} (boxBl);
-    
+
     \node(boxBrevl) at ([yshift=-24pt,xshift=-5mm]boxBrev) { };
     \node(boxArevr) at ([yshift=-24pt,xshift=5mm]boxArev) { };
     \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBrevl)  --node[backtrackstep, below=3.0pt] {$$} (boxArevr);
@@ -204,7 +204,7 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
 
     \node[backtrack] (boxA) at (0, 0) {$x$};
     \node[backtrack] (boxB) [right=1cm of boxA] {$$};
- 
+
     \node[backtrackeq] (boxAeq) [below=-1pt of boxA] {$=$};
     \node[backtrackeq] (boxBeq) [below=-1pt of boxB] {$=$};
 
@@ -214,7 +214,7 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
     \node(boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
     \node(boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
     \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$-10$} (boxBl);
-    
+
     \node(boxBrevl) at ([yshift=-24pt,xshift=-5mm]boxBrev) { };
     \node(boxArevr) at ([yshift=-24pt,xshift=5mm]boxArev) { };
     \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBrevl)  --node[backtrackstep, below=3.0pt] {$$} (boxArevr);
@@ -228,7 +228,7 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
 
     \node[backtrack] (boxA) at (0, 0) {$x$};
     \node[backtrack] (boxB) [right=1cm of boxA] {$$};
- 
+
     \node[backtrackeq] (boxAeq) [below=-1pt of boxA] {$=$};
     \node[backtrackeq] (boxBeq) [below=-1pt of boxB] {$=$};
 
@@ -238,7 +238,7 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
     \node(boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
     \node(boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
     \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$-8$} (boxBl);
-    
+
     \node(boxBrevl) at ([yshift=-24pt,xshift=-5mm]boxBrev) { };
     \node(boxArevr) at ([yshift=-24pt,xshift=5mm]boxArev) { };
     \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBrevl)  --node[backtrackstep, below=3.0pt] {$$} (boxArevr);
@@ -252,7 +252,7 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
 
     \node[backtrack] (boxA) at (0, 0) {$x$};
     \node[backtrack] (boxB) [right=1cm of boxA] {$$};
- 
+
     \node[backtrackeq] (boxAeq) [below=-1pt of boxA] {$=$};
     \node[backtrackeq] (boxBeq) [below=-1pt of boxB] {$=$};
 
@@ -262,7 +262,7 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
     \node(boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
     \node(boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
     \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$-10$} (boxBl);
-    
+
     \node(boxBrevl) at ([yshift=-24pt,xshift=-5mm]boxBrev) { };
     \node(boxArevr) at ([yshift=-24pt,xshift=5mm]boxArev) { };
     \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBrevl)  --node[backtrackstep, below=3.0pt] {$$} (boxArevr);
@@ -276,7 +276,7 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
 
     \node[backtrack] (boxA) at (0, 0) {$x$};
     \node[backtrack] (boxB) [right=1cm of boxA] {$$};
- 
+
     \node[backtrackeq] (boxAeq) [below=-1pt of boxA] {$=$};
     \node[backtrackeq] (boxBeq) [below=-1pt of boxB] {$=$};
 
@@ -286,7 +286,7 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
     \node(boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
     \node(boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
     \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$-9$} (boxBl);
-    
+
     \node(boxBrevl) at ([yshift=-24pt,xshift=-5mm]boxBrev) { };
     \node(boxArevr) at ([yshift=-24pt,xshift=5mm]boxArev) { };
     \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBrevl)  --node[backtrackstep, below=3.0pt] {$$} (boxArevr);
@@ -300,7 +300,7 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
 
     \node[backtrack] (boxA) at (0, 0) {$x$};
     \node[backtrack] (boxB) [right=1cm of boxA] {$$};
- 
+
     \node[backtrackeq] (boxAeq) [below=-1pt of boxA] {$=$};
     \node[backtrackeq] (boxBeq) [below=-1pt of boxB] {$=$};
 
@@ -310,7 +310,7 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
     \node(boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
     \node(boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
     \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$-3$} (boxBl);
-    
+
     \node(boxBrevl) at ([yshift=-24pt,xshift=-5mm]boxBrev) { };
     \node(boxArevr) at ([yshift=-24pt,xshift=5mm]boxArev) { };
     \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBrevl)  --node[backtrackstep, below=3.0pt] {$$} (boxArevr);
@@ -324,7 +324,7 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
 
     \node[backtrack] (boxA) at (0, 0) {$x$};
     \node[backtrack] (boxB) [right=1cm of boxA] {$$};
- 
+
     \node[backtrackeq] (boxAeq) [below=-1pt of boxA] {$=$};
     \node[backtrackeq] (boxBeq) [below=-1pt of boxB] {$=$};
 
@@ -334,7 +334,7 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
     \node(boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
     \node(boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
     \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$-7$} (boxBl);
-    
+
     \node(boxBrevl) at ([yshift=-24pt,xshift=-5mm]boxBrev) { };
     \node(boxArevr) at ([yshift=-24pt,xshift=5mm]boxArev) { };
     \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBrevl)  --node[backtrackstep, below=3.0pt] {$$} (boxArevr);
@@ -348,7 +348,7 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
 
     \node[backtrack] (boxA) at (0, 0) {$x$};
     \node[backtrack] (boxB) [right=1cm of boxA] {$$};
- 
+
     \node[backtrackeq] (boxAeq) [below=-1pt of boxA] {$=$};
     \node[backtrackeq] (boxBeq) [below=-1pt of boxB] {$=$};
 
@@ -358,7 +358,7 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
     \node(boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
     \node(boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
     \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$-4$} (boxBl);
-    
+
     \node(boxBrevl) at ([yshift=-24pt,xshift=-5mm]boxBrev) { };
     \node(boxArevr) at ([yshift=-24pt,xshift=5mm]boxArev) { };
     \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBrevl)  --node[backtrackstep, below=3.0pt] {$$} (boxArevr);
@@ -372,7 +372,7 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
 
     \node[backtrack] (boxA) at (0, 0) {$x$};
     \node[backtrack] (boxB) [right=1cm of boxA] {$$};
- 
+
     \node[backtrackeq] (boxAeq) [below=-1pt of boxA] {$=$};
     \node[backtrackeq] (boxBeq) [below=-1pt of boxB] {$=$};
 
@@ -382,7 +382,7 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
     \node(boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
     \node(boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
     \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$-10$} (boxBl);
-    
+
     \node(boxBrevl) at ([yshift=-24pt,xshift=-5mm]boxBrev) { };
     \node(boxArevr) at ([yshift=-24pt,xshift=5mm]boxArev) { };
     \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBrevl)  --node[backtrackstep, below=3.0pt] {$$} (boxArevr);
@@ -396,7 +396,7 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
 
     \node[backtrack] (boxA) at (0, 0) {$x$};
     \node[backtrack] (boxB) [right=1cm of boxA] {$$};
- 
+
     \node[backtrackeq] (boxAeq) [below=-1pt of boxA] {$=$};
     \node[backtrackeq] (boxBeq) [below=-1pt of boxB] {$=$};
 
@@ -406,7 +406,7 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
     \node(boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
     \node(boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
     \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$-8$} (boxBl);
-    
+
     \node(boxBrevl) at ([yshift=-24pt,xshift=-5mm]boxBrev) { };
     \node(boxArevr) at ([yshift=-24pt,xshift=5mm]boxArev) { };
     \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBrevl)  --node[backtrackstep, below=3.0pt] {$$} (boxArevr);
@@ -420,7 +420,7 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
 
     \node[backtrack] (boxA) at (0, 0) {$x$};
     \node[backtrack] (boxB) [right=1cm of boxA] {$$};
- 
+
     \node[backtrackeq] (boxAeq) [below=-1pt of boxA] {$=$};
     \node[backtrackeq] (boxBeq) [below=-1pt of boxB] {$=$};
 
@@ -430,7 +430,7 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
     \node(boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
     \node(boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
     \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$-4$} (boxBl);
-    
+
     \node(boxBrevl) at ([yshift=-24pt,xshift=-5mm]boxBrev) { };
     \node(boxArevr) at ([yshift=-24pt,xshift=5mm]boxArev) { };
     \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBrevl)  --node[backtrackstep, below=3.0pt] {$$} (boxArevr);
@@ -444,7 +444,7 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
 
     \node[backtrack] (boxA) at (0, 0) {$x$};
     \node[backtrack] (boxB) [right=1cm of boxA] {$$};
- 
+
     \node[backtrackeq] (boxAeq) [below=-1pt of boxA] {$=$};
     \node[backtrackeq] (boxBeq) [below=-1pt of boxB] {$=$};
 
@@ -454,7 +454,7 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
     \node(boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
     \node(boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
     \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$-8$} (boxBl);
-    
+
     \node(boxBrevl) at ([yshift=-24pt,xshift=-5mm]boxBrev) { };
     \node(boxArevr) at ([yshift=-24pt,xshift=5mm]boxArev) { };
     \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBrevl)  --node[backtrackstep, below=3.0pt] {$$} (boxArevr);
@@ -468,7 +468,7 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
 
     \node[backtrack] (boxA) at (0, 0) {$x$};
     \node[backtrack] (boxB) [right=1cm of boxA] {$$};
- 
+
     \node[backtrackeq] (boxAeq) [below=-1pt of boxA] {$=$};
     \node[backtrackeq] (boxBeq) [below=-1pt of boxB] {$=$};
 
@@ -478,7 +478,7 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
     \node(boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
     \node(boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
     \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$-9$} (boxBl);
-    
+
     \node(boxBrevl) at ([yshift=-24pt,xshift=-5mm]boxBrev) { };
     \node(boxArevr) at ([yshift=-24pt,xshift=5mm]boxArev) { };
     \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBrevl)  --node[backtrackstep, below=3.0pt] {$$} (boxArevr);
@@ -492,7 +492,7 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
 
     \node[backtrack] (boxA) at (0, 0) {$x$};
     \node[backtrack] (boxB) [right=1cm of boxA] {$$};
- 
+
     \node[backtrackeq] (boxAeq) [below=-1pt of boxA] {$=$};
     \node[backtrackeq] (boxBeq) [below=-1pt of boxB] {$=$};
 
@@ -502,7 +502,7 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
     \node(boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
     \node(boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
     \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$-5$} (boxBl);
-    
+
     \node(boxBrevl) at ([yshift=-24pt,xshift=-5mm]boxBrev) { };
     \node(boxArevr) at ([yshift=-24pt,xshift=5mm]boxArev) { };
     \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBrevl)  --node[backtrackstep, below=3.0pt] {$$} (boxArevr);

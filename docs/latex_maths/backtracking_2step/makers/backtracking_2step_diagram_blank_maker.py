@@ -10,18 +10,23 @@ tex_template_path = currfile_dir / "backtrack_2step_template.tex"
 tex_diagram_template_path = currfile_dir / "backtrack_2step_diagram_blank_template.tex"
 
 
-def convert_to_pdf(tex_path, currfile_dir, aux_path):
-    result = subprocess.run(
-        [
-            "pdflatex",
-            tex_path,
-            "-output-directory",
-            currfile_dir,
-            "-aux-directory",
-            aux_path,
-        ],
-        stdout=subprocess.PIPE,
-    )
+def convert_to_pdf(tex_path, outputdir):
+    tex_path = Path(tex_path).resolve()
+    outputdir = Path(outputdir).resolve()
+    # for testing
+    # print(f"tex_path: {tex_path}")
+    # print(f"outputdir: {outputdir}")
+    try:
+        # Generate the PDF
+        subprocess.run(["latexmk", "-pdf", "-outdir=" + str(outputdir), str(tex_path)], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        # # Clean auxiliary files after successful PDF generation
+        subprocess.run(["latexmk", "-c", "-outdir=" + str(outputdir), str(tex_path)], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        # for hosted remove stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL for debugging any errors
+        # Remove the .tex file manually
+        if tex_path.exists():
+            os.remove(tex_path)
+    except subprocess.CalledProcessError as e:
+        print(f"Error: {e}")
 
 
 def main():
@@ -33,7 +38,7 @@ def main():
     tex_output_path = currfile_dir / f"bt2_{filename}.tex"
     pdf_path = currfile_dir / f"bt2_{filename}.pdf"
     png_path = currfile_dir / f"bt2_{filename}.png"
-    aux_path = currfile_dir / "temp"
+
 
     # Read in the LaTeX template file
     with open(tex_template_path, "r") as infile:
@@ -53,7 +58,7 @@ def main():
     # Wait for the files to be created
     time.sleep(1)
     # convert to pdf
-    convert_to_pdf(tex_output_path, currfile_dir, aux_path)
+    convert_to_pdf(tex_output_path, currfile_dir)
 
     # Wait for the files to be created
     time.sleep(1)

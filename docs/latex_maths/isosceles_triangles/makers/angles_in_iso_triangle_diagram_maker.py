@@ -10,33 +10,23 @@ texans_template_path = currfile_dir / "angles_in_iso_triangle_template.tex"
 tex_diagram_template_path = currfile_dir / "angles_in_iso_triangle_diagram_template.tex"
 
 
-def convert_to_pdf(tex_path, currfile_dir, aux_path):
-    """
-    Converts a TeX file to PDF format using pdfLaTeX.
-
-    Args:
-        tex_path (str): The path to the TeX file.
-        currfile_dir (str): The path to the directory where the TeX file is located.
-        aux_path (str): The path to the directory where auxiliary files will be stored.
-
-    Returns:
-        subprocess.CompletedProcess: A subprocess.CompletedProcess object containing information about the completed process.
-
-    Raises:
-        FileNotFoundError: If the TeX file does not exist.
-        subprocess.CalledProcessError: If pdfLaTeX returns a non-zero exit code.
-    """
-    result = subprocess.run(
-        [
-            "pdflatex",
-            tex_path,
-            "-output-directory",
-            currfile_dir,
-            "-aux-directory",
-            aux_path,
-        ],
-        stdout=subprocess.PIPE,
-    )
+def convert_to_pdf(tex_path, outputdir):
+    tex_path = Path(tex_path).resolve()
+    outputdir = Path(outputdir).resolve()
+    # for testing
+    # print(f"tex_path: {tex_path}")
+    # print(f"outputdir: {outputdir}")
+    try:
+        # Generate the PDF
+        subprocess.run(["latexmk", "-pdf", "-outdir=" + str(outputdir), str(tex_path)], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        # # Clean auxiliary files after successful PDF generation
+        subprocess.run(["latexmk", "-c", "-outdir=" + str(outputdir), str(tex_path)], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        # for hosted remove stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL for debugging any errors
+        # Remove the .tex file manually
+        if tex_path.exists():
+            os.remove(tex_path)
+    except subprocess.CalledProcessError as e:
+        print(f"Error: {e}")
 
 
 # % end modify values for angles in triangle
@@ -74,7 +64,7 @@ def main():
     tex_output_path = currfile_dir / f"angles_in_iso_triangle_{filename}_q.tex"
     pdf_path = currfile_dir / f"angles_in_iso_triangle_{filename}_q.pdf"
     png_path = currfile_dir / f"angles_in_iso_triangle_{filename}_q.png"
-    aux_path = currfile_dir / "temp"
+
     # answers
     tex_output_path_ans = currfile_dir / f"angles_in_iso_triangle_{filename}_ans.tex"
     pdf_path_ans = currfile_dir / f"angles_in_iso_triangle_{filename}_ans.pdf"
@@ -105,8 +95,8 @@ def main():
     # Wait for the files to be created
     time.sleep(1)
     # convert to pdf
-    convert_to_pdf(tex_output_path, currfile_dir, aux_path)
-    convert_to_pdf(tex_output_path_ans, currfile_dir, aux_path)
+    convert_to_pdf(tex_output_path, currfile_dir)
+    convert_to_pdf(tex_output_path_ans, currfile_dir)
 
     # Wait for the files to be created
     time.sleep(1)

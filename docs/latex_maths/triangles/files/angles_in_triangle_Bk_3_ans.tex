@@ -3,7 +3,7 @@
 \usepackage{amsmath}
 % Underlining package
 \usepackage{ulem}
-\usetikzlibrary{calc} 
+\usetikzlibrary{calc}
 \usepackage[a4paper, portrait, margin=1cm]{geometry}
 \usepackage{fancyhdr}
 
@@ -14,7 +14,7 @@
 \fancypagestyle{myfancypagestyle}{
   \fancyhf{}% clear all header and footer fields
   \renewcommand{\headrulewidth}{0pt} % no rule under header
-  \fancyfoot[C] {\thepage} \setlength{\footskip}{6pt} % raise page number 6pt
+  \fancyfoot[C] {\thepage} \setlength{\footskip}{14.5pt} % raise page number 6pt
 }
 \pagestyle{myfancypagestyle}  % apply myfancypagestyle
 
@@ -33,34 +33,34 @@
       \pgfmathsetmacro{\angleC}{68}
       \pgfmathsetmacro{\sideC}{3.113469493859858}
       \pgfmathsetmacro{\rotationAngle}{231}
-  
-    
+
+
       \begin{scope}[rotate=\rotationAngle]
         \coordinate (A) at (0,0);
         \coordinate (B) at (\sideC,0);
         \coordinate (C) at (intersection cs: first line={(A)--($(A)+(\angleA:4cm)$)}, second line={(B)--($(B)+(180-\angleB:4cm)$)});
         \draw (A) -- (B) -- (C) -- cycle;
-        
+
         % Mark angles with arcs
         \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=\angleA, radius=0.3cm];
         \draw ($(B)!0.3cm!(C)$) arc [start angle=180-\angleB, end angle=180, radius=0.3cm];
         \draw ($(C)!0.3cm!(A)$) arc [start angle=180+\angleA, end angle=360-\angleB, radius=0.3cm];
-        
+
         % Label angles
         \node at ($(A)!-0.15cm!(B)$) {M};
         \node at ($(B)!-0.15cm!(C)$) {N};
         \node at ($(C)!-0.15cm!(A)$) {L};
-        
+
         % Mark angles in degrees
         \coordinate (midBC) at ($(B)!0.5!(C)$);
         \node at ($(A)!0.55cm!(midBC)$) {$\theta ^\circ$};
-    
+
         \coordinate (midAC) at ($(A)!0.5!(C)$);
         \node at ($(B)!0.55cm!(midAC)$) {62$^\circ$};
-    
+
         \coordinate (midAB) at ($(A)!0.5!(B)$);
         \node at ($(C)!0.55cm!(midAB)$) {68$^\circ$};
-      
+
       \end{scope}
     \end{tikzpicture}
 \end{minipage}%
@@ -83,34 +83,34 @@
       \pgfmathsetmacro{\angleC}{77}
       \pgfmathsetmacro{\sideC}{3.7759679670850286}
       \pgfmathsetmacro{\rotationAngle}{134}
-  
-    
+
+
       \begin{scope}[rotate=\rotationAngle]
         \coordinate (A) at (0,0);
         \coordinate (B) at (\sideC,0);
         \coordinate (C) at (intersection cs: first line={(A)--($(A)+(\angleA:4cm)$)}, second line={(B)--($(B)+(180-\angleB:4cm)$)});
         \draw (A) -- (B) -- (C) -- cycle;
-        
+
         % Mark angles with arcs
         \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=\angleA, radius=0.3cm];
         \draw ($(B)!0.3cm!(C)$) arc [start angle=180-\angleB, end angle=180, radius=0.3cm];
         \draw ($(C)!0.3cm!(A)$) arc [start angle=180+\angleA, end angle=360-\angleB, radius=0.3cm];
-        
+
         % Label angles
         \node at ($(A)!-0.15cm!(B)$) {Y};
         \node at ($(B)!-0.15cm!(C)$) {Z};
         \node at ($(C)!-0.15cm!(A)$) {X};
-        
+
         % Mark angles in degrees
         \coordinate (midBC) at ($(B)!0.5!(C)$);
         \node at ($(A)!0.55cm!(midBC)$) {$\theta ^\circ$};
-    
+
         \coordinate (midAC) at ($(A)!0.5!(C)$);
         \node at ($(B)!0.55cm!(midAC)$) {54$^\circ$};
-    
+
         \coordinate (midAB) at ($(A)!0.5!(B)$);
         \node at ($(C)!0.55cm!(midAB)$) {77$^\circ$};
-      
+
       \end{scope}
     \end{tikzpicture}
 \end{minipage}%
@@ -133,34 +133,34 @@
       \pgfmathsetmacro{\angleC}{79}
       \pgfmathsetmacro{\sideC}{3.5787671926179905}
       \pgfmathsetmacro{\rotationAngle}{203}
-  
-    
+
+
       \begin{scope}[rotate=\rotationAngle]
         \coordinate (A) at (0,0);
         \coordinate (B) at (\sideC,0);
         \coordinate (C) at (intersection cs: first line={(A)--($(A)+(\angleA:4cm)$)}, second line={(B)--($(B)+(180-\angleB:4cm)$)});
         \draw (A) -- (B) -- (C) -- cycle;
-        
+
         % Mark angles with arcs
         \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=\angleA, radius=0.3cm];
         \draw ($(B)!0.3cm!(C)$) arc [start angle=180-\angleB, end angle=180, radius=0.3cm];
         \draw ($(C)!0.3cm!(A)$) arc [start angle=180+\angleA, end angle=360-\angleB, radius=0.3cm];
-        
+
         % Label angles
         \node at ($(A)!-0.15cm!(B)$) {A};
         \node at ($(B)!-0.15cm!(C)$) {B};
         \node at ($(C)!-0.15cm!(A)$) {C};
-        
+
         % Mark angles in degrees
         \coordinate (midBC) at ($(B)!0.5!(C)$);
         \node at ($(A)!0.55cm!(midBC)$) {$\theta ^\circ$};
-    
+
         \coordinate (midAC) at ($(A)!0.5!(C)$);
         \node at ($(B)!0.55cm!(midAC)$) {49$^\circ$};
-    
+
         \coordinate (midAB) at ($(A)!0.5!(B)$);
         \node at ($(C)!0.55cm!(midAB)$) {79$^\circ$};
-      
+
       \end{scope}
     \end{tikzpicture}
 \end{minipage}%

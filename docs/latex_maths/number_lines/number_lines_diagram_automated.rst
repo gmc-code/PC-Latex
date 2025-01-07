@@ -221,7 +221,7 @@ Python to create a number line diagram
 - It opens three template files for creating a tex file with a number line diagram and reads their contents.
 - It calls a function called ``make1_diagram`` that takes the diagram template text as an argument and returns two strings: one for the question and one for the answer. The function calls the ``btf.get_1step_process_dict`` function to get a dictionary with some keys and values for creating the diagram. The function then replaces the placeholders in the template text with the corresponding values from the dictionary, depending on whether it is for the answer or question version. The function uses a loop to iterate over the keys and values of the dictionary and perform the replacement.
 - It replaces a placeholder in the LaTeX template texts with the diagram texts and writes them to two output files: one for the question and one for the answer.
-- It waits for two seconds and then calls another function called ``convert_to_pdf`` that takes the output tex files and converts them to PDF files using the ``pdfLaTeX`` command.
+- It waits for two seconds and then calls another function called ``convert_to_pdf`` that takes the output tex files and converts them to PDF files using the ``pdflatex`` command.
 - It waits for another second and then calls another function called ``convert_pdf_to_png`` from the ``magick_pdf_to_png`` module that takes the output PDF files and converts them to PNG files using the ``magick`` command.
 - It prints "starting" before calling the main function and "finished" after it.
 

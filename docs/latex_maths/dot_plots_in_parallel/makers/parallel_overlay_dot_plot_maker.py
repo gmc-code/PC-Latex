@@ -10,33 +10,33 @@ currfile_dir = Path(__file__).parent
 tex_template_path = currfile_dir / "parallel_overlay_dot_plot_template.tex"
 
 
-def convert_to_pdf(tex_path, currfile_dir, aux_path):
-    """
-    Converts a TeX file to PDF format using pdfLaTeX.
-
-    Args:
-        tex_path (str): The path to the TeX file.
-        currfile_dir (str): The path to the directory where the TeX file is located.
-        aux_path (str): The path to the directory where auxiliary files will be stored.
-
-    Returns:
-        subprocess.CompletedProcess: A subprocess.CompletedProcess object containing information about the completed process.
-
-    Raises:
-        FileNotFoundError: If the TeX file does not exist.
-        subprocess.CalledProcessError: If pdfLaTeX returns a non-zero exit code.
-    """
-    result = subprocess.run(
-        [
-            "pdflatex",
-            tex_path,
-            "-output-directory",
-            currfile_dir,
-            "-aux-directory",
-            aux_path,
-        ],
-        stdout=subprocess.PIPE,
-    )
+def convert_to_pdf(tex_path, outputdir):
+    tex_path = Path(tex_path).resolve()
+    outputdir = Path(outputdir).resolve()
+    # for testing
+    # print(f"tex_path: {tex_path}")
+    # print(f"outputdir: {outputdir}")
+    try:
+        # Generate the PDF
+        subprocess.run(
+            ["latexmk", "-pdf", "-outdir=" + str(outputdir),
+             str(tex_path)],
+            check=True,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL)
+        # # Clean auxiliary files after successful PDF generation
+        subprocess.run(
+            ["latexmk", "-c", "-outdir=" + str(outputdir),
+             str(tex_path)],
+            check=True,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL)
+        # for hosted remove stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL for debugging any errors
+        # Remove the .tex file manually
+        if tex_path.exists():
+            os.remove(tex_path)
+    except subprocess.CalledProcessError as e:
+        print(f"Error: {e}")
 
 
 def get_dp2_np_array(filename):
@@ -46,7 +46,7 @@ def get_dp2_np_array(filename):
         plot_xlabel = f.readline().strip()
         # read the second line and store it in a variable
         plot_title = f.readline().strip()
-          # read the third line and store it in a variable
+        # read the third line and store it in a variable
         numbers_string = f.readline().strip()
         if ", " in numbers_string:
             numbers = numbers_string.split(", ")
@@ -129,7 +129,7 @@ def main():
     tex_output_path = currfile_dir / f"{filename}.tex"
     pdf_path = currfile_dir / f"{filename}.pdf"
     png_path = currfile_dir / f"{filename}.png"
-    aux_path = currfile_dir / "temp"
+
     # Read in the LaTeX template file
     with open(tex_template_path, "r") as infile:
         tex_template_txt = infile.read()
@@ -159,7 +159,7 @@ def main():
     # Wait for the files to be created
     time.sleep(1)
     # Convert the LaTeX files to PDFs
-    convert_to_pdf(tex_output_path, currfile_dir, aux_path)
+    convert_to_pdf(tex_output_path, currfile_dir)
 
     # Wait for the files to be created
     time.sleep(1)

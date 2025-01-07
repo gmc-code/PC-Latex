@@ -1,6 +1,6 @@
 % backtracking worksheet template
 \documentclass[leqno, 12pt]{article}
-\usepackage{tikz}  
+\usepackage{tikz}
 \usetikzlibrary{positioning}
 \usetikzlibrary {arrows.meta}
 \usepackage[a4paper, portrait, margin=1cm]{geometry}
@@ -22,7 +22,7 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
 \fancypagestyle{myfancypagestyle}{
   \fancyhf{} % clear all header and footer fields
   \renewcommand{\headrulewidth}{0pt} % no rule under header
-  \fancyfoot[C] {\thepage} \setlength{\footskip}{6pt} % raise page number 6pt
+  \fancyfoot[C] {\thepage} \setlength{\footskip}{14.5pt} % raise page number 6pt
 }
 \pagestyle{myfancypagestyle}  % apply myfancypagestyle
 
@@ -37,16 +37,16 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
         \node[backtrack] (boxA) at (0, 0) {$x$};
         \node[backtrack] (boxB) [right=1cm of boxA] {$$};
         \node[backtrack] (boxC) [right=1cm of boxB] {$$};
-    
+
         \node (boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
         \node (boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$-1$} (boxBl);
-    
+
         \node (boxBr) at ([yshift=24pt,xshift=5mm]boxB) { };
         \node (boxCl) at ([yshift=24pt,xshift=-5mm]boxC) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBr)  --node[backtrackstep, above=3.0pt] {$\times2$} (boxCl);
-        
-    \end{tikzpicture} 
+
+    \end{tikzpicture}
 \end{equation}
 
 
@@ -56,16 +56,16 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
         \node[backtrack] (boxA) at (0, 0) {$x$};
         \node[backtrack] (boxB) [right=1cm of boxA] {$$};
         \node[backtrack] (boxC) [right=1cm of boxB] {$$};
-    
+
         \node (boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
         \node (boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$+6$} (boxBl);
-    
+
         \node (boxBr) at ([yshift=24pt,xshift=5mm]boxB) { };
         \node (boxCl) at ([yshift=24pt,xshift=-5mm]boxC) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBr)  --node[backtrackstep, above=3.0pt] {$\div2$} (boxCl);
-        
-    \end{tikzpicture} 
+
+    \end{tikzpicture}
 \end{equation}
 
 
@@ -75,16 +75,16 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
         \node[backtrack] (boxA) at (0, 0) {$x$};
         \node[backtrack] (boxB) [right=1cm of boxA] {$$};
         \node[backtrack] (boxC) [right=1cm of boxB] {$$};
-    
+
         \node (boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
         \node (boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$\times2$} (boxBl);
-    
+
         \node (boxBr) at ([yshift=24pt,xshift=5mm]boxB) { };
         \node (boxCl) at ([yshift=24pt,xshift=-5mm]boxC) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBr)  --node[backtrackstep, above=3.0pt] {$-4$} (boxCl);
-        
-    \end{tikzpicture} 
+
+    \end{tikzpicture}
 \end{equation}
 
 
@@ -94,16 +94,16 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
         \node[backtrack] (boxA) at (0, 0) {$x$};
         \node[backtrack] (boxB) [right=1cm of boxA] {$$};
         \node[backtrack] (boxC) [right=1cm of boxB] {$$};
-    
+
         \node (boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
         \node (boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$+2$} (boxBl);
-    
+
         \node (boxBr) at ([yshift=24pt,xshift=5mm]boxB) { };
         \node (boxCl) at ([yshift=24pt,xshift=-5mm]boxC) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBr)  --node[backtrackstep, above=3.0pt] {$\div4$} (boxCl);
-        
-    \end{tikzpicture} 
+
+    \end{tikzpicture}
 \end{equation}
 
 
@@ -113,16 +113,16 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
         \node[backtrack] (boxA) at (0, 0) {$x$};
         \node[backtrack] (boxB) [right=1cm of boxA] {$$};
         \node[backtrack] (boxC) [right=1cm of boxB] {$$};
-    
+
         \node (boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
         \node (boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$+4$} (boxBl);
-    
+
         \node (boxBr) at ([yshift=24pt,xshift=5mm]boxB) { };
         \node (boxCl) at ([yshift=24pt,xshift=-5mm]boxC) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBr)  --node[backtrackstep, above=3.0pt] {$\div4$} (boxCl);
-        
-    \end{tikzpicture} 
+
+    \end{tikzpicture}
 \end{equation}
 
 
@@ -132,16 +132,16 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
         \node[backtrack] (boxA) at (0, 0) {$x$};
         \node[backtrack] (boxB) [right=1cm of boxA] {$$};
         \node[backtrack] (boxC) [right=1cm of boxB] {$$};
-    
+
         \node (boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
         \node (boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$+9$} (boxBl);
-    
+
         \node (boxBr) at ([yshift=24pt,xshift=5mm]boxB) { };
         \node (boxCl) at ([yshift=24pt,xshift=-5mm]boxC) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBr)  --node[backtrackstep, above=3.0pt] {$\div10$} (boxCl);
-        
-    \end{tikzpicture} 
+
+    \end{tikzpicture}
 \end{equation}
 
 
@@ -151,16 +151,16 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
         \node[backtrack] (boxA) at (0, 0) {$x$};
         \node[backtrack] (boxB) [right=1cm of boxA] {$$};
         \node[backtrack] (boxC) [right=1cm of boxB] {$$};
-    
+
         \node (boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
         \node (boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$-3$} (boxBl);
-    
+
         \node (boxBr) at ([yshift=24pt,xshift=5mm]boxB) { };
         \node (boxCl) at ([yshift=24pt,xshift=-5mm]boxC) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBr)  --node[backtrackstep, above=3.0pt] {$\div1$} (boxCl);
-        
-    \end{tikzpicture} 
+
+    \end{tikzpicture}
 \end{equation}
 
 
@@ -170,16 +170,16 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
         \node[backtrack] (boxA) at (0, 0) {$x$};
         \node[backtrack] (boxB) [right=1cm of boxA] {$$};
         \node[backtrack] (boxC) [right=1cm of boxB] {$$};
-    
+
         \node (boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
         \node (boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$-10$} (boxBl);
-    
+
         \node (boxBr) at ([yshift=24pt,xshift=5mm]boxB) { };
         \node (boxCl) at ([yshift=24pt,xshift=-5mm]boxC) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBr)  --node[backtrackstep, above=3.0pt] {$\times8$} (boxCl);
-        
-    \end{tikzpicture} 
+
+    \end{tikzpicture}
 \end{equation}
 
 
@@ -189,16 +189,16 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
         \node[backtrack] (boxA) at (0, 0) {$x$};
         \node[backtrack] (boxB) [right=1cm of boxA] {$$};
         \node[backtrack] (boxC) [right=1cm of boxB] {$$};
-    
+
         \node (boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
         \node (boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$+7$} (boxBl);
-    
+
         \node (boxBr) at ([yshift=24pt,xshift=5mm]boxB) { };
         \node (boxCl) at ([yshift=24pt,xshift=-5mm]boxC) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBr)  --node[backtrackstep, above=3.0pt] {$\times4$} (boxCl);
-        
-    \end{tikzpicture} 
+
+    \end{tikzpicture}
 \end{equation}
 
 
@@ -208,16 +208,16 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
         \node[backtrack] (boxA) at (0, 0) {$x$};
         \node[backtrack] (boxB) [right=1cm of boxA] {$$};
         \node[backtrack] (boxC) [right=1cm of boxB] {$$};
-    
+
         \node (boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
         \node (boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$\times2$} (boxBl);
-    
+
         \node (boxBr) at ([yshift=24pt,xshift=5mm]boxB) { };
         \node (boxCl) at ([yshift=24pt,xshift=-5mm]boxC) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBr)  --node[backtrackstep, above=3.0pt] {$+6$} (boxCl);
-        
-    \end{tikzpicture} 
+
+    \end{tikzpicture}
 \end{equation}
 
 
@@ -227,16 +227,16 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
         \node[backtrack] (boxA) at (0, 0) {$x$};
         \node[backtrack] (boxB) [right=1cm of boxA] {$$};
         \node[backtrack] (boxC) [right=1cm of boxB] {$$};
-    
+
         \node (boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
         \node (boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$\div6$} (boxBl);
-    
+
         \node (boxBr) at ([yshift=24pt,xshift=5mm]boxB) { };
         \node (boxCl) at ([yshift=24pt,xshift=-5mm]boxC) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBr)  --node[backtrackstep, above=3.0pt] {$+5$} (boxCl);
-        
-    \end{tikzpicture} 
+
+    \end{tikzpicture}
 \end{equation}
 
 
@@ -246,16 +246,16 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
         \node[backtrack] (boxA) at (0, 0) {$x$};
         \node[backtrack] (boxB) [right=1cm of boxA] {$$};
         \node[backtrack] (boxC) [right=1cm of boxB] {$$};
-    
+
         \node (boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
         \node (boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$\times2$} (boxBl);
-    
+
         \node (boxBr) at ([yshift=24pt,xshift=5mm]boxB) { };
         \node (boxCl) at ([yshift=24pt,xshift=-5mm]boxC) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBr)  --node[backtrackstep, above=3.0pt] {$+7$} (boxCl);
-        
-    \end{tikzpicture} 
+
+    \end{tikzpicture}
 \end{equation}
 
 
@@ -265,16 +265,16 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
         \node[backtrack] (boxA) at (0, 0) {$x$};
         \node[backtrack] (boxB) [right=1cm of boxA] {$$};
         \node[backtrack] (boxC) [right=1cm of boxB] {$$};
-    
+
         \node (boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
         \node (boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$+4$} (boxBl);
-    
+
         \node (boxBr) at ([yshift=24pt,xshift=5mm]boxB) { };
         \node (boxCl) at ([yshift=24pt,xshift=-5mm]boxC) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBr)  --node[backtrackstep, above=3.0pt] {$\times3$} (boxCl);
-        
-    \end{tikzpicture} 
+
+    \end{tikzpicture}
 \end{equation}
 
 
@@ -284,16 +284,16 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
         \node[backtrack] (boxA) at (0, 0) {$x$};
         \node[backtrack] (boxB) [right=1cm of boxA] {$$};
         \node[backtrack] (boxC) [right=1cm of boxB] {$$};
-    
+
         \node (boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
         \node (boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$\times5$} (boxBl);
-    
+
         \node (boxBr) at ([yshift=24pt,xshift=5mm]boxB) { };
         \node (boxCl) at ([yshift=24pt,xshift=-5mm]boxC) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBr)  --node[backtrackstep, above=3.0pt] {$-9$} (boxCl);
-        
-    \end{tikzpicture} 
+
+    \end{tikzpicture}
 \end{equation}
 
 
@@ -303,16 +303,16 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
         \node[backtrack] (boxA) at (0, 0) {$x$};
         \node[backtrack] (boxB) [right=1cm of boxA] {$$};
         \node[backtrack] (boxC) [right=1cm of boxB] {$$};
-    
+
         \node (boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
         \node (boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$\div2$} (boxBl);
-    
+
         \node (boxBr) at ([yshift=24pt,xshift=5mm]boxB) { };
         \node (boxCl) at ([yshift=24pt,xshift=-5mm]boxC) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBr)  --node[backtrackstep, above=3.0pt] {$-10$} (boxCl);
-        
-    \end{tikzpicture} 
+
+    \end{tikzpicture}
 \end{equation}
 
 
@@ -322,16 +322,16 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
         \node[backtrack] (boxA) at (0, 0) {$x$};
         \node[backtrack] (boxB) [right=1cm of boxA] {$$};
         \node[backtrack] (boxC) [right=1cm of boxB] {$$};
-    
+
         \node (boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
         \node (boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$\times8$} (boxBl);
-    
+
         \node (boxBr) at ([yshift=24pt,xshift=5mm]boxB) { };
         \node (boxCl) at ([yshift=24pt,xshift=-5mm]boxC) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBr)  --node[backtrackstep, above=3.0pt] {$+7$} (boxCl);
-        
-    \end{tikzpicture} 
+
+    \end{tikzpicture}
 \end{equation}
 
 
@@ -341,16 +341,16 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
         \node[backtrack] (boxA) at (0, 0) {$x$};
         \node[backtrack] (boxB) [right=1cm of boxA] {$$};
         \node[backtrack] (boxC) [right=1cm of boxB] {$$};
-    
+
         \node (boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
         \node (boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$\div4$} (boxBl);
-    
+
         \node (boxBr) at ([yshift=24pt,xshift=5mm]boxB) { };
         \node (boxCl) at ([yshift=24pt,xshift=-5mm]boxC) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBr)  --node[backtrackstep, above=3.0pt] {$-10$} (boxCl);
-        
-    \end{tikzpicture} 
+
+    \end{tikzpicture}
 \end{equation}
 
 
@@ -360,16 +360,16 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
         \node[backtrack] (boxA) at (0, 0) {$x$};
         \node[backtrack] (boxB) [right=1cm of boxA] {$$};
         \node[backtrack] (boxC) [right=1cm of boxB] {$$};
-    
+
         \node (boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
         \node (boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$\div4$} (boxBl);
-    
+
         \node (boxBr) at ([yshift=24pt,xshift=5mm]boxB) { };
         \node (boxCl) at ([yshift=24pt,xshift=-5mm]boxC) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBr)  --node[backtrackstep, above=3.0pt] {$-10$} (boxCl);
-        
-    \end{tikzpicture} 
+
+    \end{tikzpicture}
 \end{equation}
 
 
@@ -379,16 +379,16 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
         \node[backtrack] (boxA) at (0, 0) {$x$};
         \node[backtrack] (boxB) [right=1cm of boxA] {$$};
         \node[backtrack] (boxC) [right=1cm of boxB] {$$};
-    
+
         \node (boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
         \node (boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$-6$} (boxBl);
-    
+
         \node (boxBr) at ([yshift=24pt,xshift=5mm]boxB) { };
         \node (boxCl) at ([yshift=24pt,xshift=-5mm]boxC) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBr)  --node[backtrackstep, above=3.0pt] {$\div7$} (boxCl);
-        
-    \end{tikzpicture} 
+
+    \end{tikzpicture}
 \end{equation}
 
 
@@ -398,16 +398,16 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
         \node[backtrack] (boxA) at (0, 0) {$x$};
         \node[backtrack] (boxB) [right=1cm of boxA] {$$};
         \node[backtrack] (boxC) [right=1cm of boxB] {$$};
-    
+
         \node (boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
         \node (boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$\times8$} (boxBl);
-    
+
         \node (boxBr) at ([yshift=24pt,xshift=5mm]boxB) { };
         \node (boxCl) at ([yshift=24pt,xshift=-5mm]boxC) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBr)  --node[backtrackstep, above=3.0pt] {$-4$} (boxCl);
-        
-    \end{tikzpicture} 
+
+    \end{tikzpicture}
 \end{equation}
 
 
@@ -417,16 +417,16 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
         \node[backtrack] (boxA) at (0, 0) {$x$};
         \node[backtrack] (boxB) [right=1cm of boxA] {$$};
         \node[backtrack] (boxC) [right=1cm of boxB] {$$};
-    
+
         \node (boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
         \node (boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$\times5$} (boxBl);
-    
+
         \node (boxBr) at ([yshift=24pt,xshift=5mm]boxB) { };
         \node (boxCl) at ([yshift=24pt,xshift=-5mm]boxC) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBr)  --node[backtrackstep, above=3.0pt] {$-10$} (boxCl);
-        
-    \end{tikzpicture} 
+
+    \end{tikzpicture}
 \end{equation}
 
 
@@ -436,16 +436,16 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
         \node[backtrack] (boxA) at (0, 0) {$x$};
         \node[backtrack] (boxB) [right=1cm of boxA] {$$};
         \node[backtrack] (boxC) [right=1cm of boxB] {$$};
-    
+
         \node (boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
         \node (boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$+10$} (boxBl);
-    
+
         \node (boxBr) at ([yshift=24pt,xshift=5mm]boxB) { };
         \node (boxCl) at ([yshift=24pt,xshift=-5mm]boxC) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBr)  --node[backtrackstep, above=3.0pt] {$\times2$} (boxCl);
-        
-    \end{tikzpicture} 
+
+    \end{tikzpicture}
 \end{equation}
 
 
@@ -455,16 +455,16 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
         \node[backtrack] (boxA) at (0, 0) {$x$};
         \node[backtrack] (boxB) [right=1cm of boxA] {$$};
         \node[backtrack] (boxC) [right=1cm of boxB] {$$};
-    
+
         \node (boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
         \node (boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$-10$} (boxBl);
-    
+
         \node (boxBr) at ([yshift=24pt,xshift=5mm]boxB) { };
         \node (boxCl) at ([yshift=24pt,xshift=-5mm]boxC) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBr)  --node[backtrackstep, above=3.0pt] {$\div10$} (boxCl);
-        
-    \end{tikzpicture} 
+
+    \end{tikzpicture}
 \end{equation}
 
 
@@ -474,16 +474,16 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
         \node[backtrack] (boxA) at (0, 0) {$x$};
         \node[backtrack] (boxB) [right=1cm of boxA] {$$};
         \node[backtrack] (boxC) [right=1cm of boxB] {$$};
-    
+
         \node (boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
         \node (boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$-5$} (boxBl);
-    
+
         \node (boxBr) at ([yshift=24pt,xshift=5mm]boxB) { };
         \node (boxCl) at ([yshift=24pt,xshift=-5mm]boxC) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBr)  --node[backtrackstep, above=3.0pt] {$\times4$} (boxCl);
-        
-    \end{tikzpicture} 
+
+    \end{tikzpicture}
 \end{equation}
 
 
@@ -493,16 +493,16 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
         \node[backtrack] (boxA) at (0, 0) {$x$};
         \node[backtrack] (boxB) [right=1cm of boxA] {$$};
         \node[backtrack] (boxC) [right=1cm of boxB] {$$};
-    
+
         \node (boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
         \node (boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$-8$} (boxBl);
-    
+
         \node (boxBr) at ([yshift=24pt,xshift=5mm]boxB) { };
         \node (boxCl) at ([yshift=24pt,xshift=-5mm]boxC) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBr)  --node[backtrackstep, above=3.0pt] {$\times6$} (boxCl);
-        
-    \end{tikzpicture} 
+
+    \end{tikzpicture}
 \end{equation}
 
 
@@ -512,16 +512,16 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
         \node[backtrack] (boxA) at (0, 0) {$x$};
         \node[backtrack] (boxB) [right=1cm of boxA] {$$};
         \node[backtrack] (boxC) [right=1cm of boxB] {$$};
-    
+
         \node (boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
         \node (boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$\times10$} (boxBl);
-    
+
         \node (boxBr) at ([yshift=24pt,xshift=5mm]boxB) { };
         \node (boxCl) at ([yshift=24pt,xshift=-5mm]boxC) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBr)  --node[backtrackstep, above=3.0pt] {$-8$} (boxCl);
-        
-    \end{tikzpicture} 
+
+    \end{tikzpicture}
 \end{equation}
 
 
@@ -531,16 +531,16 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
         \node[backtrack] (boxA) at (0, 0) {$x$};
         \node[backtrack] (boxB) [right=1cm of boxA] {$$};
         \node[backtrack] (boxC) [right=1cm of boxB] {$$};
-    
+
         \node (boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
         \node (boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$-7$} (boxBl);
-    
+
         \node (boxBr) at ([yshift=24pt,xshift=5mm]boxB) { };
         \node (boxCl) at ([yshift=24pt,xshift=-5mm]boxC) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBr)  --node[backtrackstep, above=3.0pt] {$\times5$} (boxCl);
-        
-    \end{tikzpicture} 
+
+    \end{tikzpicture}
 \end{equation}
 
 
@@ -550,16 +550,16 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
         \node[backtrack] (boxA) at (0, 0) {$x$};
         \node[backtrack] (boxB) [right=1cm of boxA] {$$};
         \node[backtrack] (boxC) [right=1cm of boxB] {$$};
-    
+
         \node (boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
         \node (boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$-10$} (boxBl);
-    
+
         \node (boxBr) at ([yshift=24pt,xshift=5mm]boxB) { };
         \node (boxCl) at ([yshift=24pt,xshift=-5mm]boxC) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBr)  --node[backtrackstep, above=3.0pt] {$\times10$} (boxCl);
-        
-    \end{tikzpicture} 
+
+    \end{tikzpicture}
 \end{equation}
 
 
@@ -569,16 +569,16 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
         \node[backtrack] (boxA) at (0, 0) {$x$};
         \node[backtrack] (boxB) [right=1cm of boxA] {$$};
         \node[backtrack] (boxC) [right=1cm of boxB] {$$};
-    
+
         \node (boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
         \node (boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$\div4$} (boxBl);
-    
+
         \node (boxBr) at ([yshift=24pt,xshift=5mm]boxB) { };
         \node (boxCl) at ([yshift=24pt,xshift=-5mm]boxC) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBr)  --node[backtrackstep, above=3.0pt] {$-2$} (boxCl);
-        
-    \end{tikzpicture} 
+
+    \end{tikzpicture}
 \end{equation}
 
 
@@ -588,16 +588,16 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
         \node[backtrack] (boxA) at (0, 0) {$x$};
         \node[backtrack] (boxB) [right=1cm of boxA] {$$};
         \node[backtrack] (boxC) [right=1cm of boxB] {$$};
-    
+
         \node (boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
         \node (boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$+4$} (boxBl);
-    
+
         \node (boxBr) at ([yshift=24pt,xshift=5mm]boxB) { };
         \node (boxCl) at ([yshift=24pt,xshift=-5mm]boxC) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBr)  --node[backtrackstep, above=3.0pt] {$\div8$} (boxCl);
-        
-    \end{tikzpicture} 
+
+    \end{tikzpicture}
 \end{equation}
 
 
@@ -607,16 +607,16 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
         \node[backtrack] (boxA) at (0, 0) {$x$};
         \node[backtrack] (boxB) [right=1cm of boxA] {$$};
         \node[backtrack] (boxC) [right=1cm of boxB] {$$};
-    
+
         \node (boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
         \node (boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$-8$} (boxBl);
-    
+
         \node (boxBr) at ([yshift=24pt,xshift=5mm]boxB) { };
         \node (boxCl) at ([yshift=24pt,xshift=-5mm]boxC) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBr)  --node[backtrackstep, above=3.0pt] {$\times6$} (boxCl);
-        
-    \end{tikzpicture} 
+
+    \end{tikzpicture}
 \end{equation}
 
 
@@ -626,16 +626,16 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
         \node[backtrack] (boxA) at (0, 0) {$x$};
         \node[backtrack] (boxB) [right=1cm of boxA] {$$};
         \node[backtrack] (boxC) [right=1cm of boxB] {$$};
-    
+
         \node (boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
         \node (boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$+1$} (boxBl);
-    
+
         \node (boxBr) at ([yshift=24pt,xshift=5mm]boxB) { };
         \node (boxCl) at ([yshift=24pt,xshift=-5mm]boxC) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBr)  --node[backtrackstep, above=3.0pt] {$\div10$} (boxCl);
-        
-    \end{tikzpicture} 
+
+    \end{tikzpicture}
 \end{equation}
 
 
@@ -645,16 +645,16 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
         \node[backtrack] (boxA) at (0, 0) {$x$};
         \node[backtrack] (boxB) [right=1cm of boxA] {$$};
         \node[backtrack] (boxC) [right=1cm of boxB] {$$};
-    
+
         \node (boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
         \node (boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$\div6$} (boxBl);
-    
+
         \node (boxBr) at ([yshift=24pt,xshift=5mm]boxB) { };
         \node (boxCl) at ([yshift=24pt,xshift=-5mm]boxC) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBr)  --node[backtrackstep, above=3.0pt] {$+1$} (boxCl);
-        
-    \end{tikzpicture} 
+
+    \end{tikzpicture}
 \end{equation}
 
 
@@ -664,16 +664,16 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
         \node[backtrack] (boxA) at (0, 0) {$x$};
         \node[backtrack] (boxB) [right=1cm of boxA] {$$};
         \node[backtrack] (boxC) [right=1cm of boxB] {$$};
-    
+
         \node (boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
         \node (boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$\times10$} (boxBl);
-    
+
         \node (boxBr) at ([yshift=24pt,xshift=5mm]boxB) { };
         \node (boxCl) at ([yshift=24pt,xshift=-5mm]boxC) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBr)  --node[backtrackstep, above=3.0pt] {$+9$} (boxCl);
-        
-    \end{tikzpicture} 
+
+    \end{tikzpicture}
 \end{equation}
 
 
@@ -683,16 +683,16 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
         \node[backtrack] (boxA) at (0, 0) {$x$};
         \node[backtrack] (boxB) [right=1cm of boxA] {$$};
         \node[backtrack] (boxC) [right=1cm of boxB] {$$};
-    
+
         \node (boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
         \node (boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$+4$} (boxBl);
-    
+
         \node (boxBr) at ([yshift=24pt,xshift=5mm]boxB) { };
         \node (boxCl) at ([yshift=24pt,xshift=-5mm]boxC) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBr)  --node[backtrackstep, above=3.0pt] {$\times5$} (boxCl);
-        
-    \end{tikzpicture} 
+
+    \end{tikzpicture}
 \end{equation}
 
 
@@ -702,16 +702,16 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
         \node[backtrack] (boxA) at (0, 0) {$x$};
         \node[backtrack] (boxB) [right=1cm of boxA] {$$};
         \node[backtrack] (boxC) [right=1cm of boxB] {$$};
-    
+
         \node (boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
         \node (boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$\times9$} (boxBl);
-    
+
         \node (boxBr) at ([yshift=24pt,xshift=5mm]boxB) { };
         \node (boxCl) at ([yshift=24pt,xshift=-5mm]boxC) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBr)  --node[backtrackstep, above=3.0pt] {$-8$} (boxCl);
-        
-    \end{tikzpicture} 
+
+    \end{tikzpicture}
 \end{equation}
 
 
@@ -721,16 +721,16 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
         \node[backtrack] (boxA) at (0, 0) {$x$};
         \node[backtrack] (boxB) [right=1cm of boxA] {$$};
         \node[backtrack] (boxC) [right=1cm of boxB] {$$};
-    
+
         \node (boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
         \node (boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$\times6$} (boxBl);
-    
+
         \node (boxBr) at ([yshift=24pt,xshift=5mm]boxB) { };
         \node (boxCl) at ([yshift=24pt,xshift=-5mm]boxC) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBr)  --node[backtrackstep, above=3.0pt] {$+5$} (boxCl);
-        
-    \end{tikzpicture} 
+
+    \end{tikzpicture}
 \end{equation}
 
 
@@ -740,16 +740,16 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
         \node[backtrack] (boxA) at (0, 0) {$x$};
         \node[backtrack] (boxB) [right=1cm of boxA] {$$};
         \node[backtrack] (boxC) [right=1cm of boxB] {$$};
-    
+
         \node (boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
         \node (boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$-7$} (boxBl);
-    
+
         \node (boxBr) at ([yshift=24pt,xshift=5mm]boxB) { };
         \node (boxCl) at ([yshift=24pt,xshift=-5mm]boxC) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBr)  --node[backtrackstep, above=3.0pt] {$\times8$} (boxCl);
-        
-    \end{tikzpicture} 
+
+    \end{tikzpicture}
 \end{equation}
 
 
@@ -759,16 +759,16 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
         \node[backtrack] (boxA) at (0, 0) {$x$};
         \node[backtrack] (boxB) [right=1cm of boxA] {$$};
         \node[backtrack] (boxC) [right=1cm of boxB] {$$};
-    
+
         \node (boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
         \node (boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$-7$} (boxBl);
-    
+
         \node (boxBr) at ([yshift=24pt,xshift=5mm]boxB) { };
         \node (boxCl) at ([yshift=24pt,xshift=-5mm]boxC) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBr)  --node[backtrackstep, above=3.0pt] {$\div9$} (boxCl);
-        
-    \end{tikzpicture} 
+
+    \end{tikzpicture}
 \end{equation}
 
 
@@ -778,16 +778,16 @@ inner sep=2pt,minimum height=12pt, minimum width=20mm}}
         \node[backtrack] (boxA) at (0, 0) {$x$};
         \node[backtrack] (boxB) [right=1cm of boxA] {$$};
         \node[backtrack] (boxC) [right=1cm of boxB] {$$};
-    
+
         \node (boxAr) at ([yshift=24pt,xshift=5mm]boxA) { };
         \node (boxBl) at ([yshift=24pt,xshift=-5mm]boxB) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxAr)  --node[backtrackstep, above=3.0pt] {$\div10$} (boxBl);
-    
+
         \node (boxBr) at ([yshift=24pt,xshift=5mm]boxB) { };
         \node (boxCl) at ([yshift=24pt,xshift=-5mm]boxC) { };
         \draw [line width=0.4pt,-{Stealth[length=2mm]}] (boxBr)  --node[backtrackstep, above=3.0pt] {$+5$} (boxCl);
-        
-    \end{tikzpicture} 
+
+    \end{tikzpicture}
 \end{equation}
 
 

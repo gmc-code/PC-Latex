@@ -108,7 +108,7 @@ html_logo = "_static/logo_navyblue.png"
 # -- Options for LaTeX output ------------------------------
 # see https://sphinxguide.readthedocs.io/en/latest/sphinx_basics/settings.html for LaTeX code
 
-LaTeX_engine = 'xeLaTeX'  # xeLaTeX is better than pdfLaTeX for unicode
+LaTeX_engine = 'xeLaTeX'  # xeLaTeX is better than pdflatex for unicode
 LaTeX_elements = {
     # to use LaTeX dvipsnames and svgcolour names if so desired
     'passoptionstopackages': r'\PassOptionsToPackage{dvipsnames*,svgnames}{xcolor}',
