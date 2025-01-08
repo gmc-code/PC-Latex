@@ -2,12 +2,13 @@ from pathlib import Path
 import subprocess
 import time
 import random
+import os
 import magick_pdf_to_png
 
 currfile_dir = Path(__file__).parent
-tex_template_path = currfile_dir / "number_lines_worksheet_template.tex"
-texans_template_path = currfile_dir / "number_lines_worksheet_ans_template.tex"
-tex_diagram_template_path = currfile_dir / "number_lines_worksheet_diagram_template.tex"
+tex_template_path = currfile_dir / "number_lines_booklet_template.tex"
+texans_template_path = currfile_dir / "number_lines_booklet_ans_template.tex"
+tex_diagram_template_path = currfile_dir / "number_lines_booklet_diagram_template.tex"
 
 
 def convert_to_pdf(tex_path, outputdir):
