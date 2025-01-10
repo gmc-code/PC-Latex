@@ -28,6 +28,12 @@ Booklet template
 Blank -10 to 10
 --------------------------
 
+.. figure:: diagrams/number_lines_blank.png
+   :width: 600
+   :alt: number_lines_blank
+   :figclass: align-center
+
+
 .. grid:: 1
    :gutter: 0
    :margin: 0
@@ -55,6 +61,12 @@ Diagram template
 Blank 0 to 20
 --------------------------
 
+.. figure:: diagrams/number_lines_blank_0to20.png
+   :width: 600
+   :alt: number_lines_blank_0to20
+   :figclass: align-center
+
+
 .. grid:: 1
    :gutter: 0
    :margin: 0
@@ -81,6 +93,11 @@ Booklet diagram template
 
 Blank -20 to 0
 --------------------------
+
+.. figure:: diagrams/number_lines_blank_neg20to0.png
+   :width: 600
+   :alt: number_lines_blank_neg20to0
+   :figclass: align-center
 
 .. grid:: 1
    :gutter: 0
