@@ -89,7 +89,10 @@ PC-latex 2024
     latex_maths/number_lines/number_lines_diagram_automated.rst
     latex_maths/number_lines/number_lines_booklet_latex.rst
     latex_maths/number_lines/number_lines_booklet_python.rst
+    latex_maths/number_lines/number_lines_booklet_variations.rst
     latex_maths/number_lines/number_lines_booklet_blank.rst
+
+
 
 .. toctree::
     :maxdepth: 2

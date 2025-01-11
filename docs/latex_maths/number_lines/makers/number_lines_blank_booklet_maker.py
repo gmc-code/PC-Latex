@@ -5,7 +5,7 @@ import os
 
 
 currfile_dir = Path(__file__).parent
-tex_template_path = currfile_dir / "number_lines_blank_booklet_template.tex"
+tex_template_path = currfile_dir / "number_lines_booklet_template.tex"
 tex_diagram_template_path = currfile_dir / "number_lines_blank_booklet_diagram_template.tex"
 
 

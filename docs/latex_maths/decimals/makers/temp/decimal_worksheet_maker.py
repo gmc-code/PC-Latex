@@ -91,16 +91,16 @@ def main():
 
     # <<col1>>
     # generate column 1 text and column 1 text for answers
-    col1_text = ""
-    col1_text_ans = ""
+    col_text = ""
+    col_text_ans = ""
     for i in range(1, 6):
         img_tex, img_tex_ans = make1_diagram(tex_diagram_template_txt, num)
-        col1_text += img_tex
-        col1_text_ans += img_tex_ans
+        col_text += img_tex
+        col_text_ans += img_tex_ans
 
     # Replace the <<col1>> placeholder in the LaTeX template with the generated diagrams
-    tex_template_txt = tex_template_txt.replace("<<col1>>", col1_text)
-    tex_template_txt_ans = tex_template_txt_ans.replace("<<col1>>", col1_text_ans)
+    tex_template_txt = tex_template_txt.replace("<<col1>>", col_text)
+    tex_template_txt_ans = tex_template_txt_ans.replace("<<col1>>", col_text_ans)
 
     # generate column 2 text and column 2 text for answers
     col2_text = ""

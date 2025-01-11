@@ -57,12 +57,12 @@ def main():
 
     # <<cols>>
     # generate column text and column text for answers
-    col1_text = ""
+    col_text = ""
     for _ in range(1, numq + 1):
-        col1_text += tex_diagram_template_txt
+        col_text += tex_diagram_template_txt
 
     # Replace the <<cols>> placeholder in the LaTeX template with the generated diagrams
-    tex_template_txt = tex_template_txt.replace("<<cols>>", col1_text)
+    tex_template_txt = tex_template_txt.replace("<<cols>>", col_text)
 
     # Write the question tex to an output file
     with open(tex_output_path, "w") as outfile:

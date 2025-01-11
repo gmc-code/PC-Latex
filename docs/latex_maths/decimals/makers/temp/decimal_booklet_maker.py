@@ -90,16 +90,16 @@ def main():
 
     # <<cols>>
     # generate column text and column text for answers
-    col1_text = ""
-    col1_text_ans = ""
+    col_text = ""
+    col_text_ans = ""
     for i in range(1, 21):
         img_tex, img_tex_ans = make1_diagram(tex_diagram_template_txt, num)
-        col1_text += img_tex
-        col1_text_ans += img_tex_ans
+        col_text += img_tex
+        col_text_ans += img_tex_ans
 
     # Replace the <<cols>> placeholder in the LaTeX template with the generated diagrams
-    tex_template_txt = tex_template_txt.replace("<<cols>>", col1_text)
-    tex_template_txt_ans = tex_template_txt_ans.replace("<<cols>>", col1_text_ans)
+    tex_template_txt = tex_template_txt.replace("<<cols>>", col_text)
+    tex_template_txt_ans = tex_template_txt_ans.replace("<<cols>>", col_text_ans)
 
     # Write the question tex to an output file
     with open(tex_output_path, "w") as outfile:

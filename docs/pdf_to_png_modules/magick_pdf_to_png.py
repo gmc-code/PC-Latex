@@ -1,6 +1,7 @@
 """
 Module to convert a pdf to a png using image magick @GMC 2023
 """
+
 from pathlib import Path
 import subprocess
 
@@ -19,8 +20,15 @@ def convert_pdf_to_png(pdf_path, png_path):
         '-quality','100' makes the best quality png
         '-alpha','off' is used here so all transparency is removed
     """
-    subprocess.run(['magick', 'convert', '-quiet', '-background', 'white', '-alpha', 'off', '-quality', '100', '-density', '600', pdf_path, png_path])
-    
+    subprocess.run([
+        'magick',
+        '-density', '600',  # Set resolution (in DPI) for the PDF input
+        pdf_path,  # input PDF file
+        '-background', 'white',
+        '-alpha', 'off',
+        '-quality', '100',  # Set quality of the output image
+        png_path  # output PNG file
+    ])
 
 
 def pdf_to_png(pdf_file_path):

@@ -6,20 +6,22 @@ Multi page booklets
 ----------------------
 
 | The Booklet code allows 8 diagrams per page, for up to 10 pages.
-| There are 3 blanks0 number lines:
+| There are 3 blank number lines:
 
  - -10 to 10
  - 0 to 20
  - -20 to 0
 
+----
+
 Booklet template
 ~~~~~~~~~~~~~~~~~~~~
 
-| All 3 number liens use the same booklet template.
+| All 3 number lines use the same booklet template.
 | The multi page LaTeX number lines booklet template is below.
-| :download:`number_lines_blank_booklet_template.tex<makers/number_lines_blank_booklet_template.tex>`
+| :download:`number_lines_booklet_template.tex<makers/number_lines_booklet_template.tex>`
 
-.. literalinclude:: makers/number_lines_blank_booklet_template.tex
+.. literalinclude:: makers/number_lines_booklet_template.tex
    :linenos:
 
 ----
