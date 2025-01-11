@@ -16,8 +16,8 @@ Variations
 0 to 20
 ----------------
 
-:download:`pdf<booklets/nlBk_0to20_1_q.pdf>`
-:download:`pdf<booklets/nlBk_0to20_1_ans.pdf>`
+:download:`nlBk_0to20_1_q.pdf<booklets/nlBk_0to20_1_q.pdf>`
+:download:`nlBk_0to20_1_ans.pdf<booklets/nlBk_0to20_1_ans.pdf>`
 
 tex files
 ~~~~~~~~~~~~
@@ -48,8 +48,8 @@ Blank -10 to 10
 --------------------------
 
 
-:download:`pdf<booklets/nlBk_neg20to0_1_q.pdf>`
-:download:`pdf<booklets/nlBk_neg20to0_1_ans.pdf>`
+:download:`nlBk_neg20to0_1_q.pdf<booklets/nlBk_neg20to0_1_q.pdf>`
+:download:`nlBk_neg20to0_1_ans.pdf<booklets/nlBk_neg20to0_1_ans.pdf>`
 
 tex files
 ~~~~~~~~~~~~
