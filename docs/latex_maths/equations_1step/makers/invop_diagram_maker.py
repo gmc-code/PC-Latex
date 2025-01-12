@@ -1,5 +1,6 @@
 from pathlib import Path
 import subprocess
+import os
 import time
 import magick_pdf_to_png
 import invop_functions as iof
@@ -31,8 +32,9 @@ def convert_to_pdf(tex_path, outputdir):
 
 
 # % end modify values for invop
-# tex_keys = []
-tex_keys_q = ['line1_LHS', 'line1_RHS', 'line2_LHSq', 'line2_RHSq', 'line3_LHS', 'line3_RHSq']
+# tex_keys_q = ['line1_LHS', 'line1_RHS', 'line2_LHSq', 'line2_RHSq', 'line3_LHS', 'line3_RHSq']
+# keys without q are in template
+tex_keys_q = ['line2_LHS', 'line2_RHS', 'line3_RHS']
 
 
 def make1_diagram(tex_diagram_template_txt, num):
@@ -43,7 +45,7 @@ def make1_diagram(tex_diagram_template_txt, num):
             "<<" + key + ">>", value
         )
     for key, value in kv.items():
-        if key in tex_keys_q:
+        if key not in tex_keys_q:
             tex_diagram_template_txt = tex_diagram_template_txt.replace(
                 "<<" + key + ">>", value
             )

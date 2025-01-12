@@ -1,5 +1,6 @@
 from pathlib import Path
 import subprocess
+import os
 import time
 import recurring_decimals_functions as recdecf
 

@@ -3,6 +3,7 @@ Script used by LaTeX workshop using tools/recipe @GMC 2023
 """
 import sys
 import subprocess
+import os
 
 tex_filename = sys.argv[1]
 # tex_file_directory = sys.argv[2]

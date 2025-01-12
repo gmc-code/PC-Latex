@@ -1,5 +1,6 @@
 from pathlib import Path
 import subprocess
+import os
 import time
 import magick_pdf_to_png
 import ext_angle_to_triangle_functions as aitf

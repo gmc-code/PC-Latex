@@ -1,5 +1,6 @@
 from pathlib import Path
 import subprocess
+import os
 import time
 import magick_pdf_to_png
 import parallel_lines_angles_functions as plaf

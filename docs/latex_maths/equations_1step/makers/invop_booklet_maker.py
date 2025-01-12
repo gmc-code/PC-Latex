@@ -1,6 +1,8 @@
 from pathlib import Path
 import subprocess
+import os
 import time
+
 # import magick_pdf_to_png
 import invop_functions as iof
 
@@ -12,6 +14,7 @@ tex_diagram_template_path = currfile_dir / "invop_booklet_diagram_template.tex"
 q_per_column = 8
 q_per_page = q_per_column * 2
 max_q = 96
+
 
 def convert_to_pdf(tex_path, outputdir):
     tex_path = Path(tex_path).resolve()
@@ -31,28 +34,26 @@ def convert_to_pdf(tex_path, outputdir):
     except subprocess.CalledProcessError as e:
         print(f"Error: {e}")
 
+
 # % end modify values for invop
-# tex_keys = ['ans_force_l','ans_force_e','ans_dist_l', 'ans_dist_e', 'effort_vector','fulc_c', 'fulc_l', 'fulc_r' ]
-tex_keys_q = ['line1_LHS', 'line1_RHS', 'line2_LHSq', 'line2_RHSq', 'line3_LHS', 'line3_RHSq']
+# tex_keys_q = ['line1_LHS', 'line1_RHS', 'line2_LHSq', 'line2_RHSq', 'line3_LHS', 'line3_RHSq']
+# keys without q are in template
+tex_keys_q = ["line2_LHS", "line2_RHS", "line3_RHS"]
 
 
-
-def make1_diagram(tex_diagram_template_txt, num1,):
+def make1_diagram(
+    tex_diagram_template_txt,
+    num1,
+):
     tex_diagram_template_txt_ans = tex_diagram_template_txt
     kv = iof.get_1step_process_dict(num1)
     for key, value in kv.items():
-        tex_diagram_template_txt_ans = tex_diagram_template_txt_ans.replace(
-            "<<" + key + ">>", value
-        )
+        tex_diagram_template_txt_ans = tex_diagram_template_txt_ans.replace("<<" + key + ">>", value)
     for key, value in kv.items():
-        if key in tex_keys_q:
-            tex_diagram_template_txt = tex_diagram_template_txt.replace(
-                "<<" + key + ">>", value
-            )
+        if key not in tex_keys_q:
+            tex_diagram_template_txt = tex_diagram_template_txt.replace("<<" + key + ">>", value)
         else:
-            tex_diagram_template_txt = tex_diagram_template_txt.replace(
-                "<<" + key + ">>", kv[f'{key}q']
-            )
+            tex_diagram_template_txt = tex_diagram_template_txt.replace("<<" + key + ">>", kv[f"{key}q"])
     return tex_diagram_template_txt, tex_diagram_template_txt_ans
 
 
@@ -73,8 +74,7 @@ def main():
     else:
         numq = q_per_page  # by default fits on one page
     #
-    filename = input(
-        "Enter the base filename to be added to the prefix invop_Bk_: \n")
+    filename = input("Enter the base filename to be added to the prefix invop_Bk_: \n")
     if not filename:
         filename = "1"  # "invop_Bk_1_q and invop_Bk_1_ans as default file"
     # set names of files that are made
@@ -105,27 +105,26 @@ def main():
     diagrams_text_ans = ""
     # add the headtext
     # must have no space in \end{minipage}\columnbreak for column break to occur at correct place.
-    headtext_col = r'''\columnbreak
-    '''
-    headtext_page = r'''\newpage
-    '''
+    headtext_col = r"""\columnbreak
+    """
+    headtext_page = r"""\newpage
+    """
     # headtext_page = r'''\newpage ~ \newline ~ \newline'''
 
     for i in range(1, numq + 1):
         img_tex, img_tex_ans = make1_diagram(tex_diagram_template_txt, num1)
         diagrams_text += img_tex
         diagrams_text_ans += img_tex_ans
-        if i % q_per_page == 0 and rmax > i:
+        if i % q_per_page == 0 and numq + 1 > i:
             diagrams_text += headtext_page
             diagrams_text_ans += headtext_page
-        elif i % q_per_column == 0 and i > 1 and rmax > i:
+        elif i % q_per_column == 0 and i > 1 and numq + 1 > i:
             diagrams_text += headtext_col
             diagrams_text_ans += headtext_col
 
     # Replace the <<diagrams>> placeholder in the LaTeX template
     tex_template_txt = tex_template_txt.replace("<<diagrams>>", diagrams_text)
-    tex_template_txt_ans = tex_template_txt_ans.replace(
-        "<<diagrams>>", diagrams_text_ans)
+    tex_template_txt_ans = tex_template_txt_ans.replace("<<diagrams>>", diagrams_text_ans)
     # Write the question diagrams tex to an output file
     with open(tex_output_path, "w") as outfile:
         outfile.write(tex_template_txt)

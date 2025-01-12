@@ -3,6 +3,7 @@ Module to convert a pdf to a png using image magick @GMC 2023
 """
 from pathlib import Path
 import subprocess
+import os
 
 
 def convert_pdf_to_png(pdf_path, png_path):

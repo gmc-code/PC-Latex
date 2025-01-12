@@ -1,5 +1,6 @@
 from pathlib import Path
 import subprocess
+import os
 import time
 import magick_pdf_to_png
 import like_terms_functions as ltf

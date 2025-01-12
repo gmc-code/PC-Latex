@@ -2,6 +2,7 @@
 import numpy as np
 from pathlib import Path
 import subprocess
+import os
 from tkinter import filedialog
 import time
 import magick_pdf_to_png

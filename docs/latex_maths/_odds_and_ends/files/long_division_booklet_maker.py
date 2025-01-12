@@ -1,6 +1,8 @@
 from pathlib import Path
 import subprocess
+import os
 import time
+
 import random
 import magick_pdf_to_png
 import decimals_functions as decf

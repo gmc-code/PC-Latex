@@ -173,6 +173,7 @@ Python LaTeX_pdf_to_png.py
 
    import sys
    import subprocess
+import os
 
    tex_filename = sys.argv[1]
    pdf_path = f'{tex_filename}.pdf'

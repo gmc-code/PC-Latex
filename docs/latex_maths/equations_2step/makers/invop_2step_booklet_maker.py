@@ -1,5 +1,6 @@
 from pathlib import Path
 import subprocess
+import os
 import time
 # import magick_pdf_to_png
 import invop_functions as iof
@@ -126,10 +127,10 @@ def main():
         img_tex, img_tex_ans = make1_diagram(tex_diagram_template_txt, num1, num2)
         diagrams_text += img_tex
         diagrams_text_ans += img_tex_ans
-        if i % q_per_page == 0 and rmax > i:
+        if i % q_per_page == 0 and numq + 1 > i:
             diagrams_text += headtext_page
             diagrams_text_ans += headtext_page
-        elif i % q_per_column == 0 and i > 1 and rmax > i:
+        elif i % q_per_column == 0 and i > 1 and numq + 1 > i:
             diagrams_text += headtext_col
             diagrams_text_ans += headtext_col
 

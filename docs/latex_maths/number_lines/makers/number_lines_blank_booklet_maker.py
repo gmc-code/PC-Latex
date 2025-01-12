@@ -1,7 +1,7 @@
 from pathlib import Path
 import subprocess
-import time
 import os
+import time
 
 
 currfile_dir = Path(__file__).parent
