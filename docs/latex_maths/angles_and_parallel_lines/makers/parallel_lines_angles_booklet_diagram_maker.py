@@ -24,8 +24,8 @@ def convert_to_pdf(tex_path, outputdir):
         subprocess.run(["latexmk", "-c", "-outdir=" + str(outputdir), str(tex_path)], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         # for hosted remove stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL for debugging any errors
         # Remove the .tex file manually
-        if tex_path.exists():
-            os.remove(tex_path)
+        # if tex_path.exists():
+        #     os.remove(tex_path)
     except subprocess.CalledProcessError as e:
         print(f"Error: {e}")
 
@@ -54,7 +54,7 @@ def make1_diagram(tex_diagram_template_txt, num):
             )
         else:
             tex_diagram_template_txt = tex_diagram_template_txt.replace(
-                "<<" + key + ">>", "\dotuline{~~~~~~~}"  # non breaking spaces for gaps
+                "<<" + key + ">>", "\\dotuline{~~~~~~~}"  # non breaking spaces for gaps
             )
     return tex_diagram_template_txt + posttext, tex_diagram_template_txt_ans + posttext
 

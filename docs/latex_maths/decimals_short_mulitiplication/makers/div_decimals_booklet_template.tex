@@ -1,0 +1,40 @@
+% Division with decimals worksheet template
+\documentclass[leqno, 12pt]{article}
+\usepackage[a4paper, portrait, margin=2cm]{geometry}
+\usepackage{amsmath}  % for newcommand
+\usepackage{graphicx}  % For scalebox
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{multicol}
+\usepackage{dcolumn}
+\usepackage{fancyhdr}
+
+
+\newcommand\Mydiv[2]{%
+  $\mathrel{\strut#1\hspace{0.5em}
+  \raisebox{0.1ex}{\scalebox{1.2}{$\big)$}}\mkern-8mu
+  \overline{\phantom{0}\hspace{0.3em}\strut#2}}$
+}
+
+\newcolumntype{d}[1]{cD{.}{.}{#1}}
+
+\def \HeadingQuestions {\section*{\Large Name: \underline{\hspace{8cm}} \hfill Date: \underline{\hspace{3cm}}} \vspace{-3mm}
+{<<title>> of decimals: Questions} \vspace{1pt}\hrule}
+
+% raise footer with page number
+\fancypagestyle{myfancypagestyle}{
+  \fancyhf{} % clear all header and footer fields
+  \renewcommand{\headrulewidth}{0pt} % no rule under header
+  \fancyfoot[R] {\thepage} % place page number at the bottom right
+  \setlength{\footskip}{10pt} % raise page number
+}
+\pagestyle{myfancypagestyle}  % apply myfancypagestyle
+
+%
+\begin{document}
+\HeadingQuestions
+\vspace{-5mm}
+\begin{multicols}{3}
+<<diagrams>>
+\end{multicols}
+\end{document}

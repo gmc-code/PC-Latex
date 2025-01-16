@@ -56,14 +56,14 @@ def main():
     with open(tex_diagram_template_path, "r") as infile:
         tex_diagram_template_txt = infile.read()
 
-    # <<cols>>
+    # <<diagrams>>
     # generate column text and column text for answers
-    col_text = ""
+    diagram_text = ""
     for _ in range(1, numq + 1):
-        col_text += tex_diagram_template_txt
+        diagram_text += tex_diagram_template_txt
 
-    # Replace the <<cols>> placeholder in the LaTeX template with the generated diagrams
-    tex_template_txt = tex_template_txt.replace("<<cols>>", col_text)
+    # Replace the <<diagrams>> placeholder in the LaTeX template with the generated diagrams
+    tex_template_txt = tex_template_txt.replace("<<diagrams>>", diagram_text)
 
     # Write the question tex to an output file
     with open(tex_output_path, "w") as outfile:

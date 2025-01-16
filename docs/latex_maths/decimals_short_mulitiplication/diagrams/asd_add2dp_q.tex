@@ -1,0 +1,18 @@
+% decimals template
+\documentclass[border = 1mm]{standalone}
+\usepackage{dcolumn}
+
+% Define a decimal-aligned column type
+\newcolumntype{d}[1]{D{.}{.}{#1}}
+
+\begin{document}
+    % decimals diagram template
+\begin{tabular}{c d{1.2}}
+     &3.43 \tabularnewline
+    $+$&1.50 \tabularnewline
+    \hline
+     & \tabularnewline
+    \hline
+\end{tabular}
+
+\end{document}

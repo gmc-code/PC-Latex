@@ -161,7 +161,7 @@ Booklet template
 .. code-block:: LaTeX
 
    \begin{multicols}{2}
-      <<cols>>
+      <<diagrams>>
    \end{multicols}
 
 ----

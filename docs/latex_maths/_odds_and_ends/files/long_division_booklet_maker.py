@@ -119,21 +119,21 @@ def main():
     with open(tex_diagram_template_path, "r") as infile:
         tex_diagram_template_txt = infile.read()
 
-    # <<cols>>
+    # <<diagrams>>
     # generate column text and column text for answers
-    col_text = ""
-    col_text_ans = ""
+    diagram_text = ""
+    diagram_text_ans = ""
     for _ in range(1, numq + 1):
         img_tex, img_tex_ans = make1_diagram(tex_diagram_template_txt, num, numdp)
-        col_text += img_tex
-        col_text_ans += img_tex_ans
+        diagram_text += img_tex
+        diagram_text_ans += img_tex_ans
 
     # Replace the <<title>> placeholder in the LaTeX template
     tex_template_txt = tex_template_txt.replace("<<title>>", title)
     tex_template_txt_ans = tex_template_txt_ans.replace("<<title>>", title)
-    # Replace the <<cols>> placeholder in the LaTeX template with the generated diagrams
-    tex_template_txt = tex_template_txt.replace("<<cols>>", col_text)
-    tex_template_txt_ans = tex_template_txt_ans.replace("<<cols>>", col_text_ans)
+    # Replace the <<diagrams>> placeholder in the LaTeX template with the generated diagrams
+    tex_template_txt = tex_template_txt.replace("<<diagrams>>", diagram_text)
+    tex_template_txt_ans = tex_template_txt_ans.replace("<<diagrams>>", diagram_text_ans)
 
     # Write the question tex to an output file
     with open(tex_output_path, "w") as outfile:

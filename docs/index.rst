@@ -99,10 +99,10 @@ PC-latex 2024
     :caption: ⏺️ decimals
     :numbered:
 
-    latex_maths/decimals/decimals_intro.rst
-    latex_maths/decimals/decimals_diagram_automated.rst
-    latex_maths/decimals/decimals_booklet_latex.rst
-    latex_maths/decimals/decimals_booklet_python.rst
+    latex_maths/decimals_add_subtract/decimals_intro.rst
+    latex_maths/decimals_add_subtract/decimals_diagram_automated.rst
+    latex_maths/decimals_add_subtract/decimals_booklet_latex.rst
+    latex_maths/decimals_add_subtract/decimals_booklet_python.rst
 
 
 
@@ -117,6 +117,7 @@ PC-latex 2024
     latex_maths/isosceles_triangles/isosceles_triangles.rst
     latex_maths/triangles/angles_in_triangles.rst
     latex_maths/exterior_angle_to_triangle/exterior_angle_to_triangle.rst
+    latex_maths/angles_and_parallel_lines/angles_and_parallel_lines.rst
 
     .. latex_maths/adjacent_angles/adjacent_angles.rst
 
