@@ -20,7 +20,15 @@ def convert_pdf_to_png(pdf_path, png_path):
         '-quality','100' makes the best quality png
         '-alpha','off' is used here so all transparency is removed
     """
-    subprocess.run(['magick', '-quiet', '-background', 'white', '-alpha', 'off', '-quality', '100', '-density', '600', pdf_path, png_path])
+    subprocess.run([
+        'magick',
+        '-density', '600',  # Set resolution (in DPI) for the PDF input
+        pdf_path,  # input PDF file
+        '-background', 'white',
+        '-alpha', 'off',
+        '-quality', '100',  # Set quality of the output image
+        png_path  # output PNG file
+    ])
     # subprocess.run(['magick', '-quiet', '-background', 'white', '-alpha', 'off', '-quality', '100', '-density', '600', '-colorspace', 'Gray', pdf_path, png_path])
 
 

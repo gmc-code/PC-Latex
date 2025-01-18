@@ -24,16 +24,19 @@ def convert_to_pdf(tex_path, outputdir):
         subprocess.run(["latexmk", "-c", "-outdir=" + str(outputdir), str(tex_path)], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         # for hosted remove stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL for debugging any errors
         # Remove the .tex file manually
-        if tex_path.exists():
-            os.remove(tex_path)
+        # if tex_path.exists():
+        #     os.remove(tex_path)
     except subprocess.CalledProcessError as e:
         print(f"Error: {e}")
 
 
 # % end modify values for angles in triangle
-# tex_keys_q = ['angleCalcAValue', 'angleCalcBValue', 'angleCalcCValue', 'angleCalcBCValue']
-tex_keys_q = ['angleAValue', 'angleBValue', 'angleCValue', 'angleBCValue',
-              'sideCValue', 'rotationAngleValue', 'angleALabel','angleBLabel', 'angleCLabel']
+# tex_keys_q = ['angleLabel2','angleValue1','angleValue2',]
+tex_keys_q = ['angleAValue', 'angleBValue','sideCValue', 'rotationAngleValue',
+              'angleALabel','angleBLabel', 'angleCLabel',
+              'angleAValueDisplay','angleBValueDisplay',
+              'angleLabel1',
+              ]
 
 
 
@@ -51,7 +54,7 @@ def make1_diagram(tex_diagram_template_txt,):
             )
         else:
             tex_diagram_template_txt = tex_diagram_template_txt.replace(
-                "<<" + key + ">>", "\dotuline{~~~~~~~}"  # non breaking spaces for gaps
+                "<<" + key + ">>", "\\dotuline{~~~~~~~}"  # non breaking spaces for gaps
             )
     return tex_diagram_template_txt, tex_diagram_template_txt_ans
 
@@ -68,7 +71,7 @@ def main():
 
     # answers
     tex_output_path_ans = currfile_dir / f"angles_in_rt_triangle_{filename}_ans.tex"
-    pdf_path_ans = currfile_dir / f"angles_in_rt_riangle_{filename}_ans.pdf"
+    pdf_path_ans = currfile_dir / f"angles_in_rt_triangle_{filename}_ans.pdf"
     png_path_ans = currfile_dir / f"angles_in_rt_triangle_{filename}_ans.png"
 
     # Read in the LaTeX template file
@@ -102,8 +105,8 @@ def main():
     # Wait for the files to be created
     time.sleep(1)
     # convert to png
-    # magick_pdf_to_png.convert_pdf_to_png(pdf_path, png_path)
-    # magick_pdf_to_png.convert_pdf_to_png(pdf_path_ans, png_path_ans)
+    magick_pdf_to_png.convert_pdf_to_png(pdf_path, png_path)
+    magick_pdf_to_png.convert_pdf_to_png(pdf_path_ans, png_path_ans)
 
 
 if __name__ == "__main__":

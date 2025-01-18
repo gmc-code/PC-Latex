@@ -24,16 +24,19 @@ def convert_to_pdf(tex_path, outputdir):
         subprocess.run(["latexmk", "-c", "-outdir=" + str(outputdir), str(tex_path)], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         # for hosted remove stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL for debugging any errors
         # Remove the .tex file manually
-        if tex_path.exists():
-            os.remove(tex_path)
+        # if tex_path.exists():
+        #     os.remove(tex_path)
     except subprocess.CalledProcessError as e:
         print(f"Error: {e}")
 
 
 # % end modify values for angles in triangle
-# tex_keys_q = ['angleCalcAValue', 'angleCalcBValue', 'angleCalcCValue', 'angleCalcBCValue']
-tex_keys_q = ['angleAValue', 'angleBValue', 'angleCValue', 'angleBCValue',
-              'sideCValue', 'rotationAngleValue', 'angleALabel','angleBLabel', 'angleCLabel']
+# tex_keys_q = ['angleLabel2','angleValue1','angleValue2',]
+tex_keys_q = ['angleAValue', 'angleBValue','sideCValue', 'rotationAngleValue',
+              'angleALabel','angleBLabel', 'angleCLabel',
+              'angleAValueDisplay','angleBValueDisplay',
+              'angleLabel1',
+              ]
 
 
 def make1_diagram(tex_diagram_template_txt):
@@ -51,7 +54,7 @@ def make1_diagram(tex_diagram_template_txt):
             )
         else:
             tex_diagram_template_txt = tex_diagram_template_txt.replace(
-                "<<" + key + ">>", "\dotuline{~~~~~~~}"  # non breaking spaces for gaps
+                "<<" + key + ">>", "\\dotuline{~~~~~~~}"  # non breaking spaces for gaps
             )
     return tex_diagram_template_txt + posttext, tex_diagram_template_txt_ans + posttext
 

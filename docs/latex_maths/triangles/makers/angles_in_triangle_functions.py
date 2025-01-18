@@ -11,7 +11,7 @@ def get_angles_in_triangle_dict():
     angleBCValue = int(angleBValue+angleCValue)
     sideCValue = random.uniform(0, 1) + 3
     rotationAngleValue = int(random.randint(0,20))
-    # gap_to_fill = "\dotuline{~~~~~~~}"
+    # gap_to_fill = "\\dotuline{~~~~~~~}"
 
     kv = dict()
     kv["angleAValue"] = f"{angleAValue}"

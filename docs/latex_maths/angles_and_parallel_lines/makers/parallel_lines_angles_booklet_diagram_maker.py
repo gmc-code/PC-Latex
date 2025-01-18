@@ -68,13 +68,13 @@ def main():
     else:
         numq = 4  # random by default
     #
-    num = input("Enter 1, 2, 3, 4 or 5 for corresponding, alternate, cointerior, external, random \n")
+    num = input("Enter 1, 2, 3, 4, 5, 6, or 7 for corresponding, alternate, cointerior, verticall_opposite, consecutive_exterior, alternate_exterior, random \n")
     if num.strip().isdigit():
         num = int(num)
-        if not num in [1, 2, 3, 4, 5]:
-            num = 5  # random by default
+        if not num in [1, 2, 3, 4, 5, 6]:
+            num = 7  # random by default
     else:
-        num = 5  # random by default
+        num = 7  # random by default
     #
     filename = input("Enter the base filename to be added to the prefix pla_Bk_: \n")
     if not filename:

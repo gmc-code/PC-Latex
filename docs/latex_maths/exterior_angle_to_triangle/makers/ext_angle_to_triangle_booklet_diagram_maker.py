@@ -24,48 +24,53 @@ def convert_to_pdf(tex_path, outputdir):
         subprocess.run(["latexmk", "-c", "-outdir=" + str(outputdir), str(tex_path)], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         # for hosted remove stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL for debugging any errors
         # Remove the .tex file manually
-        if tex_path.exists():
-            os.remove(tex_path)
+        # if tex_path.exists():
+        #     os.remove(tex_path)
     except subprocess.CalledProcessError as e:
         print(f"Error: {e}")
 
 
 # % end modify values for angles in triangle
-# replaced in q = ['angleCalcAValue', 'angleCalcBValue', 'angleCalcCValue', 'angleCalcExtBValue']
+# replaced in q = ['angleLabel2','angleLabel3','angleValue1','angleValue2','angleValue3']
 tex_keys_q = ['angleAValue', 'angleBValue', 'angleCValue', 'angleExtBValue',
               'sideCValue', 'sideDValue', 'rotationAngleValue',
-              'angleALabel','angleBLabel', 'angleCLabel', 'angleDLabel', 'angleExtLabel']
+              'angleALabel','angleBLabel', 'angleCLabel', 'angleDLabel', 'angleExtLabel',
+              'angleAValueDisplay','angleBValueDisplay','angleCValueDisplay','angleExtBValueDisplay','process',
+              'angleLabel1',
+              ]
 
-def make1_diagram(tex_diagram_template_txt):
+
+def make1_diagram(tex_diagram_template_txt,unknown_ang_num):
+    posttext = r"\vspace{1cm} \vfill"  #  ~ \newline
     tex_diagram_template_txt_ans = tex_diagram_template_txt
-    posttext = r"\vspace{1cm}"  #  ~ \newline
-    kv = aitf.get_ext_angle_to_triangle_dict()
+    kv = aitf.get_ext_angle_to_triangle_dict(unknown_ang_num)
     for key, value in kv.items():
-        tex_diagram_template_txt_ans = tex_diagram_template_txt_ans.replace(
-            "<<" + key + ">>", value
-        )
+        tex_diagram_template_txt_ans = tex_diagram_template_txt_ans.replace("<<" + key + ">>", value)
     for key, value in kv.items():
         if key in tex_keys_q:
-            tex_diagram_template_txt = tex_diagram_template_txt.replace(
-                "<<" + key + ">>", value
-            )
+            tex_diagram_template_txt = tex_diagram_template_txt.replace("<<" + key + ">>", value)
         else:
-            tex_diagram_template_txt = tex_diagram_template_txt.replace(
-                "<<" + key + ">>", "\dotuline{~~~~~~~}"  # non breaking spaces for gaps
-            )
+            tex_diagram_template_txt = tex_diagram_template_txt.replace("<<" + key + ">>", "\\dotuline{~~~~~~~}")  # non breaking spaces for gaps
     return tex_diagram_template_txt + posttext, tex_diagram_template_txt_ans + posttext
 
 
 def main():
+    num1 = input("Enter 1, 2, 3, or 4 for A, C, ExtB, random for the unknown angle \n")
+    if num1.strip().isdigit():
+        num1 = int(num1)
+        if not num1 in [1, 2, 3, 4]:
+            num1 = 4  # random by default
+    else:
+        num1 = 4 # random by default
+    #
     numq = input("Enter the number of questions from 1 to 20 \n")
     if numq.strip().isdigit():
         numq = int(numq)
         if not numq in range(1,21):
-            numq = 4  # random by default
+            numq = 4  # default
     else:
-        numq = 4  # random by default
+        numq = 4  # default
     #
-
     filename = input("Enter the base filename to be added to the prefix ext_angle_to_triangle_Bk_: \n")
     if not filename:
         filename = "1"  # "ext_angle_to_triangle_Bk_1_q and ext_angle_to_triangle_Bk_1_ans as default file"
@@ -83,22 +88,20 @@ def main():
         tex_template_txt = infile.read()
     # Read in the LaTeX template file for answers
     with open(texans_template_path, "r") as infile:
+
         tex_template_txt_ans = infile.read()
     # Read in the LaTeX diagram template file
     with open(tex_diagram_template_path, "r") as infile:
         tex_diagram_template_txt = infile.read()
 
-    # Generate the <<diagram>> replacement tex
-    # diagram_text, diagram_text_ans = make1_diagram(tex_diagram_template_txt)
-
     # <<diagrams>>
     # generate diagrams text and text for answers
     diagrams_text = ""
     diagrams_text_ans = ""
-    # add the headtext; disabled for now using r"" wno needed as numbers in minipage itself
-    headtext = r""  # r"\pagebreak ~ \newline ~ \newline"
+    # 4 to a page
+    headtext = r"\pagebreak ~ \newline ~ \newline"
     for i in range(1, numq + 1):
-        img_tex, img_tex_ans = make1_diagram(tex_diagram_template_txt)
+        img_tex, img_tex_ans = make1_diagram(tex_diagram_template_txt,num1)
         if i > 4 and i % 4 == 1:
             diagrams_text += headtext
             diagrams_text_ans += headtext

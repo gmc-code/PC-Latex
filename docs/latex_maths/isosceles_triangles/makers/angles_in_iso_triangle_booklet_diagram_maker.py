@@ -51,7 +51,7 @@ def make1_diagram(tex_diagram_template_txt):
             )
         else:
             tex_diagram_template_txt = tex_diagram_template_txt.replace(
-                "<<" + key + ">>", "\dotuline{~~~~~~~}"  # non breaking spaces for gaps
+                "<<" + key + ">>", "\\dotuline{~~~~~~~}"  # non breaking spaces for gaps
             )
     return tex_diagram_template_txt + posttext, tex_diagram_template_txt_ans + posttext
 

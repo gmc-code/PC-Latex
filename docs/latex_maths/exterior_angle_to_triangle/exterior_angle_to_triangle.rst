@@ -57,10 +57,10 @@ Sample booklet Tex and pdf files
 -------------------------------------
 
 | Question sheet:
-| :download:`ext_angle_to_triangle_Bk_20_q.tex<files/ext_angle_to_triangle_Bk_20_q.tex>`
-| :download:`ext_angle_to_triangle_Bk_20_q.pdf<files/ext_angle_to_triangle_Bk_20_q.pdf>`
+| :download:`ext_angle_to_triangle_Bk_20_q.tex<booklets/ext_angle_to_triangle_Bk_20_q.tex>`
+| :download:`ext_angle_to_triangle_Bk_20_q.pdf<booklets/ext_angle_to_triangle_Bk_20_q.pdf>`
 
 | Answer sheet:
-| :download:`ext_angle_to_triangle_Bk_20_ans.tex<files/ext_angle_to_triangle_Bk_20_ans.tex>`
-| :download:`ext_angle_to_triangle_Bk_20_ans.pdf<files/ext_angle_to_triangle_Bk_20_ans.pdf>`
+| :download:`ext_angle_to_triangle_Bk_20_ans.tex<booklets/ext_angle_to_triangle_Bk_20_ans.tex>`
+| :download:`ext_angle_to_triangle_Bk_20_ans.pdf<booklets/ext_angle_to_triangle_Bk_20_ans.pdf>`
 

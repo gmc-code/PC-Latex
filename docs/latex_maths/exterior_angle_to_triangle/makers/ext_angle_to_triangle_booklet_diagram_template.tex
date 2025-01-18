@@ -1,58 +1,50 @@
 \begin{minipage}{0.55\textwidth}
   \refstepcounter{minipagecount}
   \noindent{(\theminipagecount)}\quad
-  \begin{tikzpicture}[scale=1.5, baseline=(current bounding box.north)]
-      \pgfmathsetmacro{\angleA}{<<angleAValue>>}
-      \pgfmathsetmacro{\angleB}{<<angleBValue>>}
-      \pgfmathsetmacro{\angleC}{<<angleCValue>>}
-      \pgfmathsetmacro{\angleExtB}{<<angleExtBValue>>}
-      \pgfmathsetmacro{\sideC}{<<sideCValue>>}
-      \pgfmathsetmacro{\sideD}{<<sideDValue>>}
-      \pgfmathsetmacro{\rotationAngle}{<<rotationAngleValue>>}
-    
-      \begin{scope}[rotate=\rotationAngle]
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+
+      \begin{scope}[rotate=<<rotationAngleValue>>]
         \coordinate (A) at (0,0);
-        \coordinate (B) at (\sideC,0);
-        \coordinate (D) at (\sideD,0);
-        \coordinate (C) at (intersection cs: first line={(A)--($(A)+(\angleA:4cm)$)}, second line={(B)--($(B)+(180-\angleB:4cm)$)});
+        \coordinate (B) at (<<sideCValue>>,0);
+        \coordinate (D) at (<<sideDValue>>,0);
+        \coordinate (C) at (intersection cs: first line={(A)--($(A)+(<<angleAValue>>:4cm)$)}, second line={(B)--($(B)+(180-<<angleBValue>>:4cm)$)});
         \draw (A) -- (B) -- (C) -- cycle;
         \draw (B) -- (D);
-        
+
         % Mark angles with arcs
-        \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=\angleA, radius=0.3cm];
-        \draw ($(B)!0.3cm!(C)$) arc [start angle=180-\angleB, end angle=180, radius=0.3cm];
-        \draw ($(C)!0.3cm!(A)$) arc [start angle=180+\angleA, end angle=360-\angleB, radius=0.3cm];
-        \draw ($(B)!0.25cm!(D)$) arc [start angle=0, end angle=180-\angleB, radius=0.25cm];
-  
+        \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=<<angleAValue>>, radius=0.3cm];
+        \draw ($(B)!0.3cm!(C)$) arc [start angle=180-<<angleBValue>>, end angle=180, radius=0.3cm];
+        \draw ($(C)!0.3cm!(A)$) arc [start angle=180+<<angleAValue>>, end angle=360-<<angleBValue>>, radius=0.3cm];
+        \draw ($(B)!0.25cm!(D)$) arc [start angle=0, end angle=180-<<angleBValue>>, radius=0.25cm];
+
         % Label angles
-        \node at ($(A)!-0.15cm!(B)$) {<<angleALabel>>};
-        \node at ($(B)!-0.15cm!(C)$) {<<angleBLabel>>};
-        \node at ($(C)!-0.15cm!(A)$) {<<angleCLabel>>};
-        \node at ($(D)!-0.15cm!(A)$) {<<angleDLabel>>};
-  
+        \node at ($(A)!-0.25cm!(B)$) {<<angleALabel>>};
+        \node at ($(B)!-0.45cm!(C)!0.2cm!(A)$) {<<angleBLabel>>};
+        \node at ($(C)!-0.25cm!(A)!-0.25cm!(B)$) {<<angleCLabel>>};
+        \node at ($(D)!-0.25cm!(A)$) {<<angleDLabel>>};
+
         % Mark angles in degrees
         \coordinate (midBC) at ($(B)!0.5!(C)$);
-        \node at ($(A)!0.55cm!(midBC)$) {$\theta ^\circ$};
-    
+        \node at ($(A)!0.70cm!(midBC)!0.10cm!(C)$) {$<<angleAValueDisplay>>^\circ$};
+
         \coordinate (midAC) at ($(A)!0.5!(C)$);
-        \node at ($(B)!0.55cm!(midAC)$) {};
-    
+        \node at ($(B)!0.65cm!(midAC)$) {};
+
         \coordinate (midAB) at ($(A)!0.5!(B)$);
-        \node at ($(C)!0.55cm!(midAB)$) {<<angleCValue>>$^\circ$};
-      
+        \node at ($(C)!0.65cm!(midAB)$) {$<<angleCValueDisplay>>^\circ$};
+
         \coordinate (midDC) at ($(D)!0.3!(C)$);
-        \node at ($(B)!0.55cm!(midDC)$) {<<angleExtBValue>>$^\circ$};
-  
-      
+        \node at ($(B)!0.65cm!(midDC)$) {$<<angleExtBValueDisplay>>^\circ$};
+
+
       \end{scope}
     \end{tikzpicture}
 \end{minipage}%
 \hfill
 \begin{minipage}{0.4\textwidth}
-    \begin{align*}
-      \angle \text{<<angleALabel>>} &= \angle \text{<<angleExtLabel>>} - \angle \text{<<angleCLabel>>} \\
-      &= <<angleCalcExtBValue>>^\circ  - <<angleCalcCValue>>^\circ \\
-      &= <<angleCalcAValue>>^\circ
-    \end{align*}
+  \begin{align*}
+    \angle \text{<<angleLabel1>>} &= \angle \text{<<angleLabel2>>} <<process>> \angle \text{<<angleLabel3>>} \\
+    &= <<angleValue2>>^\circ  <<process>> <<angleValue3>>^\circ \\
+    &= <<angleValue1>>^\circ
+  \end{align*}
 \end{minipage}
-

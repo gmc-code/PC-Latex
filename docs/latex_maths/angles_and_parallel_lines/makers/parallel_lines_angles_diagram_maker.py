@@ -24,8 +24,8 @@ def convert_to_pdf(tex_path, outputdir):
         subprocess.run(["latexmk", "-c", "-outdir=" + str(outputdir), str(tex_path)], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         # for hosted remove stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL for debugging any errors
         # Remove the .tex file manually
-        if tex_path.exists():
-            os.remove(tex_path)
+        # if tex_path.exists():
+        #     os.remove(tex_path)
     except subprocess.CalledProcessError as e:
         print(f"Error: {e}")
 
@@ -60,13 +60,13 @@ def make1_diagram(tex_diagram_template_txt, num):
 
 
 def main():
-    num = input("Enter 1, 2, 3, 4 or 5 for corresponding, alternate, cointerior, external, random \n")
+    num = input("Enter 1, 2, 3, 4, 5, 6, or 7 for corresponding, alternate, cointerior, vertically_opposite, consecutive_exterior, alternate_exterior, random \n")
     if num.strip().isdigit():
         num = int(num)
-        if not num in [1, 2, 3, 4, 5]:
-            num = 5  # random by default
+        if not num in [1, 2, 3, 4, 5, 6]:
+            num = 7  # random by default
     else:
-        num = 5  # random by default
+        num = 7  # random by default
 
     filename = input("Enter the base filename to be added to the prefix pla_: \n")
     if not filename:
@@ -113,8 +113,8 @@ def main():
     # Wait for the files to be created
     time.sleep(1)
     # convert to png
-    # magick_pdf_to_png.convert_pdf_to_png(pdf_path, png_path)
-    # magick_pdf_to_png.convert_pdf_to_png(pdf_path_ans, png_path_ans)
+    magick_pdf_to_png.convert_pdf_to_png(pdf_path, png_path)
+    magick_pdf_to_png.convert_pdf_to_png(pdf_path_ans, png_path_ans)
 
 
 if __name__ == "__main__":

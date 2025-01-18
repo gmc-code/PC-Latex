@@ -60,10 +60,10 @@ Sample booklet Tex and pdf files
 -------------------------------------
 
 | Question sheet:
-| :download:`angles_in_rt_triangle_Bk_20_q.tex<files/angles_in_rt_triangle_Bk_20_q.tex>`
-| :download:`angles_in_rt_triangle_Bk_20_q.pdf<files/angles_in_rt_triangle_Bk_20_q.pdf>`
+| :download:`angles_in_rt_triangle_Bk_20_q.tex<booklets/angles_in_rt_triangle_Bk_20_q.tex>`
+| :download:`angles_in_rt_triangle_Bk_20_q.pdf<booklets/angles_in_rt_triangle_Bk_20_q.pdf>`
 
 | Answer sheet:
-| :download:`angles_in_rt_triangle_Bk_20_ans.tex<files/angles_in_rt_triangle_Bk_20_ans.tex>`
-| :download:`angles_in_rt_triangle_Bk_20_ans.pdf<files/angles_in_rt_triangle_Bk_20_ans.pdf>`
+| :download:`angles_in_rt_triangle_Bk_20_ans.tex<booklets/angles_in_rt_triangle_Bk_20_ans.tex>`
+| :download:`angles_in_rt_triangle_Bk_20_ans.pdf<booklets/angles_in_rt_triangle_Bk_20_ans.pdf>`
 
