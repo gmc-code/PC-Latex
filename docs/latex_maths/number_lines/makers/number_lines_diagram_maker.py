@@ -114,22 +114,8 @@ def go_left_dict(sub_style):
     return kv
 
 
-kv_keys_ans = [
-    "startval",
-    "endval",
-    "startvaltxt",
-    "endvaltxt",
-    "changevaltxt",
-    "equtxt",
-]
-kv_keys_q = [
-    "startval",
-    "endval",
-    "startvaltxt_q",
-    "endvaltxt_q",
-    "changevaltxt_q",
-    "equtxt_q",
-]
+kv_keys_ans = ["startval", "endval", "startvaltxt", "endvaltxt", "changevaltxt", "equtxt"]
+kv_keys_q = ["startval", "endval", "startvaltxt_q", "endvaltxt_q", "changevaltxt_q", "equtxt_q"]
 
 
 def trimkey(key):
@@ -143,15 +129,11 @@ def make1_diagram(tex_diagram_template_txt, num):
     for key, value in kv.items():
         # show answers
         if key in kv_keys_ans:
-            tex_diagram_template_txt_ans = tex_diagram_template_txt_ans.replace(
-                "<<" + key + ">>", value
-            )
+            tex_diagram_template_txt_ans = tex_diagram_template_txt_ans.replace("<<" + key + ">>", value)
     for key, value in kv.items():
         # don't show answers, use ___ for gaps
         if key in kv_keys_q:
-            tex_diagram_template_txt = tex_diagram_template_txt.replace(
-                "<<" + trimkey(key) + ">>", value
-            )
+            tex_diagram_template_txt = tex_diagram_template_txt.replace("<<" + trimkey(key) + ">>", value)
     return tex_diagram_template_txt, tex_diagram_template_txt_ans
 
 
@@ -168,7 +150,7 @@ def main():
         filename = "1"  # "nl_1st_q and nl_1st_ans as default file"
     # set names of files that are made
     # questions
-      # questions
+    # questions
     tex_output_path = currfile_dir / f"nl_{filename}_q.tex"
     pdf_path = currfile_dir / f"nl_{filename}_q.pdf"
     png_path = currfile_dir / f"nl_{filename}_q.png"

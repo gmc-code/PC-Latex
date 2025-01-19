@@ -119,22 +119,8 @@ def go_left_dict(sub_style, adjustment):
     return kv
 
 
-kv_keys_ans = [
-    "startval",
-    "endval",
-    "startvaltxt",
-    "endvaltxt",
-    "changevaltxt",
-    "equtxt",
-]
-kv_keys_q = [
-    "startval",
-    "endval",
-    "startvaltxt_q",
-    "endvaltxt_q",
-    "changevaltxt_q",
-    "equtxt_q",
-]
+kv_keys_ans = ["startval", "endval", "startvaltxt", "endvaltxt", "changevaltxt", "equtxt"]
+kv_keys_q = ["startval", "endval", "startvaltxt_q", "endvaltxt_q", "changevaltxt_q", "equtxt_q"]
 
 
 def trimkey(key):

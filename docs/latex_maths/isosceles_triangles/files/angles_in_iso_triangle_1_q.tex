@@ -10,37 +10,34 @@
 \section*{ }
     \begin{minipage}{0.55\textwidth}
   \begin{tikzpicture}[scale=1.5, baseline=(current bounding box.north)]
-    \pgfmathsetmacro{\angleA}{33}
-    \pgfmathsetmacro{\angleB}{33}
-    \pgfmathsetmacro{\angleC}{114}
-    \pgfmathsetmacro{\sideC}{3.3586118334718194}
-    \pgfmathsetmacro{\rotationAngle}{104}
 
-    \begin{scope}[rotate=\rotationAngle]
+    \begin{scope}[rotate=166]
       \coordinate (A) at (0,0);
-      \coordinate (B) at (\sideC,0);
-      \coordinate (C) at (intersection cs: first line={(A)--($(A)+(\angleA:4cm)$)}, second line={(B)--($(B)+(180-\angleB:4cm)$)});
+      \coordinate (B) at (3.3045445731789096,0);
+      \coordinate (C) at (intersection cs: first line={(A)--($(A)+(51:4cm)$)}, second line={(B)--($(B)+(180-51:4cm)$)});
       \draw (A) -- (B) -- (C) -- cycle;
 
-      % Mark angles with arcs
-      \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=\angleA, radius=0.3cm];
-      \draw ($(B)!0.3cm!(C)$) arc [start angle=180-\angleB, end angle=180, radius=0.3cm];
-      \draw ($(C)!0.3cm!(A)$) arc [start angle=180+\angleA, end angle=360-\angleB, radius=0.3cm];
+      % Mark angles with arcs; double arc for equal angles
+      \draw ($(A)!0.23cm!(B)$) arc [start angle=0, end angle=51, radius=0.23cm];
+      \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=51, radius=0.3cm];
+      \draw ($(B)!0.23cm!(C)$) arc [start angle=180-51, end angle=180, radius=0.23cm];
+      \draw ($(B)!0.3cm!(C)$) arc [start angle=180-51, end angle=180, radius=0.3cm];
+      \draw ($(C)!0.3cm!(A)$) arc [start angle=180+51, end angle=360-51, radius=0.3cm];
 
       % Label angles
-      \node at ($(A)!-0.15cm!(B)$) {T};
-      \node at ($(B)!-0.15cm!(C)$) {S};
-      \node at ($(C)!-0.15cm!(A)$) {R};
+      \node at ($(A)!-0.15cm!(B)$) {N};
+      \node at ($(B)!-0.15cm!(C)$) {L};
+      \node at ($(C)!-0.15cm!(A)$) {M};
 
       % Mark angles in degrees
       \coordinate (midBC) at ($(B)!0.5!(C)$);
       \node at ($(A)!0.55cm!(midBC)$) {};
 
       \coordinate (midAC) at ($(A)!0.5!(C)$);
-      \node at ($(B)!0.55cm!(midAC)$) {33$^\circ$};
+      \node at ($(B)!0.55cm!(midAC)$) {$51^\circ$};
 
       \coordinate (midAB) at ($(A)!0.5!(B)$);
-      \node at ($(C)!0.55cm!(midAB)$) {$\theta ^\circ$};
+      \node at ($(C)!0.55cm!(midAB)$) {$\theta^\circ$};
 
       % Draw hash mark perpendicular to line AB at its midpoint
       \draw[black] ($(midAC)!1.5mm!90:(A)$)--($(midAC)!1.5mm!-90:(A)$);
@@ -54,10 +51,11 @@
 \hfill
 \begin{minipage}{0.4\textwidth}
   \begin{align*}
-    \angle \text{R} &= 180^\circ - (\angle \text{T} + \angle \text{S}) \\
+    \text{$\theta^\circ$} &= 180^\circ - (\angle \text{\dotuline{~~~~~~~}} + \angle \text{\dotuline{~~~~~~~}}) \\
     &= 180^\circ - (\dotuline{~~~~~~~}^\circ + \dotuline{~~~~~~~}^\circ) \\
     &= 180^\circ - \dotuline{~~~~~~~}^\circ \\
     &= \dotuline{~~~~~~~}^\circ
   \end{align*}
 \end{minipage}
+
 \end{document}

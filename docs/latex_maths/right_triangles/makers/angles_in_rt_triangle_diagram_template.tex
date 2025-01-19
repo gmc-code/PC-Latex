@@ -17,16 +17,17 @@
       %  The ($(C)!0.3cm!(A)!0.3cm!90:(A)$) syntax is used to specify a point that is 0.3cm away from the point ($(C)!0.3cm!(A)$) in a direction that is perpendicular to the line connecting points C and A. This is achieved by first specifying the point ($(C)!0.3cm!(A)$) and then rotating it by 90 degrees around point A using the !angle:anchor syntax.
 
       % Label angles
-      \node at ($(A)!-0.15cm!(B)$) {<<angleALabel>>};
-      \node at ($(B)!-0.15cm!(C)$) {<<angleBLabel>>};
-      \node at ($(C)!-0.15cm!(A)$) {<<angleCLabel>>};
+      \node at ($(A)!-0.25cm!(B)$) {<<angleALabel>>};
+      \node at ($(B)!-0.25cm!(C)$) {<<angleBLabel>>};
+      \node at ($(C)!-0.25cm!(A)$) {<<angleCLabel>>};
+
 
       % Mark angles in degrees
       \coordinate (midBC) at ($(B)!0.5!(C)$);
-      \node at ($(A)!0.60cm!(midBC)$) {$<<angleAValueDisplay>>^\circ$};
+      \node at ($(A)!0.65cm!(midBC)!0.15cm!(C)$) {$<<angleAValueDisplay>>^\circ$};
 
       \coordinate (midAC) at ($(A)!0.5!(C)$);
-      \node at ($(B)!0.60cm!(midAC)$) {$<<angleBValueDisplay>>^\circ$};
+      \node at ($(B)!0.65cm!(midAC)!0.15cm!(C)$) {$<<angleBValueDisplay>>^\circ$};
 
       % \coordinate (midAB) at ($(A)!0.5!(B)$);
       % \node at ($(C)!0.55cm!(midAB)$) {<<angleCValueDisplay>>$^\circ$};
@@ -37,7 +38,7 @@
 \hfill
 \begin{minipage}{0.4\textwidth}
   \begin{align*}
-    \angle \text{<<angleLabel1>>} &= 90^\circ - \angle \text{<<angleLabel2>>} \\
+    \theta^\circ &= 90^\circ - \angle \text{<<angleLabel2>>} \\
     &= 90^\circ - <<angleValue2>>^\circ  \\
     &= <<angleValue1>>^\circ
   \end{align*}

@@ -33,6 +33,29 @@ Sample Tex and pdf files
 | :download:`angles_in_iso_triangle_1_ans.tex<files/angles_in_iso_triangle_1_ans.tex>`
 | :download:`angles_in_iso_triangle_1_ans.pdf<files/angles_in_iso_triangle_1_ans.pdf>`
 
+----
+
+Sample Question and answer diagrams
+------------------------------------------
+
+| A sample question diagram is shown below.
+
+.. image:: files/angles_in_iso_triangle_1_q.png
+    :width: 600
+
+| A sample answer diagram is shown below.
+
+.. image:: files/angles_in_iso_triangle_1_ans.png
+    :width: 600
+
+| Question diagram files:
+| :download:`angles_in_iso_triangle_1_q.tex<files/angles_in_iso_triangle_2_q.tex>`
+| :download:`angles_in_iso_triangle_1_q.pdf<files/angles_in_iso_triangle_2_q.pdf>`
+
+| Answer diagram files:
+| :download:`angles_in_iso_triangle_1_ans.tex<files/angles_in_iso_triangle_2_ans.tex>`
+| :download:`angles_in_iso_triangle_1_ans.pdf<files/angles_in_iso_triangle_2_ans.pdf>`
+
 -----
 
 Booklets using python
@@ -56,11 +79,11 @@ Sample booklet Tex and pdf files
 -------------------------------------
 
 | Question sheet:
-| :download:`angles_in_iso_triangle_Bk_20_q.tex<files/angles_in_iso_triangle_Bk_20_q.tex>`
-| :download:`angles_in_iso_triangle_Bk_20_q.pdf<files/angles_in_iso_triangle_Bk_20_q.pdf>`
+| :download:`angles_in_iso_triangle_Bk_20_q.tex<booklets/angles_in_iso_triangle_Bk_20_q.tex>`
+| :download:`angles_in_iso_triangle_Bk_20_q.pdf<booklets/angles_in_iso_triangle_Bk_20_q.pdf>`
 
 | Answer sheet:
-| :download:`angles_in_iso_triangle_Bk_20_ans.tex<files/angles_in_iso_triangle_Bk_20_ans.tex>`
-| :download:`angles_in_iso_triangle_Bk_20_ans.pdf<files/angles_in_iso_triangle_Bk_20_ans.pdf>`
+| :download:`angles_in_iso_triangle_Bk_20_ans.tex<booklets/angles_in_iso_triangle_Bk_20_ans.tex>`
+| :download:`angles_in_iso_triangle_Bk_20_ans.pdf<booklets/angles_in_iso_triangle_Bk_20_ans.pdf>`
 
 

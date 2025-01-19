@@ -30,12 +30,11 @@ def convert_to_pdf(tex_path, outputdir):
         print(f"Error: {e}")
 
 
-# % end modify values for angles in triangle
+# % end modify values for angles in triangle 'angleLabel1',
 # tex_keys_q = ['angleLabel2','angleValue1','angleValue2',]
 tex_keys_q = ['angleAValue', 'angleBValue','sideCValue', 'rotationAngleValue',
               'angleALabel','angleBLabel', 'angleCLabel',
               'angleAValueDisplay','angleBValueDisplay',
-              'angleLabel1',
               ]
 
 

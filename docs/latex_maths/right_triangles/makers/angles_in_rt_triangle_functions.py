@@ -39,13 +39,13 @@ def get_angles_in_rt_triangle_dict():
     match unknownpos:
         case 1:
             kv["angleAValueDisplay"] = f"\\theta"
-            kv["angleLabel1"] = f"{angleALabel}"
+            # kv["angleLabel1"] = f"{angleALabel}"
             kv["angleLabel2"] = f"{angleBLabel}"
             kv["angleValue1"] = f"{angleAValue}"
             kv["angleValue2"] = f"{angleBValue}"
         case 2:
             kv["angleBValueDisplay"] = f"\\theta"
-            kv["angleLabel1"] = f"{angleBLabel}"
+            # kv["angleLabel1"] = f"{angleBLabel}"
             kv["angleLabel2"] = f"{angleALabel}"
             kv["angleValue1"] = f"{angleBValue}"
             kv["angleValue2"] = f"{angleAValue}"

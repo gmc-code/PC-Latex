@@ -24,39 +24,48 @@ def convert_to_pdf(tex_path, outputdir):
         subprocess.run(["latexmk", "-c", "-outdir=" + str(outputdir), str(tex_path)], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         # for hosted remove stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL for debugging any errors
         # Remove the .tex file manually
-        if tex_path.exists():
-            os.remove(tex_path)
+        # if tex_path.exists():
+        #     os.remove(tex_path)
     except subprocess.CalledProcessError as e:
         print(f"Error: {e}")
 
 
 # % end modify values for angles in triangle
-# tex_keys_q = ['angleCalcAValue', 'angleCalcBValue', 'angleCalcCValue', 'angleCalcBCValue']
-tex_keys_q = ['angleAValue', 'angleBValue', 'angleCValue', 'angleABValue',
-              'sideCValue', 'rotationAngleValue', 'angleALabel','angleBLabel', 'angleCLabel']
+# tex_keys_q = ["CalcLine1", "CalcLine2", "CalcLine3", "CalcLine4"]
+
+kv_keys_ans = ["rotationAngleValue", "sideCValue", "angleAValue", "angleBValue", "angleALabel", "angleBLabel", "angleCLabel", "angleADisplayValue", "angleBDisplayValue", "angleCDisplayValue", "CalcLine1", "CalcLine2", "CalcLine3", "CalcLine4"]
+kv_keys_q = ["rotationAngleValue", "sideCValue", "angleAValue", "angleBValue", "angleALabel", "angleBLabel", "angleCLabel", "angleADisplayValue", "angleBDisplayValue", "angleCDisplayValue", "CalcLine1_q", "CalcLine2_q", "CalcLine3_q", "CalcLine4_q"]
 
 
+def trimkey(key):
+    # trim _q off end or keep if not there
+    key = key.replace("_q", "")
+    return key
 
-def make1_diagram(tex_diagram_template_txt,):
+
+def make1_diagram(tex_diagram_template_txt, unkown_angle_choice):
     tex_diagram_template_txt_ans = tex_diagram_template_txt
-    kv = aitf.get_angles_in_iso_triangle_dict()
+    kv = aitf.get_angles_in_iso_triangle_dict(unkown_angle_choice)
     for key, value in kv.items():
-        tex_diagram_template_txt_ans = tex_diagram_template_txt_ans.replace(
-            "<<" + key + ">>", value
-        )
+        # show answers
+        if key in kv_keys_ans:
+            tex_diagram_template_txt_ans = tex_diagram_template_txt_ans.replace("<<" + key + ">>", value)
     for key, value in kv.items():
-        if key in tex_keys_q:
-            tex_diagram_template_txt = tex_diagram_template_txt.replace(
-                "<<" + key + ">>", value
-            )
-        else:
-            tex_diagram_template_txt = tex_diagram_template_txt.replace(
-                "<<" + key + ">>", "\\dotuline{~~~~~~~}"  # non breaking spaces for gaps
-            )
+        # don't show answers, use ___ for gaps
+        if key in kv_keys_q:
+            tex_diagram_template_txt = tex_diagram_template_txt.replace("<<" + trimkey(key) + ">>", value)
     return tex_diagram_template_txt, tex_diagram_template_txt_ans
 
 
 def main():
+    num1 = input("Enter 1, 2 or 3 for unknown unique, paired or random \n")
+    if num1.strip().isdigit():
+        num1 = int(num1)
+        if not num1 in [1, 2]:
+            num1 = 3  # random by default
+    else:
+        num1 = 3  # random by default
+    #
     filename = input("Enter the base filename to be added to the prefix angles_in_iso_triangle_: \n")
     if not filename:
         filename = "1"  # "angles_in_iso_triangle_1_q and angles_in_iso_triangle_1_ans as default file"
@@ -82,7 +91,7 @@ def main():
         tex_diagram_template_txt = infile.read()
 
     # Generate the <<diagram>> replacement tex
-    diagram_text, diagram_text_ans = make1_diagram(tex_diagram_template_txt)
+    diagram_text, diagram_text_ans = make1_diagram(tex_diagram_template_txt, num1)
     # Replace the <<diagram>> placeholder in the LaTeX template
     tex_template_txt = tex_template_txt.replace("<<diagram>>", diagram_text)
     tex_template_txt_ans = tex_template_txt_ans.replace("<<diagram>>", diagram_text_ans)
@@ -102,8 +111,8 @@ def main():
     # Wait for the files to be created
     time.sleep(1)
     # convert to png
-    # magick_pdf_to_png.convert_pdf_to_png(pdf_path, png_path)
-    # magick_pdf_to_png.convert_pdf_to_png(pdf_path_ans, png_path_ans)
+    magick_pdf_to_png.convert_pdf_to_png(pdf_path, png_path)
+    magick_pdf_to_png.convert_pdf_to_png(pdf_path_ans, png_path_ans)
 
 
 if __name__ == "__main__":

@@ -115,22 +115,8 @@ def go_left_dict(sub_style):
     return kv
 
 
-kv_keys_ans = [
-    "startval",
-    "endval",
-    "startvaltxt",
-    "endvaltxt",
-    "changevaltxt",
-    "equtxt",
-]
-kv_keys_q = [
-    "startval",
-    "endval",
-    "startvaltxt_q",
-    "endvaltxt_q",
-    "changevaltxt_q",
-    "equtxt_q",
-]
+kv_keys_ans = ["startval", "endval", "startvaltxt", "endvaltxt", "changevaltxt", "equtxt"]
+kv_keys_q = ["startval", "endval", "startvaltxt_q", "endvaltxt_q", "changevaltxt_q", "equtxt_q"]
 
 
 def trimkey(key):
@@ -145,22 +131,16 @@ def make1_diagram(tex_diagram_template_txt, num):
     for key, value in kv.items():
         # show answers
         if key in kv_keys_ans:
-            tex_diagram_template_txt_ans = tex_diagram_template_txt_ans.replace(
-                "<<" + key + ">>", value
-            )
+            tex_diagram_template_txt_ans = tex_diagram_template_txt_ans.replace("<<" + key + ">>", value)
     for key, value in kv.items():
         # don't show answers, use ___ for gaps
         if key in kv_keys_q:
-            tex_diagram_template_txt = tex_diagram_template_txt.replace(
-                "<<" + trimkey(key) + ">>", value
-            )
+            tex_diagram_template_txt = tex_diagram_template_txt.replace("<<" + trimkey(key) + ">>", value)
     return tex_diagram_template_txt + posttext, tex_diagram_template_txt_ans + posttext
 
 
 def main():
-    num = input(
-        "Enter 1,2,3,4,5 or 6 for plus,minus_neg,minus,minus_pos,plus_neg,random \n"
-    )
+    num = input("Enter 1,2,3,4,5 or 6 for plus,minus_neg,minus,minus_pos,plus_neg,random \n")
     if num.strip().isdigit():
         num = int(num)
         if not num in [1, 2, 3, 4, 5, 6]:
@@ -171,7 +151,7 @@ def main():
     numq = input("Enter the number of questions from 1 to 80, with 8 per page \n")
     if numq.strip().isdigit():
         numq = int(numq)
-        if not numq in range(1,81):
+        if not numq in range(1, 81):
             numq = 16  # random by default
     else:
         numq = 16  # random by default
@@ -213,9 +193,7 @@ def main():
 
     # Replace the <<diagrams>> placeholder in the LaTeX template with the generated diagrams
     tex_template_txt = tex_template_txt.replace("<<diagrams>>", diagrams_text)
-    tex_template_txt_ans = tex_template_txt_ans.replace(
-        "<<diagrams>>", diagrams_text_ans
-    )
+    tex_template_txt_ans = tex_template_txt_ans.replace("<<diagrams>>", diagrams_text_ans)
     # Write the question tex to an output file
     with open(tex_output_path, "w") as outfile:
         outfile.write(tex_template_txt)
