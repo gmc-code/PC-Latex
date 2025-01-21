@@ -104,8 +104,8 @@ def main():
     # Wait for the files to be created
     time.sleep(1)
     # convert to png
-    # magick_pdf_to_png.convert_pdf_to_png(pdf_path, png_path)
-    # magick_pdf_to_png.convert_pdf_to_png(pdf_path_ans, png_path_ans)
+    magick_pdf_to_png.convert_pdf_to_png(pdf_path, png_path)
+    magick_pdf_to_png.convert_pdf_to_png(pdf_path_ans, png_path_ans)
 
 
 if __name__ == "__main__":

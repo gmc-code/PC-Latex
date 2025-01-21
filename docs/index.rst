@@ -113,9 +113,9 @@ PC-latex 2024
 
     latex_maths/angle_types/angle_types.rst
     latex_maths/measuring_angles/measuring_angles.rst
-    latex_maths/right_triangles/right_triangles.rst
-    latex_maths/isosceles_triangles/isosceles_triangles.rst
-    latex_maths/triangles/angles_in_triangles.rst
+    latex_maths/angles_in_right_triangles/right_triangles.rst
+    latex_maths/angles_in_isosceles_triangles/isosceles_triangles.rst
+    latex_maths/angles_in_triangles/angles_in_triangles.rst
     latex_maths/exterior_angle_to_triangle/exterior_angle_to_triangle.rst
     latex_maths/angles_and_parallel_lines/angles_and_parallel_lines.rst
 
