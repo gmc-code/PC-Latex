@@ -12,14 +12,14 @@ def get_angles_in_iso_triangle_dict(unknown_ang_num):
     sideCValue = random.uniform(0, 1) + 3
     rotationAngleValue = int(random.randint(0, 360))
 
-    my_lists = [["A", "B", "C"], ["F", "G", "H"], ["L", "M", "N"], ["R", "S", "T"], ["X", "Y", "Z"]]
-    my_labels = random.choice(my_lists)
+    vertices_lists = [["A", "B", "C"], ["F", "G", "H"], ["L", "M", "N"], ["R", "S", "T"], ["X", "Y", "Z"]]
+     vertices_labels = random.choice(vertices_lists)
     gaps = r"\dotuline{~~~~~~~}"
 
-    random.shuffle(my_labels)
-    angleALabel = my_labels[0]
-    angleBLabel = my_labels[1]
-    angleCLabel = my_labels[2]
+    random.shuffle( vertices_labels)
+    angleALabel =  vertices_labels[0]
+    angleBLabel =  vertices_labels[1]
+    angleCLabel =  vertices_labels[2]
 
     kv = dict()
     kv["angleAValue"] = f"{angleAValue}"

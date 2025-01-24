@@ -17,19 +17,9 @@ def convert_to_pdf(tex_path, outputdir):
     # print(f"outputdir: {outputdir}")
     try:
         # Generate the PDF
-        subprocess.run(
-            ["latexmk", "-pdf", "-outdir=" + str(outputdir),
-             str(tex_path)],
-            check=True,
-            stdout=subprocess.DEVNULL,
-            stderr=subprocess.DEVNULL)
+        subprocess.run(["latexmk", "-pdf", "-outdir=" + str(outputdir), str(tex_path)], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         # # Clean auxiliary files after successful PDF generation
-        subprocess.run(
-            ["latexmk", "-c", "-outdir=" + str(outputdir),
-             str(tex_path)],
-            check=True,
-            stdout=subprocess.DEVNULL,
-            stderr=subprocess.DEVNULL)
+        subprocess.run(["latexmk", "-c", "-outdir=" + str(outputdir), str(tex_path)], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         # for hosted remove stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL for debugging any errors
         # Remove the .tex file manually
         if tex_path.exists():

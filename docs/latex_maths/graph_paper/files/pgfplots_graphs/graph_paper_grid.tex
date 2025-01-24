@@ -1,0 +1,47 @@
+\documentclass[tikz, border = 3mm]{standalone}
+
+\usepackage{pgfplots}
+\usepackage{amsmath,amssymb,amsfonts}
+
+\pgfplotsset{compat=newest}
+\pgfplotsset{every axis/.append style={
+                    axis x line=middle,
+                    axis y line=middle,
+                    axis line style={<->},
+                    xlabel={$x$},
+                    ylabel={$y$},
+                    label style={font=\scriptsize},
+                    xticklabel style={
+                                    font=\tiny,
+                                    yshift=2pt
+                                },
+                                yticklabel style={
+                                    font=\tiny,
+                                    xshift=3pt
+                                },
+                    unit vector ratio*=1 1 1,
+   					xlabel style={at={(ticklabel* cs:1)},anchor=west},
+   					ylabel style={at={(ticklabel* cs:1)},anchor=south}
+                    }}
+\begin{document}
+
+  \begin{tikzpicture}
+
+   \begin{axis}[
+	 name = graph1,
+     ytick distance = 1,
+     xtick distance = 1,
+     ymin=-0.5, ymax=5.5,
+     xmin=-0.5, xmax=5.5,
+     grid=both,
+     grid style={line width=.05pt,draw=black!20},
+     major grid style={line width=.15pt,draw=black!40},
+     minor tick num=4,
+     tick style={draw=none},
+   ]
+
+   \end{axis}
+
+  \end{tikzpicture}
+
+\end{document}

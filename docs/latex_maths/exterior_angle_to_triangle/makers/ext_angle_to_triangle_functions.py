@@ -21,18 +21,18 @@ def get_ext_angle_to_triangle_dict(unknown_ang_num):
     rotationAngleValue = int(random.randint(0,360))
     # gap_to_fill = "\\dotuline{~~~~~~~}"
 
-    my_lists = [["A", "B", "C", "D"], ["E", "F", "G", "H"], ["J", "K", "L", "M"], ["Q", "R", "S", "T"], ["X", "Y", "Z", "W"]]
-    my_labels = random.choice(my_lists)
+    vertices_lists = [["A", "B", "C", "D"], ["E", "F", "G", "H"], ["J", "K", "L", "M"], ["Q", "R", "S", "T"], ["X", "Y", "Z", "W"]]
+     vertices_labels = random.choice(vertices_lists)
    # Shuffle the first 3 elements, leaving the last one in place
-    shuffled_part = my_labels[:3]  # Get the first three elements
+    shuffled_part =  vertices_labels[:3]  # Get the first three elements
     random.shuffle(shuffled_part)  # Shuffle them
     # Reassign the shuffled elements back, leaving the last element unchanged
-    my_labels[:3] = shuffled_part
+     vertices_labels[:3] = shuffled_part
 
-    angleALabel = my_labels[0]
-    angleBLabel = my_labels[1]
-    angleCLabel = my_labels[2]
-    angleDLabel = my_labels[3]
+    angleALabel =  vertices_labels[0]
+    angleBLabel =  vertices_labels[1]
+    angleCLabel =  vertices_labels[2]
+    angleDLabel =  vertices_labels[3]
     angleExtBLabel = angleDLabel + angleBLabel + angleCLabel
 
     kv = dict()

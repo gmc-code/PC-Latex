@@ -13,13 +13,13 @@ def get_angles_in_rt_triangle_dict():
     rotationAngleValue = int(random.randint(0,360))
     # gap_to_fill = "\\dotuline{~~~~~~~}"
 
-    my_lists = [["A", "B", "C"], ["F", "G", "H"], ["L", "M", "N"], ["R", "S", "T"], ["X", "Y", "Z"]]
-    my_labels = random.choice(my_lists)
+    vertices_lists = [["A", "B", "C"], ["F", "G", "H"], ["L", "M", "N"], ["R", "S", "T"], ["X", "Y", "Z"]]
+     vertices_labels = random.choice(vertices_lists)
 
-    random.shuffle(my_labels)
-    angleALabel = my_labels[0]
-    angleBLabel = my_labels[1]
-    angleCLabel = my_labels[2]
+    random.shuffle( vertices_labels)
+    angleALabel =  vertices_labels[0]
+    angleBLabel =  vertices_labels[1]
+    angleCLabel =  vertices_labels[2]
 
     kv = dict()
     kv["angleAValue"] = f"{angleAValue}"
