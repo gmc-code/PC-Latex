@@ -150,6 +150,7 @@ PC-latex 2024
     :numbered:
 
     latex_maths/grids/grids.rst
+    latex_maths/gridpapers/gridpapers.rst
 
 
 .. toctree::
