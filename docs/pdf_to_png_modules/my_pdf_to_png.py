@@ -10,7 +10,7 @@ import wand_pdf_to_png
 
 # a raw r string is used since backslashes are normally escape characters
 # paste in windows pdf full file path
-pasted_pdf_file_path = r"C:\Users\gmccarthy\Documents\PC_RTD_GITHUB_resources\PC_flask_latex\app\static\pdfs\measuring_angles.pdf"
+pasted_pdf_file_path = r"C:\Users\gmccarthy\Documents\PC_RTD_GITHUB_resources\PC_flask_latex\app\latex\gridpapers\gp_dots_5by10.pdf"
 
 # get file path object
 pdf_file_path = pathlib.PureWindowsPath(pasted_pdf_file_path)

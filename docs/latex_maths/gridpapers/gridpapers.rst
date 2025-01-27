@@ -36,7 +36,7 @@ Dot grids
 Tri grids
 -------------
 
-| This makes a trianglur grid.
+| This makes a triangular grid.
 
 .. literalinclude:: files/gridpapers_triangles.tex
    :linenos:
