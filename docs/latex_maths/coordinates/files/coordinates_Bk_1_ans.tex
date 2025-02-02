@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{tikz}
+\usepackage{amsmath}
+% Underlining package
+\usepackage{ulem}
+\usetikzlibrary{calc}
+\usepackage[a4paper, portrait, margin=1cm]{geometry}
+\usepackage{fancyhdr}
+
+\def \HeadingAnswers {\section*{\Large Name: \underline{\hspace{8cm}} \hfill Date: \underline{\hspace{3cm}}} \vspace{-3mm}
+{Coordinates: Answers} \vspace{1pt}\hrule}
+
+% raise footer with page number; no header
+\fancypagestyle{myfancypagestyle}{
+  \fancyhf{}% clear all header and footer fields
+  \renewcommand{\headrulewidth}{0pt} % no rule under header
+  \fancyfoot[C] {\thepage} \setlength{\footskip}{14.5pt} % raise page number allowed min 14.5pt
+}
+\pagestyle{myfancypagestyle}  % apply myfancypagestyle
+
+\newcounter{minipagecount}
+
+\begin{document}
+\HeadingAnswers
+
+\bigskip
+Plot the following points on the coordinate plane:
+
+\[
+\begin{array}{lllll}
+A(9, -2) \quad & B(-9, -8) \quad & C(-4, -10) \quad & D(0, 4) \quad & E(-5, -6) \\
+F(-6, 5) \quad & G(-1, 9) \quad & H(3, -9) \quad & I(8, 2) \quad & J(-7, -3) \\
+\end{array}
+\]
+
+\bigskip
+
+\begin{center}
+  \begin{tikzpicture}[scale=0.7]
+      % Draw axes
+      \draw[thick,<->] (-11,0) -- (11,0) node[right] {\small $x$};
+      \draw[thick,<->] (0,-11) -- (0,11) node[above] {\small $y$};
+
+      % Grid
+      \draw[very thin,gray] (-10,-10) grid (10,10);
+
+      % Axis numbering (every second number, light gray)
+      \foreach \x in {-10,-8,-6,-4,-2,2,4,6,8,10} {
+          \draw (\x,-0.2) -- (\x,0.2);
+          \node[gray] at (\x,-0.5) {\small \x};
+      }
+      \foreach \y in {-10,-8,-6,-4,-2,2,4,6,8,10} {
+          \draw (-0.2,\y) -- (0.2,\y);
+          \node[gray] at (-0.5,\y-0.1) {\small \y};
+      }
+
+    \fill (9,-2) circle (4pt);
+\node[xshift=1.9em, yshift=7pt] at (9,-2) {\small A(9,-2)};
+\fill (-9,-8) circle (4pt);
+\node[xshift=1.9em, yshift=7pt] at (-9,-8) {\small B(-9,-8)};
+\fill (-4,-10) circle (4pt);
+\node[xshift=1.9em, yshift=7pt] at (-4,-10) {\small C(-4,-10)};
+\fill (0,4) circle (4pt);
+\node[xshift=1.9em, yshift=7pt] at (0,4) {\small D(0,4)};
+\fill (-5,-6) circle (4pt);
+\node[xshift=1.9em, yshift=7pt] at (-5,-6) {\small E(-5,-6)};
+\fill (-6,5) circle (4pt);
+\node[xshift=1.9em, yshift=7pt] at (-6,5) {\small F(-6,5)};
+\fill (-1,9) circle (4pt);
+\node[xshift=1.9em, yshift=7pt] at (-1,9) {\small G(-1,9)};
+\fill (3,-9) circle (4pt);
+\node[xshift=1.9em, yshift=7pt] at (3,-9) {\small H(3,-9)};
+\fill (8,2) circle (4pt);
+\node[xshift=1.9em, yshift=7pt] at (8,2) {\small I(8,2)};
+\fill (-7,-3) circle (4pt);
+\node[xshift=1.9em, yshift=7pt] at (-7,-3) {\small J(-7,-3)};
+
+
+  \end{tikzpicture}
+\end{center}
+
+\end{document}

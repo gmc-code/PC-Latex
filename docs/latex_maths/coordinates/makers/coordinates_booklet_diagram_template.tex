@@ -1,0 +1,30 @@
+\bigskip
+Plot the following points on the coordinate plane:
+
+<<points_to_list>>
+
+\bigskip
+
+\begin{center}
+  \begin{tikzpicture}[scale=0.7]
+      % Draw axes
+      \draw[thick,<->] (-11,0) -- (11,0) node[right] {\small $x$};
+      \draw[thick,<->] (0,-11) -- (0,11) node[above] {\small $y$};
+
+      % Grid
+      \draw[very thin,gray] (-10,-10) grid (10,10);
+
+      % Axis numbering (every second number, light gray)
+      \foreach \x in {-10,-8,-6,-4,-2,2,4,6,8,10} {
+          \draw (\x,-0.2) -- (\x,0.2);
+          \node[gray] at (\x,-0.5) {\small \x};
+      }
+      \foreach \y in {-10,-8,-6,-4,-2,2,4,6,8,10} {
+          \draw (-0.2,\y) -- (0.2,\y);
+          \node[gray] at (-0.5,\y-0.1) {\small \y};
+      }
+
+    <<points_to_plot>>
+
+  \end{tikzpicture}
+\end{center}
