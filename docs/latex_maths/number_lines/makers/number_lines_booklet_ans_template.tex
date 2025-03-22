@@ -3,11 +3,13 @@
 \usetikzlibrary{positioning}
 \usetikzlibrary {arrows.meta}
 \usetikzlibrary{bending}
+\usepackage{ulem}
 \usepackage[a4paper, portrait, margin=1cm]{geometry}
 \usepackage{fancyhdr}
 
 \def\jumpheight{10}
-\def\qgap{\rule[-1pt]{1.0em}{.25pt}}
+% % \def\qgap{\rule[-1pt]{1.0em}{.25pt}}
+\def\qgap{\raisebox{-1pt}{\dotuline{\phantom{X}}}}
 
 \def \HeadingAnswers {\section*{\Large Name: \underline{\hspace{8cm}} \hfill Date: \underline{\hspace{3cm}}} \vspace{-3mm}
 {Number lines: Answers} \vspace{1pt}\hrule}

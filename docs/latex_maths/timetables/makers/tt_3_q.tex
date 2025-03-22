@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[normalem]{ulem} % Underlining package
+\usepackage[a4paper, portrait, margin=1cm]{geometry}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+
+\def \Heading {\section*{\Large Name: \underline{\hspace{8cm}} \hfill Date: \underline{\hspace{3cm}}} \vspace{-3mm}
+{Times Tables} \vspace{1pt}\hrule}
+
+\fancypagestyle{myfancypagestyle}{
+  \fancyhf{} % clear all header and footer fields
+  \renewcommand{\headrulewidth}{0pt} % no rule under header
+  \fancyfoot[C] {\thepage} \setlength{\footskip}{14.5pt} % raise page number
+}
+\pagestyle{myfancypagestyle}
+
+% Define five dots symbol for missing numbers
+\newcommand{\fivedots}{\textsubscript{. . . .}}
+
+\begin{document}
+\Heading
+
+\vspace{5mm}
+\Large % Set font size to large
+
+Study the list of multiples and the times table, as quickly as possible, 5 times. \\
+
+Write in the missing multiples.
+% Full list of multiples
+\[ 3, 6, 9, 12, 15, 18, 21, 24, 27, 30 \]
+% Every second number missing
+\[ 3, \textsubscript{. . . .}, 9, \textsubscript{. . . .}, 15, \textsubscript{. . . .}, 21, \textsubscript{. . . .}, 27, \textsubscript{. . . .} \]
+% Two out of every three missing
+\[ 3, \textsubscript{. . . .}, \textsubscript{. . . .}, 12, \textsubscript{. . . .}, \textsubscript{. . . .}, 21, \textsubscript{. . . .}, \textsubscript{. . . .}, 30 \]
+% All missing
+\[ 3, \textsubscript{. . . .}, \textsubscript{. . . .}, \textsubscript{. . . .}, \textsubscript{. . . .}, \textsubscript{. . . .}, \textsubscript{. . . .}, \textsubscript{. . . .}, \textsubscript{. . . .}, \textsubscript{. . . .} \]
+
+Write in the missing values in each multiplication equation.
+% Times Table with variations
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+$ 3 \times 1 = 3 $ & $ 3 \times 1 = \textsubscript{. . . .} $ & $ 3 \times \textsubscript{. . . .} = \textsubscript{. . . .} $ & $ \textsubscript{. . . .} \times \textsubscript{. . . .} = \textsubscript{. . . .} $ \\ \hline
+$ 3 \times 2 = 6 $ & $ 3 \times 2 = \textsubscript{. . . .} $ & $ 3 \times \textsubscript{. . . .} = \textsubscript{. . . .} $ & $ \textsubscript{. . . .} \times \textsubscript{. . . .} = \textsubscript{. . . .} $ \\ \hline
+$ 3 \times 3 = 9 $ & $ 3 \times 3 = \textsubscript{. . . .} $ & $ 3 \times \textsubscript{. . . .} = \textsubscript{. . . .} $ & $ \textsubscript{. . . .} \times \textsubscript{. . . .} = \textsubscript{. . . .} $ \\ \hline
+$ 3 \times 4 = 12 $ & $ 3 \times 4 = \textsubscript{. . . .} $ & $ 3 \times \textsubscript{. . . .} = \textsubscript{. . . .} $ & $ \textsubscript{. . . .} \times \textsubscript{. . . .} = \textsubscript{. . . .} $ \\ \hline
+$ 3 \times 5 = 15 $ & $ 3 \times 5 = \textsubscript{. . . .} $ & $ 3 \times \textsubscript{. . . .} = \textsubscript{. . . .} $ & $ \textsubscript{. . . .} \times \textsubscript{. . . .} = \textsubscript{. . . .} $ \\ \hline
+$ 3 \times 6 = 18 $ & $ 3 \times 6 = \textsubscript{. . . .} $ & $ 3 \times \textsubscript{. . . .} = \textsubscript{. . . .} $ & $ \textsubscript{. . . .} \times \textsubscript{. . . .} = \textsubscript{. . . .} $ \\ \hline
+$ 3 \times 7 = 21 $ & $ 3 \times 7 = \textsubscript{. . . .} $ & $ 3 \times \textsubscript{. . . .} = \textsubscript{. . . .} $ & $ \textsubscript{. . . .} \times \textsubscript{. . . .} = \textsubscript{. . . .} $ \\ \hline
+$ 3 \times 8 = 24 $ & $ 3 \times 8 = \textsubscript{. . . .} $ & $ 3 \times \textsubscript{. . . .} = \textsubscript{. . . .} $ & $ \textsubscript{. . . .} \times \textsubscript{. . . .} = \textsubscript{. . . .} $ \\ \hline
+$ 3 \times 9 = 27 $ & $ 3 \times 9 = \textsubscript{. . . .} $ & $ 3 \times \textsubscript{. . . .} = \textsubscript{. . . .} $ & $ \textsubscript{. . . .} \times \textsubscript{. . . .} = \textsubscript{. . . .} $ \\ \hline
+$ 3 \times 10 = 30 $ & $ 3 \times 10 = \textsubscript{. . . .} $ & $ 3 \times \textsubscript{. . . .} = \textsubscript{. . . .} $ & $ \textsubscript{. . . .} \times \textsubscript{. . . .} = \textsubscript{. . . .} $ \\ \hline
+
+\end{tabular}
+\end{center}
+
+Write in the missing values in each multiplication equation.
+% New table with 4 columns, randomized equations
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+$3 \times 6 = \fivedots$ & $3 \times 9 = \fivedots$ & $3 \times 10 = \fivedots$ & $3 \times 3 = \fivedots$ \\ \hline
+$3 \times 1 = \fivedots$ & $3 \times 6 = \fivedots$ & $3 \times 1 = \fivedots$ & $3 \times 5 = \fivedots$ \\ \hline
+$3 \times 9 = \fivedots$ & $3 \times 8 = \fivedots$ & $3 \times 6 = \fivedots$ & $3 \times 6 = \fivedots$ \\ \hline
+$3 \times 10 = \fivedots$ & $3 \times 2 = \fivedots$ & $3 \times 8 = \fivedots$ & $3 \times 7 = \fivedots$ \\ \hline
+$3 \times 5 = \fivedots$ & $3 \times 1 = \fivedots$ & $3 \times 7 = \fivedots$ & $3 \times 8 = \fivedots$ \\ \hline
+$3 \times 3 = \fivedots$ & $3 \times 7 = \fivedots$ & $3 \times 5 = \fivedots$ & $3 \times 10 = \fivedots$ \\ \hline
+$3 \times 2 = \fivedots$ & $3 \times 4 = \fivedots$ & $3 \times 9 = \fivedots$ & $3 \times 9 = \fivedots$ \\ \hline
+$3 \times 8 = \fivedots$ & $3 \times 3 = \fivedots$ & $3 \times 2 = \fivedots$ & $3 \times 4 = \fivedots$ \\ \hline
+$3 \times 7 = \fivedots$ & $3 \times 5 = \fivedots$ & $3 \times 3 = \fivedots$ & $3 \times 1 = \fivedots$ \\ \hline
+$3 \times 4 = \fivedots$ & $3 \times 10 = \fivedots$ & $3 \times 4 = \fivedots$ & $3 \times 2 = \fivedots$ \\ \hline
+\end{tabular}
+\end{center}
+\end{tabular}
+\end{center}
+
+\end{document}

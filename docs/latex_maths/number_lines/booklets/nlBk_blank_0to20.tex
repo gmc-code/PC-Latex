@@ -3,11 +3,13 @@
 \usetikzlibrary{positioning}
 \usetikzlibrary {arrows.meta}
 \usetikzlibrary{bending}
+\usepackage{ulem}
 \usepackage[a4paper, portrait, margin=1cm]{geometry}
 \usepackage{fancyhdr}
 
 \def\jumpheight{10}
-\def\qgap{\rule[-1pt]{1.0em}{.25pt}}
+% % \def\qgap{\rule[-1pt]{1.0em}{.25pt}}
+\def\qgap{\raisebox{-1pt}{\dotuline{\phantom{X}}}}
 
 \def \HeadingQuestions {\section*{\Large Name: \underline{\hspace{8cm}} \hfill Date: \underline{\hspace{3cm}}} \vspace{-3mm}
 {Number lines: Questions} \vspace{1pt}\hrule}
@@ -24,7 +26,7 @@
   \HeadingQuestions
   \vspace{-1mm}
   \begin{equation}
-    \begin{tikzpicture}[scale=0.75, baseline={([yshift=-1pt]current bounding box.north)}]
+    \begin{tikzpicture}[scale=0.67, baseline={([yshift=-1pt]current bounding box.north)}]
         % axis, arrow style to-to
         \draw[{To[scale=1.3]}-{To[scale=1.3]}, line width=1pt] (-0.4, 0) -- (20.4, 0);
         % tick marks
@@ -34,11 +36,11 @@
         \foreach \x in {0,10,20}
             \draw[shift={(\x,-0.8)},color=black] node[font=\large,text height=12pt] {$\x$};
         % equation at right end
-        \node [font=\large, minimum width=30mm] at (21,1.2) {$  $};
+        \node [font=\large, anchor=east] at (25,1.65) {$  $};
     \end{tikzpicture}
 \end{equation}
 \vspace{10pt}\begin{equation}
-    \begin{tikzpicture}[scale=0.75, baseline={([yshift=-1pt]current bounding box.north)}]
+    \begin{tikzpicture}[scale=0.67, baseline={([yshift=-1pt]current bounding box.north)}]
         % axis, arrow style to-to
         \draw[{To[scale=1.3]}-{To[scale=1.3]}, line width=1pt] (-0.4, 0) -- (20.4, 0);
         % tick marks
@@ -48,11 +50,11 @@
         \foreach \x in {0,10,20}
             \draw[shift={(\x,-0.8)},color=black] node[font=\large,text height=12pt] {$\x$};
         % equation at right end
-        \node [font=\large, minimum width=30mm] at (21,1.2) {$  $};
+        \node [font=\large, anchor=east] at (25,1.65) {$  $};
     \end{tikzpicture}
 \end{equation}
 \vspace{10pt}\begin{equation}
-    \begin{tikzpicture}[scale=0.75, baseline={([yshift=-1pt]current bounding box.north)}]
+    \begin{tikzpicture}[scale=0.67, baseline={([yshift=-1pt]current bounding box.north)}]
         % axis, arrow style to-to
         \draw[{To[scale=1.3]}-{To[scale=1.3]}, line width=1pt] (-0.4, 0) -- (20.4, 0);
         % tick marks
@@ -62,11 +64,11 @@
         \foreach \x in {0,10,20}
             \draw[shift={(\x,-0.8)},color=black] node[font=\large,text height=12pt] {$\x$};
         % equation at right end
-        \node [font=\large, minimum width=30mm] at (21,1.2) {$  $};
+        \node [font=\large, anchor=east] at (25,1.65) {$  $};
     \end{tikzpicture}
 \end{equation}
 \vspace{10pt}\begin{equation}
-    \begin{tikzpicture}[scale=0.75, baseline={([yshift=-1pt]current bounding box.north)}]
+    \begin{tikzpicture}[scale=0.67, baseline={([yshift=-1pt]current bounding box.north)}]
         % axis, arrow style to-to
         \draw[{To[scale=1.3]}-{To[scale=1.3]}, line width=1pt] (-0.4, 0) -- (20.4, 0);
         % tick marks
@@ -76,11 +78,11 @@
         \foreach \x in {0,10,20}
             \draw[shift={(\x,-0.8)},color=black] node[font=\large,text height=12pt] {$\x$};
         % equation at right end
-        \node [font=\large, minimum width=30mm] at (21,1.2) {$  $};
+        \node [font=\large, anchor=east] at (25,1.65) {$  $};
     \end{tikzpicture}
 \end{equation}
 \vspace{10pt}\begin{equation}
-    \begin{tikzpicture}[scale=0.75, baseline={([yshift=-1pt]current bounding box.north)}]
+    \begin{tikzpicture}[scale=0.67, baseline={([yshift=-1pt]current bounding box.north)}]
         % axis, arrow style to-to
         \draw[{To[scale=1.3]}-{To[scale=1.3]}, line width=1pt] (-0.4, 0) -- (20.4, 0);
         % tick marks
@@ -90,11 +92,11 @@
         \foreach \x in {0,10,20}
             \draw[shift={(\x,-0.8)},color=black] node[font=\large,text height=12pt] {$\x$};
         % equation at right end
-        \node [font=\large, minimum width=30mm] at (21,1.2) {$  $};
+        \node [font=\large, anchor=east] at (25,1.65) {$  $};
     \end{tikzpicture}
 \end{equation}
 \vspace{10pt}\begin{equation}
-    \begin{tikzpicture}[scale=0.75, baseline={([yshift=-1pt]current bounding box.north)}]
+    \begin{tikzpicture}[scale=0.67, baseline={([yshift=-1pt]current bounding box.north)}]
         % axis, arrow style to-to
         \draw[{To[scale=1.3]}-{To[scale=1.3]}, line width=1pt] (-0.4, 0) -- (20.4, 0);
         % tick marks
@@ -104,11 +106,11 @@
         \foreach \x in {0,10,20}
             \draw[shift={(\x,-0.8)},color=black] node[font=\large,text height=12pt] {$\x$};
         % equation at right end
-        \node [font=\large, minimum width=30mm] at (21,1.2) {$  $};
+        \node [font=\large, anchor=east] at (25,1.65) {$  $};
     \end{tikzpicture}
 \end{equation}
 \vspace{10pt}\begin{equation}
-    \begin{tikzpicture}[scale=0.75, baseline={([yshift=-1pt]current bounding box.north)}]
+    \begin{tikzpicture}[scale=0.67, baseline={([yshift=-1pt]current bounding box.north)}]
         % axis, arrow style to-to
         \draw[{To[scale=1.3]}-{To[scale=1.3]}, line width=1pt] (-0.4, 0) -- (20.4, 0);
         % tick marks
@@ -118,11 +120,11 @@
         \foreach \x in {0,10,20}
             \draw[shift={(\x,-0.8)},color=black] node[font=\large,text height=12pt] {$\x$};
         % equation at right end
-        \node [font=\large, minimum width=30mm] at (21,1.2) {$  $};
+        \node [font=\large, anchor=east] at (25,1.65) {$  $};
     \end{tikzpicture}
 \end{equation}
 \vspace{10pt}\begin{equation}
-    \begin{tikzpicture}[scale=0.75, baseline={([yshift=-1pt]current bounding box.north)}]
+    \begin{tikzpicture}[scale=0.67, baseline={([yshift=-1pt]current bounding box.north)}]
         % axis, arrow style to-to
         \draw[{To[scale=1.3]}-{To[scale=1.3]}, line width=1pt] (-0.4, 0) -- (20.4, 0);
         % tick marks
@@ -132,7 +134,119 @@
         \foreach \x in {0,10,20}
             \draw[shift={(\x,-0.8)},color=black] node[font=\large,text height=12pt] {$\x$};
         % equation at right end
-        \node [font=\large, minimum width=30mm] at (21,1.2) {$  $};
+        \node [font=\large, anchor=east] at (25,1.65) {$  $};
+    \end{tikzpicture}
+\end{equation}
+\vspace{10pt}\pagebreak ~ \newline ~ \newline\begin{equation}
+    \begin{tikzpicture}[scale=0.67, baseline={([yshift=-1pt]current bounding box.north)}]
+        % axis, arrow style to-to
+        \draw[{To[scale=1.3]}-{To[scale=1.3]}, line width=1pt] (-0.4, 0) -- (20.4, 0);
+        % tick marks
+        \foreach \x in {0,1,...,20}
+            \draw[shift={(\x,0)},color=black, line width=1pt] (0pt,-14pt) -- (0pt,0pt);
+        % numbers along each axis
+        \foreach \x in {0,10,20}
+            \draw[shift={(\x,-0.8)},color=black] node[font=\large,text height=12pt] {$\x$};
+        % equation at right end
+        \node [font=\large, anchor=east] at (25,1.65) {$  $};
+    \end{tikzpicture}
+\end{equation}
+\vspace{10pt}\begin{equation}
+    \begin{tikzpicture}[scale=0.67, baseline={([yshift=-1pt]current bounding box.north)}]
+        % axis, arrow style to-to
+        \draw[{To[scale=1.3]}-{To[scale=1.3]}, line width=1pt] (-0.4, 0) -- (20.4, 0);
+        % tick marks
+        \foreach \x in {0,1,...,20}
+            \draw[shift={(\x,0)},color=black, line width=1pt] (0pt,-14pt) -- (0pt,0pt);
+        % numbers along each axis
+        \foreach \x in {0,10,20}
+            \draw[shift={(\x,-0.8)},color=black] node[font=\large,text height=12pt] {$\x$};
+        % equation at right end
+        \node [font=\large, anchor=east] at (25,1.65) {$  $};
+    \end{tikzpicture}
+\end{equation}
+\vspace{10pt}\begin{equation}
+    \begin{tikzpicture}[scale=0.67, baseline={([yshift=-1pt]current bounding box.north)}]
+        % axis, arrow style to-to
+        \draw[{To[scale=1.3]}-{To[scale=1.3]}, line width=1pt] (-0.4, 0) -- (20.4, 0);
+        % tick marks
+        \foreach \x in {0,1,...,20}
+            \draw[shift={(\x,0)},color=black, line width=1pt] (0pt,-14pt) -- (0pt,0pt);
+        % numbers along each axis
+        \foreach \x in {0,10,20}
+            \draw[shift={(\x,-0.8)},color=black] node[font=\large,text height=12pt] {$\x$};
+        % equation at right end
+        \node [font=\large, anchor=east] at (25,1.65) {$  $};
+    \end{tikzpicture}
+\end{equation}
+\vspace{10pt}\begin{equation}
+    \begin{tikzpicture}[scale=0.67, baseline={([yshift=-1pt]current bounding box.north)}]
+        % axis, arrow style to-to
+        \draw[{To[scale=1.3]}-{To[scale=1.3]}, line width=1pt] (-0.4, 0) -- (20.4, 0);
+        % tick marks
+        \foreach \x in {0,1,...,20}
+            \draw[shift={(\x,0)},color=black, line width=1pt] (0pt,-14pt) -- (0pt,0pt);
+        % numbers along each axis
+        \foreach \x in {0,10,20}
+            \draw[shift={(\x,-0.8)},color=black] node[font=\large,text height=12pt] {$\x$};
+        % equation at right end
+        \node [font=\large, anchor=east] at (25,1.65) {$  $};
+    \end{tikzpicture}
+\end{equation}
+\vspace{10pt}\begin{equation}
+    \begin{tikzpicture}[scale=0.67, baseline={([yshift=-1pt]current bounding box.north)}]
+        % axis, arrow style to-to
+        \draw[{To[scale=1.3]}-{To[scale=1.3]}, line width=1pt] (-0.4, 0) -- (20.4, 0);
+        % tick marks
+        \foreach \x in {0,1,...,20}
+            \draw[shift={(\x,0)},color=black, line width=1pt] (0pt,-14pt) -- (0pt,0pt);
+        % numbers along each axis
+        \foreach \x in {0,10,20}
+            \draw[shift={(\x,-0.8)},color=black] node[font=\large,text height=12pt] {$\x$};
+        % equation at right end
+        \node [font=\large, anchor=east] at (25,1.65) {$  $};
+    \end{tikzpicture}
+\end{equation}
+\vspace{10pt}\begin{equation}
+    \begin{tikzpicture}[scale=0.67, baseline={([yshift=-1pt]current bounding box.north)}]
+        % axis, arrow style to-to
+        \draw[{To[scale=1.3]}-{To[scale=1.3]}, line width=1pt] (-0.4, 0) -- (20.4, 0);
+        % tick marks
+        \foreach \x in {0,1,...,20}
+            \draw[shift={(\x,0)},color=black, line width=1pt] (0pt,-14pt) -- (0pt,0pt);
+        % numbers along each axis
+        \foreach \x in {0,10,20}
+            \draw[shift={(\x,-0.8)},color=black] node[font=\large,text height=12pt] {$\x$};
+        % equation at right end
+        \node [font=\large, anchor=east] at (25,1.65) {$  $};
+    \end{tikzpicture}
+\end{equation}
+\vspace{10pt}\begin{equation}
+    \begin{tikzpicture}[scale=0.67, baseline={([yshift=-1pt]current bounding box.north)}]
+        % axis, arrow style to-to
+        \draw[{To[scale=1.3]}-{To[scale=1.3]}, line width=1pt] (-0.4, 0) -- (20.4, 0);
+        % tick marks
+        \foreach \x in {0,1,...,20}
+            \draw[shift={(\x,0)},color=black, line width=1pt] (0pt,-14pt) -- (0pt,0pt);
+        % numbers along each axis
+        \foreach \x in {0,10,20}
+            \draw[shift={(\x,-0.8)},color=black] node[font=\large,text height=12pt] {$\x$};
+        % equation at right end
+        \node [font=\large, anchor=east] at (25,1.65) {$  $};
+    \end{tikzpicture}
+\end{equation}
+\vspace{10pt}\begin{equation}
+    \begin{tikzpicture}[scale=0.67, baseline={([yshift=-1pt]current bounding box.north)}]
+        % axis, arrow style to-to
+        \draw[{To[scale=1.3]}-{To[scale=1.3]}, line width=1pt] (-0.4, 0) -- (20.4, 0);
+        % tick marks
+        \foreach \x in {0,1,...,20}
+            \draw[shift={(\x,0)},color=black, line width=1pt] (0pt,-14pt) -- (0pt,0pt);
+        % numbers along each axis
+        \foreach \x in {0,10,20}
+            \draw[shift={(\x,-0.8)},color=black] node[font=\large,text height=12pt] {$\x$};
+        % equation at right end
+        \node [font=\large, anchor=east] at (25,1.65) {$  $};
     \end{tikzpicture}
 \end{equation}
 \vspace{10pt}

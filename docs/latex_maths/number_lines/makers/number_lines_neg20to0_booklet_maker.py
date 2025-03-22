@@ -47,17 +47,20 @@ def getprocess_dict(num, adjustment=0):
             return go_left_dict("plus_neg", adjustment)
 
 
-def val_in_list_exclude_zero(low, high):
+def val_in_list_exclude_neg20to0(low, high):
+    # exclude middle and one ot left due to room for negavie sign
     vals = list(range(low, high + 1))
     if 0 in vals:
         vals.remove(0)
+    if -1 in vals:
+        vals.remove(-1)
     return random.choice(vals)
 
 
 def go_right_dict(add_style, adjustment):
     # set points
-    endval = val_in_list_exclude_zero(-7, 9)
-    startval = val_in_list_exclude_zero(-9, endval - 2)
+    endval = val_in_list_exclude_neg20to0(-7, 9)
+    startval = val_in_list_exclude_neg20to0(-9, endval - 2)
     endval += adjustment
     startval += adjustment
     changevaltxt = endval - startval
@@ -79,15 +82,15 @@ def go_right_dict(add_style, adjustment):
         kv["changevaltxt_q"] = r"+\qgap"
         kv["equtxt_q"] = r"\qgap + \qgap = \qgap"
     else:  # minus_neg
-        kv["changevaltxt_q"] = r"-(\qgap)"
-        kv["equtxt_q"] = r"\qgap - (\qgap) = \qgap"
+        kv["changevaltxt_q"] = r"-(\qgap\qgap)"
+        kv["equtxt_q"] = r"\qgap - (\qgap\qgap) = \qgap"
     return kv
 
 
 def go_left_dict(sub_style, adjustment):
     # set points
-    endval = val_in_list_exclude_zero(-9, 7)
-    startval = val_in_list_exclude_zero(endval + 2, 9)
+    endval = val_in_list_exclude_neg20to0(-9, 7)
+    startval = val_in_list_exclude_neg20to0(endval + 2, 9)
     endval += adjustment
     startval += adjustment
     changevaltxt = endval - startval
@@ -114,8 +117,8 @@ def go_left_dict(sub_style, adjustment):
         kv["changevaltxt_q"] = r"-(+\qgap)"
         kv["equtxt_q"] = r"\qgap - (+\qgap) = \qgap"
     else:  # plus_neg
-        kv["changevaltxt_q"] = r"+(\qgap)"
-        kv["equtxt_q"] = r"\qgap + (\qgap) = \qgap"
+        kv["changevaltxt_q"] = r"+(\qgap\qgap)"
+        kv["equtxt_q"] = r"\qgap + (\qgap\qgap) = \qgap"
     return kv
 
 

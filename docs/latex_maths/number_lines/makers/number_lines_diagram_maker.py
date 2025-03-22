@@ -24,8 +24,8 @@ def convert_to_pdf(tex_path, outputdir):
         subprocess.run(["latexmk", "-c", "-outdir=" + str(outputdir), str(tex_path)], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         # for hosted remove stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL for debugging any errors
         # Remove the .tex file manually
-        if tex_path.exists():
-            os.remove(tex_path)
+        # if tex_path.exists():
+        #     os.remove(tex_path)
     except subprocess.CalledProcessError as e:
         print(f"Error: {e}")
 
@@ -70,14 +70,14 @@ def go_right_dict(add_style):
         kv["changevaltxt"] = r"-(" + str(-changevaltxt) + ")"
     kv["equtxt"] = f"{startval}{kv['changevaltxt']} = {endval}"
     # _question
-    kv["endvaltxt_q"] = f"\qgap"
-    kv["startvaltxt_q"] = f"\qgap"
+    kv["endvaltxt_q"] = r"\qgap"
+    kv["startvaltxt_q"] = r"\qgap"
     if add_style == "plus":
-        kv["changevaltxt_q"] = f"+\qgap"
-        kv["equtxt_q"] = f"\qgap + \qgap = \qgap"
+        kv["changevaltxt_q"] = r"+\qgap"
+        kv["equtxt_q"] = r"\qgap + \qgap = \qgap"
     else:  # minus_neg
-        kv["changevaltxt_q"] = r"-(\qgap)"
-        kv["equtxt_q"] = r"\qgap - (\qgap) = \qgap"
+        kv["changevaltxt_q"] = r"-(\qgap\qgap)"
+        kv["equtxt_q"] = r"\qgap - (\qgap\qgap) = \qgap"
     return kv
 
 
@@ -100,8 +100,8 @@ def go_left_dict(sub_style):
         kv["changevaltxt"] = r"+(" + str(changevaltxt) + ")"
     kv["equtxt"] = f"{startval}{kv['changevaltxt']} = {endval}"
     # _question
-    kv["endvaltxt_q"] = f"\qgap"
-    kv["startvaltxt_q"] = f"\qgap"
+    kv["endvaltxt_q"] = r"\qgap"
+    kv["startvaltxt_q"] = r"\qgap"
     if sub_style == "minus":
         kv["changevaltxt_q"] = r"-\qgap"
         kv["equtxt_q"] = r"\qgap - \qgap = \qgap"
@@ -109,8 +109,8 @@ def go_left_dict(sub_style):
         kv["changevaltxt_q"] = r"-(+\qgap)"
         kv["equtxt_q"] = r"\qgap - (+\qgap) = \qgap"
     else:  # plus_neg
-        kv["changevaltxt_q"] = r"+(\qgap)"
-        kv["equtxt_q"] = r"\qgap + (\qgap) = \qgap"
+        kv["changevaltxt_q"] = r"+(\qgap\qgap)"
+        kv["equtxt_q"] = r"\qgap + (\qgap\qgap) = \qgap"
     return kv
 
 
