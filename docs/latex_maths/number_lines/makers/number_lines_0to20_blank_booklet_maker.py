@@ -29,7 +29,7 @@ def convert_to_pdf(tex_path, outputdir):
 
 
 def make1_diagram(tex_diagram_template_txt):
-    posttext = r"\vspace{10pt}"
+    posttext = r"\vspace{1pt}"
     return tex_diagram_template_txt + posttext
 
 

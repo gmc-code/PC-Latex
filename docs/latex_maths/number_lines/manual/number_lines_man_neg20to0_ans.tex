@@ -12,18 +12,17 @@
 \def\qgap{\raisebox{-1pt}{\dotuline{\phantom{X}}}}
 
 % modify values for number lines
-\def\minval{-10}
-\def\midval{0}
-\def\maxval{10}
+\def\minval{-20}
+\def\midval{-10}
+\def\maxval{0}
 % modify values for number lines
-\def\startval{-3}
-\def\endval{2}
-
+\def\startval{-13}
+\def\endval{-2}
 % values for display
-\def\startvaltxt{\qgap}
-\def\endvaltxt{\qgap}
-\def\changevaltxt{\qgap}
-\def\equtxt{\qgap + \qgap=\qgap}
+\def\startvaltxt{\startval}
+\def\endvaltxt{\endval}
+\def\changevaltxt{\the\numexpr\endval-\startval\relax} % Automatically computes the change
+\def\equtxt{\the\numexpr\startval\relax + \the\numexpr\changevaltxt\relax = \the\numexpr\endval\relax} % Computes full equation
 % end modify values for number lines
 
 \begin{document}

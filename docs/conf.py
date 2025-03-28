@@ -193,7 +193,7 @@ LaTeX_elements['preamble'] = r'''
 
     '''
 
-# Custom title page not done otherwise
+# Custom title page not done toherwise
 
 LaTeX_elements['maketitle'] = r'''
     \pagenumbering{Roman} %%% to avoid page 1 conflict with actual page 1

@@ -1,4 +1,5 @@
-\begin{tikzpicture}[scale=0.67]
+\begin{equation}
+\begin{tikzpicture}[scale=0.55, baseline={([yshift=-1pt]current bounding box.north)}]
     % axis, arrow style to-to
     \draw[{To[scale=1.3]}-{To[scale=1.3]}, line width=1pt] (-10.4, 0) -- (10.4, 0);
     % tick marks
@@ -11,12 +12,24 @@
         \draw[shift={(\x,-0.8)},color=black] node[font=\large,text height=12pt] {$\x$};
     % numbers for dots
     \draw[shift={(<<startval>>,-0.8)},color=black] node[font=\large,text height=12pt] {$<<startvaltxt>>$};
+    \draw[shift={(<<midval>>,-0.8)},color=black] node[font=\large,text height=12pt] {$<<midvaltxt>>$};
     \draw[shift={(<<endval>>,-0.8)},color=black] node[font=\large,text height=12pt] {$<<endvaltxt>>$};
     % dots
     \filldraw[black] (<<startval>>,0) circle (4pt) node[above,yshift=-2pt] (a) {};
+    \filldraw[black] (<<midval>>,0) circle (4pt) node[above,yshift=-2pt] (m) {};
     \filldraw[black] (<<endval>>,0) circle (4pt) node[above,yshift=-2pt] (b) {};
-    % arrow
-    \draw[-{To[scale=1.3, bend]},line width=1pt, color=black] (a.north)  .. controls  +(north:\jumpheight mm) and +(north:\jumpheight mm) .. node[above=2pt,xshift=-6pt,font=\large,text height=10pt] {$<<changevaltxt>>$} (b.north); % for addition
+
+    % first arrow (label below to left)
+    \draw[-{To[scale=1.3, bend]}, line width=1pt, color=black] (a.north)
+        .. controls +(north:\jumpheight mm) and +(north:\jumpheight mm) ..
+        node[above=-9pt, xshift=-22pt, font=\normalsize, text height=8pt, pos=0] {$<<firstjumptxt>>$} (m.north);
+
+    % second arrow (label above)
+    \draw[-{To[scale=1.3, bend]}, line width=1pt, color=black] (m.north)
+        .. controls +(north:\jumpheighthigh mm) and +(north:\jumpheighthigh mm) ..
+        node[above=2pt, font=\normalsize, text height=8pt] {$<<secondjumptxt>>$} (b.north);
+
     % equation at right end
-    \node [font=\large, anchor=east] at (15,1.65){$<<equtxt>>$};
+    \node [font=\large, anchor=east] at (19,1.65) {$<<equtxt>>$};
 \end{tikzpicture}
+\end{equation}

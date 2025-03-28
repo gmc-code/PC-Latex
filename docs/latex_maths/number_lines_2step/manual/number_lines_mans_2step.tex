@@ -1,64 +1,64 @@
 % numberline
 \documentclass[preview,12pt]{standalone}
 \usepackage{tikz}
-\usetikzlibrary{positioning}
-\usetikzlibrary {arrows.meta}
-\usetikzlibrary{bending}
+\usetikzlibrary{positioning, arrows.meta, bending}
 \usepackage{ulem}
 \usepackage[a4paper, portrait, margin=1cm]{geometry}
 
 \def\jumpheight{10}
-% \def\qgap{\rule[-1pt]{1.0em}{.25pt}}
 \def\qgap{\raisebox{-1pt}{\dotuline{\phantom{X}}}}
 
 % modify values for number lines
 \def\minval{-10}
 \def\midval{0}
 \def\maxval{10}
-% modify values for number lines
-\def\startval{-3}
-\def\endval{2}
+\def\startval{-4}
+\def\midstep{1} % Second step at least 2 units away
+\def\endval{7}
 
 % values for display
-\def\startvaltxt{\qgap}
-\def\endvaltxt{\qgap}
-\def\changevaltxt{\qgap}
-\def\equtxt{\qgap + \qgap=\qgap}
-% end modify values for number lines
+\def\startvaltxt{\startval}
+\def\midsteptxt{\midstep}
+\def\endvaltxt{\endval}
+\def\changevaltxt{\the\numexpr\endval-\startval\relax}
+\def\firstjumptxt{\the\numexpr\midstep-\startval\relax}
+\def\secondjumptxt{\the\numexpr\endval-\midstep\relax}
+\def\equtxt{\the\numexpr\startval\relax + \the\numexpr\firstjumptxt\relax + \the\numexpr\secondjumptxt\relax = \the\numexpr\endval\relax}
 
 \begin{document}
 \begin{tikzpicture}[scale=0.67]
-    % axis, arrow style to-to
+    % axis
     \draw[{To[scale=1.3]}-{To[scale=1.3]}, line width=1pt] (\minval-0.4, 0) -- (\maxval+0.4, 0);
 
-    % % tick marks
+    % tick marks
     \pgfmathtruncatemacro{\nextmin}{\minval+1}
     \foreach \x in {\minval,\nextmin,...,\maxval}
         \draw[shift={(\x,0)},color=black, line width=1pt] (0pt,-14pt) -- (0pt,0pt);
 
-
-    % % numbers along each axis
+    % numbers along each axis
     \foreach \x in {\minval,\midval,\maxval} {
-        \pgfmathtruncatemacro\result{\x<0} % Converts boolean to 1 or 0
-        \ifnum\result=1
-            \draw[shift={(\x-0.3,-0.8)},color=black] node[font=\large,text height=12pt] {$\x$};
-        \else
-            \draw[shift={(\x,-0.8)},color=black] node[font=\large,text height=12pt] {$\x$};
-        \fi
+        \draw[shift={(\x,-0.8)},color=black] node[font=\large,text height=12pt] {$\x$};
     }
 
-    % Start and end value labels
+    % Start, Midstep, and End value labels
     \draw[shift={(\startval,-0.8)},color=black] node[font=\large,text height=12pt] {$\startvaltxt$};
+    \draw[shift={(\midstep,-0.8)},color=black] node[font=\large,text height=12pt] {$\midsteptxt$};
     \draw[shift={(\endval,-0.8)},color=black] node[font=\large,text height=12pt] {$\endvaltxt$};
 
     % dots
     \filldraw[black] (\startval,0) circle (4pt) node[above,yshift=-2pt] (a) {};
+    \filldraw[black] (\midstep,0) circle (4pt) node[above,yshift=-2pt] (m) {};
     \filldraw[black] (\endval,0) circle (4pt) node[above,yshift=-2pt] (b) {};
 
-    % arrow
+    % first arrow
     \draw[-{To[scale=1.3, bend]},line width=1pt, color=black] (a.north)
         .. controls  +(north:\jumpheight mm) and +(north:\jumpheight mm) ..
-        node[above=2pt,xshift=-6pt,font=\large,text height=10pt] {$\changevaltxt$} (b.north); % for addition
+        node[above=2pt,xshift=-6pt,font=\large,text height=10pt] {$\firstjumptxt$} (m.north);
+
+    % second arrow
+    \draw[-{To[scale=1.3, bend]},line width=1pt, color=black] (m.north)
+        .. controls  +(north:\jumpheight mm) and +(north:\jumpheight mm) ..
+        node[above=2pt,xshift=-6pt,font=\large,text height=10pt] {$\secondjumptxt$} (b.north);
 
     % equation at right end
     \node [font=\large, anchor=west] at (\maxval+3,1.65){$\equtxt$};

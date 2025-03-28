@@ -29,9 +29,8 @@ def convert_to_pdf(tex_path, outputdir):
 
 
 def make1_diagram(tex_diagram_template_txt):
-    posttext = r"\vspace{10pt}"
+    posttext = r"\vspace{1pt}"
     return tex_diagram_template_txt + posttext
-
 
 def main():
     numq = input("Enter the number of questions from 1 to 80, with 8 per page \n")
