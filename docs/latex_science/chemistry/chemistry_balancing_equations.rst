@@ -17,3 +17,14 @@ See: https://mirror.cse.unsw.edu.au/pub/CTAN/macros/latex/contrib/mhchem/mhchem.
 
 .. literalinclude:: files/mhchem_balancing.tex
    :linenos:
+
+
+
+.. figure:: files/mhchem_balancing_q.png
+   :width: 600
+   :alt: mhchem_balancing_q.png
+   :figclass: align-center
+
+
+.. literalinclude:: files/mhchem_balancing_q.tex
+   :linenos:
