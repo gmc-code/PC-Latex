@@ -1,5 +1,6 @@
 .. PC-latex documentation master file.
 .. Use https://emojipedia.org/repeat-button/ for icons/emojis
+.. https://emojidb.org/maths-emojis
 
 ====================================================
 PC-latex 2024
@@ -96,6 +97,15 @@ PC-latex 2024
 
 .. toctree::
     :maxdepth: 2
+    :caption: 📈🗺️🎯 coordinates
+    :numbered:
+
+    latex_maths/coordinates/coordinates.rst
+    latex_maths/coordinates2/coordinates2.rst
+
+
+.. toctree::
+    :maxdepth: 2
     :caption: ⏺️ decimals
     :numbered:
 
@@ -138,7 +148,7 @@ PC-latex 2024
 
 .. toctree::
     :maxdepth: 2
-    :caption: 📉 graphs
+    :caption: 📉 graph papers
     :numbered:
 
     latex_maths/graph_paper/graph_paper.rst
@@ -146,7 +156,7 @@ PC-latex 2024
 
 .. toctree::
     :maxdepth: 2
-    :caption: ⛶ grids
+    :caption: ⛶ 𝄜 🏼 grids
     :numbered:
 
     latex_maths/grids/grids.rst

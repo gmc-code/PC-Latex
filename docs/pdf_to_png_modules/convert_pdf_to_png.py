@@ -9,10 +9,11 @@ import wand_pdf_to_png
 
 # a raw r string is used since backslashes are normally escape characters
 # paste in windows pdf full file path
-pasted_pdf_file_path = r"C:\Users\gmccarthy\Documents\PC_RTD_GITHUB_resources\PC_latex\docs\latex_science\chemistry\files\mhchem_balancing.pdf"
+pasted_pdf_file_path = r"C:\Users\gmccarthy\Documents\PC_RTD_GITHUB_resources\PC_latex\docs\latex_maths\coordinates2\files\coordinates_Bk_1_q.pdf"
 
 # get file path object
 pdf_file_path = pathlib.PureWindowsPath(pasted_pdf_file_path)
 # use magick or wand -- comment or uncomment to choose
 # magick_pdf_to_png.pdf_to_png(pdf_file_path)
 wand_pdf_to_png.pdf_to_png(pdf_file_path)
+

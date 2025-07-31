@@ -352,7 +352,7 @@ def sub_div_dict():
     nx = random.randint(1, 10)
     mx = random.randint(2, 10)
     na = random.randint(1, 10)
-    xval = nx * mx + nx
+    xval = na * mx + nx
 
     kv = dict()
     kv["line1_LHS"] = f"\\frac{{x - {nx}}}{{{mx}}}"
