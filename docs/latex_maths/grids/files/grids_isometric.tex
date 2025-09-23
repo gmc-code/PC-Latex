@@ -19,11 +19,9 @@
 }
 
 % === Dot Style Variables ===
-\newcommand{\dotfilltype}{filled}  % options: filled, open
-
-\newcommand{\dotspacing}{0.8}       % spacing between nearest neighbours (cm)
-\newcommand{\dotsize}{0.8pt}        % radius of each dot
-\newcommand{\dotstyle}{fill}        % options: fill, draw, filldraw
+\newcommand{\dotfilltype}{open}  % options: filled, open
+\newcommand{\dotspacing}{1.0}       % spacing between nearest neighbours (cm)
+\newcommand{\dotsize}{2.0pt}        % radius of each dot
 \newcommand{\dotlinewidth}{0.4pt}   % outline thickness
 
 % Dot shade variable: choose "white", "black", or "gray!<percent>"
@@ -34,20 +32,15 @@
 
 % === Orientation Variable ===
 % Set to "vertical" for default layout, "horizontal" for 90-degree rotated
-\newcommand{\gridorientation}{horizontal}
+\newcommand{\gridorientation}{vertical}
 
-% Helper to draw one dot
+% Helper to draw one dot at x, y
 \newcommand{\drawdot}[2]{%
   \IfStrEq{\dotfilltype}{open}{%
     \draw[draw=\dotcolor, fill=none, line width=\dotlinewidth] (#1,#2) circle (\dotsize);
   }{%
-    \ifx\dotstyle\fill
-      \fill[\dotcolor] (#1,#2) circle (\dotsize);
-    \else\ifx\dotstyle\draw
-      \draw[\dotcolor, line width=\dotlinewidth] (#1,#2) circle (\dotsize);
-    \else
-      \filldraw[fill=\dotcolor, draw=\dotcolor, line width=\dotlinewidth] (#1,#2) circle (\dotsize);
-    \fi\fi
+        % filled circle
+    \fill[\dotcolor] (#1,#2) circle (\dotsize);
   }%
 }
 
