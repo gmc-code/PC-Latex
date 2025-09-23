@@ -4,8 +4,7 @@ Isometric dots
 
 | Isometric dot layouts can be made using LaTeX.
 
-.. literalinclude:: ..files/grids_isometic.tex
-   :language: latex
+.. literalinclude:: ../files/grids_isometic.tex
    :linenos:
 
 
