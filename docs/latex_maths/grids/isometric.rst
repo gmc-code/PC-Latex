@@ -14,46 +14,30 @@ Isometric dots
 
       isometric vertical
       ^^^
-      :download:`png<files/grids_isometic_vertical.png>`
-      :download:`pdf<files/grids_isometic_vertical.pdf>`
+      :download:`png<files/grids_isometric_vertical.png>`
+      :download:`pdf<files/grids_isometric_vertical.pdf>`
 
 
-      .. figure:: files/grids_isometic_vertical.png
+      .. figure:: files/grids_isometric_vertical.png
          :width: 300
-         :alt: grids_isometic_vertical
+         :alt: grids_isometric_vertical
          :figclass: align-center
 
    .. grid-item-card::
 
       isometric horizontal
       ^^^
-      :download:`png<files/grids_isometic_horizontal.png>`
-      :download:`pdf<files/grids_isometic_horizontal.pdf>`
+      :download:`png<files/grids_isometric_horizontal.png>`
+      :download:`pdf<files/grids_isometric_horizontal.pdf>`
 
-      .. figure:: files/grids_isometic_horizontal.png
+      .. figure:: files/grids_isometric_horizontal.png
          :width: 300
-         :alt: grids_isometic_horizontal
+         :alt: grids_isometric_horizontal
          :figclass: align-center
 
 
 
 
 .. literalinclude:: files/grids_isometric.tex
+   :language: latex
    :linenos:
-
-
-
-.. literalinclude:: ..files/grids_isometric.tex
-   :linenos:
-
-
-.. literalinclude:: /files/grids_isometric.tex
-   :linenos:
-
-
-
-.. literalinclude:: ../files/grids_isometric.tex
-   :linenos:
-
-
-hi there

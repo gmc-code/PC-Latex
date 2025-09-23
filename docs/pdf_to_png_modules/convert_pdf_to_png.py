@@ -9,7 +9,7 @@ import wand_pdf_to_png
 
 # a raw r string is used since backslashes are normally escape characters
 # paste in windows pdf full file path
-pasted_pdf_file_path = r"C:\Users\gmccarthy\Documents\PC_RTD_GITHUB_resources\PC_latex\docs\latex_maths\grids\files\grids_isometic_vertical.pdf"
+pasted_pdf_file_path = r"C:\Users\gmccarthy\Documents\PC_RTD_GITHUB_resources\PC_latex\docs\latex_maths\grids\files\grids_isometric_vertical.pdf"
 
 # get file path object
 pdf_file_path = pathlib.PureWindowsPath(pasted_pdf_file_path)

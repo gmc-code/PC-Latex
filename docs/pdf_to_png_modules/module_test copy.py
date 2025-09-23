@@ -3,8 +3,8 @@ import magick_pdf_to_png
 import wand_pdf_to_png
 
 # paste in windows path to the raw string
-raw_string =  r'C:\Users\gmccarthy\Documents\PC_RTD_GITHUB_resources\PC_latex\docs\latex_maths\grids\files\grids_isometic_horizontal.pdf'
-# C:\Users\gmccarthy\Documents\PC_RTD_GITHUB_resources\PC_latex\docs\latex_maths\grids\files\grids_isometic_horizontal.pdf
+raw_string =  r'C:\Users\gmccarthy\Documents\PC_RTD_GITHUB_resources\PC_latex\docs\latex_maths\grids\files\grids_isometric_horizontal.pdf'
+# C:\Users\gmccarthy\Documents\PC_RTD_GITHUB_resources\PC_latex\docs\latex_maths\grids\files\grids_isometric_horizontal.pdf
 
 forward_slash_string = raw_string.replace('\\', '/')
 pdf_file_path = Path(forward_slash_string)
