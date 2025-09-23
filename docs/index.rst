@@ -161,6 +161,7 @@ PC-latex 2024
 
     latex_maths/grids/grids.rst
     latex_maths/gridpapers/gridpapers.rst
+    latex_maths/grids/isometric.rst
 
 
 .. toctree::

@@ -1,0 +1,104 @@
+\documentclass{article}
+\usepackage{tikz}
+\usepackage{geometry}
+\pagestyle{empty}
+\usepackage{xstring}
+
+% === Paper and Margin Variables ===
+\newcommand{\paperwidthcm}{21.0}    % A4 width in cm
+\newcommand{\paperheightcm}{29.7}   % A4 height in cm
+\newcommand{\hmargin}{1.5}          % horizontal margin in cm
+\newcommand{\vmargin}{1.5}          % vertical margin in cm
+
+% === Apply geometry using variables ===
+\geometry{
+  paperwidth=\paperwidthcm cm,
+  paperheight=\paperheightcm cm,
+  hmargin=\hmargin cm,
+  vmargin=\vmargin cm
+}
+
+% === Dot Style Variables ===
+\newcommand{\dotfilltype}{open}  % options: filled, open
+
+\newcommand{\dotspacing}{0.8}       % spacing between nearest neighbours (cm)
+\newcommand{\dotsize}{0.8pt}        % radius of each dot
+\newcommand{\dotstyle}{fill}        % options: fill, draw, filldraw
+\newcommand{\dotlinewidth}{0.4pt}   % outline thickness
+
+% Dot shade variable: choose "white", "black", or "gray!<percent>"
+% Define the black percentage (0–100)
+\newcommand{\dotblackpercent}{50}   % e.g., 67 = black!67
+% Define the dot color using the variable
+\newcommand{\dotcolor}{black!\dotblackpercent}
+
+% === Orientation Variable ===
+% Set to "vertical" for default layout, "horizontal" for 90-degree rotated
+\newcommand{\gridorientation}{vertical}
+
+% Helper to draw one dot
+\newcommand{\drawdot}[2]{%
+  \IfStrEq{\dotfilltype}{open}{%
+    \draw[draw=\dotcolor, fill=none, line width=\dotlinewidth] (#1,#2) circle (\dotsize);
+  }{%
+    \ifx\dotstyle\fill
+      \fill[\dotcolor] (#1,#2) circle (\dotsize);
+    \else\ifx\dotstyle\draw
+      \draw[\dotcolor, line width=\dotlinewidth] (#1,#2) circle (\dotsize);
+    \else
+      \filldraw[fill=\dotcolor, draw=\dotcolor, line width=\dotlinewidth] (#1,#2) circle (\dotsize);
+    \fi\fi
+  }%
+}
+
+
+
+
+\begin{document}
+\begin{tikzpicture}[remember picture, overlay]
+  % Anchor to bottom-left of the physical page
+  \begin{scope}[shift={(current page.south west)}]
+    % Work in centimeters and shift to content area
+    \begin{scope}[x=1cm, y=1cm, shift={(\hmargin,\vmargin)}]
+
+      % Usable area
+      \pgfmathsetmacro{\usablewidth}{\paperwidthcm - 2*\hmargin}
+      \pgfmathsetmacro{\usableheight}{\paperheightcm - 2*\vmargin}
+
+      % Convert pt to cm for padding
+      \pgfmathsetmacro{\pad}{(\dotsize + 0.5*\dotlinewidth)/28.45274}
+
+      % Clip to content area (+ tiny pad)
+      \clip (-\pad,-\pad) rectangle (\usablewidth+\pad, \usableheight+\pad);
+
+      % Hex grid spacing based on orientation
+      \IfStrEq{\gridorientation}{vertical}{
+        \pgfmathsetmacro{\dx}{\dotspacing}
+        \pgfmathsetmacro{\dy}{\dotspacing * sqrt(3)}
+        \pgfmathsetmacro{\offsetx}{\dx/2}
+        \pgfmathsetmacro{\offsety}{\dy/2}
+      }{
+        \pgfmathsetmacro{\dy}{\dotspacing}
+        \pgfmathsetmacro{\dx}{\dotspacing * sqrt(3)}
+        \pgfmathsetmacro{\offsety}{\dy/2}
+        \pgfmathsetmacro{\offsetx}{\dx/2}
+      }
+
+      % Integer loop bounds
+      \pgfmathtruncatemacro{\xcount}{ceil((\usablewidth+\pad)/\dx)+1}
+      \pgfmathtruncatemacro{\ycount}{ceil((\usableheight+\pad)/\dy)+1}
+
+      % Draw dots
+      \foreach \i in {0,...,\xcount} {
+        \foreach \j in {0,...,\ycount} {
+          \pgfmathsetmacro{\x}{\i * \dx}
+          \pgfmathsetmacro{\y}{\j * \dy}
+          \drawdot{\x}{\y}
+          \drawdot{\x+\offsetx}{\y+\offsety}
+        }
+      }
+
+    \end{scope}
+  \end{scope}
+\end{tikzpicture}
+\end{document}

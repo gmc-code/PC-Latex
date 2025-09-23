@@ -1,15 +1,73 @@
-% 16 by 25 dots 1cm apart
 \documentclass{article}
-\usepackage[a4paper, portrait, hmargin=2cm, vmargin=2cm]{geometry}
 \usepackage{tikz}
-\thispagestyle{empty}
+\usepackage{geometry}
+\pagestyle{empty}
+
+% === Paper and Margin Variables ===
+\newcommand{\paperwidthcm}{21.0}    % A4 width in cm
+\newcommand{\paperheightcm}{29.7}   % A4 height in cm
+\newcommand{\hmargin}{1.5}          % horizontal margin in cm
+\newcommand{\vmargin}{1.5}          % vertical margin in cm
+
+\geometry{
+  paperwidth=\paperwidthcm cm,
+  paperheight=\paperheightcm cm,
+  hmargin=\hmargin cm,
+  vmargin=\vmargin cm
+}
+
+% === Dot Style Variables ===
+\newcommand{\dotspacing}{0.8}       % spacing between nearest neighbours (cm)
+\newcommand{\dotsize}{0.8 pt}        % radius of each dot
+\newcommand{\dotstyle}{fill}        % options: fill, draw, filldraw
+\newcommand{\dotlinewidth}{0.4pt}   % outline thickness
+
+% === Dot color variable ===
+\newcommand{\dotblackpercent}{50}    % 0-100 for black!<percent>
+\newcommand{\dotcolor}{black!\dotblackpercent}
+
+% Helper to draw one dot
+\newcommand{\drawdot}[2]{%
+  \ifx\dotstyle\fill
+    \fill[\dotcolor] (#1,#2) circle (\dotsize);
+  \else\ifx\dotstyle\draw
+    \draw[\dotcolor, line width=\dotlinewidth] (#1,#2) circle (\dotsize);
+  \else
+    \filldraw[fill=\dotcolor, draw=\dotcolor, line width=\dotlinewidth] (#1,#2) circle (\dotsize);
+  \fi\fi
+}
 
 \begin{document}
-\begin{tikzpicture}
-  \foreach \x in {0,...,16} {
-    \foreach \y in {0,...,25} {
-      \filldraw[black] (\x,\y) circle (.5pt);
-    }
-  }
+\begin{tikzpicture}[remember picture, overlay]
+  % Anchor to bottom-left of the physical page
+  \begin{scope}[shift={(current page.south west)}]
+    % Work in centimeters and shift to content area
+    \begin{scope}[x=1cm, y=1cm, shift={(\hmargin,\vmargin)}]
+
+      % Usable area
+      \pgfmathsetmacro{\usablewidth}{\paperwidthcm - 2*\hmargin}
+      \pgfmathsetmacro{\usableheight}{\paperheightcm - 2*\vmargin}
+
+      % Convert pt to cm for padding
+      \pgfmathsetmacro{\pad}{(\dotsize + 0.5*\dotlinewidth)/28.45274}
+
+      % Clip to content area (+ tiny pad)
+      \clip (-\pad,-\pad) rectangle (\usablewidth+\pad, \usableheight+\pad);
+
+      % Loop counts
+      \pgfmathtruncatemacro{\xcount}{ceil((\usablewidth+\pad)/\dotspacing)}
+      \pgfmathtruncatemacro{\ycount}{ceil((\usableheight+\pad)/\dotspacing)}
+
+      % Draw square grid of dots
+      \foreach \i in {0,...,\xcount} {
+        \foreach \j in {0,...,\ycount} {
+          \pgfmathsetmacro{\x}{\i * \dotspacing}
+          \pgfmathsetmacro{\y}{\j * \dotspacing}
+          \drawdot{\x}{\y}
+        }
+      }
+
+    \end{scope}
+  \end{scope}
 \end{tikzpicture}
 \end{document}
