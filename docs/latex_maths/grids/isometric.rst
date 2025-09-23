@@ -37,6 +37,8 @@ Isometric dots
 
 
 
+| LaTeX with variables that can be manually altered:
+
 
 .. literalinclude:: files/grids_isometric.tex
    :language: latex
