@@ -19,7 +19,7 @@
 }
 
 % === Dot Style Variables ===
-\newcommand{\dotfilltype}{open}  % options: filled, open
+\newcommand{\dotfilltype}{filled}  % options: filled, open
 
 \newcommand{\dotspacing}{0.8}       % spacing between nearest neighbours (cm)
 \newcommand{\dotsize}{0.8pt}        % radius of each dot
@@ -28,13 +28,13 @@
 
 % Dot shade variable: choose "white", "black", or "gray!<percent>"
 % Define the black percentage (0–100)
-\newcommand{\dotblackpercent}{50}   % e.g., 67 = black!67
+\newcommand{\dotblackpercent}{90}   % e.g., 67 = black!67
 % Define the dot color using the variable
 \newcommand{\dotcolor}{black!\dotblackpercent}
 
 % === Orientation Variable ===
 % Set to "vertical" for default layout, "horizontal" for 90-degree rotated
-\newcommand{\gridorientation}{vertical}
+\newcommand{\gridorientation}{horizontal}
 
 % Helper to draw one dot
 \newcommand{\drawdot}[2]{%

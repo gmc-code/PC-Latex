@@ -4,6 +4,11 @@ Isometric dots
 
 | Isometric dot layouts can be made using LaTeX.
 
+.. literalinclude:: ..files/grids_isometic.tex
+   :language: latex
+   :linenos:
+
+
 .. grid:: 2
    :gutter: 0
    :margin: 0
@@ -15,7 +20,7 @@ Isometric dots
       ^^^
       :download:`png<files/grids_isometic_vertical.png>`
       :download:`pdf<files/grids_isometic_vertical.pdf>`
-      :download:`tex<files/grids_isometic.tex>`
+
 
       .. figure:: files/grids_isometic_vertical.png
          :width: 300
@@ -28,7 +33,6 @@ Isometric dots
       ^^^
       :download:`png<files/grids_isometic_horizontal.png>`
       :download:`pdf<files/grids_isometic_horizontal.pdf>`
-      :download:`tex<files/grids_isometic.tex>`
 
       .. figure:: files/grids_isometic_horizontal.png
          :width: 300
