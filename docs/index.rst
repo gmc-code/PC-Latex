@@ -115,6 +115,14 @@ PC-latex 2024
     latex_maths/decimals_add_subtract/decimals_booklet_python.rst
 
 
+.. toctree::
+    :maxdepth: 2
+    :caption: 🧊⿻📏 measurement
+    :numbered:
+
+    latex_maths/area/squares.rst
+
+
 
 .. toctree::
     :maxdepth: 2

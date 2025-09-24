@@ -1,0 +1,42 @@
+\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.1, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=<<rotation>>]
+        % Draw square
+        \draw (0,0) coordinate (<<vA>>) --
+              ++(<<sidelength>>,0) coordinate (<<vB>>) --
+              ++(0,<<sidelength>>) coordinate (<<vC>>) --
+              ++(-<<sidelength>>,0) coordinate (<<vD>>) -- cycle;
+
+        % Right angle markers
+        \foreach \p/\q/\r in {<<vD>>/<<vA>>/<<vB>>,<<vA>>/<<vB>>/<<vC>>,<<vC>>/<<vD>>/<<vA>>,<<vD>>/<<vA>>/<<vB>>} {
+            \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
+        }
+
+        % Vertex LABELS
+        \foreach \p/\l in {<<vA>>/below left,<<vB>>/below right,<<vC>>/above right,<<vD>>/above left} {
+            \node[\l] at (\p) {\p};
+        }
+
+        % Dotted arrows shifted away from edges
+        % Horizontal side (A-B), shifted down
+        \draw[<->, dotted]
+            ($(<<vA>>) + (0,-0.2cm)$) -- ($(<<vB>>) + (0,-0.2cm)$)
+            node[midway,below, xshift=2mm] {<<calc_sidelength>>\,cm};
+
+        % Vertical side (B-C), shifted right
+        \draw[<->, dotted]
+            ($(<<vB>>) + (0.2cm,0)$) -- ($(<<vC>>) + (0.2cm,0)$)
+            node[midway,right] {<<calc_sidelength>>\,cm};
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+  \text{Area} &= l^2 \\
+  \text{Area} &= <<calcside_value>> \,\text{cm} \times <<calcside_value>> \,\text{cm} \\
+  \text{Area} &= <<calcarea_value>> \,\text{cm}^2
+  \end{align*}
+\end{minipage}
