@@ -11,32 +11,32 @@
 \section*{ }
     \begin{minipage}{0.55\textwidth}
   \begin{tikzpicture}[scale=1.1, baseline=(current bounding box.north)]
-    \begin{scope}[rotate=5]
+    \begin{scope}[rotate=0]
         % Draw square
-        \draw (0,0) coordinate (E) --
-              ++(3.08442670369424,0) coordinate (F) --
-              ++(0,3.08442670369424) coordinate (G) --
-              ++(-3.08442670369424,0) coordinate (H) -- cycle;
+        \draw (0,0) coordinate (Q) --
+              ++(1.894,0) coordinate (R) --
+              ++(0,1.894) coordinate (S) --
+              ++(-1.894,0) coordinate (T) -- cycle;
 
         % Right angle markers
-        \foreach \p/\q/\r in {H/E/F,E/F/G,G/H/E,H/E/F} {
+        \foreach \p/\q/\r in {T/Q/R,Q/R/S,S/T/Q,T/Q/R} {
             \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
         }
 
         % Vertex LABELS
-        \foreach \p/\l in {E/below left,F/below right,G/above right,H/above left} {
+        \foreach \p/\l in {Q/below left,R/below right,S/above right,T/above left} {
             \node[\l] at (\p) {\p};
         }
 
         % Dotted arrows shifted away from edges
         % Horizontal side (A-B), shifted down
         \draw[<->, dotted]
-            ($(E) + (0,-0.2cm)$) -- ($(F) + (0,-0.2cm)$)
+            ($(Q) + (0,-0.2cm)$) -- ($(R) + (0,-0.2cm)$)
             node[midway,below, xshift=2mm] {4\,cm};
 
         % Vertical side (B-C), shifted right
         \draw[<->, dotted]
-            ($(F) + (0.2cm,0)$) -- ($(G) + (0.2cm,0)$)
+            ($(R) + (0.2cm,0)$) -- ($(S) + (0.2cm,0)$)
             node[midway,right] {4\,cm};
     \end{scope}
 \end{tikzpicture}
@@ -45,8 +45,8 @@
 \begin{minipage}{.4\textwidth}
   \begin{align*}
   \text{Area} &= l^2 \\
-  \text{Area} &= \dotuline{~~~~~~~} \,\text{cm} \times \dotuline{~~~~~~~} \,\text{cm} \\
-  \text{Area} &= \dotuline{~~~~~~~} \,\text{cm}^2
+  \text{Area} &= 4 \,\text{cm} \times 4 \,\text{cm} \\
+  \text{Area} &= 16 \,\text{cm}^2
   \end{align*}
 \end{minipage}
 

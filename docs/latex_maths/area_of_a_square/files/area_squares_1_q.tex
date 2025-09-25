@@ -1,0 +1,53 @@
+\documentclass[12pt, varwidth, border=5mm]{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+% Underlining package
+\usepackage{ulem}
+\usetikzlibrary{calc}
+\usetikzlibrary{angles,quotes}
+% \usepackage[a4paper, portrait, margin=1cm]{geometry}
+
+\begin{document}
+\section*{ }
+    \begin{minipage}{0.55\textwidth}
+  \begin{tikzpicture}[scale=1.1, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=0]
+        % Draw square
+        \draw (0,0) coordinate (Q) --
+              ++(1.894,0) coordinate (R) --
+              ++(0,1.894) coordinate (S) --
+              ++(-1.894,0) coordinate (T) -- cycle;
+
+        % Right angle markers
+        \foreach \p/\q/\r in {T/Q/R,Q/R/S,S/T/Q,T/Q/R} {
+            \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
+        }
+
+        % Vertex LABELS
+        \foreach \p/\l in {Q/below left,R/below right,S/above right,T/above left} {
+            \node[\l] at (\p) {\p};
+        }
+
+        % Dotted arrows shifted away from edges
+        % Horizontal side (A-B), shifted down
+        \draw[<->, dotted]
+            ($(Q) + (0,-0.2cm)$) -- ($(R) + (0,-0.2cm)$)
+            node[midway,below, xshift=2mm] {4\,cm};
+
+        % Vertical side (B-C), shifted right
+        \draw[<->, dotted]
+            ($(R) + (0.2cm,0)$) -- ($(S) + (0.2cm,0)$)
+            node[midway,right] {4\,cm};
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+  \text{Area} &= l^2 \\
+  \text{Area} &= \dotuline{~~~~~~~} \,\text{cm} \times \dotuline{~~~~~~~} \,\text{cm} \\
+  \text{Area} &= \dotuline{~~~~~~~} \,\text{cm}^2
+  \end{align*}
+\end{minipage}
+
+\end{document}

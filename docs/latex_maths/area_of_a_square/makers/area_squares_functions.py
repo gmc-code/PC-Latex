@@ -4,10 +4,34 @@ Module of functions to return diagram dictionary for LaTeX
 import random
 
 
-def get_area_squares_dict():
-    calc_sidelength = random.choice(range(2, 10, 1))
-    sidelength = random.uniform(0, 1.5) + 1.5
-    rotation = random.choice(range(-40, 65, 20))
+def get_ints_shuffled_one_dig_first():
+    # Define the range of integers
+    numbers1 = list(range(1, 10))
+    numbers2 = list(range(10, 21))
+    # Shuffle each list
+    random.shuffle(numbers1)
+    random.shuffle(numbers2)
+    # Join the two lists
+    numbers = numbers1 + numbers2
+    return numbers
+
+
+def get_rotations_shuffled():
+    # Define the range of angles with weighting for 0
+    angles = [0, 0, 0, 0, 0, 10, 30, -10, -30, -45] * 2
+    # Shuffle list
+    random.shuffle(angles)
+    return angles
+
+
+def get_area_squares_dict(side_int=None, rotation=None):
+    if side_int is None:
+        side_int = get_ints_shuffled_one_dig_first()[0]
+    if rotation is None:
+        rotation = get_rotations_shuffled()[0]
+
+    calc_sidelength = side_int
+    sidelength = round(random.uniform(0, 1.5) + 1.5, 3)
     calcarea_value = calc_sidelength * calc_sidelength
 
     # gap_to_fill = "\\dotuline{~~~~~~~}"

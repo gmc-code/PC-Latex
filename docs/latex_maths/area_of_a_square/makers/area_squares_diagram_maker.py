@@ -32,8 +32,8 @@ def convert_to_pdf(tex_path, outputdir):
 
 #
 # calcside_value, calcarea_value
-tex_keys_q = ['calc_sidelength', 'sidelength','rotation',
-              'vA','vB', 'vC', 'vD'
+tex_keys_q = ['calc_sidelength', 'sidelength', 'rotation',
+              'vA', 'vB', 'vC', 'vD'
               ]
 
 def make1_diagram(tex_diagram_template_txt,):

@@ -2,7 +2,7 @@
 Area of Squares
 ====================================================
 
-| The diagrams below show a sqaure with the area to be calculated.
+| The diagrams below show a square with the area to be calculated.
 | These are python generated via LaTeX with separate question and answer sheet pdfs.
 
 ----
