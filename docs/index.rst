@@ -120,8 +120,10 @@ PC-latex 2024
     :caption: 🧊⿻📏 measurement
     :numbered:
 
-    latex_maths/area_of_a_square/squares.rst
-    latex_maths/area_of_a_rectangle/rectangles.rst
+    latex_maths/area_squares/area_squares.rst
+    latex_maths/area_rectangles/area_rectangles.rst
+    latex_maths/area_triangles/area_triangles.rst
+
 
 
 
