@@ -11,35 +11,65 @@
 \section*{ }
     \begin{minipage}{0.55\textwidth}
   \begin{tikzpicture}[scale=1.1, baseline=(current bounding box.north)]
-    \begin{scope}[rotate=30]
+    \begin{scope}[rotate=-30]
         % Draw square
-        \draw (0,0) coordinate (E) --
-              ++(2.105,0) coordinate (F) --
-              ++(0,1.052) coordinate (G) --
-              ++(-2.105,0) coordinate (H) -- cycle;
+        \draw (0,0) coordinate (K) --
+              ++(2.98,0) coordinate (L) --
+              ++(0,1.49) coordinate (M) --
+              ++(-2.98,0) coordinate (N) -- cycle;
 
         % Right angle markers
-        \foreach \p/\q/\r in {H/E/F,E/F/G,F/G/H,G/H/E} {
+        \foreach \p/\q/\r in {N/K/L,K/L/M,L/M/N,M/N/K} {
             \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
         }
 
         % Vertex LABELS
         % Labels relative to shape geometry
-        \node at ($(E)+(-0.2,-0.2)$) {E};
-        \node at ($(F)+(0.2,-0.2)$) {F};
-        \node at ($(G)+(0.2,0.2)$) {G};
-        \node at ($(H)+(-0.2,0.2)$) {H};
+        \node at ($(K)+(-0.2,-0.2)$) {K};
+        \node at ($(L)+(0.2,-0.2)$) {L};
+        \node at ($(M)+(0.2,0.2)$) {M};
+        \node at ($(N)+(-0.2,0.2)$) {N};
 
-        % Dotted arrows shifted away from edges
+        % double Tick marks across horizontal side K--L
+        \draw[thin, gray]
+            ($(K)!0.5!(L) + (-0.03,-0.10)$) --
+            ($(K)!0.5!(L) + (-0.03,0.10)$);
+
+        \draw[thin, gray]
+            ($(K)!0.5!(L) + (0.03,-0.10)$) --
+            ($(K)!0.5!(L) + (0.03,0.10)$);
+
+        % double Tick marks across horizontal side N--M
+        \draw[thin, gray]
+            ($(N)!0.5!(M) + (-0.03,-0.10)$) --
+            ($(N)!0.5!(M) + (-0.03,0.10)$);
+
+        \draw[thin, gray]
+            ($(N)!0.5!(M) + (0.03,-0.10)$) --
+            ($(N)!0.5!(M) + (0.03,0.10)$);
+
+
+        % Tick marks across vertical sides
+        \draw[thin, gray]
+            ($(L)!0.5!(M) + (-0.10,0)$) --
+            ($(L)!0.5!(M) + (0.10,0)$);
+
+        \draw[thin, gray]
+            ($(K)!0.5!(N) + (-0.10,0)$) --
+            ($(K)!0.5!(N) + (0.10,0)$);
+
+
+        % dotted/dashed arrows shifted away from edges
         % Horizontal side (A-B), shifted down
-        \draw[<->, dotted]
-            ($(E) + (0,-0.2cm)$) -- ($(F) + (0,-0.2cm)$)
-            node[midway,below, xshift=2mm] {8\,cm};
+        \draw[<->, gray]
+            ($(K) + (0,-0.45cm)$) -- ($(L) + (0,-0.45cm)$)
+            node[black, midway, fill=white, inner sep=3pt] {6\,cm};
 
         % Vertical side (B-C), shifted right
-        \draw[<->, dotted]
-            ($(F) + (0.2cm,0)$) -- ($(G) + (0.2cm,0)$)
-            node[midway,right] {4\,cm};
+        \draw[<->, gray]
+            ($(L) + (0.45cm,0)$) -- ($(M) + (0.45cm,0)$)
+            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {3\,cm};
+
     \end{scope}
 \end{tikzpicture}
 \end{minipage}%
@@ -47,8 +77,8 @@
 \begin{minipage}{.4\textwidth}
   \begin{align*}
   \text{Area} &= lw \\
-  \text{Area} &= 8 \,\text{cm} \times 4 \,\text{cm} \\
-  \text{Area} &= 32 \,\text{cm}^2
+  \text{Area} &= 6 \,\text{cm} \times 3 \,\text{cm} \\
+  \text{Area} &= 18 \,\text{cm}^2
   \end{align*}
 \end{minipage}
 

@@ -14,7 +14,7 @@ def get_side_pairs():
 
 def get_rotations_shuffled():
     # Define the range of angles with weighting for 0
-    angles = [0, 0, 0, 0, 0, 10, 30, -10, -30, -45] * 2
+    angles = [0, 0, 0, 0, 0, 10, 20, 30, -10, -20, -30] * 2
     # Shuffle list
     random.shuffle(angles)
     return angles
@@ -30,8 +30,8 @@ def get_area_rectangles_dict(side_pair=None, rotation=None):
 
     calc_sidelength1 = side_pair[1]
     calc_sidelength2 = side_pair[0]
-    sidelength1 = round(random.uniform(0, 1.5) + 2, 3)
-    sidelength2 = round(sidelength1 * (calc_sidelength2 / calc_sidelength1), 3)
+    sidelength2 = round(random.uniform(0, 0.8) + 1.2, 3)
+    sidelength1 = round(sidelength2 * (calc_sidelength1 / calc_sidelength2), 3)
     calcarea_value = calc_sidelength1 * calc_sidelength2
 
     # gap_to_fill = "\\dotuline{~~~~~~~}"

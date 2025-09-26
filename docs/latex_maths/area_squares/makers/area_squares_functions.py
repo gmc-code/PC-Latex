@@ -18,7 +18,7 @@ def get_ints_shuffled_one_dig_first():
 
 def get_rotations_shuffled():
     # Define the range of angles with weighting for 0
-    angles = [0, 0, 0, 0, 0, 10, 30, -10, -30, -45] * 2
+    angles = [0, 0, 0, 0, 0, 10, 20, 30, -10, -20, -30] * 2
     # Shuffle list
     random.shuffle(angles)
     return angles
