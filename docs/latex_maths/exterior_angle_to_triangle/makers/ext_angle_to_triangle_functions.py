@@ -22,12 +22,12 @@ def get_ext_angle_to_triangle_dict(unknown_ang_num):
     # gap_to_fill = "\\dotuline{~~~~~~~}"
 
     vertices_lists = [["A", "B", "C", "D"], ["E", "F", "G", "H"], ["J", "K", "L", "M"], ["Q", "R", "S", "T"], ["X", "Y", "Z", "W"]]
-     vertices_labels = random.choice(vertices_lists)
-   # Shuffle the first 3 elements, leaving the last one in place
+    vertices_labels = random.choice(vertices_lists)
+    # Shuffle the first 3 elements, leaving the last one in place
     shuffled_part =  vertices_labels[:3]  # Get the first three elements
     random.shuffle(shuffled_part)  # Shuffle them
     # Reassign the shuffled elements back, leaving the last element unchanged
-     vertices_labels[:3] = shuffled_part
+    vertices_labels[:3] = shuffled_part
 
     angleALabel =  vertices_labels[0]
     angleBLabel =  vertices_labels[1]

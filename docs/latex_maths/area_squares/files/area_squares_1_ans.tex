@@ -10,7 +10,7 @@
 \begin{document}
 \section*{ }
     \begin{minipage}{0.55\textwidth}
-  \begin{tikzpicture}[scale=1.1, baseline=(current bounding box.north)]
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
     \begin{scope}[rotate=-10]
         % Draw square
         \draw (0,0) coordinate (A) --
@@ -51,7 +51,7 @@
         % dotted/dashed arrows shifted away from edges
         % % Vertical side (B-C), shifted right
         \draw[<->, gray]
-            ($(B) + (0.45cm,0)$) -- ($(C) + (0.45cm,0)$)
+            ($(B) + (0.50cm,0)$) -- ($(C) + (0.50cm,0)$)
             node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {6\,cm};
 
     \end{scope}

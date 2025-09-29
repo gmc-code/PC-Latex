@@ -1,0 +1,43 @@
+\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+ \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=<<rotation>>]
+        % Draw
+
+        \draw (0,0) coordinate (<<vA>>) --
+         ++(<<sidelength1>>,0) coordinate (<<vB>>) --
+         ++(90:<<sidelength2>>) coordinate (<<vC>>) -- cycle;
+
+        \pic [draw, -, angle radius=0.2cm] {right angle=<<vC>>--<<vB>>--<<vA>>};
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(<<vA>>)+(-0.2,-0.2)$) {<<vA>>};
+        \node at ($(<<vB>>)+(0.2,-0.2)$) {<<vB>>};
+        \node at ($(<<vC>>)+(0.2,0.2)$) {<<vC>>};
+
+
+        % dotted/dashed arrows shifted away from edges
+        % Horizontal side (A-B), shifted down
+        \draw[<->, gray]
+            ($(<<vA>>) + (0,-0.6cm)$) -- ($(<<vB>>) + (0,-0.6cm)$)
+            node[black, midway, fill=white, inner sep=2.5pt] {<<calc_sidelength1>>\,cm};
+
+        % Vertical side (B-C), shifted right
+        \draw[<->, gray]
+            ($(<<vB>>) + (0.6cm,0)$) -- ($(<<vC>>) + (0.6cm,0)$)
+            node[black, midway, fill=white, xshift=0mm, inner sep=2.5pt] {<<calc_sidelength2>>\,cm};
+
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+    \text{Area} &= \frac{1}{2} \text{bh} \\
+    \text{Area} &= \frac{1}{2} \times <<calcside_value1>> \text{cm} \times <<calcside_value2>> \text{cm}  \\
+    \text{Area} &= <<calcarea_value>> \text{cm}^2
+  \end{align*}
+\end{minipage}
+

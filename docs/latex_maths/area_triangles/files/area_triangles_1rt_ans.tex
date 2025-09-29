@@ -1,0 +1,53 @@
+\documentclass[12pt, varwidth, border=5mm]{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+% Underlining package
+\usepackage{ulem}
+\usetikzlibrary{calc}
+\usetikzlibrary{angles,quotes}
+% \usepackage[a4paper, portrait, margin=1cm]{geometry}
+
+\begin{document}
+\section*{ }
+    \begin{minipage}{0.55\textwidth}
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=0]
+        % Draw
+
+        \draw (0,0) coordinate (A) --
+         ++(2.953,0) coordinate (B) --
+         ++(90:2.109) coordinate (C) -- cycle;
+
+        \pic [draw, -, angle radius=0.2cm] {right angle=C--B--A};
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(A)+(-0.2,-0.2)$) {A};
+        \node at ($(B)+(0.2,-0.2)$) {B};
+        \node at ($(C)+(0.2,0.2)$) {C};
+
+
+        % dotted/dashed arrows shifted away from edges
+        % Horizontal side (A-B), shifted down
+        \draw[<->, gray]
+            ($(A) + (0,-0.6cm)$) -- ($(B) + (0,-0.6cm)$)
+            node[black, midway, fill=white, inner sep=2.5pt] {7\,cm};
+
+        % Vertical side (B-C), shifted right
+        \draw[<->, gray]
+            ($(B) + (0.6cm,0)$) -- ($(C) + (0.6cm,0)$)
+            node[black, midway, fill=white, xshift=0mm, inner sep=2.5pt] {5\,cm};
+
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+    \text{Area} &= \frac{1}{2} \text{bh} \\
+    \text{Area} &= \frac{1}{2} \times 7 \text{cm} \times 5 \text{cm}  \\
+    \text{Area} &= 17.5 \text{cm}^2
+  \end{align*}
+\end{minipage}
+
+\end{document}

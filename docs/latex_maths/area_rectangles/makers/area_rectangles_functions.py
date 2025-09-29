@@ -28,10 +28,16 @@ def get_area_rectangles_dict(side_pair=None, rotation=None):
     if rotation is None:
         rotation = get_rotations_shuffled()[0]
 
-    calc_sidelength1 = side_pair[1]
-    calc_sidelength2 = side_pair[0]
-    sidelength2 = round(random.uniform(0, 0.8) + 1.2, 3)
+    calc_sidelength1 = side_pair[1]  #longer
+    calc_sidelength2 = side_pair[0]  # shorter
+    sidelength2 = round(random.uniform(0, 1.0) + 1.5, 3)
     sidelength1 = round(sidelength2 * (calc_sidelength1 / calc_sidelength2), 3)
+
+    if sidelength1 > 8:
+        ratio = 8 / sidelength1
+        sidelength1 = round(sidelength1 * ratio, 3)
+        sidelength2 = round(sidelength2 * ratio, 3)
+
     calcarea_value = calc_sidelength1 * calc_sidelength2
 
     # gap_to_fill = "\\dotuline{~~~~~~~}"

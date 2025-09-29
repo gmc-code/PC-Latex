@@ -2,14 +2,16 @@ from pathlib import Path
 import subprocess
 import os
 import time
+import random
 import magick_pdf_to_png
-import area_rectangles_functions as arf
+import area_triangles_functions as atf
 
 currfile_dir = Path(__file__).parent
-tex_template_path = currfile_dir / "area_rectangles_template.tex"
-texans_template_path = currfile_dir / "area_rectangles_template.tex"
-tex_diagram_template_path = currfile_dir / "area_rectangles_diagram_template.tex"
-
+tex_template_path = currfile_dir / "area_triangles_template.tex"
+texans_template_path = currfile_dir / "area_triangles_template.tex"
+tex_diagram_template_right_path = currfile_dir / "area_triangles_right_diagram_template.tex"
+tex_diagram_template_acute_path = currfile_dir / "area_triangles_acute_diagram_template.tex"
+tex_diagram_template_obtuse_path = currfile_dir / "area_triangles_obtuse_diagram_template.tex"
 
 
 def convert_to_pdf(tex_path, outputdir):
@@ -32,15 +34,11 @@ def convert_to_pdf(tex_path, outputdir):
 
 
 #
-# calcside_value1, calcside_value2, calcarea_value
-tex_keys_q = ["calc_sidelength1", "calc_sidelength2", "sidelength1", "sidelength2", "rotation", "vA", "vB", "vC", "vD"]
+################################################################################################
 
 
-def make1_diagram(
-    tex_diagram_template_txt,
-):
+def make1_diagram(tex_diagram_template_txt,tex_keys_q,kv):
     tex_diagram_template_txt_ans = tex_diagram_template_txt
-    kv = arf.get_area_rectangles_dict()
     for key, value in kv.items():
         tex_diagram_template_txt_ans = tex_diagram_template_txt_ans.replace("<<" + key + ">>", value)
     for key, value in kv.items():
@@ -51,20 +49,80 @@ def make1_diagram(
     return tex_diagram_template_txt, tex_diagram_template_txt_ans
 
 
+################################################################################################
+
+tex_keys_q_right = ["calc_sidelength1", "calc_sidelength2", "sidelength1", "sidelength2", "rotation", "vA", "vB", "vC"]
+kv_right = atf.get_area_triangles_right_dict()
+
+tex_keys_q_acute = ["calc_base", "calc_height", "leftoffset", "base", "height", "rotation", "vA", "vB", "vC", "vD"]
+kv_acute = atf.get_area_triangles_acute_dict()
+
+tex_keys_q_obtuse = ["calc_base", "calc_height", "rightoffset", "base", "height", "rotation", "vA", "vB", "vC", "vD"]
+kv_obtuse = atf.get_area_triangles_obtuse_dict()
+
+
+################################################################################################
+
+def get_diagram_template(num):
+    match num:
+        case 1:
+            return tex_diagram_template_right_path
+        case 2:
+            return tex_diagram_template_acute_path
+        case 3:
+            return tex_diagram_template_obtuse_path
+
+
+def get_keys(num):
+    match num:
+        case 1:
+            return tex_keys_q_right
+        case 2:
+            return tex_keys_q_acute
+        case 3:
+            return tex_keys_q_obtuse
+
+
+def get_kv(num):
+    match num:
+        case 1:
+            return kv_right
+        case 2:
+            return kv_acute
+        case 3:
+            return kv_obtuse
+
+
 def main():
-    filename = input("Enter the base filename to be added to the prefix area_rectangles_: \n")
+    num = input("Enter 1, 2, 3, or 4 for right,acute,obtuse,random \n")
+    if num.strip().isdigit():
+        num = int(num)
+        if not num in [1, 2, 3, 4]:
+            num = 4  # random by default
+    else:
+        num = 4  # random by default
+    if num is None or num == 4:
+            num = random.randint(1, 3)
+    #
+    tex_keys_q = get_keys(num)
+    kv = get_kv(num)
+    tex_diagram_template_path = get_diagram_template(num)
+    #
+    filename = input(
+        "Enter the base filename to be added to the prefix area_triangles_: \n"
+    )
     if not filename:
-        filename = "1"  # "area_rectangles_1_q and area_rectangles_1_ans as default file"
+        filename = "1"  # "area_triangles_1_q and area_triangles_1_ans as default file"
     # set names of files that are made
     # questions
-    tex_output_path = currfile_dir / f"area_rectangles_{filename}_q.tex"
-    pdf_path = currfile_dir / f"area_rectangles_{filename}_q.pdf"
-    png_path = currfile_dir / f"area_rectangles_{filename}_q.png"
+    tex_output_path = currfile_dir / f"area_triangles_{filename}_q.tex"
+    pdf_path = currfile_dir / f"area_triangles_{filename}_q.pdf"
+    png_path = currfile_dir / f"area_triangles_{filename}_q.png"
 
     # answers
-    tex_output_path_ans = currfile_dir / f"area_rectangles_{filename}_ans.tex"
-    pdf_path_ans = currfile_dir / f"area_rectangles_{filename}_ans.pdf"
-    png_path_ans = currfile_dir / f"area_rectangles_{filename}_ans.png"
+    tex_output_path_ans = currfile_dir / f"area_triangles_{filename}_ans.tex"
+    pdf_path_ans = currfile_dir / f"area_triangles_{filename}_ans.pdf"
+    png_path_ans = currfile_dir / f"area_triangles_{filename}_ans.png"
 
     # Read in the LaTeX template file
     with open(tex_template_path, "r") as infile:
@@ -77,10 +135,12 @@ def main():
         tex_diagram_template_txt = infile.read()
 
     # Generate the <<diagram>> replacement tex
-    diagram_text, diagram_text_ans = make1_diagram(tex_diagram_template_txt)
+    diagram_text, diagram_text_ans = make1_diagram(tex_diagram_template_txt,
+                                                   tex_keys_q, kv)
     # Replace the <<diagram>> placeholder in the LaTeX template
     tex_template_txt = tex_template_txt.replace("<<diagram>>", diagram_text)
-    tex_template_txt_ans = tex_template_txt_ans.replace("<<diagram>>", diagram_text_ans)
+    tex_template_txt_ans = tex_template_txt_ans.replace(
+        "<<diagram>>", diagram_text_ans)
     # Write the question diagram tex to an output file
     with open(tex_output_path, "w") as outfile:
         outfile.write(tex_template_txt)

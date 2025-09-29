@@ -122,8 +122,10 @@ PC-latex 2024
 
     latex_maths/area_squares/area_squares.rst
     latex_maths/area_rectangles/area_rectangles.rst
+    latex_maths/area_triangles/area_triangles_right.rst
+    latex_maths/area_triangles/area_triangles_acute.rst
+    latex_maths/area_triangles/area_triangles_obtuse.rst
     latex_maths/area_triangles/area_triangles.rst
-
 
 
 

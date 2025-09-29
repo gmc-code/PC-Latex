@@ -1,5 +1,5 @@
 \begin{minipage}{0.55\textwidth}
-  \begin{tikzpicture}[scale=1.1, baseline=(current bounding box.north)]
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
     \begin{scope}[rotate=<<rotation>>]
         % Draw square
         \draw (0,0) coordinate (<<vA>>) --
@@ -51,12 +51,12 @@
         % dotted/dashed arrows shifted away from edges
         % Horizontal side (A-B), shifted down
         \draw[<->, gray]
-            ($(<<vA>>) + (0,-0.45cm)$) -- ($(<<vB>>) + (0,-0.45cm)$)
+            ($(<<vA>>) + (0,-0.5cm)$) -- ($(<<vB>>) + (0,-0.5cm)$)
             node[black, midway, fill=white, inner sep=3pt] {<<calc_sidelength1>>\,cm};
 
         % Vertical side (B-C), shifted right
         \draw[<->, gray]
-            ($(<<vB>>) + (0.45cm,0)$) -- ($(<<vC>>) + (0.45cm,0)$)
+            ($(<<vB>>) + (0.5cm,0)$) -- ($(<<vC>>) + (0.5cm,0)$)
             node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {<<calc_sidelength2>>\,cm};
 
     \end{scope}

@@ -1,0 +1,57 @@
+\documentclass[12pt, varwidth, border=5mm]{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+% Underlining package
+\usepackage{ulem}
+\usetikzlibrary{calc}
+\usetikzlibrary{angles,quotes}
+% \usepackage[a4paper, portrait, margin=1cm]{geometry}
+
+\begin{document}
+\section*{ }
+    \begin{minipage}{0.55\textwidth}
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=180]
+
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (3.18,0);
+        \coordinate (D) at ($(B)+(1.182,0)$);  % extend out
+        \coordinate (C) at ($(D)+(0,1.817)$); % Perpendicular upwards
+
+        \draw (A)--(B)--(C)--cycle;
+        \draw[dashed] (B)--(D);
+        \draw[dashed] (D)--(C);
+        \pic [draw, -, angle radius=0.2cm] {right angle=C--D--B};
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(A)+(-0.2,-0.2)$) {A};
+        \node at ($(B)+(0.0,-0.2)$) {B};
+        \node at ($(D)+(0.2,-0.2)$) {D};
+        \node at ($(C)+(0.2,0.2)$) {C};
+
+
+        % dotted/dashed arrows shifted away from edges
+        % Horizontal side (A-B), shifted down yshift=0mm,
+        \draw[<->, gray]
+            ($(A) + (0,-0.7cm)$) -- ($(B) + (0,-0.7cm)$)
+            node[black, midway, fill=white, inner sep=2.5pt] {7\,cm};
+
+        % Vertical side (D-C), shifted right xshift=0mm,
+        \draw[<->, gray]
+            ($(D)+(0.6,0)$) -- ($(D |- C)+(0.6,0)$)
+            node[black, midway, fill=white, inner sep=2.5pt] {4\,cm};
+
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+    \text{Area} &= \frac{1}{2} \text{bh} \\
+    \text{Area} &= \frac{1}{2} \times 7 \text{cm} \times 4 \text{cm}  \\
+    \text{Area} &= \dotuline{~~~~~~~} \text{cm}^2
+  \end{align*}
+\end{minipage}
+
+\end{document}

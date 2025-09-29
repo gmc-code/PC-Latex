@@ -1,0 +1,46 @@
+\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+ \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+        \begin{scope}[rotate=<<rotation>>]
+
+        \coordinate (<<vA>>) at (0,0);
+        \coordinate (<<vB>>) at (<<base>>,0);
+        \coordinate (<<vD>>) at ($(<<vB>>)+(<<rightoffset>>,0)$);  % extend out
+        \coordinate (<<vC>>) at ($(<<vD>>)+(0,<<height>>)$); % Perpendicular upwards
+
+        \draw (<<vA>>)--(<<vB>>)--(<<vC>>)--cycle;
+        \draw[dashed] (<<vB>>)--(<<vD>>);
+        \draw[dashed] (<<vD>>)--(<<vC>>);
+        \pic [draw, -, angle radius=0.2cm] {right angle=<<vC>>--<<vD>>--<<vB>>};
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(<<vA>>)+(-0.2,-0.2)$) {<<vA>>};
+        \node at ($(<<vB>>)+(0.0,-0.2)$) {<<vB>>};
+        \node at ($(<<vD>>)+(0.2,-0.2)$) {<<vD>>};
+        \node at ($(<<vC>>)+(0.2,0.2)$) {<<vC>>};
+
+
+        % dotted/dashed arrows shifted away from edges
+        % Horizontal side (A-B), shifted down yshift=0mm,
+        \draw[<->, gray]
+            ($(<<vA>>) + (0,-0.7cm)$) -- ($(<<vB>>) + (0,-0.7cm)$)
+            node[black, midway, fill=white, inner sep=2.5pt] {<<calc_base>>\,cm};
+
+        % Vertical side (D-C), shifted right xshift=0mm,
+        \draw[<->, gray]
+            ($(<<vD>>)+(0.6,0)$) -- ($(<<vD>> |- <<vC>>)+(0.6,0)$)
+            node[black, midway, fill=white, inner sep=2.5pt] {<<calc_height>>\,cm};
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+    \text{Area} &= \frac{1}{2} \text{bh} \\
+    \text{Area} &= \frac{1}{2} \times <<calc_base>> \text{cm} \times <<calc_height>> \text{cm}  \\
+    \text{Area} &= <<calcarea_value>> \text{cm}^2
+  \end{align*}
+\end{minipage}
+

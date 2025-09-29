@@ -11,38 +11,38 @@
     \begin{minipage}{0.55\textwidth}
   \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
 
-      \begin{scope}[rotate=340]
+      \begin{scope}[rotate=75]
         \coordinate (A) at (0,0);
-        \coordinate (B) at (3.433174685015084,0);
-        \coordinate (D) at (4.433174685015084,0);
-        \coordinate (C) at (intersection cs: first line={(A)--($(A)+(25:4cm)$)}, second line={(B)--($(B)+(180-39:4cm)$)});
+        \coordinate (B) at (3.4398692736450975,0);
+        \coordinate (D) at (4.4398692736450975,0);
+        \coordinate (C) at (intersection cs: first line={(A)--($(A)+(28:4cm)$)}, second line={(B)--($(B)+(180-65:4cm)$)});
         \draw (A) -- (B) -- (C) -- cycle;
         \draw (B) -- (D);
 
         % Mark angles with arcs
-        \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=25, radius=0.3cm];
-        \draw ($(B)!0.3cm!(C)$) arc [start angle=180-39, end angle=180, radius=0.3cm];
-        \draw ($(C)!0.3cm!(A)$) arc [start angle=180+25, end angle=360-39, radius=0.3cm];
-        \draw ($(B)!0.25cm!(D)$) arc [start angle=0, end angle=180-39, radius=0.25cm];
+        \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=28, radius=0.3cm];
+        \draw ($(B)!0.3cm!(C)$) arc [start angle=180-65, end angle=180, radius=0.3cm];
+        \draw ($(C)!0.3cm!(A)$) arc [start angle=180+28, end angle=360-65, radius=0.3cm];
+        \draw ($(B)!0.25cm!(D)$) arc [start angle=0, end angle=180-65, radius=0.25cm];
 
         % Label angles
-        \node at ($(A)!-0.25cm!(B)$) {A};
-        \node at ($(B)!-0.45cm!(C)!0.2cm!(A)$) {B};
-        \node at ($(C)!-0.25cm!(A)!-0.25cm!(B)$) {C};
-        \node at ($(D)!-0.25cm!(A)$) {D};
+        \node at ($(A)!-0.25cm!(B)$) {S};
+        \node at ($(B)!-0.50cm!(C)!0.2cm!(A)$) {R};
+        \node at ($(C)!-0.25cm!(A)!-0.25cm!(B)$) {Q};
+        \node at ($(D)!-0.25cm!(A)$) {T};
 
         % Mark angles in degrees
         \coordinate (midBC) at ($(B)!0.5!(C)$);
-        \node at ($(A)!0.75cm!(midBC)$) {$\theta^\circ$};
+        \node at ($(A)!0.70cm!(midBC)!0.10cm!(C)$) {$\theta^\circ$};
 
         \coordinate (midAC) at ($(A)!0.5!(C)$);
         \node at ($(B)!0.65cm!(midAC)$) {};
 
         \coordinate (midAB) at ($(A)!0.5!(B)$);
-        \node at ($(C)!0.65cm!(midAB)$) {$116^\circ$};
+        \node at ($(C)!0.65cm!(midAB)$) {$87^\circ$};
 
         \coordinate (midDC) at ($(D)!0.3!(C)$);
-        \node at ($(B)!0.65cm!(midDC)$) {$141^\circ$};
+        \node at ($(B)!0.65cm!(midDC)$) {$115^\circ$};
 
       \end{scope}
     \end{tikzpicture}
@@ -50,9 +50,9 @@
 \hfill
 \begin{minipage}{0.4\textwidth}
     \begin{align*}
-      \angle \text{A} &= \angle \text{DBC} - \angle \text{C} \\
-      &= 141^\circ  - 116^\circ \\
-      &= 25^\circ
+      \angle \text{S} &= \angle \text{TRQ} - \angle \text{Q} \\
+      &= 115^\circ  - 87^\circ \\
+      &= 28^\circ
     \end{align*}
 \end{minipage}
 

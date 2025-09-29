@@ -29,38 +29,38 @@
   \noindent{(\theminipagecount)}\quad
   \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
 
-      \begin{scope}[rotate=218]
+      \begin{scope}[rotate=71]
         \coordinate (A) at (0,0);
-        \coordinate (B) at (3.2003071392851323,0);
-        \coordinate (D) at (4.200307139285132,0);
-        \coordinate (C) at (intersection cs: first line={(A)--($(A)+(53:4cm)$)}, second line={(B)--($(B)+(180-60:4cm)$)});
+        \coordinate (B) at (3.189997905219,0);
+        \coordinate (D) at (4.189997905219,0);
+        \coordinate (C) at (intersection cs: first line={(A)--($(A)+(45:4cm)$)}, second line={(B)--($(B)+(180-46:4cm)$)});
         \draw (A) -- (B) -- (C) -- cycle;
         \draw (B) -- (D);
 
         % Mark angles with arcs
-        \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=53, radius=0.3cm];
-        \draw ($(B)!0.3cm!(C)$) arc [start angle=180-60, end angle=180, radius=0.3cm];
-        \draw ($(C)!0.3cm!(A)$) arc [start angle=180+53, end angle=360-60, radius=0.3cm];
-        \draw ($(B)!0.25cm!(D)$) arc [start angle=0, end angle=180-60, radius=0.25cm];
+        \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=45, radius=0.3cm];
+        \draw ($(B)!0.3cm!(C)$) arc [start angle=180-46, end angle=180, radius=0.3cm];
+        \draw ($(C)!0.3cm!(A)$) arc [start angle=180+45, end angle=360-46, radius=0.3cm];
+        \draw ($(B)!0.25cm!(D)$) arc [start angle=0, end angle=180-46, radius=0.25cm];
 
         % Label angles
-        \node at ($(A)!-0.25cm!(B)$) {A};
-        \node at ($(B)!-0.45cm!(C)!0.2cm!(A)$) {B};
-        \node at ($(C)!-0.25cm!(A)!-0.25cm!(B)$) {C};
-        \node at ($(D)!-0.25cm!(A)$) {D};
+        \node at ($(A)!-0.25cm!(B)$) {J};
+        \node at ($(B)!-0.45cm!(C)!0.2cm!(A)$) {L};
+        \node at ($(C)!-0.25cm!(A)!-0.25cm!(B)$) {K};
+        \node at ($(D)!-0.25cm!(A)$) {M};
 
         % Mark angles in degrees
         \coordinate (midBC) at ($(B)!0.5!(C)$);
-        \node at ($(A)!0.70cm!(midBC)!0.10cm!(C)$) {$53^\circ$};
+        \node at ($(A)!0.70cm!(midBC)!0.10cm!(C)$) {$\theta^\circ$};
 
         \coordinate (midAC) at ($(A)!0.5!(C)$);
         \node at ($(B)!0.65cm!(midAC)$) {};
 
         \coordinate (midAB) at ($(A)!0.5!(B)$);
-        \node at ($(C)!0.65cm!(midAB)$) {$\theta^\circ$};
+        \node at ($(C)!0.65cm!(midAB)$) {$89^\circ$};
 
         \coordinate (midDC) at ($(D)!0.3!(C)$);
-        \node at ($(B)!0.65cm!(midDC)$) {$120^\circ$};
+        \node at ($(B)!0.65cm!(midDC)$) {$134^\circ$};
 
 
       \end{scope}
@@ -69,7 +69,7 @@
 \hfill
 \begin{minipage}{0.4\textwidth}
   \begin{align*}
-    \angle \text{C} &= \angle \text{\dotuline{~~~~~~~}} - \angle \text{\dotuline{~~~~~~~}} \\
+    \angle \text{J} &= \angle \text{\dotuline{~~~~~~~}} - \angle \text{\dotuline{~~~~~~~}} \\
     &= \dotuline{~~~~~~~}^\circ  - \dotuline{~~~~~~~}^\circ \\
     &= \dotuline{~~~~~~~}^\circ
   \end{align*}
@@ -79,35 +79,85 @@
   \noindent{(\theminipagecount)}\quad
   \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
 
-      \begin{scope}[rotate=119]
+      \begin{scope}[rotate=239]
         \coordinate (A) at (0,0);
-        \coordinate (B) at (3.415352531556346,0);
-        \coordinate (D) at (4.415352531556346,0);
-        \coordinate (C) at (intersection cs: first line={(A)--($(A)+(44:4cm)$)}, second line={(B)--($(B)+(180-32:4cm)$)});
+        \coordinate (B) at (3.415059163194597,0);
+        \coordinate (D) at (4.415059163194597,0);
+        \coordinate (C) at (intersection cs: first line={(A)--($(A)+(37:4cm)$)}, second line={(B)--($(B)+(180-44:4cm)$)});
         \draw (A) -- (B) -- (C) -- cycle;
         \draw (B) -- (D);
 
         % Mark angles with arcs
-        \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=44, radius=0.3cm];
-        \draw ($(B)!0.3cm!(C)$) arc [start angle=180-32, end angle=180, radius=0.3cm];
-        \draw ($(C)!0.3cm!(A)$) arc [start angle=180+44, end angle=360-32, radius=0.3cm];
-        \draw ($(B)!0.25cm!(D)$) arc [start angle=0, end angle=180-32, radius=0.25cm];
+        \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=37, radius=0.3cm];
+        \draw ($(B)!0.3cm!(C)$) arc [start angle=180-44, end angle=180, radius=0.3cm];
+        \draw ($(C)!0.3cm!(A)$) arc [start angle=180+37, end angle=360-44, radius=0.3cm];
+        \draw ($(B)!0.25cm!(D)$) arc [start angle=0, end angle=180-44, radius=0.25cm];
 
         % Label angles
-        \node at ($(A)!-0.25cm!(B)$) {A};
-        \node at ($(B)!-0.45cm!(C)!0.2cm!(A)$) {B};
-        \node at ($(C)!-0.25cm!(A)!-0.25cm!(B)$) {C};
-        \node at ($(D)!-0.25cm!(A)$) {D};
+        \node at ($(A)!-0.25cm!(B)$) {F};
+        \node at ($(B)!-0.45cm!(C)!0.2cm!(A)$) {E};
+        \node at ($(C)!-0.25cm!(A)!-0.25cm!(B)$) {G};
+        \node at ($(D)!-0.25cm!(A)$) {H};
 
         % Mark angles in degrees
         \coordinate (midBC) at ($(B)!0.5!(C)$);
-        \node at ($(A)!0.70cm!(midBC)!0.10cm!(C)$) {$44^\circ$};
+        \node at ($(A)!0.70cm!(midBC)!0.10cm!(C)$) {$37^\circ$};
 
         \coordinate (midAC) at ($(A)!0.5!(C)$);
         \node at ($(B)!0.65cm!(midAC)$) {};
 
         \coordinate (midAB) at ($(A)!0.5!(B)$);
-        \node at ($(C)!0.65cm!(midAB)$) {$104^\circ$};
+        \node at ($(C)!0.65cm!(midAB)$) {$\theta^\circ$};
+
+        \coordinate (midDC) at ($(D)!0.3!(C)$);
+        \node at ($(B)!0.65cm!(midDC)$) {$136^\circ$};
+
+
+      \end{scope}
+    \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.4\textwidth}
+  \begin{align*}
+    \angle \text{G} &= \angle \text{\dotuline{~~~~~~~}} - \angle \text{\dotuline{~~~~~~~}} \\
+    &= \dotuline{~~~~~~~}^\circ  - \dotuline{~~~~~~~}^\circ \\
+    &= \dotuline{~~~~~~~}^\circ
+  \end{align*}
+\end{minipage}
+\vspace{1cm} \vfill\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+
+      \begin{scope}[rotate=334]
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (3.6876280291617802,0);
+        \coordinate (D) at (4.687628029161781,0);
+        \coordinate (C) at (intersection cs: first line={(A)--($(A)+(31:4cm)$)}, second line={(B)--($(B)+(180-30:4cm)$)});
+        \draw (A) -- (B) -- (C) -- cycle;
+        \draw (B) -- (D);
+
+        % Mark angles with arcs
+        \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=31, radius=0.3cm];
+        \draw ($(B)!0.3cm!(C)$) arc [start angle=180-30, end angle=180, radius=0.3cm];
+        \draw ($(C)!0.3cm!(A)$) arc [start angle=180+31, end angle=360-30, radius=0.3cm];
+        \draw ($(B)!0.25cm!(D)$) arc [start angle=0, end angle=180-30, radius=0.25cm];
+
+        % Label angles
+        \node at ($(A)!-0.25cm!(B)$) {G};
+        \node at ($(B)!-0.45cm!(C)!0.2cm!(A)$) {F};
+        \node at ($(C)!-0.25cm!(A)!-0.25cm!(B)$) {E};
+        \node at ($(D)!-0.25cm!(A)$) {H};
+
+        % Mark angles in degrees
+        \coordinate (midBC) at ($(B)!0.5!(C)$);
+        \node at ($(A)!0.70cm!(midBC)!0.10cm!(C)$) {$31^\circ$};
+
+        \coordinate (midAC) at ($(A)!0.5!(C)$);
+        \node at ($(B)!0.65cm!(midAC)$) {};
+
+        \coordinate (midAB) at ($(A)!0.5!(B)$);
+        \node at ($(C)!0.65cm!(midAB)$) {$119^\circ$};
 
         \coordinate (midDC) at ($(D)!0.3!(C)$);
         \node at ($(B)!0.65cm!(midDC)$) {$\theta^\circ$};
@@ -119,7 +169,7 @@
 \hfill
 \begin{minipage}{0.4\textwidth}
   \begin{align*}
-    \angle \text{DBC} &= \angle \text{\dotuline{~~~~~~~}} + \angle \text{\dotuline{~~~~~~~}} \\
+    \angle \text{HFE} &= \angle \text{\dotuline{~~~~~~~}} + \angle \text{\dotuline{~~~~~~~}} \\
     &= \dotuline{~~~~~~~}^\circ  + \dotuline{~~~~~~~}^\circ \\
     &= \dotuline{~~~~~~~}^\circ
   \end{align*}
@@ -129,35 +179,35 @@
   \noindent{(\theminipagecount)}\quad
   \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
 
-      \begin{scope}[rotate=78]
+      \begin{scope}[rotate=288]
         \coordinate (A) at (0,0);
-        \coordinate (B) at (3.7519885612751125,0);
-        \coordinate (D) at (4.7519885612751125,0);
-        \coordinate (C) at (intersection cs: first line={(A)--($(A)+(58:4cm)$)}, second line={(B)--($(B)+(180-33:4cm)$)});
+        \coordinate (B) at (3.292773961057914,0);
+        \coordinate (D) at (4.2927739610579145,0);
+        \coordinate (C) at (intersection cs: first line={(A)--($(A)+(38:4cm)$)}, second line={(B)--($(B)+(180-28:4cm)$)});
         \draw (A) -- (B) -- (C) -- cycle;
         \draw (B) -- (D);
 
         % Mark angles with arcs
-        \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=58, radius=0.3cm];
-        \draw ($(B)!0.3cm!(C)$) arc [start angle=180-33, end angle=180, radius=0.3cm];
-        \draw ($(C)!0.3cm!(A)$) arc [start angle=180+58, end angle=360-33, radius=0.3cm];
-        \draw ($(B)!0.25cm!(D)$) arc [start angle=0, end angle=180-33, radius=0.25cm];
+        \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=38, radius=0.3cm];
+        \draw ($(B)!0.3cm!(C)$) arc [start angle=180-28, end angle=180, radius=0.3cm];
+        \draw ($(C)!0.3cm!(A)$) arc [start angle=180+38, end angle=360-28, radius=0.3cm];
+        \draw ($(B)!0.25cm!(D)$) arc [start angle=0, end angle=180-28, radius=0.25cm];
 
         % Label angles
-        \node at ($(A)!-0.25cm!(B)$) {A};
-        \node at ($(B)!-0.45cm!(C)!0.2cm!(A)$) {B};
-        \node at ($(C)!-0.25cm!(A)!-0.25cm!(B)$) {C};
-        \node at ($(D)!-0.25cm!(A)$) {D};
+        \node at ($(A)!-0.25cm!(B)$) {F};
+        \node at ($(B)!-0.45cm!(C)!0.2cm!(A)$) {G};
+        \node at ($(C)!-0.25cm!(A)!-0.25cm!(B)$) {E};
+        \node at ($(D)!-0.25cm!(A)$) {H};
 
         % Mark angles in degrees
         \coordinate (midBC) at ($(B)!0.5!(C)$);
-        \node at ($(A)!0.70cm!(midBC)!0.10cm!(C)$) {$58^\circ$};
+        \node at ($(A)!0.70cm!(midBC)!0.10cm!(C)$) {$38^\circ$};
 
         \coordinate (midAC) at ($(A)!0.5!(C)$);
         \node at ($(B)!0.65cm!(midAC)$) {};
 
         \coordinate (midAB) at ($(A)!0.5!(B)$);
-        \node at ($(C)!0.65cm!(midAB)$) {$89^\circ$};
+        \node at ($(C)!0.65cm!(midAB)$) {$114^\circ$};
 
         \coordinate (midDC) at ($(D)!0.3!(C)$);
         \node at ($(B)!0.65cm!(midDC)$) {$\theta^\circ$};
@@ -169,8 +219,58 @@
 \hfill
 \begin{minipage}{0.4\textwidth}
   \begin{align*}
-    \angle \text{DBC} &= \angle \text{\dotuline{~~~~~~~}} + \angle \text{\dotuline{~~~~~~~}} \\
+    \angle \text{HGE} &= \angle \text{\dotuline{~~~~~~~}} + \angle \text{\dotuline{~~~~~~~}} \\
     &= \dotuline{~~~~~~~}^\circ  + \dotuline{~~~~~~~}^\circ \\
+    &= \dotuline{~~~~~~~}^\circ
+  \end{align*}
+\end{minipage}
+\vspace{1cm} \vfill\pagebreak ~ \newline ~ \newline\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+
+      \begin{scope}[rotate=60]
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (3.1860813171431133,0);
+        \coordinate (D) at (4.186081317143113,0);
+        \coordinate (C) at (intersection cs: first line={(A)--($(A)+(43:4cm)$)}, second line={(B)--($(B)+(180-29:4cm)$)});
+        \draw (A) -- (B) -- (C) -- cycle;
+        \draw (B) -- (D);
+
+        % Mark angles with arcs
+        \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=43, radius=0.3cm];
+        \draw ($(B)!0.3cm!(C)$) arc [start angle=180-29, end angle=180, radius=0.3cm];
+        \draw ($(C)!0.3cm!(A)$) arc [start angle=180+43, end angle=360-29, radius=0.3cm];
+        \draw ($(B)!0.25cm!(D)$) arc [start angle=0, end angle=180-29, radius=0.25cm];
+
+        % Label angles
+        \node at ($(A)!-0.25cm!(B)$) {L};
+        \node at ($(B)!-0.45cm!(C)!0.2cm!(A)$) {K};
+        \node at ($(C)!-0.25cm!(A)!-0.25cm!(B)$) {J};
+        \node at ($(D)!-0.25cm!(A)$) {M};
+
+        % Mark angles in degrees
+        \coordinate (midBC) at ($(B)!0.5!(C)$);
+        \node at ($(A)!0.70cm!(midBC)!0.10cm!(C)$) {$43^\circ$};
+
+        \coordinate (midAC) at ($(A)!0.5!(C)$);
+        \node at ($(B)!0.65cm!(midAC)$) {};
+
+        \coordinate (midAB) at ($(A)!0.5!(B)$);
+        \node at ($(C)!0.65cm!(midAB)$) {$\theta^\circ$};
+
+        \coordinate (midDC) at ($(D)!0.3!(C)$);
+        \node at ($(B)!0.65cm!(midDC)$) {$151^\circ$};
+
+
+      \end{scope}
+    \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.4\textwidth}
+  \begin{align*}
+    \angle \text{J} &= \angle \text{\dotuline{~~~~~~~}} - \angle \text{\dotuline{~~~~~~~}} \\
+    &= \dotuline{~~~~~~~}^\circ  - \dotuline{~~~~~~~}^\circ \\
     &= \dotuline{~~~~~~~}^\circ
   \end{align*}
 \end{minipage}
@@ -179,10 +279,10 @@
   \noindent{(\theminipagecount)}\quad
   \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
 
-      \begin{scope}[rotate=104]
+      \begin{scope}[rotate=201]
         \coordinate (A) at (0,0);
-        \coordinate (B) at (3.820050873625135,0);
-        \coordinate (D) at (4.820050873625135,0);
+        \coordinate (B) at (3.5817689638456294,0);
+        \coordinate (D) at (4.581768963845629,0);
         \coordinate (C) at (intersection cs: first line={(A)--($(A)+(30:4cm)$)}, second line={(B)--($(B)+(180-47:4cm)$)});
         \draw (A) -- (B) -- (C) -- cycle;
         \draw (B) -- (D);
@@ -194,10 +294,10 @@
         \draw ($(B)!0.25cm!(D)$) arc [start angle=0, end angle=180-47, radius=0.25cm];
 
         % Label angles
-        \node at ($(A)!-0.25cm!(B)$) {A};
-        \node at ($(B)!-0.45cm!(C)!0.2cm!(A)$) {B};
-        \node at ($(C)!-0.25cm!(A)!-0.25cm!(B)$) {C};
-        \node at ($(D)!-0.25cm!(A)$) {D};
+        \node at ($(A)!-0.25cm!(B)$) {F};
+        \node at ($(B)!-0.45cm!(C)!0.2cm!(A)$) {G};
+        \node at ($(C)!-0.25cm!(A)!-0.25cm!(B)$) {E};
+        \node at ($(D)!-0.25cm!(A)$) {H};
 
         % Mark angles in degrees
         \coordinate (midBC) at ($(B)!0.5!(C)$);
@@ -219,107 +319,7 @@
 \hfill
 \begin{minipage}{0.4\textwidth}
   \begin{align*}
-    \angle \text{A} &= \angle \text{\dotuline{~~~~~~~}} - \angle \text{\dotuline{~~~~~~~}} \\
-    &= \dotuline{~~~~~~~}^\circ  - \dotuline{~~~~~~~}^\circ \\
-    &= \dotuline{~~~~~~~}^\circ
-  \end{align*}
-\end{minipage}
-\vspace{1cm} \vfill\pagebreak ~ \newline ~ \newline\begin{minipage}{0.55\textwidth}
-  \refstepcounter{minipagecount}
-  \noindent{(\theminipagecount)}\quad
-  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-
-      \begin{scope}[rotate=182]
-        \coordinate (A) at (0,0);
-        \coordinate (B) at (3.9574420600251488,0);
-        \coordinate (D) at (4.957442060025149,0);
-        \coordinate (C) at (intersection cs: first line={(A)--($(A)+(61:4cm)$)}, second line={(B)--($(B)+(180-51:4cm)$)});
-        \draw (A) -- (B) -- (C) -- cycle;
-        \draw (B) -- (D);
-
-        % Mark angles with arcs
-        \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=61, radius=0.3cm];
-        \draw ($(B)!0.3cm!(C)$) arc [start angle=180-51, end angle=180, radius=0.3cm];
-        \draw ($(C)!0.3cm!(A)$) arc [start angle=180+61, end angle=360-51, radius=0.3cm];
-        \draw ($(B)!0.25cm!(D)$) arc [start angle=0, end angle=180-51, radius=0.25cm];
-
-        % Label angles
-        \node at ($(A)!-0.25cm!(B)$) {A};
-        \node at ($(B)!-0.45cm!(C)!0.2cm!(A)$) {B};
-        \node at ($(C)!-0.25cm!(A)!-0.25cm!(B)$) {C};
-        \node at ($(D)!-0.25cm!(A)$) {D};
-
-        % Mark angles in degrees
-        \coordinate (midBC) at ($(B)!0.5!(C)$);
-        \node at ($(A)!0.70cm!(midBC)!0.10cm!(C)$) {$61^\circ$};
-
-        \coordinate (midAC) at ($(A)!0.5!(C)$);
-        \node at ($(B)!0.65cm!(midAC)$) {};
-
-        \coordinate (midAB) at ($(A)!0.5!(B)$);
-        \node at ($(C)!0.65cm!(midAB)$) {$68^\circ$};
-
-        \coordinate (midDC) at ($(D)!0.3!(C)$);
-        \node at ($(B)!0.65cm!(midDC)$) {$\theta^\circ$};
-
-
-      \end{scope}
-    \end{tikzpicture}
-\end{minipage}%
-\hfill
-\begin{minipage}{0.4\textwidth}
-  \begin{align*}
-    \angle \text{DBC} &= \angle \text{\dotuline{~~~~~~~}} + \angle \text{\dotuline{~~~~~~~}} \\
-    &= \dotuline{~~~~~~~}^\circ  + \dotuline{~~~~~~~}^\circ \\
-    &= \dotuline{~~~~~~~}^\circ
-  \end{align*}
-\end{minipage}
-\vspace{1cm} \vfill\begin{minipage}{0.55\textwidth}
-  \refstepcounter{minipagecount}
-  \noindent{(\theminipagecount)}\quad
-  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-
-      \begin{scope}[rotate=132]
-        \coordinate (A) at (0,0);
-        \coordinate (B) at (3.49681898167051,0);
-        \coordinate (D) at (4.4968189816705095,0);
-        \coordinate (C) at (intersection cs: first line={(A)--($(A)+(44:4cm)$)}, second line={(B)--($(B)+(180-46:4cm)$)});
-        \draw (A) -- (B) -- (C) -- cycle;
-        \draw (B) -- (D);
-
-        % Mark angles with arcs
-        \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=44, radius=0.3cm];
-        \draw ($(B)!0.3cm!(C)$) arc [start angle=180-46, end angle=180, radius=0.3cm];
-        \draw ($(C)!0.3cm!(A)$) arc [start angle=180+44, end angle=360-46, radius=0.3cm];
-        \draw ($(B)!0.25cm!(D)$) arc [start angle=0, end angle=180-46, radius=0.25cm];
-
-        % Label angles
-        \node at ($(A)!-0.25cm!(B)$) {A};
-        \node at ($(B)!-0.45cm!(C)!0.2cm!(A)$) {B};
-        \node at ($(C)!-0.25cm!(A)!-0.25cm!(B)$) {C};
-        \node at ($(D)!-0.25cm!(A)$) {D};
-
-        % Mark angles in degrees
-        \coordinate (midBC) at ($(B)!0.5!(C)$);
-        \node at ($(A)!0.70cm!(midBC)!0.10cm!(C)$) {$44^\circ$};
-
-        \coordinate (midAC) at ($(A)!0.5!(C)$);
-        \node at ($(B)!0.65cm!(midAC)$) {};
-
-        \coordinate (midAB) at ($(A)!0.5!(B)$);
-        \node at ($(C)!0.65cm!(midAB)$) {$\theta^\circ$};
-
-        \coordinate (midDC) at ($(D)!0.3!(C)$);
-        \node at ($(B)!0.65cm!(midDC)$) {$134^\circ$};
-
-
-      \end{scope}
-    \end{tikzpicture}
-\end{minipage}%
-\hfill
-\begin{minipage}{0.4\textwidth}
-  \begin{align*}
-    \angle \text{C} &= \angle \text{\dotuline{~~~~~~~}} - \angle \text{\dotuline{~~~~~~~}} \\
+    \angle \text{F} &= \angle \text{\dotuline{~~~~~~~}} - \angle \text{\dotuline{~~~~~~~}} \\
     &= \dotuline{~~~~~~~}^\circ  - \dotuline{~~~~~~~}^\circ \\
     &= \dotuline{~~~~~~~}^\circ
   \end{align*}
@@ -329,175 +329,75 @@
   \noindent{(\theminipagecount)}\quad
   \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
 
-      \begin{scope}[rotate=7]
+      \begin{scope}[rotate=306]
         \coordinate (A) at (0,0);
-        \coordinate (B) at (3.2734417615540288,0);
-        \coordinate (D) at (4.273441761554029,0);
-        \coordinate (C) at (intersection cs: first line={(A)--($(A)+(54:4cm)$)}, second line={(B)--($(B)+(180-41:4cm)$)});
+        \coordinate (B) at (3.626749494584979,0);
+        \coordinate (D) at (4.626749494584979,0);
+        \coordinate (C) at (intersection cs: first line={(A)--($(A)+(49:4cm)$)}, second line={(B)--($(B)+(180-65:4cm)$)});
         \draw (A) -- (B) -- (C) -- cycle;
         \draw (B) -- (D);
 
         % Mark angles with arcs
-        \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=54, radius=0.3cm];
-        \draw ($(B)!0.3cm!(C)$) arc [start angle=180-41, end angle=180, radius=0.3cm];
-        \draw ($(C)!0.3cm!(A)$) arc [start angle=180+54, end angle=360-41, radius=0.3cm];
-        \draw ($(B)!0.25cm!(D)$) arc [start angle=0, end angle=180-41, radius=0.25cm];
-
-        % Label angles
-        \node at ($(A)!-0.25cm!(B)$) {A};
-        \node at ($(B)!-0.45cm!(C)!0.2cm!(A)$) {B};
-        \node at ($(C)!-0.25cm!(A)!-0.25cm!(B)$) {C};
-        \node at ($(D)!-0.25cm!(A)$) {D};
-
-        % Mark angles in degrees
-        \coordinate (midBC) at ($(B)!0.5!(C)$);
-        \node at ($(A)!0.70cm!(midBC)!0.10cm!(C)$) {$\theta^\circ$};
-
-        \coordinate (midAC) at ($(A)!0.5!(C)$);
-        \node at ($(B)!0.65cm!(midAC)$) {};
-
-        \coordinate (midAB) at ($(A)!0.5!(B)$);
-        \node at ($(C)!0.65cm!(midAB)$) {$85^\circ$};
-
-        \coordinate (midDC) at ($(D)!0.3!(C)$);
-        \node at ($(B)!0.65cm!(midDC)$) {$139^\circ$};
-
-
-      \end{scope}
-    \end{tikzpicture}
-\end{minipage}%
-\hfill
-\begin{minipage}{0.4\textwidth}
-  \begin{align*}
-    \angle \text{A} &= \angle \text{\dotuline{~~~~~~~}} - \angle \text{\dotuline{~~~~~~~}} \\
-    &= \dotuline{~~~~~~~}^\circ  - \dotuline{~~~~~~~}^\circ \\
-    &= \dotuline{~~~~~~~}^\circ
-  \end{align*}
-\end{minipage}
-\vspace{1cm} \vfill\begin{minipage}{0.55\textwidth}
-  \refstepcounter{minipagecount}
-  \noindent{(\theminipagecount)}\quad
-  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-
-      \begin{scope}[rotate=329]
-        \coordinate (A) at (0,0);
-        \coordinate (B) at (3.336474770456516,0);
-        \coordinate (D) at (4.336474770456515,0);
-        \coordinate (C) at (intersection cs: first line={(A)--($(A)+(28:4cm)$)}, second line={(B)--($(B)+(180-36:4cm)$)});
-        \draw (A) -- (B) -- (C) -- cycle;
-        \draw (B) -- (D);
-
-        % Mark angles with arcs
-        \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=28, radius=0.3cm];
-        \draw ($(B)!0.3cm!(C)$) arc [start angle=180-36, end angle=180, radius=0.3cm];
-        \draw ($(C)!0.3cm!(A)$) arc [start angle=180+28, end angle=360-36, radius=0.3cm];
-        \draw ($(B)!0.25cm!(D)$) arc [start angle=0, end angle=180-36, radius=0.25cm];
-
-        % Label angles
-        \node at ($(A)!-0.25cm!(B)$) {A};
-        \node at ($(B)!-0.45cm!(C)!0.2cm!(A)$) {B};
-        \node at ($(C)!-0.25cm!(A)!-0.25cm!(B)$) {C};
-        \node at ($(D)!-0.25cm!(A)$) {D};
-
-        % Mark angles in degrees
-        \coordinate (midBC) at ($(B)!0.5!(C)$);
-        \node at ($(A)!0.70cm!(midBC)!0.10cm!(C)$) {$\theta^\circ$};
-
-        \coordinate (midAC) at ($(A)!0.5!(C)$);
-        \node at ($(B)!0.65cm!(midAC)$) {};
-
-        \coordinate (midAB) at ($(A)!0.5!(B)$);
-        \node at ($(C)!0.65cm!(midAB)$) {$116^\circ$};
-
-        \coordinate (midDC) at ($(D)!0.3!(C)$);
-        \node at ($(B)!0.65cm!(midDC)$) {$144^\circ$};
-
-
-      \end{scope}
-    \end{tikzpicture}
-\end{minipage}%
-\hfill
-\begin{minipage}{0.4\textwidth}
-  \begin{align*}
-    \angle \text{A} &= \angle \text{\dotuline{~~~~~~~}} - \angle \text{\dotuline{~~~~~~~}} \\
-    &= \dotuline{~~~~~~~}^\circ  - \dotuline{~~~~~~~}^\circ \\
-    &= \dotuline{~~~~~~~}^\circ
-  \end{align*}
-\end{minipage}
-\vspace{1cm} \vfill\pagebreak ~ \newline ~ \newline\begin{minipage}{0.55\textwidth}
-  \refstepcounter{minipagecount}
-  \noindent{(\theminipagecount)}\quad
-  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-
-      \begin{scope}[rotate=230]
-        \coordinate (A) at (0,0);
-        \coordinate (B) at (3.5912968313361686,0);
-        \coordinate (D) at (4.591296831336169,0);
-        \coordinate (C) at (intersection cs: first line={(A)--($(A)+(47:4cm)$)}, second line={(B)--($(B)+(180-49:4cm)$)});
-        \draw (A) -- (B) -- (C) -- cycle;
-        \draw (B) -- (D);
-
-        % Mark angles with arcs
-        \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=47, radius=0.3cm];
-        \draw ($(B)!0.3cm!(C)$) arc [start angle=180-49, end angle=180, radius=0.3cm];
-        \draw ($(C)!0.3cm!(A)$) arc [start angle=180+47, end angle=360-49, radius=0.3cm];
-        \draw ($(B)!0.25cm!(D)$) arc [start angle=0, end angle=180-49, radius=0.25cm];
-
-        % Label angles
-        \node at ($(A)!-0.25cm!(B)$) {A};
-        \node at ($(B)!-0.45cm!(C)!0.2cm!(A)$) {B};
-        \node at ($(C)!-0.25cm!(A)!-0.25cm!(B)$) {C};
-        \node at ($(D)!-0.25cm!(A)$) {D};
-
-        % Mark angles in degrees
-        \coordinate (midBC) at ($(B)!0.5!(C)$);
-        \node at ($(A)!0.70cm!(midBC)!0.10cm!(C)$) {$47^\circ$};
-
-        \coordinate (midAC) at ($(A)!0.5!(C)$);
-        \node at ($(B)!0.65cm!(midAC)$) {};
-
-        \coordinate (midAB) at ($(A)!0.5!(B)$);
-        \node at ($(C)!0.65cm!(midAB)$) {$\theta^\circ$};
-
-        \coordinate (midDC) at ($(D)!0.3!(C)$);
-        \node at ($(B)!0.65cm!(midDC)$) {$131^\circ$};
-
-
-      \end{scope}
-    \end{tikzpicture}
-\end{minipage}%
-\hfill
-\begin{minipage}{0.4\textwidth}
-  \begin{align*}
-    \angle \text{C} &= \angle \text{\dotuline{~~~~~~~}} - \angle \text{\dotuline{~~~~~~~}} \\
-    &= \dotuline{~~~~~~~}^\circ  - \dotuline{~~~~~~~}^\circ \\
-    &= \dotuline{~~~~~~~}^\circ
-  \end{align*}
-\end{minipage}
-\vspace{1cm} \vfill\begin{minipage}{0.55\textwidth}
-  \refstepcounter{minipagecount}
-  \noindent{(\theminipagecount)}\quad
-  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-
-      \begin{scope}[rotate=131]
-        \coordinate (A) at (0,0);
-        \coordinate (B) at (3.1893416476160423,0);
-        \coordinate (D) at (4.189341647616042,0);
-        \coordinate (C) at (intersection cs: first line={(A)--($(A)+(40:4cm)$)}, second line={(B)--($(B)+(180-65:4cm)$)});
-        \draw (A) -- (B) -- (C) -- cycle;
-        \draw (B) -- (D);
-
-        % Mark angles with arcs
-        \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=40, radius=0.3cm];
+        \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=49, radius=0.3cm];
         \draw ($(B)!0.3cm!(C)$) arc [start angle=180-65, end angle=180, radius=0.3cm];
-        \draw ($(C)!0.3cm!(A)$) arc [start angle=180+40, end angle=360-65, radius=0.3cm];
+        \draw ($(C)!0.3cm!(A)$) arc [start angle=180+49, end angle=360-65, radius=0.3cm];
         \draw ($(B)!0.25cm!(D)$) arc [start angle=0, end angle=180-65, radius=0.25cm];
 
         % Label angles
-        \node at ($(A)!-0.25cm!(B)$) {A};
-        \node at ($(B)!-0.45cm!(C)!0.2cm!(A)$) {B};
-        \node at ($(C)!-0.25cm!(A)!-0.25cm!(B)$) {C};
-        \node at ($(D)!-0.25cm!(A)$) {D};
+        \node at ($(A)!-0.25cm!(B)$) {F};
+        \node at ($(B)!-0.45cm!(C)!0.2cm!(A)$) {G};
+        \node at ($(C)!-0.25cm!(A)!-0.25cm!(B)$) {E};
+        \node at ($(D)!-0.25cm!(A)$) {H};
+
+        % Mark angles in degrees
+        \coordinate (midBC) at ($(B)!0.5!(C)$);
+        \node at ($(A)!0.70cm!(midBC)!0.10cm!(C)$) {$49^\circ$};
+
+        \coordinate (midAC) at ($(A)!0.5!(C)$);
+        \node at ($(B)!0.65cm!(midAC)$) {};
+
+        \coordinate (midAB) at ($(A)!0.5!(B)$);
+        \node at ($(C)!0.65cm!(midAB)$) {$66^\circ$};
+
+        \coordinate (midDC) at ($(D)!0.3!(C)$);
+        \node at ($(B)!0.65cm!(midDC)$) {$\theta^\circ$};
+
+
+      \end{scope}
+    \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.4\textwidth}
+  \begin{align*}
+    \angle \text{HGE} &= \angle \text{\dotuline{~~~~~~~}} + \angle \text{\dotuline{~~~~~~~}} \\
+    &= \dotuline{~~~~~~~}^\circ  + \dotuline{~~~~~~~}^\circ \\
+    &= \dotuline{~~~~~~~}^\circ
+  \end{align*}
+\end{minipage}
+\vspace{1cm} \vfill\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+
+      \begin{scope}[rotate=321]
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (3.279167519237965,0);
+        \coordinate (D) at (4.279167519237965,0);
+        \coordinate (C) at (intersection cs: first line={(A)--($(A)+(56:4cm)$)}, second line={(B)--($(B)+(180-40:4cm)$)});
+        \draw (A) -- (B) -- (C) -- cycle;
+        \draw (B) -- (D);
+
+        % Mark angles with arcs
+        \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=56, radius=0.3cm];
+        \draw ($(B)!0.3cm!(C)$) arc [start angle=180-40, end angle=180, radius=0.3cm];
+        \draw ($(C)!0.3cm!(A)$) arc [start angle=180+56, end angle=360-40, radius=0.3cm];
+        \draw ($(B)!0.25cm!(D)$) arc [start angle=0, end angle=180-40, radius=0.25cm];
+
+        % Label angles
+        \node at ($(A)!-0.25cm!(B)$) {R};
+        \node at ($(B)!-0.45cm!(C)!0.2cm!(A)$) {Q};
+        \node at ($(C)!-0.25cm!(A)!-0.25cm!(B)$) {S};
+        \node at ($(D)!-0.25cm!(A)$) {T};
 
         % Mark angles in degrees
         \coordinate (midBC) at ($(B)!0.5!(C)$);
@@ -507,10 +407,10 @@
         \node at ($(B)!0.65cm!(midAC)$) {};
 
         \coordinate (midAB) at ($(A)!0.5!(B)$);
-        \node at ($(C)!0.65cm!(midAB)$) {$75^\circ$};
+        \node at ($(C)!0.65cm!(midAB)$) {$84^\circ$};
 
         \coordinate (midDC) at ($(D)!0.3!(C)$);
-        \node at ($(B)!0.65cm!(midDC)$) {$115^\circ$};
+        \node at ($(B)!0.65cm!(midDC)$) {$140^\circ$};
 
 
       \end{scope}
@@ -519,107 +419,7 @@
 \hfill
 \begin{minipage}{0.4\textwidth}
   \begin{align*}
-    \angle \text{A} &= \angle \text{\dotuline{~~~~~~~}} - \angle \text{\dotuline{~~~~~~~}} \\
-    &= \dotuline{~~~~~~~}^\circ  - \dotuline{~~~~~~~}^\circ \\
-    &= \dotuline{~~~~~~~}^\circ
-  \end{align*}
-\end{minipage}
-\vspace{1cm} \vfill\begin{minipage}{0.55\textwidth}
-  \refstepcounter{minipagecount}
-  \noindent{(\theminipagecount)}\quad
-  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-
-      \begin{scope}[rotate=251]
-        \coordinate (A) at (0,0);
-        \coordinate (B) at (3.1433984368842633,0);
-        \coordinate (D) at (4.143398436884263,0);
-        \coordinate (C) at (intersection cs: first line={(A)--($(A)+(54:4cm)$)}, second line={(B)--($(B)+(180-31:4cm)$)});
-        \draw (A) -- (B) -- (C) -- cycle;
-        \draw (B) -- (D);
-
-        % Mark angles with arcs
-        \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=54, radius=0.3cm];
-        \draw ($(B)!0.3cm!(C)$) arc [start angle=180-31, end angle=180, radius=0.3cm];
-        \draw ($(C)!0.3cm!(A)$) arc [start angle=180+54, end angle=360-31, radius=0.3cm];
-        \draw ($(B)!0.25cm!(D)$) arc [start angle=0, end angle=180-31, radius=0.25cm];
-
-        % Label angles
-        \node at ($(A)!-0.25cm!(B)$) {A};
-        \node at ($(B)!-0.45cm!(C)!0.2cm!(A)$) {B};
-        \node at ($(C)!-0.25cm!(A)!-0.25cm!(B)$) {C};
-        \node at ($(D)!-0.25cm!(A)$) {D};
-
-        % Mark angles in degrees
-        \coordinate (midBC) at ($(B)!0.5!(C)$);
-        \node at ($(A)!0.70cm!(midBC)!0.10cm!(C)$) {$\theta^\circ$};
-
-        \coordinate (midAC) at ($(A)!0.5!(C)$);
-        \node at ($(B)!0.65cm!(midAC)$) {};
-
-        \coordinate (midAB) at ($(A)!0.5!(B)$);
-        \node at ($(C)!0.65cm!(midAB)$) {$95^\circ$};
-
-        \coordinate (midDC) at ($(D)!0.3!(C)$);
-        \node at ($(B)!0.65cm!(midDC)$) {$149^\circ$};
-
-
-      \end{scope}
-    \end{tikzpicture}
-\end{minipage}%
-\hfill
-\begin{minipage}{0.4\textwidth}
-  \begin{align*}
-    \angle \text{A} &= \angle \text{\dotuline{~~~~~~~}} - \angle \text{\dotuline{~~~~~~~}} \\
-    &= \dotuline{~~~~~~~}^\circ  - \dotuline{~~~~~~~}^\circ \\
-    &= \dotuline{~~~~~~~}^\circ
-  \end{align*}
-\end{minipage}
-\vspace{1cm} \vfill\begin{minipage}{0.55\textwidth}
-  \refstepcounter{minipagecount}
-  \noindent{(\theminipagecount)}\quad
-  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-
-      \begin{scope}[rotate=64]
-        \coordinate (A) at (0,0);
-        \coordinate (B) at (3.506499148502966,0);
-        \coordinate (D) at (4.506499148502966,0);
-        \coordinate (C) at (intersection cs: first line={(A)--($(A)+(36:4cm)$)}, second line={(B)--($(B)+(180-25:4cm)$)});
-        \draw (A) -- (B) -- (C) -- cycle;
-        \draw (B) -- (D);
-
-        % Mark angles with arcs
-        \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=36, radius=0.3cm];
-        \draw ($(B)!0.3cm!(C)$) arc [start angle=180-25, end angle=180, radius=0.3cm];
-        \draw ($(C)!0.3cm!(A)$) arc [start angle=180+36, end angle=360-25, radius=0.3cm];
-        \draw ($(B)!0.25cm!(D)$) arc [start angle=0, end angle=180-25, radius=0.25cm];
-
-        % Label angles
-        \node at ($(A)!-0.25cm!(B)$) {A};
-        \node at ($(B)!-0.45cm!(C)!0.2cm!(A)$) {B};
-        \node at ($(C)!-0.25cm!(A)!-0.25cm!(B)$) {C};
-        \node at ($(D)!-0.25cm!(A)$) {D};
-
-        % Mark angles in degrees
-        \coordinate (midBC) at ($(B)!0.5!(C)$);
-        \node at ($(A)!0.70cm!(midBC)!0.10cm!(C)$) {$36^\circ$};
-
-        \coordinate (midAC) at ($(A)!0.5!(C)$);
-        \node at ($(B)!0.65cm!(midAC)$) {};
-
-        \coordinate (midAB) at ($(A)!0.5!(B)$);
-        \node at ($(C)!0.65cm!(midAB)$) {$\theta^\circ$};
-
-        \coordinate (midDC) at ($(D)!0.3!(C)$);
-        \node at ($(B)!0.65cm!(midDC)$) {$155^\circ$};
-
-
-      \end{scope}
-    \end{tikzpicture}
-\end{minipage}%
-\hfill
-\begin{minipage}{0.4\textwidth}
-  \begin{align*}
-    \angle \text{C} &= \angle \text{\dotuline{~~~~~~~}} - \angle \text{\dotuline{~~~~~~~}} \\
+    \angle \text{R} &= \angle \text{\dotuline{~~~~~~~}} - \angle \text{\dotuline{~~~~~~~}} \\
     &= \dotuline{~~~~~~~}^\circ  - \dotuline{~~~~~~~}^\circ \\
     &= \dotuline{~~~~~~~}^\circ
   \end{align*}
@@ -629,35 +429,35 @@
   \noindent{(\theminipagecount)}\quad
   \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
 
-      \begin{scope}[rotate=121]
+      \begin{scope}[rotate=275]
         \coordinate (A) at (0,0);
-        \coordinate (B) at (3.5079339949307338,0);
-        \coordinate (D) at (4.507933994930734,0);
-        \coordinate (C) at (intersection cs: first line={(A)--($(A)+(43:4cm)$)}, second line={(B)--($(B)+(180-55:4cm)$)});
+        \coordinate (B) at (3.2056337864672098,0);
+        \coordinate (D) at (4.20563378646721,0);
+        \coordinate (C) at (intersection cs: first line={(A)--($(A)+(35:4cm)$)}, second line={(B)--($(B)+(180-65:4cm)$)});
         \draw (A) -- (B) -- (C) -- cycle;
         \draw (B) -- (D);
 
         % Mark angles with arcs
-        \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=43, radius=0.3cm];
-        \draw ($(B)!0.3cm!(C)$) arc [start angle=180-55, end angle=180, radius=0.3cm];
-        \draw ($(C)!0.3cm!(A)$) arc [start angle=180+43, end angle=360-55, radius=0.3cm];
-        \draw ($(B)!0.25cm!(D)$) arc [start angle=0, end angle=180-55, radius=0.25cm];
+        \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=35, radius=0.3cm];
+        \draw ($(B)!0.3cm!(C)$) arc [start angle=180-65, end angle=180, radius=0.3cm];
+        \draw ($(C)!0.3cm!(A)$) arc [start angle=180+35, end angle=360-65, radius=0.3cm];
+        \draw ($(B)!0.25cm!(D)$) arc [start angle=0, end angle=180-65, radius=0.25cm];
 
         % Label angles
-        \node at ($(A)!-0.25cm!(B)$) {A};
-        \node at ($(B)!-0.45cm!(C)!0.2cm!(A)$) {B};
-        \node at ($(C)!-0.25cm!(A)!-0.25cm!(B)$) {C};
-        \node at ($(D)!-0.25cm!(A)$) {D};
+        \node at ($(A)!-0.25cm!(B)$) {E};
+        \node at ($(B)!-0.45cm!(C)!0.2cm!(A)$) {G};
+        \node at ($(C)!-0.25cm!(A)!-0.25cm!(B)$) {F};
+        \node at ($(D)!-0.25cm!(A)$) {H};
 
         % Mark angles in degrees
         \coordinate (midBC) at ($(B)!0.5!(C)$);
-        \node at ($(A)!0.70cm!(midBC)!0.10cm!(C)$) {$43^\circ$};
+        \node at ($(A)!0.70cm!(midBC)!0.10cm!(C)$) {$35^\circ$};
 
         \coordinate (midAC) at ($(A)!0.5!(C)$);
         \node at ($(B)!0.65cm!(midAC)$) {};
 
         \coordinate (midAB) at ($(A)!0.5!(B)$);
-        \node at ($(C)!0.65cm!(midAB)$) {$82^\circ$};
+        \node at ($(C)!0.65cm!(midAB)$) {$80^\circ$};
 
         \coordinate (midDC) at ($(D)!0.3!(C)$);
         \node at ($(B)!0.65cm!(midDC)$) {$\theta^\circ$};
@@ -669,7 +469,7 @@
 \hfill
 \begin{minipage}{0.4\textwidth}
   \begin{align*}
-    \angle \text{DBC} &= \angle \text{\dotuline{~~~~~~~}} + \angle \text{\dotuline{~~~~~~~}} \\
+    \angle \text{HGF} &= \angle \text{\dotuline{~~~~~~~}} + \angle \text{\dotuline{~~~~~~~}} \\
     &= \dotuline{~~~~~~~}^\circ  + \dotuline{~~~~~~~}^\circ \\
     &= \dotuline{~~~~~~~}^\circ
   \end{align*}
@@ -679,179 +479,29 @@
   \noindent{(\theminipagecount)}\quad
   \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
 
-      \begin{scope}[rotate=187]
+      \begin{scope}[rotate=164]
         \coordinate (A) at (0,0);
-        \coordinate (B) at (3.9562286920063627,0);
-        \coordinate (D) at (4.956228692006363,0);
-        \coordinate (C) at (intersection cs: first line={(A)--($(A)+(39:4cm)$)}, second line={(B)--($(B)+(180-54:4cm)$)});
+        \coordinate (B) at (3.2867557632058517,0);
+        \coordinate (D) at (4.286755763205852,0);
+        \coordinate (C) at (intersection cs: first line={(A)--($(A)+(25:4cm)$)}, second line={(B)--($(B)+(180-61:4cm)$)});
         \draw (A) -- (B) -- (C) -- cycle;
         \draw (B) -- (D);
 
         % Mark angles with arcs
-        \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=39, radius=0.3cm];
-        \draw ($(B)!0.3cm!(C)$) arc [start angle=180-54, end angle=180, radius=0.3cm];
-        \draw ($(C)!0.3cm!(A)$) arc [start angle=180+39, end angle=360-54, radius=0.3cm];
-        \draw ($(B)!0.25cm!(D)$) arc [start angle=0, end angle=180-54, radius=0.25cm];
-
-        % Label angles
-        \node at ($(A)!-0.25cm!(B)$) {A};
-        \node at ($(B)!-0.45cm!(C)!0.2cm!(A)$) {B};
-        \node at ($(C)!-0.25cm!(A)!-0.25cm!(B)$) {C};
-        \node at ($(D)!-0.25cm!(A)$) {D};
-
-        % Mark angles in degrees
-        \coordinate (midBC) at ($(B)!0.5!(C)$);
-        \node at ($(A)!0.70cm!(midBC)!0.10cm!(C)$) {$39^\circ$};
-
-        \coordinate (midAC) at ($(A)!0.5!(C)$);
-        \node at ($(B)!0.65cm!(midAC)$) {};
-
-        \coordinate (midAB) at ($(A)!0.5!(B)$);
-        \node at ($(C)!0.65cm!(midAB)$) {$87^\circ$};
-
-        \coordinate (midDC) at ($(D)!0.3!(C)$);
-        \node at ($(B)!0.65cm!(midDC)$) {$\theta^\circ$};
-
-
-      \end{scope}
-    \end{tikzpicture}
-\end{minipage}%
-\hfill
-\begin{minipage}{0.4\textwidth}
-  \begin{align*}
-    \angle \text{DBC} &= \angle \text{\dotuline{~~~~~~~}} + \angle \text{\dotuline{~~~~~~~}} \\
-    &= \dotuline{~~~~~~~}^\circ  + \dotuline{~~~~~~~}^\circ \\
-    &= \dotuline{~~~~~~~}^\circ
-  \end{align*}
-\end{minipage}
-\vspace{1cm} \vfill\begin{minipage}{0.55\textwidth}
-  \refstepcounter{minipagecount}
-  \noindent{(\theminipagecount)}\quad
-  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-
-      \begin{scope}[rotate=163]
-        \coordinate (A) at (0,0);
-        \coordinate (B) at (3.8531373513610365,0);
-        \coordinate (D) at (4.8531373513610365,0);
-        \coordinate (C) at (intersection cs: first line={(A)--($(A)+(54:4cm)$)}, second line={(B)--($(B)+(180-39:4cm)$)});
-        \draw (A) -- (B) -- (C) -- cycle;
-        \draw (B) -- (D);
-
-        % Mark angles with arcs
-        \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=54, radius=0.3cm];
-        \draw ($(B)!0.3cm!(C)$) arc [start angle=180-39, end angle=180, radius=0.3cm];
-        \draw ($(C)!0.3cm!(A)$) arc [start angle=180+54, end angle=360-39, radius=0.3cm];
-        \draw ($(B)!0.25cm!(D)$) arc [start angle=0, end angle=180-39, radius=0.25cm];
-
-        % Label angles
-        \node at ($(A)!-0.25cm!(B)$) {A};
-        \node at ($(B)!-0.45cm!(C)!0.2cm!(A)$) {B};
-        \node at ($(C)!-0.25cm!(A)!-0.25cm!(B)$) {C};
-        \node at ($(D)!-0.25cm!(A)$) {D};
-
-        % Mark angles in degrees
-        \coordinate (midBC) at ($(B)!0.5!(C)$);
-        \node at ($(A)!0.70cm!(midBC)!0.10cm!(C)$) {$54^\circ$};
-
-        \coordinate (midAC) at ($(A)!0.5!(C)$);
-        \node at ($(B)!0.65cm!(midAC)$) {};
-
-        \coordinate (midAB) at ($(A)!0.5!(B)$);
-        \node at ($(C)!0.65cm!(midAB)$) {$87^\circ$};
-
-        \coordinate (midDC) at ($(D)!0.3!(C)$);
-        \node at ($(B)!0.65cm!(midDC)$) {$\theta^\circ$};
-
-
-      \end{scope}
-    \end{tikzpicture}
-\end{minipage}%
-\hfill
-\begin{minipage}{0.4\textwidth}
-  \begin{align*}
-    \angle \text{DBC} &= \angle \text{\dotuline{~~~~~~~}} + \angle \text{\dotuline{~~~~~~~}} \\
-    &= \dotuline{~~~~~~~}^\circ  + \dotuline{~~~~~~~}^\circ \\
-    &= \dotuline{~~~~~~~}^\circ
-  \end{align*}
-\end{minipage}
-\vspace{1cm} \vfill\begin{minipage}{0.55\textwidth}
-  \refstepcounter{minipagecount}
-  \noindent{(\theminipagecount)}\quad
-  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-
-      \begin{scope}[rotate=175]
-        \coordinate (A) at (0,0);
-        \coordinate (B) at (3.365326368370563,0);
-        \coordinate (D) at (4.365326368370563,0);
-        \coordinate (C) at (intersection cs: first line={(A)--($(A)+(36:4cm)$)}, second line={(B)--($(B)+(180-52:4cm)$)});
-        \draw (A) -- (B) -- (C) -- cycle;
-        \draw (B) -- (D);
-
-        % Mark angles with arcs
-        \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=36, radius=0.3cm];
-        \draw ($(B)!0.3cm!(C)$) arc [start angle=180-52, end angle=180, radius=0.3cm];
-        \draw ($(C)!0.3cm!(A)$) arc [start angle=180+36, end angle=360-52, radius=0.3cm];
-        \draw ($(B)!0.25cm!(D)$) arc [start angle=0, end angle=180-52, radius=0.25cm];
-
-        % Label angles
-        \node at ($(A)!-0.25cm!(B)$) {A};
-        \node at ($(B)!-0.45cm!(C)!0.2cm!(A)$) {B};
-        \node at ($(C)!-0.25cm!(A)!-0.25cm!(B)$) {C};
-        \node at ($(D)!-0.25cm!(A)$) {D};
-
-        % Mark angles in degrees
-        \coordinate (midBC) at ($(B)!0.5!(C)$);
-        \node at ($(A)!0.70cm!(midBC)!0.10cm!(C)$) {$\theta^\circ$};
-
-        \coordinate (midAC) at ($(A)!0.5!(C)$);
-        \node at ($(B)!0.65cm!(midAC)$) {};
-
-        \coordinate (midAB) at ($(A)!0.5!(B)$);
-        \node at ($(C)!0.65cm!(midAB)$) {$92^\circ$};
-
-        \coordinate (midDC) at ($(D)!0.3!(C)$);
-        \node at ($(B)!0.65cm!(midDC)$) {$128^\circ$};
-
-
-      \end{scope}
-    \end{tikzpicture}
-\end{minipage}%
-\hfill
-\begin{minipage}{0.4\textwidth}
-  \begin{align*}
-    \angle \text{A} &= \angle \text{\dotuline{~~~~~~~}} - \angle \text{\dotuline{~~~~~~~}} \\
-    &= \dotuline{~~~~~~~}^\circ  - \dotuline{~~~~~~~}^\circ \\
-    &= \dotuline{~~~~~~~}^\circ
-  \end{align*}
-\end{minipage}
-\vspace{1cm} \vfill\pagebreak ~ \newline ~ \newline\begin{minipage}{0.55\textwidth}
-  \refstepcounter{minipagecount}
-  \noindent{(\theminipagecount)}\quad
-  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-
-      \begin{scope}[rotate=255]
-        \coordinate (A) at (0,0);
-        \coordinate (B) at (3.996112485915069,0);
-        \coordinate (D) at (4.996112485915069,0);
-        \coordinate (C) at (intersection cs: first line={(A)--($(A)+(39:4cm)$)}, second line={(B)--($(B)+(180-61:4cm)$)});
-        \draw (A) -- (B) -- (C) -- cycle;
-        \draw (B) -- (D);
-
-        % Mark angles with arcs
-        \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=39, radius=0.3cm];
+        \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=25, radius=0.3cm];
         \draw ($(B)!0.3cm!(C)$) arc [start angle=180-61, end angle=180, radius=0.3cm];
-        \draw ($(C)!0.3cm!(A)$) arc [start angle=180+39, end angle=360-61, radius=0.3cm];
+        \draw ($(C)!0.3cm!(A)$) arc [start angle=180+25, end angle=360-61, radius=0.3cm];
         \draw ($(B)!0.25cm!(D)$) arc [start angle=0, end angle=180-61, radius=0.25cm];
 
         % Label angles
-        \node at ($(A)!-0.25cm!(B)$) {A};
-        \node at ($(B)!-0.45cm!(C)!0.2cm!(A)$) {B};
-        \node at ($(C)!-0.25cm!(A)!-0.25cm!(B)$) {C};
-        \node at ($(D)!-0.25cm!(A)$) {D};
+        \node at ($(A)!-0.25cm!(B)$) {Y};
+        \node at ($(B)!-0.45cm!(C)!0.2cm!(A)$) {X};
+        \node at ($(C)!-0.25cm!(A)!-0.25cm!(B)$) {Z};
+        \node at ($(D)!-0.25cm!(A)$) {W};
 
         % Mark angles in degrees
         \coordinate (midBC) at ($(B)!0.5!(C)$);
-        \node at ($(A)!0.70cm!(midBC)!0.10cm!(C)$) {$39^\circ$};
+        \node at ($(A)!0.70cm!(midBC)!0.10cm!(C)$) {$25^\circ$};
 
         \coordinate (midAC) at ($(A)!0.5!(C)$);
         \node at ($(B)!0.65cm!(midAC)$) {};
@@ -869,7 +519,7 @@
 \hfill
 \begin{minipage}{0.4\textwidth}
   \begin{align*}
-    \angle \text{C} &= \angle \text{\dotuline{~~~~~~~}} - \angle \text{\dotuline{~~~~~~~}} \\
+    \angle \text{Z} &= \angle \text{\dotuline{~~~~~~~}} - \angle \text{\dotuline{~~~~~~~}} \\
     &= \dotuline{~~~~~~~}^\circ  - \dotuline{~~~~~~~}^\circ \\
     &= \dotuline{~~~~~~~}^\circ
   \end{align*}
@@ -879,24 +529,324 @@
   \noindent{(\theminipagecount)}\quad
   \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
 
-      \begin{scope}[rotate=234]
+      \begin{scope}[rotate=81]
         \coordinate (A) at (0,0);
-        \coordinate (B) at (3.7572385892626583,0);
-        \coordinate (D) at (4.757238589262658,0);
-        \coordinate (C) at (intersection cs: first line={(A)--($(A)+(42:4cm)$)}, second line={(B)--($(B)+(180-39:4cm)$)});
+        \coordinate (B) at (3.3605047994624293,0);
+        \coordinate (D) at (4.360504799462429,0);
+        \coordinate (C) at (intersection cs: first line={(A)--($(A)+(64:4cm)$)}, second line={(B)--($(B)+(180-56:4cm)$)});
         \draw (A) -- (B) -- (C) -- cycle;
         \draw (B) -- (D);
 
         % Mark angles with arcs
-        \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=42, radius=0.3cm];
-        \draw ($(B)!0.3cm!(C)$) arc [start angle=180-39, end angle=180, radius=0.3cm];
-        \draw ($(C)!0.3cm!(A)$) arc [start angle=180+42, end angle=360-39, radius=0.3cm];
-        \draw ($(B)!0.25cm!(D)$) arc [start angle=0, end angle=180-39, radius=0.25cm];
+        \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=64, radius=0.3cm];
+        \draw ($(B)!0.3cm!(C)$) arc [start angle=180-56, end angle=180, radius=0.3cm];
+        \draw ($(C)!0.3cm!(A)$) arc [start angle=180+64, end angle=360-56, radius=0.3cm];
+        \draw ($(B)!0.25cm!(D)$) arc [start angle=0, end angle=180-56, radius=0.25cm];
+
+        % Label angles
+        \node at ($(A)!-0.25cm!(B)$) {G};
+        \node at ($(B)!-0.45cm!(C)!0.2cm!(A)$) {F};
+        \node at ($(C)!-0.25cm!(A)!-0.25cm!(B)$) {E};
+        \node at ($(D)!-0.25cm!(A)$) {H};
+
+        % Mark angles in degrees
+        \coordinate (midBC) at ($(B)!0.5!(C)$);
+        \node at ($(A)!0.70cm!(midBC)!0.10cm!(C)$) {$64^\circ$};
+
+        \coordinate (midAC) at ($(A)!0.5!(C)$);
+        \node at ($(B)!0.65cm!(midAC)$) {};
+
+        \coordinate (midAB) at ($(A)!0.5!(B)$);
+        \node at ($(C)!0.65cm!(midAB)$) {$\theta^\circ$};
+
+        \coordinate (midDC) at ($(D)!0.3!(C)$);
+        \node at ($(B)!0.65cm!(midDC)$) {$124^\circ$};
+
+
+      \end{scope}
+    \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.4\textwidth}
+  \begin{align*}
+    \angle \text{E} &= \angle \text{\dotuline{~~~~~~~}} - \angle \text{\dotuline{~~~~~~~}} \\
+    &= \dotuline{~~~~~~~}^\circ  - \dotuline{~~~~~~~}^\circ \\
+    &= \dotuline{~~~~~~~}^\circ
+  \end{align*}
+\end{minipage}
+\vspace{1cm} \vfill\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+
+      \begin{scope}[rotate=253]
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (3.2451566895853086,0);
+        \coordinate (D) at (4.245156689585309,0);
+        \coordinate (C) at (intersection cs: first line={(A)--($(A)+(28:4cm)$)}, second line={(B)--($(B)+(180-45:4cm)$)});
+        \draw (A) -- (B) -- (C) -- cycle;
+        \draw (B) -- (D);
+
+        % Mark angles with arcs
+        \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=28, radius=0.3cm];
+        \draw ($(B)!0.3cm!(C)$) arc [start angle=180-45, end angle=180, radius=0.3cm];
+        \draw ($(C)!0.3cm!(A)$) arc [start angle=180+28, end angle=360-45, radius=0.3cm];
+        \draw ($(B)!0.25cm!(D)$) arc [start angle=0, end angle=180-45, radius=0.25cm];
+
+        % Label angles
+        \node at ($(A)!-0.25cm!(B)$) {Y};
+        \node at ($(B)!-0.45cm!(C)!0.2cm!(A)$) {Z};
+        \node at ($(C)!-0.25cm!(A)!-0.25cm!(B)$) {X};
+        \node at ($(D)!-0.25cm!(A)$) {W};
+
+        % Mark angles in degrees
+        \coordinate (midBC) at ($(B)!0.5!(C)$);
+        \node at ($(A)!0.70cm!(midBC)!0.10cm!(C)$) {$28^\circ$};
+
+        \coordinate (midAC) at ($(A)!0.5!(C)$);
+        \node at ($(B)!0.65cm!(midAC)$) {};
+
+        \coordinate (midAB) at ($(A)!0.5!(B)$);
+        \node at ($(C)!0.65cm!(midAB)$) {$\theta^\circ$};
+
+        \coordinate (midDC) at ($(D)!0.3!(C)$);
+        \node at ($(B)!0.65cm!(midDC)$) {$135^\circ$};
+
+
+      \end{scope}
+    \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.4\textwidth}
+  \begin{align*}
+    \angle \text{X} &= \angle \text{\dotuline{~~~~~~~}} - \angle \text{\dotuline{~~~~~~~}} \\
+    &= \dotuline{~~~~~~~}^\circ  - \dotuline{~~~~~~~}^\circ \\
+    &= \dotuline{~~~~~~~}^\circ
+  \end{align*}
+\end{minipage}
+\vspace{1cm} \vfill\pagebreak ~ \newline ~ \newline\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+
+      \begin{scope}[rotate=186]
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (3.254593875379487,0);
+        \coordinate (D) at (4.254593875379487,0);
+        \coordinate (C) at (intersection cs: first line={(A)--($(A)+(28:4cm)$)}, second line={(B)--($(B)+(180-43:4cm)$)});
+        \draw (A) -- (B) -- (C) -- cycle;
+        \draw (B) -- (D);
+
+        % Mark angles with arcs
+        \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=28, radius=0.3cm];
+        \draw ($(B)!0.3cm!(C)$) arc [start angle=180-43, end angle=180, radius=0.3cm];
+        \draw ($(C)!0.3cm!(A)$) arc [start angle=180+28, end angle=360-43, radius=0.3cm];
+        \draw ($(B)!0.25cm!(D)$) arc [start angle=0, end angle=180-43, radius=0.25cm];
 
         % Label angles
         \node at ($(A)!-0.25cm!(B)$) {A};
         \node at ($(B)!-0.45cm!(C)!0.2cm!(A)$) {B};
         \node at ($(C)!-0.25cm!(A)!-0.25cm!(B)$) {C};
+        \node at ($(D)!-0.25cm!(A)$) {D};
+
+        % Mark angles in degrees
+        \coordinate (midBC) at ($(B)!0.5!(C)$);
+        \node at ($(A)!0.70cm!(midBC)!0.10cm!(C)$) {$28^\circ$};
+
+        \coordinate (midAC) at ($(A)!0.5!(C)$);
+        \node at ($(B)!0.65cm!(midAC)$) {};
+
+        \coordinate (midAB) at ($(A)!0.5!(B)$);
+        \node at ($(C)!0.65cm!(midAB)$) {$109^\circ$};
+
+        \coordinate (midDC) at ($(D)!0.3!(C)$);
+        \node at ($(B)!0.65cm!(midDC)$) {$\theta^\circ$};
+
+
+      \end{scope}
+    \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.4\textwidth}
+  \begin{align*}
+    \angle \text{DBC} &= \angle \text{\dotuline{~~~~~~~}} + \angle \text{\dotuline{~~~~~~~}} \\
+    &= \dotuline{~~~~~~~}^\circ  + \dotuline{~~~~~~~}^\circ \\
+    &= \dotuline{~~~~~~~}^\circ
+  \end{align*}
+\end{minipage}
+\vspace{1cm} \vfill\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+
+      \begin{scope}[rotate=242]
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (3.1417225776930238,0);
+        \coordinate (D) at (4.141722577693024,0);
+        \coordinate (C) at (intersection cs: first line={(A)--($(A)+(44:4cm)$)}, second line={(B)--($(B)+(180-62:4cm)$)});
+        \draw (A) -- (B) -- (C) -- cycle;
+        \draw (B) -- (D);
+
+        % Mark angles with arcs
+        \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=44, radius=0.3cm];
+        \draw ($(B)!0.3cm!(C)$) arc [start angle=180-62, end angle=180, radius=0.3cm];
+        \draw ($(C)!0.3cm!(A)$) arc [start angle=180+44, end angle=360-62, radius=0.3cm];
+        \draw ($(B)!0.25cm!(D)$) arc [start angle=0, end angle=180-62, radius=0.25cm];
+
+        % Label angles
+        \node at ($(A)!-0.25cm!(B)$) {E};
+        \node at ($(B)!-0.45cm!(C)!0.2cm!(A)$) {G};
+        \node at ($(C)!-0.25cm!(A)!-0.25cm!(B)$) {F};
+        \node at ($(D)!-0.25cm!(A)$) {H};
+
+        % Mark angles in degrees
+        \coordinate (midBC) at ($(B)!0.5!(C)$);
+        \node at ($(A)!0.70cm!(midBC)!0.10cm!(C)$) {$44^\circ$};
+
+        \coordinate (midAC) at ($(A)!0.5!(C)$);
+        \node at ($(B)!0.65cm!(midAC)$) {};
+
+        \coordinate (midAB) at ($(A)!0.5!(B)$);
+        \node at ($(C)!0.65cm!(midAB)$) {$74^\circ$};
+
+        \coordinate (midDC) at ($(D)!0.3!(C)$);
+        \node at ($(B)!0.65cm!(midDC)$) {$\theta^\circ$};
+
+
+      \end{scope}
+    \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.4\textwidth}
+  \begin{align*}
+    \angle \text{HGF} &= \angle \text{\dotuline{~~~~~~~}} + \angle \text{\dotuline{~~~~~~~}} \\
+    &= \dotuline{~~~~~~~}^\circ  + \dotuline{~~~~~~~}^\circ \\
+    &= \dotuline{~~~~~~~}^\circ
+  \end{align*}
+\end{minipage}
+\vspace{1cm} \vfill\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+
+      \begin{scope}[rotate=177]
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (3.933686667856967,0);
+        \coordinate (D) at (4.933686667856967,0);
+        \coordinate (C) at (intersection cs: first line={(A)--($(A)+(51:4cm)$)}, second line={(B)--($(B)+(180-59:4cm)$)});
+        \draw (A) -- (B) -- (C) -- cycle;
+        \draw (B) -- (D);
+
+        % Mark angles with arcs
+        \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=51, radius=0.3cm];
+        \draw ($(B)!0.3cm!(C)$) arc [start angle=180-59, end angle=180, radius=0.3cm];
+        \draw ($(C)!0.3cm!(A)$) arc [start angle=180+51, end angle=360-59, radius=0.3cm];
+        \draw ($(B)!0.25cm!(D)$) arc [start angle=0, end angle=180-59, radius=0.25cm];
+
+        % Label angles
+        \node at ($(A)!-0.25cm!(B)$) {E};
+        \node at ($(B)!-0.45cm!(C)!0.2cm!(A)$) {F};
+        \node at ($(C)!-0.25cm!(A)!-0.25cm!(B)$) {G};
+        \node at ($(D)!-0.25cm!(A)$) {H};
+
+        % Mark angles in degrees
+        \coordinate (midBC) at ($(B)!0.5!(C)$);
+        \node at ($(A)!0.70cm!(midBC)!0.10cm!(C)$) {$51^\circ$};
+
+        \coordinate (midAC) at ($(A)!0.5!(C)$);
+        \node at ($(B)!0.65cm!(midAC)$) {};
+
+        \coordinate (midAB) at ($(A)!0.5!(B)$);
+        \node at ($(C)!0.65cm!(midAB)$) {$70^\circ$};
+
+        \coordinate (midDC) at ($(D)!0.3!(C)$);
+        \node at ($(B)!0.65cm!(midDC)$) {$\theta^\circ$};
+
+
+      \end{scope}
+    \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.4\textwidth}
+  \begin{align*}
+    \angle \text{HFG} &= \angle \text{\dotuline{~~~~~~~}} + \angle \text{\dotuline{~~~~~~~}} \\
+    &= \dotuline{~~~~~~~}^\circ  + \dotuline{~~~~~~~}^\circ \\
+    &= \dotuline{~~~~~~~}^\circ
+  \end{align*}
+\end{minipage}
+\vspace{1cm} \vfill\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+
+      \begin{scope}[rotate=252]
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (3.0750475049344095,0);
+        \coordinate (D) at (4.0750475049344095,0);
+        \coordinate (C) at (intersection cs: first line={(A)--($(A)+(33:4cm)$)}, second line={(B)--($(B)+(180-62:4cm)$)});
+        \draw (A) -- (B) -- (C) -- cycle;
+        \draw (B) -- (D);
+
+        % Mark angles with arcs
+        \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=33, radius=0.3cm];
+        \draw ($(B)!0.3cm!(C)$) arc [start angle=180-62, end angle=180, radius=0.3cm];
+        \draw ($(C)!0.3cm!(A)$) arc [start angle=180+33, end angle=360-62, radius=0.3cm];
+        \draw ($(B)!0.25cm!(D)$) arc [start angle=0, end angle=180-62, radius=0.25cm];
+
+        % Label angles
+        \node at ($(A)!-0.25cm!(B)$) {L};
+        \node at ($(B)!-0.45cm!(C)!0.2cm!(A)$) {J};
+        \node at ($(C)!-0.25cm!(A)!-0.25cm!(B)$) {K};
+        \node at ($(D)!-0.25cm!(A)$) {M};
+
+        % Mark angles in degrees
+        \coordinate (midBC) at ($(B)!0.5!(C)$);
+        \node at ($(A)!0.70cm!(midBC)!0.10cm!(C)$) {$\theta^\circ$};
+
+        \coordinate (midAC) at ($(A)!0.5!(C)$);
+        \node at ($(B)!0.65cm!(midAC)$) {};
+
+        \coordinate (midAB) at ($(A)!0.5!(B)$);
+        \node at ($(C)!0.65cm!(midAB)$) {$85^\circ$};
+
+        \coordinate (midDC) at ($(D)!0.3!(C)$);
+        \node at ($(B)!0.65cm!(midDC)$) {$118^\circ$};
+
+
+      \end{scope}
+    \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.4\textwidth}
+  \begin{align*}
+    \angle \text{L} &= \angle \text{\dotuline{~~~~~~~}} - \angle \text{\dotuline{~~~~~~~}} \\
+    &= \dotuline{~~~~~~~}^\circ  - \dotuline{~~~~~~~}^\circ \\
+    &= \dotuline{~~~~~~~}^\circ
+  \end{align*}
+\end{minipage}
+\vspace{1cm} \vfill\pagebreak ~ \newline ~ \newline\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+
+      \begin{scope}[rotate=125]
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (3.488914166811965,0);
+        \coordinate (D) at (4.4889141668119645,0);
+        \coordinate (C) at (intersection cs: first line={(A)--($(A)+(42:4cm)$)}, second line={(B)--($(B)+(180-37:4cm)$)});
+        \draw (A) -- (B) -- (C) -- cycle;
+        \draw (B) -- (D);
+
+        % Mark angles with arcs
+        \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=42, radius=0.3cm];
+        \draw ($(B)!0.3cm!(C)$) arc [start angle=180-37, end angle=180, radius=0.3cm];
+        \draw ($(C)!0.3cm!(A)$) arc [start angle=180+42, end angle=360-37, radius=0.3cm];
+        \draw ($(B)!0.25cm!(D)$) arc [start angle=0, end angle=180-37, radius=0.25cm];
+
+        % Label angles
+        \node at ($(A)!-0.25cm!(B)$) {B};
+        \node at ($(B)!-0.45cm!(C)!0.2cm!(A)$) {C};
+        \node at ($(C)!-0.25cm!(A)!-0.25cm!(B)$) {A};
         \node at ($(D)!-0.25cm!(A)$) {D};
 
         % Mark angles in degrees
@@ -910,107 +860,7 @@
         \node at ($(C)!0.65cm!(midAB)$) {$\theta^\circ$};
 
         \coordinate (midDC) at ($(D)!0.3!(C)$);
-        \node at ($(B)!0.65cm!(midDC)$) {$141^\circ$};
-
-
-      \end{scope}
-    \end{tikzpicture}
-\end{minipage}%
-\hfill
-\begin{minipage}{0.4\textwidth}
-  \begin{align*}
-    \angle \text{C} &= \angle \text{\dotuline{~~~~~~~}} - \angle \text{\dotuline{~~~~~~~}} \\
-    &= \dotuline{~~~~~~~}^\circ  - \dotuline{~~~~~~~}^\circ \\
-    &= \dotuline{~~~~~~~}^\circ
-  \end{align*}
-\end{minipage}
-\vspace{1cm} \vfill\begin{minipage}{0.55\textwidth}
-  \refstepcounter{minipagecount}
-  \noindent{(\theminipagecount)}\quad
-  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-
-      \begin{scope}[rotate=135]
-        \coordinate (A) at (0,0);
-        \coordinate (B) at (3.175177503439901,0);
-        \coordinate (D) at (4.175177503439901,0);
-        \coordinate (C) at (intersection cs: first line={(A)--($(A)+(40:4cm)$)}, second line={(B)--($(B)+(180-32:4cm)$)});
-        \draw (A) -- (B) -- (C) -- cycle;
-        \draw (B) -- (D);
-
-        % Mark angles with arcs
-        \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=40, radius=0.3cm];
-        \draw ($(B)!0.3cm!(C)$) arc [start angle=180-32, end angle=180, radius=0.3cm];
-        \draw ($(C)!0.3cm!(A)$) arc [start angle=180+40, end angle=360-32, radius=0.3cm];
-        \draw ($(B)!0.25cm!(D)$) arc [start angle=0, end angle=180-32, radius=0.25cm];
-
-        % Label angles
-        \node at ($(A)!-0.25cm!(B)$) {A};
-        \node at ($(B)!-0.45cm!(C)!0.2cm!(A)$) {B};
-        \node at ($(C)!-0.25cm!(A)!-0.25cm!(B)$) {C};
-        \node at ($(D)!-0.25cm!(A)$) {D};
-
-        % Mark angles in degrees
-        \coordinate (midBC) at ($(B)!0.5!(C)$);
-        \node at ($(A)!0.70cm!(midBC)!0.10cm!(C)$) {$40^\circ$};
-
-        \coordinate (midAC) at ($(A)!0.5!(C)$);
-        \node at ($(B)!0.65cm!(midAC)$) {};
-
-        \coordinate (midAB) at ($(A)!0.5!(B)$);
-        \node at ($(C)!0.65cm!(midAB)$) {$\theta^\circ$};
-
-        \coordinate (midDC) at ($(D)!0.3!(C)$);
-        \node at ($(B)!0.65cm!(midDC)$) {$148^\circ$};
-
-
-      \end{scope}
-    \end{tikzpicture}
-\end{minipage}%
-\hfill
-\begin{minipage}{0.4\textwidth}
-  \begin{align*}
-    \angle \text{C} &= \angle \text{\dotuline{~~~~~~~}} - \angle \text{\dotuline{~~~~~~~}} \\
-    &= \dotuline{~~~~~~~}^\circ  - \dotuline{~~~~~~~}^\circ \\
-    &= \dotuline{~~~~~~~}^\circ
-  \end{align*}
-\end{minipage}
-\vspace{1cm} \vfill\begin{minipage}{0.55\textwidth}
-  \refstepcounter{minipagecount}
-  \noindent{(\theminipagecount)}\quad
-  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-
-      \begin{scope}[rotate=82]
-        \coordinate (A) at (0,0);
-        \coordinate (B) at (3.4943098487047615,0);
-        \coordinate (D) at (4.494309848704761,0);
-        \coordinate (C) at (intersection cs: first line={(A)--($(A)+(47:4cm)$)}, second line={(B)--($(B)+(180-25:4cm)$)});
-        \draw (A) -- (B) -- (C) -- cycle;
-        \draw (B) -- (D);
-
-        % Mark angles with arcs
-        \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=47, radius=0.3cm];
-        \draw ($(B)!0.3cm!(C)$) arc [start angle=180-25, end angle=180, radius=0.3cm];
-        \draw ($(C)!0.3cm!(A)$) arc [start angle=180+47, end angle=360-25, radius=0.3cm];
-        \draw ($(B)!0.25cm!(D)$) arc [start angle=0, end angle=180-25, radius=0.25cm];
-
-        % Label angles
-        \node at ($(A)!-0.25cm!(B)$) {A};
-        \node at ($(B)!-0.45cm!(C)!0.2cm!(A)$) {B};
-        \node at ($(C)!-0.25cm!(A)!-0.25cm!(B)$) {C};
-        \node at ($(D)!-0.25cm!(A)$) {D};
-
-        % Mark angles in degrees
-        \coordinate (midBC) at ($(B)!0.5!(C)$);
-        \node at ($(A)!0.70cm!(midBC)!0.10cm!(C)$) {$\theta^\circ$};
-
-        \coordinate (midAC) at ($(A)!0.5!(C)$);
-        \node at ($(B)!0.65cm!(midAC)$) {};
-
-        \coordinate (midAB) at ($(A)!0.5!(B)$);
-        \node at ($(C)!0.65cm!(midAB)$) {$108^\circ$};
-
-        \coordinate (midDC) at ($(D)!0.3!(C)$);
-        \node at ($(B)!0.65cm!(midDC)$) {$155^\circ$};
+        \node at ($(B)!0.65cm!(midDC)$) {$143^\circ$};
 
 
       \end{scope}
@@ -1020,6 +870,156 @@
 \begin{minipage}{0.4\textwidth}
   \begin{align*}
     \angle \text{A} &= \angle \text{\dotuline{~~~~~~~}} - \angle \text{\dotuline{~~~~~~~}} \\
+    &= \dotuline{~~~~~~~}^\circ  - \dotuline{~~~~~~~}^\circ \\
+    &= \dotuline{~~~~~~~}^\circ
+  \end{align*}
+\end{minipage}
+\vspace{1cm} \vfill\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+
+      \begin{scope}[rotate=355]
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (3.339240762027264,0);
+        \coordinate (D) at (4.339240762027265,0);
+        \coordinate (C) at (intersection cs: first line={(A)--($(A)+(55:4cm)$)}, second line={(B)--($(B)+(180-37:4cm)$)});
+        \draw (A) -- (B) -- (C) -- cycle;
+        \draw (B) -- (D);
+
+        % Mark angles with arcs
+        \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=55, radius=0.3cm];
+        \draw ($(B)!0.3cm!(C)$) arc [start angle=180-37, end angle=180, radius=0.3cm];
+        \draw ($(C)!0.3cm!(A)$) arc [start angle=180+55, end angle=360-37, radius=0.3cm];
+        \draw ($(B)!0.25cm!(D)$) arc [start angle=0, end angle=180-37, radius=0.25cm];
+
+        % Label angles
+        \node at ($(A)!-0.25cm!(B)$) {R};
+        \node at ($(B)!-0.45cm!(C)!0.2cm!(A)$) {S};
+        \node at ($(C)!-0.25cm!(A)!-0.25cm!(B)$) {Q};
+        \node at ($(D)!-0.25cm!(A)$) {T};
+
+        % Mark angles in degrees
+        \coordinate (midBC) at ($(B)!0.5!(C)$);
+        \node at ($(A)!0.70cm!(midBC)!0.10cm!(C)$) {$55^\circ$};
+
+        \coordinate (midAC) at ($(A)!0.5!(C)$);
+        \node at ($(B)!0.65cm!(midAC)$) {};
+
+        \coordinate (midAB) at ($(A)!0.5!(B)$);
+        \node at ($(C)!0.65cm!(midAB)$) {$88^\circ$};
+
+        \coordinate (midDC) at ($(D)!0.3!(C)$);
+        \node at ($(B)!0.65cm!(midDC)$) {$\theta^\circ$};
+
+
+      \end{scope}
+    \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.4\textwidth}
+  \begin{align*}
+    \angle \text{TSQ} &= \angle \text{\dotuline{~~~~~~~}} + \angle \text{\dotuline{~~~~~~~}} \\
+    &= \dotuline{~~~~~~~}^\circ  + \dotuline{~~~~~~~}^\circ \\
+    &= \dotuline{~~~~~~~}^\circ
+  \end{align*}
+\end{minipage}
+\vspace{1cm} \vfill\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+
+      \begin{scope}[rotate=57]
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (3.126090187879801,0);
+        \coordinate (D) at (4.126090187879801,0);
+        \coordinate (C) at (intersection cs: first line={(A)--($(A)+(40:4cm)$)}, second line={(B)--($(B)+(180-64:4cm)$)});
+        \draw (A) -- (B) -- (C) -- cycle;
+        \draw (B) -- (D);
+
+        % Mark angles with arcs
+        \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=40, radius=0.3cm];
+        \draw ($(B)!0.3cm!(C)$) arc [start angle=180-64, end angle=180, radius=0.3cm];
+        \draw ($(C)!0.3cm!(A)$) arc [start angle=180+40, end angle=360-64, radius=0.3cm];
+        \draw ($(B)!0.25cm!(D)$) arc [start angle=0, end angle=180-64, radius=0.25cm];
+
+        % Label angles
+        \node at ($(A)!-0.25cm!(B)$) {K};
+        \node at ($(B)!-0.45cm!(C)!0.2cm!(A)$) {J};
+        \node at ($(C)!-0.25cm!(A)!-0.25cm!(B)$) {L};
+        \node at ($(D)!-0.25cm!(A)$) {M};
+
+        % Mark angles in degrees
+        \coordinate (midBC) at ($(B)!0.5!(C)$);
+        \node at ($(A)!0.70cm!(midBC)!0.10cm!(C)$) {$\theta^\circ$};
+
+        \coordinate (midAC) at ($(A)!0.5!(C)$);
+        \node at ($(B)!0.65cm!(midAC)$) {};
+
+        \coordinate (midAB) at ($(A)!0.5!(B)$);
+        \node at ($(C)!0.65cm!(midAB)$) {$76^\circ$};
+
+        \coordinate (midDC) at ($(D)!0.3!(C)$);
+        \node at ($(B)!0.65cm!(midDC)$) {$116^\circ$};
+
+
+      \end{scope}
+    \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.4\textwidth}
+  \begin{align*}
+    \angle \text{K} &= \angle \text{\dotuline{~~~~~~~}} - \angle \text{\dotuline{~~~~~~~}} \\
+    &= \dotuline{~~~~~~~}^\circ  - \dotuline{~~~~~~~}^\circ \\
+    &= \dotuline{~~~~~~~}^\circ
+  \end{align*}
+\end{minipage}
+\vspace{1cm} \vfill\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+
+      \begin{scope}[rotate=29]
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (3.1874698343428696,0);
+        \coordinate (D) at (4.18746983434287,0);
+        \coordinate (C) at (intersection cs: first line={(A)--($(A)+(62:4cm)$)}, second line={(B)--($(B)+(180-29:4cm)$)});
+        \draw (A) -- (B) -- (C) -- cycle;
+        \draw (B) -- (D);
+
+        % Mark angles with arcs
+        \draw ($(A)!0.3cm!(B)$) arc [start angle=0, end angle=62, radius=0.3cm];
+        \draw ($(B)!0.3cm!(C)$) arc [start angle=180-29, end angle=180, radius=0.3cm];
+        \draw ($(C)!0.3cm!(A)$) arc [start angle=180+62, end angle=360-29, radius=0.3cm];
+        \draw ($(B)!0.25cm!(D)$) arc [start angle=0, end angle=180-29, radius=0.25cm];
+
+        % Label angles
+        \node at ($(A)!-0.25cm!(B)$) {R};
+        \node at ($(B)!-0.45cm!(C)!0.2cm!(A)$) {Q};
+        \node at ($(C)!-0.25cm!(A)!-0.25cm!(B)$) {S};
+        \node at ($(D)!-0.25cm!(A)$) {T};
+
+        % Mark angles in degrees
+        \coordinate (midBC) at ($(B)!0.5!(C)$);
+        \node at ($(A)!0.70cm!(midBC)!0.10cm!(C)$) {$\theta^\circ$};
+
+        \coordinate (midAC) at ($(A)!0.5!(C)$);
+        \node at ($(B)!0.65cm!(midAC)$) {};
+
+        \coordinate (midAB) at ($(A)!0.5!(B)$);
+        \node at ($(C)!0.65cm!(midAB)$) {$89^\circ$};
+
+        \coordinate (midDC) at ($(D)!0.3!(C)$);
+        \node at ($(B)!0.65cm!(midDC)$) {$151^\circ$};
+
+
+      \end{scope}
+    \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.4\textwidth}
+  \begin{align*}
+    \angle \text{R} &= \angle \text{\dotuline{~~~~~~~}} - \angle \text{\dotuline{~~~~~~~}} \\
     &= \dotuline{~~~~~~~}^\circ  - \dotuline{~~~~~~~}^\circ \\
     &= \dotuline{~~~~~~~}^\circ
   \end{align*}
