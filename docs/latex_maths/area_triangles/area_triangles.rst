@@ -1,5 +1,5 @@
 ====================================================
-Area of triangles
+Area of Triangles
 ====================================================
 
 | The diagrams below show a triangle with the area to be calculated. The triangle can be right, acute or obtuse.

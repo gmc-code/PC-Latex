@@ -122,12 +122,12 @@ PC-latex
 
     latex_maths/area_squares/area_squares.rst
     latex_maths/area_rectangles/area_rectangles.rst
-    latex_maths/area_triangles/area_triangles_right.rst
-    latex_maths/area_triangles/area_triangles_acute.rst
-    latex_maths/area_triangles/area_triangles_obtuse.rst
+    latex_maths/area_triangles_right/area_triangles_right.rst
+    latex_maths/area_triangles_acute/area_triangles_acute.rst
+    latex_maths/area_triangles_obtuse/area_triangles_obtuse.rst
     latex_maths/area_triangles/area_triangles.rst
-    latex_maths/area_rectangles/area_parallelograms.rst
-    latex_maths/area_rectangles/area_circles.rst
+    latex_maths/area_parallelograms/area_parallelograms.rst
+    latex_maths/area_circles/area_circles.rst
 
 
 .. toctree::
