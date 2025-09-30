@@ -1,5 +1,5 @@
 ====================================================
-Area of parallelograms
+Area of Parallelograms
 ====================================================
 
  The diagrams below show a parallelogram with the perpendicular height drawn from the extension of the base. The area is to be calculated.
@@ -12,7 +12,7 @@ Sample Question diagram
 
 | A sample question diagram is shown below.
 
-.. image:: files/area_parallelograms_1 q.png
+.. image:: files/area_parallelograms_1_q.png
     :width: 600
 
 ----
