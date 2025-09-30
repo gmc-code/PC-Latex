@@ -126,7 +126,8 @@ PC-latex 2024
     latex_maths/area_triangles/area_triangles_acute.rst
     latex_maths/area_triangles/area_triangles_obtuse.rst
     latex_maths/area_triangles/area_triangles.rst
-
+    latex_maths/area_rectangles/area_parallelograms.rst
+    latex_maths/area_rectangles/area_circles.rst
 
 
 .. toctree::
