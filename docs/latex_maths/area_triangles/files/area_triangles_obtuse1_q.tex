@@ -11,36 +11,36 @@
 \section*{ }
     \begin{minipage}{0.55\textwidth}
   \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-    \begin{scope}[rotate=180]
+    \begin{scope}[rotate=0]
 
-        \coordinate (A) at (0,0);
-        \coordinate (B) at (3.18,0);
-        \coordinate (D) at ($(B)+(1.182,0)$);  % extend out
-        \coordinate (C) at ($(D)+(0,1.817)$); % Perpendicular upwards
+        \coordinate (W) at (0,0);
+        \coordinate (X) at (3.276,0);
+        \coordinate (Z) at ($(X)+(0.51,0)$);  % extend out
+        \coordinate (Y) at ($(Z)+(0,1.638)$); % Perpendicular upwards
 
-        \draw (A)--(B)--(C)--cycle;
-        \draw[dashed] (B)--(D);
-        \draw[dashed] (D)--(C);
-        \pic [draw, -, angle radius=0.2cm] {right angle=C--D--B};
+        \draw (W)--(X)--(Y)--cycle;
+        \draw[dashed] (X)--(Z);
+        \draw[dashed] (Z)--(Y);
+        \pic [draw, -, angle radius=0.2cm] {right angle=Y--Z--X};
 
         % Vertex LABELS
         % Labels relative to shape geometry
-        \node at ($(A)+(-0.2,-0.2)$) {A};
-        \node at ($(B)+(0.0,-0.2)$) {B};
-        \node at ($(D)+(0.2,-0.2)$) {D};
-        \node at ($(C)+(0.2,0.2)$) {C};
+        \node at ($(W)+(-0.2,-0.2)$) {W};
+        \node at ($(X)+(0.0,-0.2)$) {X};
+        \node at ($(Z)+(0.2,-0.2)$) {Z};
+        \node at ($(Y)+(0.2,0.2)$) {Y};
 
 
         % dotted/dashed arrows shifted away from edges
         % Horizontal side (A-B), shifted down yshift=0mm,
         \draw[<->, gray]
-            ($(A) + (0,-0.7cm)$) -- ($(B) + (0,-0.7cm)$)
-            node[black, midway, fill=white, inner sep=2.5pt] {7\,cm};
+            ($(W) + (0,-0.7cm)$) -- ($(X) + (0,-0.7cm)$)
+            node[black, midway, fill=white, inner sep=2.5pt] {6\,cm};
 
         % Vertical side (D-C), shifted right xshift=0mm,
         \draw[<->, gray]
-            ($(D)+(0.6,0)$) -- ($(D |- C)+(0.6,0)$)
-            node[black, midway, fill=white, inner sep=2.5pt] {4\,cm};
+            ($(Z)+(0.6,0)$) -- ($(Z |- Y)+(0.6,0)$)
+            node[black, midway, fill=white, inner sep=2.5pt] {3\,cm};
 
     \end{scope}
 \end{tikzpicture}
@@ -49,7 +49,7 @@
 \begin{minipage}{.4\textwidth}
   \begin{align*}
     \text{Area} &= \frac{1}{2} \text{bh} \\
-    \text{Area} &= \frac{1}{2} \times 7 \text{cm} \times 4 \text{cm}  \\
+    \text{Area} &= \frac{1}{2} \times \dotuline{~~~~~~~} \text{cm} \times \dotuline{~~~~~~~} \text{cm}  \\
     \text{Area} &= \dotuline{~~~~~~~} \text{cm}^2
   \end{align*}
 \end{minipage}

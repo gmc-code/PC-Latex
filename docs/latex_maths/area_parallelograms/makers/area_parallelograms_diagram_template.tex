@@ -1,0 +1,54 @@
+\begin{minipage}{0.55\textwidth}
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=<<rotation>>]
+
+        \coordinate (<<vA>>) at (0,0);
+        \coordinate (<<vB>>) at (<<base>>,0);
+        \coordinate (<<vE>>) at ($(<<vB>>)+(<<rightoffset>>,0)$);  % extend out
+        \coordinate (<<vC>>) at ($(<<vB>>)+(<<rightoffset>>,<<height>>)$); % Perpendicular upwards
+        \coordinate (<<vD>>) at ($(<<vA>>)+(<<rightoffset>>,<<height>>)$); % Perpendicular upwards
+
+        \draw (<<vA>>)--(<<vB>>)--(<<vC>>)--(<<vD>>)--cycle;
+        \draw[dashed] (<<vB>>)--(<<vE>>);
+        \draw[dashed] (<<vE>>)--(<<vC>>);
+
+        \pic [draw, -, angle radius=0.2cm] {right angle=<<vB>>--<<vE>>--<<vC>>};
+
+        \draw[>=Straight Barb, postaction={decorate}, decoration={markings, mark=at position 0.5 with {\arrow[scale=1.5]{>>}}}] (<<vA>>)--(<<vB>>);
+        \draw[>=Straight Barb, postaction={decorate}, decoration={markings, mark=at position 0.5 with {\arrow[scale=1.5]{>>}}}] (<<vD>>)--(<<vC>>);
+        \draw[>=Straight Barb, postaction={decorate}, decoration={markings, mark=at position 0.5 with {\arrow[scale=1.5]{>}}}] (<<vB>>)--(<<vC>>);
+        \draw[>=Straight Barb, postaction={decorate}, decoration={markings, mark=at position 0.5 with {\arrow[scale=1.5]{>}}}] (<<vA>>)--(<<vD>>);
+
+
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(<<vA>>)+(-0.2,-0.2)$) {<<vA>>};
+        \node at ($(<<vB>>)+(0.0,-0.2)$) {<<vB>>};
+        \node at ($(<<vE>>)+(0.2,-0.2)$) {<<vE>>};
+        \node at ($(<<vC>>)+(0.2,0.2)$) {<<vC>>};
+        \node at ($(<<vD>>)+(-0.2,0.2)$) {<<vD>>};
+
+
+        % dotted/dashed arrows shifted away from edges
+        % Horizontal side (A-B), shifted down yshift=0mm,
+        \draw[<->, gray]
+            ($(<<vA>>) + (0,-0.7cm)$) -- ($(<<vB>>) + (0,-0.7cm)$)
+            node[black, midway, fill=white, inner sep=2.5pt] {<<calc_base>>\,cm};
+
+        % Vertical side (D-C), shifted right xshift=0mm,
+        \draw[<->, gray]
+            ($(<<vE>>)+(0.6,0)$) -- ($(<<vE>> |- <<vC>>)+(0.6,0)$)
+            node[black, midway, fill=white, inner sep=2.5pt] {<<calc_height>>\,cm};
+
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+    \text{Area} &= \text{bh} \\
+    \text{Area} &= <<calc_base_value>> \text{cm} \times <<calc_height_value>> \text{cm}  \\
+    \text{Area} &= <<calcarea_value>> \text{cm}^2
+  \end{align*}
+\end{minipage}

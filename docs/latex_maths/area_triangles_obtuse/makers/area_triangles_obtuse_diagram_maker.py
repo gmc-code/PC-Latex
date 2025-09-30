@@ -32,7 +32,7 @@ def convert_to_pdf(tex_path, outputdir):
 
 
 #
-# calcside_value1, calcside_value2, calcarea_value
+# "calc_base", "calc_height", calcarea_value
 tex_keys_q = ["calc_base", "calc_height", "rightoffset", "base", "height", "rotation", "vA", "vB", "vC", "vD"]
 
 

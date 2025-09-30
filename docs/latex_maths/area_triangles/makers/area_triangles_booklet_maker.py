@@ -69,13 +69,7 @@ def get_keys(num):
 
 
 def get_kv(num,side_pairs, rotation):
-    match num:
-        case 1:
-            return atf.get_area_triangles_right_dict(side_pairs, rotation)
-        case 2:
-            return atf.get_area_triangles_acute_dict(side_pairs, rotation)
-        case 3:
-            return atf.get_area_triangles_obtuse_dict(side_pairs, rotation)
+    return atf.get_area_triangle_dict(num,side_pairs, rotation)
 
 ################################################################################################
 

@@ -80,8 +80,8 @@ def get_area_triangles_obtuse_dict(side_pair=None, rotation=None):
     kv["vC"] = f"{vC}"
     kv["vD"] = f"{vD}"
 
-    kv["calcside_value1"] = f"{calc_base}"
-    kv["calcside_value2"] = f"{calc_height}"
+    kv["calc_base_value"] = f"{calc_base}"
+    kv["calc_height_value"] = f"{calc_height}"
     kv["calcarea_value"] = f"{calcarea_value}"
 
     return kv

@@ -11,32 +11,32 @@
 \section*{ }
     \begin{minipage}{0.55\textwidth}
   \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-    \begin{scope}[rotate=0]
+    \begin{scope}[rotate=180]
         % Draw
 
-        \draw (0,0) coordinate (A) --
-         ++(2.953,0) coordinate (B) --
-         ++(90:2.109) coordinate (C) -- cycle;
+        \draw (0,0) coordinate (K) --
+         ++(3.057,0) coordinate (L) --
+         ++(90:2.378) coordinate (M) -- cycle;
 
-        \pic [draw, -, angle radius=0.2cm] {right angle=C--B--A};
+        \pic [draw, -, angle radius=0.2cm] {right angle=M--L--K};
 
         % Vertex LABELS
         % Labels relative to shape geometry
-        \node at ($(A)+(-0.2,-0.2)$) {A};
-        \node at ($(B)+(0.2,-0.2)$) {B};
-        \node at ($(C)+(0.2,0.2)$) {C};
+        \node at ($(K)+(-0.2,-0.2)$) {K};
+        \node at ($(L)+(0.2,-0.2)$) {L};
+        \node at ($(M)+(0.2,0.2)$) {M};
 
 
         % dotted/dashed arrows shifted away from edges
         % Horizontal side (A-B), shifted down
         \draw[<->, gray]
-            ($(A) + (0,-0.6cm)$) -- ($(B) + (0,-0.6cm)$)
-            node[black, midway, fill=white, inner sep=2.5pt] {7\,cm};
+            ($(K) + (0,-0.6cm)$) -- ($(L) + (0,-0.6cm)$)
+            node[black, midway, fill=white, inner sep=2.5pt] {9\,cm};
 
         % Vertical side (B-C), shifted right
         \draw[<->, gray]
-            ($(B) + (0.6cm,0)$) -- ($(C) + (0.6cm,0)$)
-            node[black, midway, fill=white, xshift=0mm, inner sep=2.5pt] {5\,cm};
+            ($(L) + (0.6cm,0)$) -- ($(M) + (0.6cm,0)$)
+            node[black, midway, fill=white, xshift=0mm, inner sep=2.5pt] {7\,cm};
 
     \end{scope}
 \end{tikzpicture}
@@ -45,8 +45,8 @@
 \begin{minipage}{.4\textwidth}
   \begin{align*}
     \text{Area} &= \frac{1}{2} \text{bh} \\
-    \text{Area} &= \frac{1}{2} \times 7 \text{cm} \times 5 \text{cm}  \\
-    \text{Area} &= 17.5 \text{cm}^2
+    \text{Area} &= \frac{1}{2} \times 9 \text{cm} \times 7 \text{cm}  \\
+    \text{Area} &= 31.5 \text{cm}^2
   \end{align*}
 \end{minipage}
 

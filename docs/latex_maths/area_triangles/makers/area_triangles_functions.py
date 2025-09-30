@@ -5,16 +5,14 @@ Module of functions to return diagram dictionary for LaTeX
 import random
 
 
-def get_area_triangle_dict(num):
-    if num is None or num == 4:
-        num = random.randint(1, 3)
+def get_area_triangle_dict(num,side_pair=None, rotation=None):
     match num:
         case 1:
-            return get_area_triangles_right_dict()
+            return get_area_triangles_right_dict(side_pair, rotation)
         case 2:
-            return get_area_triangles_acute_dict()
+            return get_area_triangles_acute_dict(side_pair, rotation)
         case 3:
-            return get_area_triangles_obtuse_dict()
+            return get_area_triangles_obtuse_dict(side_pair, rotation)
 
 
 
@@ -50,8 +48,8 @@ def get_area_triangles_right_dict(side_pair=None, rotation=None):
     sidelength2 = round(random.uniform(0, 1.0) + 1.5, 3)
     sidelength1 = round(sidelength2 * (calc_sidelength1 / calc_sidelength2), 3)
 
-    if sidelength1 > 8:
-        ratio = 8 / sidelength1
+    if sidelength1 > 6:
+        ratio = 6 / sidelength1
         sidelength1 = round(sidelength1 * ratio, 3)
         sidelength2 = round(sidelength2 * ratio, 3)
 
@@ -103,8 +101,8 @@ def get_area_triangles_acute_dict(side_pair=None, rotation=None):
     height = round(random.uniform(0, 1.0) + 1.5, 3)
     base = round(height * (calc_base / calc_height), 3)
 
-    if base > 8:
-        ratio = 8 / base
+    if base > 6:
+        ratio = 6 / base
         base = round(base * ratio, 3)
         height = round(height * ratio, 3)
 
@@ -161,8 +159,8 @@ def get_area_triangles_obtuse_dict(side_pair=None, rotation=None):
     base = round(height * (calc_base / calc_height), 3)
     rightoffset = round(random.uniform(0, 1) + 0.5, 3)
 
-    if base + rightoffset > 7:
-        ratio = 7 / (base + rightoffset)
+    if base + rightoffset > 6:
+        ratio = 6 / (base + rightoffset)
         base = round(base * ratio, 3)
         rightoffset = round(rightoffset * ratio, 3)
         height = round(height * ratio, 3)
@@ -198,8 +196,8 @@ def get_area_triangles_obtuse_dict(side_pair=None, rotation=None):
     kv["vC"] = f"{vC}"
     kv["vD"] = f"{vD}"
 
-    kv["calcside_value1"] = f"{calc_base}"
-    kv["calcside_value2"] = f"{calc_height}"
+    kv["calc_base_value"] = f"{calc_base}"
+    kv["calc_height_value"] = f"{calc_height}"
     kv["calcarea_value"] = f"{calcarea_value}"
 
     return kv

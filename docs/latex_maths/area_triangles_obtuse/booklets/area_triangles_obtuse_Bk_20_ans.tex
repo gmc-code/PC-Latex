@@ -32,12 +32,12 @@
   \refstepcounter{minipagecount}
   \noindent{(\theminipagecount)}\quad
  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-        \begin{scope}[rotate=0]
+        \begin{scope}[rotate=190]
 
         \coordinate (Q) at (0,0);
-        \coordinate (R) at (2.786,0);
-        \coordinate (T) at ($(R)+(0.761,0)$);  % extend out
-        \coordinate (S) at ($(T)+(0,1.592)$); % Perpendicular upwards
+        \coordinate (R) at (2.176,0);
+        \coordinate (T) at ($(R)+(1.44,0)$);  % extend out
+        \coordinate (S) at ($(T)+(0,1.741)$); % Perpendicular upwards
 
         \draw (Q)--(R)--(S)--cycle;
         \draw[dashed] (R)--(T);
@@ -56,7 +56,7 @@
         % Horizontal side (A-B), shifted down yshift=0mm,
         \draw[<->, gray]
             ($(Q) + (0,-0.7cm)$) -- ($(R) + (0,-0.7cm)$)
-            node[black, midway, fill=white, inner sep=2.5pt] {7\,cm};
+            node[black, midway, fill=white, inner sep=2.5pt] {5\,cm};
 
         % Vertical side (D-C), shifted right xshift=0mm,
         \draw[<->, gray]
@@ -69,54 +69,8 @@
 \begin{minipage}{.4\textwidth}
   \begin{align*}
     \text{Area} &= \frac{1}{2} \text{bh} \\
-    \text{Area} &= \frac{1}{2} \times 7 \text{cm} \times 4 \text{cm}  \\
-    \text{Area} &= 14.0 \text{cm}^2
-  \end{align*}
-\end{minipage}
-
-\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
-  \refstepcounter{minipagecount}
-  \noindent{(\theminipagecount)}\quad
- \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-        \begin{scope}[rotate=0]
-
-        \coordinate (K) at (0,0);
-        \coordinate (L) at (2.281,0);
-        \coordinate (N) at ($(L)+(1.13,0)$);  % extend out
-        \coordinate (M) at ($(N)+(0,1.901)$); % Perpendicular upwards
-
-        \draw (K)--(L)--(M)--cycle;
-        \draw[dashed] (L)--(N);
-        \draw[dashed] (N)--(M);
-        \pic [draw, -, angle radius=0.2cm] {right angle=M--N--L};
-
-        % Vertex LABELS
-        % Labels relative to shape geometry
-        \node at ($(K)+(-0.2,-0.2)$) {K};
-        \node at ($(L)+(0.0,-0.2)$) {L};
-        \node at ($(N)+(0.2,-0.2)$) {N};
-        \node at ($(M)+(0.2,0.2)$) {M};
-
-
-        % dotted/dashed arrows shifted away from edges
-        % Horizontal side (A-B), shifted down yshift=0mm,
-        \draw[<->, gray]
-            ($(K) + (0,-0.7cm)$) -- ($(L) + (0,-0.7cm)$)
-            node[black, midway, fill=white, inner sep=2.5pt] {6\,cm};
-
-        % Vertical side (D-C), shifted right xshift=0mm,
-        \draw[<->, gray]
-            ($(N)+(0.6,0)$) -- ($(N |- M)+(0.6,0)$)
-            node[black, midway, fill=white, inner sep=2.5pt] {5\,cm};
-    \end{scope}
-\end{tikzpicture}
-\end{minipage}%
-\hfill
-\begin{minipage}{.4\textwidth}
-  \begin{align*}
-    \text{Area} &= \frac{1}{2} \text{bh} \\
-    \text{Area} &= \frac{1}{2} \times 6 \text{cm} \times 5 \text{cm}  \\
-    \text{Area} &= 15.0 \text{cm}^2
+    \text{Area} &= \frac{1}{2} \times 5 \text{cm} \times 4 \text{cm}  \\
+    \text{Area} &= 10.0 \text{cm}^2
   \end{align*}
 \end{minipage}
 
@@ -127,9 +81,9 @@
         \begin{scope}[rotate=90]
 
         \coordinate (E) at (0,0);
-        \coordinate (F) at (5.717,0);
-        \coordinate (H) at ($(F)+(1.283,0)$);  % extend out
-        \coordinate (G) at ($(H)+(0,2.144)$); % Perpendicular upwards
+        \coordinate (F) at (5.061,0);
+        \coordinate (H) at ($(F)+(0.695,0)$);  % extend out
+        \coordinate (G) at ($(H)+(0,2.169)$); % Perpendicular upwards
 
         \draw (E)--(F)--(G)--cycle;
         \draw[dashed] (F)--(H);
@@ -148,7 +102,7 @@
         % Horizontal side (A-B), shifted down yshift=0mm,
         \draw[<->, gray]
             ($(E) + (0,-0.7cm)$) -- ($(F) + (0,-0.7cm)$)
-            node[black, midway, fill=white, inner sep=2.5pt] {8\,cm};
+            node[black, midway, fill=white, inner sep=2.5pt] {7\,cm};
 
         % Vertical side (D-C), shifted right xshift=0mm,
         \draw[<->, gray]
@@ -161,192 +115,8 @@
 \begin{minipage}{.4\textwidth}
   \begin{align*}
     \text{Area} &= \frac{1}{2} \text{bh} \\
-    \text{Area} &= \frac{1}{2} \times 8 \text{cm} \times 3 \text{cm}  \\
-    \text{Area} &= 12.0 \text{cm}^2
-  \end{align*}
-\end{minipage}
-
-\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
-  \refstepcounter{minipagecount}
-  \noindent{(\theminipagecount)}\quad
- \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-        \begin{scope}[rotate=0]
-
-        \coordinate (E) at (0,0);
-        \coordinate (F) at (2.811,0);
-        \coordinate (H) at ($(F)+(1.157,0)$);  % extend out
-        \coordinate (G) at ($(H)+(0,1.874)$); % Perpendicular upwards
-
-        \draw (E)--(F)--(G)--cycle;
-        \draw[dashed] (F)--(H);
-        \draw[dashed] (H)--(G);
-        \pic [draw, -, angle radius=0.2cm] {right angle=G--H--F};
-
-        % Vertex LABELS
-        % Labels relative to shape geometry
-        \node at ($(E)+(-0.2,-0.2)$) {E};
-        \node at ($(F)+(0.0,-0.2)$) {F};
-        \node at ($(H)+(0.2,-0.2)$) {H};
-        \node at ($(G)+(0.2,0.2)$) {G};
-
-
-        % dotted/dashed arrows shifted away from edges
-        % Horizontal side (A-B), shifted down yshift=0mm,
-        \draw[<->, gray]
-            ($(E) + (0,-0.7cm)$) -- ($(F) + (0,-0.7cm)$)
-            node[black, midway, fill=white, inner sep=2.5pt] {6\,cm};
-
-        % Vertical side (D-C), shifted right xshift=0mm,
-        \draw[<->, gray]
-            ($(H)+(0.6,0)$) -- ($(H |- G)+(0.6,0)$)
-            node[black, midway, fill=white, inner sep=2.5pt] {4\,cm};
-    \end{scope}
-\end{tikzpicture}
-\end{minipage}%
-\hfill
-\begin{minipage}{.4\textwidth}
-  \begin{align*}
-    \text{Area} &= \frac{1}{2} \text{bh} \\
-    \text{Area} &= \frac{1}{2} \times 6 \text{cm} \times 4 \text{cm}  \\
-    \text{Area} &= 12.0 \text{cm}^2
-  \end{align*}
-\end{minipage}
-
-\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
-  \refstepcounter{minipagecount}
-  \noindent{(\theminipagecount)}\quad
- \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-        \begin{scope}[rotate=-20]
-
-        \coordinate (K) at (0,0);
-        \coordinate (L) at (3.185,0);
-        \coordinate (N) at ($(L)+(0.861,0)$);  % extend out
-        \coordinate (M) at ($(N)+(0,2.389)$); % Perpendicular upwards
-
-        \draw (K)--(L)--(M)--cycle;
-        \draw[dashed] (L)--(N);
-        \draw[dashed] (N)--(M);
-        \pic [draw, -, angle radius=0.2cm] {right angle=M--N--L};
-
-        % Vertex LABELS
-        % Labels relative to shape geometry
-        \node at ($(K)+(-0.2,-0.2)$) {K};
-        \node at ($(L)+(0.0,-0.2)$) {L};
-        \node at ($(N)+(0.2,-0.2)$) {N};
-        \node at ($(M)+(0.2,0.2)$) {M};
-
-
-        % dotted/dashed arrows shifted away from edges
-        % Horizontal side (A-B), shifted down yshift=0mm,
-        \draw[<->, gray]
-            ($(K) + (0,-0.7cm)$) -- ($(L) + (0,-0.7cm)$)
-            node[black, midway, fill=white, inner sep=2.5pt] {8\,cm};
-
-        % Vertical side (D-C), shifted right xshift=0mm,
-        \draw[<->, gray]
-            ($(N)+(0.6,0)$) -- ($(N |- M)+(0.6,0)$)
-            node[black, midway, fill=white, inner sep=2.5pt] {6\,cm};
-    \end{scope}
-\end{tikzpicture}
-\end{minipage}%
-\hfill
-\begin{minipage}{.4\textwidth}
-  \begin{align*}
-    \text{Area} &= \frac{1}{2} \text{bh} \\
-    \text{Area} &= \frac{1}{2} \times 8 \text{cm} \times 6 \text{cm}  \\
-    \text{Area} &= 24.0 \text{cm}^2
-  \end{align*}
-\end{minipage}
-
-\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
-  \refstepcounter{minipagecount}
-  \noindent{(\theminipagecount)}\quad
- \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-        \begin{scope}[rotate=-30]
-
-        \coordinate (K) at (0,0);
-        \coordinate (L) at (2.743,0);
-        \coordinate (N) at ($(L)+(0.672,0)$);  % extend out
-        \coordinate (M) at ($(N)+(0,2.4)$); % Perpendicular upwards
-
-        \draw (K)--(L)--(M)--cycle;
-        \draw[dashed] (L)--(N);
-        \draw[dashed] (N)--(M);
-        \pic [draw, -, angle radius=0.2cm] {right angle=M--N--L};
-
-        % Vertex LABELS
-        % Labels relative to shape geometry
-        \node at ($(K)+(-0.2,-0.2)$) {K};
-        \node at ($(L)+(0.0,-0.2)$) {L};
-        \node at ($(N)+(0.2,-0.2)$) {N};
-        \node at ($(M)+(0.2,0.2)$) {M};
-
-
-        % dotted/dashed arrows shifted away from edges
-        % Horizontal side (A-B), shifted down yshift=0mm,
-        \draw[<->, gray]
-            ($(K) + (0,-0.7cm)$) -- ($(L) + (0,-0.7cm)$)
-            node[black, midway, fill=white, inner sep=2.5pt] {8\,cm};
-
-        % Vertical side (D-C), shifted right xshift=0mm,
-        \draw[<->, gray]
-            ($(N)+(0.6,0)$) -- ($(N |- M)+(0.6,0)$)
-            node[black, midway, fill=white, inner sep=2.5pt] {7\,cm};
-    \end{scope}
-\end{tikzpicture}
-\end{minipage}%
-\hfill
-\begin{minipage}{.4\textwidth}
-  \begin{align*}
-    \text{Area} &= \frac{1}{2} \text{bh} \\
-    \text{Area} &= \frac{1}{2} \times 8 \text{cm} \times 7 \text{cm}  \\
-    \text{Area} &= 28.0 \text{cm}^2
-  \end{align*}
-\end{minipage}
-
-\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
-  \refstepcounter{minipagecount}
-  \noindent{(\theminipagecount)}\quad
- \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-        \begin{scope}[rotate=30]
-
-        \coordinate (Q) at (0,0);
-        \coordinate (R) at (4.098,0);
-        \coordinate (T) at ($(R)+(0.843,0)$);  % extend out
-        \coordinate (S) at ($(T)+(0,1.639)$); % Perpendicular upwards
-
-        \draw (Q)--(R)--(S)--cycle;
-        \draw[dashed] (R)--(T);
-        \draw[dashed] (T)--(S);
-        \pic [draw, -, angle radius=0.2cm] {right angle=S--T--R};
-
-        % Vertex LABELS
-        % Labels relative to shape geometry
-        \node at ($(Q)+(-0.2,-0.2)$) {Q};
-        \node at ($(R)+(0.0,-0.2)$) {R};
-        \node at ($(T)+(0.2,-0.2)$) {T};
-        \node at ($(S)+(0.2,0.2)$) {S};
-
-
-        % dotted/dashed arrows shifted away from edges
-        % Horizontal side (A-B), shifted down yshift=0mm,
-        \draw[<->, gray]
-            ($(Q) + (0,-0.7cm)$) -- ($(R) + (0,-0.7cm)$)
-            node[black, midway, fill=white, inner sep=2.5pt] {5\,cm};
-
-        % Vertical side (D-C), shifted right xshift=0mm,
-        \draw[<->, gray]
-            ($(T)+(0.6,0)$) -- ($(T |- S)+(0.6,0)$)
-            node[black, midway, fill=white, inner sep=2.5pt] {2\,cm};
-    \end{scope}
-\end{tikzpicture}
-\end{minipage}%
-\hfill
-\begin{minipage}{.4\textwidth}
-  \begin{align*}
-    \text{Area} &= \frac{1}{2} \text{bh} \\
-    \text{Area} &= \frac{1}{2} \times 5 \text{cm} \times 2 \text{cm}  \\
-    \text{Area} &= 5.0 \text{cm}^2
+    \text{Area} &= \frac{1}{2} \times 7 \text{cm} \times 3 \text{cm}  \\
+    \text{Area} &= 10.5 \text{cm}^2
   \end{align*}
 \end{minipage}
 
@@ -356,33 +126,125 @@
  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
         \begin{scope}[rotate=180]
 
-        \coordinate (E) at (0,0);
-        \coordinate (F) at (3.222,0);
-        \coordinate (H) at ($(F)+(0.743,0)$);  % extend out
-        \coordinate (G) at ($(H)+(0,1.79)$); % Perpendicular upwards
+        \coordinate (K) at (0,0);
+        \coordinate (L) at (3.715,0);
+        \coordinate (N) at ($(L)+(0.838,0)$);  % extend out
+        \coordinate (M) at ($(N)+(0,2.477)$); % Perpendicular upwards
 
-        \draw (E)--(F)--(G)--cycle;
-        \draw[dashed] (F)--(H);
-        \draw[dashed] (H)--(G);
-        \pic [draw, -, angle radius=0.2cm] {right angle=G--H--F};
+        \draw (K)--(L)--(M)--cycle;
+        \draw[dashed] (L)--(N);
+        \draw[dashed] (N)--(M);
+        \pic [draw, -, angle radius=0.2cm] {right angle=M--N--L};
 
         % Vertex LABELS
         % Labels relative to shape geometry
-        \node at ($(E)+(-0.2,-0.2)$) {E};
-        \node at ($(F)+(0.0,-0.2)$) {F};
-        \node at ($(H)+(0.2,-0.2)$) {H};
-        \node at ($(G)+(0.2,0.2)$) {G};
+        \node at ($(K)+(-0.2,-0.2)$) {K};
+        \node at ($(L)+(0.0,-0.2)$) {L};
+        \node at ($(N)+(0.2,-0.2)$) {N};
+        \node at ($(M)+(0.2,0.2)$) {M};
 
 
         % dotted/dashed arrows shifted away from edges
         % Horizontal side (A-B), shifted down yshift=0mm,
         \draw[<->, gray]
-            ($(E) + (0,-0.7cm)$) -- ($(F) + (0,-0.7cm)$)
+            ($(K) + (0,-0.7cm)$) -- ($(L) + (0,-0.7cm)$)
             node[black, midway, fill=white, inner sep=2.5pt] {9\,cm};
 
         % Vertical side (D-C), shifted right xshift=0mm,
         \draw[<->, gray]
-            ($(H)+(0.6,0)$) -- ($(H |- G)+(0.6,0)$)
+            ($(N)+(0.6,0)$) -- ($(N |- M)+(0.6,0)$)
+            node[black, midway, fill=white, inner sep=2.5pt] {6\,cm};
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+    \text{Area} &= \frac{1}{2} \text{bh} \\
+    \text{Area} &= \frac{1}{2} \times 9 \text{cm} \times 6 \text{cm}  \\
+    \text{Area} &= 27.0 \text{cm}^2
+  \end{align*}
+\end{minipage}
+
+\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+ \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+        \begin{scope}[rotate=90]
+
+        \coordinate (K) at (0,0);
+        \coordinate (L) at (4.134,0);
+        \coordinate (N) at ($(L)+(1.422,0)$);  % extend out
+        \coordinate (M) at ($(N)+(0,2.067)$); % Perpendicular upwards
+
+        \draw (K)--(L)--(M)--cycle;
+        \draw[dashed] (L)--(N);
+        \draw[dashed] (N)--(M);
+        \pic [draw, -, angle radius=0.2cm] {right angle=M--N--L};
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(K)+(-0.2,-0.2)$) {K};
+        \node at ($(L)+(0.0,-0.2)$) {L};
+        \node at ($(N)+(0.2,-0.2)$) {N};
+        \node at ($(M)+(0.2,0.2)$) {M};
+
+
+        % dotted/dashed arrows shifted away from edges
+        % Horizontal side (A-B), shifted down yshift=0mm,
+        \draw[<->, gray]
+            ($(K) + (0,-0.7cm)$) -- ($(L) + (0,-0.7cm)$)
+            node[black, midway, fill=white, inner sep=2.5pt] {4\,cm};
+
+        % Vertical side (D-C), shifted right xshift=0mm,
+        \draw[<->, gray]
+            ($(N)+(0.6,0)$) -- ($(N |- M)+(0.6,0)$)
+            node[black, midway, fill=white, inner sep=2.5pt] {2\,cm};
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+    \text{Area} &= \frac{1}{2} \text{bh} \\
+    \text{Area} &= \frac{1}{2} \times 4 \text{cm} \times 2 \text{cm}  \\
+    \text{Area} &= 4.0 \text{cm}^2
+  \end{align*}
+\end{minipage}
+
+\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+ \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+        \begin{scope}[rotate=270]
+
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (4.491,0);
+        \coordinate (D) at ($(B)+(0.607,0)$);  % extend out
+        \coordinate (C) at ($(D)+(0,2.495)$); % Perpendicular upwards
+
+        \draw (A)--(B)--(C)--cycle;
+        \draw[dashed] (B)--(D);
+        \draw[dashed] (D)--(C);
+        \pic [draw, -, angle radius=0.2cm] {right angle=C--D--B};
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(A)+(-0.2,-0.2)$) {A};
+        \node at ($(B)+(0.0,-0.2)$) {B};
+        \node at ($(D)+(0.2,-0.2)$) {D};
+        \node at ($(C)+(0.2,0.2)$) {C};
+
+
+        % dotted/dashed arrows shifted away from edges
+        % Horizontal side (A-B), shifted down yshift=0mm,
+        \draw[<->, gray]
+            ($(A) + (0,-0.7cm)$) -- ($(B) + (0,-0.7cm)$)
+            node[black, midway, fill=white, inner sep=2.5pt] {9\,cm};
+
+        % Vertical side (D-C), shifted right xshift=0mm,
+        \draw[<->, gray]
+            ($(D)+(0.6,0)$) -- ($(D |- C)+(0.6,0)$)
             node[black, midway, fill=white, inner sep=2.5pt] {5\,cm};
     \end{scope}
 \end{tikzpicture}
@@ -400,12 +262,58 @@
   \refstepcounter{minipagecount}
   \noindent{(\theminipagecount)}\quad
  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-        \begin{scope}[rotate=0]
+        \begin{scope}[rotate=180]
+
+        \coordinate (K) at (0,0);
+        \coordinate (L) at (2.54,0);
+        \coordinate (N) at ($(L)+(0.581,0)$);  % extend out
+        \coordinate (M) at ($(N)+(0,2.258)$); % Perpendicular upwards
+
+        \draw (K)--(L)--(M)--cycle;
+        \draw[dashed] (L)--(N);
+        \draw[dashed] (N)--(M);
+        \pic [draw, -, angle radius=0.2cm] {right angle=M--N--L};
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(K)+(-0.2,-0.2)$) {K};
+        \node at ($(L)+(0.0,-0.2)$) {L};
+        \node at ($(N)+(0.2,-0.2)$) {N};
+        \node at ($(M)+(0.2,0.2)$) {M};
+
+
+        % dotted/dashed arrows shifted away from edges
+        % Horizontal side (A-B), shifted down yshift=0mm,
+        \draw[<->, gray]
+            ($(K) + (0,-0.7cm)$) -- ($(L) + (0,-0.7cm)$)
+            node[black, midway, fill=white, inner sep=2.5pt] {9\,cm};
+
+        % Vertical side (D-C), shifted right xshift=0mm,
+        \draw[<->, gray]
+            ($(N)+(0.6,0)$) -- ($(N |- M)+(0.6,0)$)
+            node[black, midway, fill=white, inner sep=2.5pt] {8\,cm};
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+    \text{Area} &= \frac{1}{2} \text{bh} \\
+    \text{Area} &= \frac{1}{2} \times 9 \text{cm} \times 8 \text{cm}  \\
+    \text{Area} &= 36.0 \text{cm}^2
+  \end{align*}
+\end{minipage}
+
+\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+ \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+        \begin{scope}[rotate=270]
 
         \coordinate (A) at (0,0);
-        \coordinate (B) at (2.902,0);
-        \coordinate (D) at ($(B)+(0.664,0)$);  % extend out
-        \coordinate (C) at ($(D)+(0,2.073)$); % Perpendicular upwards
+        \coordinate (B) at (2.851,0);
+        \coordinate (D) at ($(B)+(0.554,0)$);  % extend out
+        \coordinate (C) at ($(D)+(0,1.629)$); % Perpendicular upwards
 
         \draw (A)--(B)--(C)--cycle;
         \draw[dashed] (B)--(D);
@@ -429,7 +337,7 @@
         % Vertical side (D-C), shifted right xshift=0mm,
         \draw[<->, gray]
             ($(D)+(0.6,0)$) -- ($(D |- C)+(0.6,0)$)
-            node[black, midway, fill=white, inner sep=2.5pt] {5\,cm};
+            node[black, midway, fill=white, inner sep=2.5pt] {4\,cm};
     \end{scope}
 \end{tikzpicture}
 \end{minipage}%
@@ -437,8 +345,8 @@
 \begin{minipage}{.4\textwidth}
   \begin{align*}
     \text{Area} &= \frac{1}{2} \text{bh} \\
-    \text{Area} &= \frac{1}{2} \times 7 \text{cm} \times 5 \text{cm}  \\
-    \text{Area} &= 17.5 \text{cm}^2
+    \text{Area} &= \frac{1}{2} \times 7 \text{cm} \times 4 \text{cm}  \\
+    \text{Area} &= 14.0 \text{cm}^2
   \end{align*}
 \end{minipage}
 
@@ -446,12 +354,58 @@
   \refstepcounter{minipagecount}
   \noindent{(\theminipagecount)}\quad
  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-        \begin{scope}[rotate=180]
+        \begin{scope}[rotate=30]
+
+        \coordinate (K) at (0,0);
+        \coordinate (L) at (2.487,0);
+        \coordinate (N) at ($(L)+(1.009,0)$);  % extend out
+        \coordinate (M) at ($(N)+(0,1.865)$); % Perpendicular upwards
+
+        \draw (K)--(L)--(M)--cycle;
+        \draw[dashed] (L)--(N);
+        \draw[dashed] (N)--(M);
+        \pic [draw, -, angle radius=0.2cm] {right angle=M--N--L};
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(K)+(-0.2,-0.2)$) {K};
+        \node at ($(L)+(0.0,-0.2)$) {L};
+        \node at ($(N)+(0.2,-0.2)$) {N};
+        \node at ($(M)+(0.2,0.2)$) {M};
+
+
+        % dotted/dashed arrows shifted away from edges
+        % Horizontal side (A-B), shifted down yshift=0mm,
+        \draw[<->, gray]
+            ($(K) + (0,-0.7cm)$) -- ($(L) + (0,-0.7cm)$)
+            node[black, midway, fill=white, inner sep=2.5pt] {4\,cm};
+
+        % Vertical side (D-C), shifted right xshift=0mm,
+        \draw[<->, gray]
+            ($(N)+(0.6,0)$) -- ($(N |- M)+(0.6,0)$)
+            node[black, midway, fill=white, inner sep=2.5pt] {3\,cm};
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+    \text{Area} &= \frac{1}{2} \text{bh} \\
+    \text{Area} &= \frac{1}{2} \times 4 \text{cm} \times 3 \text{cm}  \\
+    \text{Area} &= 6.0 \text{cm}^2
+  \end{align*}
+\end{minipage}
+
+\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+ \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+        \begin{scope}[rotate=90]
 
         \coordinate (W) at (0,0);
-        \coordinate (X) at (3.394,0);
-        \coordinate (Z) at ($(X)+(1.476,0)$);  % extend out
-        \coordinate (Y) at ($(Z)+(0,2.263)$); % Perpendicular upwards
+        \coordinate (X) at (3.414,0);
+        \coordinate (Z) at ($(X)+(1.427,0)$);  % extend out
+        \coordinate (Y) at ($(Z)+(0,1.707)$); % Perpendicular upwards
 
         \draw (W)--(X)--(Y)--cycle;
         \draw[dashed] (X)--(Z);
@@ -470,12 +424,12 @@
         % Horizontal side (A-B), shifted down yshift=0mm,
         \draw[<->, gray]
             ($(W) + (0,-0.7cm)$) -- ($(X) + (0,-0.7cm)$)
-            node[black, midway, fill=white, inner sep=2.5pt] {3\,cm};
+            node[black, midway, fill=white, inner sep=2.5pt] {6\,cm};
 
         % Vertical side (D-C), shifted right xshift=0mm,
         \draw[<->, gray]
             ($(Z)+(0.6,0)$) -- ($(Z |- Y)+(0.6,0)$)
-            node[black, midway, fill=white, inner sep=2.5pt] {2\,cm};
+            node[black, midway, fill=white, inner sep=2.5pt] {3\,cm};
     \end{scope}
 \end{tikzpicture}
 \end{minipage}%
@@ -483,8 +437,8 @@
 \begin{minipage}{.4\textwidth}
   \begin{align*}
     \text{Area} &= \frac{1}{2} \text{bh} \\
-    \text{Area} &= \frac{1}{2} \times 3 \text{cm} \times 2 \text{cm}  \\
-    \text{Area} &= 3.0 \text{cm}^2
+    \text{Area} &= \frac{1}{2} \times 6 \text{cm} \times 3 \text{cm}  \\
+    \text{Area} &= 9.0 \text{cm}^2
   \end{align*}
 \end{minipage}
 
@@ -494,56 +448,10 @@
  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
         \begin{scope}[rotate=0]
 
-        \coordinate (W) at (0,0);
-        \coordinate (X) at (1.921,0);
-        \coordinate (Z) at ($(X)+(0.59,0)$);  % extend out
-        \coordinate (Y) at ($(Z)+(0,1.537)$); % Perpendicular upwards
-
-        \draw (W)--(X)--(Y)--cycle;
-        \draw[dashed] (X)--(Z);
-        \draw[dashed] (Z)--(Y);
-        \pic [draw, -, angle radius=0.2cm] {right angle=Y--Z--X};
-
-        % Vertex LABELS
-        % Labels relative to shape geometry
-        \node at ($(W)+(-0.2,-0.2)$) {W};
-        \node at ($(X)+(0.0,-0.2)$) {X};
-        \node at ($(Z)+(0.2,-0.2)$) {Z};
-        \node at ($(Y)+(0.2,0.2)$) {Y};
-
-
-        % dotted/dashed arrows shifted away from edges
-        % Horizontal side (A-B), shifted down yshift=0mm,
-        \draw[<->, gray]
-            ($(W) + (0,-0.7cm)$) -- ($(X) + (0,-0.7cm)$)
-            node[black, midway, fill=white, inner sep=2.5pt] {5\,cm};
-
-        % Vertical side (D-C), shifted right xshift=0mm,
-        \draw[<->, gray]
-            ($(Z)+(0.6,0)$) -- ($(Z |- Y)+(0.6,0)$)
-            node[black, midway, fill=white, inner sep=2.5pt] {4\,cm};
-    \end{scope}
-\end{tikzpicture}
-\end{minipage}%
-\hfill
-\begin{minipage}{.4\textwidth}
-  \begin{align*}
-    \text{Area} &= \frac{1}{2} \text{bh} \\
-    \text{Area} &= \frac{1}{2} \times 5 \text{cm} \times 4 \text{cm}  \\
-    \text{Area} &= 10.0 \text{cm}^2
-  \end{align*}
-\end{minipage}
-
-\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
-  \refstepcounter{minipagecount}
-  \noindent{(\theminipagecount)}\quad
- \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-        \begin{scope}[rotate=270]
-
         \coordinate (E) at (0,0);
-        \coordinate (F) at (3.474,0);
-        \coordinate (H) at ($(F)+(0.679,0)$);  % extend out
-        \coordinate (G) at ($(H)+(0,1.737)$); % Perpendicular upwards
+        \coordinate (F) at (6.381,0);
+        \coordinate (H) at ($(F)+(0.619,0)$);  % extend out
+        \coordinate (G) at ($(H)+(0,1.595)$); % Perpendicular upwards
 
         \draw (E)--(F)--(G)--cycle;
         \draw[dashed] (F)--(H);
@@ -567,7 +475,7 @@
         % Vertical side (D-C), shifted right xshift=0mm,
         \draw[<->, gray]
             ($(H)+(0.6,0)$) -- ($(H |- G)+(0.6,0)$)
-            node[black, midway, fill=white, inner sep=2.5pt] {4\,cm};
+            node[black, midway, fill=white, inner sep=2.5pt] {2\,cm};
     \end{scope}
 \end{tikzpicture}
 \end{minipage}%
@@ -575,8 +483,238 @@
 \begin{minipage}{.4\textwidth}
   \begin{align*}
     \text{Area} &= \frac{1}{2} \text{bh} \\
-    \text{Area} &= \frac{1}{2} \times 8 \text{cm} \times 4 \text{cm}  \\
-    \text{Area} &= 16.0 \text{cm}^2
+    \text{Area} &= \frac{1}{2} \times 8 \text{cm} \times 2 \text{cm}  \\
+    \text{Area} &= 8.0 \text{cm}^2
+  \end{align*}
+\end{minipage}
+
+\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+ \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+        \begin{scope}[rotate=-20]
+
+        \coordinate (Q) at (0,0);
+        \coordinate (R) at (2.73,0);
+        \coordinate (T) at ($(R)+(0.709,0)$);  % extend out
+        \coordinate (S) at ($(T)+(0,2.389)$); % Perpendicular upwards
+
+        \draw (Q)--(R)--(S)--cycle;
+        \draw[dashed] (R)--(T);
+        \draw[dashed] (T)--(S);
+        \pic [draw, -, angle radius=0.2cm] {right angle=S--T--R};
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(Q)+(-0.2,-0.2)$) {Q};
+        \node at ($(R)+(0.0,-0.2)$) {R};
+        \node at ($(T)+(0.2,-0.2)$) {T};
+        \node at ($(S)+(0.2,0.2)$) {S};
+
+
+        % dotted/dashed arrows shifted away from edges
+        % Horizontal side (A-B), shifted down yshift=0mm,
+        \draw[<->, gray]
+            ($(Q) + (0,-0.7cm)$) -- ($(R) + (0,-0.7cm)$)
+            node[black, midway, fill=white, inner sep=2.5pt] {8\,cm};
+
+        % Vertical side (D-C), shifted right xshift=0mm,
+        \draw[<->, gray]
+            ($(T)+(0.6,0)$) -- ($(T |- S)+(0.6,0)$)
+            node[black, midway, fill=white, inner sep=2.5pt] {7\,cm};
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+    \text{Area} &= \frac{1}{2} \text{bh} \\
+    \text{Area} &= \frac{1}{2} \times 8 \text{cm} \times 7 \text{cm}  \\
+    \text{Area} &= 28.0 \text{cm}^2
+  \end{align*}
+\end{minipage}
+
+\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+ \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+        \begin{scope}[rotate=270]
+
+        \coordinate (W) at (0,0);
+        \coordinate (X) at (4.565,0);
+        \coordinate (Z) at ($(X)+(1.461,0)$);  % extend out
+        \coordinate (Y) at ($(Z)+(0,1.712)$); % Perpendicular upwards
+
+        \draw (W)--(X)--(Y)--cycle;
+        \draw[dashed] (X)--(Z);
+        \draw[dashed] (Z)--(Y);
+        \pic [draw, -, angle radius=0.2cm] {right angle=Y--Z--X};
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(W)+(-0.2,-0.2)$) {W};
+        \node at ($(X)+(0.0,-0.2)$) {X};
+        \node at ($(Z)+(0.2,-0.2)$) {Z};
+        \node at ($(Y)+(0.2,0.2)$) {Y};
+
+
+        % dotted/dashed arrows shifted away from edges
+        % Horizontal side (A-B), shifted down yshift=0mm,
+        \draw[<->, gray]
+            ($(W) + (0,-0.7cm)$) -- ($(X) + (0,-0.7cm)$)
+            node[black, midway, fill=white, inner sep=2.5pt] {8\,cm};
+
+        % Vertical side (D-C), shifted right xshift=0mm,
+        \draw[<->, gray]
+            ($(Z)+(0.6,0)$) -- ($(Z |- Y)+(0.6,0)$)
+            node[black, midway, fill=white, inner sep=2.5pt] {3\,cm};
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+    \text{Area} &= \frac{1}{2} \text{bh} \\
+    \text{Area} &= \frac{1}{2} \times 8 \text{cm} \times 3 \text{cm}  \\
+    \text{Area} &= 12.0 \text{cm}^2
+  \end{align*}
+\end{minipage}
+
+\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+ \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+        \begin{scope}[rotate=10]
+
+        \coordinate (K) at (0,0);
+        \coordinate (L) at (4.933,0);
+        \coordinate (N) at ($(L)+(0.751,0)$);  % extend out
+        \coordinate (M) at ($(N)+(0,1.973)$); % Perpendicular upwards
+
+        \draw (K)--(L)--(M)--cycle;
+        \draw[dashed] (L)--(N);
+        \draw[dashed] (N)--(M);
+        \pic [draw, -, angle radius=0.2cm] {right angle=M--N--L};
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(K)+(-0.2,-0.2)$) {K};
+        \node at ($(L)+(0.0,-0.2)$) {L};
+        \node at ($(N)+(0.2,-0.2)$) {N};
+        \node at ($(M)+(0.2,0.2)$) {M};
+
+
+        % dotted/dashed arrows shifted away from edges
+        % Horizontal side (A-B), shifted down yshift=0mm,
+        \draw[<->, gray]
+            ($(K) + (0,-0.7cm)$) -- ($(L) + (0,-0.7cm)$)
+            node[black, midway, fill=white, inner sep=2.5pt] {5\,cm};
+
+        % Vertical side (D-C), shifted right xshift=0mm,
+        \draw[<->, gray]
+            ($(N)+(0.6,0)$) -- ($(N |- M)+(0.6,0)$)
+            node[black, midway, fill=white, inner sep=2.5pt] {2\,cm};
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+    \text{Area} &= \frac{1}{2} \text{bh} \\
+    \text{Area} &= \frac{1}{2} \times 5 \text{cm} \times 2 \text{cm}  \\
+    \text{Area} &= 5.0 \text{cm}^2
+  \end{align*}
+\end{minipage}
+
+\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+ \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+        \begin{scope}[rotate=-30]
+
+        \coordinate (E) at (0,0);
+        \coordinate (F) at (6.36,0);
+        \coordinate (H) at ($(F)+(0.64,0)$);  % extend out
+        \coordinate (G) at ($(H)+(0,2.12)$); % Perpendicular upwards
+
+        \draw (E)--(F)--(G)--cycle;
+        \draw[dashed] (F)--(H);
+        \draw[dashed] (H)--(G);
+        \pic [draw, -, angle radius=0.2cm] {right angle=G--H--F};
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(E)+(-0.2,-0.2)$) {E};
+        \node at ($(F)+(0.0,-0.2)$) {F};
+        \node at ($(H)+(0.2,-0.2)$) {H};
+        \node at ($(G)+(0.2,0.2)$) {G};
+
+
+        % dotted/dashed arrows shifted away from edges
+        % Horizontal side (A-B), shifted down yshift=0mm,
+        \draw[<->, gray]
+            ($(E) + (0,-0.7cm)$) -- ($(F) + (0,-0.7cm)$)
+            node[black, midway, fill=white, inner sep=2.5pt] {9\,cm};
+
+        % Vertical side (D-C), shifted right xshift=0mm,
+        \draw[<->, gray]
+            ($(H)+(0.6,0)$) -- ($(H |- G)+(0.6,0)$)
+            node[black, midway, fill=white, inner sep=2.5pt] {3\,cm};
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+    \text{Area} &= \frac{1}{2} \text{bh} \\
+    \text{Area} &= \frac{1}{2} \times 9 \text{cm} \times 3 \text{cm}  \\
+    \text{Area} &= 13.5 \text{cm}^2
+  \end{align*}
+\end{minipage}
+
+\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+ \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+        \begin{scope}[rotate=100]
+
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (6.586,0);
+        \coordinate (D) at ($(B)+(0.414,0)$);  % extend out
+        \coordinate (C) at ($(D)+(0,1.464)$); % Perpendicular upwards
+
+        \draw (A)--(B)--(C)--cycle;
+        \draw[dashed] (B)--(D);
+        \draw[dashed] (D)--(C);
+        \pic [draw, -, angle radius=0.2cm] {right angle=C--D--B};
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(A)+(-0.2,-0.2)$) {A};
+        \node at ($(B)+(0.0,-0.2)$) {B};
+        \node at ($(D)+(0.2,-0.2)$) {D};
+        \node at ($(C)+(0.2,0.2)$) {C};
+
+
+        % dotted/dashed arrows shifted away from edges
+        % Horizontal side (A-B), shifted down yshift=0mm,
+        \draw[<->, gray]
+            ($(A) + (0,-0.7cm)$) -- ($(B) + (0,-0.7cm)$)
+            node[black, midway, fill=white, inner sep=2.5pt] {9\,cm};
+
+        % Vertical side (D-C), shifted right xshift=0mm,
+        \draw[<->, gray]
+            ($(D)+(0.6,0)$) -- ($(D |- C)+(0.6,0)$)
+            node[black, midway, fill=white, inner sep=2.5pt] {2\,cm};
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+    \text{Area} &= \frac{1}{2} \text{bh} \\
+    \text{Area} &= \frac{1}{2} \times 9 \text{cm} \times 2 \text{cm}  \\
+    \text{Area} &= 9.0 \text{cm}^2
   \end{align*}
 \end{minipage}
 
@@ -586,10 +724,56 @@
  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
         \begin{scope}[rotate=0]
 
+        \coordinate (Q) at (0,0);
+        \coordinate (R) at (2.342,0);
+        \coordinate (T) at ($(R)+(1.419,0)$);  % extend out
+        \coordinate (S) at ($(T)+(0,2.007)$); % Perpendicular upwards
+
+        \draw (Q)--(R)--(S)--cycle;
+        \draw[dashed] (R)--(T);
+        \draw[dashed] (T)--(S);
+        \pic [draw, -, angle radius=0.2cm] {right angle=S--T--R};
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(Q)+(-0.2,-0.2)$) {Q};
+        \node at ($(R)+(0.0,-0.2)$) {R};
+        \node at ($(T)+(0.2,-0.2)$) {T};
+        \node at ($(S)+(0.2,0.2)$) {S};
+
+
+        % dotted/dashed arrows shifted away from edges
+        % Horizontal side (A-B), shifted down yshift=0mm,
+        \draw[<->, gray]
+            ($(Q) + (0,-0.7cm)$) -- ($(R) + (0,-0.7cm)$)
+            node[black, midway, fill=white, inner sep=2.5pt] {7\,cm};
+
+        % Vertical side (D-C), shifted right xshift=0mm,
+        \draw[<->, gray]
+            ($(T)+(0.6,0)$) -- ($(T |- S)+(0.6,0)$)
+            node[black, midway, fill=white, inner sep=2.5pt] {6\,cm};
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+    \text{Area} &= \frac{1}{2} \text{bh} \\
+    \text{Area} &= \frac{1}{2} \times 7 \text{cm} \times 6 \text{cm}  \\
+    \text{Area} &= 21.0 \text{cm}^2
+  \end{align*}
+\end{minipage}
+
+\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+ \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+        \begin{scope}[rotate=80]
+
         \coordinate (K) at (0,0);
-        \coordinate (L) at (3.243,0);
-        \coordinate (N) at ($(L)+(0.652,0)$);  % extend out
-        \coordinate (M) at ($(N)+(0,2.027)$); % Perpendicular upwards
+        \coordinate (L) at (2.662,0);
+        \coordinate (N) at ($(L)+(1.207,0)$);  % extend out
+        \coordinate (M) at ($(N)+(0,1.664)$); % Perpendicular upwards
 
         \draw (K)--(L)--(M)--cycle;
         \draw[dashed] (L)--(N);
@@ -630,12 +814,12 @@
   \refstepcounter{minipagecount}
   \noindent{(\theminipagecount)}\quad
  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-        \begin{scope}[rotate=270]
+        \begin{scope}[rotate=180]
 
         \coordinate (Q) at (0,0);
-        \coordinate (R) at (5.209,0);
-        \coordinate (T) at ($(R)+(1.424,0)$);  % extend out
-        \coordinate (S) at ($(T)+(0,2.315)$); % Perpendicular upwards
+        \coordinate (R) at (3.89,0);
+        \coordinate (T) at ($(R)+(1.059,0)$);  % extend out
+        \coordinate (S) at ($(T)+(0,1.945)$); % Perpendicular upwards
 
         \draw (Q)--(R)--(S)--cycle;
         \draw[dashed] (R)--(T);
@@ -654,7 +838,7 @@
         % Horizontal side (A-B), shifted down yshift=0mm,
         \draw[<->, gray]
             ($(Q) + (0,-0.7cm)$) -- ($(R) + (0,-0.7cm)$)
-            node[black, midway, fill=white, inner sep=2.5pt] {9\,cm};
+            node[black, midway, fill=white, inner sep=2.5pt] {8\,cm};
 
         % Vertical side (D-C), shifted right xshift=0mm,
         \draw[<->, gray]
@@ -667,8 +851,8 @@
 \begin{minipage}{.4\textwidth}
   \begin{align*}
     \text{Area} &= \frac{1}{2} \text{bh} \\
-    \text{Area} &= \frac{1}{2} \times 9 \text{cm} \times 4 \text{cm}  \\
-    \text{Area} &= 18.0 \text{cm}^2
+    \text{Area} &= \frac{1}{2} \times 8 \text{cm} \times 4 \text{cm}  \\
+    \text{Area} &= 16.0 \text{cm}^2
   \end{align*}
 \end{minipage}
 
@@ -676,12 +860,12 @@
   \refstepcounter{minipagecount}
   \noindent{(\theminipagecount)}\quad
  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-        \begin{scope}[rotate=90]
+        \begin{scope}[rotate=170]
 
         \coordinate (W) at (0,0);
-        \coordinate (X) at (6.24,0);
-        \coordinate (Z) at ($(X)+(0.76,0)$);  % extend out
-        \coordinate (Y) at ($(Z)+(0,1.387)$); % Perpendicular upwards
+        \coordinate (X) at (2.898,0);
+        \coordinate (Z) at ($(X)+(0.731,0)$);  % extend out
+        \coordinate (Y) at ($(Z)+(0,1.739)$); % Perpendicular upwards
 
         \draw (W)--(X)--(Y)--cycle;
         \draw[dashed] (X)--(Z);
@@ -700,195 +884,11 @@
         % Horizontal side (A-B), shifted down yshift=0mm,
         \draw[<->, gray]
             ($(W) + (0,-0.7cm)$) -- ($(X) + (0,-0.7cm)$)
-            node[black, midway, fill=white, inner sep=2.5pt] {9\,cm};
-
-        % Vertical side (D-C), shifted right xshift=0mm,
-        \draw[<->, gray]
-            ($(Z)+(0.6,0)$) -- ($(Z |- Y)+(0.6,0)$)
-            node[black, midway, fill=white, inner sep=2.5pt] {2\,cm};
-    \end{scope}
-\end{tikzpicture}
-\end{minipage}%
-\hfill
-\begin{minipage}{.4\textwidth}
-  \begin{align*}
-    \text{Area} &= \frac{1}{2} \text{bh} \\
-    \text{Area} &= \frac{1}{2} \times 9 \text{cm} \times 2 \text{cm}  \\
-    \text{Area} &= 9.0 \text{cm}^2
-  \end{align*}
-\end{minipage}
-
-\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
-  \refstepcounter{minipagecount}
-  \noindent{(\theminipagecount)}\quad
- \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-        \begin{scope}[rotate=170]
-
-        \coordinate (E) at (0,0);
-        \coordinate (F) at (6.027,0);
-        \coordinate (H) at ($(F)+(0.973,0)$);  % extend out
-        \coordinate (G) at ($(H)+(0,2.009)$); % Perpendicular upwards
-
-        \draw (E)--(F)--(G)--cycle;
-        \draw[dashed] (F)--(H);
-        \draw[dashed] (H)--(G);
-        \pic [draw, -, angle radius=0.2cm] {right angle=G--H--F};
-
-        % Vertex LABELS
-        % Labels relative to shape geometry
-        \node at ($(E)+(-0.2,-0.2)$) {E};
-        \node at ($(F)+(0.0,-0.2)$) {F};
-        \node at ($(H)+(0.2,-0.2)$) {H};
-        \node at ($(G)+(0.2,0.2)$) {G};
-
-
-        % dotted/dashed arrows shifted away from edges
-        % Horizontal side (A-B), shifted down yshift=0mm,
-        \draw[<->, gray]
-            ($(E) + (0,-0.7cm)$) -- ($(F) + (0,-0.7cm)$)
-            node[black, midway, fill=white, inner sep=2.5pt] {6\,cm};
-
-        % Vertical side (D-C), shifted right xshift=0mm,
-        \draw[<->, gray]
-            ($(H)+(0.6,0)$) -- ($(H |- G)+(0.6,0)$)
-            node[black, midway, fill=white, inner sep=2.5pt] {2\,cm};
-    \end{scope}
-\end{tikzpicture}
-\end{minipage}%
-\hfill
-\begin{minipage}{.4\textwidth}
-  \begin{align*}
-    \text{Area} &= \frac{1}{2} \text{bh} \\
-    \text{Area} &= \frac{1}{2} \times 6 \text{cm} \times 2 \text{cm}  \\
-    \text{Area} &= 6.0 \text{cm}^2
-  \end{align*}
-\end{minipage}
-
-\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
-  \refstepcounter{minipagecount}
-  \noindent{(\theminipagecount)}\quad
- \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-        \begin{scope}[rotate=10]
-
-        \coordinate (A) at (0,0);
-        \coordinate (B) at (4.773,0);
-        \coordinate (D) at ($(B)+(1.321,0)$);  % extend out
-        \coordinate (C) at ($(D)+(0,1.591)$); % Perpendicular upwards
-
-        \draw (A)--(B)--(C)--cycle;
-        \draw[dashed] (B)--(D);
-        \draw[dashed] (D)--(C);
-        \pic [draw, -, angle radius=0.2cm] {right angle=C--D--B};
-
-        % Vertex LABELS
-        % Labels relative to shape geometry
-        \node at ($(A)+(-0.2,-0.2)$) {A};
-        \node at ($(B)+(0.0,-0.2)$) {B};
-        \node at ($(D)+(0.2,-0.2)$) {D};
-        \node at ($(C)+(0.2,0.2)$) {C};
-
-
-        % dotted/dashed arrows shifted away from edges
-        % Horizontal side (A-B), shifted down yshift=0mm,
-        \draw[<->, gray]
-            ($(A) + (0,-0.7cm)$) -- ($(B) + (0,-0.7cm)$)
-            node[black, midway, fill=white, inner sep=2.5pt] {9\,cm};
-
-        % Vertical side (D-C), shifted right xshift=0mm,
-        \draw[<->, gray]
-            ($(D)+(0.6,0)$) -- ($(D |- C)+(0.6,0)$)
-            node[black, midway, fill=white, inner sep=2.5pt] {3\,cm};
-    \end{scope}
-\end{tikzpicture}
-\end{minipage}%
-\hfill
-\begin{minipage}{.4\textwidth}
-  \begin{align*}
-    \text{Area} &= \frac{1}{2} \text{bh} \\
-    \text{Area} &= \frac{1}{2} \times 9 \text{cm} \times 3 \text{cm}  \\
-    \text{Area} &= 13.5 \text{cm}^2
-  \end{align*}
-\end{minipage}
-
-\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
-  \refstepcounter{minipagecount}
-  \noindent{(\theminipagecount)}\quad
- \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-        \begin{scope}[rotate=270]
-
-        \coordinate (K) at (0,0);
-        \coordinate (L) at (6.11,0);
-        \coordinate (N) at ($(L)+(0.89,0)$);  % extend out
-        \coordinate (M) at ($(N)+(0,1.527)$); % Perpendicular upwards
-
-        \draw (K)--(L)--(M)--cycle;
-        \draw[dashed] (L)--(N);
-        \draw[dashed] (N)--(M);
-        \pic [draw, -, angle radius=0.2cm] {right angle=M--N--L};
-
-        % Vertex LABELS
-        % Labels relative to shape geometry
-        \node at ($(K)+(-0.2,-0.2)$) {K};
-        \node at ($(L)+(0.0,-0.2)$) {L};
-        \node at ($(N)+(0.2,-0.2)$) {N};
-        \node at ($(M)+(0.2,0.2)$) {M};
-
-
-        % dotted/dashed arrows shifted away from edges
-        % Horizontal side (A-B), shifted down yshift=0mm,
-        \draw[<->, gray]
-            ($(K) + (0,-0.7cm)$) -- ($(L) + (0,-0.7cm)$)
-            node[black, midway, fill=white, inner sep=2.5pt] {8\,cm};
-
-        % Vertical side (D-C), shifted right xshift=0mm,
-        \draw[<->, gray]
-            ($(N)+(0.6,0)$) -- ($(N |- M)+(0.6,0)$)
-            node[black, midway, fill=white, inner sep=2.5pt] {2\,cm};
-    \end{scope}
-\end{tikzpicture}
-\end{minipage}%
-\hfill
-\begin{minipage}{.4\textwidth}
-  \begin{align*}
-    \text{Area} &= \frac{1}{2} \text{bh} \\
-    \text{Area} &= \frac{1}{2} \times 8 \text{cm} \times 2 \text{cm}  \\
-    \text{Area} &= 8.0 \text{cm}^2
-  \end{align*}
-\end{minipage}
-
-\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
-  \refstepcounter{minipagecount}
-  \noindent{(\theminipagecount)}\quad
- \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-        \begin{scope}[rotate=180]
-
-        \coordinate (K) at (0,0);
-        \coordinate (L) at (2.922,0);
-        \coordinate (N) at ($(L)+(0.625,0)$);  % extend out
-        \coordinate (M) at ($(N)+(0,1.753)$); % Perpendicular upwards
-
-        \draw (K)--(L)--(M)--cycle;
-        \draw[dashed] (L)--(N);
-        \draw[dashed] (N)--(M);
-        \pic [draw, -, angle radius=0.2cm] {right angle=M--N--L};
-
-        % Vertex LABELS
-        % Labels relative to shape geometry
-        \node at ($(K)+(-0.2,-0.2)$) {K};
-        \node at ($(L)+(0.0,-0.2)$) {L};
-        \node at ($(N)+(0.2,-0.2)$) {N};
-        \node at ($(M)+(0.2,0.2)$) {M};
-
-
-        % dotted/dashed arrows shifted away from edges
-        % Horizontal side (A-B), shifted down yshift=0mm,
-        \draw[<->, gray]
-            ($(K) + (0,-0.7cm)$) -- ($(L) + (0,-0.7cm)$)
             node[black, midway, fill=white, inner sep=2.5pt] {5\,cm};
 
         % Vertical side (D-C), shifted right xshift=0mm,
         \draw[<->, gray]
-            ($(N)+(0.6,0)$) -- ($(N |- M)+(0.6,0)$)
+            ($(Z)+(0.6,0)$) -- ($(Z |- Y)+(0.6,0)$)
             node[black, midway, fill=white, inner sep=2.5pt] {3\,cm};
     \end{scope}
 \end{tikzpicture}
@@ -906,35 +906,35 @@
   \refstepcounter{minipagecount}
   \noindent{(\theminipagecount)}\quad
  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-        \begin{scope}[rotate=-10]
+        \begin{scope}[rotate=0]
 
-        \coordinate (E) at (0,0);
-        \coordinate (F) at (6.492,0);
-        \coordinate (H) at ($(F)+(0.508,0)$);  % extend out
-        \coordinate (G) at ($(H)+(0,1.855)$); % Perpendicular upwards
+        \coordinate (W) at (0,0);
+        \coordinate (X) at (2.457,0);
+        \coordinate (Z) at ($(X)+(1.306,0)$);  % extend out
+        \coordinate (Y) at ($(Z)+(0,1.638)$); % Perpendicular upwards
 
-        \draw (E)--(F)--(G)--cycle;
-        \draw[dashed] (F)--(H);
-        \draw[dashed] (H)--(G);
-        \pic [draw, -, angle radius=0.2cm] {right angle=G--H--F};
+        \draw (W)--(X)--(Y)--cycle;
+        \draw[dashed] (X)--(Z);
+        \draw[dashed] (Z)--(Y);
+        \pic [draw, -, angle radius=0.2cm] {right angle=Y--Z--X};
 
         % Vertex LABELS
         % Labels relative to shape geometry
-        \node at ($(E)+(-0.2,-0.2)$) {E};
-        \node at ($(F)+(0.0,-0.2)$) {F};
-        \node at ($(H)+(0.2,-0.2)$) {H};
-        \node at ($(G)+(0.2,0.2)$) {G};
+        \node at ($(W)+(-0.2,-0.2)$) {W};
+        \node at ($(X)+(0.0,-0.2)$) {X};
+        \node at ($(Z)+(0.2,-0.2)$) {Z};
+        \node at ($(Y)+(0.2,0.2)$) {Y};
 
 
         % dotted/dashed arrows shifted away from edges
         % Horizontal side (A-B), shifted down yshift=0mm,
         \draw[<->, gray]
-            ($(E) + (0,-0.7cm)$) -- ($(F) + (0,-0.7cm)$)
-            node[black, midway, fill=white, inner sep=2.5pt] {7\,cm};
+            ($(W) + (0,-0.7cm)$) -- ($(X) + (0,-0.7cm)$)
+            node[black, midway, fill=white, inner sep=2.5pt] {3\,cm};
 
         % Vertical side (D-C), shifted right xshift=0mm,
         \draw[<->, gray]
-            ($(H)+(0.6,0)$) -- ($(H |- G)+(0.6,0)$)
+            ($(Z)+(0.6,0)$) -- ($(Z |- Y)+(0.6,0)$)
             node[black, midway, fill=white, inner sep=2.5pt] {2\,cm};
     \end{scope}
 \end{tikzpicture}
@@ -943,8 +943,8 @@
 \begin{minipage}{.4\textwidth}
   \begin{align*}
     \text{Area} &= \frac{1}{2} \text{bh} \\
-    \text{Area} &= \frac{1}{2} \times 7 \text{cm} \times 2 \text{cm}  \\
-    \text{Area} &= 7.0 \text{cm}^2
+    \text{Area} &= \frac{1}{2} \times 3 \text{cm} \times 2 \text{cm}  \\
+    \text{Area} &= 3.0 \text{cm}^2
   \end{align*}
 \end{minipage}
 
