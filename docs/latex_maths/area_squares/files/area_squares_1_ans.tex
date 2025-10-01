@@ -11,48 +11,48 @@
 \section*{ }
     \begin{minipage}{0.55\textwidth}
   \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-    \begin{scope}[rotate=-10]
+    \begin{scope}[rotate=-20]
         % Draw square
-        \draw (0,0) coordinate (A) --
-              ++(2.985,0) coordinate (B) --
-              ++(0,2.985) coordinate (C) --
-              ++(-2.985,0) coordinate (D) -- cycle;
+        \draw (0,0) coordinate (W) --
+              ++(2.209,0) coordinate (X) --
+              ++(0,2.209) coordinate (Y) --
+              ++(-2.209,0) coordinate (Z) -- cycle;
 
         % Right angle markers
-        \foreach \p/\q/\r in {D/A/B,A/B/C,B/C/D,C/D/A} {
+        \foreach \p/\q/\r in {Z/W/X,W/X/Y,X/Y/Z,Y/Z/W} {
             \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
         }
 
         % Vertex LABELS
         % Labels relative to shape geometry
-        \node at ($(A)+(-0.2,-0.2)$) {A};
-        \node at ($(B)+(0.2,-0.2)$) {B};
-        \node at ($(C)+(0.2,0.2)$) {C};
-        \node at ($(D)+(-0.2,0.2)$) {D};
+        \node at ($(W)+(-0.2,-0.2)$) {W};
+        \node at ($(X)+(0.2,-0.2)$) {X};
+        \node at ($(Y)+(0.2,0.2)$) {Y};
+        \node at ($(Z)+(-0.2,0.2)$) {Z};
 
         % Tick marks across horizontal sides
         \draw[thin, gray]
-            ($(A)!0.5!(B) + (0,-0.10)$) --
-            ($(A)!0.5!(B) + (0,0.10)$);
+            ($(W)!0.5!(X) + (0,-0.10)$) --
+            ($(W)!0.5!(X) + (0,0.10)$);
 
         \draw[thin, gray]
-            ($(D)!0.5!(C) + (0,-0.10)$) --
-            ($(D)!0.5!(C) + (0,0.10)$);
+            ($(Z)!0.5!(Y) + (0,-0.10)$) --
+            ($(Z)!0.5!(Y) + (0,0.10)$);
 
         % Tick marks across vertical sides
         \draw[thin, gray]
-            ($(B)!0.5!(C) + (-0.10,0)$) --
-            ($(B)!0.5!(C) + (0.10,0)$);
+            ($(X)!0.5!(Y) + (-0.10,0)$) --
+            ($(X)!0.5!(Y) + (0.10,0)$);
 
         \draw[thin, gray]
-            ($(A)!0.5!(D) + (-0.10,0)$) --
-            ($(A)!0.5!(D) + (0.10,0)$);
+            ($(W)!0.5!(Z) + (-0.10,0)$) --
+            ($(W)!0.5!(Z) + (0.10,0)$);
 
         % dotted/dashed arrows shifted away from edges
         % % Vertical side (B-C), shifted right
         \draw[<->, gray]
-            ($(B) + (0.50cm,0)$) -- ($(C) + (0.50cm,0)$)
-            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {6\,cm};
+            ($(X) + (0.50cm,0)$) -- ($(Y) + (0.50cm,0)$)
+            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {3\,cm};
 
     \end{scope}
 \end{tikzpicture}
@@ -61,8 +61,8 @@
 \begin{minipage}{.4\textwidth}
   \begin{align*}
   \text{Area} &= l^2 \\
-  \text{Area} &= 6 \,\text{cm} \times 6 \,\text{cm} \\
-  \text{Area} &= 36 \,\text{cm}^2
+  \text{Area} &= 3 \,\text{cm} \times 3 \,\text{cm} \\
+  \text{Area} &= 9 \,\text{cm}^2
   \end{align*}
 \end{minipage}
 

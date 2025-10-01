@@ -32,49 +32,49 @@
   \refstepcounter{minipagecount}
   \noindent{(\theminipagecount)}\quad
   \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-    \begin{scope}[rotate=0]
+    \begin{scope}[rotate=30]
         % Draw square
-        \draw (0,0) coordinate (A) --
-              ++(2.076,0) coordinate (B) --
-              ++(0,2.076) coordinate (C) --
-              ++(-2.076,0) coordinate (D) -- cycle;
+        \draw (0,0) coordinate (E) --
+              ++(2.546,0) coordinate (F) --
+              ++(0,2.546) coordinate (G) --
+              ++(-2.546,0) coordinate (H) -- cycle;
 
         % Right angle markers
-        \foreach \p/\q/\r in {D/A/B,A/B/C,B/C/D,C/D/A} {
+        \foreach \p/\q/\r in {H/E/F,E/F/G,F/G/H,G/H/E} {
             \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
         }
 
         % Vertex LABELS
         % Labels relative to shape geometry
-        \node at ($(A)+(-0.2,-0.2)$) {A};
-        \node at ($(B)+(0.2,-0.2)$) {B};
-        \node at ($(C)+(0.2,0.2)$) {C};
-        \node at ($(D)+(-0.2,0.2)$) {D};
+        \node at ($(E)+(-0.2,-0.2)$) {E};
+        \node at ($(F)+(0.2,-0.2)$) {F};
+        \node at ($(G)+(0.2,0.2)$) {G};
+        \node at ($(H)+(-0.2,0.2)$) {H};
 
         % Tick marks across horizontal sides
         \draw[thin, gray]
-            ($(A)!0.5!(B) + (0,-0.10)$) --
-            ($(A)!0.5!(B) + (0,0.10)$);
+            ($(E)!0.5!(F) + (0,-0.10)$) --
+            ($(E)!0.5!(F) + (0,0.10)$);
 
         \draw[thin, gray]
-            ($(D)!0.5!(C) + (0,-0.10)$) --
-            ($(D)!0.5!(C) + (0,0.10)$);
+            ($(H)!0.5!(G) + (0,-0.10)$) --
+            ($(H)!0.5!(G) + (0,0.10)$);
 
         % Tick marks across vertical sides
         \draw[thin, gray]
-            ($(B)!0.5!(C) + (-0.10,0)$) --
-            ($(B)!0.5!(C) + (0.10,0)$);
+            ($(F)!0.5!(G) + (-0.10,0)$) --
+            ($(F)!0.5!(G) + (0.10,0)$);
 
         \draw[thin, gray]
-            ($(A)!0.5!(D) + (-0.10,0)$) --
-            ($(A)!0.5!(D) + (0.10,0)$);
+            ($(E)!0.5!(H) + (-0.10,0)$) --
+            ($(E)!0.5!(H) + (0.10,0)$);
 
 
         % dotted/dashed arrows shifted away from edges
         % % Vertical side (B-C), shifted right
         \draw[<->, gray]
-            ($(B) + (0.50cm,0)$) -- ($(C) + (0.50cm,0)$)
-            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {7\,cm};
+            ($(F) + (0.50cm,0)$) -- ($(G) + (0.50cm,0)$)
+            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {8\,cm};
 
     \end{scope}
 \end{tikzpicture}
@@ -83,126 +83,8 @@
 \begin{minipage}{.4\textwidth}
   \begin{align*}
   \text{Area} &= l^2 \\
-  \text{Area} &= 7 \,\text{cm} \times 7 \,\text{cm} \\
-  \text{Area} &= 49 \,\text{cm}^2
-  \end{align*}
-\end{minipage}
-\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
-  \refstepcounter{minipagecount}
-  \noindent{(\theminipagecount)}\quad
-  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-    \begin{scope}[rotate=0]
-        % Draw square
-        \draw (0,0) coordinate (K) --
-              ++(2.229,0) coordinate (L) --
-              ++(0,2.229) coordinate (M) --
-              ++(-2.229,0) coordinate (N) -- cycle;
-
-        % Right angle markers
-        \foreach \p/\q/\r in {N/K/L,K/L/M,L/M/N,M/N/K} {
-            \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
-        }
-
-        % Vertex LABELS
-        % Labels relative to shape geometry
-        \node at ($(K)+(-0.2,-0.2)$) {K};
-        \node at ($(L)+(0.2,-0.2)$) {L};
-        \node at ($(M)+(0.2,0.2)$) {M};
-        \node at ($(N)+(-0.2,0.2)$) {N};
-
-        % Tick marks across horizontal sides
-        \draw[thin, gray]
-            ($(K)!0.5!(L) + (0,-0.10)$) --
-            ($(K)!0.5!(L) + (0,0.10)$);
-
-        \draw[thin, gray]
-            ($(N)!0.5!(M) + (0,-0.10)$) --
-            ($(N)!0.5!(M) + (0,0.10)$);
-
-        % Tick marks across vertical sides
-        \draw[thin, gray]
-            ($(L)!0.5!(M) + (-0.10,0)$) --
-            ($(L)!0.5!(M) + (0.10,0)$);
-
-        \draw[thin, gray]
-            ($(K)!0.5!(N) + (-0.10,0)$) --
-            ($(K)!0.5!(N) + (0.10,0)$);
-
-
-        % dotted/dashed arrows shifted away from edges
-        % % Vertical side (B-C), shifted right
-        \draw[<->, gray]
-            ($(L) + (0.50cm,0)$) -- ($(M) + (0.50cm,0)$)
-            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {2\,cm};
-
-    \end{scope}
-\end{tikzpicture}
-\end{minipage}%
-\hfill
-\begin{minipage}{.4\textwidth}
-  \begin{align*}
-  \text{Area} &= l^2 \\
-  \text{Area} &= 2 \,\text{cm} \times 2 \,\text{cm} \\
-  \text{Area} &= 4 \,\text{cm}^2
-  \end{align*}
-\end{minipage}
-\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
-  \refstepcounter{minipagecount}
-  \noindent{(\theminipagecount)}\quad
-  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-    \begin{scope}[rotate=0]
-        % Draw square
-        \draw (0,0) coordinate (Q) --
-              ++(2.632,0) coordinate (R) --
-              ++(0,2.632) coordinate (S) --
-              ++(-2.632,0) coordinate (T) -- cycle;
-
-        % Right angle markers
-        \foreach \p/\q/\r in {T/Q/R,Q/R/S,R/S/T,S/T/Q} {
-            \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
-        }
-
-        % Vertex LABELS
-        % Labels relative to shape geometry
-        \node at ($(Q)+(-0.2,-0.2)$) {Q};
-        \node at ($(R)+(0.2,-0.2)$) {R};
-        \node at ($(S)+(0.2,0.2)$) {S};
-        \node at ($(T)+(-0.2,0.2)$) {T};
-
-        % Tick marks across horizontal sides
-        \draw[thin, gray]
-            ($(Q)!0.5!(R) + (0,-0.10)$) --
-            ($(Q)!0.5!(R) + (0,0.10)$);
-
-        \draw[thin, gray]
-            ($(T)!0.5!(S) + (0,-0.10)$) --
-            ($(T)!0.5!(S) + (0,0.10)$);
-
-        % Tick marks across vertical sides
-        \draw[thin, gray]
-            ($(R)!0.5!(S) + (-0.10,0)$) --
-            ($(R)!0.5!(S) + (0.10,0)$);
-
-        \draw[thin, gray]
-            ($(Q)!0.5!(T) + (-0.10,0)$) --
-            ($(Q)!0.5!(T) + (0.10,0)$);
-
-
-        % dotted/dashed arrows shifted away from edges
-        % % Vertical side (B-C), shifted right
-        \draw[<->, gray]
-            ($(R) + (0.50cm,0)$) -- ($(S) + (0.50cm,0)$)
-            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {5\,cm};
-
-    \end{scope}
-\end{tikzpicture}
-\end{minipage}%
-\hfill
-\begin{minipage}{.4\textwidth}
-  \begin{align*}
-  \text{Area} &= l^2 \\
-  \text{Area} &= 5 \,\text{cm} \times 5 \,\text{cm} \\
-  \text{Area} &= 25 \,\text{cm}^2
+  \text{Area} &= 8 \,\text{cm} \times 8 \,\text{cm} \\
+  \text{Area} &= 64 \,\text{cm}^2
   \end{align*}
 \end{minipage}
 \par\vspace{1cm}\begin{minipage}{0.55\textwidth}
@@ -212,9 +94,9 @@
     \begin{scope}[rotate=-10]
         % Draw square
         \draw (0,0) coordinate (Q) --
-              ++(1.914,0) coordinate (R) --
-              ++(0,1.914) coordinate (S) --
-              ++(-1.914,0) coordinate (T) -- cycle;
+              ++(2.587,0) coordinate (R) --
+              ++(0,2.587) coordinate (S) --
+              ++(-2.587,0) coordinate (T) -- cycle;
 
         % Right angle markers
         \foreach \p/\q/\r in {T/Q/R,Q/R/S,R/S/T,S/T/Q} {
@@ -251,7 +133,7 @@
         % % Vertical side (B-C), shifted right
         \draw[<->, gray]
             ($(R) + (0.50cm,0)$) -- ($(S) + (0.50cm,0)$)
-            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {4\,cm};
+            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {6\,cm};
 
     \end{scope}
 \end{tikzpicture}
@@ -260,20 +142,79 @@
 \begin{minipage}{.4\textwidth}
   \begin{align*}
   \text{Area} &= l^2 \\
-  \text{Area} &= 4 \,\text{cm} \times 4 \,\text{cm} \\
-  \text{Area} &= 16 \,\text{cm}^2
+  \text{Area} &= 6 \,\text{cm} \times 6 \,\text{cm} \\
+  \text{Area} &= 36 \,\text{cm}^2
   \end{align*}
 \end{minipage}
 \par\vspace{1cm}\begin{minipage}{0.55\textwidth}
   \refstepcounter{minipagecount}
   \noindent{(\theminipagecount)}\quad
   \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-    \begin{scope}[rotate=-30]
+    \begin{scope}[rotate=0]
+        % Draw square
+        \draw (0,0) coordinate (E) --
+              ++(1.579,0) coordinate (F) --
+              ++(0,1.579) coordinate (G) --
+              ++(-1.579,0) coordinate (H) -- cycle;
+
+        % Right angle markers
+        \foreach \p/\q/\r in {H/E/F,E/F/G,F/G/H,G/H/E} {
+            \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
+        }
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(E)+(-0.2,-0.2)$) {E};
+        \node at ($(F)+(0.2,-0.2)$) {F};
+        \node at ($(G)+(0.2,0.2)$) {G};
+        \node at ($(H)+(-0.2,0.2)$) {H};
+
+        % Tick marks across horizontal sides
+        \draw[thin, gray]
+            ($(E)!0.5!(F) + (0,-0.10)$) --
+            ($(E)!0.5!(F) + (0,0.10)$);
+
+        \draw[thin, gray]
+            ($(H)!0.5!(G) + (0,-0.10)$) --
+            ($(H)!0.5!(G) + (0,0.10)$);
+
+        % Tick marks across vertical sides
+        \draw[thin, gray]
+            ($(F)!0.5!(G) + (-0.10,0)$) --
+            ($(F)!0.5!(G) + (0.10,0)$);
+
+        \draw[thin, gray]
+            ($(E)!0.5!(H) + (-0.10,0)$) --
+            ($(E)!0.5!(H) + (0.10,0)$);
+
+
+        % dotted/dashed arrows shifted away from edges
+        % % Vertical side (B-C), shifted right
+        \draw[<->, gray]
+            ($(F) + (0.50cm,0)$) -- ($(G) + (0.50cm,0)$)
+            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {9\,cm};
+
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+  \text{Area} &= l^2 \\
+  \text{Area} &= 9 \,\text{cm} \times 9 \,\text{cm} \\
+  \text{Area} &= 81 \,\text{cm}^2
+  \end{align*}
+\end{minipage}
+\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=0]
         % Draw square
         \draw (0,0) coordinate (W) --
-              ++(2.526,0) coordinate (X) --
-              ++(0,2.526) coordinate (Y) --
-              ++(-2.526,0) coordinate (Z) -- cycle;
+              ++(2.585,0) coordinate (X) --
+              ++(0,2.585) coordinate (Y) --
+              ++(-2.585,0) coordinate (Z) -- cycle;
 
         % Right angle markers
         \foreach \p/\q/\r in {Z/W/X,W/X/Y,X/Y/Z,Y/Z/W} {
@@ -310,7 +251,7 @@
         % % Vertical side (B-C), shifted right
         \draw[<->, gray]
             ($(X) + (0.50cm,0)$) -- ($(Y) + (0.50cm,0)$)
-            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {9\,cm};
+            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {5\,cm};
 
     \end{scope}
 \end{tikzpicture}
@@ -319,8 +260,67 @@
 \begin{minipage}{.4\textwidth}
   \begin{align*}
   \text{Area} &= l^2 \\
-  \text{Area} &= 9 \,\text{cm} \times 9 \,\text{cm} \\
-  \text{Area} &= 81 \,\text{cm}^2
+  \text{Area} &= 5 \,\text{cm} \times 5 \,\text{cm} \\
+  \text{Area} &= 25 \,\text{cm}^2
+  \end{align*}
+\end{minipage}
+\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=30]
+        % Draw square
+        \draw (0,0) coordinate (E) --
+              ++(1.671,0) coordinate (F) --
+              ++(0,1.671) coordinate (G) --
+              ++(-1.671,0) coordinate (H) -- cycle;
+
+        % Right angle markers
+        \foreach \p/\q/\r in {H/E/F,E/F/G,F/G/H,G/H/E} {
+            \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
+        }
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(E)+(-0.2,-0.2)$) {E};
+        \node at ($(F)+(0.2,-0.2)$) {F};
+        \node at ($(G)+(0.2,0.2)$) {G};
+        \node at ($(H)+(-0.2,0.2)$) {H};
+
+        % Tick marks across horizontal sides
+        \draw[thin, gray]
+            ($(E)!0.5!(F) + (0,-0.10)$) --
+            ($(E)!0.5!(F) + (0,0.10)$);
+
+        \draw[thin, gray]
+            ($(H)!0.5!(G) + (0,-0.10)$) --
+            ($(H)!0.5!(G) + (0,0.10)$);
+
+        % Tick marks across vertical sides
+        \draw[thin, gray]
+            ($(F)!0.5!(G) + (-0.10,0)$) --
+            ($(F)!0.5!(G) + (0.10,0)$);
+
+        \draw[thin, gray]
+            ($(E)!0.5!(H) + (-0.10,0)$) --
+            ($(E)!0.5!(H) + (0.10,0)$);
+
+
+        % dotted/dashed arrows shifted away from edges
+        % % Vertical side (B-C), shifted right
+        \draw[<->, gray]
+            ($(F) + (0.50cm,0)$) -- ($(G) + (0.50cm,0)$)
+            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {7\,cm};
+
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+  \text{Area} &= l^2 \\
+  \text{Area} &= 7 \,\text{cm} \times 7 \,\text{cm} \\
+  \text{Area} &= 49 \,\text{cm}^2
   \end{align*}
 \end{minipage}
 \par\vspace{1cm}\begin{minipage}{0.55\textwidth}
@@ -330,9 +330,9 @@
     \begin{scope}[rotate=0]
         % Draw square
         \draw (0,0) coordinate (Q) --
-              ++(2.811,0) coordinate (R) --
-              ++(0,2.811) coordinate (S) --
-              ++(-2.811,0) coordinate (T) -- cycle;
+              ++(2.474,0) coordinate (R) --
+              ++(0,2.474) coordinate (S) --
+              ++(-2.474,0) coordinate (T) -- cycle;
 
         % Right angle markers
         \foreach \p/\q/\r in {T/Q/R,Q/R/S,R/S/T,S/T/Q} {
@@ -386,71 +386,12 @@
   \refstepcounter{minipagecount}
   \noindent{(\theminipagecount)}\quad
   \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-    \begin{scope}[rotate=-45]
-        % Draw square
-        \draw (0,0) coordinate (A) --
-              ++(2.248,0) coordinate (B) --
-              ++(0,2.248) coordinate (C) --
-              ++(-2.248,0) coordinate (D) -- cycle;
-
-        % Right angle markers
-        \foreach \p/\q/\r in {D/A/B,A/B/C,B/C/D,C/D/A} {
-            \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
-        }
-
-        % Vertex LABELS
-        % Labels relative to shape geometry
-        \node at ($(A)+(-0.2,-0.2)$) {A};
-        \node at ($(B)+(0.2,-0.2)$) {B};
-        \node at ($(C)+(0.2,0.2)$) {C};
-        \node at ($(D)+(-0.2,0.2)$) {D};
-
-        % Tick marks across horizontal sides
-        \draw[thin, gray]
-            ($(A)!0.5!(B) + (0,-0.10)$) --
-            ($(A)!0.5!(B) + (0,0.10)$);
-
-        \draw[thin, gray]
-            ($(D)!0.5!(C) + (0,-0.10)$) --
-            ($(D)!0.5!(C) + (0,0.10)$);
-
-        % Tick marks across vertical sides
-        \draw[thin, gray]
-            ($(B)!0.5!(C) + (-0.10,0)$) --
-            ($(B)!0.5!(C) + (0.10,0)$);
-
-        \draw[thin, gray]
-            ($(A)!0.5!(D) + (-0.10,0)$) --
-            ($(A)!0.5!(D) + (0.10,0)$);
-
-
-        % dotted/dashed arrows shifted away from edges
-        % % Vertical side (B-C), shifted right
-        \draw[<->, gray]
-            ($(B) + (0.50cm,0)$) -- ($(C) + (0.50cm,0)$)
-            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {6\,cm};
-
-    \end{scope}
-\end{tikzpicture}
-\end{minipage}%
-\hfill
-\begin{minipage}{.4\textwidth}
-  \begin{align*}
-  \text{Area} &= l^2 \\
-  \text{Area} &= 6 \,\text{cm} \times 6 \,\text{cm} \\
-  \text{Area} &= 36 \,\text{cm}^2
-  \end{align*}
-\end{minipage}
-\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
-  \refstepcounter{minipagecount}
-  \noindent{(\theminipagecount)}\quad
-  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-    \begin{scope}[rotate=10]
+    \begin{scope}[rotate=0]
         % Draw square
         \draw (0,0) coordinate (W) --
-              ++(2.117,0) coordinate (X) --
-              ++(0,2.117) coordinate (Y) --
-              ++(-2.117,0) coordinate (Z) -- cycle;
+              ++(2.101,0) coordinate (X) --
+              ++(0,2.101) coordinate (Y) --
+              ++(-2.101,0) coordinate (Z) -- cycle;
 
         % Right angle markers
         \foreach \p/\q/\r in {Z/W/X,W/X/Y,X/Y/Z,Y/Z/W} {
@@ -487,7 +428,7 @@
         % % Vertical side (B-C), shifted right
         \draw[<->, gray]
             ($(X) + (0.50cm,0)$) -- ($(Y) + (0.50cm,0)$)
-            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {8\,cm};
+            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {2\,cm};
 
     \end{scope}
 \end{tikzpicture}
@@ -496,8 +437,8 @@
 \begin{minipage}{.4\textwidth}
   \begin{align*}
   \text{Area} &= l^2 \\
-  \text{Area} &= 8 \,\text{cm} \times 8 \,\text{cm} \\
-  \text{Area} &= 64 \,\text{cm}^2
+  \text{Area} &= 2 \,\text{cm} \times 2 \,\text{cm} \\
+  \text{Area} &= 4 \,\text{cm}^2
   \end{align*}
 \end{minipage}
 \par\vspace{1cm}\begin{minipage}{0.55\textwidth}
@@ -506,69 +447,10 @@
   \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
     \begin{scope}[rotate=0]
         % Draw square
-        \draw (0,0) coordinate (E) --
-              ++(2.006,0) coordinate (F) --
-              ++(0,2.006) coordinate (G) --
-              ++(-2.006,0) coordinate (H) -- cycle;
-
-        % Right angle markers
-        \foreach \p/\q/\r in {H/E/F,E/F/G,F/G/H,G/H/E} {
-            \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
-        }
-
-        % Vertex LABELS
-        % Labels relative to shape geometry
-        \node at ($(E)+(-0.2,-0.2)$) {E};
-        \node at ($(F)+(0.2,-0.2)$) {F};
-        \node at ($(G)+(0.2,0.2)$) {G};
-        \node at ($(H)+(-0.2,0.2)$) {H};
-
-        % Tick marks across horizontal sides
-        \draw[thin, gray]
-            ($(E)!0.5!(F) + (0,-0.10)$) --
-            ($(E)!0.5!(F) + (0,0.10)$);
-
-        \draw[thin, gray]
-            ($(H)!0.5!(G) + (0,-0.10)$) --
-            ($(H)!0.5!(G) + (0,0.10)$);
-
-        % Tick marks across vertical sides
-        \draw[thin, gray]
-            ($(F)!0.5!(G) + (-0.10,0)$) --
-            ($(F)!0.5!(G) + (0.10,0)$);
-
-        \draw[thin, gray]
-            ($(E)!0.5!(H) + (-0.10,0)$) --
-            ($(E)!0.5!(H) + (0.10,0)$);
-
-
-        % dotted/dashed arrows shifted away from edges
-        % % Vertical side (B-C), shifted right
-        \draw[<->, gray]
-            ($(F) + (0.50cm,0)$) -- ($(G) + (0.50cm,0)$)
-            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {3\,cm};
-
-    \end{scope}
-\end{tikzpicture}
-\end{minipage}%
-\hfill
-\begin{minipage}{.4\textwidth}
-  \begin{align*}
-  \text{Area} &= l^2 \\
-  \text{Area} &= 3 \,\text{cm} \times 3 \,\text{cm} \\
-  \text{Area} &= 9 \,\text{cm}^2
-  \end{align*}
-\end{minipage}
-\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
-  \refstepcounter{minipagecount}
-  \noindent{(\theminipagecount)}\quad
-  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-    \begin{scope}[rotate=10]
-        % Draw square
         \draw (0,0) coordinate (K) --
-              ++(1.677,0) coordinate (L) --
-              ++(0,1.677) coordinate (M) --
-              ++(-1.677,0) coordinate (N) -- cycle;
+              ++(2.226,0) coordinate (L) --
+              ++(0,2.226) coordinate (M) --
+              ++(-2.226,0) coordinate (N) -- cycle;
 
         % Right angle markers
         \foreach \p/\q/\r in {N/K/L,K/L/M,L/M/N,M/N/K} {
@@ -605,7 +487,7 @@
         % % Vertical side (B-C), shifted right
         \draw[<->, gray]
             ($(L) + (0.50cm,0)$) -- ($(M) + (0.50cm,0)$)
-            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {14\,cm};
+            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {4\,cm};
 
     \end{scope}
 \end{tikzpicture}
@@ -614,8 +496,8 @@
 \begin{minipage}{.4\textwidth}
   \begin{align*}
   \text{Area} &= l^2 \\
-  \text{Area} &= 14 \,\text{cm} \times 14 \,\text{cm} \\
-  \text{Area} &= 196 \,\text{cm}^2
+  \text{Area} &= 4 \,\text{cm} \times 4 \,\text{cm} \\
+  \text{Area} &= 16 \,\text{cm}^2
   \end{align*}
 \end{minipage}
 \par\vspace{1cm}\begin{minipage}{0.55\textwidth}
@@ -623,365 +505,11 @@
   \noindent{(\theminipagecount)}\quad
   \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
     \begin{scope}[rotate=0]
-        % Draw square
-        \draw (0,0) coordinate (A) --
-              ++(2.104,0) coordinate (B) --
-              ++(0,2.104) coordinate (C) --
-              ++(-2.104,0) coordinate (D) -- cycle;
-
-        % Right angle markers
-        \foreach \p/\q/\r in {D/A/B,A/B/C,B/C/D,C/D/A} {
-            \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
-        }
-
-        % Vertex LABELS
-        % Labels relative to shape geometry
-        \node at ($(A)+(-0.2,-0.2)$) {A};
-        \node at ($(B)+(0.2,-0.2)$) {B};
-        \node at ($(C)+(0.2,0.2)$) {C};
-        \node at ($(D)+(-0.2,0.2)$) {D};
-
-        % Tick marks across horizontal sides
-        \draw[thin, gray]
-            ($(A)!0.5!(B) + (0,-0.10)$) --
-            ($(A)!0.5!(B) + (0,0.10)$);
-
-        \draw[thin, gray]
-            ($(D)!0.5!(C) + (0,-0.10)$) --
-            ($(D)!0.5!(C) + (0,0.10)$);
-
-        % Tick marks across vertical sides
-        \draw[thin, gray]
-            ($(B)!0.5!(C) + (-0.10,0)$) --
-            ($(B)!0.5!(C) + (0.10,0)$);
-
-        \draw[thin, gray]
-            ($(A)!0.5!(D) + (-0.10,0)$) --
-            ($(A)!0.5!(D) + (0.10,0)$);
-
-
-        % dotted/dashed arrows shifted away from edges
-        % % Vertical side (B-C), shifted right
-        \draw[<->, gray]
-            ($(B) + (0.50cm,0)$) -- ($(C) + (0.50cm,0)$)
-            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {16\,cm};
-
-    \end{scope}
-\end{tikzpicture}
-\end{minipage}%
-\hfill
-\begin{minipage}{.4\textwidth}
-  \begin{align*}
-  \text{Area} &= l^2 \\
-  \text{Area} &= 16 \,\text{cm} \times 16 \,\text{cm} \\
-  \text{Area} &= 256 \,\text{cm}^2
-  \end{align*}
-\end{minipage}
-\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
-  \refstepcounter{minipagecount}
-  \noindent{(\theminipagecount)}\quad
-  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-    \begin{scope}[rotate=-30]
-        % Draw square
-        \draw (0,0) coordinate (E) --
-              ++(2.383,0) coordinate (F) --
-              ++(0,2.383) coordinate (G) --
-              ++(-2.383,0) coordinate (H) -- cycle;
-
-        % Right angle markers
-        \foreach \p/\q/\r in {H/E/F,E/F/G,F/G/H,G/H/E} {
-            \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
-        }
-
-        % Vertex LABELS
-        % Labels relative to shape geometry
-        \node at ($(E)+(-0.2,-0.2)$) {E};
-        \node at ($(F)+(0.2,-0.2)$) {F};
-        \node at ($(G)+(0.2,0.2)$) {G};
-        \node at ($(H)+(-0.2,0.2)$) {H};
-
-        % Tick marks across horizontal sides
-        \draw[thin, gray]
-            ($(E)!0.5!(F) + (0,-0.10)$) --
-            ($(E)!0.5!(F) + (0,0.10)$);
-
-        \draw[thin, gray]
-            ($(H)!0.5!(G) + (0,-0.10)$) --
-            ($(H)!0.5!(G) + (0,0.10)$);
-
-        % Tick marks across vertical sides
-        \draw[thin, gray]
-            ($(F)!0.5!(G) + (-0.10,0)$) --
-            ($(F)!0.5!(G) + (0.10,0)$);
-
-        \draw[thin, gray]
-            ($(E)!0.5!(H) + (-0.10,0)$) --
-            ($(E)!0.5!(H) + (0.10,0)$);
-
-
-        % dotted/dashed arrows shifted away from edges
-        % % Vertical side (B-C), shifted right
-        \draw[<->, gray]
-            ($(F) + (0.50cm,0)$) -- ($(G) + (0.50cm,0)$)
-            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {20\,cm};
-
-    \end{scope}
-\end{tikzpicture}
-\end{minipage}%
-\hfill
-\begin{minipage}{.4\textwidth}
-  \begin{align*}
-  \text{Area} &= l^2 \\
-  \text{Area} &= 20 \,\text{cm} \times 20 \,\text{cm} \\
-  \text{Area} &= 400 \,\text{cm}^2
-  \end{align*}
-\end{minipage}
-\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
-  \refstepcounter{minipagecount}
-  \noindent{(\theminipagecount)}\quad
-  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-    \begin{scope}[rotate=30]
-        % Draw square
-        \draw (0,0) coordinate (W) --
-              ++(2.671,0) coordinate (X) --
-              ++(0,2.671) coordinate (Y) --
-              ++(-2.671,0) coordinate (Z) -- cycle;
-
-        % Right angle markers
-        \foreach \p/\q/\r in {Z/W/X,W/X/Y,X/Y/Z,Y/Z/W} {
-            \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
-        }
-
-        % Vertex LABELS
-        % Labels relative to shape geometry
-        \node at ($(W)+(-0.2,-0.2)$) {W};
-        \node at ($(X)+(0.2,-0.2)$) {X};
-        \node at ($(Y)+(0.2,0.2)$) {Y};
-        \node at ($(Z)+(-0.2,0.2)$) {Z};
-
-        % Tick marks across horizontal sides
-        \draw[thin, gray]
-            ($(W)!0.5!(X) + (0,-0.10)$) --
-            ($(W)!0.5!(X) + (0,0.10)$);
-
-        \draw[thin, gray]
-            ($(Z)!0.5!(Y) + (0,-0.10)$) --
-            ($(Z)!0.5!(Y) + (0,0.10)$);
-
-        % Tick marks across vertical sides
-        \draw[thin, gray]
-            ($(X)!0.5!(Y) + (-0.10,0)$) --
-            ($(X)!0.5!(Y) + (0.10,0)$);
-
-        \draw[thin, gray]
-            ($(W)!0.5!(Z) + (-0.10,0)$) --
-            ($(W)!0.5!(Z) + (0.10,0)$);
-
-
-        % dotted/dashed arrows shifted away from edges
-        % % Vertical side (B-C), shifted right
-        \draw[<->, gray]
-            ($(X) + (0.50cm,0)$) -- ($(Y) + (0.50cm,0)$)
-            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {17\,cm};
-
-    \end{scope}
-\end{tikzpicture}
-\end{minipage}%
-\hfill
-\begin{minipage}{.4\textwidth}
-  \begin{align*}
-  \text{Area} &= l^2 \\
-  \text{Area} &= 17 \,\text{cm} \times 17 \,\text{cm} \\
-  \text{Area} &= 289 \,\text{cm}^2
-  \end{align*}
-\end{minipage}
-\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
-  \refstepcounter{minipagecount}
-  \noindent{(\theminipagecount)}\quad
-  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-    \begin{scope}[rotate=0]
-        % Draw square
-        \draw (0,0) coordinate (W) --
-              ++(2.595,0) coordinate (X) --
-              ++(0,2.595) coordinate (Y) --
-              ++(-2.595,0) coordinate (Z) -- cycle;
-
-        % Right angle markers
-        \foreach \p/\q/\r in {Z/W/X,W/X/Y,X/Y/Z,Y/Z/W} {
-            \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
-        }
-
-        % Vertex LABELS
-        % Labels relative to shape geometry
-        \node at ($(W)+(-0.2,-0.2)$) {W};
-        \node at ($(X)+(0.2,-0.2)$) {X};
-        \node at ($(Y)+(0.2,0.2)$) {Y};
-        \node at ($(Z)+(-0.2,0.2)$) {Z};
-
-        % Tick marks across horizontal sides
-        \draw[thin, gray]
-            ($(W)!0.5!(X) + (0,-0.10)$) --
-            ($(W)!0.5!(X) + (0,0.10)$);
-
-        \draw[thin, gray]
-            ($(Z)!0.5!(Y) + (0,-0.10)$) --
-            ($(Z)!0.5!(Y) + (0,0.10)$);
-
-        % Tick marks across vertical sides
-        \draw[thin, gray]
-            ($(X)!0.5!(Y) + (-0.10,0)$) --
-            ($(X)!0.5!(Y) + (0.10,0)$);
-
-        \draw[thin, gray]
-            ($(W)!0.5!(Z) + (-0.10,0)$) --
-            ($(W)!0.5!(Z) + (0.10,0)$);
-
-
-        % dotted/dashed arrows shifted away from edges
-        % % Vertical side (B-C), shifted right
-        \draw[<->, gray]
-            ($(X) + (0.50cm,0)$) -- ($(Y) + (0.50cm,0)$)
-            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {18\,cm};
-
-    \end{scope}
-\end{tikzpicture}
-\end{minipage}%
-\hfill
-\begin{minipage}{.4\textwidth}
-  \begin{align*}
-  \text{Area} &= l^2 \\
-  \text{Area} &= 18 \,\text{cm} \times 18 \,\text{cm} \\
-  \text{Area} &= 324 \,\text{cm}^2
-  \end{align*}
-\end{minipage}
-\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
-  \refstepcounter{minipagecount}
-  \noindent{(\theminipagecount)}\quad
-  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-    \begin{scope}[rotate=0]
-        % Draw square
-        \draw (0,0) coordinate (K) --
-              ++(1.561,0) coordinate (L) --
-              ++(0,1.561) coordinate (M) --
-              ++(-1.561,0) coordinate (N) -- cycle;
-
-        % Right angle markers
-        \foreach \p/\q/\r in {N/K/L,K/L/M,L/M/N,M/N/K} {
-            \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
-        }
-
-        % Vertex LABELS
-        % Labels relative to shape geometry
-        \node at ($(K)+(-0.2,-0.2)$) {K};
-        \node at ($(L)+(0.2,-0.2)$) {L};
-        \node at ($(M)+(0.2,0.2)$) {M};
-        \node at ($(N)+(-0.2,0.2)$) {N};
-
-        % Tick marks across horizontal sides
-        \draw[thin, gray]
-            ($(K)!0.5!(L) + (0,-0.10)$) --
-            ($(K)!0.5!(L) + (0,0.10)$);
-
-        \draw[thin, gray]
-            ($(N)!0.5!(M) + (0,-0.10)$) --
-            ($(N)!0.5!(M) + (0,0.10)$);
-
-        % Tick marks across vertical sides
-        \draw[thin, gray]
-            ($(L)!0.5!(M) + (-0.10,0)$) --
-            ($(L)!0.5!(M) + (0.10,0)$);
-
-        \draw[thin, gray]
-            ($(K)!0.5!(N) + (-0.10,0)$) --
-            ($(K)!0.5!(N) + (0.10,0)$);
-
-
-        % dotted/dashed arrows shifted away from edges
-        % % Vertical side (B-C), shifted right
-        \draw[<->, gray]
-            ($(L) + (0.50cm,0)$) -- ($(M) + (0.50cm,0)$)
-            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {15\,cm};
-
-    \end{scope}
-\end{tikzpicture}
-\end{minipage}%
-\hfill
-\begin{minipage}{.4\textwidth}
-  \begin{align*}
-  \text{Area} &= l^2 \\
-  \text{Area} &= 15 \,\text{cm} \times 15 \,\text{cm} \\
-  \text{Area} &= 225 \,\text{cm}^2
-  \end{align*}
-\end{minipage}
-\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
-  \refstepcounter{minipagecount}
-  \noindent{(\theminipagecount)}\quad
-  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-    \begin{scope}[rotate=30]
-        % Draw square
-        \draw (0,0) coordinate (W) --
-              ++(2.079,0) coordinate (X) --
-              ++(0,2.079) coordinate (Y) --
-              ++(-2.079,0) coordinate (Z) -- cycle;
-
-        % Right angle markers
-        \foreach \p/\q/\r in {Z/W/X,W/X/Y,X/Y/Z,Y/Z/W} {
-            \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
-        }
-
-        % Vertex LABELS
-        % Labels relative to shape geometry
-        \node at ($(W)+(-0.2,-0.2)$) {W};
-        \node at ($(X)+(0.2,-0.2)$) {X};
-        \node at ($(Y)+(0.2,0.2)$) {Y};
-        \node at ($(Z)+(-0.2,0.2)$) {Z};
-
-        % Tick marks across horizontal sides
-        \draw[thin, gray]
-            ($(W)!0.5!(X) + (0,-0.10)$) --
-            ($(W)!0.5!(X) + (0,0.10)$);
-
-        \draw[thin, gray]
-            ($(Z)!0.5!(Y) + (0,-0.10)$) --
-            ($(Z)!0.5!(Y) + (0,0.10)$);
-
-        % Tick marks across vertical sides
-        \draw[thin, gray]
-            ($(X)!0.5!(Y) + (-0.10,0)$) --
-            ($(X)!0.5!(Y) + (0.10,0)$);
-
-        \draw[thin, gray]
-            ($(W)!0.5!(Z) + (-0.10,0)$) --
-            ($(W)!0.5!(Z) + (0.10,0)$);
-
-
-        % dotted/dashed arrows shifted away from edges
-        % % Vertical side (B-C), shifted right
-        \draw[<->, gray]
-            ($(X) + (0.50cm,0)$) -- ($(Y) + (0.50cm,0)$)
-            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {11\,cm};
-
-    \end{scope}
-\end{tikzpicture}
-\end{minipage}%
-\hfill
-\begin{minipage}{.4\textwidth}
-  \begin{align*}
-  \text{Area} &= l^2 \\
-  \text{Area} &= 11 \,\text{cm} \times 11 \,\text{cm} \\
-  \text{Area} &= 121 \,\text{cm}^2
-  \end{align*}
-\end{minipage}
-\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
-  \refstepcounter{minipagecount}
-  \noindent{(\theminipagecount)}\quad
-  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-    \begin{scope}[rotate=-45]
         % Draw square
         \draw (0,0) coordinate (Q) --
-              ++(1.946,0) coordinate (R) --
-              ++(0,1.946) coordinate (S) --
-              ++(-1.946,0) coordinate (T) -- cycle;
+              ++(2.336,0) coordinate (R) --
+              ++(0,2.336) coordinate (S) --
+              ++(-2.336,0) coordinate (T) -- cycle;
 
         % Right angle markers
         \foreach \p/\q/\r in {T/Q/R,Q/R/S,R/S/T,S/T/Q} {
@@ -1018,7 +546,7 @@
         % % Vertical side (B-C), shifted right
         \draw[<->, gray]
             ($(R) + (0.50cm,0)$) -- ($(S) + (0.50cm,0)$)
-            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {13\,cm};
+            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {3\,cm};
 
     \end{scope}
 \end{tikzpicture}
@@ -1027,20 +555,138 @@
 \begin{minipage}{.4\textwidth}
   \begin{align*}
   \text{Area} &= l^2 \\
-  \text{Area} &= 13 \,\text{cm} \times 13 \,\text{cm} \\
-  \text{Area} &= 169 \,\text{cm}^2
+  \text{Area} &= 3 \,\text{cm} \times 3 \,\text{cm} \\
+  \text{Area} &= 9 \,\text{cm}^2
   \end{align*}
 \end{minipage}
 \par\vspace{1cm}\begin{minipage}{0.55\textwidth}
   \refstepcounter{minipagecount}
   \noindent{(\theminipagecount)}\quad
   \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-    \begin{scope}[rotate=-10]
+    \begin{scope}[rotate=0]
         % Draw square
         \draw (0,0) coordinate (Q) --
-              ++(1.609,0) coordinate (R) --
-              ++(0,1.609) coordinate (S) --
-              ++(-1.609,0) coordinate (T) -- cycle;
+              ++(2.527,0) coordinate (R) --
+              ++(0,2.527) coordinate (S) --
+              ++(-2.527,0) coordinate (T) -- cycle;
+
+        % Right angle markers
+        \foreach \p/\q/\r in {T/Q/R,Q/R/S,R/S/T,S/T/Q} {
+            \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
+        }
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(Q)+(-0.2,-0.2)$) {Q};
+        \node at ($(R)+(0.2,-0.2)$) {R};
+        \node at ($(S)+(0.2,0.2)$) {S};
+        \node at ($(T)+(-0.2,0.2)$) {T};
+
+        % Tick marks across horizontal sides
+        \draw[thin, gray]
+            ($(Q)!0.5!(R) + (0,-0.10)$) --
+            ($(Q)!0.5!(R) + (0,0.10)$);
+
+        \draw[thin, gray]
+            ($(T)!0.5!(S) + (0,-0.10)$) --
+            ($(T)!0.5!(S) + (0,0.10)$);
+
+        % Tick marks across vertical sides
+        \draw[thin, gray]
+            ($(R)!0.5!(S) + (-0.10,0)$) --
+            ($(R)!0.5!(S) + (0.10,0)$);
+
+        \draw[thin, gray]
+            ($(Q)!0.5!(T) + (-0.10,0)$) --
+            ($(Q)!0.5!(T) + (0.10,0)$);
+
+
+        % dotted/dashed arrows shifted away from edges
+        % % Vertical side (B-C), shifted right
+        \draw[<->, gray]
+            ($(R) + (0.50cm,0)$) -- ($(S) + (0.50cm,0)$)
+            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {11\,cm};
+
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+  \text{Area} &= l^2 \\
+  \text{Area} &= 11 \,\text{cm} \times 11 \,\text{cm} \\
+  \text{Area} &= 121 \,\text{cm}^2
+  \end{align*}
+\end{minipage}
+\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=-20]
+        % Draw square
+        \draw (0,0) coordinate (Q) --
+              ++(2.032,0) coordinate (R) --
+              ++(0,2.032) coordinate (S) --
+              ++(-2.032,0) coordinate (T) -- cycle;
+
+        % Right angle markers
+        \foreach \p/\q/\r in {T/Q/R,Q/R/S,R/S/T,S/T/Q} {
+            \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
+        }
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(Q)+(-0.2,-0.2)$) {Q};
+        \node at ($(R)+(0.2,-0.2)$) {R};
+        \node at ($(S)+(0.2,0.2)$) {S};
+        \node at ($(T)+(-0.2,0.2)$) {T};
+
+        % Tick marks across horizontal sides
+        \draw[thin, gray]
+            ($(Q)!0.5!(R) + (0,-0.10)$) --
+            ($(Q)!0.5!(R) + (0,0.10)$);
+
+        \draw[thin, gray]
+            ($(T)!0.5!(S) + (0,-0.10)$) --
+            ($(T)!0.5!(S) + (0,0.10)$);
+
+        % Tick marks across vertical sides
+        \draw[thin, gray]
+            ($(R)!0.5!(S) + (-0.10,0)$) --
+            ($(R)!0.5!(S) + (0.10,0)$);
+
+        \draw[thin, gray]
+            ($(Q)!0.5!(T) + (-0.10,0)$) --
+            ($(Q)!0.5!(T) + (0.10,0)$);
+
+
+        % dotted/dashed arrows shifted away from edges
+        % % Vertical side (B-C), shifted right
+        \draw[<->, gray]
+            ($(R) + (0.50cm,0)$) -- ($(S) + (0.50cm,0)$)
+            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {17\,cm};
+
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+  \text{Area} &= l^2 \\
+  \text{Area} &= 17 \,\text{cm} \times 17 \,\text{cm} \\
+  \text{Area} &= 289 \,\text{cm}^2
+  \end{align*}
+\end{minipage}
+\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=0]
+        % Draw square
+        \draw (0,0) coordinate (Q) --
+              ++(1.605,0) coordinate (R) --
+              ++(0,1.605) coordinate (S) --
+              ++(-1.605,0) coordinate (T) -- cycle;
 
         % Right angle markers
         \foreach \p/\q/\r in {T/Q/R,Q/R/S,R/S/T,S/T/Q} {
@@ -1094,49 +740,49 @@
   \refstepcounter{minipagecount}
   \noindent{(\theminipagecount)}\quad
   \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-    \begin{scope}[rotate=0]
+    \begin{scope}[rotate=-30]
         % Draw square
-        \draw (0,0) coordinate (K) --
-              ++(2.772,0) coordinate (L) --
-              ++(0,2.772) coordinate (M) --
-              ++(-2.772,0) coordinate (N) -- cycle;
+        \draw (0,0) coordinate (W) --
+              ++(2.862,0) coordinate (X) --
+              ++(0,2.862) coordinate (Y) --
+              ++(-2.862,0) coordinate (Z) -- cycle;
 
         % Right angle markers
-        \foreach \p/\q/\r in {N/K/L,K/L/M,L/M/N,M/N/K} {
+        \foreach \p/\q/\r in {Z/W/X,W/X/Y,X/Y/Z,Y/Z/W} {
             \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
         }
 
         % Vertex LABELS
         % Labels relative to shape geometry
-        \node at ($(K)+(-0.2,-0.2)$) {K};
-        \node at ($(L)+(0.2,-0.2)$) {L};
-        \node at ($(M)+(0.2,0.2)$) {M};
-        \node at ($(N)+(-0.2,0.2)$) {N};
+        \node at ($(W)+(-0.2,-0.2)$) {W};
+        \node at ($(X)+(0.2,-0.2)$) {X};
+        \node at ($(Y)+(0.2,0.2)$) {Y};
+        \node at ($(Z)+(-0.2,0.2)$) {Z};
 
         % Tick marks across horizontal sides
         \draw[thin, gray]
-            ($(K)!0.5!(L) + (0,-0.10)$) --
-            ($(K)!0.5!(L) + (0,0.10)$);
+            ($(W)!0.5!(X) + (0,-0.10)$) --
+            ($(W)!0.5!(X) + (0,0.10)$);
 
         \draw[thin, gray]
-            ($(N)!0.5!(M) + (0,-0.10)$) --
-            ($(N)!0.5!(M) + (0,0.10)$);
+            ($(Z)!0.5!(Y) + (0,-0.10)$) --
+            ($(Z)!0.5!(Y) + (0,0.10)$);
 
         % Tick marks across vertical sides
         \draw[thin, gray]
-            ($(L)!0.5!(M) + (-0.10,0)$) --
-            ($(L)!0.5!(M) + (0.10,0)$);
+            ($(X)!0.5!(Y) + (-0.10,0)$) --
+            ($(X)!0.5!(Y) + (0.10,0)$);
 
         \draw[thin, gray]
-            ($(K)!0.5!(N) + (-0.10,0)$) --
-            ($(K)!0.5!(N) + (0.10,0)$);
+            ($(W)!0.5!(Z) + (-0.10,0)$) --
+            ($(W)!0.5!(Z) + (0.10,0)$);
 
 
         % dotted/dashed arrows shifted away from edges
         % % Vertical side (B-C), shifted right
         \draw[<->, gray]
-            ($(L) + (0.50cm,0)$) -- ($(M) + (0.50cm,0)$)
-            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {19\,cm};
+            ($(X) + (0.50cm,0)$) -- ($(Y) + (0.50cm,0)$)
+            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {18\,cm};
 
     \end{scope}
 \end{tikzpicture}
@@ -1145,20 +791,20 @@
 \begin{minipage}{.4\textwidth}
   \begin{align*}
   \text{Area} &= l^2 \\
-  \text{Area} &= 19 \,\text{cm} \times 19 \,\text{cm} \\
-  \text{Area} &= 361 \,\text{cm}^2
+  \text{Area} &= 18 \,\text{cm} \times 18 \,\text{cm} \\
+  \text{Area} &= 324 \,\text{cm}^2
   \end{align*}
 \end{minipage}
 \par\vspace{1cm}\begin{minipage}{0.55\textwidth}
   \refstepcounter{minipagecount}
   \noindent{(\theminipagecount)}\quad
   \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
-    \begin{scope}[rotate=0]
+    \begin{scope}[rotate=-10]
         % Draw square
         \draw (0,0) coordinate (W) --
-              ++(2.736,0) coordinate (X) --
-              ++(0,2.736) coordinate (Y) --
-              ++(-2.736,0) coordinate (Z) -- cycle;
+              ++(2.373,0) coordinate (X) --
+              ++(0,2.373) coordinate (Y) --
+              ++(-2.373,0) coordinate (Z) -- cycle;
 
         % Right angle markers
         \foreach \p/\q/\r in {Z/W/X,W/X/Y,X/Y/Z,Y/Z/W} {
@@ -1206,6 +852,360 @@
   \text{Area} &= l^2 \\
   \text{Area} &= 10 \,\text{cm} \times 10 \,\text{cm} \\
   \text{Area} &= 100 \,\text{cm}^2
+  \end{align*}
+\end{minipage}
+\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=20]
+        % Draw square
+        \draw (0,0) coordinate (W) --
+              ++(2.46,0) coordinate (X) --
+              ++(0,2.46) coordinate (Y) --
+              ++(-2.46,0) coordinate (Z) -- cycle;
+
+        % Right angle markers
+        \foreach \p/\q/\r in {Z/W/X,W/X/Y,X/Y/Z,Y/Z/W} {
+            \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
+        }
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(W)+(-0.2,-0.2)$) {W};
+        \node at ($(X)+(0.2,-0.2)$) {X};
+        \node at ($(Y)+(0.2,0.2)$) {Y};
+        \node at ($(Z)+(-0.2,0.2)$) {Z};
+
+        % Tick marks across horizontal sides
+        \draw[thin, gray]
+            ($(W)!0.5!(X) + (0,-0.10)$) --
+            ($(W)!0.5!(X) + (0,0.10)$);
+
+        \draw[thin, gray]
+            ($(Z)!0.5!(Y) + (0,-0.10)$) --
+            ($(Z)!0.5!(Y) + (0,0.10)$);
+
+        % Tick marks across vertical sides
+        \draw[thin, gray]
+            ($(X)!0.5!(Y) + (-0.10,0)$) --
+            ($(X)!0.5!(Y) + (0.10,0)$);
+
+        \draw[thin, gray]
+            ($(W)!0.5!(Z) + (-0.10,0)$) --
+            ($(W)!0.5!(Z) + (0.10,0)$);
+
+
+        % dotted/dashed arrows shifted away from edges
+        % % Vertical side (B-C), shifted right
+        \draw[<->, gray]
+            ($(X) + (0.50cm,0)$) -- ($(Y) + (0.50cm,0)$)
+            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {13\,cm};
+
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+  \text{Area} &= l^2 \\
+  \text{Area} &= 13 \,\text{cm} \times 13 \,\text{cm} \\
+  \text{Area} &= 169 \,\text{cm}^2
+  \end{align*}
+\end{minipage}
+\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=20]
+        % Draw square
+        \draw (0,0) coordinate (W) --
+              ++(2.744,0) coordinate (X) --
+              ++(0,2.744) coordinate (Y) --
+              ++(-2.744,0) coordinate (Z) -- cycle;
+
+        % Right angle markers
+        \foreach \p/\q/\r in {Z/W/X,W/X/Y,X/Y/Z,Y/Z/W} {
+            \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
+        }
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(W)+(-0.2,-0.2)$) {W};
+        \node at ($(X)+(0.2,-0.2)$) {X};
+        \node at ($(Y)+(0.2,0.2)$) {Y};
+        \node at ($(Z)+(-0.2,0.2)$) {Z};
+
+        % Tick marks across horizontal sides
+        \draw[thin, gray]
+            ($(W)!0.5!(X) + (0,-0.10)$) --
+            ($(W)!0.5!(X) + (0,0.10)$);
+
+        \draw[thin, gray]
+            ($(Z)!0.5!(Y) + (0,-0.10)$) --
+            ($(Z)!0.5!(Y) + (0,0.10)$);
+
+        % Tick marks across vertical sides
+        \draw[thin, gray]
+            ($(X)!0.5!(Y) + (-0.10,0)$) --
+            ($(X)!0.5!(Y) + (0.10,0)$);
+
+        \draw[thin, gray]
+            ($(W)!0.5!(Z) + (-0.10,0)$) --
+            ($(W)!0.5!(Z) + (0.10,0)$);
+
+
+        % dotted/dashed arrows shifted away from edges
+        % % Vertical side (B-C), shifted right
+        \draw[<->, gray]
+            ($(X) + (0.50cm,0)$) -- ($(Y) + (0.50cm,0)$)
+            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {19\,cm};
+
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+  \text{Area} &= l^2 \\
+  \text{Area} &= 19 \,\text{cm} \times 19 \,\text{cm} \\
+  \text{Area} &= 361 \,\text{cm}^2
+  \end{align*}
+\end{minipage}
+\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=10]
+        % Draw square
+        \draw (0,0) coordinate (E) --
+              ++(2.849,0) coordinate (F) --
+              ++(0,2.849) coordinate (G) --
+              ++(-2.849,0) coordinate (H) -- cycle;
+
+        % Right angle markers
+        \foreach \p/\q/\r in {H/E/F,E/F/G,F/G/H,G/H/E} {
+            \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
+        }
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(E)+(-0.2,-0.2)$) {E};
+        \node at ($(F)+(0.2,-0.2)$) {F};
+        \node at ($(G)+(0.2,0.2)$) {G};
+        \node at ($(H)+(-0.2,0.2)$) {H};
+
+        % Tick marks across horizontal sides
+        \draw[thin, gray]
+            ($(E)!0.5!(F) + (0,-0.10)$) --
+            ($(E)!0.5!(F) + (0,0.10)$);
+
+        \draw[thin, gray]
+            ($(H)!0.5!(G) + (0,-0.10)$) --
+            ($(H)!0.5!(G) + (0,0.10)$);
+
+        % Tick marks across vertical sides
+        \draw[thin, gray]
+            ($(F)!0.5!(G) + (-0.10,0)$) --
+            ($(F)!0.5!(G) + (0.10,0)$);
+
+        \draw[thin, gray]
+            ($(E)!0.5!(H) + (-0.10,0)$) --
+            ($(E)!0.5!(H) + (0.10,0)$);
+
+
+        % dotted/dashed arrows shifted away from edges
+        % % Vertical side (B-C), shifted right
+        \draw[<->, gray]
+            ($(F) + (0.50cm,0)$) -- ($(G) + (0.50cm,0)$)
+            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {16\,cm};
+
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+  \text{Area} &= l^2 \\
+  \text{Area} &= 16 \,\text{cm} \times 16 \,\text{cm} \\
+  \text{Area} &= 256 \,\text{cm}^2
+  \end{align*}
+\end{minipage}
+\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=-30]
+        % Draw square
+        \draw (0,0) coordinate (W) --
+              ++(1.998,0) coordinate (X) --
+              ++(0,1.998) coordinate (Y) --
+              ++(-1.998,0) coordinate (Z) -- cycle;
+
+        % Right angle markers
+        \foreach \p/\q/\r in {Z/W/X,W/X/Y,X/Y/Z,Y/Z/W} {
+            \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
+        }
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(W)+(-0.2,-0.2)$) {W};
+        \node at ($(X)+(0.2,-0.2)$) {X};
+        \node at ($(Y)+(0.2,0.2)$) {Y};
+        \node at ($(Z)+(-0.2,0.2)$) {Z};
+
+        % Tick marks across horizontal sides
+        \draw[thin, gray]
+            ($(W)!0.5!(X) + (0,-0.10)$) --
+            ($(W)!0.5!(X) + (0,0.10)$);
+
+        \draw[thin, gray]
+            ($(Z)!0.5!(Y) + (0,-0.10)$) --
+            ($(Z)!0.5!(Y) + (0,0.10)$);
+
+        % Tick marks across vertical sides
+        \draw[thin, gray]
+            ($(X)!0.5!(Y) + (-0.10,0)$) --
+            ($(X)!0.5!(Y) + (0.10,0)$);
+
+        \draw[thin, gray]
+            ($(W)!0.5!(Z) + (-0.10,0)$) --
+            ($(W)!0.5!(Z) + (0.10,0)$);
+
+
+        % dotted/dashed arrows shifted away from edges
+        % % Vertical side (B-C), shifted right
+        \draw[<->, gray]
+            ($(X) + (0.50cm,0)$) -- ($(Y) + (0.50cm,0)$)
+            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {20\,cm};
+
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+  \text{Area} &= l^2 \\
+  \text{Area} &= 20 \,\text{cm} \times 20 \,\text{cm} \\
+  \text{Area} &= 400 \,\text{cm}^2
+  \end{align*}
+\end{minipage}
+\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=10]
+        % Draw square
+        \draw (0,0) coordinate (K) --
+              ++(1.74,0) coordinate (L) --
+              ++(0,1.74) coordinate (M) --
+              ++(-1.74,0) coordinate (N) -- cycle;
+
+        % Right angle markers
+        \foreach \p/\q/\r in {N/K/L,K/L/M,L/M/N,M/N/K} {
+            \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
+        }
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(K)+(-0.2,-0.2)$) {K};
+        \node at ($(L)+(0.2,-0.2)$) {L};
+        \node at ($(M)+(0.2,0.2)$) {M};
+        \node at ($(N)+(-0.2,0.2)$) {N};
+
+        % Tick marks across horizontal sides
+        \draw[thin, gray]
+            ($(K)!0.5!(L) + (0,-0.10)$) --
+            ($(K)!0.5!(L) + (0,0.10)$);
+
+        \draw[thin, gray]
+            ($(N)!0.5!(M) + (0,-0.10)$) --
+            ($(N)!0.5!(M) + (0,0.10)$);
+
+        % Tick marks across vertical sides
+        \draw[thin, gray]
+            ($(L)!0.5!(M) + (-0.10,0)$) --
+            ($(L)!0.5!(M) + (0.10,0)$);
+
+        \draw[thin, gray]
+            ($(K)!0.5!(N) + (-0.10,0)$) --
+            ($(K)!0.5!(N) + (0.10,0)$);
+
+
+        % dotted/dashed arrows shifted away from edges
+        % % Vertical side (B-C), shifted right
+        \draw[<->, gray]
+            ($(L) + (0.50cm,0)$) -- ($(M) + (0.50cm,0)$)
+            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {15\,cm};
+
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+  \text{Area} &= l^2 \\
+  \text{Area} &= 15 \,\text{cm} \times 15 \,\text{cm} \\
+  \text{Area} &= 225 \,\text{cm}^2
+  \end{align*}
+\end{minipage}
+\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=0]
+        % Draw square
+        \draw (0,0) coordinate (E) --
+              ++(2.709,0) coordinate (F) --
+              ++(0,2.709) coordinate (G) --
+              ++(-2.709,0) coordinate (H) -- cycle;
+
+        % Right angle markers
+        \foreach \p/\q/\r in {H/E/F,E/F/G,F/G/H,G/H/E} {
+            \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
+        }
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(E)+(-0.2,-0.2)$) {E};
+        \node at ($(F)+(0.2,-0.2)$) {F};
+        \node at ($(G)+(0.2,0.2)$) {G};
+        \node at ($(H)+(-0.2,0.2)$) {H};
+
+        % Tick marks across horizontal sides
+        \draw[thin, gray]
+            ($(E)!0.5!(F) + (0,-0.10)$) --
+            ($(E)!0.5!(F) + (0,0.10)$);
+
+        \draw[thin, gray]
+            ($(H)!0.5!(G) + (0,-0.10)$) --
+            ($(H)!0.5!(G) + (0,0.10)$);
+
+        % Tick marks across vertical sides
+        \draw[thin, gray]
+            ($(F)!0.5!(G) + (-0.10,0)$) --
+            ($(F)!0.5!(G) + (0.10,0)$);
+
+        \draw[thin, gray]
+            ($(E)!0.5!(H) + (-0.10,0)$) --
+            ($(E)!0.5!(H) + (0.10,0)$);
+
+
+        % dotted/dashed arrows shifted away from edges
+        % % Vertical side (B-C), shifted right
+        \draw[<->, gray]
+            ($(F) + (0.50cm,0)$) -- ($(G) + (0.50cm,0)$)
+            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {14\,cm};
+
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+  \text{Area} &= l^2 \\
+  \text{Area} &= 14 \,\text{cm} \times 14 \,\text{cm} \\
+  \text{Area} &= 196 \,\text{cm}^2
   \end{align*}
 \end{minipage}
 \par\vspace{1cm}

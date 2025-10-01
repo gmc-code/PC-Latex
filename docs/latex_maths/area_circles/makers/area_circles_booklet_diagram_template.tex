@@ -1,0 +1,25 @@
+\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=0]
+        \coordinate (A) at (0,0);
+        % Define B using polar coordinates from A
+        \coordinate (B) at ($(A) + (<<rotation>>:<<draw_radius>>)$);
+        \fill (A) circle(1pt);
+        \draw[thick] (A) circle (<<draw_radius>>);
+        \draw[<->, gray, shorten <=2pt, shorten >=1.5pt]
+          (A) -- (B)
+          node[pos=0.35, sloped, above, fill=white, inner sep=2pt, xshift=0pt, yshift=3pt, transform shape]
+          {\textcolor{black}{$<<calc_radius>>\,\text{cm}$}};
+    \end{scope}
+  \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+  \text{Area} &= \pi r^2 \\
+  \text{Area} &= \pi \times (<<calc_radius_value>>\,\text{cm})^2 \\
+  \text{Area} &\approx <<calcarea_value>> \,\text{cm}^2
+  \end{align*}
+\end{minipage}

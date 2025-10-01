@@ -1,0 +1,36 @@
+\documentclass[12pt, varwidth, border=5mm]{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+% Underlining package
+\usepackage{ulem}
+\usetikzlibrary{calc}
+\usetikzlibrary{angles,quotes}
+% \usepackage[a4paper, portrait, margin=1cm]{geometry}
+
+\begin{document}
+\section*{ }
+    \begin{minipage}{0.50\textwidth}
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=0]
+        \coordinate (A) at (0,0);
+        % Define B using polar coordinates from A
+        \coordinate (B) at ($(A) + (0:1.824)$);
+        \fill (A) circle(1pt);
+        \draw[thick] (A) circle (1.824);
+        \draw[<->, gray, shorten <=2pt, shorten >=1.5pt]
+          (A) -- (B)
+          node[pos=0.35, sloped, above, fill=white, inner sep=2pt, xshift=0pt, yshift=3pt, transform shape]
+          {\textcolor{black}{$5.5\,\text{cm}$}};
+    \end{scope}
+  \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.45\textwidth}
+  \begin{align*}
+  \text{Circumference} &= 2\pi r \\
+  \text{Circumference} &= 2 \times \pi \times \dotuline{~~~~~~~~~~~~}\,\text{cm} \\
+  \text{Circumference} &\approx \dotuline{~~~~~~~~~~~~} \,\text{cm}
+  \end{align*}
+\end{minipage}
+
+\end{document}
