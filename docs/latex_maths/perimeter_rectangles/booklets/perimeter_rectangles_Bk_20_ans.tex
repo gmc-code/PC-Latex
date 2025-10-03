@@ -1,0 +1,1533 @@
+\documentclass[12pt]{article}
+\usepackage{tikz}
+\usepackage{amsmath}
+% Underlining package
+\usepackage{ulem}
+\usetikzlibrary{calc}
+\usetikzlibrary{angles,quotes}
+\usepackage[a4paper, portrait, margin=1cm]{geometry}
+\usepackage{fancyhdr}
+
+\newcommand{\HeadingAnswers}{%
+\section*{\Large Name: \underline{\hspace{8cm}} \hfill Date: \underline{\hspace{3cm}}}%
+\vspace{-3mm}\par
+\textbf{Area Rectangles: Answers}\vspace{1pt}\hrule
+}
+
+% raise footer with page number; no header
+\fancypagestyle{myfancypagestyle}{
+  \fancyhf{}% clear all header and footer fields
+  \renewcommand{\headrulewidth}{0pt} % no rule under header
+  \fancyfoot[C] {\thepage} \setlength{\footskip}{14.5pt} % raise page number allowed min 14.5pt
+}
+\pagestyle{myfancypagestyle}  % apply myfancypagestyle
+
+\newcounter{minipagecount}
+
+\begin{document}
+\HeadingAnswers
+\vspace{8mm}
+
+\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=20]
+        % Draw square
+        \draw (0,0) coordinate (A) --
+              ++(4.9,0) coordinate (B) --
+              ++(0,2.1) coordinate (C) --
+              ++(-4.9,0) coordinate (D) -- cycle;
+
+        % Right angle markers
+        \foreach \p/\q/\r in {D/A/B,A/B/C,B/C/D,C/D/A} {
+            \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
+        }
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(A)+(-0.2,-0.2)$) {A};
+        \node at ($(B)+(0.2,-0.2)$) {B};
+        \node at ($(C)+(0.2,0.2)$) {C};
+        \node at ($(D)+(-0.2,0.2)$) {D};
+
+
+        % double Tick marks across horizontal side A--B
+        \draw[thin, gray]
+            ($(A)!0.5!(B) + (-0.03,-0.10)$) --
+            ($(A)!0.5!(B) + (-0.03,0.10)$);
+
+        \draw[thin, gray]
+            ($(A)!0.5!(B) + (0.03,-0.10)$) --
+            ($(A)!0.5!(B) + (0.03,0.10)$);
+
+        % double Tick marks across horizontal side D--C
+        \draw[thin, gray]
+            ($(D)!0.5!(C) + (-0.03,-0.10)$) --
+            ($(D)!0.5!(C) + (-0.03,0.10)$);
+
+        \draw[thin, gray]
+            ($(D)!0.5!(C) + (0.03,-0.10)$) --
+            ($(D)!0.5!(C) + (0.03,0.10)$);
+
+
+        % Tick marks across vertical sides
+        \draw[thin, gray]
+            ($(B)!0.5!(C) + (-0.10,0)$) --
+            ($(B)!0.5!(C) + (0.10,0)$);
+
+        \draw[thin, gray]
+            ($(A)!0.5!(D) + (-0.10,0)$) --
+            ($(A)!0.5!(D) + (0.10,0)$);
+
+        % dotted/dashed arrows shifted away from edges
+        % Horizontal side (A-B), shifted down
+        \draw[<->, gray]
+            ($(A) + (0,-0.50cm)$) -- ($(B) + (0,-0.50cm)$)
+            node[black, midway, fill=white, inner sep=3pt] {7\,cm};
+
+        % Vertical side (B-C), shifted right
+        \draw[<->, gray]
+            ($(B) + (0.50cm,0)$) -- ($(C) + (0.50cm,0)$)
+            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {3\,cm};
+
+
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+  \text{Perimeter} &= 2(l+w) \\
+  \text{Perimeter} &= 2 \times (7 \,\text{cm} + 3 \,\text{cm}) \\
+  \text{Perimeter} &= 20 \,\text{cm}
+  \end{align*}
+\end{minipage}
+\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=-20]
+        % Draw square
+        \draw (0,0) coordinate (Q) --
+              ++(4.157,0) coordinate (R) --
+              ++(0,1.663) coordinate (S) --
+              ++(-4.157,0) coordinate (T) -- cycle;
+
+        % Right angle markers
+        \foreach \p/\q/\r in {T/Q/R,Q/R/S,R/S/T,S/T/Q} {
+            \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
+        }
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(Q)+(-0.2,-0.2)$) {Q};
+        \node at ($(R)+(0.2,-0.2)$) {R};
+        \node at ($(S)+(0.2,0.2)$) {S};
+        \node at ($(T)+(-0.2,0.2)$) {T};
+
+
+        % double Tick marks across horizontal side Q--R
+        \draw[thin, gray]
+            ($(Q)!0.5!(R) + (-0.03,-0.10)$) --
+            ($(Q)!0.5!(R) + (-0.03,0.10)$);
+
+        \draw[thin, gray]
+            ($(Q)!0.5!(R) + (0.03,-0.10)$) --
+            ($(Q)!0.5!(R) + (0.03,0.10)$);
+
+        % double Tick marks across horizontal side T--S
+        \draw[thin, gray]
+            ($(T)!0.5!(S) + (-0.03,-0.10)$) --
+            ($(T)!0.5!(S) + (-0.03,0.10)$);
+
+        \draw[thin, gray]
+            ($(T)!0.5!(S) + (0.03,-0.10)$) --
+            ($(T)!0.5!(S) + (0.03,0.10)$);
+
+
+        % Tick marks across vertical sides
+        \draw[thin, gray]
+            ($(R)!0.5!(S) + (-0.10,0)$) --
+            ($(R)!0.5!(S) + (0.10,0)$);
+
+        \draw[thin, gray]
+            ($(Q)!0.5!(T) + (-0.10,0)$) --
+            ($(Q)!0.5!(T) + (0.10,0)$);
+
+        % dotted/dashed arrows shifted away from edges
+        % Horizontal side (A-B), shifted down
+        \draw[<->, gray]
+            ($(Q) + (0,-0.50cm)$) -- ($(R) + (0,-0.50cm)$)
+            node[black, midway, fill=white, inner sep=3pt] {5\,cm};
+
+        % Vertical side (B-C), shifted right
+        \draw[<->, gray]
+            ($(R) + (0.50cm,0)$) -- ($(S) + (0.50cm,0)$)
+            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {2\,cm};
+
+
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+  \text{Perimeter} &= 2(l+w) \\
+  \text{Perimeter} &= 2 \times (5 \,\text{cm} + 2 \,\text{cm}) \\
+  \text{Perimeter} &= 14 \,\text{cm}
+  \end{align*}
+\end{minipage}
+\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=0]
+        % Draw square
+        \draw (0,0) coordinate (A) --
+              ++(3.685,0) coordinate (B) --
+              ++(0,2.047) coordinate (C) --
+              ++(-3.685,0) coordinate (D) -- cycle;
+
+        % Right angle markers
+        \foreach \p/\q/\r in {D/A/B,A/B/C,B/C/D,C/D/A} {
+            \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
+        }
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(A)+(-0.2,-0.2)$) {A};
+        \node at ($(B)+(0.2,-0.2)$) {B};
+        \node at ($(C)+(0.2,0.2)$) {C};
+        \node at ($(D)+(-0.2,0.2)$) {D};
+
+
+        % double Tick marks across horizontal side A--B
+        \draw[thin, gray]
+            ($(A)!0.5!(B) + (-0.03,-0.10)$) --
+            ($(A)!0.5!(B) + (-0.03,0.10)$);
+
+        \draw[thin, gray]
+            ($(A)!0.5!(B) + (0.03,-0.10)$) --
+            ($(A)!0.5!(B) + (0.03,0.10)$);
+
+        % double Tick marks across horizontal side D--C
+        \draw[thin, gray]
+            ($(D)!0.5!(C) + (-0.03,-0.10)$) --
+            ($(D)!0.5!(C) + (-0.03,0.10)$);
+
+        \draw[thin, gray]
+            ($(D)!0.5!(C) + (0.03,-0.10)$) --
+            ($(D)!0.5!(C) + (0.03,0.10)$);
+
+
+        % Tick marks across vertical sides
+        \draw[thin, gray]
+            ($(B)!0.5!(C) + (-0.10,0)$) --
+            ($(B)!0.5!(C) + (0.10,0)$);
+
+        \draw[thin, gray]
+            ($(A)!0.5!(D) + (-0.10,0)$) --
+            ($(A)!0.5!(D) + (0.10,0)$);
+
+        % dotted/dashed arrows shifted away from edges
+        % Horizontal side (A-B), shifted down
+        \draw[<->, gray]
+            ($(A) + (0,-0.50cm)$) -- ($(B) + (0,-0.50cm)$)
+            node[black, midway, fill=white, inner sep=3pt] {9\,cm};
+
+        % Vertical side (B-C), shifted right
+        \draw[<->, gray]
+            ($(B) + (0.50cm,0)$) -- ($(C) + (0.50cm,0)$)
+            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {5\,cm};
+
+
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+  \text{Perimeter} &= 2(l+w) \\
+  \text{Perimeter} &= 2 \times (9 \,\text{cm} + 5 \,\text{cm}) \\
+  \text{Perimeter} &= 28 \,\text{cm}
+  \end{align*}
+\end{minipage}
+\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=0]
+        % Draw square
+        \draw (0,0) coordinate (A) --
+              ++(2.995,0) coordinate (B) --
+              ++(0,2.139) coordinate (C) --
+              ++(-2.995,0) coordinate (D) -- cycle;
+
+        % Right angle markers
+        \foreach \p/\q/\r in {D/A/B,A/B/C,B/C/D,C/D/A} {
+            \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
+        }
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(A)+(-0.2,-0.2)$) {A};
+        \node at ($(B)+(0.2,-0.2)$) {B};
+        \node at ($(C)+(0.2,0.2)$) {C};
+        \node at ($(D)+(-0.2,0.2)$) {D};
+
+
+        % double Tick marks across horizontal side A--B
+        \draw[thin, gray]
+            ($(A)!0.5!(B) + (-0.03,-0.10)$) --
+            ($(A)!0.5!(B) + (-0.03,0.10)$);
+
+        \draw[thin, gray]
+            ($(A)!0.5!(B) + (0.03,-0.10)$) --
+            ($(A)!0.5!(B) + (0.03,0.10)$);
+
+        % double Tick marks across horizontal side D--C
+        \draw[thin, gray]
+            ($(D)!0.5!(C) + (-0.03,-0.10)$) --
+            ($(D)!0.5!(C) + (-0.03,0.10)$);
+
+        \draw[thin, gray]
+            ($(D)!0.5!(C) + (0.03,-0.10)$) --
+            ($(D)!0.5!(C) + (0.03,0.10)$);
+
+
+        % Tick marks across vertical sides
+        \draw[thin, gray]
+            ($(B)!0.5!(C) + (-0.10,0)$) --
+            ($(B)!0.5!(C) + (0.10,0)$);
+
+        \draw[thin, gray]
+            ($(A)!0.5!(D) + (-0.10,0)$) --
+            ($(A)!0.5!(D) + (0.10,0)$);
+
+        % dotted/dashed arrows shifted away from edges
+        % Horizontal side (A-B), shifted down
+        \draw[<->, gray]
+            ($(A) + (0,-0.50cm)$) -- ($(B) + (0,-0.50cm)$)
+            node[black, midway, fill=white, inner sep=3pt] {7\,cm};
+
+        % Vertical side (B-C), shifted right
+        \draw[<->, gray]
+            ($(B) + (0.50cm,0)$) -- ($(C) + (0.50cm,0)$)
+            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {5\,cm};
+
+
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+  \text{Perimeter} &= 2(l+w) \\
+  \text{Perimeter} &= 2 \times (7 \,\text{cm} + 5 \,\text{cm}) \\
+  \text{Perimeter} &= 24 \,\text{cm}
+  \end{align*}
+\end{minipage}
+\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=0]
+        % Draw square
+        \draw (0,0) coordinate (Q) --
+              ++(3.428,0) coordinate (R) --
+              ++(0,2.285) coordinate (S) --
+              ++(-3.428,0) coordinate (T) -- cycle;
+
+        % Right angle markers
+        \foreach \p/\q/\r in {T/Q/R,Q/R/S,R/S/T,S/T/Q} {
+            \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
+        }
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(Q)+(-0.2,-0.2)$) {Q};
+        \node at ($(R)+(0.2,-0.2)$) {R};
+        \node at ($(S)+(0.2,0.2)$) {S};
+        \node at ($(T)+(-0.2,0.2)$) {T};
+
+
+        % double Tick marks across horizontal side Q--R
+        \draw[thin, gray]
+            ($(Q)!0.5!(R) + (-0.03,-0.10)$) --
+            ($(Q)!0.5!(R) + (-0.03,0.10)$);
+
+        \draw[thin, gray]
+            ($(Q)!0.5!(R) + (0.03,-0.10)$) --
+            ($(Q)!0.5!(R) + (0.03,0.10)$);
+
+        % double Tick marks across horizontal side T--S
+        \draw[thin, gray]
+            ($(T)!0.5!(S) + (-0.03,-0.10)$) --
+            ($(T)!0.5!(S) + (-0.03,0.10)$);
+
+        \draw[thin, gray]
+            ($(T)!0.5!(S) + (0.03,-0.10)$) --
+            ($(T)!0.5!(S) + (0.03,0.10)$);
+
+
+        % Tick marks across vertical sides
+        \draw[thin, gray]
+            ($(R)!0.5!(S) + (-0.10,0)$) --
+            ($(R)!0.5!(S) + (0.10,0)$);
+
+        \draw[thin, gray]
+            ($(Q)!0.5!(T) + (-0.10,0)$) --
+            ($(Q)!0.5!(T) + (0.10,0)$);
+
+        % dotted/dashed arrows shifted away from edges
+        % Horizontal side (A-B), shifted down
+        \draw[<->, gray]
+            ($(Q) + (0,-0.50cm)$) -- ($(R) + (0,-0.50cm)$)
+            node[black, midway, fill=white, inner sep=3pt] {6\,cm};
+
+        % Vertical side (B-C), shifted right
+        \draw[<->, gray]
+            ($(R) + (0.50cm,0)$) -- ($(S) + (0.50cm,0)$)
+            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {4\,cm};
+
+
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+  \text{Perimeter} &= 2(l+w) \\
+  \text{Perimeter} &= 2 \times (6 \,\text{cm} + 4 \,\text{cm}) \\
+  \text{Perimeter} &= 20 \,\text{cm}
+  \end{align*}
+\end{minipage}
+\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=10]
+        % Draw square
+        \draw (0,0) coordinate (W) --
+              ++(7.371,0) coordinate (X) --
+              ++(0,2.457) coordinate (Y) --
+              ++(-7.371,0) coordinate (Z) -- cycle;
+
+        % Right angle markers
+        \foreach \p/\q/\r in {Z/W/X,W/X/Y,X/Y/Z,Y/Z/W} {
+            \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
+        }
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(W)+(-0.2,-0.2)$) {W};
+        \node at ($(X)+(0.2,-0.2)$) {X};
+        \node at ($(Y)+(0.2,0.2)$) {Y};
+        \node at ($(Z)+(-0.2,0.2)$) {Z};
+
+
+        % double Tick marks across horizontal side W--X
+        \draw[thin, gray]
+            ($(W)!0.5!(X) + (-0.03,-0.10)$) --
+            ($(W)!0.5!(X) + (-0.03,0.10)$);
+
+        \draw[thin, gray]
+            ($(W)!0.5!(X) + (0.03,-0.10)$) --
+            ($(W)!0.5!(X) + (0.03,0.10)$);
+
+        % double Tick marks across horizontal side Z--Y
+        \draw[thin, gray]
+            ($(Z)!0.5!(Y) + (-0.03,-0.10)$) --
+            ($(Z)!0.5!(Y) + (-0.03,0.10)$);
+
+        \draw[thin, gray]
+            ($(Z)!0.5!(Y) + (0.03,-0.10)$) --
+            ($(Z)!0.5!(Y) + (0.03,0.10)$);
+
+
+        % Tick marks across vertical sides
+        \draw[thin, gray]
+            ($(X)!0.5!(Y) + (-0.10,0)$) --
+            ($(X)!0.5!(Y) + (0.10,0)$);
+
+        \draw[thin, gray]
+            ($(W)!0.5!(Z) + (-0.10,0)$) --
+            ($(W)!0.5!(Z) + (0.10,0)$);
+
+        % dotted/dashed arrows shifted away from edges
+        % Horizontal side (A-B), shifted down
+        \draw[<->, gray]
+            ($(W) + (0,-0.50cm)$) -- ($(X) + (0,-0.50cm)$)
+            node[black, midway, fill=white, inner sep=3pt] {9\,cm};
+
+        % Vertical side (B-C), shifted right
+        \draw[<->, gray]
+            ($(X) + (0.50cm,0)$) -- ($(Y) + (0.50cm,0)$)
+            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {3\,cm};
+
+
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+  \text{Perimeter} &= 2(l+w) \\
+  \text{Perimeter} &= 2 \times (9 \,\text{cm} + 3 \,\text{cm}) \\
+  \text{Perimeter} &= 24 \,\text{cm}
+  \end{align*}
+\end{minipage}
+\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=0]
+        % Draw square
+        \draw (0,0) coordinate (A) --
+              ++(2.215,0) coordinate (B) --
+              ++(0,1.661) coordinate (C) --
+              ++(-2.215,0) coordinate (D) -- cycle;
+
+        % Right angle markers
+        \foreach \p/\q/\r in {D/A/B,A/B/C,B/C/D,C/D/A} {
+            \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
+        }
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(A)+(-0.2,-0.2)$) {A};
+        \node at ($(B)+(0.2,-0.2)$) {B};
+        \node at ($(C)+(0.2,0.2)$) {C};
+        \node at ($(D)+(-0.2,0.2)$) {D};
+
+
+        % double Tick marks across horizontal side A--B
+        \draw[thin, gray]
+            ($(A)!0.5!(B) + (-0.03,-0.10)$) --
+            ($(A)!0.5!(B) + (-0.03,0.10)$);
+
+        \draw[thin, gray]
+            ($(A)!0.5!(B) + (0.03,-0.10)$) --
+            ($(A)!0.5!(B) + (0.03,0.10)$);
+
+        % double Tick marks across horizontal side D--C
+        \draw[thin, gray]
+            ($(D)!0.5!(C) + (-0.03,-0.10)$) --
+            ($(D)!0.5!(C) + (-0.03,0.10)$);
+
+        \draw[thin, gray]
+            ($(D)!0.5!(C) + (0.03,-0.10)$) --
+            ($(D)!0.5!(C) + (0.03,0.10)$);
+
+
+        % Tick marks across vertical sides
+        \draw[thin, gray]
+            ($(B)!0.5!(C) + (-0.10,0)$) --
+            ($(B)!0.5!(C) + (0.10,0)$);
+
+        \draw[thin, gray]
+            ($(A)!0.5!(D) + (-0.10,0)$) --
+            ($(A)!0.5!(D) + (0.10,0)$);
+
+        % dotted/dashed arrows shifted away from edges
+        % Horizontal side (A-B), shifted down
+        \draw[<->, gray]
+            ($(A) + (0,-0.50cm)$) -- ($(B) + (0,-0.50cm)$)
+            node[black, midway, fill=white, inner sep=3pt] {8\,cm};
+
+        % Vertical side (B-C), shifted right
+        \draw[<->, gray]
+            ($(B) + (0.50cm,0)$) -- ($(C) + (0.50cm,0)$)
+            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {6\,cm};
+
+
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+  \text{Perimeter} &= 2(l+w) \\
+  \text{Perimeter} &= 2 \times (8 \,\text{cm} + 6 \,\text{cm}) \\
+  \text{Perimeter} &= 28 \,\text{cm}
+  \end{align*}
+\end{minipage}
+\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=-30]
+        % Draw square
+        \draw (0,0) coordinate (A) --
+              ++(3.604,0) coordinate (B) --
+              ++(0,2.403) coordinate (C) --
+              ++(-3.604,0) coordinate (D) -- cycle;
+
+        % Right angle markers
+        \foreach \p/\q/\r in {D/A/B,A/B/C,B/C/D,C/D/A} {
+            \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
+        }
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(A)+(-0.2,-0.2)$) {A};
+        \node at ($(B)+(0.2,-0.2)$) {B};
+        \node at ($(C)+(0.2,0.2)$) {C};
+        \node at ($(D)+(-0.2,0.2)$) {D};
+
+
+        % double Tick marks across horizontal side A--B
+        \draw[thin, gray]
+            ($(A)!0.5!(B) + (-0.03,-0.10)$) --
+            ($(A)!0.5!(B) + (-0.03,0.10)$);
+
+        \draw[thin, gray]
+            ($(A)!0.5!(B) + (0.03,-0.10)$) --
+            ($(A)!0.5!(B) + (0.03,0.10)$);
+
+        % double Tick marks across horizontal side D--C
+        \draw[thin, gray]
+            ($(D)!0.5!(C) + (-0.03,-0.10)$) --
+            ($(D)!0.5!(C) + (-0.03,0.10)$);
+
+        \draw[thin, gray]
+            ($(D)!0.5!(C) + (0.03,-0.10)$) --
+            ($(D)!0.5!(C) + (0.03,0.10)$);
+
+
+        % Tick marks across vertical sides
+        \draw[thin, gray]
+            ($(B)!0.5!(C) + (-0.10,0)$) --
+            ($(B)!0.5!(C) + (0.10,0)$);
+
+        \draw[thin, gray]
+            ($(A)!0.5!(D) + (-0.10,0)$) --
+            ($(A)!0.5!(D) + (0.10,0)$);
+
+        % dotted/dashed arrows shifted away from edges
+        % Horizontal side (A-B), shifted down
+        \draw[<->, gray]
+            ($(A) + (0,-0.50cm)$) -- ($(B) + (0,-0.50cm)$)
+            node[black, midway, fill=white, inner sep=3pt] {9\,cm};
+
+        % Vertical side (B-C), shifted right
+        \draw[<->, gray]
+            ($(B) + (0.50cm,0)$) -- ($(C) + (0.50cm,0)$)
+            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {6\,cm};
+
+
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+  \text{Perimeter} &= 2(l+w) \\
+  \text{Perimeter} &= 2 \times (9 \,\text{cm} + 6 \,\text{cm}) \\
+  \text{Perimeter} &= 30 \,\text{cm}
+  \end{align*}
+\end{minipage}
+\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=10]
+        % Draw square
+        \draw (0,0) coordinate (E) --
+              ++(5.821,0) coordinate (F) --
+              ++(0,2.183) coordinate (G) --
+              ++(-5.821,0) coordinate (H) -- cycle;
+
+        % Right angle markers
+        \foreach \p/\q/\r in {H/E/F,E/F/G,F/G/H,G/H/E} {
+            \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
+        }
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(E)+(-0.2,-0.2)$) {E};
+        \node at ($(F)+(0.2,-0.2)$) {F};
+        \node at ($(G)+(0.2,0.2)$) {G};
+        \node at ($(H)+(-0.2,0.2)$) {H};
+
+
+        % double Tick marks across horizontal side E--F
+        \draw[thin, gray]
+            ($(E)!0.5!(F) + (-0.03,-0.10)$) --
+            ($(E)!0.5!(F) + (-0.03,0.10)$);
+
+        \draw[thin, gray]
+            ($(E)!0.5!(F) + (0.03,-0.10)$) --
+            ($(E)!0.5!(F) + (0.03,0.10)$);
+
+        % double Tick marks across horizontal side H--G
+        \draw[thin, gray]
+            ($(H)!0.5!(G) + (-0.03,-0.10)$) --
+            ($(H)!0.5!(G) + (-0.03,0.10)$);
+
+        \draw[thin, gray]
+            ($(H)!0.5!(G) + (0.03,-0.10)$) --
+            ($(H)!0.5!(G) + (0.03,0.10)$);
+
+
+        % Tick marks across vertical sides
+        \draw[thin, gray]
+            ($(F)!0.5!(G) + (-0.10,0)$) --
+            ($(F)!0.5!(G) + (0.10,0)$);
+
+        \draw[thin, gray]
+            ($(E)!0.5!(H) + (-0.10,0)$) --
+            ($(E)!0.5!(H) + (0.10,0)$);
+
+        % dotted/dashed arrows shifted away from edges
+        % Horizontal side (A-B), shifted down
+        \draw[<->, gray]
+            ($(E) + (0,-0.50cm)$) -- ($(F) + (0,-0.50cm)$)
+            node[black, midway, fill=white, inner sep=3pt] {8\,cm};
+
+        % Vertical side (B-C), shifted right
+        \draw[<->, gray]
+            ($(F) + (0.50cm,0)$) -- ($(G) + (0.50cm,0)$)
+            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {3\,cm};
+
+
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+  \text{Perimeter} &= 2(l+w) \\
+  \text{Perimeter} &= 2 \times (8 \,\text{cm} + 3 \,\text{cm}) \\
+  \text{Perimeter} &= 22 \,\text{cm}
+  \end{align*}
+\end{minipage}
+\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=-10]
+        % Draw square
+        \draw (0,0) coordinate (E) --
+              ++(2.74,0) coordinate (F) --
+              ++(0,2.283) coordinate (G) --
+              ++(-2.74,0) coordinate (H) -- cycle;
+
+        % Right angle markers
+        \foreach \p/\q/\r in {H/E/F,E/F/G,F/G/H,G/H/E} {
+            \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
+        }
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(E)+(-0.2,-0.2)$) {E};
+        \node at ($(F)+(0.2,-0.2)$) {F};
+        \node at ($(G)+(0.2,0.2)$) {G};
+        \node at ($(H)+(-0.2,0.2)$) {H};
+
+
+        % double Tick marks across horizontal side E--F
+        \draw[thin, gray]
+            ($(E)!0.5!(F) + (-0.03,-0.10)$) --
+            ($(E)!0.5!(F) + (-0.03,0.10)$);
+
+        \draw[thin, gray]
+            ($(E)!0.5!(F) + (0.03,-0.10)$) --
+            ($(E)!0.5!(F) + (0.03,0.10)$);
+
+        % double Tick marks across horizontal side H--G
+        \draw[thin, gray]
+            ($(H)!0.5!(G) + (-0.03,-0.10)$) --
+            ($(H)!0.5!(G) + (-0.03,0.10)$);
+
+        \draw[thin, gray]
+            ($(H)!0.5!(G) + (0.03,-0.10)$) --
+            ($(H)!0.5!(G) + (0.03,0.10)$);
+
+
+        % Tick marks across vertical sides
+        \draw[thin, gray]
+            ($(F)!0.5!(G) + (-0.10,0)$) --
+            ($(F)!0.5!(G) + (0.10,0)$);
+
+        \draw[thin, gray]
+            ($(E)!0.5!(H) + (-0.10,0)$) --
+            ($(E)!0.5!(H) + (0.10,0)$);
+
+        % dotted/dashed arrows shifted away from edges
+        % Horizontal side (A-B), shifted down
+        \draw[<->, gray]
+            ($(E) + (0,-0.50cm)$) -- ($(F) + (0,-0.50cm)$)
+            node[black, midway, fill=white, inner sep=3pt] {6\,cm};
+
+        % Vertical side (B-C), shifted right
+        \draw[<->, gray]
+            ($(F) + (0.50cm,0)$) -- ($(G) + (0.50cm,0)$)
+            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {5\,cm};
+
+
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+  \text{Perimeter} &= 2(l+w) \\
+  \text{Perimeter} &= 2 \times (6 \,\text{cm} + 5 \,\text{cm}) \\
+  \text{Perimeter} &= 22 \,\text{cm}
+  \end{align*}
+\end{minipage}
+\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=20]
+        % Draw square
+        \draw (0,0) coordinate (Q) --
+              ++(8.0,0) coordinate (R) --
+              ++(0,2.0) coordinate (S) --
+              ++(-8.0,0) coordinate (T) -- cycle;
+
+        % Right angle markers
+        \foreach \p/\q/\r in {T/Q/R,Q/R/S,R/S/T,S/T/Q} {
+            \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
+        }
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(Q)+(-0.2,-0.2)$) {Q};
+        \node at ($(R)+(0.2,-0.2)$) {R};
+        \node at ($(S)+(0.2,0.2)$) {S};
+        \node at ($(T)+(-0.2,0.2)$) {T};
+
+
+        % double Tick marks across horizontal side Q--R
+        \draw[thin, gray]
+            ($(Q)!0.5!(R) + (-0.03,-0.10)$) --
+            ($(Q)!0.5!(R) + (-0.03,0.10)$);
+
+        \draw[thin, gray]
+            ($(Q)!0.5!(R) + (0.03,-0.10)$) --
+            ($(Q)!0.5!(R) + (0.03,0.10)$);
+
+        % double Tick marks across horizontal side T--S
+        \draw[thin, gray]
+            ($(T)!0.5!(S) + (-0.03,-0.10)$) --
+            ($(T)!0.5!(S) + (-0.03,0.10)$);
+
+        \draw[thin, gray]
+            ($(T)!0.5!(S) + (0.03,-0.10)$) --
+            ($(T)!0.5!(S) + (0.03,0.10)$);
+
+
+        % Tick marks across vertical sides
+        \draw[thin, gray]
+            ($(R)!0.5!(S) + (-0.10,0)$) --
+            ($(R)!0.5!(S) + (0.10,0)$);
+
+        \draw[thin, gray]
+            ($(Q)!0.5!(T) + (-0.10,0)$) --
+            ($(Q)!0.5!(T) + (0.10,0)$);
+
+        % dotted/dashed arrows shifted away from edges
+        % Horizontal side (A-B), shifted down
+        \draw[<->, gray]
+            ($(Q) + (0,-0.50cm)$) -- ($(R) + (0,-0.50cm)$)
+            node[black, midway, fill=white, inner sep=3pt] {8\,cm};
+
+        % Vertical side (B-C), shifted right
+        \draw[<->, gray]
+            ($(R) + (0.50cm,0)$) -- ($(S) + (0.50cm,0)$)
+            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {2\,cm};
+
+
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+  \text{Perimeter} &= 2(l+w) \\
+  \text{Perimeter} &= 2 \times (8 \,\text{cm} + 2 \,\text{cm}) \\
+  \text{Perimeter} &= 20 \,\text{cm}
+  \end{align*}
+\end{minipage}
+\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=30]
+        % Draw square
+        \draw (0,0) coordinate (Q) --
+              ++(4.424,0) coordinate (R) --
+              ++(0,2.212) coordinate (S) --
+              ++(-4.424,0) coordinate (T) -- cycle;
+
+        % Right angle markers
+        \foreach \p/\q/\r in {T/Q/R,Q/R/S,R/S/T,S/T/Q} {
+            \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
+        }
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(Q)+(-0.2,-0.2)$) {Q};
+        \node at ($(R)+(0.2,-0.2)$) {R};
+        \node at ($(S)+(0.2,0.2)$) {S};
+        \node at ($(T)+(-0.2,0.2)$) {T};
+
+
+        % double Tick marks across horizontal side Q--R
+        \draw[thin, gray]
+            ($(Q)!0.5!(R) + (-0.03,-0.10)$) --
+            ($(Q)!0.5!(R) + (-0.03,0.10)$);
+
+        \draw[thin, gray]
+            ($(Q)!0.5!(R) + (0.03,-0.10)$) --
+            ($(Q)!0.5!(R) + (0.03,0.10)$);
+
+        % double Tick marks across horizontal side T--S
+        \draw[thin, gray]
+            ($(T)!0.5!(S) + (-0.03,-0.10)$) --
+            ($(T)!0.5!(S) + (-0.03,0.10)$);
+
+        \draw[thin, gray]
+            ($(T)!0.5!(S) + (0.03,-0.10)$) --
+            ($(T)!0.5!(S) + (0.03,0.10)$);
+
+
+        % Tick marks across vertical sides
+        \draw[thin, gray]
+            ($(R)!0.5!(S) + (-0.10,0)$) --
+            ($(R)!0.5!(S) + (0.10,0)$);
+
+        \draw[thin, gray]
+            ($(Q)!0.5!(T) + (-0.10,0)$) --
+            ($(Q)!0.5!(T) + (0.10,0)$);
+
+        % dotted/dashed arrows shifted away from edges
+        % Horizontal side (A-B), shifted down
+        \draw[<->, gray]
+            ($(Q) + (0,-0.50cm)$) -- ($(R) + (0,-0.50cm)$)
+            node[black, midway, fill=white, inner sep=3pt] {8\,cm};
+
+        % Vertical side (B-C), shifted right
+        \draw[<->, gray]
+            ($(R) + (0.50cm,0)$) -- ($(S) + (0.50cm,0)$)
+            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {4\,cm};
+
+
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+  \text{Perimeter} &= 2(l+w) \\
+  \text{Perimeter} &= 2 \times (8 \,\text{cm} + 4 \,\text{cm}) \\
+  \text{Perimeter} &= 24 \,\text{cm}
+  \end{align*}
+\end{minipage}
+\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=-30]
+        % Draw square
+        \draw (0,0) coordinate (K) --
+              ++(4.792,0) coordinate (L) --
+              ++(0,2.396) coordinate (M) --
+              ++(-4.792,0) coordinate (N) -- cycle;
+
+        % Right angle markers
+        \foreach \p/\q/\r in {N/K/L,K/L/M,L/M/N,M/N/K} {
+            \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
+        }
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(K)+(-0.2,-0.2)$) {K};
+        \node at ($(L)+(0.2,-0.2)$) {L};
+        \node at ($(M)+(0.2,0.2)$) {M};
+        \node at ($(N)+(-0.2,0.2)$) {N};
+
+
+        % double Tick marks across horizontal side K--L
+        \draw[thin, gray]
+            ($(K)!0.5!(L) + (-0.03,-0.10)$) --
+            ($(K)!0.5!(L) + (-0.03,0.10)$);
+
+        \draw[thin, gray]
+            ($(K)!0.5!(L) + (0.03,-0.10)$) --
+            ($(K)!0.5!(L) + (0.03,0.10)$);
+
+        % double Tick marks across horizontal side N--M
+        \draw[thin, gray]
+            ($(N)!0.5!(M) + (-0.03,-0.10)$) --
+            ($(N)!0.5!(M) + (-0.03,0.10)$);
+
+        \draw[thin, gray]
+            ($(N)!0.5!(M) + (0.03,-0.10)$) --
+            ($(N)!0.5!(M) + (0.03,0.10)$);
+
+
+        % Tick marks across vertical sides
+        \draw[thin, gray]
+            ($(L)!0.5!(M) + (-0.10,0)$) --
+            ($(L)!0.5!(M) + (0.10,0)$);
+
+        \draw[thin, gray]
+            ($(K)!0.5!(N) + (-0.10,0)$) --
+            ($(K)!0.5!(N) + (0.10,0)$);
+
+        % dotted/dashed arrows shifted away from edges
+        % Horizontal side (A-B), shifted down
+        \draw[<->, gray]
+            ($(K) + (0,-0.50cm)$) -- ($(L) + (0,-0.50cm)$)
+            node[black, midway, fill=white, inner sep=3pt] {6\,cm};
+
+        % Vertical side (B-C), shifted right
+        \draw[<->, gray]
+            ($(L) + (0.50cm,0)$) -- ($(M) + (0.50cm,0)$)
+            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {3\,cm};
+
+
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+  \text{Perimeter} &= 2(l+w) \\
+  \text{Perimeter} &= 2 \times (6 \,\text{cm} + 3 \,\text{cm}) \\
+  \text{Perimeter} &= 18 \,\text{cm}
+  \end{align*}
+\end{minipage}
+\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=0]
+        % Draw square
+        \draw (0,0) coordinate (E) --
+              ++(3.179,0) coordinate (F) --
+              ++(0,1.987) coordinate (G) --
+              ++(-3.179,0) coordinate (H) -- cycle;
+
+        % Right angle markers
+        \foreach \p/\q/\r in {H/E/F,E/F/G,F/G/H,G/H/E} {
+            \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
+        }
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(E)+(-0.2,-0.2)$) {E};
+        \node at ($(F)+(0.2,-0.2)$) {F};
+        \node at ($(G)+(0.2,0.2)$) {G};
+        \node at ($(H)+(-0.2,0.2)$) {H};
+
+
+        % double Tick marks across horizontal side E--F
+        \draw[thin, gray]
+            ($(E)!0.5!(F) + (-0.03,-0.10)$) --
+            ($(E)!0.5!(F) + (-0.03,0.10)$);
+
+        \draw[thin, gray]
+            ($(E)!0.5!(F) + (0.03,-0.10)$) --
+            ($(E)!0.5!(F) + (0.03,0.10)$);
+
+        % double Tick marks across horizontal side H--G
+        \draw[thin, gray]
+            ($(H)!0.5!(G) + (-0.03,-0.10)$) --
+            ($(H)!0.5!(G) + (-0.03,0.10)$);
+
+        \draw[thin, gray]
+            ($(H)!0.5!(G) + (0.03,-0.10)$) --
+            ($(H)!0.5!(G) + (0.03,0.10)$);
+
+
+        % Tick marks across vertical sides
+        \draw[thin, gray]
+            ($(F)!0.5!(G) + (-0.10,0)$) --
+            ($(F)!0.5!(G) + (0.10,0)$);
+
+        \draw[thin, gray]
+            ($(E)!0.5!(H) + (-0.10,0)$) --
+            ($(E)!0.5!(H) + (0.10,0)$);
+
+        % dotted/dashed arrows shifted away from edges
+        % Horizontal side (A-B), shifted down
+        \draw[<->, gray]
+            ($(E) + (0,-0.50cm)$) -- ($(F) + (0,-0.50cm)$)
+            node[black, midway, fill=white, inner sep=3pt] {8\,cm};
+
+        % Vertical side (B-C), shifted right
+        \draw[<->, gray]
+            ($(F) + (0.50cm,0)$) -- ($(G) + (0.50cm,0)$)
+            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {5\,cm};
+
+
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+  \text{Perimeter} &= 2(l+w) \\
+  \text{Perimeter} &= 2 \times (8 \,\text{cm} + 5 \,\text{cm}) \\
+  \text{Perimeter} &= 26 \,\text{cm}
+  \end{align*}
+\end{minipage}
+\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=30]
+        % Draw square
+        \draw (0,0) coordinate (E) --
+              ++(3.971,0) coordinate (F) --
+              ++(0,2.269) coordinate (G) --
+              ++(-3.971,0) coordinate (H) -- cycle;
+
+        % Right angle markers
+        \foreach \p/\q/\r in {H/E/F,E/F/G,F/G/H,G/H/E} {
+            \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
+        }
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(E)+(-0.2,-0.2)$) {E};
+        \node at ($(F)+(0.2,-0.2)$) {F};
+        \node at ($(G)+(0.2,0.2)$) {G};
+        \node at ($(H)+(-0.2,0.2)$) {H};
+
+
+        % double Tick marks across horizontal side E--F
+        \draw[thin, gray]
+            ($(E)!0.5!(F) + (-0.03,-0.10)$) --
+            ($(E)!0.5!(F) + (-0.03,0.10)$);
+
+        \draw[thin, gray]
+            ($(E)!0.5!(F) + (0.03,-0.10)$) --
+            ($(E)!0.5!(F) + (0.03,0.10)$);
+
+        % double Tick marks across horizontal side H--G
+        \draw[thin, gray]
+            ($(H)!0.5!(G) + (-0.03,-0.10)$) --
+            ($(H)!0.5!(G) + (-0.03,0.10)$);
+
+        \draw[thin, gray]
+            ($(H)!0.5!(G) + (0.03,-0.10)$) --
+            ($(H)!0.5!(G) + (0.03,0.10)$);
+
+
+        % Tick marks across vertical sides
+        \draw[thin, gray]
+            ($(F)!0.5!(G) + (-0.10,0)$) --
+            ($(F)!0.5!(G) + (0.10,0)$);
+
+        \draw[thin, gray]
+            ($(E)!0.5!(H) + (-0.10,0)$) --
+            ($(E)!0.5!(H) + (0.10,0)$);
+
+        % dotted/dashed arrows shifted away from edges
+        % Horizontal side (A-B), shifted down
+        \draw[<->, gray]
+            ($(E) + (0,-0.50cm)$) -- ($(F) + (0,-0.50cm)$)
+            node[black, midway, fill=white, inner sep=3pt] {7\,cm};
+
+        % Vertical side (B-C), shifted right
+        \draw[<->, gray]
+            ($(F) + (0.50cm,0)$) -- ($(G) + (0.50cm,0)$)
+            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {4\,cm};
+
+
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+  \text{Perimeter} &= 2(l+w) \\
+  \text{Perimeter} &= 2 \times (7 \,\text{cm} + 4 \,\text{cm}) \\
+  \text{Perimeter} &= 22 \,\text{cm}
+  \end{align*}
+\end{minipage}
+\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=-10]
+        % Draw square
+        \draw (0,0) coordinate (K) --
+              ++(3.757,0) coordinate (L) --
+              ++(0,2.254) coordinate (M) --
+              ++(-3.757,0) coordinate (N) -- cycle;
+
+        % Right angle markers
+        \foreach \p/\q/\r in {N/K/L,K/L/M,L/M/N,M/N/K} {
+            \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
+        }
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(K)+(-0.2,-0.2)$) {K};
+        \node at ($(L)+(0.2,-0.2)$) {L};
+        \node at ($(M)+(0.2,0.2)$) {M};
+        \node at ($(N)+(-0.2,0.2)$) {N};
+
+
+        % double Tick marks across horizontal side K--L
+        \draw[thin, gray]
+            ($(K)!0.5!(L) + (-0.03,-0.10)$) --
+            ($(K)!0.5!(L) + (-0.03,0.10)$);
+
+        \draw[thin, gray]
+            ($(K)!0.5!(L) + (0.03,-0.10)$) --
+            ($(K)!0.5!(L) + (0.03,0.10)$);
+
+        % double Tick marks across horizontal side N--M
+        \draw[thin, gray]
+            ($(N)!0.5!(M) + (-0.03,-0.10)$) --
+            ($(N)!0.5!(M) + (-0.03,0.10)$);
+
+        \draw[thin, gray]
+            ($(N)!0.5!(M) + (0.03,-0.10)$) --
+            ($(N)!0.5!(M) + (0.03,0.10)$);
+
+
+        % Tick marks across vertical sides
+        \draw[thin, gray]
+            ($(L)!0.5!(M) + (-0.10,0)$) --
+            ($(L)!0.5!(M) + (0.10,0)$);
+
+        \draw[thin, gray]
+            ($(K)!0.5!(N) + (-0.10,0)$) --
+            ($(K)!0.5!(N) + (0.10,0)$);
+
+        % dotted/dashed arrows shifted away from edges
+        % Horizontal side (A-B), shifted down
+        \draw[<->, gray]
+            ($(K) + (0,-0.50cm)$) -- ($(L) + (0,-0.50cm)$)
+            node[black, midway, fill=white, inner sep=3pt] {5\,cm};
+
+        % Vertical side (B-C), shifted right
+        \draw[<->, gray]
+            ($(L) + (0.50cm,0)$) -- ($(M) + (0.50cm,0)$)
+            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {3\,cm};
+
+
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+  \text{Perimeter} &= 2(l+w) \\
+  \text{Perimeter} &= 2 \times (5 \,\text{cm} + 3 \,\text{cm}) \\
+  \text{Perimeter} &= 16 \,\text{cm}
+  \end{align*}
+\end{minipage}
+\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=0]
+        % Draw square
+        \draw (0,0) coordinate (W) --
+              ++(2.889,0) coordinate (X) --
+              ++(0,2.476) coordinate (Y) --
+              ++(-2.889,0) coordinate (Z) -- cycle;
+
+        % Right angle markers
+        \foreach \p/\q/\r in {Z/W/X,W/X/Y,X/Y/Z,Y/Z/W} {
+            \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
+        }
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(W)+(-0.2,-0.2)$) {W};
+        \node at ($(X)+(0.2,-0.2)$) {X};
+        \node at ($(Y)+(0.2,0.2)$) {Y};
+        \node at ($(Z)+(-0.2,0.2)$) {Z};
+
+
+        % double Tick marks across horizontal side W--X
+        \draw[thin, gray]
+            ($(W)!0.5!(X) + (-0.03,-0.10)$) --
+            ($(W)!0.5!(X) + (-0.03,0.10)$);
+
+        \draw[thin, gray]
+            ($(W)!0.5!(X) + (0.03,-0.10)$) --
+            ($(W)!0.5!(X) + (0.03,0.10)$);
+
+        % double Tick marks across horizontal side Z--Y
+        \draw[thin, gray]
+            ($(Z)!0.5!(Y) + (-0.03,-0.10)$) --
+            ($(Z)!0.5!(Y) + (-0.03,0.10)$);
+
+        \draw[thin, gray]
+            ($(Z)!0.5!(Y) + (0.03,-0.10)$) --
+            ($(Z)!0.5!(Y) + (0.03,0.10)$);
+
+
+        % Tick marks across vertical sides
+        \draw[thin, gray]
+            ($(X)!0.5!(Y) + (-0.10,0)$) --
+            ($(X)!0.5!(Y) + (0.10,0)$);
+
+        \draw[thin, gray]
+            ($(W)!0.5!(Z) + (-0.10,0)$) --
+            ($(W)!0.5!(Z) + (0.10,0)$);
+
+        % dotted/dashed arrows shifted away from edges
+        % Horizontal side (A-B), shifted down
+        \draw[<->, gray]
+            ($(W) + (0,-0.50cm)$) -- ($(X) + (0,-0.50cm)$)
+            node[black, midway, fill=white, inner sep=3pt] {7\,cm};
+
+        % Vertical side (B-C), shifted right
+        \draw[<->, gray]
+            ($(X) + (0.50cm,0)$) -- ($(Y) + (0.50cm,0)$)
+            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {6\,cm};
+
+
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+  \text{Perimeter} &= 2(l+w) \\
+  \text{Perimeter} &= 2 \times (7 \,\text{cm} + 6 \,\text{cm}) \\
+  \text{Perimeter} &= 26 \,\text{cm}
+  \end{align*}
+\end{minipage}
+\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=0]
+        % Draw square
+        \draw (0,0) coordinate (K) --
+              ++(4.462,0) coordinate (L) --
+              ++(0,1.983) coordinate (M) --
+              ++(-4.462,0) coordinate (N) -- cycle;
+
+        % Right angle markers
+        \foreach \p/\q/\r in {N/K/L,K/L/M,L/M/N,M/N/K} {
+            \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
+        }
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(K)+(-0.2,-0.2)$) {K};
+        \node at ($(L)+(0.2,-0.2)$) {L};
+        \node at ($(M)+(0.2,0.2)$) {M};
+        \node at ($(N)+(-0.2,0.2)$) {N};
+
+
+        % double Tick marks across horizontal side K--L
+        \draw[thin, gray]
+            ($(K)!0.5!(L) + (-0.03,-0.10)$) --
+            ($(K)!0.5!(L) + (-0.03,0.10)$);
+
+        \draw[thin, gray]
+            ($(K)!0.5!(L) + (0.03,-0.10)$) --
+            ($(K)!0.5!(L) + (0.03,0.10)$);
+
+        % double Tick marks across horizontal side N--M
+        \draw[thin, gray]
+            ($(N)!0.5!(M) + (-0.03,-0.10)$) --
+            ($(N)!0.5!(M) + (-0.03,0.10)$);
+
+        \draw[thin, gray]
+            ($(N)!0.5!(M) + (0.03,-0.10)$) --
+            ($(N)!0.5!(M) + (0.03,0.10)$);
+
+
+        % Tick marks across vertical sides
+        \draw[thin, gray]
+            ($(L)!0.5!(M) + (-0.10,0)$) --
+            ($(L)!0.5!(M) + (0.10,0)$);
+
+        \draw[thin, gray]
+            ($(K)!0.5!(N) + (-0.10,0)$) --
+            ($(K)!0.5!(N) + (0.10,0)$);
+
+        % dotted/dashed arrows shifted away from edges
+        % Horizontal side (A-B), shifted down
+        \draw[<->, gray]
+            ($(K) + (0,-0.50cm)$) -- ($(L) + (0,-0.50cm)$)
+            node[black, midway, fill=white, inner sep=3pt] {9\,cm};
+
+        % Vertical side (B-C), shifted right
+        \draw[<->, gray]
+            ($(L) + (0.50cm,0)$) -- ($(M) + (0.50cm,0)$)
+            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {4\,cm};
+
+
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+  \text{Perimeter} &= 2(l+w) \\
+  \text{Perimeter} &= 2 \times (9 \,\text{cm} + 4 \,\text{cm}) \\
+  \text{Perimeter} &= 26 \,\text{cm}
+  \end{align*}
+\end{minipage}
+\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=0]
+        % Draw square
+        \draw (0,0) coordinate (A) --
+              ++(3.223,0) coordinate (B) --
+              ++(0,2.417) coordinate (C) --
+              ++(-3.223,0) coordinate (D) -- cycle;
+
+        % Right angle markers
+        \foreach \p/\q/\r in {D/A/B,A/B/C,B/C/D,C/D/A} {
+            \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
+        }
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(A)+(-0.2,-0.2)$) {A};
+        \node at ($(B)+(0.2,-0.2)$) {B};
+        \node at ($(C)+(0.2,0.2)$) {C};
+        \node at ($(D)+(-0.2,0.2)$) {D};
+
+
+        % double Tick marks across horizontal side A--B
+        \draw[thin, gray]
+            ($(A)!0.5!(B) + (-0.03,-0.10)$) --
+            ($(A)!0.5!(B) + (-0.03,0.10)$);
+
+        \draw[thin, gray]
+            ($(A)!0.5!(B) + (0.03,-0.10)$) --
+            ($(A)!0.5!(B) + (0.03,0.10)$);
+
+        % double Tick marks across horizontal side D--C
+        \draw[thin, gray]
+            ($(D)!0.5!(C) + (-0.03,-0.10)$) --
+            ($(D)!0.5!(C) + (-0.03,0.10)$);
+
+        \draw[thin, gray]
+            ($(D)!0.5!(C) + (0.03,-0.10)$) --
+            ($(D)!0.5!(C) + (0.03,0.10)$);
+
+
+        % Tick marks across vertical sides
+        \draw[thin, gray]
+            ($(B)!0.5!(C) + (-0.10,0)$) --
+            ($(B)!0.5!(C) + (0.10,0)$);
+
+        \draw[thin, gray]
+            ($(A)!0.5!(D) + (-0.10,0)$) --
+            ($(A)!0.5!(D) + (0.10,0)$);
+
+        % dotted/dashed arrows shifted away from edges
+        % Horizontal side (A-B), shifted down
+        \draw[<->, gray]
+            ($(A) + (0,-0.50cm)$) -- ($(B) + (0,-0.50cm)$)
+            node[black, midway, fill=white, inner sep=3pt] {4\,cm};
+
+        % Vertical side (B-C), shifted right
+        \draw[<->, gray]
+            ($(B) + (0.50cm,0)$) -- ($(C) + (0.50cm,0)$)
+            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {3\,cm};
+
+
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+  \text{Perimeter} &= 2(l+w) \\
+  \text{Perimeter} &= 2 \times (4 \,\text{cm} + 3 \,\text{cm}) \\
+  \text{Perimeter} &= 14 \,\text{cm}
+  \end{align*}
+\end{minipage}
+\par\vspace{1cm}\begin{minipage}{0.55\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=0]
+        % Draw square
+        \draw (0,0) coordinate (Q) --
+              ++(8.0,0) coordinate (R) --
+              ++(0,1.778) coordinate (S) --
+              ++(-8.0,0) coordinate (T) -- cycle;
+
+        % Right angle markers
+        \foreach \p/\q/\r in {T/Q/R,Q/R/S,R/S/T,S/T/Q} {
+            \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
+        }
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(Q)+(-0.2,-0.2)$) {Q};
+        \node at ($(R)+(0.2,-0.2)$) {R};
+        \node at ($(S)+(0.2,0.2)$) {S};
+        \node at ($(T)+(-0.2,0.2)$) {T};
+
+
+        % double Tick marks across horizontal side Q--R
+        \draw[thin, gray]
+            ($(Q)!0.5!(R) + (-0.03,-0.10)$) --
+            ($(Q)!0.5!(R) + (-0.03,0.10)$);
+
+        \draw[thin, gray]
+            ($(Q)!0.5!(R) + (0.03,-0.10)$) --
+            ($(Q)!0.5!(R) + (0.03,0.10)$);
+
+        % double Tick marks across horizontal side T--S
+        \draw[thin, gray]
+            ($(T)!0.5!(S) + (-0.03,-0.10)$) --
+            ($(T)!0.5!(S) + (-0.03,0.10)$);
+
+        \draw[thin, gray]
+            ($(T)!0.5!(S) + (0.03,-0.10)$) --
+            ($(T)!0.5!(S) + (0.03,0.10)$);
+
+
+        % Tick marks across vertical sides
+        \draw[thin, gray]
+            ($(R)!0.5!(S) + (-0.10,0)$) --
+            ($(R)!0.5!(S) + (0.10,0)$);
+
+        \draw[thin, gray]
+            ($(Q)!0.5!(T) + (-0.10,0)$) --
+            ($(Q)!0.5!(T) + (0.10,0)$);
+
+        % dotted/dashed arrows shifted away from edges
+        % Horizontal side (A-B), shifted down
+        \draw[<->, gray]
+            ($(Q) + (0,-0.50cm)$) -- ($(R) + (0,-0.50cm)$)
+            node[black, midway, fill=white, inner sep=3pt] {9\,cm};
+
+        % Vertical side (B-C), shifted right
+        \draw[<->, gray]
+            ($(R) + (0.50cm,0)$) -- ($(S) + (0.50cm,0)$)
+            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {2\,cm};
+
+
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+  \text{Perimeter} &= 2(l+w) \\
+  \text{Perimeter} &= 2 \times (9 \,\text{cm} + 2 \,\text{cm}) \\
+  \text{Perimeter} &= 22 \,\text{cm}
+  \end{align*}
+\end{minipage}
+\par\vspace{1cm}
+
+\end{document}

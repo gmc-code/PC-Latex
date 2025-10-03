@@ -31,7 +31,7 @@ def get_area_circles_dict(radius=None, rotation=None):
     if rotation is None:
         rotation = get_rotations_shuffled()[0]
 
-    draw_radius = round(random.uniform(0, 1.0) + 1.3, 3)
+    draw_radius = round(random.uniform(0, 1.8) + 1.3, 3)
     calc_radius_value = radius
     calcarea_value = round(math.pi * radius ** 2,3)
 

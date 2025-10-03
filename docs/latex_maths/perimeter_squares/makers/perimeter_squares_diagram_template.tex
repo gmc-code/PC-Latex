@@ -1,0 +1,56 @@
+\begin{minipage}{0.55\textwidth}
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+    \begin{scope}[rotate=<<rotation>>]
+        % Draw square
+        \draw (0,0) coordinate (<<vA>>) --
+              ++(<<sidelength>>,0) coordinate (<<vB>>) --
+              ++(0,<<sidelength>>) coordinate (<<vC>>) --
+              ++(-<<sidelength>>,0) coordinate (<<vD>>) -- cycle;
+
+        % Right angle markers
+        \foreach \p/\q/\r in {<<vD>>/<<vA>>/<<vB>>,<<vA>>/<<vB>>/<<vC>>,<<vB>>/<<vC>>/<<vD>>,<<vC>>/<<vD>>/<<vA>>} {
+            \pic [draw, -, angle radius=0.2cm] {right angle=\p--\q--\r};
+        }
+
+        % Vertex LABELS
+        % Labels relative to shape geometry
+        \node at ($(<<vA>>)+(-0.2,-0.2)$) {<<vA>>};
+        \node at ($(<<vB>>)+(0.2,-0.2)$) {<<vB>>};
+        \node at ($(<<vC>>)+(0.2,0.2)$) {<<vC>>};
+        \node at ($(<<vD>>)+(-0.2,0.2)$) {<<vD>>};
+
+        % Tick marks across horizontal sides
+        \draw[thin, gray]
+            ($(<<vA>>)!0.5!(<<vB>>) + (0,-0.10)$) --
+            ($(<<vA>>)!0.5!(<<vB>>) + (0,0.10)$);
+
+        \draw[thin, gray]
+            ($(<<vD>>)!0.5!(<<vC>>) + (0,-0.10)$) --
+            ($(<<vD>>)!0.5!(<<vC>>) + (0,0.10)$);
+
+        % Tick marks across vertical sides
+        \draw[thin, gray]
+            ($(<<vB>>)!0.5!(<<vC>>) + (-0.10,0)$) --
+            ($(<<vB>>)!0.5!(<<vC>>) + (0.10,0)$);
+
+        \draw[thin, gray]
+            ($(<<vA>>)!0.5!(<<vD>>) + (-0.10,0)$) --
+            ($(<<vA>>)!0.5!(<<vD>>) + (0.10,0)$);
+
+        % dotted/dashed arrows shifted away from edges
+        % % Vertical side (B-C), shifted right
+        \draw[<->, gray]
+            ($(<<vB>>) + (0.50cm,0)$) -- ($(<<vC>>) + (0.50cm,0)$)
+            node[black, midway, fill=white, xshift=2mm, inner sep=3pt] {<<calc_sidelength>>\,\text{<<units>>} };
+
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{.4\textwidth}
+  \begin{align*}
+  \text{Perimeter} &= 4l \\
+  \text{Perimeter} &= <<calc_formula_value>> \times <<calcside_value>> \,\text{<<calc_units>>} \\
+  \text{Perimeter} &= <<calcperimeter_value>> \,\text{<<calc_units>>}
+  \end{align*}
+\end{minipage}
