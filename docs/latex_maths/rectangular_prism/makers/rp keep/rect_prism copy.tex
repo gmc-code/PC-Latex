@@ -1,0 +1,97 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{xcolor}
+\usepackage{ifthen}
+
+% --- Dimension arrow macro with optional dashed guides ---
+% #1,#2 endpoints
+% #3 offset vector
+% #4 label text
+% #5 fill color
+% #6 label offset vector
+% #7 draw arrow boolean
+\newcommand{\DimArrow}[7]{%
+    \coordinate (P1off) at ($ (#1)+(#3) $);
+    \coordinate (P2off) at ($ (#2)+(#3) $);
+
+    \ifthenelse{\equal{#7}{true}}{%
+        \draw[<->,gray] (P1off)--(P2off);
+    }{%
+    }{}
+
+    \node[black, fill=#5, fill opacity=1.0, text opacity=1, inner sep=1pt]
+        at ($ (P1off)!0.5!(P2off) + (#6) $) {#4};
+}
+
+% --- Prism macro with label/dimension/fill/dashed-guide toggles ---
+% #1=L, #2=W, #3=H, #4=fx, #5=fh
+% #6=show dimension lines? (true/false)
+\newcommand{\DrawRectFrontPrism}[6]{%
+    \begin{tikzpicture}[scale=1]
+        \def\L{#1}
+        \def\W{#2}
+        \def\H{#3}
+        \def\fx{#4}
+        \def\fh{#5}
+
+        % front face
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (\L,0);
+        \coordinate (C) at (\L,\H);
+        \coordinate (D) at (0,\H);
+
+        % skew shift
+        \pgfmathsetmacro{\dx}{0.5*\fx*\L}
+        \pgfmathsetmacro{\dy}{0.5*\fh*\H}
+
+        % back face
+        \coordinate (E) at ($(A)+(\dx,\dy)$);
+        \coordinate (F) at ($(B)+(\dx,\dy)$);
+        \coordinate (G) at ($(C)+(\dx,\dy)$);
+        \coordinate (H) at ($(D)+(\dx,\dy)$);
+
+        % draw prism edges
+        \draw[] (A)--(B)--(C)--(D)--cycle;
+        \draw[dashed] (A)--(E);
+        \draw[] (B)--(F);
+        \draw[] (C)--(G);
+        \draw[] (D)--(H);
+        \draw[dashed] (E)--(F);
+        \draw[] (F)--(G);
+        \draw[] (G)--(H);
+        \draw[dashed] (H)--(E);
+
+
+        % dimensions (toggle)
+
+
+        \ifthenelse{\equal{#6}{true}}{%
+            \def\ABoffset{0,-0.2} \def\ABlabeloffset{0,-0.4}
+            \def\ADoffset{-0.2,0} \def\ADlabeloffset{-1.0,0}
+            \def\BFoffset{0.4,0} \def\BFlabeloffset{1.0,-0.0}
+            \DimArrow{A}{B}{\ABoffset}{$l=$ \L cm}{white}{\ABlabeloffset}{true}
+            \DimArrow{A}{D}{\ADoffset}{$H=$ \H cm}{white}{\ADlabeloffset}{true}
+            \DimArrow{B}{F}{\BFoffset}{$w=$ \W cm}{white}{\BFlabeloffset}{true}
+        }{%
+            \def\ABoffset{0,-0.01} \def\ABlabeloffset{0,-0.4}
+            \def\ADoffset{-0.01,0} \def\ADlabeloffset{-1.0,0}
+            \def\BFoffset{0.01,0} \def\BFlabeloffset{1.0,-0.0}
+            \DimArrow{A}{B}{\ABoffset}{$l=$ \L cm}{none}{\ABlabeloffset}{false}
+            \DimArrow{A}{D}{\ADoffset}{$H=$ \H cm}{none}{\ADlabeloffset}{false}
+            \DimArrow{B}{F}{\BFoffset}{$w=$ \W cm}{none}{\BFlabeloffset}{false}
+        }
+    {}
+
+    \end{tikzpicture}%
+    }
+
+\begin{document}
+
+% #1=L, #2=W, #3=H, #4=fx, #5=fh
+% #6=show dimension lines? (true/false)
+
+\DrawRectFrontPrism{4}{3}{2}{0.5}{1.6}{true}
+\vspace{1cm}
+
+\end{document}

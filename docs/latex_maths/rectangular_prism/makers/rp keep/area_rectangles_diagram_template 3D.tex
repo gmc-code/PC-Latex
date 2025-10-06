@@ -1,0 +1,81 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{xcolor}
+\usepackage{ifthen}
+
+% --- Dimension arrows macro, label at 60% ---
+\newcommand{\DimArrow}[4]{%
+    \coordinate (P1off) at ($ (#1)+#3 $);
+    \coordinate (P2off) at ($ (#2)+#3 $);
+    \draw[gray, dashed] (#1)--(P1off);
+    \draw[gray, dashed] (#2)--(P2off);
+    \draw[<->,gray] (P1off)--(P2off)
+        node[pos=0.6, black, fill=white, fill opacity=0.5, text opacity=1, inner sep=1pt]{#4};
+}
+
+% --- Macro to draw a prism at given elevation/azimuth ---
+% #1=elevation, #2=azimuth, #3=L, #4=W, #5=H
+\newcommand{\DrawPrismAuto}[5]{%
+  \tdplotsetmaincoords{#1}{#2}
+  \begin{tikzpicture}[tdplot_main_coords,scale=1]
+
+    \def\L{#3}
+    \def\W{#4}
+    \def\H{#5}
+
+    % Coordinates
+    \coordinate (A) at (0,0,0);
+    \coordinate (B) at (0,\W,0);
+    \coordinate (C) at (\L,\W,0);
+    \coordinate (D) at (\L,0,0);
+    \coordinate (E) at (0,0,\H);
+    \coordinate (F) at (0,\W,\H);
+    \coordinate (G) at (\L,\W,\H);
+    \coordinate (H) at (\L,0,\H);
+
+    % Draw prism
+    \draw[dashed] (A)--(B);
+    \draw[thick] (B)--(C)--(D);
+    \draw[dashed] (D)--(A);
+    \draw[dashed] (A)--(E);
+    \draw[thick] (B)--(F)--(G)--(H)--(E);
+    \draw[thick] (C)--(G) (D)--(H);
+    \draw[thick] (E)--(F);
+
+    % Vertex labels
+    \foreach \P/\name in {A/A,B/B,C/C,D/D,E/E,F/F,G/G,H/H}
+      \node[anchor=south west] at (\P) {\name};
+
+    % Dimension arrows, switch depending on elevation
+    \ifthenelse{#1 < 60}{
+        % elevation < 60
+        \DimArrow{B}{C}{(0,1.0,0)}{4 cm}
+        \DimArrow{C}{D}{(1.0,0,0)}{3 cm}
+        \DimArrow{B}{F}{(-1.3,0,0)}{2 cm}
+    }{
+        % elevation >= 60
+        \DimArrow{B}{C}{(0,2.0,0)}{4 cm}
+        \DimArrow{C}{D}{(1.5,0,0)}{3 cm}
+        \DimArrow{B}{F}{(-1.3,0,0)}{2 cm}
+    }
+  \end{tikzpicture}
+}
+
+\begin{document}
+
+% test views
+\DrawPrismAuto{30}{110}{2}{2}{2}
+\DrawPrismAuto{30}{130}{4}{3}{2}
+\DrawPrismAuto{30}{145}{4}{3}{2}
+\DrawPrismAuto{30}{160}{4}{3}{2}
+\DrawPrismAuto{55}{110}{4}{3}{2}
+\DrawPrismAuto{55}{130}{4}{3}{2}
+\DrawPrismAuto{55}{145}{4}{3}{2}
+\DrawPrismAuto{55}{160}{4}{3}{2}
+\DrawPrismAuto{80}{110}{4}{3}{2}
+\DrawPrismAuto{80}{130}{4}{3}{2}
+\DrawPrismAuto{80}{145}{4}{3}{2}
+\DrawPrismAuto{80}{160}{4}{3}{2}
+
+\end{document}

@@ -1,0 +1,68 @@
+\begin{minipage}{0.50\textwidth}
+  \refstepcounter{minipagecount}
+  \noindent{(\theminipagecount)}\quad
+  \begin{tikzpicture}[scale=1.0, baseline=(current bounding box.north)]
+     \begin{scope}[rotate=<<rotation>>]
+
+    % front face
+    \coordinate (<<vA>>) at (0,0);
+    \coordinate (<<vB>>) at (<<length>>,0);
+    \coordinate (<<vC>>) at (<<length>>,<<height>>);
+    \coordinate (<<vD>>) at (0,<<height>>);
+
+    % back face skew shift
+    \coordinate (<<vE>>) at ($(<<vA>>)+(<<dx>>, <<dy>>)$);
+    \coordinate (<<vF>>) at ($(<<vB>>)+(<<dx>>, <<dy>>)$);
+    \coordinate (<<vG>>) at ($(<<vC>>)+(<<dx>>, <<dy>>)$);
+    \coordinate (<<vH>>) at ($(<<vD>>)+(<<dx>>, <<dy>>)$);
+
+    % draw prism edges
+    \draw[] (<<vA>>)--(<<vB>>)--(<<vC>>)--(<<vD>>)--cycle;
+    \draw[dashed] (<<vA>>)--(<<vE>>);
+    \draw[] (<<vB>>)--(<<vF>>);
+    \draw[] (<<vC>>)--(<<vG>>);
+    \draw[] (<<vD>>)--(<<vH>>);
+    \draw[dashed] (<<vE>>)--(<<vF>>);
+    \draw[] (<<vF>>)--(<<vG>>);
+    \draw[] (<<vG>>)--(<<vH>>);
+    \draw[dashed] (<<vH>>)--(<<vE>>);
+
+    % label corners
+    % \node[above left] at (<<vA>>) {<<vA>>};
+    % \node[below right] at (<<vB>>) {<<vB>>};
+    % \node[above right] at (<<vC>>) {<<vC>>};
+    % \node[above left] at (<<vD>>) {<<vD>>};
+    % \node[below left] at (<<vE>>) {<<vE>>};
+    % \node[below right] at (<<vF>>) {<<vF>>};
+    % \node[above right] at (<<vG>>) {<<vG>>};
+    % \node[above left] at (<<vH>>) {<<vH>>};
+
+    % dimension lines enabled
+    \coordinate (P1offAB) at ($ (<<vA>>)+(0,-0.2) $);
+    \coordinate (P2offAB) at ($ (<<vB>>)+(0,-0.2) $);
+    \draw[<->,gray] (P1offAB)--(P2offAB);
+    \node[black, fill=white, fill opacity=1.0, text opacity=1, inner sep=1pt]
+        at ($ (P1offAB)!0.5!(P2offAB) + (0,-0.4) $) {\small $l=<<calc_l>> cm$};
+
+    \coordinate (P1offAD) at ($ (<<vA>>)+(-0.2,0) $);
+    \coordinate (P2offAD) at ($ (<<vD>>)+(-0.2,0) $);
+    \draw[<->,gray] (P1offAD)--(P2offAD);
+    \node[black, fill=white, fill opacity=1.0, text opacity=1, inner sep=1pt]
+        at ($ (P1offAD)!0.5!(P2offAD) + (-1.0,0) $) {\small $H=<<calc_H>> cm$};
+
+    \coordinate (P1offBF) at ($ (<<vB>>)+(0.4,0) $);
+    \coordinate (P2offBF) at ($ (<<vF>>)+(0.4,0) $);
+    \draw[<->,gray] (P1offBF)--(P2offBF);
+    \node[black, fill=white, fill opacity=1.0, text opacity=1, inner sep=1pt]
+        at ($ (P1offBF)!0.5!(P2offBF) + (1.15,-0.15) $) {\small $w=<<calc_w>> cm$};
+    \end{scope}
+\end{tikzpicture}
+\end{minipage}
+\hfill
+\begin{minipage}{.5\textwidth}
+  \begin{align*}
+  \text{Volume} &= lwH \\
+  \text{Volume} &= <<calc_l_value>> \,\text{cm} \times <<calc_w_value>> \,\text{cm} \times <<calc_H_value>> \,\text{cm} \\
+  \text{Volume} &= <<calc_V_value>> \,\text{cm}^3
+  \end{align*}
+\end{minipage}

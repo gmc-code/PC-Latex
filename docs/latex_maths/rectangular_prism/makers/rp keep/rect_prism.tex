@@ -1,0 +1,120 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{xcolor}
+\usepackage{ifthen}
+
+% --- Dimension arrow macro with optional dashed guides ---
+% #1,#2 endpoints
+% #3 offset vector
+% #4 label text
+% #5 fill color
+% #6 label offset vector
+% #7 draw dashed guides? (true/false)
+\newcommand{\DimArrow}[7]{%
+    \coordinate (P1off) at ($ (#1)+(#3) $);
+    \coordinate (P2off) at ($ (#2)+(#3) $);
+    \ifthenelse{\equal{#7}{true}}{%
+        \draw[gray, dashed] (#1)--(P1off);
+        \draw[gray, dashed] (#2)--(P2off);
+    }{}
+    \draw[<->,gray] (P1off)--(P2off);
+    \node[black, fill=#5, fill opacity=1.0, text opacity=1, inner sep=1pt]
+        at ($ (P1off)!0.5!(P2off) + (#6) $) {#4};
+}
+
+% --- Prism macro with label/dimension/fill/dashed-guide toggles ---
+% #1=L, #2=W, #3=H, #4=fx, #5=fh
+% #6=show vertex labels? (true/false)
+% #7=show dimension lines? (true/false)
+% #8=show dashed guides? (true/false)
+% #9=show fill? (true/false)
+\newcommand{\DrawRectFrontPrism}[9]{%
+\begin{tikzpicture}[scale=1]
+    \def\L{#1}
+    \def\W{#2}
+    \def\H{#3}
+    \def\fx{#4}
+    \def\fh{#5}
+
+    % front face
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (\L,0);
+    \coordinate (C) at (\L,\H);
+    \coordinate (D) at (0,\H);
+
+    % skew shift
+    \pgfmathsetmacro{\dx}{0.5*\fx*\L}
+    \pgfmathsetmacro{\dy}{0.5*\fh*\H}
+
+    % back face
+    \coordinate (E) at ($(A)+(\dx,\dy)$);
+    \coordinate (F) at ($(B)+(\dx,\dy)$);
+    \coordinate (G) at ($(C)+(\dx,\dy)$);
+    \coordinate (H) at ($(D)+(\dx,\dy)$);
+
+    % draw prism edges
+    \draw[very thick] (A)--(B)--(C)--(D)--cycle;
+    \ifthenelse{\equal{#9}{true}}{%
+        \fill[gray, opacity=0.2] (A)--(B)--(F)--(E)--cycle;
+    }{}
+    \draw[thick, dashed] (A)--(E);
+    \draw[thick] (B)--(F);
+    \draw[thick] (C)--(G);
+    \draw[thick] (D)--(H);
+    \draw[thick, dashed] (E)--(F);
+    \draw[thick] (F)--(G);
+    \draw[thick] (G)--(H);
+    \draw[thick, dashed] (H)--(E);
+
+    % vertex labels (toggle)
+    \ifthenelse{\equal{#6}{true}}{%
+        \foreach \P/\name in {A/A,B/B,C/C,D/D}
+            \node[anchor=north west] at (\P) {\name};
+        \foreach \P/\name in {E/E,F/F,G/G,H/H}
+            \node[anchor=south west] at (\P) {\name};
+    }{}
+
+    % dimensions (toggle)
+    \ifthenelse{\equal{#7}{true}}{%
+        % Conditional offsets based on vertex label visibility
+        \ifthenelse{\equal{#6}{true}}{%
+            \def\ABoffset{0,-0.7} \def\ABlabeloffset{0,-0.2}
+            \def\ADoffset{-0.85,0} \def\ADlabeloffset{-0.8,0}
+            \def\BFoffset{1.1,0} \def\BFlabeloffset{0.9,-0.1}
+        }{%
+            \def\ABoffset{0,-0.2} \def\ABlabeloffset{0,-0.4}
+            \def\ADoffset{-0.2,0} \def\ADlabeloffset{-1.0,0}
+            \def\BFoffset{0.4,0} \def\BFlabeloffset{1.0,-0.0}
+        }
+
+        \DimArrow{A}{B}{\ABoffset}{$l=$ \L cm}{white}{\ABlabeloffset}{#8}
+        \DimArrow{A}{D}{\ADoffset}{$H=$ \H cm}{white}{\ADlabeloffset}{#8}
+        \DimArrow{B}{F}{\BFoffset}{$w=$ \W cm}{none}{\BFlabeloffset}{#8}
+    }{}
+
+\end{tikzpicture}%
+}
+
+\begin{document}
+
+% #1=L, #2=W, #3=H, #4=fx, #5=fh
+% #6=show vertex labels? (true/false)
+% #7=show dimension lines? (true/false)
+% #8=show dashed guides? (true/false)
+% #9=show fill? (true/false)
+
+% 1️⃣ Show fill
+\DrawRectFrontPrism{4}{3}{2}{0.5}{1.6}{true}{true}{true}{true}
+
+\vspace{1cm}
+
+% 2️⃣ Hide fill
+\DrawRectFrontPrism{4}{3}{2}{0.5}{1.6}{true}{true}{false}{false}
+
+\vspace{1cm}
+
+% 3️⃣ No vertex labels, no fill
+\DrawRectFrontPrism{4}{3}{2}{0.5}{0.6}{false}{true}{false}{false}
+
+\end{document}
