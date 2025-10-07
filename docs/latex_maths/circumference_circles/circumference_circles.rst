@@ -1,5 +1,5 @@
 ====================================================
-circumference of circles
+Circumference of a Circle
 ====================================================
 
 | The diagrams below show a circle with the circumference to be calculated.
