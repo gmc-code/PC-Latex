@@ -112,7 +112,7 @@ LaTeX-workshop.LaTeX.tools json
 | Replace `Full_Path_folder` with the folder path for your python file.
 | Put in the full path to the python script using `\\` as the folder delimiter.
 
-.. code-block:: LaTeX-workshop
+.. code-block:: json
 
    {
       "name": "Python Script to Generate PNG",
@@ -145,7 +145,7 @@ LaTeX-workshop.LaTeX.recipes json
 | Search for "LaTeX-workshop recipes" or simply "LaTeX recipes".
 | Edit the recipe json at: ``LaTeX-workshop.LaTeX.recipes`` in the json file.
 
-.. code-block:: LaTeX-workshop
+.. code-block:: json
 
    {
       "name": "PDF ➞ PNG",

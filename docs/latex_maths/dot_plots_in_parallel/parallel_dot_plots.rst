@@ -145,4 +145,4 @@ Python code
 | The python code is shown below.
 
 .. literalinclude:: files/parallel_dot_plot_maker.py
-   :language: pythonw
+   :language: python

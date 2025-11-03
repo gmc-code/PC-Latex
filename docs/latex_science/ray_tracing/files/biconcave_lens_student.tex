@@ -1,0 +1,94 @@
+\documentclass[a4paper,landscape]{article}
+\usepackage[margin=0cm]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,shapes.geometric}
+\pagestyle{empty}
+
+\begin{document}
+\begin{tikzpicture}[remember picture,overlay]
+
+    % Draw page crosshairs
+    \draw[gray!50, line width=0.3pt]
+      ([xshift=0.5\paperwidth]current page.south west) --
+      ([xshift=0.5\paperwidth]current page.north west);
+    \draw[gray!50, line width=0.3pt]
+      ([yshift=0.5\paperheight]current page.south west) --
+      ([yshift=0.5\paperheight]current page.south east);
+
+  % SHIFT origin to page center and set 1cm = 1 unit
+  \begin{scope}[shift={(current page.center)}, x=1cm, y=1cm, >=Stealth]
+
+    % PARAMETERS
+    \def\f{7.5}
+    \def\rayEnd{12.5}
+    \def\dy{0.95}
+    \def\rdy{1.05}
+    \def\lensYR{2.5}
+    \def\R{7.35}
+    \pgfmathsetmacro{\lensXR}{0.2 + \R - sqrt(\R^2 - \lensYR^2)}
+    \def\lensXC{0.25}
+    \pgfmathsetmacro{\lensYS}{0.4*\lensYR}
+
+    % lens
+    \draw[fill=blue!5!white, opacity=0.2, thick]
+        (-\lensXR-\lensXC, -\lensYR)
+          .. controls (-\lensXC, -\lensYS) and (-\lensXC, \lensYS) ..
+          (-\lensXR-\lensXC, \lensYR)
+        -- (\lensXR+\lensXC, \lensYR)
+          .. controls (\lensXC, \lensYS) and (\lensXC, -\lensYS) ..
+          (+\lensXR+\lensXC, -\lensYR)
+        -- cycle;
+
+    %  label
+     \node[blue!5!black, above right] at (0,\lensYR+1.2) {\Large \makebox[5.5cm][l]{\dotfill} \Huge lens};
+
+
+    % Virtual focus on left
+    \coordinate (Fv) at (-\f,0);
+    \draw[fill=black] (Fv) circle (0.07) node[below=14mm, xshift=-2.2cm] {\Huge \phantom{VF} \Large \makebox[5.5cm][l]{\dotfill}};
+    \draw[black, thick] (-\f - 1.8, -1.4) -- (-\f - 0.2, -0.2);
+
+    % Incoming parallel rays
+    \foreach \y in {- \dy,0,\dy} {
+      \draw[gray, thick, ->, dash pattern=on 0.6cm off 4.6cm] (-12,\y) -- (-6,\y);
+      \draw[gray, thick, dash pattern=on 0.6cm off 4.5cm] (-6,\y) -- (0.2-\lensXR,\y);
+    }
+
+     % Diverging rays through lens (refracted)
+    % Refracted rays diverging from lens, appearing to come from virtual focus
+    \foreach \y in {- \rdy,0,\rdy} {
+        % Backward extension toward virtual focus
+        % \draw[red, thick, dashed] (\lensXC,\y) -- (Fv);
+        % Compute slope from virtual focus to lens edge
+        \pgfmathsetmacro{\slope}{(\y - 0)/(\lensXC + \f)}
+
+        % Compute endpoint at x = -\lensXC
+        \pgfmathsetmacro{\xcut}{-0.2-\lensXC}
+        \pgfmathsetmacro{\ycut}{\slope*(\xcut + \f)} % since x - (-f) = x + f
+
+        % Draw dashed line from virtual focus to cropped point
+        \draw[gray, thick, dash pattern=on 3pt off 40pt] (Fv) -- (\xcut,\ycut);
+
+         % Refracted ray (diverging)
+        % Refracted ray (diverging) starting at lens edge and extending forward
+        \pgfmathsetmacro{\xstart}{0.2+\lensXC}
+        \pgfmathsetmacro{\xend}{\xstart + 12}
+        \pgfmathsetmacro{\ystart}{\y}
+        \pgfmathsetmacro{\yend}{\ystart + \slope*(\xend - \xstart)}
+
+        \draw[gray, thick, ->, dash pattern=on 1cm off 4.5cm] (\xstart,\ystart) -- (\xend,\yend);
+
+    }
+
+
+    % Focal length indicator
+    \draw[<->] (0,-\lensYR-0.6) -- (-\f,-\lensYR-0.6) node[midway,below] {\Large $f=7.5$ cm};
+
+    % circle to check curvature
+    % \coordinate (F2) at (\f +\lensXC,0);
+    % \draw[red, loosely dashed] (F2) circle (\R);
+
+  \end{scope}
+
+\end{tikzpicture}
+\end{document}

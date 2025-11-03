@@ -1,0 +1,80 @@
+\documentclass[a4paper,landscape]{article}
+\usepackage[margin=0cm]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,shapes.geometric}
+\usepackage[normalem]{ulem}
+
+\pagestyle{empty}
+
+\begin{document}
+\begin{tikzpicture}[remember picture,overlay] % keep options simple here
+
+    % Draw page crosshairs
+    % Light grey, very thin crosshairs
+    \draw[gray!50, line width=0.3pt]
+      ([xshift=0.5\paperwidth]current page.south west) --
+      ([xshift=0.5\paperwidth]current page.north west);
+    \draw[gray!50, line width=0.3pt]
+      ([yshift=0.5\paperheight]current page.south west) --
+      ([yshift=0.5\paperheight]current page.south east);
+
+
+  % SHIFT origin to page center and set 1cm = 1 unit
+  \begin{scope}[shift={(current page.center)}, x=1cm, y=1cm, >=Stealth]
+
+    % PARAMETERS
+    \def\f{7.5}        % focal length (cm)
+    \def\rayEnd{12.5}  % ray end x (cm) roughly 5 cm past focus
+    \def\dy{0.95}      % spacing between rays (cm)
+    \def\rdy{0.85}      % spacing between refracted rays (cm)
+    \def\lensYR{3.0}   % lens half-height (cm)
+    \def\R{7.35}       % radius of curvature from lensmaker formula
+    \pgfmathsetmacro{\lensXR}{\R - sqrt(\R^2 - \lensYR^2)} % half-sagitta bulge at center
+    %https://www.edmundoptics.com.au/knowledge-center/tech-tools/sag/?srsltid=AfmBOoriU3DzOuHtTMaNQiDByYJ3AmudXaeIipH2bTqMLz8YtFUxiIPJ
+    \def\lensXC{0.25}  % lens half-thickness at ends
+    \def\lensYS{0.95}   % contorl hieght for benzier curve for lens
+
+    % lens
+    \draw[fill=blue!5!white, opacity=0.2, thick]
+        (-\lensXC, -\lensYR)
+          .. controls (-\lensXR-\lensXC, -\lensYS) and (-\lensXR-\lensXC, \lensYS) ..
+          (-\lensXC, \lensYR)
+        -- (\lensXC, \lensYR)
+          .. controls (\lensXR+\lensXC, \lensYS) and (\lensXR+\lensXC, -\lensYS) ..
+          (\lensXC, -\lensYR)
+        -- cycle;
+
+    % \node[blue!5!black, above right] at (0,\lensYR+1.2) {\Huge Biconvex lens};
+    % \node[blue!5!black, above right] at (0,\lensYR+1.2) {\Huge \phantom{Biconvex lens}\llap{\dotfill}};
+    \node[blue!5!black, above right] at (0,\lensYR+1.2) {\Large \makebox[5.5cm][l]{\dotfill} \Huge lens};
+
+    % Focal point on right
+    \coordinate (F) at (\f,0);
+    \draw[fill=black] (F) circle (0.07) node[below=20pt] {\Large \makebox[2.5cm][l]{\dotfill}};
+
+    % Incoming parallel rays (with arrowhead halfway before lens)
+    \foreach \y in {- \dy, 0, \dy} {
+      % Dashed parallel rays with arrow
+      % \draw[gray, thick, dash pattern=on 1cm off 3cm] (-12,\y) -- (-6,\y);
+      \draw[gray, thick,  ->, dash pattern=on 1cm off 4cm] (-12,\y) -- (-6,\y);
+      % Continue to lens plane (solid line)
+      \draw[gray, thick, dash pattern=on 1cm off 3.5cm] (-6,\y) -- (0.2-\lensXR-\lensXC,\y);
+    }
+
+
+    % Refracted rays: line through (0,\y) and (f,0), extend to rayEnd
+    \foreach \y in {- \rdy, 0, \rdy} {
+      % compute numeric y coordinate at x=\rayEnd using y_end = y0*(1 - rayEnd/f)
+      \pgfmathsetmacro{\yend}{\y*(1 - \rayEnd/\f)}
+      % draw from lens plane to focus, then from focus to end (arrow)
+      \draw[gray, thick, dash pattern=on 1cm off 5cm] (-0.2+\lensXR+\lensXC,\y) -- (F);
+      \draw[gray, thick, ->, dash pattern=on 1cm off 3.0cm] (F) -- (\rayEnd,\yend);
+    }
+
+    % focal length indicator
+    \draw[<->] (0,-\lensYR-0.6) -- (\f,-\lensYR-0.6) node[midway,below] {\Large $f=7.5$ cm};
+
+  \end{scope}
+
+\end{tikzpicture}
+\end{document}

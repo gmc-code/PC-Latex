@@ -25,7 +25,7 @@ def convert_folder(pdf_folder_path, pdfs_files):
 
 # a raw r string is used since backslashes are normally escape characters
 # paste in windows pdf full file path
-pasted_folder_path = r"C:\Users\gmccarthy\OneDrive - Parade College\All DT\microbit for online\PC_LaTeX\docs\Latex_maths\graph_paper\files"
+pasted_folder_path = r"C:\Users\gmccarthy\Documents\PC_RTD_GITHUB_resources\PC_latex\docs\latex_science\ray_tracing"
 
 pdf_folder_path = pathlib.PureWindowsPath(pasted_folder_path)
 pdfs_files = get_pdf_files(pdf_folder_path)

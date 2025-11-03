@@ -1,0 +1,29 @@
+\documentclass[a4paper,landscape]{article}
+\usepackage[margin=0cm]{geometry}
+\usepackage{tikz}
+\pagestyle{empty}
+
+\newcommand{\centerlines}{
+\begin{tikzpicture}[remember picture, overlay]
+  % Vertical center line
+  \draw[thin]
+    ([xshift=0.5\paperwidth]current page.south west) --
+    ([xshift=0.5\paperwidth]current page.north west);
+
+  % Horizontal center line
+  \draw[thin]
+    ([yshift=0.5\paperheight]current page.south west) --
+    ([yshift=0.5\paperheight]current page.south east);
+\end{tikzpicture}
+}
+
+\begin{document}
+
+% Page 1
+\centerlines
+\newpage
+
+% Page 2
+\centerlines
+
+\end{document}

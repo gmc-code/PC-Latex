@@ -197,6 +197,7 @@ PC-latex
     latex_science/physics/circuits.rst
     latex_science/physics/levers.rst
     latex_science/physics/optics.rst
+    latex_science/ray_tracing/ray_tracing.rst
 
 
 .. toctree::
