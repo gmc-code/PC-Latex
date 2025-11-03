@@ -47,7 +47,7 @@ Optical axes
 | A simple cross shape on the landscape page is useful for ray diagrams.
 
 .. figure:: files/optical_axes.png
-   :width: 300
+   :width: 600
    :alt: optical_axes.png
    :figclass: align-center
 
@@ -67,7 +67,7 @@ Biconcave lens
 | Student version and full versions are shown below.
 
 .. figure:: files/biconcave_lens.png
-   :width: 300
+   :width: 600
    :alt: biconcave_lens.png
    :figclass: align-center
 
@@ -80,7 +80,7 @@ Biconcave lens
 | :download:`biconcave_lens.tex<files/biconcave_lens.tex>`
 
 .. figure:: files/biconcave_lens_student.png
-   :width: 300
+   :width: 600
    :alt: biconcave_lens_student.png
    :figclass: align-center
 
@@ -101,7 +101,7 @@ Biconvex lens
 | Student version and full versions are shown below.
 
 .. figure:: files/biconvex_lens.png
-   :width: 300
+   :width: 600
    :alt: biconvex_lens.png
    :figclass: align-center
 
@@ -114,7 +114,7 @@ Biconvex lens
 | :download:`biconvex_lens.tex<files/biconvex_lens.tex>`
 
 .. figure:: files/biconvex_lens_student.png
-   :width: 300
+   :width: 600
    :alt: biconvex_lens_student.png
    :figclass: align-center
 
