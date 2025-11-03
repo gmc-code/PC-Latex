@@ -17,6 +17,10 @@ def convert_pdf_to_png(pdf_path, png_path):
         img.format = "png"
         img.compression_quality = 99
         img.alpha_channel = "opaque"
+        # testing only
+        # img.background_color = 'white'
+        # img.alpha_channel = 'remove'
+        #continue
         img.save(filename=png_path)
 
 

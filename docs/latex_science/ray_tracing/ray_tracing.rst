@@ -66,9 +66,9 @@ Biconcave lens
 
 | Student version and full versions are shown below.
 
-.. figure:: files/optical_axes.png
+.. figure:: files/biconcave_lens.png
    :width: 300
-   :alt: optical_axes.png
+   :alt: biconcave_lens.png
    :figclass: align-center
 
 
@@ -100,9 +100,9 @@ Biconvex lens
 
 | Student version and full versions are shown below.
 
-.. figure:: files/optical_axes.png
+.. figure:: files/biconvex_lens.png
    :width: 300
-   :alt: optical_axes.png
+   :alt: biconvex_lens.png
    :figclass: align-center
 
 

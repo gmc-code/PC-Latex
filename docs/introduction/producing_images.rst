@@ -11,6 +11,12 @@ Producing images
 #. in python, via the wand module, which requires ImageMagick installation.
 #. in VSCode when building the pdf, via LaTeX Workshop extension, via a custom tool, a custom recipe calls a python script that uses ImageMagick.
 
+.. admonition:: Tip
+
+   The use of opacity in LaTeX is not handled well in the conversion of a pdf to png by the automated processes below, and so should be avoided.
+
+
+
 ----
 
 Adobe Acrobat Pro
