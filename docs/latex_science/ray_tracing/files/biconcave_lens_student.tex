@@ -26,38 +26,48 @@
   \begin{scope}[shift={(current page.center)}, x=1cm, y=1cm, >=Stealth]
 
     % PARAMETERS
+    % lens height57mm, half height lensYR
+    % centre 6mm lensXC =3mm, sagitta 6mm lensXR 5.7 + 0.1 to improve look
+    % f 7.5cm gives lens maker calc for radius of curvature 7.35
+    % lensYS scaled to use 0.4 of half height for nice curve
+    % lensXCS manually set to match centre width better
+
+    % PARAMETERS
     \def\f{7.5}
     \def\rayEnd{12.5}
     \def\dy{0.95}
     \def\rdy{1.05}
-    \def\lensYR{2.5}
+    \def\lensYR{2.85}
+    \def\lensXC{0.30}
     \def\R{7.35}
-    \pgfmathsetmacro{\lensXR}{0.2 + \R - sqrt(\R^2 - \lensYR^2)}
-    \def\lensXC{0.25}
+    \pgfmathsetmacro{\lensXR}{\R - sqrt(\R^2 - \lensYR^2)}
+    \pgfmathsetmacro{\lensXEnd}{\lensXC + \lensXR + 0.01}
     \pgfmathsetmacro{\lensYS}{0.4*\lensYR}
+    \def\lensXCS{0.1}
+
 
     % Layer 2: Lens
     \begin{pgfonlayer}{lenslayer}
       \draw[gray, fill=blue!3!white, thin]
-          (-\lensXR-\lensXC, -\lensYR)
-            .. controls (-\lensXC, -\lensYS) and (-\lensXC, \lensYS) ..
-            (-\lensXR-\lensXC, \lensYR)
-          -- (\lensXR+\lensXC, \lensYR)
-            .. controls (\lensXC, \lensYS) and (\lensXC, -\lensYS) ..
-            (+\lensXR+\lensXC, -\lensYR)
+          (-\lensXEnd, -\lensYR)
+            .. controls (-\lensXCS, -\lensYS) and (-\lensXCS, \lensYS) ..
+            (-\lensXEnd, \lensYR)
+          -- (\lensXEnd, \lensYR)
+            .. controls (\lensXCS, \lensYS) and (\lensXCS, -\lensYS) ..
+            (+\lensXEnd, -\lensYR)
           -- cycle;
     \end{pgfonlayer}
 
     % Layer 3: Main content
     %  label
-    \node[blue!5!black, above right] at (0,\lensYR+1.2) {\Large \makebox[5.5cm][l]{\dotfill} \Huge lens};
+    \node[blue!5!black, above right] at (0,\lensYR+1.2) {\Huge Biconcave lens};
 
     % Virtual focus on left
     \coordinate (Fv) at (-\f,0);
-    \draw[fill=black] (Fv) circle (0.07) node[below=14mm, xshift=-2.2cm] {\Huge \phantom{VF} \Large \makebox[5.5cm][l]{\dotfill}};
+    \draw[fill=black] (Fv) circle (0.07) node[below=14mm, xshift=-1.8cm] {\Large $Virtual Focus$};
     \draw[black, thick] (-\f - 1.8, -1.4) -- (-\f - 0.2, -0.2);
 
-    % Incoming parallel rays
+     % Incoming parallel rays
     \foreach \y in {- \dy,0,\dy} {
       \draw[gray, thick, ->, dash pattern=on 0.6cm off 4.6cm] (-12,\y) -- (-6,\y);
       \draw[gray, thick, dash pattern=on 0.6cm off 4.5cm] (-6,\y) -- (0.2-\lensXR,\y);
@@ -70,7 +80,7 @@
         \pgfmathsetmacro{\ycut}{\slope*(\xcut + \f)}
         \draw[gray, thick, dash pattern=on 3pt off 40pt] (Fv) -- (\xcut,\ycut);
 
-        \pgfmathsetmacro{\xstart}{0.2+\lensXC}
+        \pgfmathsetmacro{\xstart}{0.05+\lensXC}
         \pgfmathsetmacro{\xend}{\xstart + 12}
         \pgfmathsetmacro{\ystart}{\y}
         \pgfmathsetmacro{\yend}{\ystart + \slope*(\xend - \xstart)}
@@ -79,6 +89,10 @@
 
     % Focal length indicator
     \draw[<->] (0,-\lensYR-0.6) -- (-\f,-\lensYR-0.6) node[midway,below] {\Large $f=7.5$ cm};
+
+    % circle to check curvature
+    % \coordinate (F2) at (\f +\lensXC -0.1,0);
+    % \draw[red, loosely dashed] (F2) circle (\R);
 
   \end{scope}
 
