@@ -48,7 +48,7 @@ Optical axes
 
 .. figure:: files/optical_axes.png
    :width: 300
-   :alt: reflection.png
+   :alt: optical_axes.png
    :figclass: align-center
 
 
