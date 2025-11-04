@@ -27,30 +27,32 @@
   % SHIFT origin to page center and set 1cm = 1 unit
   \begin{scope}[shift={(current page.center)}, x=1cm, y=1cm, >=Stealth]
 
-     % PARAMETERS
-    % lens height57mm, half height lensYR
-    % centre 3mm lensXC=2mm approx, sagitta 6mm lensXR 5.7 + 0.1 to improve look
+    % PARAMETERS
+    % lens height57mm, half height lensYR; width from 3 to 15 mm
+    % centre 3mm lensXC=1.5mm approx, sagitta 6mm lensXR 5.7
     % f 7.5cm gives lens maker calc for radius of curvature 7.35
     % lensYS scaled to use 0.4 of half height for nice curve
+    % lensXCS has 0.2 added for benzier curve to be ok
 
     \def\f{7.5}
     \def\rayEnd{12.5}
     \def\dy{0.95}
     \def\rdy{0.85}
     \def\lensYR{2.85}
+    \def\lensXC{0.2}
     \def\R{7.35}
-    \pgfmathsetmacro{\lensXR}{0.1 + \R - sqrt(\R^2 - \lensYR^2)}
-    \def\lensXC{0.20}
+    \pgfmathsetmacro{\lensXR}{\R - sqrt(\R^2 - \lensYR^2)}
+    \pgfmathsetmacro{\lensXCS}{\lensXC + \lensXR + 0.1}
     \pgfmathsetmacro{\lensYS}{0.4*\lensYR}
 
     % Layer 1: Lens (bottom layer)
     \begin{pgfonlayer}{lenslayer}
       \draw[gray, fill=blue!3!white, thin]
           (-\lensXC, -\lensYR)
-            .. controls (-\lensXR-\lensXC, -\lensYS) and (-\lensXR-\lensXC, \lensYS) ..
+            .. controls (-\lensXCS, -\lensYS) and (-\lensXCS, \lensYS) ..
             (-\lensXC, \lensYR)
           -- (\lensXC, \lensYR)
-            .. controls (\lensXR+\lensXC, \lensYS) and (\lensXR+\lensXC, -\lensYS) ..
+            .. controls (\lensXCS, \lensYS) and (\lensXCS, -\lensYS) ..
             (\lensXC, -\lensYR)
           -- cycle;
     \end{pgfonlayer}
@@ -63,12 +65,12 @@
 
     \foreach \y in {- \dy, 0, \dy} {
       \draw[gray, thick,  ->, dash pattern=on 1cm off 4cm] (-12,\y) -- (-6,\y);
-      \draw[gray, thick, dash pattern=on 1cm off 3.5cm] (-6,\y) -- (0.2-\lensXR-\lensXC,\y);
+      \draw[gray, thick, dash pattern=on 1cm off 3.5cm] (-6,\y) -- (0.2-\lensXCS,\y);
     }
 
     \foreach \y in {- \rdy, 0, \rdy} {
       \pgfmathsetmacro{\yend}{\y*(1 - \rayEnd/\f)}
-      \draw[gray, thick, dash pattern=on 1cm off 5cm] (-0.2+\lensXR+\lensXC,\y) -- (F);
+      \draw[gray, thick, dash pattern=on 1cm off 5cm] (-0.2+\lensXCS,\y) -- (F);
       \draw[gray, thick, ->, dash pattern=on 1cm off 3.0cm] (F) -- (\rayEnd,\yend);
     }
 

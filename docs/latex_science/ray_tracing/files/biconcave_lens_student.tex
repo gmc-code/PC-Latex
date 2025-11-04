@@ -27,7 +27,7 @@
 
     % PARAMETERS
     % lens height57mm, half height lensYR
-    % centre 6mm lensXC =3mm, sagitta 6mm lensXR 5.7 + 0.1 to improve look
+    % centre 6mm lensXC =3mm, sagitta 6mm lensXR 5.7; End has + 0.1 to improve look
     % f 7.5cm gives lens maker calc for radius of curvature 7.35
     % lensYS scaled to use 0.4 of half height for nice curve
     % lensXCS manually set to match centre width better
@@ -60,11 +60,11 @@
 
     % Layer 3: Main content
     %  label
-    \node[blue!5!black, above right] at (0,\lensYR+1.2) {\Huge Biconcave lens};
+    \node[blue!5!black, above right] at (0,\lensYR+1.2) {\Large \makebox[5.5cm][l]{\dotfill} \Huge lens};
 
     % Virtual focus on left
     \coordinate (Fv) at (-\f,0);
-    \draw[fill=black] (Fv) circle (0.07) node[below=14mm, xshift=-1.8cm] {\Large $Virtual Focus$};
+    \draw[fill=black] (Fv) circle (0.07) node[below=22mm, xshift=-1.8cm] {\Large \makebox[3.5cm][l]{\dotfill}};
     \draw[black, thick] (-\f - 1.8, -1.4) -- (-\f - 0.2, -0.2);
 
      % Incoming parallel rays

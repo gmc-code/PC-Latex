@@ -1,0 +1,104 @@
+\documentclass[a4paper,landscape]{article}
+\usepackage[margin=0cm]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,shapes.geometric}
+\pagestyle{empty}
+
+% Declare layers
+\pgfdeclarelayer{crosslayer}
+\pgfdeclarelayer{lenslayer}
+\pgfsetlayers{lenslayer,crosslayer,main}
+
+\begin{document}
+\begin{tikzpicture}[remember picture,overlay]
+
+  % Layer 1: Crosshairs
+  \begin{pgfonlayer}{crosslayer}
+    \draw[gray!50, line width=0.3pt]
+      ([xshift=0.5\paperwidth]current page.south west) --
+      ([xshift=0.5\paperwidth]current page.north west);
+    \draw[gray!50, line width=0.3pt]
+      ([yshift=0.5\paperheight]current page.south west) --
+      ([yshift=0.5\paperheight]current page.south east);
+  \end{pgfonlayer}
+
+  % SHIFT origin to page center and set 1cm = 1 unit
+  \begin{scope}[shift={(current page.center)}, x=1cm, y=1cm, >=Stealth]
+
+    % PARAMETERS
+    % lens height95mm, half height lensYR 47.5mm
+    % centre thickness 8mm lensXC = 12cm, lensXCRight 6mm to better match curve thickness
+    %  sagitta 20mm; lensXR 2.6
+    % f 2.8cm gives radius of curvature (2f) 5.6
+    % lensYS scaled to use 0.4 of half height for nice curve
+    % lensXCS manually set to match centre width better
+
+    % PARAMETERS
+    \def\f{2.8}
+    \def\rayEnd{10}
+    \def\dy{0.95}
+    \def\rdy{0.95}
+    \def\lensYR{4.75}
+    \def\lensXC{1.2}
+    \def\lensXCRight{0.50}
+    \def\R{5.6}
+    \pgfmathsetmacro{\lensXR}{\R - sqrt(\R^2 - \lensYR^2)}
+    \pgfmathsetmacro{\lensYS}{0.4*\lensYR}
+    \def\lensXCS{0.9}
+    \pgfmathsetmacro{\lensXEnd}{\lensXC + \lensXR}
+
+
+    % Layer 2: Lens
+    \begin{pgfonlayer}{lenslayer}
+        \draw[gray, fill=blue!3!white, thin]
+          (-\lensXR, -\lensYR)
+            .. controls (\lensXCS, -\lensYS) and (\lensXCS, \lensYS) ..
+            (-\lensXR, \lensYR)
+            arc[start angle=230, delta angle=-180, radius=\lensXC/3.1]
+          -- (-\lensXR + \lensXC, \lensYR)
+            .. controls (\lensXCS + \lensXCRight, \lensYS) and (\lensXCS + \lensXCRight, -\lensYS) ..
+            (-\lensXR + \lensXC, -\lensYR);
+          % -- cycle;
+        \draw[gray, fill=blue!3!white, thin]
+            (-\lensXR, -\lensYR)
+            arc[start angle=130, delta angle=180, radius=\lensXC/3.1]
+            -- (-\lensXR + \lensXC, -\lensYR);
+    \end{pgfonlayer}
+
+
+    % Layer 3: Main content
+    %  label
+    \node[blue!5!black, above right] at (0,\lensYR+1.2) {\Huge Concave Mirror};
+
+    % Virtual focus on left
+    \coordinate (Fv) at (-\f,0);
+    \draw[fill=black] (Fv) circle (0.07) node[below=16mm, xshift=-1.0cm] {\Large $Focus$};
+    \draw[black, thick] (-\f - 1.0, -1.6) -- (-\f - 0.2, -0.2);
+
+    % Incoming parallel rays
+    \foreach \y in {- \dy,0,\dy} {
+      \draw[gray, thick, ->] (-12,\y) -- (-6,\y);
+      \draw[gray, thick] (-6,\y) -- (-0.1,\y);
+    }
+
+    % Converging reflected rays extended 12cm to the left through Fv
+    \foreach \y in {- \rdy, 0, \rdy} {
+        \pgfmathsetmacro{\slope}{(\y - 0)/(0 + \f)} % slope from (Fv) to (\x,\y)
+        \pgfmathsetmacro{\xstart}{-\rayEnd}              % 12 cm to the left
+        \pgfmathsetmacro{\ystart}{\slope*(\xstart + \f)} % y at that x using slope
+        \pgfmathsetmacro{\xcut}{-0.05}
+        \pgfmathsetmacro{\ycut}{\slope*(\xcut + \f)}
+        \draw[gray, thin, ->] (\xcut,\ycut) -- (\xstart,\ystart);
+    }
+
+    % Focal length indicator
+    \draw[<->] (0,-\lensYR-1.2) -- (-\f,-\lensYR-1.2) node[midway,below] {\Large $f=2.8$ cm};
+
+    % circle to check curvature
+    % \coordinate (F2) at (-\f -\f,0);
+    % \draw[red, loosely dashed] (F2) circle (\R);
+
+  \end{scope}
+
+\end{tikzpicture}
+\end{document}

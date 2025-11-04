@@ -125,3 +125,70 @@ Biconvex lens
 | Downloads
 | :download:`biconvex_lens_student.pdf<files/biconvex_lens_student.pdf>`
 | :download:`biconvex_lens_student.tex<files/biconvex_lens_student.tex>`
+
+----
+
+Concave mirror
+-------------------
+
+| Student version and full versions are shown below.
+
+.. figure:: files/concave_mirror.png
+   :width: 600
+   :alt: concave_mirror.png
+   :figclass: align-center
+
+
+.. literalinclude:: files/concave_mirror.tex
+   :linenos:
+
+| Downloads
+| :download:`concave_mirror.pdf<files/concave_mirror.pdf>`
+| :download:`concave_mirror.tex<files/concave_mirror.tex>`
+
+.. figure:: files/concave_mirror_student.png
+   :width: 600
+   :alt: concave_mirror_student.png
+   :figclass: align-center
+
+
+.. literalinclude:: files/concave_mirror_student.tex
+   :linenos:
+
+| Downloads
+| :download:`concave_mirror_student.pdf<files/concave_mirror_student.pdf>`
+| :download:`concave_mirror_student.tex<files/concave_mirror_student.tex>`
+
+
+----
+
+Convex mirror
+-------------------
+
+| Student version and full versions are shown below.
+
+.. figure:: files/convex_mirror.png
+   :width: 600
+   :alt: convex_mirror.png
+   :figclass: align-center
+
+
+.. literalinclude:: files/convex_mirror.tex
+   :linenos:
+
+| Downloads
+| :download:`convex_mirror.pdf<files/convex_mirror.pdf>`
+| :download:`convex_mirror.tex<files/convex_mirror.tex>`
+
+.. figure:: files/convex_mirror_student.png
+   :width: 600
+   :alt: convex_mirror_student.png
+   :figclass: align-center
+
+
+.. literalinclude:: files/convex_mirror_student.tex
+   :linenos:
+
+| Downloads
+| :download:`convex_mirror_student.pdf<files/convex_mirror_student.pdf>`
+| :download:`convex_mirror_student.tex<files/convex_mirror_student.tex>`
