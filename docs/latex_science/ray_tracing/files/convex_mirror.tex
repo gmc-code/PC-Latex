@@ -26,9 +26,9 @@
   \begin{scope}[shift={(current page.center)}, x=1cm, y=1cm, >=Stealth]
 
     % PARAMETERS
-    % lens height95mm, half height lensYR 47.5mm
-    % centre thickness 8mm lensXC = 12cm, lensXCRight 6mm to better match curve thickness
-    %  sagitta 20mm; lensXR 2.6
+    % lens height75mm, half height lensYR 37.5mm
+    % centre thickness6mm lensXC = 0.cm, lensXCRight 6mm to better match curve thickness
+    %  sagitta 14mm; lensXR 2.6
     % f 2.8cm gives radius of curvature (2f) 5.6
     % lensYS scaled to use 0.4 of half height for nice curve
     % lensXCS manually set to match centre width better
@@ -37,15 +37,16 @@
     \def\f{2.8}
     \def\rayEnd{10}
     \def\dy{0.95}
-    \def\rdy{0.93}
-    \def\lensYR{4.75}
-    \def\lensXC{1.2}
-    \def\lensXCRight{0.50}
+    \def\rdy{0.94}
+    \def\lensYR{3.75}
+    \def\lensXC{0.6}
+    \def\lensXCRight{0.4}
     \def\R{5.6}
     \pgfmathsetmacro{\lensXR}{\R - sqrt(\R^2 - \lensYR^2)}
     \pgfmathsetmacro{\lensYS}{0.4*\lensYR}
-    \def\lensXCS{0.9}
+    \def\lensXCS{0.5}
     \pgfmathsetmacro{\lensXEnd}{\lensXC + \lensXR}
+
 
     \begin{pgfonlayer}{lenslayer}
           % Top curve
@@ -82,7 +83,7 @@
     % Incoming parallel rays
     \foreach \y in {- \dy,0,\dy} {
       \draw[gray, thick, ->] (-12,\y) -- (-6,\y);
-      \draw[gray, thick] (-6,\y) -- (0.1,\y);
+      \draw[gray, thick] (-6,\y) -- (0.0,\y);
     }
 
     % Diverging reflected rays

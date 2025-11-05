@@ -19,7 +19,7 @@ VS Code LaTeX Workshop
 
 | Install MiKTeX.
 | Install VSCode extension: LaTeX Workshop
-| LaTeX can be coded within .tex files in VSCoce and pdfs can be produced.
+| LaTeX can be coded within .tex files in VSCode and pdfs can be produced.
 
 | Keyboard shortcut to build LaTeX: Ctrl + Alt + b
 | Keyboard shortcut to view pdf in VSCode: Ctrl + Alt + v
@@ -31,7 +31,7 @@ VS Code LaTeX Workshop
 ---------------------------
 Texmaker with MiKTeX
 ---------------------------
- 
+
 | A basic TeX/LaTeX system on Windows needs to be installed.
 | Texmaker is a good choice for desktop LaTeX creation and editing.
 | MiKTeX is good choice for the LaTeX system that is needed by Texmaker.

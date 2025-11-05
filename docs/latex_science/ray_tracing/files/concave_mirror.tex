@@ -26,9 +26,9 @@
   \begin{scope}[shift={(current page.center)}, x=1cm, y=1cm, >=Stealth]
 
     % PARAMETERS
-    % lens height95mm, half height lensYR 47.5mm
-    % centre thickness 8mm lensXC = 12cm, lensXCRight 6mm to better match curve thickness
-    %  sagitta 20mm; lensXR 2.6
+    % lens height75mm, half height lensYR 37.5mm
+    % centre thickness6mm lensXC = 0.cm, lensXCRight 6mm to better match curve thickness
+    %  sagitta 14mm; lensXR 2.6
     % f 2.8cm gives radius of curvature (2f) 5.6
     % lensYS scaled to use 0.4 of half height for nice curve
     % lensXCS manually set to match centre width better
@@ -38,13 +38,13 @@
     \def\rayEnd{10}
     \def\dy{0.95}
     \def\rdy{0.95}
-    \def\lensYR{4.75}
-    \def\lensXC{1.2}
-    \def\lensXCRight{0.50}
+    \def\lensYR{3.75}
+    \def\lensXC{0.6}
+    \def\lensXCRight{0.4}
     \def\R{5.6}
     \pgfmathsetmacro{\lensXR}{\R - sqrt(\R^2 - \lensYR^2)}
     \pgfmathsetmacro{\lensYS}{0.4*\lensYR}
-    \def\lensXCS{0.9}
+    \def\lensXCS{0.5}
     \pgfmathsetmacro{\lensXEnd}{\lensXC + \lensXR}
 
 
@@ -54,14 +54,14 @@
           (-\lensXR, -\lensYR)
             .. controls (\lensXCS, -\lensYS) and (\lensXCS, \lensYS) ..
             (-\lensXR, \lensYR)
-            arc[start angle=230, delta angle=-180, radius=\lensXC/3.1]
+            arc[start angle=230, delta angle=-180, radius=\lensXC/2.9]
           -- (-\lensXR + \lensXC, \lensYR)
             .. controls (\lensXCS + \lensXCRight, \lensYS) and (\lensXCS + \lensXCRight, -\lensYS) ..
             (-\lensXR + \lensXC, -\lensYR);
           % -- cycle;
         \draw[gray, fill=blue!3!white, thin]
             (-\lensXR, -\lensYR)
-            arc[start angle=130, delta angle=180, radius=\lensXC/3.1]
+            arc[start angle=130, delta angle=180, radius=\lensXC/2.9]
             -- (-\lensXR + \lensXC, -\lensYR);
     \end{pgfonlayer}
 

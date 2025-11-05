@@ -26,8 +26,8 @@
   \begin{scope}[shift={(current page.center)}, x=1cm, y=1cm, >=Stealth]
 
     % PARAMETERS
-    % lens height57mm, half height lensYR
-    % centre 6mm lensXC =3mm, sagitta 6mm lensXR 5.7; End has + 0.1 to improve look
+    % lens height59mm, half height lensYR
+    % centre 8mm lensXC =4mm, sagitta 6mm lensXR 5.7; End has + 0.1 to improve look
     % f 7.5cm gives lens maker calc for radius of curvature 7.35
     % lensYS scaled to use 0.4 of half height for nice curve
     % lensXCS manually set to match centre width better
@@ -37,8 +37,8 @@
     \def\rayEnd{12.5}
     \def\dy{0.95}
     \def\rdy{1.05}
-    \def\lensYR{2.85}
-    \def\lensXC{0.30}
+    \def\lensYR{2.95}
+    \def\lensXC{0.40}
     \def\R{7.35}
     \pgfmathsetmacro{\lensXR}{\R - sqrt(\R^2 - \lensYR^2)}
     \pgfmathsetmacro{\lensXEnd}{\lensXC + \lensXR + 0.01}

@@ -26,8 +26,8 @@
   \begin{scope}[shift={(current page.center)}, x=1cm, y=1cm, >=Stealth]
 
     % PARAMETERS
-    % lens height57mm, half height lensYR; width from 3 to 15 mm
-    % centre 3mm lensXC=1.5mm approx, sagitta 6mm lensXR 5.7
+    % lens height58mm, half height lensYR; width from 3 to 15 mm
+    % centre 4mm half thickness lensXC=2 mm approx, sagitta 5.5mm lensXR 5.9
     % f 7.5cm gives lens maker calc for radius of curvature 7.35
     % lensYS scaled to use 0.4 of half height for nice curve
     % lensXCS has 0.2 added for benzier curve to be ok
@@ -36,7 +36,7 @@
     \def\rayEnd{12.5}
     \def\dy{0.95}
     \def\rdy{0.85}
-    \def\lensYR{2.85}
+    \def\lensYR{2.90}
     \def\lensXC{0.2}
     \def\R{7.35}
     \pgfmathsetmacro{\lensXR}{\R - sqrt(\R^2 - \lensYR^2)}
