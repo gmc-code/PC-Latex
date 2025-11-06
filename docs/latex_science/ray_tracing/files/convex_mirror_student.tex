@@ -37,7 +37,7 @@
     \def\f{2.8}
     \def\rayEnd{10}
     \def\dy{0.95}
-    \def\rdy{0.95}
+    \def\rdy{0.94}
     \def\lensYR{3.75}
     \def\lensXC{0.6}
     \def\lensXCRight{0.4}
@@ -48,22 +48,27 @@
     \pgfmathsetmacro{\lensXEnd}{\lensXC + \lensXR}
 
 
-    % Layer 2: Lens
     \begin{pgfonlayer}{lenslayer}
-        \draw[gray, fill=blue!3!white, thin]
-          (-\lensXR, -\lensYR)
-            .. controls (\lensXCS, -\lensYS) and (\lensXCS, \lensYS) ..
-            (-\lensXR, \lensYR)
-            arc[start angle=230, delta angle=-180, radius=\lensXC/2.8]
-          -- (-\lensXR + \lensXC, \lensYR)
-            .. controls (\lensXCS + \lensXCRight, \lensYS) and (\lensXCS + \lensXCRight, -\lensYS) ..
-            (-\lensXR + \lensXC, -\lensYR);
-          % -- cycle;
-        \draw[gray, fill=blue!3!white, thin]
-            (-\lensXR, -\lensYR)
-            arc[start angle=130, delta angle=180, radius=\lensXC/2.8]
-            -- (-\lensXR + \lensXC, -\lensYR);
+          % Top curve
+       \draw[gray, fill=blue!3!white, thin, line join=round]
+         (\lensXR + \lensXC, \lensYR)
+            arc[start angle=310, delta angle=180, radius=\lensXC/2.9]
+            --
+         (\lensXR, \lensYR);
+    \draw[gray, fill=blue!3!white, thin, line join=round]
+        % Start at top-right
+        (\lensXR + \lensXC, \lensYR)
+        % Right curve down
+        .. controls (-\lensXCS + \lensXCRight, \lensYS) and (-\lensXCS + \lensXCRight, -\lensYS) ..
+        (\lensXR + \lensXC, -\lensYR)
+        % Bottom arc to bottom-left
+        arc[start angle=50, delta angle=-180, radius=\lensXC/2.9]
+        -- (\lensXR, -\lensYR)
+        % Left curve up
+        .. controls (-\lensXCS, -\lensYS) and (-\lensXCS, \lensYS) ..
+        (\lensXR, \lensYR);
     \end{pgfonlayer}
+
 
 
     % Layer 3: Main content
@@ -71,28 +76,33 @@
     \node[blue!5!black, above right] at (0,\lensYR+1.2) {\Large \makebox[5.5cm][l]{\dotfill} \Huge mirror};
 
     % Virtual focus on left
-    \coordinate (Fv) at (-\f,0);
-    \draw[fill=black] (Fv) circle (0.07) node[below=23mm, xshift=-1.0cm] {\Large \makebox[2.5cm][l]{\dotfill}};
-    \draw[black, thick] (-\f - 1.0, -1.6) -- (-\f - 0.2, -0.2);
+    \coordinate (Fv) at (\f,0);
+    \draw[fill=black] (Fv) circle (0.07) node[below=26mm, xshift=1.0cm] {\Large \makebox[3.5cm][l]{\dotfill}};
+    \draw[black, thick] (\f + 1.0, -1.6) -- (\f + 0.2, -0.2);
 
     % Incoming parallel rays
     \foreach \y in {- \dy,0,\dy} {
       \draw[gray, thick, ->,dash pattern=on 1cm off 4cm] (-12,\y) -- (-6,\y);
-      \draw[gray, thick,dash pattern=on 1cm off 4cm] (-6,\y) -- (-0.1,\y);
+      \draw[gray, thick,dash pattern=on 1cm off 4cm] (-6,\y) -- (0.0,\y);
     }
 
-    % Converging reflected rays extended 12cm to the left through Fv
-    \foreach \y in {- \rdy, 0, \rdy} {
-        \pgfmathsetmacro{\slope}{(\y - 0)/(0 + \f)} % slope from (Fv) to (\x,\y)
-        \pgfmathsetmacro{\xstart}{-\rayEnd}              % 12 cm to the left
-        \pgfmathsetmacro{\ystart}{\slope*(\xstart + \f)} % y at that x using slope
-        \pgfmathsetmacro{\xcut}{-0.05}
-        \pgfmathsetmacro{\ycut}{\slope*(\xcut + \f)}
-        \draw[gray, thin, ->,dash pattern=on 0.75cm off 4.2cm] (\xcut,\ycut) -- (\xstart,\ystart);
+    % Diverging reflected rays
+    \foreach \y in {- \rdy,0,\rdy} {
+        \pgfmathsetmacro{\slope}{(\y - 0)/(0 + \f)}
+        \pgfmathsetmacro{\xcut}{0.2+\lensXCRight}
+        \pgfmathsetmacro{\ycut}{\slope*(-\xcut + \f)}
+        \draw[gray, thick, dash pattern=on 3pt off 20pt] (Fv) -- (\xcut,\ycut);
+
+        \pgfmathsetmacro{\xstart}{0.05}
+        \pgfmathsetmacro{\xend}{\xstart - \rayEnd}
+        \pgfmathsetmacro{\ystart}{\y}
+        \pgfmathsetmacro{\yend}{\ystart + \slope*(-\xend + \xstart)}
+        \draw[gray, thick, ->,dash pattern=on 1cm off 3.8cm] (\xstart,\ystart) -- (\xend,\yend);
     }
+
 
     % Focal length indicator
-    \draw[<->] (0,-\lensYR-1.2) -- (-\f,-\lensYR-1.2) node[midway,below] {\Large $f=2.8$ cm};
+    \draw[<->] (0,-\lensYR-1.2) -- (\f,-\lensYR-1.2) node[midway,below] {\Large $f=2.8$ cm};
 
     % circle to check curvature
     % \coordinate (F2) at (-\f -\f,0);
