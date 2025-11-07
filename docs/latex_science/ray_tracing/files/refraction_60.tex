@@ -1,0 +1,95 @@
+\documentclass[a4paper,landscape]{article}
+\usepackage{amsmath}
+\usepackage[margin=0cm]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{
+  arrows.meta,
+  calc,
+  shapes.geometric,
+  decorations.markings,
+  angles,
+  quotes
+}
+\pagestyle{empty}
+
+% Define angle variables
+\def\angleIncidence{60}
+\def\angleRefraction{36}
+% Angle labels
+\newcommand{\incLabel}{$i=\angleIncidence^\circ$}
+\newcommand{\refLabel}{$r=\angleRefraction^\circ$}
+% Description variable
+\def\refractionDescription{Light travelling from air to acrylic bends towards the normal.}
+
+% Declare layers
+\pgfdeclarelayer{crosslayer}
+\pgfdeclarelayer{main}
+\pgfdeclarelayer{toplayer}
+\pgfsetlayers{main,crosslayer,toplayer}
+
+\begin{document}
+\begin{tikzpicture}[remember picture,overlay]
+
+  % Layer 1: Crosshairs
+  \begin{pgfonlayer}{crosslayer}
+    \draw[gray!50, line width=0.3pt]
+      ([xshift=0.5\paperwidth]current page.south west) --
+      ([xshift=0.5\paperwidth]current page.north west);
+    \draw[gray!50, line width=0.3pt]
+      ([yshift=0.5\paperheight]current page.south west) --
+      ([yshift=0.5\paperheight]current page.south east);
+  \end{pgfonlayer}
+
+ % Layer 2: Rectangle and rays
+    \begin{pgfonlayer}{main}
+    % Center and block coordinates
+    \coordinate (center) at ([xshift=0.5\paperwidth, yshift=0.5\paperheight]current page.south west);
+    \path let \p1 = (center) in
+      coordinate (blockSW) at (\x1-38.5mm, \y1-21mm)
+      coordinate (blockNE) at (\x1+38.5mm, \y1+21mm)
+      coordinate (topCenter) at (\x1, \y1+21mm);
+
+     % Draw block
+    \draw[gray, fill=blue!3!white, thin] (blockSW) rectangle (blockNE);
+
+    % Draw Heading
+    \node[blue!5!black, above right] at ($(topCenter)+(0,3cm)$) {\Huge Refraction \incLabel};
+
+    % Normal line (4 cm dashed)
+    \draw[black, dashed, line width=1pt]
+      ($(topCenter)+(0,-1.6cm)$) -- ($(topCenter)+(0,1.6cm)$);
+
+    % Incident ray
+    \coordinate (incidentEnd) at ($(topCenter)+( {90 + \angleIncidence} :4cm)$);
+    \draw[gray, postaction={decorate},
+      decoration={markings, mark=at position 0.8 with {\arrowreversed[scale=1.5]{Latex}}}]
+      (topCenter) -- (incidentEnd);
+
+    % Refracted ray
+    \coordinate (refractEnd) at ($(topCenter)+( { \angleRefraction - 90 } :4cm)$);
+    \draw[-{Latex[length=3mm]}, gray, thick]
+      (topCenter) -- (refractEnd);
+
+    % Reference points for angle markings
+    \coordinate (normalUp) at ($(topCenter)+(0,1)$);
+    \coordinate (normalDown) at ($(topCenter)+(0,-1)$);
+
+    % Angle of incidence
+    \pic [draw, -, angle radius=10mm]
+      {angle = normalUp--topCenter--incidentEnd};
+      \node at ($(topCenter)+ (18mm, 6mm)$) {\LARGE \incLabel};
+
+    % Angle of refraction
+    \pic [draw, -, angle radius=10mm]
+      {angle = normalDown--topCenter--refractEnd};
+    \node at ($(topCenter)+ (18mm, -6mm)$) {\LARGE \refLabel};
+  \end{pgfonlayer}
+
+    \begin{pgfonlayer}{toplayer}
+        % Description below block
+        \node[fill=white, text width=12cm, align=center, font=\LARGE]
+            at ($(center)+(0,-35mm)$) {\refractionDescription};
+    \end{pgfonlayer}
+
+\end{tikzpicture}
+\end{document}

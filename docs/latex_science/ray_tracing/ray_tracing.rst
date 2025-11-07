@@ -156,3 +156,68 @@ Convex mirror
 | Downloads
 | :download:`convex_mirror_student.pdf<files/convex_mirror_student.pdf>`
 | :download:`convex_mirror_student.tex<files/convex_mirror_student.tex>`
+
+----
+
+Refraction in a block
+-------------------------
+
+| Student version and full versions are shown below.
+
+.. figure:: files/refraction_80.png
+   :width: 600
+   :alt: refraction_80.png
+   :figclass: align-center
+
+| Downloads
+| :download:`refraction_80.pdf<files/refraction_80.pdf>`
+| :download:`refraction_80.tex<files/refraction_80.tex>`
+
+.. figure:: files/refraction_80_student.png
+   :width: 600
+   :alt: refraction_80_student.png
+   :figclass: align-center
+
+| Downloads
+| :download:`refraction_80_student.pdf<files/refraction_80_student.pdf>`
+| :download:`refraction_80_student.tex<files/refraction_80_student.tex>`
+
+----
+
+.. figure:: files/refraction_60.png
+   :width: 600
+   :alt: refraction_60.png
+   :figclass: align-center
+
+| Downloads
+| :download:`refraction_60.pdf<files/refraction_60.pdf>`
+| :download:`refraction_60.tex<files/refraction_60.tex>`
+
+.. figure:: files/refraction_60_student.png
+   :width: 600
+   :alt: refraction_60_student.png
+   :figclass: align-center
+
+| Downloads
+| :download:`refraction_60_student.pdf<files/refraction_60_student.pdf>`
+| :download:`refraction_60_student.tex<files/refraction_60_student.tex>`
+
+----
+
+.. figure:: files/refraction_30.png
+   :width: 600
+   :alt: refraction_30.png
+   :figclass: align-center
+
+| Downloads
+| :download:`refraction_30.pdf<files/refraction_30.pdf>`
+| :download:`refraction_30.tex<files/refraction_30.tex>`
+
+.. figure:: files/refraction_30_student.png
+   :width: 600
+   :alt: refraction_30_student.png
+   :figclass: align-center
+
+| Downloads
+| :download:`refraction_30_student.pdf<files/refraction_30_student.pdf>`
+| :download:`refraction_30_student.tex<files/refraction_30_student.tex>`
