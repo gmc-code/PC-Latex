@@ -1,0 +1,197 @@
+%--------------------------------------------------
+% Refraction Diagram — TikZ
+% Author: GMC
+% Date: Nov 2025
+% Description: Illustrates refraction of light from air into acrylic
+%--------------------------------------------------
+
+\documentclass[a4paper, landscape]{article}
+\usepackage{amsmath}
+\usepackage[margin=0cm]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{
+    arrows.meta,
+    calc,
+    shapes.geometric,
+    decorations.markings,
+    angles,
+    quotes,
+    intersections
+}
+\pagestyle{empty}
+
+% Macro to draw partial segments along a line
+\newcommand{\drawSegmentedRay}[4]{
+  % #1 = start coordinate
+  % #2 = end coordinate
+  % #3 = TikZ style (e.g., incNoArrow)
+  % #4 = TikZ style (e.g., incEndArrow)
+  % Intermediate points
+  \path let \p1 = (#1), \p2 = (#2) in
+    coordinate (segStart) at ($(#1)!0.35!(#2)$)
+    coordinate (segEnd) at ($(#1)!0.65!(#2)$);
+  % Draw segments
+  \draw[#3] (#1) -- (segStart);
+  \draw[#4] (segEnd) -- (#2);
+}
+
+
+\begin{document}
+\begin{tikzpicture}[remember picture, overlay]
+
+    %--------------------------------------
+    % arrow styles
+    %--------------------------------------
+
+    \tikzset{
+        incNoArrow/.style={gray},
+        incEndArrow/.style={gray, {Straight Barb[scale=2.5]}-},
+        incArrow/.style={gray, postaction={decorate}, decoration={markings, mark=at position 0.75 with {\arrowreversed[scale=2.5]{Straight Barb}}}},
+        refNoArrow/.style={gray},
+        refEndArrow/.style={gray, -{Straight Barb[scale=2.5]}},
+        refArrow/.style={gray, postaction={decorate}, decoration={markings, mark=at position 0.48 with {\arrow[scale=2.5]{Straight Barb}}}},
+        exitNoArrow/.style={gray},
+        exitEndArrow/.style={gray, -{Straight Barb[scale=2.5]}},
+        exitArrow/.style={gray, postaction={decorate}, decoration={markings, mark=at position 1.00 with {\arrow[scale=2.5]{Straight Barb}}}},
+    }
+    %--------------------------------------
+    % Numeric variables
+    %--------------------------------------
+    \pgfmathsetmacro{\angInc}{60}
+    \pgfmathsetmacro{\angRef}{36}
+    \pgfmathsetmacro{\incAngleFromVertical}{90 + \angInc}
+    \pgfmathsetmacro{\refractAngleFromVertical}{\angRef - 90}
+    \pgfmathsetmacro{\exitAngleFromVertical}{270+ \angInc}
+
+    % Angle labels
+    \newcommand{\incLabel}{$i=\angInc^{\circ}$}
+    \newcommand{\refLabel}{$r=\angRef^{\circ}$}
+    % Full version -------------------------------------
+    \newcommand{\exitIncLabel}{$i=\angInc^{\circ}$}
+    \newcommand{\exitRefLabel}{$r=\angRef^{\circ}$}
+    % Student version--------------------------------------
+    % \newcommand{\exitIncLabel}{\raisebox{-2.5ex}{$\displaystyle i=\raisebox{-1.0ex}{\text{\Large$\cdot\ \cdot\ \cdot$}}^\circ$}}
+    % \newcommand{\exitRefLabel}{\raisebox{-2.5ex}{$\displaystyle r=\raisebox{-1.0ex}{\text{\Large$\cdot\ \cdot\ \cdot$}}^\circ$}}
+
+    % Description variable
+    % Full version -------------------------------------
+    \newcommand{\refractionDescription}{Light travelling \\from air into an acrylic block\\ bends towards the normal.}
+    \newcommand{\refractionDescriptionExit}{Light travelling \\from an acrylic block into air\\ bends away from the normal.}
+    % Student version--------------------------------------
+    % \newcommand{\refractionDescription}{Light travelling \\from air into an acrylic block\\ bends \raisebox{-1.0ex}{\Large\hbox to 4cm{\leaders\hbox{$\cdot$\hskip 0.6em}\hfill}} the normal.}
+    % \newcommand{\refractionDescriptionExit}{Light travelling \\from an acrylic block into air\\ bends \raisebox{-1.0ex}{\Large\hbox to 4cm{\leaders\hbox{$\cdot$\hskip 0.6em}\hfill}} the normal.}
+
+
+    %--------------------------------------
+    % Core geometry setup
+    %--------------------------------------
+    % ray length
+    \newlength{\rayLength}
+    \setlength{\rayLength}{4cm}
+
+    % block length and width
+    \newlength{\blockFullWidth}
+    \setlength{\blockFullWidth}{77mm}
+    \newlength{\blockFullHeight}
+    \setlength{\blockFullHeight}{42mm}
+
+    \newlength{\halfBlockWidth}
+    \pgfmathsetlength{\halfBlockWidth}{0.5*\blockFullWidth}
+    \newlength{\halfBlockHeight}
+    \pgfmathsetlength{\halfBlockHeight}{0.5*\blockFullHeight}
+
+    \coordinate (center) at ([xshift=0.5\paperwidth, yshift=0.5\paperheight]current page.south west);
+    \coordinate (blockSW) at ($(center) - (\halfBlockWidth,\halfBlockHeight)$);
+    \coordinate (blockNE) at ($(center) + (\halfBlockWidth,\halfBlockHeight)$);
+    \coordinate (blockE) at ($(center) + (\halfBlockWidth,0)$);
+    \coordinate (topCenter) at ($(center) + (0,\halfBlockHeight)$);
+    \coordinate (bottomCenter) at ($(center) - (0,\halfBlockHeight)$);
+
+    % Draw block
+    \draw[gray, fill=blue!3!white, thin] (blockSW) rectangle (blockNE);
+
+    % Draw crosshairs
+    \draw[gray!50, line width=0.3pt]
+        ([xshift=0.5\paperwidth]current page.south west) --
+        ([xshift=0.5\paperwidth]current page.north west);
+    \draw[gray!50, line width=0.3pt]
+        ([yshift=0.5\paperheight]current page.south west) --
+        ([yshift=0.5\paperheight]current page.south east);
+
+	%--------------------------------------
+	% Normals and Rays
+	%--------------------------------------
+    % Normal at top
+    \draw[dashed, black, thick] ($(topCenter)+(0,-1.6cm)$) -- ($(topCenter)+(0,1.6cm)$);
+
+    % inc ray
+    \coordinate (incEnd) at ($(topCenter)+({\incAngleFromVertical}:\rayLength)$);
+    % Full version--------------------------------------
+    \draw[incArrow]{ (topCenter) -- (incEnd)};
+    % Student version--------------------------------------
+    % \drawSegmentedRay{topCenter}{incEnd}{incNoArrow}{incEndArrow}
+
+    % ref ray inside block
+    \path[name path=refractLine] (topCenter) -- ++({\refractAngleFromVertical}:10cm);
+    \path[name path=bottomEdge] (blockSW) -- ++(\blockFullWidth,0);
+    \path[name intersections={of=refractLine and bottomEdge, by=refractEnd}];
+
+    % Full version--------------------------------------
+    \draw[refArrow] (topCenter) -- (refractEnd);
+    % Student version--------------------------------------
+    % \drawSegmentedRay{topCenter}{refractEnd}{refEndArrow}{refNoArrow}
+
+    % Exit ray
+    \coordinate (exitPoint) at (refractEnd);
+    \coordinate (exitRayEnd) at ($(exitPoint)+({\exitAngleFromVertical}:\rayLength)$);
+
+    % Full version--------------------------------------
+    \draw[exitArrow] (exitPoint) -- (exitRayEnd);
+    % Student version--------------------------------------
+    % \drawSegmentedRay{exitPoint}{exitRayEnd}{exitNoArrow}{exitEndArrow}
+
+    % Normal at bottom
+    \draw[dashed, black, thick] ($(exitPoint)+(0,-1.6cm)$) -- ($(exitPoint)+(0,1.6cm)$);
+
+    %--------------------------------------
+    % Angle labels
+    %--------------------------------------
+    % Top angles
+    \coordinate (normalUp) at ($(topCenter)+(0,1)$);
+    \coordinate (normalDown) at ($(topCenter)+(0,-1)$);
+    \coordinate (refractDir) at ($(topCenter)+({\refractAngleFromVertical}:1.5cm)$);
+
+    \pic [draw, -, angle radius=10mm, pic text = $i^\circ$, angle eccentricity = 1.2]
+    {angle = normalUp--topCenter--incEnd};
+    \node[anchor=west] at ($(topCenter)+(10mm, 6mm)$) {\LARGE \incLabel};
+
+    \pic [draw, -, angle radius=10mm, pic text = $r^\circ$, angle eccentricity = 1.2]
+    {angle = normalDown--topCenter--refractDir};
+    \node[anchor=west] at ($(topCenter)+(10mm,-6mm)$) {\LARGE \refLabel};
+
+    % Bottom angles
+    \coordinate (exitNormalUp) at ($(exitPoint)+(0,1)$);
+    \coordinate (exitNormalDown) at ($(exitPoint)+(0,-1)$);
+    \coordinate (internalRefractDir) at ($(refractDir)$);
+    \coordinate (exitRayDir) at ($(exitPoint)+({\exitAngleFromVertical}:1.5cm)$);
+
+    \pic [draw, -, angle radius=10mm, pic text = $i^\circ$, angle eccentricity = 1.2] {angle = exitNormalDown--exitPoint--exitRayDir};
+    \node[anchor=west] at ($(exitPoint)+(-35mm, -6mm)$) {\LARGE \exitIncLabel};
+
+    \pic [draw, -, angle radius=10mm, pic text = $r^\circ$, angle eccentricity = 1.2] {angle = exitNormalUp--exitPoint--refractDir};
+    \node[anchor=west] at ($(exitPoint)+(-35mm,+6mm)$) {\LARGE \exitRefLabel};
+
+    %--------------------------------------
+    % Caption
+    %--------------------------------------
+    \node[anchor=west, text width=9cm, align=flush left, font=\LARGE, inner sep=0pt] at ($(blockNE)+(0.8cm,0cm)$) {\Large \refractionDescription};
+
+    \node[anchor=north west, text width=9cm, align=flush left, font=\LARGE,inner sep=0pt] at ($(blockE)+(0.8cm,-0.1cm)$) {\Large \refractionDescriptionExit};
+
+    %--------------------------------------
+    % Heading
+    %--------------------------------------
+    \node[blue!5!black, above right] at ($(topCenter)+(0,3cm)$) {\Huge Refraction \LARGE \incLabel};
+
+\end{tikzpicture}
+\end{document}
